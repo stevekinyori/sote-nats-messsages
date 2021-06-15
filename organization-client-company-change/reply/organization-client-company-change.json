@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "Organizations Client Company Add Result",
+    "title": "Organizations Client Company Change Result",
     "type": "object",
     "examples": [
         {
             "message": {
-                "client-company-id": 33
+                "row-version": 2
             },
             "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
         }
@@ -25,13 +25,13 @@
             "type": "object",
             "title": "The message schema",
             "required": [
-                "client-company-id"
+                "row-version"
             ],
             "properties": {
-                "client-company-id": {
-                    "$id": "#/properties/message/properties/client-company-id",
+                "row-version": {
+                    "$id": "#/properties/message/properties/row-version",
                     "type": "integer",
-                    "title": "The client-company-id schema"
+                    "title": "The row-version schema"
                 }
             }
         }

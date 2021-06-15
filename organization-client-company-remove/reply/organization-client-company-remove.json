@@ -1,64 +1,27 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "title": "Organizations Client Company Remove Result",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
-    "default": {},
     "examples": [
         {
-            "organizations_id": 1,
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "row_version": 1,
-            "client_company_id": 4
+            "message": "REMOVED",
+            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
         }
     ],
     "required": [
-        "organizations_id",
-        "message-id",
-        "row_version",
-        "client_company_id"
+        "message",
+        "message-id"
     ],
     "properties": {
-        "organizations_id": {
-            "$id": "#/properties/organizations_id",
-            "type": "integer",
-            "title": "The organizations_id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
         "message-id": {
             "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
-            ]
+            "title": "The message-id schema"
         },
-        "row_version": {
-            "$id": "#/properties/row_version",
-            "type": "integer",
-            "title": "The row_version schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "client_company_id": {
-            "$id": "#/properties/client_company_id",
-            "type": "integer",
-            "title": "The client_company_id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                4
-            ]
+        "message": {
+            "$id": "#/properties/message",
+            "type": "string",
+            "title": "The message schema"
         }
     },
     "additionalProperties": true

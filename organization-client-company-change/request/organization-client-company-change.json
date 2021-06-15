@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"title": "Organizations Client Company Remove",
+	"title": "Organizations Client Company Change",
 	"description": "Organizations (Orgs) Business Service. This manages all additions, changes, and removal to organizations.",
 	"examples": [
 		{
@@ -15,7 +15,9 @@
 				]
 			},
 			"row-version": 1,
-			"client-company-id": 33
+			"client-company-id": 33,
+			"client-company-name": "Client Two",
+			"client-company-isactive": false
 		}
 	],
 	"type": "object",
@@ -24,7 +26,10 @@
 		"row-version",
 		"client-company-id"
 	],
-	"optional": [],
+	"optional": [
+		"client-company-isactive",
+		"client-company-name"
+	],
 	"properties": {
 		"request-header": {
 			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
@@ -38,6 +43,16 @@
 			"$id": "#/properties/client-company-id",
 			"type": "integer",
 			"title": "The client-company-id schema"
+		},
+		"client-company-name": {
+			"$id": "#/properties/client-company-name",
+			"type": "string",
+			"title": "The client-company-name schema"
+		},
+		"client-company-isactive": {
+			"$id": "#/properties/client-company-isactive",
+			"type": "boolean",
+			"title": "The client-company-isactive schema"
 		}
 	},
 	"additionalProperties": true
