@@ -44,7 +44,7 @@
 	],
 	"properties": {
 		"request-header": {
-			"$ref": "https://gitlab.com/soteapps/packages/-/raw/v2021/sHelper/schema-definitions-v1.json#/definitions/request-header"
+			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
 		},
 		"organization-name": {
 			"$id": "#/properties/organization-name",

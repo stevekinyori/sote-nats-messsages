@@ -34,10 +34,10 @@
         "contract_end_date", "estimated_total_users", "estimated_total_vehicles", "estimated_paid_seats_month", "desired_payment_threshold"],
     "properties": {
         "request-header": {
-            "$ref": "https://gitlab.com/soteapps/packages/-/raw/v2021/sHelper/schema-definitions-v1.json#/definitions/request-header"
+            "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
         },
         "filter-header": {
-            "$ref": "https://gitlab.com/soteapps/packages/-/raw/v2021/sHelper/schema-definitions-v1.json#/definitions/filter-header"
+            "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/filter-header"
         }
     },
     "additionalProperties": true
