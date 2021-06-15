@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "Organizations Supplier Add Result",
+    "title": "Organizations Supplier Change Result",
     "type": "object",
     "examples": [
         {
             "message": {
-                "supplier-id": 33
+                "client-company-id": 55
             },
             "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
         }
@@ -25,13 +25,13 @@
             "type": "object",
             "title": "The message schema",
             "required": [
-                "supplier-id"
+                "client-company-id"
             ],
             "properties": {
-                "supplier-id": {
-                    "$id": "#/properties/message/properties/supplier-id",
+                "client-company-id": {
+                    "$id": "#/properties/message/properties/client-company-id",
                     "type": "integer",
-                    "title": "The supplier-id schema"
+                    "title": "The client-company-id schema"
                 }
             }
         }
