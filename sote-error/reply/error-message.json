@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "error": {
+                "ErrCode": 207110,
+                "ErrType": "Content_Error",
+                "ParamCount": 1,
+                "ParamDescription": "Parameter name",
+                "FmtErrMsg": "207110: Test message couldn't be parsed - Invalid JSON error",
+                "ErrorDetails": {},
+                "Loc": ""
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "error"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "error": {
+            "$id": "#/properties/error",
+            "type": "object",
+            "title": "The error schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "ErrCode": 207110,
+                    "ErrType": "Content_Error",
+                    "ParamCount": 1,
+                    "ParamDescription": "Parameter name",
+                    "FmtErrMsg": "207110: Test message couldn't be parsed - Invalid JSON error",
+                    "ErrorDetails": {},
+                    "Loc": ""
+                }
+            ],
+            "required": [
+                "ErrCode",
+                "ErrType",
+                "ParamCount",
+                "ParamDescription",
+                "FmtErrMsg",
+                "ErrorDetails",
+                "Loc"
+            ],
+            "properties": {
+                "ErrCode": {
+                    "$id": "#/properties/error/properties/ErrCode",
+                    "type": "integer",
+                    "title": "The ErrCode schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        207110
+                    ]
+                },
+                "ErrType": {
+                    "$id": "#/properties/error/properties/ErrType",
+                    "type": "string",
+                    "title": "The ErrType schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Content_Error"
+                    ]
+                },
+                "ParamCount": {
+                    "$id": "#/properties/error/properties/ParamCount",
+                    "type": "integer",
+                    "title": "The ParamCount schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "ParamDescription": {
+                    "$id": "#/properties/error/properties/ParamDescription",
+                    "type": "string",
+                    "title": "The ParamDescription schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Parameter name"
+                    ]
+                },
+                "FmtErrMsg": {
+                    "$id": "#/properties/error/properties/FmtErrMsg",
+                    "type": "string",
+                    "title": "The FmtErrMsg schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "207110: Test message couldn't be parsed - Invalid JSON error"
+                    ]
+                },
+                "ErrorDetails": {
+                    "$id": "#/properties/error/properties/ErrorDetails",
+                    "type": "object",
+                    "title": "The ErrorDetails schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {}
+                    ],
+                    "required": [],
+                    "additionalProperties": true
+                },
+                "Loc": {
+                    "$id": "#/properties/error/properties/Loc",
+                    "type": "string",
+                    "title": "The Loc schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

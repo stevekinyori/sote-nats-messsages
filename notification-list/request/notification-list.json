@@ -1,0 +1,173 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organization_id": 1,
+            "client_company_id": 1,
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
+            "role-list": [
+                "ROLE_NAME1",
+                "ROLE_NAME2"
+            ],
+            "shipment-statuses": [
+                "STATUS_NAME1",
+                "STATUS_NAME2"
+            ],
+            "record-limit-count": 10,
+            "record-offset": 0,
+            "sort-order": "ASC"
+        }
+    ],
+    "required": [
+        "organization_id",
+        "message-id",
+        "json-web-token",
+        "role-list",
+        "shipment-statuses",
+        "record-limit-count",
+        "record-offset",
+        "sort-order"
+    ],
+    "optional":[
+        "client_company_id"
+    ],
+    "properties": {
+        "organization_id": {
+            "$id": "#/properties/organization_id",
+            "type": "integer",
+            "title": "The organization_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "client_company_id": {
+            "$id": "#/properties/client_company_id",
+            "type": "integer",
+            "title": "The client_company_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "eyJraWQiOvxxxxxxxxxxxxxxxx"
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "shipment-statuses": {
+            "$id": "#/properties/shipment-statuses",
+            "type": "array",
+            "title": "The shipment-statuses schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "STATUS_NAME1",
+                    "STATUS_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/shipment-statuses/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/shipment-statuses/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "STATUS_NAME1",
+                            "STATUS_NAME2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "record-limit-count": {
+            "$id": "#/properties/record-limit-count",
+            "type": "integer",
+            "title": "The record-limit-count schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10
+            ]
+        },
+        "record-offset": {
+            "$id": "#/properties/record-offset",
+            "type": "integer",
+            "title": "The record-offset schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "type": "string",
+            "title": "The sort-order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "ASC"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

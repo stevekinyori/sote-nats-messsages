@@ -1,0 +1,149 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "organizations_id": 1,
+                "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+                "row_version": 1,
+                "suppliers": [
+                    {
+                        "suppliers_id": 1,
+                        "supplier_name": "Tricon Dry Chemicals LLC"
+                    }
+                ]
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "organizations_id": 1,
+                        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+                        "row_version": 1,
+                        "suppliers": [
+                            {
+                                "suppliers_id": 1,
+                                "supplier_name": "Tricon Dry Chemicals LLC"
+                            }
+                        ]
+                    }
+                ],
+                "required": [
+                    "organizations_id",
+                    "message-id",
+                    "row_version",
+                    "suppliers"
+                ],
+                "properties": {
+                    "organizations_id": {
+                        "$id": "#/items/anyOf/0/properties/organizations_id",
+                        "type": "integer",
+                        "title": "The organizations_id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "message-id": {
+                        "$id": "#/items/anyOf/0/properties/message-id",
+                        "type": "string",
+                        "title": "The message-id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "51ad84d4-XXXXXXX-6b2ce5e8"
+                        ]
+                    },
+                    "row_version": {
+                        "$id": "#/items/anyOf/0/properties/row_version",
+                        "type": "integer",
+                        "title": "The row_version schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "suppliers": {
+                        "$id": "#/items/anyOf/0/properties/suppliers",
+                        "type": "array",
+                        "title": "The suppliers schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                            [
+                                {
+                                    "suppliers_id": 1,
+                                    "supplier_name": "Tricon Dry Chemicals LLC"
+                                }
+                            ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/items/anyOf/0/properties/suppliers/items",
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/suppliers/items/anyOf/0",
+                                    "type": "object",
+                                    "title": "The first anyOf schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "suppliers_id": 1,
+                                            "supplier_name": "Tricon Dry Chemicals LLC"
+                                        }
+                                    ],
+                                    "required": [
+                                        "suppliers_id",
+                                        "supplier_name"
+                                    ],
+                                    "properties": {
+                                        "suppliers_id": {
+                                            "$id": "#/items/anyOf/0/properties/suppliers/items/anyOf/0/properties/suppliers_id",
+                                            "type": "integer",
+                                            "title": "The suppliers_id schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0,
+                                            "examples": [
+                                                1
+                                            ]
+                                        },
+                                        "supplier_name": {
+                                            "$id": "#/items/anyOf/0/properties/suppliers/items/anyOf/0/properties/supplier_name",
+                                            "type": "string",
+                                            "title": "The supplier_name schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "Tricon Dry Chemicals LLC"
+                                            ]
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                }
+                            ]
+                        }
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

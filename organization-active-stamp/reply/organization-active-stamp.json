@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Organizations Status Result",
+    "type": "object",
+    "examples": [
+        {
+            "message": {
+                "row-version": 4
+            },
+            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+        }
+    ],
+    "required": [
+        "row-version",
+        "message-id"
+    ],
+    "properties": {
+        "row-version": {
+            "$id": "#/properties/row-version",
+            "type": "integer",
+            "title": "The row-version schema"
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "string",
+            "title": "The message schema"
+        }
+    },
+    "additionalProperties": true
+}

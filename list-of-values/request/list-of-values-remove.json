@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organizations-id": 1,
+            "aws-user-name": "e51a0be2-5495-48fc-882a-e88f85cf7b4b",
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "table-name": "countrydestinationlov",
+            "system-name": "Kenya"
+        }
+    ],
+    "required": [
+        "organizations-id",
+        "aws-user-name",
+        "message-id",
+        "table-name",
+        "system-name"
+    ],
+    "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "e51a0be2-5495-48fc-882a-e88f85cf7b4b"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "table-name": {
+            "$id": "#/properties/table-name",
+            "type": "string",
+            "title": "The table-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "countrydestinationlov"
+            ]
+        },
+        "system-name": {
+            "$id": "#/properties/system-name",
+            "type": "string",
+            "title": "The system-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Kenya"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

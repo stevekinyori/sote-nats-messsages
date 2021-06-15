@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Organizations Add Result",
+    "type": "object",
+    "examples": [
+        {
+            "message": {
+                "organization-id": 10123
+            },
+            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+        }
+    ],
+    "required": [
+        "message",
+        "message-id"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema"
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "required": [
+                "organization-id"
+            ],
+            "properties": {
+                "organization-id": {
+                    "$id": "#/properties/message/properties/organization-id",
+                    "type": "integer",
+                    "title": "The organization-id schema"
+                }
+            }
+        }
+    },
+    "additionalProperties": true
+}

@@ -1,0 +1,205 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "shipmentfinancialtransactions_id": 1,
+                "organizations_id": 1,
+                "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+                "client_company_id": 1,
+                "shipments_id": 1,
+                "financialtransactions_type": "F123",
+                "currency_type": "KES",
+                "transactions_amount": "100",
+                "cost_is_unexpected": false,
+                "transactions_timestamp": "2020-05-14 06:08:10.814777+00",
+                "created_by_requestor_username": "d7266c8f-xxxx-3ee850338ea7",
+                "bill_of_lading": null,
+                "memo": ""
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "shipmentfinancialtransactions_id": 1,
+                        "organizations_id": 1,
+                        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+                        "client_company_id": 1,
+                        "shipments_id": 1,
+                        "financialtransactions_type": "F123",
+                        "currency_type": "KES",
+                        "transactions_amount": "100",
+                        "cost_is_unexpected": false,
+                        "transactions_timestamp": "2020-05-14 06:08:10.814777+00",
+                        "created_by_requestor_username": "d7266c8f-xxxx-3ee850338ea7",
+                        "bill_of_lading": null,
+                        "memo": ""
+                    }
+                ],
+                "required": [
+                    "shipmentfinancialtransactions_id",
+                    "organizations_id",
+                    "message-id",
+                    "client_company_id",
+                    "shipments_id",
+                    "financialtransactions_type",
+                    "currency_type",
+                    "transactions_amount",
+                    "cost_is_unexpected",
+                    "transactions_timestamp",
+                    "created_by_requestor_username",
+                    "bill_of_lading",
+                    "memo"
+                ],
+                "properties": {
+                    "shipmentfinancialtransactions_id": {
+                        "$id": "#/items/anyOf/0/properties/shipmentfinancialtransactions_id",
+                        "type": "integer",
+                        "title": "The shipmentfinancialtransactions_id schema",
+                        "description": "This is a system generated id that is used to restrict access to shipment financial transaction data.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "organizations_id": {
+                        "$id": "#/items/anyOf/0/properties/organizations_id",
+                        "type": "integer",
+                        "title": "The organizations_id schema",
+                        "description": "This is a system generated id that is used to restrict access to customers data.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "message-id": {
+                        "$id": "#/items/anyOf/0/properties/message-id",
+                        "type": "string",
+                        "title": "The message-id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "51ad84d4-XXXXXXX-6b2ce5e8"
+                        ]
+                    },
+                    "client_company_id": {
+                        "$id": "#/items/anyOf/0/properties/client_company_id",
+                        "type": "integer",
+                        "title": "The client_company_id schema",
+                        "description": "This is a system generated id that is used identify a client company.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "shipments_id": {
+                        "$id": "#/items/anyOf/0/properties/shipments_id",
+                        "type": "integer",
+                        "title": "The shipments_id schema",
+                        "description": "This is a system generated id that is used for identification of the shipment.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "financialtransactions_type": {
+                        "$id": "#/items/anyOf/0/properties/financialtransactions_type",
+                        "type": "string",
+                        "title": "The financialtransactions_type schema",
+                        "description": "This is the category of the transaction.",
+                        "default": "",
+                        "examples": [
+                            "F123"
+                        ]
+                    },
+                    "currency_type": {
+                        "$id": "#/items/anyOf/0/properties/currency_type",
+                        "type": "string",
+                        "title": "The currency_type schema",
+                        "description": "This is the international currency code.",
+                        "default": "",
+                        "examples": [
+                            "KES"
+                        ]
+                    },
+                    "transactions_amount": {
+                        "$id": "#/items/anyOf/0/properties/transactions_amount",
+                        "type": "string",
+                        "title": "The transactions_amount schema",
+                        "description": "The amount of the transaction.",
+                        "default": "",
+                        "examples": [
+                            "100"
+                        ]
+                    },
+                    "cost_is_unexpected": {
+                        "$id": "#/items/anyOf/0/properties/cost_is_unexpected",
+                        "type": "boolean",
+                        "title": "The cost_is_unexpected schema",
+                        "description": "This shows if the recorded cost was unexpected or not.",
+                        "default": false,
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "transactions_timestamp": {
+                        "$id": "#/items/anyOf/0/properties/transactions_timestamp",
+                        "type": "string",
+                        "title": "The transactions_timestamp schema",
+                        "description": "This is when the transaction was recorded.",
+                        "default": "",
+                        "examples": [
+                            "2020-05-14 06:08:10.814777+00"
+                        ]
+                    },
+                    "created_by_requestor_username": {
+                        "$id": "#/items/anyOf/0/properties/created_by_requestor_username",
+                        "type": "string",
+                        "title": "The created_by_requestor_username schema",
+                        "description": "The Cognito username for the person who is requesting the users creation.",
+                        "default": "",
+                        "examples": [
+                            "d7266c8f-xxxx-3ee850338ea7"
+                        ]
+                    },
+                    "bill_of_lading": {
+                        "$id": "#/items/anyOf/0/properties/bill_of_lading",
+                        "type": "null",
+                        "title": "The bill_of_lading schema",
+                        "description": "This is an externally provided value for identification of the shipment.",
+                        "default": null,
+                        "examples": [
+                            null
+                        ]
+                    },
+                    "memo": {
+                        "$id": "#/items/anyOf/0/properties/memo",
+                        "type": "string",
+                        "title": "The memo schema",
+                        "description": "This is short meme for the transaction.",
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

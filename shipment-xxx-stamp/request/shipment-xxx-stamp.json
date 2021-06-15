@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "aws-user-name": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+            "role-list": [
+                "ROLE_NAME1",
+                "ROLE_NAME2"
+            ],
+            "organizations-id": 1,
+            "shipments-id": 1,
+            "shipment-row-version": 1
+        }
+    ],
+    "required": [
+        "json-web-token",
+        "message-id",
+        "aws-user-name",
+        "role-list",
+        "organizations-id",
+        "shipments-id",
+        "shipment-row-version"
+    ],
+    "optional": [],
+    "properties": {
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "Authentication JWT.",
+            "default": "",
+            "examples": [
+                "eyJraWQiOvxxxxxxxxxxxxxxxx"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "This is a unique identifier of each message.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "The Cognito username for the person who is requesting the record status stamp.",
+            "default": "",
+            "examples": [
+                "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "The roles that the user requesting the record status stamp has been assigned.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "Instance of user role list.",
+                        "default": "",
+                        "examples": [
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "This is a system generated id that is used to restrict access to customers data.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "shipments-id": {
+            "$id": "#/properties/shipments-id",
+            "type": "integer",
+            "title": "The shipments-id schema",
+            "description": "This is a system generated id to make shipments unique.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "shipment-row-version": {
+            "$id": "#/properties/shipment-row-version",
+            "type": "integer",
+            "title": "The shipment-row-version schema",
+            "description": "This is a system generated number that is used to control updates to the record.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        }
+    },
+    "additionalProperties": true
+}

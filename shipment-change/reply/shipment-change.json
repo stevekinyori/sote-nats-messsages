@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "message": {
+                "shipments_id": 1,
+                "ship_row_version": 2,
+                "shipment_status": "UPDXXX"
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "This is a unique identifier of each message.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "description": "This identifies that this section contains response message items.",
+            "default": {},
+            "examples": [
+                {
+                    "shipments_id": 1,
+                    "ship_row_version": 2,
+                    "shipment_status": "UPDXXX"
+                }
+            ],
+            "required": [
+                "shipments_id",
+                "ship_row_version",
+                "shipment_status"
+            ],
+            "properties": {
+                "shipments_id": {
+                    "$id": "#/properties/message/properties/shipments_id",
+                    "type": "integer",
+                    "title": "The shipments_id schema",
+                    "description": "This is a system generated id to make shipments unique",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "ship_row_version": {
+                    "$id": "#/properties/message/properties/ship_row_version",
+                    "type": "integer",
+                    "title": "The ship_row_version schema",
+                    "description": "This is a system generated number that is used to control updates to the record",
+                    "default": 0,
+                    "examples": [
+                        2
+                    ]
+                },
+                "shipment_status": {
+                    "$id": "#/properties/message/properties/shipment_status",
+                    "type": "string",
+                    "title": "The shipment_status schema",
+                    "description": "This is the state of the shipment",
+                    "default": "",
+                    "examples": [
+                        "UPDXXX"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

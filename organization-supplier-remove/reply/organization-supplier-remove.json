@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organizations_id": 1,
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "row_version": 1,
+            "suppliers_id": 1
+        }
+    ],
+    "required": [
+        "organizations_id",
+        "message-id",
+        "row_version",
+        "suppliers_id"
+    ],
+    "properties": {
+        "organizations_id": {
+            "$id": "#/properties/organizations_id",
+            "type": "integer",
+            "title": "The organizations_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "row_version": {
+            "$id": "#/properties/row_version",
+            "type": "integer",
+            "title": "The row_version schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "suppliers_id": {
+            "$id": "#/properties/suppliers_id",
+            "type": "integer",
+            "title": "The suppliers_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        }
+    },
+    "additionalProperties": true
+}
