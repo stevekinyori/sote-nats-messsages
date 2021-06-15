@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Email Notification Add Result",
+    "type": "object",
+    "examples": [
+        {
+            "message": {
+                "clientcompanycontact-id": 33
+            },
+            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+        }
+    ],
+    "required": [
+        "message",
+        "message-id"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema"
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "required": [
+                "clientcompanycontact-id"
+            ],
+            "properties": {
+                "clientcompanycontact-id": {
+                    "$id": "#/properties/message/properties/sclientcompanycontact-id",
+                    "type": "integer",
+                    "title": "The clientcompanycontact-id schema"
+                }
+            }
+        }
+    },
+    "additionalProperties": true
+}

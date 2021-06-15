@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"title": "Email Notification List",
+	"title": "Email Notification Submit",
 	"description": "This business service adds notification details to the database and sends an email as well.",
 	"examples": [
 		{
@@ -14,44 +14,69 @@
 					"EXECUTIVE"
 				]
 			},
-			"filter-header": {
-				"items": [
-					"clientcompanycontacts_id",
-					"client_company_id",
-					"communication_type",
-					"contact_value",
-					"name"
-				],
-				"limit": 3,
-				"offset": 0,
-				"sort_asc": [
-					"name",
-					"contact_value"
-				],
-				"sort_desc": [
-					"client_company_id"
-				],
-				"eq": {
-					"communication_type": "EMAIL"
-				},
-				"gt": {
-					"clientcompanycontacts_id": 1
-				},
-				"lt": {
-					"created_by_date": "2020-12-01"
-				}
-			}
+			"client-company-id": 100,
+			"subject": "This is the Test Message",
+			"text-payload": "TEST MESSAGE - This is the Plain Text body",
+			"html-payload": "<h1>some-html-message</h1>",
+			"comm-channel": "EMAIL"
 		}
 	],
 	"type": "object",
-	"required": ["request-header"],
-	"optional": ["filter-header"],
+	"required": [
+		"request-header",
+		"client-company-id",
+		"comm-channel"
+	],
+	"optional": [
+		"subject",
+		"text-payload",
+		"html-payload",
+		"template-name",
+		"template-params"
+	],
 	"properties": {
 		"request-header": {
 			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
 		},
-		"filter-header": {
-			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/filter-header"
+		"client-company-id": {
+			"$id": "#/properties/client-company-id",
+			"type": "integer",
+			"title": "The client-company-id schema"
+		},
+		"comm-channel": {
+			"$id": "#/properties/comm-channel",
+			"type": "string",
+			"title": "The Communication Channel",
+			"description": "The communication method that will be use to send.",
+			"default": "EMAIL",
+			"enum": [
+				"EMAIL"
+			]
+		},
+		"subject": {
+			"$id": "#/properties/subject",
+			"type": "string",
+			"title": "The message subject"
+		},
+		"text-payload": {
+			"$id": "#/properties/text-payload",
+			"type": "string",
+			"title": "The Text Payload"
+		},
+		"html-payload": {
+			"$id": "#/properties/html-payload",
+			"type": "string",
+			"title": "The Html Payload"
+		},
+		"template-name": {
+			"$id": "#/properties/template-name",
+			"type": "string",
+			"title": "The Template Name"
+		},
+		"template-params": {
+			"$id": "#/properties/template-params",
+			"type": "object",
+			"title": "The Template Parameters"
 		}
 	},
 	"additionalProperties": true

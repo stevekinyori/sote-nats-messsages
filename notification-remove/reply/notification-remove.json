@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Email Notification Remove Result",
+    "type": "object",
+    "examples": [
+        {
+            "message": "REMOVED",
+            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+        }
+    ],
+    "required": [
+        "message",
+        "message-id"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema"
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "string",
+            "title": "The message schema"
+        }
+    },
+    "additionalProperties": true
+}

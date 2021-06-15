@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"title": "Email Notification List",
+	"title": "Email Notification Remove",
 	"description": "This business service adds notification details to the database and sends an email as well.",
 	"examples": [
 		{
@@ -14,44 +14,23 @@
 					"EXECUTIVE"
 				]
 			},
-			"filter-header": {
-				"items": [
-					"clientcompanycontacts_id",
-					"client_company_id",
-					"communication_type",
-					"contact_value",
-					"name"
-				],
-				"limit": 3,
-				"offset": 0,
-				"sort_asc": [
-					"name",
-					"contact_value"
-				],
-				"sort_desc": [
-					"client_company_id"
-				],
-				"eq": {
-					"communication_type": "EMAIL"
-				},
-				"gt": {
-					"clientcompanycontacts_id": 1
-				},
-				"lt": {
-					"created_by_date": "2020-12-01"
-				}
-			}
+			"clientcompanycontact-id": 18
 		}
 	],
 	"type": "object",
-	"required": ["request-header"],
-	"optional": ["filter-header"],
+	"required": [
+		"request-header",
+		"clientcompanycontact-id"
+	],
+	"optional": [],
 	"properties": {
 		"request-header": {
 			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
 		},
-		"filter-header": {
-			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/filter-header"
+		"clientcompanycontact-id": {
+			"$id": "#/properties/clientcompanycontact-id",
+			"type": "integer",
+			"title": "This clientcompanycontact-id schema"
 		}
 	},
 	"additionalProperties": true
