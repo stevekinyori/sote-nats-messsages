@@ -1,0 +1,112 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"title": "Financial Transaction Shipment",
+	"description": "The message creates a financial transaction for a shipment",
+	"examples": [
+		{
+			"request-header": {
+				"json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx9OZDNDZGNxOVRvU3FPKzdZYldcL1wvSUxCYVJyTElNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkNzI2NmM4Zi0wNmQ0LTQxYjYtODE0ZC0zZWU4NTAzMzhlYTciLCJkZXZpY2Vfa2V5IjoiZXUtd2VzdC0xX2VmMTAyYjExLTI0ZWQtNDllMS04ZTIzLTFjY2ViMGQ2NzY3ZiIsImNvZ25pdG86Z3JvdXBzIjpbIjEwMDM2Il0sInRva2VuX3VzZSI6ImFjvxxxxxxxxxxxxxxxxzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTA2MDMwNzQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWvxxxxxxxxxxxxxxxxdzLmNvbVwvZXUtd2VzdC0xX2ZwWkN5cWxRTiIsImV4cCI6MTYxMTE1ODg5NSwiaWF0IjoxNjExMTU1Mvxxxxxxxxxxxxxxxx02MjZhLTQ0ZWQtOTlmZS1lYWZhZTYwYWRlOGUiLCJjbGllbnRfaWQiOiI0OWc1MDhoMGpyMnMydG5iaTNraGd0ZHNwMiIsInVzZXJuYW1lIjoiZDcyNjZjOGYtMDZkNC00MWI2LTgxNGQtM2VlODUwMzM4ZWE3In0.QbuzaBlVNK20OjeCyzbBkU_fLrCnTca__8ggynHFwajeN-tFzjLDJIAtHYoXUG-3k0L-bBXn265uJmqzXV0ktOfX-b9ifIWWJn0_eTNgLUh6Euv4MkMxfPQnV0aXyK81XysKxX6fRB5N1HhxzcYoYHolmo0C6LXtQlRbvPFq8BDLPk2sU35QEL4ONANSt1eDZxMpPrBEP-fvSF2ZMee7sJx7tFnQA6tI0_4WnvxxxxxxxxxxxxxxxxFYSYF77i0zhxGZ3oVcV90qRLekLYuXdfy06lMA4DlNdWJu9N0BYbPsvxpvo51JErYX8Qkqs2TbYACw2_4g",
+				"message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
+				"aws-user-name": "soteuser",
+				"organizations-id": 10003,
+				"role-list": [
+					"CLIENT_ADMIN",
+					"EXECUTIVE"
+				]
+			},
+			"client-company-id": 100,
+			"shipment-id": 10002,
+			"amount": 102.90,
+			"currency": "USD",
+			"fintrans-type": "F147",
+			"cost-is-unexpected": true,
+			"bill-of-lading": "1",
+			"memo": "This is a memo"
+		}
+	],
+	"type": "object",
+	"required": [
+		"request-header",
+		"client-company-id",
+		"shipment-id",
+		"amount",
+		"currency",
+		"fintrans-type"
+	],
+	"optional": [
+		"cost-is-unexpected",
+		"bill-of-lading",
+		"memo"
+	],
+	"properties": {
+		"request-header": {
+			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+		},
+		"client-company-id": {
+			"$id": "#/properties/client-company-id",
+			"type": "integer",
+			"title": "The client-company-id schema"
+		},
+		"shipment-id": {
+			"$id": "#/properties/shipment-id",
+			"type": "integer",
+			"title": "The system id assigned to the shipment"
+		},
+		"amount": {
+			"$id": "#/properties/amount",
+			"type": "number",
+			"title": "The value of the transaction"
+		},
+		"currency": {
+			"$id": "#/properties/currency",
+			"type": "string",
+			"title": "Monetary system being used for the transaction",
+			"enum": [
+				"USD",
+				"KSH"
+			]
+		},
+		"fintrans-type": {
+			"$id": "#/properties/fintrans-type",
+			"type": "string",
+			"title": "The type of debit or credit transaction.",
+			"enum": [
+				"AGENCY_FEES",
+				"CONTAINER_DEPOSIT",
+				"CONTAINER_REPAIRS",
+				"CUSTOMS_TAXES",
+				"DEMURRAGE_CHARGES",
+				"DOCUMENT_PROCESSING_FEES",
+				"F147",
+				"FEES_FOR_BOL",
+				"FORWARDERS_CHARGES",
+				"TRANSPORT_CHARGES",
+				"HANDING_OVER_FEES",
+				"IDF_FEES",
+				"OTHER_CHARGES",
+				"PARKING_FEES",
+				"PORT_CHARGES",
+				"SHIPPING_LINE_CHARGES",
+				"STORAGE_CHARGES"
+			]
+		},
+		"cost-is-unexpected": {
+			"$id": "#/properties/cost-is-unexpected",
+			"type": "boolean",
+			"title": "TRUE or FALSE field to show if the cost was unexpected or not. DEFAULT is FALSE",
+			"default": false
+		},
+		"bill-of-lading": {
+			"$id": "#/properties/bill-of-lading",
+			"type": "string",
+			"title": "The customer supplied key",
+			"default": false
+		},
+		"memo": {
+			"$id": "#/properties/memo",
+			"type": "string",
+			"title": "Very short note for the transaction"
+		}
+	},
+	"additionalProperties": true
+}
