@@ -6,72 +6,75 @@
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
     "examples": [
-        {
-            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "organizations-id": 1,
-            "aws-user-name": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-            "trips-id": 1
-        }
+      {
+        "request-header": {
+          "json-web-token": "example-json-token",
+          "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
+          "aws-user-name": "soteuser",
+          "organizations-id": 10003,
+          "role-list": [
+            "CLIENT_ADMIN",
+            "EXECUTIVE"
+          ]
+        },
+        "container-id": 10018
+      }
     ],
     "required": [
-        "json-web-token",
-        "message-id",
-        "organizations-id",
-        "aws-user-name",
-        "trips-id"
+      "container-id"
     ],
     "properties": {
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
+      "request-header": {
+        "$ref": "#/definitions/request-header"
+      },
+      "container-id": {
+        "$id": "#/properties/container-id",
+        "type": "integer",
+        "title": "The container-id schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          10018
+        ]
+      }
+    },
+    "definitions": {
+      "request-header": {
+        "type": "object",
+        "properties": {
+          "json-web-token": {
             "type": "string",
-            "title": "The json-web-token schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "eyJraWQiOvxxxxxxxxxxxxxxxx"
-            ]
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
+            "title": "The json-web-token schema"
+          },
+          "message-id": {
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
-            ]
-        },
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
+            "title": "The message-id schema"
+          },
+          "aws-user-name": {
+            "type": "string",
+            "title": "The aws-user-name schema"
+          },
+          "organizations-id": {
             "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
+            "title": "The organizations-id schema"
+          },
+          "role-list": {
+            "type": "array",
+            "title": "The role-list schema",
+            "enum": [
+              "CLIENT_ADMIN",
+              "EXECUTIVE"
             ]
+          }
         },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
-            "type": "string",
-            "title": "The aws-user-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
-            ]
-        },
-        "trips-id": {
-            "$id": "#/properties/trips-id",
-            "type": "integer",
-            "title": "The trips-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        }
+        "required": [
+          "json-web-token",
+          "message-id",
+          "aws-user-name",
+          "organizations-id"
+        ]
+      }
     },
     "additionalProperties": true
-}
+  }
+  

@@ -1,80 +1,79 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
-    "default": {},
-    "examples": [
-      {
-        "request-header": {
-          "json-web-token": "example-json-token",
-          "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
-          "aws-user-name": "soteuser",
-          "organizations-id": 10003,
-          "role-list": [
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "request-header": {
+        "json-web-token": "example-json-token",
+        "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
+        "aws-user-name": "soteuser",
+        "organizations-id": 10003,
+        "role-list": [
+          "CLIENT_ADMIN",
+          "EXECUTIVE"
+        ]
+      },
+      "cargo-id": 10018
+    }
+  ],
+  "required": [
+    "cargo-id"
+  ],
+  "properties": {
+    "request-header": {
+      "$ref": "#/definitions/request-header"
+    },
+    "cargo-id": {
+      "$id": "#/properties/cargo-id",
+      "type": "integer",
+      "title": "The cargo-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        10018
+      ]
+    }
+  },
+  "definitions": {
+    "request-header": {
+      "type": "object",
+      "properties": {
+        "json-web-token": {
+          "type": "string",
+          "title": "The json-web-token schema"
+        },
+        "message-id": {
+          "type": "string",
+          "title": "The message-id schema"
+        },
+        "aws-user-name": {
+          "type": "string",
+          "title": "The aws-user-name schema"
+        },
+        "organizations-id": {
+          "type": "integer",
+          "title": "The organizations-id schema"
+        },
+        "role-list": {
+          "type": "array",
+          "title": "The role-list schema",
+          "enum": [
             "CLIENT_ADMIN",
             "EXECUTIVE"
           ]
-        },
-        "cargo-id": 10018
-      }
-    ],
-    "required": [
-      "cargo-id"
-    ],
-    "properties": {
-      "request-header": {
-        "$ref": "#/definitions/request-header"
+        }
       },
-      "cargo-id": {
-        "$id": "#/properties/cargo-id",
-        "type": "integer",
-        "title": "The cargo-id schema",
-        "description": "An explanation about the purpose of this instance.",
-        "default": 0,
-        "examples": [
-          10018
-        ]
-      }
-    },
-    "definitions": {
-      "request-header": {
-        "type": "object",
-        "properties": {
-          "json-web-token": {
-            "type": "string",
-            "title": "The json-web-token schema"
-          },
-          "message-id": {
-            "type": "string",
-            "title": "The message-id schema"
-          },
-          "aws-user-name": {
-            "type": "string",
-            "title": "The aws-user-name schema"
-          },
-          "organizations-id": {
-            "type": "integer",
-            "title": "The organizations-id schema"
-          },
-          "role-list": {
-            "type": "array",
-            "title": "The role-list schema",
-            "enum": [
-              "CLIENT_ADMIN",
-              "EXECUTIVE"
-            ]
-          }
-        },
-        "required": [
-          "json-web-token",
-          "message-id",
-          "aws-user-name",
-          "organizations-id"
-        ]
-      }
-    },
-    "additionalProperties": true
-  }
-  
+      "required": [
+        "json-web-token",
+        "message-id",
+        "aws-user-name",
+        "organizations-id"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
