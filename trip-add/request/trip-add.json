@@ -17,204 +17,204 @@
                     "EXECUTIVE"
                 ]
             },
-            "load_name": "HYT45x0917",
-            "client_company_id": 20,
-            "pickup_location": "Hiram Saltmarsh",
-            "drop_off_location": "Velvet Veldt",
-            "load_weight": 2,
-            "load_unit_of_measure": "METRIC_TONS",
-            "client_company_name": "Customs",
-            "trip_notes": "Handle with care",
-            "trip_type": "OUTSOURCED",
-            "estimated_pickup_date": "2019-01-01",
-            "estimated_delivery_date": "2019-01-01",
-            "estimated_delivery_days": 12,
-            "estimated_total_days": 45,
-            "shipments_id": "1",
-            "first_estimated_delivery_date": "2020-02-02",
-            "external_bill_of_lading": "Test Bol",
-            "return_yard": "Test_Yard"
+            "load-name": "HYT45x0917",
+            "client-company-id": 20,
+            "pickup-location": "Hiram Saltmarsh",
+            "drop-off-location": "Velvet Veldt",
+            "load-weight": 2,
+            "load-unit-of-measure": "METRIC_TONS",
+            "client-company-name": "Customs",
+            "trip-notes": "Handle with care",
+            "trip-type": "OUTSOURCED",
+            "estimated-pickup-date": "2019-01-01",
+            "estimated-delivery-date": "2019-01-01",
+            "estimated-delivery-days": 12,
+            "estimated-total-days": 45,
+            "shipments-id": "1",
+            "first-estimated-delivery-date": "2020-02-02",
+            "external-bill-of-lading": "Test Bol",
+            "return-yard": "Test-Yard"
         }
     ],
     "required": [
-        "load_name",
-        "client_company_id",
-        "pickup_location",
-        "drop_off_location",
-        "client_company_name"
+        "load-name",
+        "client-company-id",
+        "pickup-location",
+        "drop-off-location",
+        "client-company-name"
     ],
     "properties": {
         "request-header": {
             "$ref": "#/definitions/request-header"
         },
-        "load_name": {
-            "$id": "#/properties/load_name",
+        "load-name": {
+            "$id": "#/properties/load-name",
             "type": "string",
-            "title": "The load_name schema",
+            "title": "The load-name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "HYT45x0917"
             ]
         },
-        "client_company_id": {
-            "$id": "#/properties/client_company_id",
+        "client-company-id": {
+            "$id": "#/properties/client-company-id",
             "type": "integer",
-            "title": "The client_company_id schema",
+            "title": "The client-company-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 20
             ]
         },
-        "pickup_location": {
-            "$id": "#/properties/pickup_location",
+        "pickup-location": {
+            "$id": "#/properties/pickup-location",
             "type": "string",
-            "title": "The pickup_location schema",
+            "title": "The pickup-location schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "Hiram Saltmarsh"
             ]
         },
-        "drop_off_location": {
-            "$id": "#/properties/drop_off_location",
+        "drop-off-location": {
+            "$id": "#/properties/drop-off-location",
             "type": "string",
-            "title": "The drop_off_location schema",
+            "title": "The drop-off-location schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "Velvet Veldt"
             ]
         },
-        "load_weight": {
-            "$id": "#/properties/load_weight",
+        "load-weight": {
+            "$id": "#/properties/load-weight",
             "type": "integer",
-            "title": "The load_weight schema",
+            "title": "The load-weight schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 2
             ]
         },
-        "load_unit_of_measure": {
-            "$id": "#/properties/load_unit_of_measure",
+        "load-unit-of-measure": {
+            "$id": "#/properties/load-unit-of-measure",
             "type": "string",
-            "title": "The load_unit_of_measure schema",
+            "title": "The load-unit-of-measure schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "METRIC_TONS"
             ]
         },
-        "client_company_name": {
-            "$id": "#/properties/client_company_name",
+        "client-company-name": {
+            "$id": "#/properties/client-company-name",
             "type": "string",
-            "title": "The client_company_name schema",
+            "title": "The client-company-name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "Customs"
             ]
         },
-        "trip_notes": {
-            "$id": "#/properties/trip_notes",
+        "trip-notes": {
+            "$id": "#/properties/trip-notes",
             "type": "string",
-            "title": "The trip_notes schema",
+            "title": "The trip-notes schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "Handle with care"
             ]
         },
-        "trip_type": {
-            "$id": "#/properties/trip_type",
+        "trip-type": {
+            "$id": "#/properties/trip-type",
             "type": "string",
-            "title": "The trip_type schema",
+            "title": "The trip-type schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "OUTSOURCED"
             ]
         },
-        "estimated_pickup_date": {
-            "$id": "#/properties/estimated_pickup_date",
+        "estimated-pickup-date": {
+            "$id": "#/properties/estimated-pickup-date",
             "type": "string",
-            "title": "The estimated_pickup_date schema",
+            "title": "The estimated-pickup-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "2019-01-01"
             ]
         },
-        "estimated_delivery_date": {
-            "$id": "#/properties/estimated_delivery_date",
+        "estimated-delivery-date": {
+            "$id": "#/properties/estimated-delivery-date",
             "type": "string",
-            "title": "The estimated_delivery_date schema",
+            "title": "The estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "2019-01-01"
             ]
         },
-        "estimated_delivery_days": {
-            "$id": "#/properties/estimated_delivery_days",
+        "estimated-delivery-days": {
+            "$id": "#/properties/estimated-delivery-days",
             "type": "integer",
-            "title": "The estimated_delivery_days schema",
+            "title": "The estimated-delivery-days schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 12
             ]
         },
-        "estimated_total_days": {
-            "$id": "#/properties/estimated_total_days",
+        "estimated-total-days": {
+            "$id": "#/properties/estimated-total-days",
             "type": "integer",
-            "title": "The estimated_total_days schema",
+            "title": "The estimated-total-days schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 45
             ]
         },
-        "shipments_id": {
-            "$id": "#/properties/shipments_id",
+        "shipments-id": {
+            "$id": "#/properties/shipments-id",
             "type": "string",
-            "title": "The shipments_id schema",
+            "title": "The shipments-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "1"
             ]
         },
-        "first_estimated_delivery_date": {
-            "$id": "#/properties/first_estimated_delivery_date",
+        "first-estimated-delivery-date": {
+            "$id": "#/properties/first-estimated-delivery-date",
             "type": "string",
-            "title": "The first_estimated_delivery_date schema",
+            "title": "The first-estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "2020-02-02"
             ]
         },
-        "external_bill_of_lading": {
-            "$id": "#/properties/external_bill_of_lading",
+        "external-bill-of-lading": {
+            "$id": "#/properties/external-bill-of-lading",
             "type": "string",
-            "title": "The external_bill_of_lading schema",
+            "title": "The external-bill-of-lading schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "Test Bol"
             ]
         },
-        "return_yard": {
-            "$id": "#/properties/return_yard",
+        "return-yard": {
+            "$id": "#/properties/return-yard",
             "type": "string",
-            "title": "The return_yard schema",
+            "title": "The return-yard schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "Test_Yard"
+                "Test-Yard"
             ]
         }
     },
