@@ -18,7 +18,7 @@
       "notes-owner-key": [
         "1"
       ],
-      "notes-type": "SHIPMENT_NOTIFICATION",
+      "notes-type": "FINTRANS_SHIPMENT",
       "notes-note": "Updated add example note 2",
       "syntax-type": "TEXT"
     }
@@ -140,7 +140,7 @@
       "description": "This is the type of note.",
       "default": "",
       "examples": [
-        "SHIPMENT_NOTIFICATION"
+        "FINTRANS_SHIPMENT"
       ]
     },
     "notes-note": {
