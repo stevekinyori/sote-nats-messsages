@@ -10,37 +10,26 @@
       "message-id": "test",
       "message": [
         {
-          "notes_id": 150,
+          "notes_id": 319,
           "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
-          "notes_type": "JOBCARD",
-          "notes_note": "Tests Note 1",
-          "created_by_date": "2021-05-19T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+          "notes_owner_micro_service": "FINTRANS",
+          "notes_owner_key": "211",
+          "notes_type": "FINTRANS_SHIPMENT",
+          "notes_note": "{\"comment\":\"This is a payment comment\"}",
+          "created_by_date": "2021-01-12T00:00:00Z",
+          "created_by_requestor_username": "d7266c8f-06d4-41b6-814d-3ee850338ea7",
+          "created_timestamp": "2021-01-12T09:56:22.71942Z"
         },
         {
-          "notes_id": 142,
+          "notes_id": 320,
           "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Add example note",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
-        },
-        {
-          "notes_id": 90,
-          "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "10000",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Update test",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-17T18:00:05.572633+03:00"
+          "notes_owner_micro_service": "FINTRANS",
+          "notes_owner_key": "214",
+          "notes_type": "FINTRANS_SHIPMENT",
+          "notes_note": "{\"comment\":\"Need to pay\"}",
+          "created_by_date": "2021-01-14T00:00:00Z",
+          "created_by_requestor_username": "d7266c8f-06d4-41b6-814d-3ee850338ea7",
+          "created_timestamp": "2021-01-14T06:31:20.137867Z"
         }
       ]
     }
@@ -54,7 +43,7 @@
       "$id": "#/properties/message-id",
       "type": "string",
       "title": "The message-id schema",
-      "description": "This is used to uniquely identify devices.",
+      "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
         "test"
@@ -64,31 +53,31 @@
       "$id": "#/properties/message",
       "type": "array",
       "title": "The message schema",
-      "description": "This has actual data.",
+      "description": "An explanation about the purpose of this instance.",
       "default": [],
       "examples": [
         [
           {
-            "notes_id": 150,
+            "notes_id": 319,
             "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
-            "notes_type": "JOBCARD",
-            "notes_note": "Tests Note 1",
-            "created_by_date": "2021-05-19T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+            "notes_owner_micro_service": "FINTRANS",
+            "notes_owner_key": "211",
+            "notes_type": "FINTRANS_SHIPMENT",
+            "notes_note": "{\"comment\":\"This is a payment comment\"}",
+            "created_by_date": "2021-01-12T00:00:00Z",
+            "created_by_requestor_username": "d7266c8f-06d4-41b6-814d-3ee850338ea7",
+            "created_timestamp": "2021-01-12T09:56:22.71942Z"
           },
           {
-            "notes_id": 142,
+            "notes_id": 320,
             "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
-            "notes_type": "SHIPMENT_NOTIFICATION",
-            "notes_note": "Add example note",
-            "created_by_date": "2021-05-18T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
+            "notes_owner_micro_service": "FINTRANS",
+            "notes_owner_key": "214",
+            "notes_type": "FINTRANS_SHIPMENT",
+            "notes_note": "{\"comment\":\"Need to pay\"}",
+            "created_by_date": "2021-01-14T00:00:00Z",
+            "created_by_requestor_username": "d7266c8f-06d4-41b6-814d-3ee850338ea7",
+            "created_timestamp": "2021-01-14T06:31:20.137867Z"
           }
         ]
       ],
@@ -104,15 +93,15 @@
             "default": {},
             "examples": [
               {
-                "notes_id": 150,
+                "notes_id": 319,
                 "organizations_id": 10036,
-                "notes_owner_micro_service": "SHIPMENTS",
-                "notes_owner_key": "1",
-                "notes_type": "JOBCARD",
-                "notes_note": "Tests Note 1",
-                "created_by_date": "2021-05-19T00:00:00Z",
-                "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+                "notes_owner_micro_service": "FINTRANS",
+                "notes_owner_key": "211",
+                "notes_type": "FINTRANS_SHIPMENT",
+                "notes_note": "{\"comment\":\"This is a payment comment\"}",
+                "created_by_date": "2021-01-12T00:00:00Z",
+                "created_by_requestor_username": "d7266c8f-06d4-41b6-814d-3ee850338ea7",
+                "created_timestamp": "2021-01-12T09:56:22.71942Z"
               }
             ],
             "required": [
@@ -131,10 +120,10 @@
                 "$id": "#/properties/message/items/anyOf/0/properties/notes_id",
                 "type": "integer",
                 "title": "The notes_id schema",
-                "description": "This is a system generated id that is used to identify the note.",
+                "description": "An explanation about the purpose of this instance.",
                 "default": 0,
                 "examples": [
-                  150
+                  319
                 ]
               },
               "organizations_id": {
@@ -154,7 +143,7 @@
                 "description": "This is the Micro service holding the note source table.",
                 "default": "",
                 "examples": [
-                  "SHIPMENTS"
+                  "FINTRANS"
                 ]
               },
               "notes_owner_key": {
@@ -164,7 +153,7 @@
                 "description": "This is a system generated ids that is used to restrict access to micro-service data. This is the source table primary key field value.",
                 "default": "",
                 "examples": [
-                  "1"
+                  "211"
                 ]
               },
               "notes_type": {
@@ -174,7 +163,7 @@
                 "description": "This is the type of note.",
                 "default": "",
                 "examples": [
-                  "JOBCARD"
+                  "FINTRANS_SHIPMENT"
                 ]
               },
               "notes_note": {
@@ -184,7 +173,7 @@
                 "description": "This is the note.",
                 "default": "",
                 "examples": [
-                  "Tests Note 1"
+                  "{\"comment\":\"This is a payment comment\"}"
                 ]
               },
               "created_by_date": {
@@ -194,7 +183,7 @@
                 "description": "When the user entry was entered in the system.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T00:00:00Z"
+                  "2021-01-12T00:00:00Z"
                 ]
               },
               "created_by_requestor_username": {
@@ -204,7 +193,7 @@
                 "description": "The Cognito username for the person who made the request.",
                 "default": "",
                 "examples": [
-                  "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                  "d7266c8f-06d4-41b6-814d-3ee850338ea7"
                 ]
               },
               "created_timestamp": {
@@ -214,7 +203,7 @@
                 "description": "This is the specific date and time 'stamped' when note(s) was/were added.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T23:59:24.050458+03:00"
+                  "2021-01-12T09:56:22.71942Z"
                 ]
               }
             },
