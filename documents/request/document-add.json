@@ -7,16 +7,16 @@
   "default": {},
   "examples": [
     {
-      "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+      "message-id": "test",
       "json-web-token": "FAKE TOKEN",
       "aws-user-name": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
       "role-list": [
         "CLIENT",
         "USER"
       ],
-      "organizations-id": 1,
-      "subject": "add",
-      "documents-link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/inbound/upload_test.jpeg"
+      "organizations-id": 10036,
+      "documents-link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/inbound/upload_test.jpeg",
+      "documents-owner-key": "1000"
     }
   ],
   "required": [
@@ -25,52 +25,52 @@
     "aws-user-name",
     "role-list",
     "organizations-id",
-    "subject",
-    "documents-link"
+    "documents-link",
+    "documents-owner-key"
   ],
   "properties": {
     "message-id": {
       "$id": "#/properties/message-id",
-      "default": "",
-      "description": "This is used to uniquely identify devices.",
-      "examples": [
-        "51ad84d4-XXXXXXX-6b2ce5e8"
-      ],
+      "type": "string",
       "title": "The message-id schema",
-      "type": "string"
+      "description": "This is used to uniquely identify devices.",
+      "default": "",
+      "examples": [
+        "test"
+      ]
     },
     "json-web-token": {
       "$id": "#/properties/json-web-token",
-      "default": "",
+      "type": "string",
+      "title": "The json-web-token schema",
       "description": "This is used authenticate a user.",
+      "default": "",
       "examples": [
         "FAKE TOKEN"
-      ],
-      "title": "The json-web-token schema",
-      "type": "string"
+      ]
     },
     "aws-user-name": {
       "$id": "#/properties/aws-user-name",
-      "default": "",
+      "type": "string",
+      "title": "The aws-user-name schema",
       "description": "The Cognito username for the person who is requesting the document add.",
+      "default": "",
       "examples": [
         "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
-      ],
-      "title": "The aws-user-name schema",
-      "type": "string"
+      ]
     },
     "role-list": {
       "$id": "#/properties/role-list",
-      "default": [],
+      "type": "array",
+      "title": "The role-list schema",
       "description": "This determines which actions user can perform.",
+      "default": [],
       "examples": [
         [
           "CLIENT",
           "USER"
         ]
       ],
-      "title": "The role-list schema",
-      "type": "array",
       "additionalItems": true,
       "items": {
         "$id": "#/properties/role-list/items",
@@ -91,33 +91,33 @@
     },
     "organizations-id": {
       "$id": "#/properties/organizations-id",
-      "default": 0,
-      "description": "This is a system generated id that is used to restrict access to customers data.",
-      "examples": [
-        1
-      ],
+      "type": "integer",
       "title": "The organizations-id schema",
-      "type": "integer"
-    },
-    "subject": {
-      "$id": "#/properties/subject",
-      "default": "",
-      "description": "This is the Business Service Action that is to be executed.",
+      "description": "This is a system generated id that is used to restrict access to customers data.",
+      "default": 0,
       "examples": [
-        "add"
-      ],
-      "title": "The subject schema",
-      "type": "string"
+        10036
+      ]
     },
     "documents-link": {
       "$id": "#/properties/documents-link",
-      "default": "",
+      "type": "string",
+      "title": "The documents-link schema",
       "description": "This is the URL of document to be processed.",
+      "default": "",
       "examples": [
         "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/inbound/upload_test.jpeg"
-      ],
-      "title": "The documents-link schema",
-      "type": "string"
+      ]
+    },
+    "documents-owner-key": {
+      "$id": "#/properties/documents-owner-key",
+      "type": "string",
+      "title": "The documents-owner-key schema",
+      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value.",
+      "default": "",
+      "examples": [
+        "1000"
+      ]
     }
   },
   "additionalProperties": true

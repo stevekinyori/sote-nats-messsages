@@ -7,13 +7,13 @@
   "default": {},
   "examples": [
     {
-      "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+      "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
       "message": [
         {
           "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
-          "organizations_id": 1,
-          "documents_owner_micro_service": "SHIPMENTS",
-          "documents_owner_table": "shipments",
+          "organizations_id": 10036,
+          "documents_owner_micro_service": "JOBCARDS",
+          "documents_owner_table": "jobcards",
           "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
           "documents_type": "application/pdf",
           "documents_display_name": "upload_test.pdf",
@@ -35,7 +35,7 @@
       "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
-        "51ad84d4-XXXXXXX-6b2ce5e8"
+        "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
       ]
     },
     "message": {
@@ -48,9 +48,9 @@
         [
           {
             "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
-            "organizations_id": 1,
-            "documents_owner_micro_service": "SHIPMENTS",
-            "documents_owner_table": "shipments",
+            "organizations_id": 10036,
+            "documents_owner_micro_service": "JOBCARDS",
+            "documents_owner_table": "jobcards",
             "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
             "documents_type": "application/pdf",
             "documents_display_name": "upload_test.pdf",
@@ -72,9 +72,9 @@
             "examples": [
               {
                 "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
-                "organizations_id": 1,
-                "documents_owner_micro_service": "SHIPMENTS",
-                "documents_owner_table": "shipments",
+                "organizations_id": 10036,
+                "documents_owner_micro_service": "JOBCARDS",
+                "documents_owner_table": "jobcards",
                 "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
                 "documents_type": "application/pdf",
                 "documents_display_name": "upload_test.pdf",
@@ -109,7 +109,7 @@
                 "default": 0,
                 "description": "This is a system generated id that is used to restrict access to customers data.",
                 "examples": [
-                  1
+                  10036
                 ],
                 "title": "The organizations_id schema",
                 "type": "integer"
@@ -119,7 +119,7 @@
                 "default": "",
                 "description": "This is the Micro service holding the document source table.",
                 "examples": [
-                  "SHIPMENTS"
+                  "JOBCARDS"
                 ],
                 "title": "The documents_owner_micro_service schema",
                 "type": "string"
@@ -129,7 +129,7 @@
                 "default": "",
                 "description": "This is the document's source table.",
                 "examples": [
-                  "shipments"
+                  "jobcards"
                 ],
                 "title": "The documents_owner_table schema",
                 "type": "string"

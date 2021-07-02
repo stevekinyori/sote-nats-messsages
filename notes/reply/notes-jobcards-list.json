@@ -10,37 +10,26 @@
       "message-id": "test",
       "message": [
         {
-          "notes_id": 150,
-          "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
+          "notes_id": 203,
+          "organizations_id": 10039,
+          "notes_owner_micro_service": "JOBCARDS",
+          "notes_owner_key": "10048",
           "notes_type": "JOBCARD",
-          "notes_note": "Tests Note 1",
-          "created_by_date": "2021-05-19T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+          "notes_note": "{\"status\":\"DELAYED\",\"comment\":\"Mechanical breakdown\",\"originalDeliveryDate\":\"2020/10/07\",\"newDeliveryDate\":\"2020/10/07\",\"originalReturnDate\":\"2020/10/08\",\"newReturnDate\":\"2020/10/08\",\"triplocationhistory_id\":1021}",
+          "created_by_date": "2020-10-06T00:00:00Z",
+          "created_by_requestor_username": "3b67e815-dbce-4a57-a3d9-f93ece925407",
+          "created_timestamp": "2020-10-06T13:53:57.892705Z"
         },
         {
-          "notes_id": 142,
-          "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Add example note",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
-        },
-        {
-          "notes_id": 90,
-          "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "10000",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Update test",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-17T18:00:05.572633+03:00"
+          "notes_id": 189,
+          "organizations_id": 10039,
+          "notes_owner_micro_service": "JOBCARDS",
+          "notes_owner_key": "10054",
+          "notes_type": "JOBCARD",
+          "notes_note": "{\"status\":\"ONTIME\",\"comment\":\"Ontime\",\"originalDeliveryDate\":\"2020/09/21\",\"newDeliveryDate\":\"2020/09/21\",\"originalReturnDate\":\"2020/09/22\",\"newReturnDate\":\"2020/09/22\",\"triplocationhistory_id\":1014}",
+          "created_by_date": "2020-09-17T00:00:00Z",
+          "created_by_requestor_username": "3b67e815-dbce-4a57-a3d9-f93ece925407",
+          "created_timestamp": "2020-09-17T05:03:20.282338Z"
         }
       ]
     }
@@ -54,7 +43,7 @@
       "$id": "#/properties/message-id",
       "type": "string",
       "title": "The message-id schema",
-      "description": "This is used to uniquely identify devices.",
+      "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
         "test"
@@ -64,31 +53,31 @@
       "$id": "#/properties/message",
       "type": "array",
       "title": "The message schema",
-      "description": "This has actual data.",
+      "description": "An explanation about the purpose of this instance.",
       "default": [],
       "examples": [
         [
           {
-            "notes_id": 150,
-            "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
+            "notes_id": 203,
+            "organizations_id": 10039,
+            "notes_owner_micro_service": "JOBCARDS",
+            "notes_owner_key": "10048",
             "notes_type": "JOBCARD",
-            "notes_note": "Tests Note 1",
-            "created_by_date": "2021-05-19T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+            "notes_note": "{\"status\":\"DELAYED\",\"comment\":\"Mechanical breakdown\",\"originalDeliveryDate\":\"2020/10/07\",\"newDeliveryDate\":\"2020/10/07\",\"originalReturnDate\":\"2020/10/08\",\"newReturnDate\":\"2020/10/08\",\"triplocationhistory_id\":1021}",
+            "created_by_date": "2020-10-06T00:00:00Z",
+            "created_by_requestor_username": "3b67e815-dbce-4a57-a3d9-f93ece925407",
+            "created_timestamp": "2020-10-06T13:53:57.892705Z"
           },
           {
-            "notes_id": 142,
-            "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
-            "notes_type": "SHIPMENT_NOTIFICATION",
-            "notes_note": "Add example note",
-            "created_by_date": "2021-05-18T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
+            "notes_id": 189,
+            "organizations_id": 10039,
+            "notes_owner_micro_service": "JOBCARDS",
+            "notes_owner_key": "10054",
+            "notes_type": "JOBCARD",
+            "notes_note": "{\"status\":\"ONTIME\",\"comment\":\"Ontime\",\"originalDeliveryDate\":\"2020/09/21\",\"newDeliveryDate\":\"2020/09/21\",\"originalReturnDate\":\"2020/09/22\",\"newReturnDate\":\"2020/09/22\",\"triplocationhistory_id\":1014}",
+            "created_by_date": "2020-09-17T00:00:00Z",
+            "created_by_requestor_username": "3b67e815-dbce-4a57-a3d9-f93ece925407",
+            "created_timestamp": "2020-09-17T05:03:20.282338Z"
           }
         ]
       ],
@@ -104,15 +93,15 @@
             "default": {},
             "examples": [
               {
-                "notes_id": 150,
-                "organizations_id": 10036,
-                "notes_owner_micro_service": "SHIPMENTS",
-                "notes_owner_key": "1",
+                "notes_id": 203,
+                "organizations_id": 10039,
+                "notes_owner_micro_service": "JOBCARDS",
+                "notes_owner_key": "10048",
                 "notes_type": "JOBCARD",
-                "notes_note": "Tests Note 1",
-                "created_by_date": "2021-05-19T00:00:00Z",
-                "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+                "notes_note": "{\"status\":\"DELAYED\",\"comment\":\"Mechanical breakdown\",\"originalDeliveryDate\":\"2020/10/07\",\"newDeliveryDate\":\"2020/10/07\",\"originalReturnDate\":\"2020/10/08\",\"newReturnDate\":\"2020/10/08\",\"triplocationhistory_id\":1021}",
+                "created_by_date": "2020-10-06T00:00:00Z",
+                "created_by_requestor_username": "3b67e815-dbce-4a57-a3d9-f93ece925407",
+                "created_timestamp": "2020-10-06T13:53:57.892705Z"
               }
             ],
             "required": [
@@ -134,7 +123,7 @@
                 "description": "This is a system generated id that is used to identify the note.",
                 "default": 0,
                 "examples": [
-                  150
+                  203
                 ]
               },
               "organizations_id": {
@@ -144,7 +133,7 @@
                 "description": "This is a system generated id that is used to restrict access to customers' data.",
                 "default": 0,
                 "examples": [
-                  10036
+                  10039
                 ]
               },
               "notes_owner_micro_service": {
@@ -154,7 +143,7 @@
                 "description": "This is the Micro service holding the note source table.",
                 "default": "",
                 "examples": [
-                  "SHIPMENTS"
+                  "JOBCARDS"
                 ]
               },
               "notes_owner_key": {
@@ -164,7 +153,7 @@
                 "description": "This is a system generated ids that is used to restrict access to micro-service data. This is the source table primary key field value.",
                 "default": "",
                 "examples": [
-                  "1"
+                  "10048"
                 ]
               },
               "notes_type": {
@@ -184,7 +173,7 @@
                 "description": "This is the note.",
                 "default": "",
                 "examples": [
-                  "Tests Note 1"
+                  "{\"status\":\"DELAYED\",\"comment\":\"Mechanical breakdown\",\"originalDeliveryDate\":\"2020/10/07\",\"newDeliveryDate\":\"2020/10/07\",\"originalReturnDate\":\"2020/10/08\",\"newReturnDate\":\"2020/10/08\",\"triplocationhistory_id\":1021}"
                 ]
               },
               "created_by_date": {
@@ -194,7 +183,7 @@
                 "description": "When the user entry was entered in the system.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T00:00:00Z"
+                  "2020-10-06T00:00:00Z"
                 ]
               },
               "created_by_requestor_username": {
@@ -204,7 +193,7 @@
                 "description": "The Cognito username for the person who made the request.",
                 "default": "",
                 "examples": [
-                  "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                  "3b67e815-dbce-4a57-a3d9-f93ece925407"
                 ]
               },
               "created_timestamp": {
@@ -214,7 +203,7 @@
                 "description": "This is the specific date and time 'stamped' when note(s) was/were added.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T23:59:24.050458+03:00"
+                  "2020-10-06T13:53:57.892705Z"
                 ]
               }
             },

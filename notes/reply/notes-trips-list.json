@@ -10,37 +10,37 @@
       "message-id": "test",
       "message": [
         {
-          "notes_id": 150,
+          "notes_id": 137,
           "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
-          "notes_type": "JOBCARD",
-          "notes_note": "Tests Note 1",
-          "created_by_date": "2021-05-19T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1006",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T11:50:55.839066Z"
         },
         {
           "notes_id": 142,
           "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Add example note",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1015",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Loaded out of point of clearance\",\"comment\":\"Picked up by transporter X\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T12:16:20.967269Z"
         },
         {
-          "notes_id": 90,
+          "notes_id": 143,
           "organizations_id": 10036,
-          "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "10000",
-          "notes_type": "SHIPMENT_NOTIFICATION",
-          "notes_note": "Update test",
-          "created_by_date": "2021-05-18T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "created_timestamp": "2021-05-17T18:00:05.572633+03:00"
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1015",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"something new\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T12:18:15.850091Z"
         }
       ]
     }
@@ -54,7 +54,7 @@
       "$id": "#/properties/message-id",
       "type": "string",
       "title": "The message-id schema",
-      "description": "This is used to uniquely identify devices.",
+      "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
         "test"
@@ -64,31 +64,31 @@
       "$id": "#/properties/message",
       "type": "array",
       "title": "The message schema",
-      "description": "This has actual data.",
+      "description": "An explanation about the purpose of this instance.",
       "default": [],
       "examples": [
         [
           {
-            "notes_id": 150,
+            "notes_id": 137,
             "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
-            "notes_type": "JOBCARD",
-            "notes_note": "Tests Note 1",
-            "created_by_date": "2021-05-19T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+            "notes_owner_micro_service": "TRIPS",
+            "notes_owner_key": "1006",
+            "notes_type": "USER_DEFINED_LOV",
+            "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+            "created_by_date": "2020-07-16T00:00:00Z",
+            "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+            "created_timestamp": "2020-07-16T11:50:55.839066Z"
           },
           {
             "notes_id": 142,
             "organizations_id": 10036,
-            "notes_owner_micro_service": "SHIPMENTS",
-            "notes_owner_key": "1",
-            "notes_type": "SHIPMENT_NOTIFICATION",
-            "notes_note": "Add example note",
-            "created_by_date": "2021-05-18T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "created_timestamp": "2021-05-18T15:46:39.07774+03:00"
+            "notes_owner_micro_service": "TRIPS",
+            "notes_owner_key": "1015",
+            "notes_type": "USER_DEFINED_LOV",
+            "notes_note": "{\"title\":\"Loaded out of point of clearance\",\"comment\":\"Picked up by transporter X\"}",
+            "created_by_date": "2020-07-16T00:00:00Z",
+            "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+            "created_timestamp": "2020-07-16T12:16:20.967269Z"
           }
         ]
       ],
@@ -104,15 +104,15 @@
             "default": {},
             "examples": [
               {
-                "notes_id": 150,
+                "notes_id": 137,
                 "organizations_id": 10036,
-                "notes_owner_micro_service": "SHIPMENTS",
-                "notes_owner_key": "1",
-                "notes_type": "JOBCARD",
-                "notes_note": "Tests Note 1",
-                "created_by_date": "2021-05-19T00:00:00Z",
-                "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                "created_timestamp": "2021-05-19T23:59:24.050458+03:00"
+                "notes_owner_micro_service": "TRIPS",
+                "notes_owner_key": "1006",
+                "notes_type": "USER_DEFINED_LOV",
+                "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+                "created_by_date": "2020-07-16T00:00:00Z",
+                "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+                "created_timestamp": "2020-07-16T11:50:55.839066Z"
               }
             ],
             "required": [
@@ -134,7 +134,7 @@
                 "description": "This is a system generated id that is used to identify the note.",
                 "default": 0,
                 "examples": [
-                  150
+                  137
                 ]
               },
               "organizations_id": {
@@ -154,7 +154,7 @@
                 "description": "This is the Micro service holding the note source table.",
                 "default": "",
                 "examples": [
-                  "SHIPMENTS"
+                  "TRIPS"
                 ]
               },
               "notes_owner_key": {
@@ -164,7 +164,7 @@
                 "description": "This is a system generated ids that is used to restrict access to micro-service data. This is the source table primary key field value.",
                 "default": "",
                 "examples": [
-                  "1"
+                  "1006"
                 ]
               },
               "notes_type": {
@@ -174,7 +174,7 @@
                 "description": "This is the type of note.",
                 "default": "",
                 "examples": [
-                  "JOBCARD"
+                  "USER_DEFINED_LOV"
                 ]
               },
               "notes_note": {
@@ -184,7 +184,7 @@
                 "description": "This is the note.",
                 "default": "",
                 "examples": [
-                  "Tests Note 1"
+                  "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}"
                 ]
               },
               "created_by_date": {
@@ -194,7 +194,7 @@
                 "description": "When the user entry was entered in the system.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T00:00:00Z"
+                  "2020-07-16T00:00:00Z"
                 ]
               },
               "created_by_requestor_username": {
@@ -204,7 +204,7 @@
                 "description": "The Cognito username for the person who made the request.",
                 "default": "",
                 "examples": [
-                  "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                  "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd"
                 ]
               },
               "created_timestamp": {
@@ -214,7 +214,7 @@
                 "description": "This is the specific date and time 'stamped' when note(s) was/were added.",
                 "default": "",
                 "examples": [
-                  "2021-05-19T23:59:24.050458+03:00"
+                  "2020-07-16T11:50:55.839066Z"
                 ]
               }
             },
