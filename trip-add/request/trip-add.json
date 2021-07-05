@@ -139,7 +139,7 @@
         },
         "estimated-pickup-date": {
             "$id": "#/properties/estimated-pickup-date",
-            "type": "string",
+            "type": "object",
             "title": "The estimated-pickup-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
@@ -149,7 +149,7 @@
         },
         "estimated-delivery-date": {
             "$id": "#/properties/estimated-delivery-date",
-            "type": "string",
+            "type": "object",
             "title": "The estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
@@ -179,17 +179,17 @@
         },
         "shipments-id": {
             "$id": "#/properties/shipments-id",
-            "type": "string",
+            "type": "integer",
             "title": "The shipments-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1"
+                1
             ]
         },
         "first-estimated-delivery-date": {
             "$id": "#/properties/first-estimated-delivery-date",
-            "type": "string",
+            "type": "object",
             "title": "The first-estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
