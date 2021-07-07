@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
-    "type": "object",
+    "type": "string",
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
@@ -139,7 +139,7 @@
         },
         "estimated-pickup-date": {
             "$id": "#/properties/estimated-pickup-date",
-            "type": "object",
+            "type": "string",
             "title": "The estimated-pickup-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
@@ -149,7 +149,7 @@
         },
         "estimated-delivery-date": {
             "$id": "#/properties/estimated-delivery-date",
-            "type": "object",
+            "type": "string",
             "title": "The estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
@@ -189,7 +189,7 @@
         },
         "first-estimated-delivery-date": {
             "$id": "#/properties/first-estimated-delivery-date",
-            "type": "object",
+            "type": "string",
             "title": "The first-estimated-delivery-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
@@ -220,7 +220,7 @@
     },
     "definitions": {
         "request-header": {
-            "type": "object",
+            "type": "string",
             "properties": {
                 "json-web-token": {
                     "type": "string",
