@@ -1,41 +1,543 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "Organizations Get Result",
+    "$id": "http://example.com/example.json",
     "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document for organizations. This is the structure that will be returned for a get message request.",
+    "default": {},
     "examples": [
         {
+            "message-id": "test-message-id-get",
             "message": {
-                "desired_payment_threshold": 12000,
-                "estimated_paid_seats_month": 12,
-                "estimated_total_users": 102,
-                "estimated_total_vehicles": 1500,
-                "organization_is_active": true,
-                "organization_name": "test organization5",
-                "organizations_id": 10108,
-                "row_version": 1
-            },
-            "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+                "organizations-id": 10000,
+                "row-version": 1,
+                "organization-is-active": true,
+                "organization-name": "SOTE",
+                "created-by-date": "2019-12-04",
+                "created-by-requestor-username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                "company-clients": {
+                    "1": {
+                        "client_company_id": 1,
+                        "row-version": 2,
+                        "client-company-is-active": true,
+                        "client-company-name": "ACME CONTAINERS LTD",
+                        "created-by-date": "2020-05-08",
+                        "created-by-requestor-username": "a60a85c8-358b-4543-be80-af4265861a93",
+                        "updated-by-date": "2020-08-27",
+                        "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e",
+                        "company-suppliers": {
+                            "1186": {
+                                "suppliers-id": 1186,
+                                "supplier-name": "SAUDI BASIC INDUSTRIES CORPORATION",
+                                "created-by-date": "2020-11-11",
+                                "created-by-requestor-username": "51ad84d4-8016-44cd-8250-247a6b2ce5e8"
+                            },
+                            "1189": {
+                                "suppliers-id": 1189,
+                                "supplier-name": "BOROUGE PTE LTD",
+                                "created-by-date": "2020-11-11",
+                                "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b"
+                            },
+                            "1375": {
+                                "suppliers-id": 1375,
+                                "supplier-name": "SNETOR CHIMIE",
+                                "created-by-date": "2021-03-18",
+                                "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b"
+                            }
+                        }
+                    },
+                    "10": {
+                        "client_company_id": 10,
+                        "row-version": 2,
+                        "client-company-is-active": true,
+                        "client-company-name": "AQUAPET AND STATIONERS LTD",
+                        "created-by-date": "2020-05-08",
+                        "created-by-requestor-username": "a60a85c8-358b-4543-be80-af4265861a93",
+                        "updated-by-date": "2020-07-14",
+                        "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e",
+                        "company-suppliers": {
+                            "1024": {
+                                "suppliers-id": 1024,
+                                "supplier-name": "GUANGDONG BOYU GROUP CO LTD",
+                                "created-by-date": "2020-08-03",
+                                "created-by-requestor-username": "e2cf79b8-d3d4-48f0-9713-9f34dd5b67f0"
+                            },
+                            "1066": {
+                                "suppliers-id": 1066,
+                                "supplier-name": "CHENGDU ZHITUO AQUATICS CO LTD",
+                                "created-by-date": "2020-08-25",
+                                "created-by-requestor-username": "e2cf79b8-d3d4-48f0-9713-9f34dd5b67f0"
+                            },
+                            "1207": {
+                                "suppliers-id": 1207,
+                                "supplier-name": "KIT CAT INTERNATIONAL PTE LTD",
+                                "created-by-date": "2020-11-12",
+                                "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b"
+                            }
+                        }
+                    }
+                },
+                "products": {
+                    "PRODUCT1": {
+                        "product_name": "PRODUCT1",
+                        "created-by-date": "2021-07-08",
+                        "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                        "updated-by-date": "2020-08-27",
+                        "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e"
+                    },
+                    "PRODUCT2": {
+                        "product_name": "PRODUCT2",
+                        "created-by-date": "2021-07-08",
+                        "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                        "updated-by-date": "",
+                        "updated-by-requestor-username": ""
+                    }
+                }
+            }
         }
     ],
     "required": [
-        "message",
-        "message-id"
+        "message-id",
+        "message"
     ],
     "properties": {
         "message-id": {
             "$id": "#/properties/message-id",
             "type": "string",
             "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "The identifier sent by the requestor",
             "default": "",
             "examples": [
-                "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+                "test-message-id-get"
             ]
         },
         "message": {
             "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema"
+            "title": "The message schema",
+            "description": "The information requested",
+            "default": {},
+            "examples": [
+                {
+                    "organizations-id": 10000,
+                    "row-version": 1,
+                    "organization-is-active": true,
+                    "organization-name": "SOTE",
+                    "created-by-date": "2019-12-04",
+                    "created-by-requestor-username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                    "company-clients": {
+                        "1": {
+                            "client_company_id": 1,
+                            "row-version": 2,
+                            "client-company-is-active": true,
+                            "client-company-name": "ACME CONTAINERS LTD",
+                            "created-by-date": "2020-05-08",
+                            "created-by-requestor-username": "a60a85c8-358b-4543-be80-af4265861a93",
+                            "updated-by-date": "2020-08-27",
+                            "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e",
+                            "company-suppliers": {
+                                "1186": {
+                                    "suppliers-id": 1186,
+                                    "supplier-name": "SAUDI BASIC INDUSTRIES CORPORATION",
+                                    "created-by-date": "2020-11-11",
+                                    "created-by-requestor-username": "51ad84d4-8016-44cd-8250-247a6b2ce5e8",
+                                    "updated-by-date": "2020-08-27",
+                                    "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e"
+                                },
+                                "1189": {
+                                    "suppliers-id": 1189,
+                                    "supplier-name": "BOROUGE PTE LTD",
+                                    "created-by-date": "2020-11-11",
+                                    "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b",
+                                    "updated-by-date": "",
+                                    "updated-by-requestor-username": ""
+                                },
+                                "1375": {
+                                    "suppliers-id": 1375,
+                                    "supplier-name": "SNETOR CHIMIE",
+                                    "created-by-date": "2021-03-18",
+                                    "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b",
+                                    "updated-by-date": "",
+                                    "updated-by-requestor-username": ""
+                                }
+                            }
+                        },
+                        "10": {
+                            "client_company_id": 10,
+                            "row-version": 2,
+                            "client-company-is-active": true,
+                            "client-company-name": "AQUAPET AND STATIONERS LTD",
+                            "created-by-date": "2020-05-08",
+                            "created-by-requestor-username": "a60a85c8-358b-4543-be80-af4265861a93",
+                            "updated-by-date": "2020-07-14",
+                            "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e",
+                            "company-suppliers": {
+                                "1024": {
+                                    "suppliers-id": 1024,
+                                    "supplier-name": "GUANGDONG BOYU GROUP CO LTD",
+                                    "created-by-date": "2020-08-03",
+                                    "created-by-requestor-username": "e2cf79b8-d3d4-48f0-9713-9f34dd5b67f0",
+                                    "updated-by-date": "",
+                                    "updated-by-requestor-username": ""
+                                },
+                                "1066": {
+                                    "suppliers-id": 1066,
+                                    "supplier-name": "CHENGDU ZHITUO AQUATICS CO LTD",
+                                    "created-by-date": "2020-08-25",
+                                    "created-by-requestor-username": "e2cf79b8-d3d4-48f0-9713-9f34dd5b67f0",
+                                    "updated-by-date": "",
+                                    "updated-by-requestor-username": ""
+                                    
+                                },
+                                "1207": {
+                                    "suppliers-id": 1207,
+                                    "supplier-name": "KIT CAT INTERNATIONAL PTE LTD",
+                                    "created-by-date": "2020-11-12",
+                                    "created-by-requestor-username": "d8b0e9d9-b7b7-4e63-a1f2-f59910ef9d2b",
+                                    "updated-by-date": "",
+                                    "updated-by-requestor-username": ""
+                                }
+                            }
+                        }
+                    },
+                    "products": {
+                        "PRODUCT1": {
+                            "product_name": "PRODUCT1",
+                            "created-by-date": "2021-07-08",
+                            "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                            "updated-by-date": "2020-08-27",
+                            "updated-by-requestor-username": "bad69bb8-398a-450f-ae16-b9435901ec8e"
+                        },
+                        "PRODUCT2": {
+                            "product_name": "PRODUCT2",
+                            "created-by-date": "2021-07-08",
+                            "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                            "updated-by-date": "",
+                            "updated-by-requestor-username": ""
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "organizations-id",
+                "row-version",
+                "organization-is-active",
+                "organization-name",
+                "created-by-date",
+                "created-by-requestor-username"
+            ],
+            "properties": {
+                "organizations-id": {
+                    "$id": "#/properties/message/properties/organizations-id",
+                    "type": "integer",
+                    "title": "The organizations-id schema",
+                    "description": "The system identifier for the organization",
+                    "default": 0,
+                    "examples": [
+                        10000
+                    ]
+                },
+                "row-version": {
+                    "$id": "#/properties/message/properties/row-version",
+                    "type": "integer",
+                    "title": "The row-version schema",
+                    "description": "Used to control updates",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "organization-is-active": {
+                    "$id": "#/properties/message/properties/organization-is-active",
+                    "type": "boolean",
+                    "title": "The organization-is-active schema",
+                    "description": "The status of the organization",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                },
+                "organization-name": {
+                    "$id": "#/properties/message/properties/organization-name",
+                    "type": "string",
+                    "title": "The organization-name schema",
+                    "description": "The human interface for the organization",
+                    "default": "",
+                    "examples": [
+                        "SOTE"
+                    ]
+                },
+                "created-by-date": {
+                    "$id": "#/properties/message/properties/created-by-date",
+                    "type": "string",
+                    "title": "The created-by-date schema",
+                    "description": "When it was created on the system",
+                    "default": "",
+                    "examples": [
+                        "2019-12-04"
+                    ]
+                },
+                "created-by-requestor-username": {
+                    "$id": "#/properties/message/properties/created-by-requestor-username",
+                    "type": "string",
+                    "title": "The created-by-requestor-username schema",
+                    "description": "Who created the organization",
+                    "default": "",
+                    "examples": [
+                        "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240"
+                    ]
+                },
+                "company-clients": {
+                    "$id": "#/properties/message/properties/company-clients",
+                    "type": "object",
+                    "title": "The company-clients schema",
+                    "description": "Clients of the organization",
+                    "default": {},
+                    "properties": {
+                        "1": {
+                            "$id": "#/properties/message/properties/company-clients/properties/1",
+                            "type": "object",
+                            "title": "The 1 schema",
+                            "description": "List of client companies of the organization",
+                            "default": {},
+                            "required": [
+                                "client_company_id",
+                                "row-version",
+                                "client-company-is-active",
+                                "client-company-name",
+                                "created-by-date",
+                                "created-by-requestor-username"
+                            ],
+                            "properties": {
+                                "client_company_id": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/client_company_id",
+                                    "type": "integer",
+                                    "title": "The client_company_id schema",
+                                    "description": "The system identifier for the client company",
+                                    "default": 0,
+                                    "examples": [
+                                        1
+                                    ]
+                                },
+                                "row-version": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/row-version",
+                                    "type": "integer",
+                                    "title": "The row-version schema",
+                                    "description": "Used to control updates",
+                                    "default": 0,
+                                    "examples": [
+                                        2
+                                    ]
+                                },
+                                "client-company-is-active": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/client-company-is-active",
+                                    "type": "boolean",
+                                    "title": "The client-company-is-active schema",
+                                    "description": "The status of the client company",
+                                    "default": false,
+                                    "examples": [
+                                        true
+                                    ]
+                                },
+                                "client-company-name": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/client-company-name",
+                                    "type": "string",
+                                    "title": "The client-company-name schema",
+                                    "description": "The human interface to the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "ACME CONTAINERS LTD"
+                                    ]
+                                },
+                                "created-by-date": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/created-by-date",
+                                    "type": "string",
+                                    "title": "The created-by-date schema",
+                                    "description": "When it was created on the system",
+                                    "default": "",
+                                    "examples": [
+                                        "2020-05-08"
+                                    ]
+                                },
+                                "created-by-requestor-username": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/created-by-requestor-username",
+                                    "type": "string",
+                                    "title": "The created-by-requestor-username schema",
+                                    "description": "Who created the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "a60a85c8-358b-4543-be80-af4265861a93"
+                                    ]
+                                },
+                                "updated-by-date": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/updated-by-date",
+                                    "type": "string",
+                                    "title": "The updated-by-date schema",
+                                    "description": "When it was last updated",
+                                    "default": "",
+                                    "examples": [
+                                        "2020-08-27"
+                                    ]
+                                },
+                                "updated-by-requestor-username": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/updated-by-requestor-username",
+                                    "type": "string",
+                                    "title": "The updated-by-requestor-username schema",
+                                    "description": "Who last updated the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "bad69bb8-398a-450f-ae16-b9435901ec8e"
+                                    ]
+                                },
+                                "company-suppliers": {
+                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers",
+                                    "type": "object",
+                                    "title": "The company-suppliers schema",
+                                    "description": "List of supplier companies for the client company.",
+                                    "default": {},
+                                    "properties": {
+                                        "1186": {
+                                            "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers/properties/1186",
+                                            "type": "object",
+                                            "title": "The 1186 schema",
+                                            "description": "Supplier company system identifier",
+                                            "default": {},
+                                            "required": [
+                                                "suppliers-id",
+                                                "supplier-name",
+                                                "created-by-date",
+                                                "created-by-requestor-username"
+                                            ],
+                                            "properties": {
+                                                "suppliers-id": {
+                                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers/properties/1186/properties/suppliers-id",
+                                                    "type": "integer",
+                                                    "title": "The suppliers-id schema",
+                                                    "description": "The system identifier for the supplier company",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        1186
+                                                    ]
+                                                },
+                                                "supplier-name": {
+                                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers/properties/1186/properties/supplier-name",
+                                                    "type": "string",
+                                                    "title": "The supplier-name schema",
+                                                    "description": "The human interface for the company supplier",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "SAUDI BASIC INDUSTRIES CORPORATION"
+                                                    ]
+                                                },
+                                                "created-by-date": {
+                                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers/properties/1186/properties/created-by-date",
+                                                    "type": "string",
+                                                    "title": "The created-by-date schema",
+                                                    "description": "When the supplier was created on the system",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "2020-11-11"
+                                                    ]
+                                                },
+                                                "created-by-requestor-username": {
+                                                    "$id": "#/properties/message/properties/company-clients/properties/1/properties/company-suppliers/properties/1186/properties/created-by-requestor-username",
+                                                    "type": "string",
+                                                    "title": "The created-by-requestor-username schema",
+                                                    "description": "Who created the supplier company on the system",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "51ad84d4-8016-44cd-8250-247a6b2ce5e8"
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": true
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "products": {
+                    "$id": "#/properties/message/properties/products",
+                    "type": "object",
+                    "title": "The products schema",
+                    "description": "Products of the organization",
+                    "default": {},
+                    "properties": {
+                        "1": {
+                            "$id": "#/properties/message/properties/products/properties/1",
+                            "type": "object",
+                            "title": "The 1 schema",
+                            "description": "List of products of the organization",
+                            "default": {},
+                            "required": [
+                                "product_name",
+                                "created-by-date",
+                                "created-by-requestor-username"
+                            ],
+                            "properties": {
+                                "product_name": {
+                                    "$id": "#/properties/message/properties/products/properties/1/properties/product_name",
+                                    "type": "string",
+                                    "title": "The product_name schema",
+                                    "description": "The human interface to the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "PRODUCT1"
+                                    ]
+                                },
+                                "created-by-date": {
+                                    "$id": "#/properties/message/properties/products/properties/1/properties/created-by-date",
+                                    "type": "string",
+                                    "title": "The created-by-date schema",
+                                    "description": "When it was created on the system",
+                                    "default": "",
+                                    "examples": [
+                                        "2021-07-08"
+                                    ]
+                                },
+                                "created-by-requestor-username": {
+                                    "$id": "#/properties/message/properties/products/properties/1/properties/created-by-requestor-username",
+                                    "type": "string",
+                                    "title": "The created-by-requestor-username schema",
+                                    "description": "Who created the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                                    ]
+                                },
+                                "updated-by-date": {
+                                    "$id": "#/properties/message/properties/products/properties/1/properties/updated-by-date",
+                                    "type": "string",
+                                    "title": "The updated-by-date schema",
+                                    "description": "When it was last updated",
+                                    "default": "",
+                                    "examples": [
+                                        "2020-08-27"
+                                    ]
+                                },
+                                "updated-by-requestor-username": {
+                                    "$id": "#/properties/message/properties/products/properties/1/properties/updated-by-requestor-username",
+                                    "type": "string",
+                                    "title": "The updated-by-requestor-username schema",
+                                    "description": "Who last updated the client company",
+                                    "default": "",
+                                    "examples": [
+                                        "bad69bb8-398a-450f-ae16-b9435901ec8e"
+                                    ]
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true

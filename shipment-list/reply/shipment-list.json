@@ -209,25 +209,10 @@
                 "organizations_id",
                 "client_company_id",
                 "client_company_name",
-                "suppliers_id",
-                "supplier_name",
                 "shipment_status",
-                "bill_of_lading",
-                "port_of_entry",
-                "port_of_origin",
-                "country_of_destination",
-                "shipment_poe_eta",
-                "consignment_weight",
-                "consignment_weight_unit_of_measure",
                 "created_by_date",
                 "created_by_requestor_username",
-                "updated_by_date",
-                "updated_by_requestor_username",
-                "through_bill_of_lading",
-                "shipment_history",
-                "shipment_statuses_history",
-                "containers",
-                "cargo"
+                "shipment_statuses_history"
             ],
             "properties": {
                 "shipments_id": {
@@ -662,15 +647,8 @@
                                     "containers_id",
                                     "container_row_version",
                                     "container_tag",
-                                    "container_form_factor",
-                                    "trips_id",
-                                    "container_cargo_gross_weight",
-                                    "container_cargo_gross_unit_of_measure",
                                     "created_by_date",
-                                    "created_by_requestor_username",
-                                    "updated_by_date",
-                                    "updated_by_requestor_username",
-                                    "cargo"
+                                    "created_by_requestor_username"
                                 ],
                                 "properties": {
                                     "containers_id": {
@@ -836,14 +814,8 @@
                                                         "cargo_id",
                                                         "cargo_row_version",
                                                         "cargo_type",
-                                                        "cargo_gross_weight",
-                                                        "cargo_gross_unit_of_measure",
-                                                        "cargo_quantity",
-                                                        "cargo_quantity_unit_of_measure",
                                                         "created_by_date",
                                                         "created_by_requestor_username",
-                                                        "updated_by_date",
-                                                        "updated_by_requestor_username",
                                                         "cargo_parent_type"
                                                     ],
                                                     "properties": {
@@ -1035,15 +1007,8 @@
                                     "cargo_id",
                                     "cargo_row_version",
                                     "cargo_type",
-                                    "containers_id",
-                                    "cargo_gross_weight",
-                                    "cargo_gross_unit_of_measure",
-                                    "cargo_quantity",
-                                    "cargo_quantity_unit_of_measure",
                                     "created_by_date",
                                     "created_by_requestor_username",
-                                    "updated_by_date",
-                                    "updated_by_requestor_username",
                                     "cargo_parent_type"
                                 ],
                                 "properties": {
