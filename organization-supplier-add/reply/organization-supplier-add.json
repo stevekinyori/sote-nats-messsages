@@ -53,9 +53,7 @@
                 "suppliers-id",
                 "supplier-name",
                 "created-by-date",
-                "created-by-requestor-username",
-                "updated-by-date",
-                "updated-by-requestor-username"
+                "created-by-requestor-username"
             ],
             "properties": {
                 "suppliers-id": {
