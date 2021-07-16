@@ -9,15 +9,15 @@
         {
             "message-id": "test-message-add",
             "message": {
-                "client-company-id": 4,
-                "row-version": 1,
-                "client-company-is-active": false,
-                "client-company-name": "test client",
-                "created-by-date": "2021-07-13",
-                "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
-                "updated-by-date": "",
-                "updated-by-requestor-username": "",
-                "company-suppliers": {}
+                "client_company_id": 1,
+                "row_version": 1,
+                "client_company_is_active": false,
+                "client_company_name": "TEST_CLIENT",
+                "created_by_date": "2021-07-15",
+                "created_by_requestor_username": "8c6e4be7-xxxxxx",
+                "updated_by_date": "",
+                "updated_by_requestor_username": "",
+                "company_suppliers": {}
             }
         }
     ],
@@ -44,113 +44,110 @@
             "default": {},
             "examples": [
                 {
-                    "client-company-id": 4,
-                    "row-version": 1,
-                    "client-company-is-active": false,
-                    "client-company-name": "test client",
-                    "created-by-date": "2021-07-13",
-                    "created-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
-                    "updated-by-date": "",
-                    "updated-by-requestor-username": "",
-                    "company-suppliers": {}
+                    "client_company_id": 1,
+                    "row_version": 1,
+                    "client_company_is_active": false,
+                    "client_company_name": "TEST_CLIENT",
+                    "created_by_date": "2021-07-15",
+                    "created_by_requestor_username": "8c6e4be7-xxxxxx",
+                    "updated_by_date": "",
+                    "updated_by_requestor_username": "",
+                    "company_suppliers": {}
                 }
             ],
             "required": [
-                "client-company-id",
-                "row-version",
-                "client-company-is-active",
-                "client-company-name",
-                "created-by-date",
-                "created-by-requestor-username",
-                "updated-by-date",
-                "updated-by-requestor-username",
-                "company-suppliers"
+                "client_company_id",
+                "row_version",
+                "client_company_is_active",
+                "client_company_name",
+                "created_by_date",
+                "created_by_requestor_username"
             ],
             "properties": {
-                "client-company-id": {
-                    "$id": "#/properties/message/properties/client-company-id",
+                "client_company_id": {
+                    "$id": "#/properties/message/properties/client_company_id",
                     "type": "integer",
-                    "title": "The client-company-id schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        4
-                    ]
-                },
-                "row-version": {
-                    "$id": "#/properties/message/properties/row-version",
-                    "type": "integer",
-                    "title": "The row-version schema",
+                    "title": "The client_company_id schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
                         1
                     ]
                 },
-                "client-company-is-active": {
-                    "$id": "#/properties/message/properties/client-company-is-active",
+                "row_version": {
+                    "$id": "#/properties/message/properties/row_version",
+                    "type": "integer",
+                    "title": "The row_version schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "client_company_is_active": {
+                    "$id": "#/properties/message/properties/client_company_is_active",
                     "type": "boolean",
-                    "title": "The client-company-is-active schema",
+                    "title": "The client_company_is_active schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": false,
                     "examples": [
                         false
                     ]
                 },
-                "client-company-name": {
-                    "$id": "#/properties/message/properties/client-company-name",
+                "client_company_name": {
+                    "$id": "#/properties/message/properties/client_company_name",
                     "type": "string",
-                    "title": "The client-company-name schema",
+                    "title": "The client_company_name schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "test client"
+                        "TEST_CLIENT"
                     ]
                 },
-                "created-by-date": {
-                    "$id": "#/properties/message/properties/created-by-date",
+                "created_by_date": {
+                    "$id": "#/properties/message/properties/created_by_date",
                     "type": "string",
-                    "title": "The created-by-date schema",
+                    "title": "The created_by_date schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "2021-07-13"
+                        "2021-07-15"
                     ]
                 },
-                "created-by-requestor-username": {
-                    "$id": "#/properties/message/properties/created-by-requestor-username",
+                "created_by_requestor_username": {
+                    "$id": "#/properties/message/properties/created_by_requestor_username",
                     "type": "string",
-                    "title": "The created-by-requestor-username schema",
+                    "title": "The created_by_requestor_username schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                        "8c6e4be7-xxxxxx"
                     ]
                 },
-                "updated-by-date": {
-                    "$id": "#/properties/message/properties/updated-by-date",
+                "updated_by_date": {
+                    "$id": "#/properties/message/properties/updated_by_date",
                     "type": "string",
-                    "title": "The updated-by-date schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        ""
-                    ]
-                },
-                "updated-by-requestor-username": {
-                    "$id": "#/properties/message/properties/updated-by-requestor-username",
-                    "type": "string",
-                    "title": "The updated-by-requestor-username schema",
+                    "title": "The updated_by_date schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
                         ""
                     ]
                 },
-                "company-suppliers": {
-                    "$id": "#/properties/message/properties/company-suppliers",
+                "updated_by_requestor_username": {
+                    "$id": "#/properties/message/properties/updated_by_requestor_username",
+                    "type": "string",
+                    "title": "The updated_by_requestor_username schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "company_suppliers": {
+                    "$id": "#/properties/message/properties/company_suppliers",
                     "type": "object",
-                    "title": "The company-suppliers schema",
+                    "title": "The company_suppliers schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": {},
                     "examples": [

@@ -7,17 +7,25 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-change",
+            "message-id": "test-message-add",
             "message": {
-                "organizations-id": 1,
-                "row-version": 2,
-                "organization-is-active": true,
-                "organization-name": "SOTE TEST",
-                "created-by-date": "2021-07-07 00:00:00 +0000 UTC",
-                "created-by-requestor-username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                "updated-by-date": "2021-07-14",
-                "updated-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
-                "company-clients": {},
+                "organizations_id": 1,
+                "row_version": 1,
+                "organization_is_active": true,
+                "organization_name": "TEST ORGANIZATION",
+                "created_by_date": "2021-07-16",
+                "created_by_requestor_username": "8c6e4be7-xxxxxx",
+                "initial_contact_date": "2021-12-10",
+                "customer_since_date": "2021-07-15",
+                "contract_start_date": "2021-11-10",
+                "contract_end_date": "2021-11-11",
+                "estimated_total_users": 1,
+                "estimated_total_vehicles": 1,
+                "estimated_paid_seats_month": 2,
+                "desired_payment_threshold": 3,
+                "updated_by_date": null,
+                "updated_by_requestor_username": null,
+                "company_clients": {},
                 "products": {}
             }
         }
@@ -34,7 +42,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-change"
+                "test-message-add"
             ]
         },
         "message": {
@@ -45,113 +53,199 @@
             "default": {},
             "examples": [
                 {
-                    "organizations-id": 1,
-                    "row-version": 2,
-                    "organization-is-active": true,
-                    "organization-name": "SOTE TEST",
-                    "created-by-date": "2021-07-07 00:00:00 +0000 UTC",
-                    "created-by-requestor-username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                    "updated-by-date": "2021-07-14",
-                    "updated-by-requestor-username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
-                    "company-clients": {},
+                    "organizations_id": 1,
+                    "row_version": 1,
+                    "organization_is_active": true,
+                    "organization_name": "TEST ORGANIZATION",
+                    "created_by_date": "2021-07-16",
+                    "created_by_requestor_username": "8c6e4be7-xxxxxx",
+                    "initial_contact_date": "2021-12-10",
+                    "customer_since_date": "2021-07-15",
+                    "contract_start_date": "2021-11-10",
+                    "contract_end_date": "2021-11-11",
+                    "estimated_total_users": 1,
+                    "estimated_total_vehicles": 1,
+                    "estimated_paid_seats_month": 2,
+                    "desired_payment_threshold": 3,
+                    "updated_by_date": null,
+                    "updated_by_requestor_username": null,
+                    "company_clients": {},
                     "products": {}
                 }
             ],
             "required": [
-                "organizations-id",
-                "row-version",
-                "organization-is-active",
-                "organization-name",
-                "created-by-date",
-                "created-by-requestor-username",
-                "company-clients",
-                "products"
+                "organizations_id",
+                "row_version",
+                "organization_is_active",
+                "organization_name",
+                "created_by_date",
+                "created_by_requestor_username"
             ],
             "properties": {
-                "organizations-id": {
-                    "$id": "#/properties/message/properties/organizations-id",
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
                     "type": "integer",
-                    "title": "The organizations-id schema",
+                    "title": "The organizations_id schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
                         1
                     ]
                 },
-                "row-version": {
-                    "$id": "#/properties/message/properties/row-version",
+                "row_version": {
+                    "$id": "#/properties/message/properties/row_version",
                     "type": "integer",
-                    "title": "The row-version schema",
+                    "title": "The row_version schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        2
+                        1
                     ]
                 },
-                "organization-is-active": {
-                    "$id": "#/properties/message/properties/organization-is-active",
+                "organization_is_active": {
+                    "$id": "#/properties/message/properties/organization_is_active",
                     "type": "boolean",
-                    "title": "The organization-is-active schema",
+                    "title": "The organization_is_active schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": false,
                     "examples": [
                         true
                     ]
                 },
-                "organization-name": {
-                    "$id": "#/properties/message/properties/organization-name",
+                "organization_name": {
+                    "$id": "#/properties/message/properties/organization_name",
                     "type": "string",
-                    "title": "The organization-name schema",
+                    "title": "The organization_name schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "SOTE TEST"
+                        "TEST ORGANIZATION"
                     ]
                 },
-                "created-by-date": {
-                    "$id": "#/properties/message/properties/created-by-date",
+                "created_by_date": {
+                    "$id": "#/properties/message/properties/created_by_date",
                     "type": "string",
-                    "title": "The created-by-date schema",
+                    "title": "The created_by_date schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "2021-07-07 00:00:00 +0000 UTC"
+                        "2021-07-16"
                     ]
                 },
-                "created-by-requestor-username": {
-                    "$id": "#/properties/message/properties/created-by-requestor-username",
+                "created_by_requestor_username": {
+                    "$id": "#/properties/message/properties/created_by_requestor_username",
                     "type": "string",
-                    "title": "The created-by-requestor-username schema",
+                    "title": "The created_by_requestor_username schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                        "8c6e4be7-xxxxxx"
                     ]
                 },
-                "updated-by-date": {
-                    "$id": "#/properties/message/properties/updated-by-date",
+                "initial_contact_date": {
+                    "$id": "#/properties/message/properties/initial_contact_date",
                     "type": "string",
-                    "title": "The updated-by-date schema",
+                    "title": "The initial_contact_date schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "2021-07-14"
+                        "2021-12-10"
                     ]
                 },
-                "updated-by-requestor-username": {
-                    "$id": "#/properties/message/properties/updated-by-requestor-username",
+                "customer_since_date": {
+                    "$id": "#/properties/message/properties/customer_since_date",
                     "type": "string",
-                    "title": "The updated-by-requestor-username schema",
+                    "title": "The customer_since_date schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                        "2021-07-15"
                     ]
                 },
-                "company-clients": {
-                    "$id": "#/properties/message/properties/company-clients",
+                "contract_start_date": {
+                    "$id": "#/properties/message/properties/contract_start_date",
+                    "type": "string",
+                    "title": "The contract_start_date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2021-11-10"
+                    ]
+                },
+                "contract_end_date": {
+                    "$id": "#/properties/message/properties/contract_end_date",
+                    "type": "string",
+                    "title": "The contract_end_date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2021-11-11"
+                    ]
+                },
+                "estimated_total_users": {
+                    "$id": "#/properties/message/properties/estimated_total_users",
+                    "type": "integer",
+                    "title": "The estimated_total_users schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "estimated_total_vehicles": {
+                    "$id": "#/properties/message/properties/estimated_total_vehicles",
+                    "type": "integer",
+                    "title": "The estimated_total_vehicles schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "estimated_paid_seats_month": {
+                    "$id": "#/properties/message/properties/estimated_paid_seats_month",
+                    "type": "integer",
+                    "title": "The estimated_paid_seats_month schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        2
+                    ]
+                },
+                "desired_payment_threshold": {
+                    "$id": "#/properties/message/properties/desired_payment_threshold",
+                    "type": "integer",
+                    "title": "The desired_payment_threshold schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        3
+                    ]
+                },
+                "updated_by_date": {
+                    "$id": "#/properties/message/properties/updated_by_date",
+                    "type": "null",
+                    "title": "The updated_by_date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                        null
+                    ]
+                },
+                "updated_by_requestor_username": {
+                    "$id": "#/properties/message/properties/updated_by_requestor_username",
+                    "type": "null",
+                    "title": "The updated_by_requestor_username schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                        null
+                    ]
+                },
+                "company_clients": {
+                    "$id": "#/properties/message/properties/company_clients",
                     "type": "object",
-                    "title": "The company-clients schema",
+                    "title": "The company_clients schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": {},
                     "examples": [
