@@ -17,8 +17,7 @@
             ],
             "row-version": 1,
             "client-company-id": 33,
-            "client-company-name": "Client Two",
-            "client-company-isactive": false
+            "client-company-name": "Client Two"
         }
     ],
     "required": [
@@ -29,8 +28,7 @@
         "role-list",
         "row-version",
         "client-company-id",
-        "client-company-name",
-        "client-company-isactive"
+        "client-company-name"
     ],
     "properties": {
         "json-web-token": {
@@ -131,16 +129,6 @@
             "default": "",
             "examples": [
                 "Client Two"
-            ]
-        },
-        "client-company-isactive": {
-            "$id": "#/properties/client-company-isactive",
-            "type": "boolean",
-            "title": "The client-company-isactive schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-                false
             ]
         }
     },
