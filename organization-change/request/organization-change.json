@@ -16,6 +16,7 @@
                 "EXECUTIVE"
             ],
             "row-version": 2,
+            "organization-name": "SOTE TEST LTD",
             "contact-date": "1200/12/12",
             "since-date": "1200-12-12",
             "contract-start-date": "1208.08.08",
@@ -32,7 +33,8 @@
         "aws-user-name",
         "organizations-id",
         "role-list",
-        "row-version"
+        "row-version",
+        "organization-name"
     ],
     "properties": {
         "json-web-token": {
@@ -113,6 +115,16 @@
             "default": 0,
             "examples": [
                 2
+            ]
+        },
+        "organization-name": {
+            "$id": "#/properties/organization-name",
+            "type": "string",
+            "title": "The organization-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "1200/12/12"
             ]
         },
         "contact-date": {
