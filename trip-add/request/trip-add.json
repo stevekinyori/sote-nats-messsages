@@ -30,7 +30,7 @@
             "estimated-delivery-date": "2019-01-01",
             "estimated-delivery-days": 12,
             "estimated-total-days": 45,
-            "shipments-id": "1",
+            "shipments-id": 1,
             "first-estimated-delivery-date": "2020-02-02",
             "external-bill-of-lading": "Test Bol",
             "return-yard": "Test-Yard"
