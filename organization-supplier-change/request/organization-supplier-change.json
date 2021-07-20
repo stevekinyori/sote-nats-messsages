@@ -15,7 +15,7 @@
                 "CLIENT_ADMIN",
                 "EXECUTIVE"
             ],
-            "supplier-id": 1042,
+            "suppliers-id": 1042,
             "supplier-name": "Supplier Two"
         }
     ],
@@ -25,7 +25,7 @@
         "aws-user-name",
         "organizations-id",
         "role-list",
-        "supplier-id",
+        "suppliers-id",
         "supplier-name"
     ],
     "properties": {
@@ -99,10 +99,10 @@
                 ]
             }
         },
-        "supplier-id": {
-            "$id": "#/properties/supplier-id",
+        "suppliers-id": {
+            "$id": "#/properties/suppliers-id",
             "type": "integer",
-            "title": "The supplier-id schema",
+            "title": "The suppliers-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [

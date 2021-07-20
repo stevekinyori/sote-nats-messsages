@@ -156,7 +156,7 @@
             "$id": "#/properties/supplier-name",
             "type": "string",
             "title": "The supplier-name schema",
-            "description": "The name that is used by the supplier. Is required when supplier-id is supplied",
+            "description": "The name that is used by the supplier. Is required when suppliers-id is supplied",
             "default": "",
             "examples": [
                 "Supplier Name"
