@@ -78,22 +78,7 @@
                     "first-estimated-delivery-date": "2020-02-02"
                 }
             ],
-            "required": [
-                "client-company-id",
-                "client-company-name",
-                "return-yard",
-                "drop-off-location",
-                "estimated-delivery-date",
-                "pickup-location",
-                "estimated-pickup-date",
-                "load-weight",
-                "load-unit-of-measure",
-                "load-name",
-                "external-bill-of-lading",
-                "estimated-total-days",
-                "estimated-return-date",
-                "first-estimated-delivery-date"
-            ],
+            "required": [],
             "properties": {
                 "client-company-id": {
                     "$id": "#/properties/trips-change/properties/client-company-id",
