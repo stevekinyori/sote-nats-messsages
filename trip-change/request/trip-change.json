@@ -20,23 +20,19 @@
             "trips-id": 20,
             "trips-change": {
                 "client-company-id": 20,
-                "pickup-location": "Hiram Saltmarsh",
-                "drop-off-location": "Velvet Veldt",
-                "load-weight": 2,
-                "load-name": "test-name",
-                "load-unit-of-measure": "METRIC_TONS",
                 "client-company-name": "Customs",
-                "trip-notes": "Handle with care",
-                "trip-type": "OUTSOURCED",
-                "estimated-pickup-date": "2019-01-01",
-                "estimated-delivery-date": "2019-01-01",
-                "estimated-delivery-days": 12,
-                "estimated-total-days": 45,
-                "shipments-id": 1,
-                "first-estimated-delivery-date": "2020-02-02",
-                "external-bill-of-lading": "Test Bol",
                 "return-yard": "Test-Yard",
-                "estimated-return-date": "2019-01-01"
+                "drop-off-location": "Velvet Veldt",
+                "estimated-delivery-date": "2019-01-01",
+                "pickup-location": "Hiram Saltmarsh",
+                "estimated-pickup-date": "2019-01-01",
+                "load-weight": 2,
+                "load-unit-of-measure": "METRIC_TONS",
+                "load-name": "test-name",
+                "external-bill-of-lading": "Test Bol",
+                "estimated-total-days": 45,
+                "estimated-return-date": "2019-01-01",
+                "first-estimated-delivery-date": "2020-02-02"
             }
         }
     ],
@@ -67,40 +63,36 @@
             "examples": [
                 {
                     "client-company-id": 20,
-                    "pickup-location": "Hiram Saltmarsh",
-                    "drop-off-location": "Velvet Veldt",
-                    "load-weight": 2,
-                    "load-name": "test-name",
-                    "load-unit-of-measure": "METRIC_TONS",
                     "client-company-name": "Customs",
-                    "estimated-pickup-date": "2019-01-01",
-                    "estimated-delivery-date": "2019-01-01",
-                    "estimated-delivery-days": 12,
-                    "estimated-total-days": 45,
-                    "shipments-id": 1,
-                    "first-estimated-delivery-date": "2020-02-02",
-                    "external-bill-of-lading": "Test Bol",
                     "return-yard": "Test-Yard",
-                    "estimated-return-date": "2019-01-01"
+                    "drop-off-location": "Velvet Veldt",
+                    "estimated-delivery-date": "2019-01-01",
+                    "pickup-location": "Hiram Saltmarsh",
+                    "estimated-pickup-date": "2019-01-01",
+                    "load-weight": 2,
+                    "load-unit-of-measure": "METRIC_TONS",
+                    "load-name": "test-name",
+                    "external-bill-of-lading": "Test Bol",
+                    "estimated-total-days": 45,
+                    "estimated-return-date": "2019-01-01",
+                    "first-estimated-delivery-date": "2020-02-02"
                 }
             ],
             "required": [
                 "client-company-id",
-                "pickup-location",
-                "drop-off-location",
-                "load-weight",
-                "load-name",
-                "load-unit-of-measure",
                 "client-company-name",
-                "estimated-pickup-date",
-                "estimated-delivery-date",
-                "estimated-delivery-days",
-                "estimated-total-days",
-                "shipments-id",
-                "first-estimated-delivery-date",
-                "external-bill-of-lading",
                 "return-yard",
-                "estimated-return-date"
+                "drop-off-location",
+                "estimated-delivery-date",
+                "pickup-location",
+                "estimated-pickup-date",
+                "load-weight",
+                "load-unit-of-measure",
+                "load-name",
+                "external-bill-of-lading",
+                "estimated-total-days",
+                "estimated-return-date",
+                "first-estimated-delivery-date"
             ],
             "properties": {
                 "client-company-id": {
@@ -113,56 +105,6 @@
                         20
                     ]
                 },
-                "pickup-location": {
-                    "$id": "#/properties/trips-change/properties/pickup-location",
-                    "type": "string",
-                    "title": "The pickup-location schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Hiram Saltmarsh"
-                    ]
-                },
-                "drop-off-location": {
-                    "$id": "#/properties/trips-change/properties/drop-off-location",
-                    "type": "string",
-                    "title": "The drop-off-location schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Velvet Veldt"
-                    ]
-                },
-                "load-weight": {
-                    "$id": "#/properties/trips-change/properties/load-weight",
-                    "type": "integer",
-                    "title": "The load-weight schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        2
-                    ]
-                },
-                "load-name": {
-                    "$id": "#/properties/trips-change/properties/load-name",
-                    "type": "string",
-                    "title": "The load-name schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "test-name"
-                    ]
-                },
-                "load-unit-of-measure": {
-                    "$id": "#/properties/trips-change/properties/load-unit-of-measure",
-                    "type": "string",
-                    "title": "The load-unit-of-measure schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "METRIC_TONS"
-                    ]
-                },
                 "client-company-name": {
                     "$id": "#/properties/trips-change/properties/client-company-name",
                     "type": "string",
@@ -171,76 +113,6 @@
                     "default": "",
                     "examples": [
                         "Customs"
-                    ]
-                },
-                "estimated-pickup-date": {
-                    "$id": "#/properties/trips-change/properties/estimated-pickup-date",
-                    "type": "string",
-                    "title": "The estimated-pickup-date schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "2019-01-01"
-                    ]
-                },
-                "estimated-delivery-date": {
-                    "$id": "#/properties/trips-change/properties/estimated-delivery-date",
-                    "type": "string",
-                    "title": "The estimated-delivery-date schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "2019-01-01"
-                    ]
-                },
-                "estimated-delivery-days": {
-                    "$id": "#/properties/trips-change/properties/estimated-delivery-days",
-                    "type": "integer",
-                    "title": "The estimated-delivery-days schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        12
-                    ]
-                },
-                "estimated-total-days": {
-                    "$id": "#/properties/trips-change/properties/estimated-total-days",
-                    "type": "integer",
-                    "title": "The estimated-total-days schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        45
-                    ]
-                },
-                "shipments-id": {
-                    "$id": "#/properties/trips-change/properties/shipments-id",
-                    "type": "integer",
-                    "title": "The shipments-id schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        1
-                    ]
-                },
-                "first-estimated-delivery-date": {
-                    "$id": "#/properties/trips-change/properties/first-estimated-delivery-date",
-                    "type": "string",
-                    "title": "The first-estimated-delivery-date schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "2020-02-02"
-                    ]
-                },
-                "external-bill-of-lading": {
-                    "$id": "#/properties/trips-change/properties/external-bill-of-lading",
-                    "type": "string",
-                    "title": "The external-bill-of-lading schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": "",
-                    "examples": [
-                        "Test Bol"
                     ]
                 },
                 "return-yard": {
@@ -253,6 +125,96 @@
                         "Test-Yard"
                     ]
                 },
+                "drop-off-location": {
+                    "$id": "#/properties/trips-change/properties/drop-off-location",
+                    "type": "string",
+                    "title": "The drop-off-location schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Velvet Veldt"
+                    ]
+                },
+                "estimated-delivery-date": {
+                    "$id": "#/properties/trips-change/properties/estimated-delivery-date",
+                    "type": "string",
+                    "title": "The estimated-delivery-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2019-01-01"
+                    ]
+                },
+                "pickup-location": {
+                    "$id": "#/properties/trips-change/properties/pickup-location",
+                    "type": "string",
+                    "title": "The pickup-location schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Hiram Saltmarsh"
+                    ]
+                },
+                "estimated-pickup-date": {
+                    "$id": "#/properties/trips-change/properties/estimated-pickup-date",
+                    "type": "string",
+                    "title": "The estimated-pickup-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2019-01-01"
+                    ]
+                },
+                "load-weight": {
+                    "$id": "#/properties/trips-change/properties/load-weight",
+                    "type": "integer",
+                    "title": "The load-weight schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        2
+                    ]
+                },
+                "load-unit-of-measure": {
+                    "$id": "#/properties/trips-change/properties/load-unit-of-measure",
+                    "type": "string",
+                    "title": "The load-unit-of-measure schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "METRIC_TONS"
+                    ]
+                },
+                "load-name": {
+                    "$id": "#/properties/trips-change/properties/load-name",
+                    "type": "string",
+                    "title": "The load-name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "test-name"
+                    ]
+                },
+                "external-bill-of-lading": {
+                    "$id": "#/properties/trips-change/properties/external-bill-of-lading",
+                    "type": "string",
+                    "title": "The external-bill-of-lading schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Test Bol"
+                    ]
+                },
+                "estimated-total-days": {
+                    "$id": "#/properties/trips-change/properties/estimated-total-days",
+                    "type": "integer",
+                    "title": "The estimated-total-days schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        45
+                    ]
+                },
                 "estimated-return-date": {
                     "$id": "#/properties/trips-change/properties/estimated-return-date",
                     "type": "string",
@@ -262,8 +224,19 @@
                     "examples": [
                         "2019-01-01"
                     ]
+                },
+                "first-estimated-delivery-date": {
+                    "$id": "#/properties/trips-change/properties/first-estimated-delivery-date",
+                    "type": "string",
+                    "title": "The first-estimated-delivery-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2020-02-02"
+                    ]
                 }
-            }
+            },
+            "additionalProperties": true
         },
         "definitions": {
             "request-header": {
