@@ -42,7 +42,7 @@
     ],
     "properties": {
         "request-header": {
-            "$ref": "#/definitions/request-header"
+            "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
         },
         "trips-id": {
             "$id": "#/properties/trips-id",
@@ -220,43 +220,6 @@
                         "2020-02-02"
                     ]
                 }
-            }
-        },
-        "definitions": {
-            "request-header": {
-                "type": "string",
-                "properties": {
-                    "json-web-token": {
-                        "type": "string",
-                        "title": "The json-web-token schema"
-                    },
-                    "message-id": {
-                        "type": "string",
-                        "title": "The message-id schema"
-                    },
-                    "aws-user-name": {
-                        "type": "string",
-                        "title": "The aws-user-name schema"
-                    },
-                    "organizations-id": {
-                        "type": "integer",
-                        "title": "The organizations-id schema"
-                    },
-                    "role-list": {
-                        "type": "array",
-                        "title": "The role-list schema",
-                        "enum": [
-                            "CLIENT_ADMIN",
-                            "EXECUTIVE"
-                        ]
-                    }
-                },
-                "required": [
-                    "json-web-token",
-                    "message-id",
-                    "aws-user-name",
-                    "organizations-id"
-                ]
             }
         }
     }
