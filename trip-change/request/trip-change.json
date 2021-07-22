@@ -220,8 +220,7 @@
                         "2020-02-02"
                     ]
                 }
-            },
-            "additionalProperties": true
+            }
         },
         "definitions": {
             "request-header": {
@@ -259,7 +258,6 @@
                     "organizations-id"
                 ]
             }
-        },
-        "additionalProperties": true
+        }
     }
 }
