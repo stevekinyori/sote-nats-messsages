@@ -9,12 +9,12 @@
     {
       "request-header": {
         "json-web-token": "example-json-token",
-        "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
-        "aws-user-name": "soteuser",
+        "message-id": "1a8eb33e-xxx-0242ac130003",
+        "aws-user-name": "a8eb33e-xxx-0242ac130003",
         "organizations-id": 10003,
         "role-list": [
-          "CLIENT_ADMIN",
-          "EXECUTIVE"
+          "ROLE_NAME1",
+          "ROLE_NAME2"
         ]
       },
       "shipment-id": 10018
@@ -62,8 +62,8 @@
           "type": "array",
           "title": "The role-list schema",
           "enum": [
-            "CLIENT_ADMIN",
-            "EXECUTIVE"
+            "ROLE_NAME1",
+            "ROLE_NAME2"
           ]
         }
       },

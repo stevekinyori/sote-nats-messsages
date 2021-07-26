@@ -9,17 +9,17 @@
         {
             "request-header": {
                 "json-web-token": "example-json-token",
-                "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
+                "message-id": "a8eb33e-xxx-0242ac130003",
                 "aws-user-name": "soteuser",
-                "organizations-id": 10003,
+                "organizations-id": 1,
                 "role-list": [
-                    "CLIENT_ADMIN",
-                    "EXECUTIVE"
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
                 ]
             },
-            "trips-id": 20,
+            "trips-id": 1,
             "trips-change": {
-                "client-company-id": 20,
+                "client-company-id": 1,
                 "client-company-name": "Customs",
                 "return-yard": "Test-Yard",
                 "drop-off-location": "Velvet Veldt",
@@ -51,7 +51,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                20
+                1
             ]
         },
         "trips-change": {
@@ -62,7 +62,7 @@
             "default": {},
             "examples": [
                 {
-                    "client-company-id": 20,
+                    "client-company-id": 1,
                     "client-company-name": "Customs",
                     "return-yard": "Test-Yard",
                     "drop-off-location": "Velvet Veldt",
@@ -87,7 +87,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        20
+                        1
                     ]
                 },
                 "client-company-name": {

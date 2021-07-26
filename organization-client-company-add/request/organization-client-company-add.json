@@ -8,7 +8,7 @@
   "examples": [
       {
           "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx9OZDNDZGNxOVRvU3FPKzdZYldcL1wvSUxCYVJyTElNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkNzI2NmM4Zi0wNmQ0LTQxYjYtODE0ZC0zZWU4NTAzMzhlYTciLCJkZXZpY2Vfa2VEwMDM2Il0sInRva2VuX3VzZSI6ImFjvxxxxxxxxxxxxxxxxzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTA2MDMwNzQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWvxxxxxxxxxxxxxxxxdzLmNvbVwvZXUtd2VzdC0xX2ZwWkN5cWxRTiIsImV4cCI6MTYxMTE1ODg5NSwiaWF0IjoxNjExMTU1Mvxxxxxxxxxxxxxxxx02MjZhLTQ0ZWQtOTlmZS1lmo0C6LXtQlRbvPFq8BDLPk2sU35QEL4ONANSt1eDZxMpPrBEP-fvSF2ZMee7sJx7tFnQA6tI0_4WnvxxxxxxxxxxxxxxxxFYSYF77i0zhxGZ3oVcV90qRLekLYuXdfy06lMA4DlNdWJu9N0BYbPsvxpvo51JErYX8Qkqs2TbYACw2_4g",
-          "message-id": "1a8eb33e-9db2-11eb-a8b3-0242ac130003",
+          "message-id": "1a8eb33e-xxx-0242ac130003",
           "organizations-id": 1000,
           "client-company-name": "Client One",
           "client-company-isactive": true,
@@ -46,7 +46,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
-              "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+              "1a8eb33e-xxx-0242ac130003"
           ]
       },
       "organizations-id": {
