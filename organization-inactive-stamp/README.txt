@@ -1,1 +1,0 @@
-Use "organization-active-stamp" schemas
