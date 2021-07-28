@@ -11,6 +11,7 @@
             "message-id": "1a8eb33e-xxx-0242ac130003",
             "aws-user-name": "a8eb33e-xxx-0242ac130003",
             "organizations-id": 1,
+            "row-version": 1,
             "role-list": [
                 "ROLE_NAME1",
                 "ROLE_NAME2"
@@ -22,6 +23,7 @@
         "message-id",
         "aws-user-name",
         "organizations-id",
+        "row-version",
         "role-list"
     ],
     "properties": {
@@ -59,6 +61,16 @@
             "$id": "#/properties/organizations-id",
             "type": "integer",
             "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "row-version": {
+            "$id": "#/properties/row-version",
+            "type": "integer",
+            "title": "The row-version schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
