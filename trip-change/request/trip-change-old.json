@@ -1,0 +1,298 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "json-web-token": "example-json-token",
+            "message-id": "a8eb33e-xxx-0242ac130003",
+            "aws-user-name": "soteuser",
+            "organizations-id": 1,
+            "role-list": [
+                "ROLE_NAME1",
+                "ROLE_NAME2"
+            ],
+            "trips-id": 1,
+            "trips-change": {
+                "client-company-id": 1,
+                "client-company-name": "Customs",
+                "return-yard": "Test-Yard",
+                "drop-off-location": "Velvet Veldt",
+                "estimated-delivery-date": "2019-01-01",
+                "pickup-location": "Hiram Saltmarsh",
+                "estimated-pickup-date": "2019-01-01",
+                "load-weight": 2,
+                "load-unit-of-measure": "METRIC_TONS",
+                "load-name": "test-name",
+                "external-bill-of-lading": "Test Bol",
+                "estimated-total-days": 45,
+                "estimated-return-date": "2019-01-01",
+                "first-estimated-delivery-date": "2020-02-02"
+            }
+        }
+    ],
+    "required": [
+        "json-web-token",
+        "message-id",
+        "aws-user-name",
+        "organizations-id",
+        "role-list",
+        "trips-id",
+        "trips-change"
+    ],
+    "properties": {
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "example-json-token"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "a8eb33e-xxx-0242ac130003"
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "soteuser"
+            ]
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "trips-id": {
+            "$id": "#/properties/trips-id",
+            "type": "integer",
+            "title": "The trips-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "trips-change": {
+            "$id": "#/properties/trips-change",
+            "type": "object",
+            "title": "The trips-change schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "client-company-id": 1,
+                    "client-company-name": "Customs",
+                    "return-yard": "Test-Yard",
+                    "drop-off-location": "Velvet Veldt",
+                    "estimated-delivery-date": "2019-01-01",
+                    "pickup-location": "Hiram Saltmarsh",
+                    "estimated-pickup-date": "2019-01-01",
+                    "load-weight": 2,
+                    "load-unit-of-measure": "METRIC_TONS",
+                    "load-name": "test-name",
+                    "external-bill-of-lading": "Test Bol",
+                    "estimated-total-days": 45,
+                    "estimated-return-date": "2019-01-01",
+                    "first-estimated-delivery-date": "2020-02-02"
+                }
+            ],
+            "required": [],
+            "properties": {
+                "client-company-id": {
+                    "$id": "#/properties/trips-change/properties/client-company-id",
+                    "type": "integer",
+                    "title": "The client-company-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "client-company-name": {
+                    "$id": "#/properties/trips-change/properties/client-company-name",
+                    "type": "string",
+                    "title": "The client-company-name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Customs"
+                    ]
+                },
+                "return-yard": {
+                    "$id": "#/properties/trips-change/properties/return-yard",
+                    "type": "string",
+                    "title": "The return-yard schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Test-Yard"
+                    ]
+                },
+                "drop-off-location": {
+                    "$id": "#/properties/trips-change/properties/drop-off-location",
+                    "type": "string",
+                    "title": "The drop-off-location schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Velvet Veldt"
+                    ]
+                },
+                "estimated-delivery-date": {
+                    "$id": "#/properties/trips-change/properties/estimated-delivery-date",
+                    "type": "string",
+                    "title": "The estimated-delivery-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2019-01-01"
+                    ]
+                },
+                "pickup-location": {
+                    "$id": "#/properties/trips-change/properties/pickup-location",
+                    "type": "string",
+                    "title": "The pickup-location schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Hiram Saltmarsh"
+                    ]
+                },
+                "estimated-pickup-date": {
+                    "$id": "#/properties/trips-change/properties/estimated-pickup-date",
+                    "type": "string",
+                    "title": "The estimated-pickup-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2019-01-01"
+                    ]
+                },
+                "load-weight": {
+                    "$id": "#/properties/trips-change/properties/load-weight",
+                    "type": "integer",
+                    "title": "The load-weight schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        2
+                    ]
+                },
+                "load-unit-of-measure": {
+                    "$id": "#/properties/trips-change/properties/load-unit-of-measure",
+                    "type": "string",
+                    "title": "The load-unit-of-measure schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "METRIC_TONS"
+                    ]
+                },
+                "load-name": {
+                    "$id": "#/properties/trips-change/properties/load-name",
+                    "type": "string",
+                    "title": "The load-name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "test-name"
+                    ]
+                },
+                "external-bill-of-lading": {
+                    "$id": "#/properties/trips-change/properties/external-bill-of-lading",
+                    "type": "string",
+                    "title": "The external-bill-of-lading schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Test Bol"
+                    ]
+                },
+                "estimated-total-days": {
+                    "$id": "#/properties/trips-change/properties/estimated-total-days",
+                    "type": "integer",
+                    "title": "The estimated-total-days schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        45
+                    ]
+                },
+                "estimated-return-date": {
+                    "$id": "#/properties/trips-change/properties/estimated-return-date",
+                    "type": "string",
+                    "title": "The estimated-return-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2019-01-01"
+                    ]
+                },
+                "first-estimated-delivery-date": {
+                    "$id": "#/properties/trips-change/properties/first-estimated-delivery-date",
+                    "type": "string",
+                    "title": "The first-estimated-delivery-date schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "2020-02-02"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
