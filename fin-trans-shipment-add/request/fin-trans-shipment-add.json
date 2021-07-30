@@ -15,7 +15,7 @@
 				]
 			},
 			"client-company-id": 100,
-			"shipment-id": 10002,
+			"shipments-id": 10002,
 			"amount": 102.90,
 			"currency": "USD",
 			"fintrans-type": "F147",
@@ -28,7 +28,7 @@
 	"required": [
 		"request-header",
 		"client-company-id",
-		"shipment-id",
+		"shipments-id",
 		"amount",
 		"currency",
 		"fintrans-type"
@@ -47,8 +47,8 @@
 			"type": "integer",
 			"title": "The client-company-id schema"
 		},
-		"shipment-id": {
-			"$id": "#/properties/shipment-id",
+		"shipments-id": {
+			"$id": "#/properties/shipments-id",
 			"type": "integer",
 			"title": "The system id assigned to the shipment"
 		},
