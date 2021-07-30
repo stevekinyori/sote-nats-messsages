@@ -15,7 +15,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1a8eb33e-9db2-11eb-a8b3-0242ac130003"
+                "1a8eb33e-xxx-0242ac130003"
             ]
         },
         "message": {

@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "1a8eb33e-xxx-0242ac130003",
+      "message": [
+        {
+          "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
+          "organizations_id": 10036,
+          "documents_owner_micro_service": "SHIPMENTS",
+          "documents_owner_table": "cargo",
+          "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
+          "documents_type": "application/pdf",
+          "documents_display_name": "upload_test.pdf",
+          "created_by_date": "2021-04-26T13:43:18.051708+03:00",
+          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "1a8eb33e-xxx-0242ac130003"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "array",
+      "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
+            "organizations_id": 10036,
+            "documents_owner_micro_service": "SHIPMENTS",
+            "documents_owner_table": "cargo",
+            "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
+            "documents_type": "application/pdf",
+            "documents_display_name": "upload_test.pdf",
+            "created_by_date": "2021-04-26T13:43:18.051708+03:00",
+            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/message/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/message/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "documents_id": "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ",
+                "organizations_id": 10036,
+                "documents_owner_micro_service": "SHIPMENTS",
+                "documents_owner_table": "cargo",
+                "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/upload_test.pdf",
+                "documents_type": "application/pdf",
+                "documents_display_name": "upload_test.pdf",
+                "created_by_date": "2021-04-26T13:43:18.051708+03:00",
+                "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+              }
+            ],
+            "required": [
+              "documents_id",
+              "organizations_id",
+              "documents_owner_micro_service",
+              "documents_owner_table",
+              "documents_link",
+              "documents_type",
+              "documents_display_name",
+              "created_by_date",
+              "created_by_requestor_username"
+            ],
+            "properties": {
+              "documents_id": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_id",
+                "default": "",
+                "description": "This is a system generated id that is used to identify the document's version.",
+                "examples": [
+                  "C2Ef0Sb_EvNp3Yx1mtHdHyWKekitunhZ"
+                ],
+                "title": "The documents_id schema",
+                "type": "string"
+              },
+              "organizations_id": {
+                "$id": "#/properties/message/items/anyOf/0/properties/organizations_id",
+                "default": 0,
+                "description": "This is a system generated id that is used to restrict access to customers data.",
+                "examples": [
+                  10036
+                ],
+                "title": "The organizations_id schema",
+                "type": "integer"
+              },
+              "documents_owner_micro_service": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_owner_micro_service",
+                "default": "",
+                "description": "This is the Micro service holding the document source table.",
+                "examples": [
+                  "SHIPMENTS"
+                ],
+                "title": "The documents_owner_micro_service schema",
+                "type": "string"
+              },
+              "documents_owner_table": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_owner_table",
+                "default": "",
+                "description": "This is the document's source table.",
+                "examples": [
+                  "cargo"
+                ],
+                "title": "The documents_owner_table schema",
+                "type": "string"
+              },
+              "documents_link": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_link",
+                "default": "",
+                "description": "This is the URL of processed document.",
+                "examples": [
+                  "processed/upload_test.pdf"
+                ],
+                "title": "The documents_link schema",
+                "type": "string"
+              },
+              "documents_type": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_type",
+                "default": "",
+                "description": "This is the type of document.",
+                "examples": [
+                  "application/pdf"
+                ],
+                "title": "The documents_type schema",
+                "type": "string"
+              },
+              "documents_display_name": {
+                "$id": "#/properties/message/items/anyOf/0/properties/documents_display_name",
+                "default": "",
+                "description": "This is the name seen when viewing documents.",
+                "examples": [
+                  "upload_test.pdf"
+                ],
+                "title": "The documents_display_name schema",
+                "type": "string"
+              },
+              "created_by_date": {
+                "$id": "#/properties/message/items/anyOf/0/properties/created_by_date",
+                "default": "",
+                "description": "When the user entry was entered in the system.",
+                "examples": [
+                  "2021-04-26T13:43:18.051708+03:00"
+                ],
+                "title": "The created_by_date schema",
+                "type": "string"
+              },
+              "created_by_requestor_username": {
+                "$id": "#/properties/message/items/anyOf/0/properties/created_by_requestor_username",
+                "default": "",
+                "description": "The Cognito username for the person who is requesting the document creation.",
+                "examples": [
+                  "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                ],
+                "title": "The created_by_requestor_username schema",
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

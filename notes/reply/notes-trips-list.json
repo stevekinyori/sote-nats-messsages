@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test",
+      "message": [
+        {
+          "notes_id": 137,
+          "organizations_id": 10036,
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1006",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T11:50:55.839066Z"
+        },
+        {
+          "notes_id": 142,
+          "organizations_id": 10036,
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1015",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Loaded out of point of clearance\",\"comment\":\"Picked up by transporter X\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T12:16:20.967269Z"
+        },
+        {
+          "notes_id": 143,
+          "organizations_id": 10036,
+          "notes_owner_micro_service": "TRIPS",
+          "notes_owner_key": "1015",
+          "notes_type": "USER_DEFINED_LOV",
+          "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"something new\"}",
+          "created_by_date": "2020-07-16T00:00:00Z",
+          "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+          "created_timestamp": "2020-07-16T12:18:15.850091Z"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "test"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "array",
+      "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "notes_id": 137,
+            "organizations_id": 10036,
+            "notes_owner_micro_service": "TRIPS",
+            "notes_owner_key": "1006",
+            "notes_type": "USER_DEFINED_LOV",
+            "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+            "created_by_date": "2020-07-16T00:00:00Z",
+            "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+            "created_timestamp": "2020-07-16T11:50:55.839066Z"
+          },
+          {
+            "notes_id": 142,
+            "organizations_id": 10036,
+            "notes_owner_micro_service": "TRIPS",
+            "notes_owner_key": "1015",
+            "notes_type": "USER_DEFINED_LOV",
+            "notes_note": "{\"title\":\"Loaded out of point of clearance\",\"comment\":\"Picked up by transporter X\"}",
+            "created_by_date": "2020-07-16T00:00:00Z",
+            "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+            "created_timestamp": "2020-07-16T12:16:20.967269Z"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/message/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/message/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "notes_id": 137,
+                "organizations_id": 10036,
+                "notes_owner_micro_service": "TRIPS",
+                "notes_owner_key": "1006",
+                "notes_type": "USER_DEFINED_LOV",
+                "notes_note": "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}",
+                "created_by_date": "2020-07-16T00:00:00Z",
+                "created_by_requestor_username": "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd",
+                "created_timestamp": "2020-07-16T11:50:55.839066Z"
+              }
+            ],
+            "required": [
+              "notes_id",
+              "organizations_id",
+              "notes_owner_micro_service",
+              "notes_owner_key",
+              "notes_type",
+              "notes_note",
+              "created_by_date",
+              "created_by_requestor_username",
+              "created_timestamp"
+            ],
+            "properties": {
+              "notes_id": {
+                "$id": "#/properties/message/items/anyOf/0/properties/notes_id",
+                "type": "integer",
+                "title": "The notes_id schema",
+                "description": "This is a system generated id that is used to identify the note.",
+                "default": 0,
+                "examples": [
+                  137
+                ]
+              },
+              "organizations_id": {
+                "$id": "#/properties/message/items/anyOf/0/properties/organizations_id",
+                "type": "integer",
+                "title": "The organizations_id schema",
+                "description": "This is a system generated id that is used to restrict access to customers' data.",
+                "default": 0,
+                "examples": [
+                  10036
+                ]
+              },
+              "notes_owner_micro_service": {
+                "$id": "#/properties/message/items/anyOf/0/properties/notes_owner_micro_service",
+                "type": "string",
+                "title": "The notes_owner_micro_service schema",
+                "description": "This is the Micro service holding the note source table.",
+                "default": "",
+                "examples": [
+                  "TRIPS"
+                ]
+              },
+              "notes_owner_key": {
+                "$id": "#/properties/message/items/anyOf/0/properties/notes_owner_key",
+                "type": "string",
+                "title": "The notes_owner_key schema",
+                "description": "This is a system generated ids that is used to restrict access to micro-service data. This is the source table primary key field value.",
+                "default": "",
+                "examples": [
+                  "1006"
+                ]
+              },
+              "notes_type": {
+                "$id": "#/properties/message/items/anyOf/0/properties/notes_type",
+                "type": "string",
+                "title": "The notes_type schema",
+                "description": "This is the type of note.",
+                "default": "",
+                "examples": [
+                  "USER_DEFINED_LOV"
+                ]
+              },
+              "notes_note": {
+                "$id": "#/properties/message/items/anyOf/0/properties/notes_note",
+                "type": "string",
+                "title": "The notes_note schema",
+                "description": "This is the note.",
+                "default": "",
+                "examples": [
+                  "{\"title\":\"Trip Status\",\"comment\":\"Almost ready for gate out\"}"
+                ]
+              },
+              "created_by_date": {
+                "$id": "#/properties/message/items/anyOf/0/properties/created_by_date",
+                "type": "string",
+                "title": "The created_by_date schema",
+                "description": "When the user entry was entered in the system.",
+                "default": "",
+                "examples": [
+                  "2020-07-16T00:00:00Z"
+                ]
+              },
+              "created_by_requestor_username": {
+                "$id": "#/properties/message/items/anyOf/0/properties/created_by_requestor_username",
+                "type": "string",
+                "title": "The created_by_requestor_username schema",
+                "description": "The Cognito username for the person who made the request.",
+                "default": "",
+                "examples": [
+                  "33d44460-2de6-4e3f-8ae2-83a09fe4bbcd"
+                ]
+              },
+              "created_timestamp": {
+                "$id": "#/properties/message/items/anyOf/0/properties/created_timestamp",
+                "type": "string",
+                "title": "The created_timestamp schema",
+                "description": "This is the specific date and time 'stamped' when note(s) was/were added.",
+                "default": "",
+                "examples": [
+                  "2020-07-16T11:50:55.839066Z"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

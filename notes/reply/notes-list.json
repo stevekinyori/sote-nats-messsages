@@ -11,7 +11,7 @@
       "message": [
         {
           "notes_id": 150,
-          "organizations_id": 1,
+          "organizations_id": 10036,
           "notes_owner_micro_service": "SHIPMENTS",
           "notes_owner_key": "1",
           "notes_type": "JOBCARD",
@@ -22,7 +22,7 @@
         },
         {
           "notes_id": 142,
-          "organizations_id": 1,
+          "organizations_id": 10036,
           "notes_owner_micro_service": "SHIPMENTS",
           "notes_owner_key": "1",
           "notes_type": "SHIPMENT_NOTIFICATION",
@@ -33,9 +33,9 @@
         },
         {
           "notes_id": 90,
-          "organizations_id": 1,
+          "organizations_id": 10036,
           "notes_owner_micro_service": "SHIPMENTS",
-          "notes_owner_key": "1",
+          "notes_owner_key": "10000",
           "notes_type": "SHIPMENT_NOTIFICATION",
           "notes_note": "Update test",
           "created_by_date": "2021-05-18T00:00:00Z",
@@ -70,7 +70,7 @@
         [
           {
             "notes_id": 150,
-            "organizations_id": 1,
+            "organizations_id": 10036,
             "notes_owner_micro_service": "SHIPMENTS",
             "notes_owner_key": "1",
             "notes_type": "JOBCARD",
@@ -81,7 +81,7 @@
           },
           {
             "notes_id": 142,
-            "organizations_id": 1,
+            "organizations_id": 10036,
             "notes_owner_micro_service": "SHIPMENTS",
             "notes_owner_key": "1",
             "notes_type": "SHIPMENT_NOTIFICATION",
@@ -105,7 +105,7 @@
             "examples": [
               {
                 "notes_id": 150,
-                "organizations_id": 1,
+                "organizations_id": 10036,
                 "notes_owner_micro_service": "SHIPMENTS",
                 "notes_owner_key": "1",
                 "notes_type": "JOBCARD",
@@ -144,7 +144,7 @@
                 "description": "This is a system generated id that is used to restrict access to customers' data.",
                 "default": 0,
                 "examples": [
-                  1
+                  10036
                 ]
               },
               "notes_owner_micro_service": {
@@ -211,7 +211,7 @@
                 "$id": "#/properties/message/items/anyOf/0/properties/created_timestamp",
                 "type": "string",
                 "title": "The created_timestamp schema",
-                "description": "This is the specific date and time 'stamped' when note(s) was/were added .",
+                "description": "This is the specific date and time 'stamped' when note(s) was/were added.",
                 "default": "",
                 "examples": [
                   "2021-05-19T23:59:24.050458+03:00"

@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test",
+      "json-web-token": "FAKE TOKEN",
+      "aws-user-name": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
+      "role-list": [
+        "CLIENT",
+        "USER"
+      ],
+      "organizations-id": 10036,
+      "notes-owner-key": [
+        "1"
+      ],
+      "notes-type": "USER_DEFINED_LOV",
+      "notes-note": "Updated add example note 2",
+      "syntax-type": "TEXT"
+    }
+  ],
+  "required": [
+    "message-id",
+    "json-web-token",
+    "aws-user-name",
+    "role-list",
+    "organizations-id",
+    "notes-owner-key",
+    "notes-type",
+    "notes-note",
+    "syntax-type"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "This is used to uniquely identify devices.",
+      "default": "",
+      "examples": [
+        "test"
+      ]
+    },
+    "json-web-token": {
+      "$id": "#/properties/json-web-token",
+      "type": "string",
+      "title": "The json-web-token schema",
+      "description": "This is used to authenticate users.",
+      "default": "",
+      "examples": [
+        "FAKE TOKEN"
+      ]
+    },
+    "aws-user-name": {
+      "$id": "#/properties/aws-user-name",
+      "type": "string",
+      "title": "The aws-user-name schema",
+      "description": "The Cognito username for the person who is making the request.",
+      "default": "",
+      "examples": [
+        "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+      ]
+    },
+    "role-list": {
+      "$id": "#/properties/role-list",
+      "type": "array",
+      "title": "The role-list schema",
+      "description": "This determines which actions user can perform.",
+      "default": [],
+      "examples": [
+        [
+          "CLIENT",
+          "USER"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/role-list/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/role-list/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "CLIENT",
+              "USER"
+            ]
+          }
+        ]
+      }
+    },
+    "organizations-id": {
+      "$id": "#/properties/organizations-id",
+      "type": "integer",
+      "title": "The organizations-id schema",
+      "description": "This is a system generated id that is used to restrict access to customers data.",
+      "default": 0,
+      "examples": [
+        10036
+      ]
+    },
+    "notes-owner-key": {
+      "$id": "#/properties/notes-owner-key",
+      "type": "array",
+      "title": "The notes-owner-key schema",
+      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value.",
+      "default": [],
+      "examples": [
+        [
+          "1"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/notes-owner-key/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/notes-owner-key/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    "notes-type": {
+      "$id": "#/properties/notes-type",
+      "type": "string",
+      "title": "The notes-type schema",
+      "description": "This is the type of note.",
+      "default": "",
+      "examples": [
+        "USER_DEFINED_LOV"
+      ]
+    },
+    "notes-note": {
+      "$id": "#/properties/notes-note",
+      "type": "string",
+      "title": "The notes-note schema",
+      "description": "This is the note or JSON string.",
+      "default": "",
+      "examples": [
+        "Updated add example note 2"
+      ]
+    },
+    "syntax-type": {
+      "$id": "#/properties/syntax-type",
+      "type": "string",
+      "title": "The syntax-type schema",
+      "description": "The note format JSON|TEXT. Default is TEXT.",
+      "default": "",
+      "examples": [
+        "TEXT"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "json-web-token": "example-json-token",
+            "message-id": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
+            "aws-user-name": "soteuser",
+            "organizations-id": 10000,
+            "role-list": [
+                "CLIENT_ADMIN",
+                "EXECUTIVE"
+            ],
+            "trips-id": 10018
+        }
+    ],
+    "required": [
+        "json-web-token",
+        "message-id",
+        "aws-user-name",
+        "organizations-id",
+        "role-list",
+        "trips-id"
+    ],
+    "properties": {
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "example-json-token"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "soteuser"
+            ]
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10000
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "CLIENT_ADMIN",
+                    "EXECUTIVE"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "CLIENT_ADMIN",
+                            "EXECUTIVE"
+                        ]
+                    }
+                ]
+            }
+        },
+        "trips-id": {
+            "$id": "#/properties/trips-id",
+            "type": "integer",
+            "title": "The trips-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10018
+            ]
+        }
+    },
+    "additionalProperties": true
+}
