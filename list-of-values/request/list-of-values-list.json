@@ -6,18 +6,35 @@
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
     "examples": [
-        {
+        {   
+            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
             "organizations-id": 1,
             "aws-user-name": "e51a0be2-5495-48fc-882a-e88f85cf7b4b",
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8"
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "role-list": [
+                "ROLE_NAME1",
+                "ROLE_NAME2"
+            ]
         }
     ],
     "required": [
+        "json-web-token",
         "organizations-id",
         "aws-user-name",
-        "message-id"
+        "message-id",
+        "role-list"
     ],
     "properties": {
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "eyJraWQiOvxxxxxxxxxxxxxxxx"
+            ]
+        },
         "organizations-id": {
             "$id": "#/properties/organizations-id",
             "type": "integer",
@@ -47,6 +64,36 @@
             "examples": [
                 "51ad84d4-XXXXXXX-6b2ce5e8"
             ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
+                        ]
+                    }
+                ]
+            }
         }
     },
     "additionalProperties": true
