@@ -1,0 +1,447 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "test-list",
+            "message": [
+                {
+                    "usermanagement_id": 1,
+                    "row_version": 1,
+                    "user_organizations_id": 1,
+                    "informational_user": false,
+                    "user_is_active": false,
+                    "user_is_assigned": true,
+                    "cognito_username": [
+                        "user-name-1",
+                        "user-name-2"
+                    ],
+                    "created_by_date": "2021-08-17T00:00:00Z",
+                    "created_by_requestor_username": "user-name",
+                    "client_company_id": 11,
+                    "user_phone_country_code": "+254",
+                    "user_phone_number": "1234567890",
+                    "user_email": "test@example.com",
+                    "user_last_name": "lastname",
+                    "user_first_name": "firstname",
+                    "user_middle_name": "middlename",
+                    "user_name_prefix": "Mr",
+                    "user_name_suffix": "MD",
+                    "user_hire_date": "2019-01-04T00:00:00Z",
+                    "user_driver_license_id": "drivers-id",
+                    "user_driver_license_expiry_date": "2019-01-04T00:00:00Z",
+                    "user_wage": 12.34000015258789,
+                    "user_pay_period": "monthly",
+                    "device_token": null,
+                    "updated_by_date": "2021-08-17T00:00:00Z",
+                    "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                }
+            ]
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-list"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "array",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "usermanagement_id": 1,
+                        "row_version": 1,
+                        "user_organizations_id": 1,
+                        "informational_user": false,
+                        "user_is_active": false,
+                        "user_is_assigned": true,
+                        "cognito_username": [
+                            "user-name-1",
+                            "user-name-2"
+                        ],
+                        "created_by_date": "2021-08-17T00:00:00Z",
+                        "created_by_requestor_username": "user-name",
+                        "client_company_id": 11,
+                        "user_phone_country_code": "+254",
+                        "user_phone_number": "1234567890",
+                        "user_email": "test@example.com",
+                        "user_last_name": "lastname",
+                        "user_first_name": "firstname",
+                        "user_middle_name": "middlename",
+                        "user_name_prefix": "Mr",
+                        "user_name_suffix": "MD",
+                        "user_hire_date": "2019-01-04T00:00:00Z",
+                        "user_driver_license_id": "drivers-id",
+                        "user_driver_license_expiry_date": "2019-01-04T00:00:00Z",
+                        "user_wage": 12.34000015258789,
+                        "user_pay_period": "monthly",
+                        "device_token": null,
+                        "updated_by_date": "2021-08-17T00:00:00Z",
+                        "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/message/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/message/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "usermanagement_id": 1,
+                                "row_version": 1,
+                                "user_organizations_id": 1,
+                                "informational_user": false,
+                                "user_is_active": false,
+                                "user_is_assigned": true,
+                                "cognito_username": [
+                                    "user-name-1",
+                                    "user-name-2"
+                                ],
+                                "created_by_date": "2021-08-17T00:00:00Z",
+                                "created_by_requestor_username": "user-name",
+                                "client_company_id": 11,
+                                "user_phone_country_code": "+254",
+                                "user_phone_number": "1234567890",
+                                "user_email": "test@example.com",
+                                "user_last_name": "lastname",
+                                "user_first_name": "firstname",
+                                "user_middle_name": "middlename",
+                                "user_name_prefix": "Mr",
+                                "user_name_suffix": "MD",
+                                "user_hire_date": "2019-01-04T00:00:00Z",
+                                "user_driver_license_id": "drivers-id",
+                                "user_driver_license_expiry_date": "2019-01-04T00:00:00Z",
+                                "user_wage": 12.34000015258789,
+                                "user_pay_period": "monthly",
+                                "device_token": null,
+                                "updated_by_date": "2021-08-17T00:00:00Z",
+                                "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                            }
+                        ],
+                        "required": [
+                            "usermanagement_id",
+                            "row_version",
+                            "user_organizations_id",
+                            "informational_user",
+                            "user_is_active",
+                            "user_is_assigned",
+                            "cognito_username",
+                            "created_by_date",
+                            "created_by_requestor_username",
+                            "updated_by_date",
+                            "updated_by_requestor_username"
+                        ],
+                        "properties": {
+                            "usermanagement_id": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/usermanagement_id",
+                                "type": "integer",
+                                "title": "The usermanagement_id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "row_version": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/row_version",
+                                "type": "integer",
+                                "title": "The row_version schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "user_organizations_id": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_organizations_id",
+                                "type": "integer",
+                                "title": "The user_organizations_id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "informational_user": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/informational_user",
+                                "type": "boolean",
+                                "title": "The informational_user schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": false,
+                                "examples": [
+                                    false
+                                ]
+                            },
+                            "user_is_active": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_is_active",
+                                "type": "boolean",
+                                "title": "The user_is_active schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": false,
+                                "examples": [
+                                    false
+                                ]
+                            },
+                            "user_is_assigned": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_is_assigned",
+                                "type": "boolean",
+                                "title": "The user_is_assigned schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": false,
+                                "examples": [
+                                    true
+                                ]
+                            },
+                            "cognito_username": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/cognito_username",
+                                "type": "array",
+                                "title": "The cognito_username schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        "user-name-1",
+                                        "user-name-2"
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "$id": "#/properties/message/items/anyOf/0/properties/cognito_username/items",
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/message/items/anyOf/0/properties/cognito_username/items/anyOf/0",
+                                            "type": "string",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "user-name-1",
+                                                "user-name-2"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "created_by_date": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/created_by_date",
+                                "type": "string",
+                                "title": "The created_by_date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2021-08-17T00:00:00Z"
+                                ]
+                            },
+                            "created_by_requestor_username": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/created_by_requestor_username",
+                                "type": "string",
+                                "title": "The created_by_requestor_username schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "user-name"
+                                ]
+                            },
+                            "client_company_id": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/client_company_id",
+                                "type": "integer",
+                                "title": "The client_company_id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    11
+                                ]
+                            },
+                            "user_phone_country_code": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_phone_country_code",
+                                "type": "string",
+                                "title": "The user_phone_country_code schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "+254"
+                                ]
+                            },
+                            "user_phone_number": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_phone_number",
+                                "type": "string",
+                                "title": "The user_phone_number schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "1234567890"
+                                ]
+                            },
+                            "user_email": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_email",
+                                "type": "string",
+                                "title": "The user_email schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "test@example.com"
+                                ]
+                            },
+                            "user_last_name": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_last_name",
+                                "type": "string",
+                                "title": "The user_last_name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "lastname"
+                                ]
+                            },
+                            "user_first_name": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_first_name",
+                                "type": "string",
+                                "title": "The user_first_name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "firstname"
+                                ]
+                            },
+                            "user_middle_name": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_middle_name",
+                                "type": "string",
+                                "title": "The user_middle_name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "middlename"
+                                ]
+                            },
+                            "user_name_prefix": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_name_prefix",
+                                "type": "string",
+                                "title": "The user_name_prefix schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Mr"
+                                ]
+                            },
+                            "user_name_suffix": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_name_suffix",
+                                "type": "string",
+                                "title": "The user_name_suffix schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "MD"
+                                ]
+                            },
+                            "user_hire_date": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_hire_date",
+                                "type": "string",
+                                "title": "The user_hire_date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2019-01-04T00:00:00Z"
+                                ]
+                            },
+                            "user_driver_license_id": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_driver_license_id",
+                                "type": "string",
+                                "title": "The user_driver_license_id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "drivers-id"
+                                ]
+                            },
+                            "user_driver_license_expiry_date": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_driver_license_expiry_date",
+                                "type": "string",
+                                "title": "The user_driver_license_expiry_date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2019-01-04T00:00:00Z"
+                                ]
+                            },
+                            "user_wage": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_wage",
+                                "type": "number",
+                                "title": "The user_wage schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    12.34000015258789
+                                ]
+                            },
+                            "user_pay_period": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/user_pay_period",
+                                "type": "string",
+                                "title": "The user_pay_period schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "monthly"
+                                ]
+                            },
+                            "device_token": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/device_token",
+                                "type": "null",
+                                "title": "The device_token schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": null,
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "updated_by_date": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/updated_by_date",
+                                "type": "string",
+                                "title": "The updated_by_date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2021-08-17T00:00:00Z"
+                                ]
+                            },
+                            "updated_by_requestor_username": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/updated_by_requestor_username",
+                                "type": "string",
+                                "title": "The updated_by_requestor_username schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

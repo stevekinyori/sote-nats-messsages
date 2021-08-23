@@ -1,0 +1,180 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organizations-id": 1,
+            "aws-user-name": "user-name",
+            "message-id": "test-message-id",
+            "json-web-token": "FAKE TOKEN",
+            "role-list": [
+                "user-role-1",
+                "user-role-2"
+            ],
+            "record-limit-count": 0,
+            "record-offset": 0,
+            "sort-order": {
+                "user-management-id": "ASC",
+                "client-company-id": "DESC"
+            }
+        }
+    ],
+    "required": [
+        "organizations-id",
+        "aws-user-name",
+        "message-id",
+        "json-web-token",
+        "role-list",
+        "record-limit-count",
+        "record-offset"
+    ],
+    "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "user-name"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-message-id"
+            ]
+        },
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FAKE TOKEN"
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "user-role-1",
+                    "user-role-2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "user-role-1",
+                            "user-role-2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "record-limit-count": {
+            "$id": "#/properties/record-limit-count",
+            "type": "integer",
+            "title": "The record-limit-count schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "record-offset": {
+            "$id": "#/properties/record-offset",
+            "type": "integer",
+            "title": "The record-offset schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "type": "object",
+            "title": "The sort-order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "user-management-id": "DESC",
+                    "informational-user": "ASC",
+                    "organizations-id": "DESC",
+                    "user-is-active": "ASC",
+                    "user-is-assigned": "DESC",
+                    "client-company-id": "ASC",
+                    "user-phone-country-code": "DESC",
+                    "user-phone-number": "ASC",
+                    "user-email": "DESC",
+                    "user-first-name": "ASC",
+                    "user-middle-name": "DESC",
+                    "user-last-name": "ASC",
+                    "user-name-prefix": "DESC",
+                    "user-name-suffix": "ASC",
+                    "hire-date": "DESC"
+                }
+            ],
+            "required": [
+                
+            ],
+            "properties": {
+                "user-management-id": {
+                    "$id": "#/properties/sort-order/properties/user-management-id",
+                    "type": "string",
+                    "title": "The user-management-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ASC"
+                    ]
+                },
+                "client-company-id": {
+                    "$id": "#/properties/sort-order/properties/client-company-id",
+                    "type": "string",
+                    "title": "The client-company-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DESC"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
