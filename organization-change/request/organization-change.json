@@ -17,8 +17,8 @@
             ],
             "row-version": 2,
             "organization-name": "SOTE TEST LTD",
-            "contact-date": "1200/12/12",
-            "since-date": "1200-12-12",
+            "initial-contact-date": "1200/12/12",
+            "customer-since-date": "1200-12-12",
             "contract-start-date": "1208.08.08",
             "contract-end-date": "1200/12/12",
             "estimated-users": 102,
@@ -127,20 +127,20 @@
                 "1200/12/12"
             ]
         },
-        "contact-date": {
-            "$id": "#/properties/contact-date",
+        "initial-contact-date": {
+            "$id": "#/properties/initial-contact-date",
             "type": "string",
-            "title": "The contact-date schema",
+            "title": "The initial-contact-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "1200/12/12"
             ]
         },
-        "since-date": {
-            "$id": "#/properties/since-date",
+        "customer-since-date": {
+            "$id": "#/properties/customer-since-date",
             "type": "string",
-            "title": "The since-date schema",
+            "title": "The customer-since-date schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
