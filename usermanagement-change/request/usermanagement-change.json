@@ -1,0 +1,289 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organizations-id": 1,
+            "aws-user-name": "user-name",
+            "message-id": "test-message-id",
+            "json-web-token": "FAKE TOKEN",
+            "role-list": [
+                "user-role-1",
+                "user-role-2"
+            ],
+            "row-version": 1,
+            "user-management-id": 1,
+            "user-phone-country-code": "+254",
+            "user-phone-number": "1234567890",
+            "user-email": "test@email.com,",
+            "user-management-name": "test-cognito-name",
+            "client-company-id": 1,
+            "user-first-name": "FirstName",
+            "user-middle-name": "MiddleName",
+            "user-last-name": "LastName",
+            "user-name-prefix": "Miss",
+            "user_name_suffix": "MD",
+            "user-hire-date": "2021-08-26",
+            "driver-license": "DL-123",
+            "driver-license-expiry": "2022-01-01",
+            "user-wage": 200000,
+            "user-pay-period": "Monthly"
+        }
+    ],
+    "required": [
+        "organizations-id",
+        "aws-user-name",
+        "message-id",
+        "json-web-token",
+        "role-list",
+        "row-version",
+        "user-management-id"
+    ],
+    "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "user-name"
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-message-id"
+            ]
+        },
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FAKE TOKEN"
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "user-role-1",
+                    "user-role-2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "user-role-1",
+                            "user-role-2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "row-version": {
+            "$id": "#/properties/row-version",
+            "type": "integer",
+            "title": "The row-version schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "user-management-id": {
+            "$id": "#/properties/user-management-id",
+            "type": "integer",
+            "title": "The user-management-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "user-phone-country-code": {
+            "$id": "#/properties/user-phone-country-code",
+            "type": "string",
+            "title": "The user-phone-country-code schema",
+            "description": "must start with a + sign.",
+            "default": "",
+            "examples": [
+                "+254"
+            ]
+        },
+        "user-phone-number": {
+            "$id": "#/properties/user-phone-number",
+            "type": "string",
+            "title": "The user-phone-number schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "1234567890"
+            ]
+        },
+        "user-email": {
+            "$id": "#/properties/user-email",
+            "type": "string",
+            "title": "The user-email schema",
+            "description": "Must be a valid email.",
+            "default": "",
+            "examples": [
+                "test@email.com,"
+            ]
+        },
+        "user-management-name": {
+            "$id": "#/properties/user-management-name",
+            "type": "string",
+            "title": "The user-management-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-cognito-name"
+            ]
+        },
+        "client-company-id": {
+            "$id": "#/properties/client-company-id",
+            "type": "integer",
+            "title": "The client-company-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "user-first-name": {
+            "$id": "#/properties/user-first-name",
+            "type": "string",
+            "title": "The user-first-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FirstName"
+            ]
+        },
+        "user-middle-name": {
+            "$id": "#/properties/user-middle-name",
+            "type": "string",
+            "title": "The user-middle-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "MiddleName"
+            ]
+        },
+        "user-last-name": {
+            "$id": "#/properties/user-last-name",
+            "type": "string",
+            "title": "The user-last-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "LastName"
+            ]
+        },
+        "user-name-prefix": {
+            "$id": "#/properties/user-name-prefix",
+            "type": "string",
+            "title": "The user-name-prefix schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Miss"
+            ]
+        },
+        "user_name_suffix": {
+            "$id": "#/properties/user_name_suffix",
+            "type": "string",
+            "title": "The user_name_suffix schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "MD"
+            ]
+        },
+        "user-hire-date": {
+            "$id": "#/properties/user-hire-date",
+            "type": "string",
+            "title": "The user-hire-date schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2021-08-26"
+            ]
+        },
+        "driver-license": {
+            "$id": "#/properties/driver-license",
+            "type": "string",
+            "title": "The driver-license schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "DL-123"
+            ]
+        },
+        "driver-license-expiry": {
+            "$id": "#/properties/driver-license-expiry",
+            "type": "string",
+            "title": "The driver-license-expiry schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2022-01-01"
+            ]
+        },
+        "user-wage": {
+            "$id": "#/properties/user-wage",
+            "type": "integer",
+            "title": "The user-wage schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                200000
+            ]
+        },
+        "user-pay-period": {
+            "$id": "#/properties/user-pay-period",
+            "type": "string",
+            "title": "The user-pay-period schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Monthly"
+            ]
+        }
+    },
+    "additionalProperties": true
+}
