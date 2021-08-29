@@ -40,25 +40,7 @@
         "aws-user-name",
         "message-id",
         "json-web-token",
-        "role-list",
-        "user-is-assigned",
-        "informational-user",
-        "user-phone-country-code",
-        "user-phone-number",
-        "user-email",
-        "user-management-name",
-        "client-company-id",
-        "user-first-name",
-        "user-middle-name",
-        "user-last-name",
-        "user-name-prefix",
-        "user_name_suffix",
-        "user-hire-date",
-        "driver-license",
-        "driver-license-expiry",
-        "user-wage",
-        "user-pay-period",
-        "device-token"
+        "role-list"
     ],
     "properties": {
         "organizations-id": {
