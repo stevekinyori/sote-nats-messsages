@@ -137,7 +137,7 @@
             "$id": "#/properties/user-phone-country-code",
             "type": "string",
             "title": "The user-phone-country-code schema",
-            "description": "Must start with a + sign.",
+            "description": "must start with a + sign. It's Required If user-phone-number is Provided",
             "default": "",
             "examples": [
                 "+254"
@@ -147,7 +147,7 @@
             "$id": "#/properties/user-phone-number",
             "type": "string",
             "title": "The user-phone-number schema",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "It's Required If user-email is NOT Provided",
             "default": "",
             "examples": [
                 "1234567890"
@@ -157,7 +157,7 @@
             "$id": "#/properties/user-email",
             "type": "string",
             "title": "The user-email schema",
-            "description": "Must be a valid email.",
+            "description": "Must be a valid email. It's Required If user-phone-number is NOT Provided",
             "default": "",
             "examples": [
                 "test@email.com,"

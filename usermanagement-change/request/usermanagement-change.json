@@ -138,7 +138,7 @@
             "$id": "#/properties/user-phone-country-code",
             "type": "string",
             "title": "The user-phone-country-code schema",
-            "description": "must start with a + sign.",
+            "description": "must start with a + sign. It's Required If user-phone-number is Provided",
             "default": "",
             "examples": [
                 "+254"
