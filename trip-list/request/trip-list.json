@@ -19,9 +19,6 @@
             }
         }
     ],
-    "required": [
-        "trips-id"
-    ],
     "properties": {
         "request-header": {
             "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
