@@ -12,9 +12,15 @@
             "organizations-id": 1000,
             "aws-user-name": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
             "role-list": [
-              "ROLE_NAME1",
-              "ROLE_NAME2"
-          ]
+                "ROLE_NAME1",
+                "ROLE_NAME2"
+            ],
+            "record-limit-count": 10,
+            "record-offset": 0,
+            "sort-order": {
+                "organizations-id": "ASC",
+                "organization-name": "DESC"
+            }
         }
     ],
     "required": [
@@ -22,7 +28,9 @@
         "message-id",
         "organizations-id",
         "aws-user-name",
-        "role-list"
+        "role-list",
+        "record-limit-count",
+        "record-offset"
     ],
     "properties": {
         "json-web-token": {
@@ -66,35 +74,95 @@
             ]
         },
         "role-list": {
-          "$id": "#/properties/role-list",
-          "type": "array",
-          "title": "The role-list schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": [],
-          "examples": [
-              [
-                  "ROLE_NAME1",
-                  "ROLE_NAME2"
-              ]
-          ],
-          "additionalItems": true,
-          "items": {
-              "$id": "#/properties/role-list/items",
-              "anyOf": [
-                  {
-                      "$id": "#/properties/role-list/items/anyOf/0",
-                      "type": "string",
-                      "title": "The first anyOf schema",
-                      "description": "An explanation about the purpose of this instance.",
-                      "default": "",
-                      "examples": [
-                          "ROLE_NAME1",
-                          "ROLE_NAME2"
-                      ]
-                  }
-              ]
-          }
-      }
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "record-limit-count": {
+            "$id": "#/properties/record-limit-count",
+            "type": "integer",
+            "title": "The record-limit-count schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10
+            ]
+        },
+        "record-offset": {
+            "$id": "#/properties/record-offset",
+            "type": "integer",
+            "title": "The record-offset schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "type": "object",
+            "title": "The sort-order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "organizations-id": "ASC",
+                    "organization-name": "DESC"
+                }
+            ],
+            "required": [
+                "organizations-id",
+                "organization-name"
+            ],
+            "properties": {
+                "organizations-id": {
+                    "$id": "#/properties/sort-order/properties/organizations-id",
+                    "type": "string",
+                    "title": "The organizations-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ASC"
+                    ]
+                },
+                "organization-name": {
+                    "$id": "#/properties/sort-order/properties/organization-name",
+                    "type": "string",
+                    "title": "The organization-name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DESC"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
     },
     "additionalProperties": true
-  }
+}
