@@ -7,7 +7,6 @@
   "default": {},
   "examples": [
     {
-      "message-id": "test-id",
       "json-web-token": "FAKE TOKEN",
       "aws-user-name": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
       "role-list": [
@@ -15,40 +14,33 @@
         "USER"
       ],
       "organizations-id": 10036,
-      "notes-type" : "USER_DEFINED_LOV",
-      "notes-owner-key": [
-        "10000",
-        "1"
-      ],
+      "message-id": "test",
       "sort-order": {
         "notes-owner-key": "ASC"
       },
       "record-limit-count": 10,
-      "record-offset": 0
+      "record-offset": 0,
+      "notes-owner-key": [
+        "1"
+      ],
+      "notes-type": "FINTRANS_SHIPMENT"
     }
   ],
   "required": [
-    "message-id",
     "json-web-token",
     "aws-user-name",
     "role-list",
     "organizations-id",
-    "notes-owner-key",
+    "message-id",
     "sort-order",
     "record-limit-count",
     "record-offset"
   ],
+  "optional": [
+    "notes-owner-key",
+    "notes-type"
+  ],
   "properties": {
-    "message-id": {
-      "$id": "#/properties/message-id",
-      "type": "string",
-      "title": "The message-id schema",
-      "description": "This is used to uniquely identify devices.",
-      "default": "",
-      "examples": [
-        "test-id"
-      ]
-    },
     "json-web-token": {
       "$id": "#/properties/json-web-token",
       "type": "string",
@@ -109,62 +101,15 @@
         10036
       ]
     },
-    "notes-type": {
-      "$id": "#/properties/notes-type",
-      "type": "array",
-      "title": "The notes-type schema",
-      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value",
-      "default": [],
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "This is used to uniquely identify devices.",
+      "default": "",
       "examples": [
-        "USER_DEFINED_LOV"
-      ],
-      "additionalItems": true,
-      "items": {
-        "$id": "#/properties/notes-type/items",
-        "anyOf": [
-          {
-            "$id": "#/properties/notes-type/items/anyOf/0",
-            "type": "string",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "10000",
-              "1"
-            ]
-          }
-        ]
-      }
-    },
-    "notes-owner-key": {
-      "$id": "#/properties/notes-owner-key",
-      "type": "array",
-      "title": "The notes-owner-key schema",
-      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value",
-      "default": [],
-      "examples": [
-        [
-          "10000",
-          "1"
-        ]
-      ],
-      "additionalItems": true,
-      "items": {
-        "$id": "#/properties/notes-owner-key/items",
-        "anyOf": [
-          {
-            "$id": "#/properties/notes-owner-key/items/anyOf/0",
-            "type": "string",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "10000",
-              "1"
-            ]
-          }
-        ]
-      }
+        "test"
+      ]
     },
     "sort-order": {
       "$id": "#/properties/sort-order",
@@ -185,7 +130,7 @@
           "$id": "#/properties/sort-order/properties/notes-owner-key",
           "type": "string",
           "title": "The notes-owner-key schema",
-          "description": "List will be sorted in ascending order of notes-owner-key.",
+          "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
             "ASC"
@@ -212,6 +157,44 @@
       "default": 0,
       "examples": [
         0
+      ]
+    },
+    "notes-owner-key": {
+      "$id": "#/properties/notes-owner-key",
+      "type": "array",
+      "title": "The notes-owner-key schema",
+      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value",
+      "default": [],
+      "examples": [
+        [
+          "1"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/notes-owner-key/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/notes-owner-key/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    "notes-type": {
+      "$id": "#/properties/notes-type",
+      "type": "string",
+      "title": "The notes-type schema",
+      "description": "This is the name of the note type for a given object.",
+      "default": "",
+      "examples": [
+        "FINTRANS_SHIPMENT"
       ]
     }
   },
