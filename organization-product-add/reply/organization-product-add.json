@@ -7,11 +7,18 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-id-add-products",
+            "message-id": "test-message-list",
             "message": [
                 {
-                    "product_name": "TEST_JOB_CARDS",
-                    "created_by_date": "2021-09-08",
+                    "product_name": "TEST_NEW_JOB_CARDS",
+                    "created_by_date": "2021-09-21",
+                    "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                    "updated_by_date": null,
+                    "updated_by_requestor_username": null
+                },
+                {
+                    "product_name": "TEST_NEW_ALLOCATIONS",
+                    "created_by_date": "2021-09-21",
                     "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
                     "updated_by_date": null,
                     "updated_by_requestor_username": null
@@ -31,7 +38,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-id-add-products"
+                "test-message-list"
             ]
         },
         "message": {
@@ -43,8 +50,15 @@
             "examples": [
                 [
                     {
-                        "product_name": "TEST_JOB_CARDS",
-                        "created_by_date": "2021-09-08",
+                        "product_name": "TEST_NEW_JOB_CARDS",
+                        "created_by_date": "2021-09-21",
+                        "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    },
+                    {
+                        "product_name": "TEST_NEW_ALLOCATIONS",
+                        "created_by_date": "2021-09-21",
                         "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
                         "updated_by_date": null,
                         "updated_by_requestor_username": null
@@ -63,8 +77,8 @@
                         "default": {},
                         "examples": [
                             {
-                                "product_name": "TEST_JOB_CARDS",
-                                "created_by_date": "2021-09-08",
+                                "product_name": "TEST_NEW_JOB_CARDS",
+                                "created_by_date": "2021-09-21",
                                 "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
                                 "updated_by_date": null,
                                 "updated_by_requestor_username": null
@@ -73,7 +87,9 @@
                         "required": [
                             "product_name",
                             "created_by_date",
-                            "created_by_requestor_username"
+                            "created_by_requestor_username",
+                            "updated_by_date",
+                            "updated_by_requestor_username"
                         ],
                         "properties": {
                             "product_name": {
@@ -83,7 +99,7 @@
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
-                                    "TEST_JOB_CARDS"
+                                    "TEST_NEW_JOB_CARDS"
                                 ]
                             },
                             "created_by_date": {
@@ -93,7 +109,7 @@
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
-                                    "2021-09-08"
+                                    "2021-09-21"
                                 ]
                             },
                             "created_by_requestor_username": {

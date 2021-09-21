@@ -7,100 +7,17 @@
     "default": {},
     "examples": [
         {
-            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-            "message-id": "1a8eb33e-xxx-0242ac130003",
-            "aws-user-name": "a8eb33e-xxx-0242ac130003",
-            "organizations-id": 1,
-            "role-list": [
-                "ROLE_NAME1",
-                "ROLE_NAME2"
-            ],
             "client-company-id":1,
             "suppliers-id": 1,
             "supplier-name": "Supplier Two"
         }
     ],
     "required": [
-        "json-web-token",
-        "message-id",
-        "aws-user-name",
-        "organizations-id",
-        "role-list",
         "client-company-id",
         "suppliers-id",
         "supplier-name"
     ],
     "properties": {
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
-            "type": "string",
-            "title": "The json-web-token schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "eyJraWQiOvxxxxxxxxxxxxxxxx"
-            ]
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "1a8eb33e-xxx-0242ac130003"
-            ]
-        },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
-            "type": "string",
-            "title": "The aws-user-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "a8eb33e-xxx-0242ac130003"
-            ]
-        },
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "role-list": {
-            "$id": "#/properties/role-list",
-            "type": "array",
-            "title": "The role-list schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    "ROLE_NAME1",
-                    "ROLE_NAME2"
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/role-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/role-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "ROLE_NAME1",
-                            "ROLE_NAME2"
-                        ]
-                    }
-                ]
-            }
-        },
         "client-company-id": {
             "$id": "#/properties/client-company-id",
             "type": "integer",
