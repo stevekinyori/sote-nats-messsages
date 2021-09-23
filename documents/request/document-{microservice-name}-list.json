@@ -15,12 +15,18 @@
         "USER"
       ],
       "organizations-id": 1000,
-      "documents-link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/inbound/invoice0.jpeg",
+      "record-limit-count": 10,
+      "record-offset": 0,
+      "sort-order": {
+        "documents-owner-key": "ASC",
+        "documents-id": "DESC"
+      },
       "documents-owner-key": [
-        "1000"
+        "1000",
+        "1"
       ],
-      "client-company": "SILAFRICA KENYA LTD",
-      "company-supplier": "ExxonMobil Petroleum & Chemical BV"
+      "documents-type": "Pro forma invoice",
+      "document-categories-name": "IDF & Customs Entry"
     }
   ],
   "required": [
@@ -29,10 +35,14 @@
     "aws-user-name",
     "role-list",
     "organizations-id",
-    "documents-link",
+    "record-limit-count",
+    "record-offset"
+  ],
+  "optional": [
+    "sort-order",
     "documents-owner-key",
-    "client-company",
-    "company-supplier"
+    "documents-type",
+    "document-categories-name"
   ],
   "properties": {
     "message-id": {
@@ -58,7 +68,7 @@
     "aws-user-name": {
       "$id": "#/properties/aws-user-name",
       "default": "",
-      "description": "The Cognito username for the person who is requesting the document add.",
+      "description": "The Cognito username for the person who is requesting the list of documents",
       "examples": [
         "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
       ],
@@ -105,23 +115,74 @@
       "title": "The organizations-id schema",
       "type": "integer"
     },
-    "documents-link": {
-      "$id": "#/properties/documents-link",
-      "default": "",
-      "description": "This is the object URL of document to be processed.",
+    "record-limit-count": {
+      "$id": "#/properties/record-limit-count",
+      "default": 0,
+      "description": "This is the number of records that will be returned.",
       "examples": [
-        "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/inbound/invoice0.jpeg"
+        10
       ],
-      "title": "The documents-link schema",
-      "type": "string"
+      "title": "The record-limit-count schema",
+      "type": "integer"
+    },
+    "record-offset": {
+      "$id": "#/properties/record-offset",
+      "default": 0,
+      "description": "This determines number of rows to skip  before returning records.",
+      "examples": [
+        0
+      ],
+      "title": "The record-offset schema",
+      "type": "integer"
+    },
+    "sort-order": {
+      "$id": "#/properties/sort-order",
+      "default": {},
+      "description": "This is the sequence list items will be returned.",
+      "examples": [
+        {
+          "documents-owner-key": "ASC",
+          "documents-id": "DESC"
+        }
+      ],
+      "required": [
+        "documents-owner-key",
+        "documents-id"
+      ],
+      "title": "The sort-order schema",
+      "type": "object",
+      "properties": {
+        "documents-owner-key": {
+          "$id": "#/properties/sort-order/properties/documents-owner-key",
+          "type": "string",
+          "title": "The documents-owner-key schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "ASC"
+          ]
+        },
+        "documents-id": {
+          "$id": "#/properties/sort-order/properties/documents-id",
+          "type": "string",
+          "title": "The documents-id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "DESC"
+          ]
+        }
+      },
+      "additionalProperties": true
     },
     "documents-owner-key": {
       "$id": "#/properties/documents-owner-key",
       "default": [],
-      "description": "This is a system generated id(s) that is used to restrict access to micro-service data. This is the source table primary key field value.",
+      "description": "This is the source table primary key field value.",
       "examples": [
         [
-          "1000"
+          "1000",
+          "1"
         ]
       ],
       "title": "The documents-owner-key schema",
@@ -137,30 +198,31 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-              "1000"
+              "1000",
+              "1"
             ]
           }
         ]
       }
     },
-    "client-company": {
-      "$id": "#/properties/client-company",
+    "documents-type": {
+      "$id": "#/properties/documents-type",
       "default": "",
-      "description": "This is the name the client company the document belongs to.",
+      "description": "This is the subdivision of the category document belongs to.",
       "examples": [
-        "SILAFRICA KENYA LTD"
+        "Pro forma invoice"
       ],
-      "title": "The client-company schema",
+      "title": "The documents-type schema",
       "type": "string"
     },
-    "company-supplier": {
-      "$id": "#/properties/company-supplier",
+    "document-categories-name": {
+      "$id": "#/properties/document-categories-name",
       "default": "",
-      "description": "This is the name used by the supplier who provides services to the client company.",
+      "description": "This is the category document belongs to (IDF & Customs Entry, Customer Documents,Delivery Order,etc).",
       "examples": [
-        "ExxonMobil Petroleum & Chemical BV"
+        "IDF & Customs Entry"
       ],
-      "title": "The company-supplier schema",
+      "title": "The document-categories-name schema",
       "type": "string"
     }
   },
