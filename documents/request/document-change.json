@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test",
+      "json-web-token": "FAKE TOKEN",
+      "aws-user-name": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
+      "role-list": [
+        "CLIENT",
+        "USER"
+      ],
+      "organizations-id": 1000,
+      "documents-id": 1001,
+      "documents-type": "Transport",
+      "documents-display-name": "CHANGE DISPLAY NAME",
+      "document-categories-name": "TEST CATEGORY"
+    }
+  ],
+  "required": [
+    "message-id",
+    "json-web-token",
+    "aws-user-name",
+    "role-list",
+    "organizations-id",
+    "documents-id"
+  ],
+  "optional": [
+    "documents-type",
+    "documents-display-name",
+    "document-categories-name"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "This is used to uniquely identify devices.",
+      "default": "",
+      "examples": [
+        "test"
+      ]
+    },
+    "json-web-token": {
+      "$id": "#/properties/json-web-token",
+      "type": "string",
+      "title": "The json-web-token schema",
+      "description": "This is used authenticate a user.",
+      "default": "",
+      "examples": [
+        "FAKE TOKEN"
+      ]
+    },
+    "aws-user-name": {
+      "$id": "#/properties/aws-user-name",
+      "type": "string",
+      "title": "The aws-user-name schema",
+      "description": "The Cognito username for the person who is requesting the document information update.",
+      "default": "",
+      "examples": [
+        "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
+      ]
+    },
+    "role-list": {
+      "$id": "#/properties/role-list",
+      "type": "array",
+      "title": "The role-list schema",
+      "description": "This determines which actions user can perform.",
+      "default": [],
+      "examples": [
+        [
+          "CLIENT",
+          "USER"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/role-list/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/role-list/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "CLIENT",
+              "USER"
+            ]
+          }
+        ]
+      }
+    },
+    "organizations-id": {
+      "$id": "#/properties/organizations-id",
+      "type": "integer",
+      "title": "The organizations-id schema",
+      "description": "This is a system generated id that is used to restrict access to customers data.",
+      "default": 0,
+      "examples": [
+        1000
+      ]
+    },
+    "documents-id": {
+      "$id": "#/properties/documents-id",
+      "type": "integer",
+      "title": "The documents-id schema",
+      "description": "This is a system generated id that is used identify a document.",
+      "default": 0,
+      "examples": [
+        1001
+      ]
+    },
+    "documents-type": {
+      "$id": "#/properties/documents-type",
+      "type": "string",
+      "title": "The documents-type schema",
+      "description": "This is the subdivision of the category document belongs to.",
+      "default": "",
+      "examples": [
+        "Transport"
+      ]
+    },
+    "documents-display-name": {
+      "$id": "#/properties/documents-display-name",
+      "type": "string",
+      "title": "The documents-display-name schema",
+      "description": "This is the display name of the document.",
+      "default": "",
+      "examples": [
+        "CHANGE DISPLAY NAME"
+      ]
+    },
+    "document-categories-name": {
+      "$id": "#/properties/document-categories-name",
+      "type": "string",
+      "title": "The document-categories-name schema",
+      "description": "This is the category document belongs to (IDF & Customs Entry, Customer Documents,Delivery Order,etc)",
+      "default": "",
+      "examples": [
+        "TEST CATEGORY"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

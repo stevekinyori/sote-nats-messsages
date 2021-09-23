@@ -9,7 +9,7 @@
     {
       "message-id": "test",
       "message": {
-        "documents_id": 1
+        "success": true
       }
     }
   ],
@@ -36,22 +36,22 @@
       "default": {},
       "examples": [
         {
-          "documents_id": 1
+          "success": true
         }
       ],
       "required": [
-        "documents_id"
+        "success"
       ],
       "properties": {
-        "documents_id": {
-          "$id": "#/properties/message/properties/documents_id",
-          "default": 0,
-          "description": "This is a system generated id that is used identify a document.",
+        "success": {
+          "$id": "#/properties/message/properties/success",
+          "default": false,
+          "description": "Evaluates to true if document is successfully deleted, else false",
           "examples": [
-            1
+            true
           ],
-          "title": "The documents_id schema",
-          "type": "integer"
+          "title": "The success schema",
+          "type": "boolean"
         }
       },
       "additionalProperties": true
