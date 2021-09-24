@@ -11,7 +11,7 @@
             "message": {
                 "usermanagement_id": 3065,
                 "row_version": 12,
-                "user_is_active": true
+                "informational_user": true
             }
         }
     ],
@@ -40,13 +40,13 @@
                 {
                     "usermanagement_id": 3065,
                     "row_version": 12,
-                    "user_is_active": true
+                    "informational_user": true
                 }
             ],
             "required": [
                 "usermanagement_id",
                 "row_version",
-                "user_is_active"
+                "informational_user"
             ],
             "properties": {
                 "usermanagement_id": {
@@ -69,10 +69,10 @@
                         12
                     ]
                 },
-                "user_is_active": {
-                    "$id": "#/properties/message/properties/user_is_active",
+                "informational_user": {
+                    "$id": "#/properties/message/properties/informational_user",
                     "type": "boolean",
-                    "title": "The user_is_active schema",
+                    "title": "The informational_user schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": false,
                     "examples": [

@@ -7,10 +7,12 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-id",
+            "message-id": "test-message",
             "message": {
-                "usermanagement_id": 1,
-                "row_version": 1
+                "usermanagement_id": 3078,
+                "row_version": 1,
+                "informational_user": true,
+                "user_is_active": false
             }
         }
     ],
@@ -26,7 +28,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-id"
+                "test-message"
             ]
         },
         "message": {
@@ -37,13 +39,17 @@
             "default": {},
             "examples": [
                 {
-                    "usermanagement_id": 1,
-                    "row_version": 1
+                    "usermanagement_id": 3078,
+                    "row_version": 1,
+                    "informational_user": true,
+                    "user_is_active": false
                 }
             ],
             "required": [
                 "usermanagement_id",
-                "row_version"
+                "row_version",
+                "informational_user",
+                "user_is_active"
             ],
             "properties": {
                 "usermanagement_id": {
@@ -53,7 +59,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1
+                        3078
                     ]
                 },
                 "row_version": {
@@ -64,6 +70,26 @@
                     "default": 0,
                     "examples": [
                         1
+                    ]
+                },
+                "informational_user": {
+                    "$id": "#/properties/message/properties/informational_user",
+                    "type": "boolean",
+                    "title": "The informational_user schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                },
+                "user_is_active": {
+                    "$id": "#/properties/message/properties/user_is_active",
+                    "type": "boolean",
+                    "title": "The user_is_active schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        false
                     ]
                 }
             },

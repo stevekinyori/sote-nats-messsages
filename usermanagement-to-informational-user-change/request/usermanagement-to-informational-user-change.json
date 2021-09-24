@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "row-version": 1,
+            "user-management-id": 1
+        }
+    ],
+    "required": [
+        "row-version",
+        "user-management-id"
+    ],
+    "properties": {
+        "row-version": {
+            "$id": "#/properties/row-version",
+            "type": "integer",
+            "title": "The row-version schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "user-management-id": {
+            "$id": "#/properties/user-management-id",
+            "type": "integer",
+            "title": "The user-management-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        }
+    },
+    "additionalProperties": true
+}
