@@ -7,14 +7,6 @@
     "default": {},
     "examples": [
         {
-            "organizations-id": 1,
-            "aws-user-name": "user-name",
-            "message-id": "test-message-id",
-            "json-web-token": "FAKE TOKEN",
-            "role-list": [
-                "user-role-1",
-                "user-role-2"
-            ],
             "user-is-assigned": true,
             "informational-user": true,
             "user-phone-country-code": "+254",
@@ -36,83 +28,8 @@
         }
     ],
     "required": [
-        "organizations-id",
-        "aws-user-name",
-        "message-id",
-        "json-web-token",
-        "role-list"
     ],
     "properties": {
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
-            "type": "string",
-            "title": "The aws-user-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "user-name"
-            ]
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "test-message-id"
-            ]
-        },
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
-            "type": "string",
-            "title": "The json-web-token schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "FAKE TOKEN"
-            ]
-        },
-        "role-list": {
-            "$id": "#/properties/role-list",
-            "type": "array",
-            "title": "The role-list schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    "user-role-1",
-                    "user-role-2"
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/role-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/role-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "user-role-1",
-                            "user-role-2"
-                        ]
-                    }
-                ]
-            }
-        },
         "user-is-assigned": {
             "$id": "#/properties/user-is-assigned",
             "type": "boolean",
@@ -137,7 +54,7 @@
             "$id": "#/properties/user-phone-country-code",
             "type": "string",
             "title": "The user-phone-country-code schema",
-            "description": "must start with a + sign. It's Required If user-phone-number is Provided",
+            "description": "must start with a + sign. It's Required If user-phone-number is Provided. Also Required if user-email is NOT provided",
             "default": "",
             "examples": [
                 "+254"
