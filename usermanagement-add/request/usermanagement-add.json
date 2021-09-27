@@ -8,6 +8,7 @@
     "examples": [
         {
             "user-is-assigned": true,
+            "user-is-active": true,
             "informational-user": true,
             "user-phone-country-code": "+254",
             "user-phone-number": "1234567890",
@@ -34,6 +35,16 @@
             "$id": "#/properties/user-is-assigned",
             "type": "boolean",
             "title": "The user-is-assigned schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "user-is-active": {
+            "$id": "#/properties/user-is-active",
+            "type": "boolean",
+            "title": "The user-is-active schema",
             "description": "An explanation about the purpose of this instance.",
             "default": false,
             "examples": [

@@ -37,6 +37,7 @@
                     "user_wage": 12.34000015258789,
                     "user_pay_period": "monthly",
                     "device_token": null,
+                    "delete_date": "2021-09-27",
                     "updated_by_date": "2021-08-17T00:00:00Z",
                     "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
                 }
@@ -94,6 +95,7 @@
                         "user_wage": 12.34000015258789,
                         "user_pay_period": "monthly",
                         "device_token": null,
+                        "delete_date": "2021-09-27",
                         "updated_by_date": "2021-08-17T00:00:00Z",
                         "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
                     }
@@ -138,6 +140,7 @@
                                 "user_wage": 12.34000015258789,
                                 "user_pay_period": "monthly",
                                 "device_token": null,
+                                "delete_date": "2021-09-27",
                                 "updated_by_date": "2021-08-17T00:00:00Z",
                                 "updated_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
                             }
@@ -414,6 +417,16 @@
                                 "default": null,
                                 "examples": [
                                     null
+                                ]
+                            },
+                            "delete_date": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/delete_date",
+                                "type": "string",
+                                "title": "The delete_date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2021-09-27"
                                 ]
                             },
                             "updated_by_date": {
