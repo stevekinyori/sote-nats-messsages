@@ -15,7 +15,8 @@
     "required": [
         "row-version",
         "client-company-id",
-        "client-company-name"
+        "client-company-name",
+        "client-company-is-active"
     ],
     "properties": {
         "row-version": {

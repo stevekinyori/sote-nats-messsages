@@ -21,7 +21,8 @@
     ],
     "required": [
         "row-version",
-        "organization-name"
+        "organization-name",
+        "organization-is-active"
     ],
     "properties": {
         "row-version": {

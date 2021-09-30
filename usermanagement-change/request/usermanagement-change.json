@@ -30,7 +30,9 @@
     ],
     "required": [
         "row-version",
-        "user-management-id"
+        "user-management-id",
+        "user-is-active",
+        "informational-user"
     ],
     "properties": {
         "row-version": {
