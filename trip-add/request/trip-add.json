@@ -38,10 +38,8 @@
     ],
     "required": [
         "load-name",
-        "client-company-id",
         "pickup-location",
-        "drop-off-location",
-        "client-company-name"
+        "drop-off-location"
     ],
     "properties": {
         "request-header": {
