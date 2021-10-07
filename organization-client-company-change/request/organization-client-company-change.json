@@ -7,18 +7,31 @@
     "default": {},
     "examples": [
         {
+            "organizations-id": 1,
             "row-version": 1,
-            "client-company-id": 33,
-            "client-company-name": "Client Two"
+            "client-company-id": 1,
+            "client-company-name": "Client Two",
+            "client-company-is-active": true
         }
     ],
     "required": [
+        "organizations-id",
         "row-version",
         "client-company-id",
         "client-company-name",
         "client-company-is-active"
     ],
     "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
         "row-version": {
             "$id": "#/properties/row-version",
             "type": "integer",
@@ -36,7 +49,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                33
+                1
             ]
         },
         "client-company-name": {
@@ -47,6 +60,16 @@
             "default": "",
             "examples": [
                 "Client Two"
+            ]
+        },
+        "client-company-is-active": {
+            "$id": "#/properties/client-company-is-active",
+            "type": "boolean",
+            "title": "The client-company-is-active schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
             ]
         }
     },

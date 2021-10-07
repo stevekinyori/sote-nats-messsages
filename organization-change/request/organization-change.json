@@ -7,7 +7,9 @@
     "default": {},
     "examples": [
         {
+            "organizations-id": 1,
             "row-version": 2,
+            "organization-is-active": true,
             "organization-name": "SOTE TEST LTD",
             "initial-contact-date": "1200/12/12",
             "customer-since-date": "1200-12-12",
@@ -20,11 +22,22 @@
         }
     ],
     "required": [
+        "organizations-id",
         "row-version",
-        "organization-name",
-        "organization-is-active"
+        "organization-is-active",
+        "organization-name"
     ],
     "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
         "row-version": {
             "$id": "#/properties/row-version",
             "type": "integer",
@@ -35,6 +48,16 @@
                 2
             ]
         },
+        "organization-is-active": {
+            "$id": "#/properties/organization-is-active",
+            "type": "boolean",
+            "title": "The organization-is-active schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
         "organization-name": {
             "$id": "#/properties/organization-name",
             "type": "string",
@@ -42,7 +65,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200/12/12"
+                "SOTE TEST LTD"
             ]
         },
         "initial-contact-date": {
