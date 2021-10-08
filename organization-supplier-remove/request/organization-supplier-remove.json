@@ -7,7 +7,7 @@
   "default": {},
   "examples": [
       {
-          "suppliers-id": 101
+          "suppliers-id": 1
       }
   ],
   "required": [
@@ -21,7 +21,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": 0,
           "examples": [
-              101
+              1
           ]
       }
   },

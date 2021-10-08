@@ -9,13 +9,13 @@
         {
             "organizations-id": 1,
             "client-company-name": "Client One",
-            "client-company-isactive": true
+            "client-company-is-active": true
         }
     ],
     "required": [
         "organizations-id",
         "client-company-name",
-        "client-company-isactive"
+        "client-company-is-active"
     ],
     "properties": {
         "organizations-id": {
@@ -38,10 +38,10 @@
                 "Client One"
             ]
         },
-        "client-company-isactive": {
-            "$id": "#/properties/client-company-isactive",
+        "client-company-is-active": {
+            "$id": "#/properties/client-company-is-active",
             "type": "boolean",
-            "title": "The client-company-isactive schema",
+            "title": "The client-company-is-active schema",
             "description": "An explanation about the purpose of this instance.",
             "default": false,
             "examples": [
