@@ -9,8 +9,9 @@
         {
             "message-id": "test-message-change",
             "message": {
-                "client_company_id": 3,
-                "row_version": 3,
+                "organizations_id": 1,
+                "client_company_id": 1,
+                "row_version": 1,
                 "client_company_is_active": true,
                 "client_company_name": "TEST COMPANY CLIENT",
                 "created_by_date": "2021-07-07",
@@ -53,8 +54,9 @@
             "default": {},
             "examples": [
                 {
-                    "client_company_id": 3,
-                    "row_version": 3,
+                    "organizations_id": 1,
+                    "client_company_id": 1,
+                    "row_version": 1,
                     "client_company_is_active": true,
                     "client_company_name": "TEST COMPANY CLIENT",
                     "created_by_date": "2021-07-07",
@@ -74,6 +76,7 @@
                 }
             ],
             "required": [
+                "organizations_id",
                 "client_company_id",
                 "row_version",
                 "client_company_is_active",
@@ -84,6 +87,16 @@
                 "updated_by_requestor_username"
             ],
             "properties": {
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
                 "client_company_id": {
                     "$id": "#/properties/message/properties/client_company_id",
                     "type": "integer",
@@ -91,7 +104,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        3
+                        1
                     ]
                 },
                 "row_version": {
@@ -101,7 +114,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        3
+                        1
                     ]
                 },
                 "client_company_is_active": {

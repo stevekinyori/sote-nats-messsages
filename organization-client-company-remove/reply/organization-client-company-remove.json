@@ -10,6 +10,7 @@
             "message-id": "test-message-id-add-products",
             "message": [
                 {
+                    "organizations_id": 1,
                     "success": true
                 }
             ]
@@ -39,6 +40,7 @@
             "examples": [
                 [
                     {
+                        "organizations_id": 1,
                         "success": true
                     }
                 ]
@@ -55,13 +57,25 @@
                         "default": {},
                         "examples": [
                             {
+                                "organizations_id": 1,
                                 "success": true
                             }
                         ],
                         "required": [
+                            "organizations_id",
                             "success"
                         ],
                         "properties": {
+                            "organizations_id": {
+                                "$id": "#/properties/message/items/anyOf/0/properties/organizations_id",
+                                "type": "integer",
+                                "title": "The organizations_id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1
+                                ]
+                            },
                             "success": {
                                 "$id": "#/properties/message/items/anyOf/0/properties/success",
                                 "type": "boolean",

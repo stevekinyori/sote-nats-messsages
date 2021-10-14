@@ -9,6 +9,7 @@
         {
             "message-id": "test-message-add",
             "message": {
+                "organizations_id": 1,
                 "client_company_id": 1,
                 "row_version": 1,
                 "client_company_is_active": false,
@@ -44,6 +45,7 @@
             "default": {},
             "examples": [
                 {
+                    "organizations_id": 1,
                     "client_company_id": 1,
                     "row_version": 1,
                     "client_company_is_active": false,
@@ -56,6 +58,7 @@
                 }
             ],
             "required": [
+                "organizations_id",
                 "client_company_id",
                 "row_version",
                 "client_company_is_active",
@@ -64,6 +67,16 @@
                 "created_by_requestor_username"
             ],
             "properties": {
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
                 "client_company_id": {
                     "$id": "#/properties/message/properties/client_company_id",
                     "type": "integer",

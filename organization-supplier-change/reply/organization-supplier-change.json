@@ -7,8 +7,9 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-change",
+            "message-id": "test-message-add",
             "message": {
+                "organizations_id": 1,
                 "suppliers_id": 4,
                 "supplier_name": "TEST SUPPLIER8",
                 "created_by_date": "2021-07-07",
@@ -30,7 +31,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-change"
+                "test-message-add"
             ]
         },
         "message": {
@@ -41,6 +42,7 @@
             "default": {},
             "examples": [
                 {
+                    "organizations_id": 1,
                     "suppliers_id": 4,
                     "supplier_name": "TEST SUPPLIER8",
                     "created_by_date": "2021-07-07",
@@ -50,14 +52,23 @@
                 }
             ],
             "required": [
+                "organizations_id",
                 "suppliers_id",
                 "supplier_name",
                 "created_by_date",
-                "created_by_requestor_username",
-                "updated_by_date",
-                "updated_by_requestor_username"
+                "created_by_requestor_username"
             ],
             "properties": {
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
                 "suppliers_id": {
                     "$id": "#/properties/message/properties/suppliers_id",
                     "type": "integer",

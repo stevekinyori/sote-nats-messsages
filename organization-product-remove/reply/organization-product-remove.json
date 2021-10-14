@@ -7,12 +7,11 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-id-add-products",
-            "message": [
-                {
-                    "success": true
-                }
-            ]
+            "message-id": "test-message",
+            "message": {
+                "organizations_id": 1,
+                "success": true
+            }
         }
     ],
     "required": [
@@ -27,56 +26,48 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-id-add-products"
+                "test-message"
             ]
         },
         "message": {
             "$id": "#/properties/message",
-            "type": "array",
+            "type": "object",
             "title": "The message schema",
             "description": "An explanation about the purpose of this instance.",
-            "default": [],
+            "default": {},
             "examples": [
-                [
-                    {
-                        "success": true
-                    }
-                ]
+                {
+                    "organizations_id": 1,
+                    "success": true
+                }
             ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/message/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/message/items/anyOf/0",
-                        "type": "object",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": {},
-                        "examples": [
-                            {
-                                "success": true
-                            }
-                        ],
-                        "required": [
-                            "success"
-                        ],
-                        "properties": {
-                            "success": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/success",
-                                "type": "boolean",
-                                "title": "The success schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": false,
-                                "examples": [
-                                    true
-                                ]
-                            }
-                        },
-                        "additionalProperties": true
-                    }
-                ]
-            }
+            "required": [
+                "organizations_id",
+                "success"
+            ],
+            "properties": {
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "success": {
+                    "$id": "#/properties/message/properties/success",
+                    "type": "boolean",
+                    "title": "The success schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true
