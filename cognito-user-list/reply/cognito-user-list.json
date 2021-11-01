@@ -1,0 +1,380 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "test-message",
+            "message": {
+                "PaginationToken": "CAISoAIXXXXXX5AQgDEvQBANg6kXXXXXXXXX",
+                "Users": [
+                    {
+                        "Attributes": [
+                            {
+                                "Name": "sub",
+                                "Value": "03cec256-XXXXXX"
+                            },
+                            {
+                                "Name": "custom:usr_phone_country_cd",
+                                "Value": "+267"
+                            },
+                            {
+                                "Name": "given_name",
+                                "Value": "Shipping"
+                            },
+                            {
+                                "Name": "middle_name",
+                                "Value": "user"
+                            },
+                            {
+                                "Name": "family_name",
+                                "Value": "one"
+                            },
+                            {
+                                "Name": "email",
+                                "Value": "test@email.com"
+                            },
+                            {
+                                "Name": "custom:usr_roles",
+                                "Value": "[\"ROLE_1\"]"
+                            }
+                        ],
+                        "Enabled": true,
+                        "MFAOptions": null,
+                        "UserCreateDate": "2020-02-17T12:07:52.111Z",
+                        "UserLastModifiedDate": "2020-02-17T12:08:51.482Z",
+                        "UserStatus": "CONFIRMED",
+                        "Username": "03cec256-XXXXXX"
+                    }
+                ]
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-message"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "PaginationToken": "CAISoAIXXXXXX5AQgDEvQBANg6kXXXXXXXXX",
+                    "Users": [
+                        {
+                            "Attributes": [
+                                {
+                                    "Name": "sub",
+                                    "Value": "03cec256-XXXXXX"
+                                },
+                                {
+                                    "Name": "custom:usr_phone_country_cd",
+                                    "Value": "+267"
+                                },
+                                {
+                                    "Name": "given_name",
+                                    "Value": "Shipping"
+                                },
+                                {
+                                    "Name": "middle_name",
+                                    "Value": "user"
+                                },
+                                {
+                                    "Name": "family_name",
+                                    "Value": "one"
+                                },
+                                {
+                                    "Name": "email",
+                                    "Value": "test@email.com"
+                                },
+                                {
+                                    "Name": "custom:usr_roles",
+                                    "Value": "[\"ROLE_1\"]"
+                                }
+                            ],
+                            "Enabled": true,
+                            "MFAOptions": null,
+                            "UserCreateDate": "2020-02-17T12:07:52.111Z",
+                            "UserLastModifiedDate": "2020-02-17T12:08:51.482Z",
+                            "UserStatus": "CONFIRMED",
+                            "Username": "03cec256-XXXXXX"
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "Users"
+            ],
+            "properties": {
+                "PaginationToken": {
+                    "$id": "#/properties/message/properties/PaginationToken",
+                    "type": "string",
+                    "title": "The PaginationToken schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "CAISoAIXXXXXX5AQgDEvQBANg6kXXXXXXXXX"
+                    ]
+                },
+                "Users": {
+                    "$id": "#/properties/message/properties/Users",
+                    "type": "array",
+                    "title": "The Users schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "Attributes": [
+                                    {
+                                        "Name": "sub",
+                                        "Value": "03cec256-XXXXXX"
+                                    },
+                                    {
+                                        "Name": "custom:usr_phone_country_cd",
+                                        "Value": "+267"
+                                    },
+                                    {
+                                        "Name": "given_name",
+                                        "Value": "Shipping"
+                                    },
+                                    {
+                                        "Name": "middle_name",
+                                        "Value": "user"
+                                    },
+                                    {
+                                        "Name": "family_name",
+                                        "Value": "one"
+                                    },
+                                    {
+                                        "Name": "email",
+                                        "Value": "test@email.com"
+                                    },
+                                    {
+                                        "Name": "custom:usr_roles",
+                                        "Value": "[\"ROLE_1\"]"
+                                    }
+                                ],
+                                "Enabled": true,
+                                "MFAOptions": null,
+                                "UserCreateDate": "2020-02-17T12:07:52.111Z",
+                                "UserLastModifiedDate": "2020-02-17T12:08:51.482Z",
+                                "UserStatus": "CONFIRMED",
+                                "Username": "03cec256-XXXXXX"
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/message/properties/Users/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/message/properties/Users/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "Attributes": [
+                                            {
+                                                "Name": "sub",
+                                                "Value": "03cec256-XXXXXX"
+                                            },
+                                            {
+                                                "Name": "custom:usr_phone_country_cd",
+                                                "Value": "+267"
+                                            },
+                                            {
+                                                "Name": "given_name",
+                                                "Value": "Shipping"
+                                            },
+                                            {
+                                                "Name": "middle_name",
+                                                "Value": "user"
+                                            },
+                                            {
+                                                "Name": "family_name",
+                                                "Value": "one"
+                                            },
+                                            {
+                                                "Name": "email",
+                                                "Value": "test@email.com"
+                                            },
+                                            {
+                                                "Name": "custom:usr_roles",
+                                                "Value": "[\"ROLE_1\"]"
+                                            }
+                                        ],
+                                        "Enabled": true,
+                                        "MFAOptions": null,
+                                        "UserCreateDate": "2020-02-17T12:07:52.111Z",
+                                        "UserLastModifiedDate": "2020-02-17T12:08:51.482Z",
+                                        "UserStatus": "CONFIRMED",
+                                        "Username": "03cec256-XXXXXX"
+                                    }
+                                ],
+                                "required": [
+                                    "Attributes",
+                                    "Enabled",
+                                    "MFAOptions",
+                                    "UserCreateDate",
+                                    "UserLastModifiedDate",
+                                    "UserStatus",
+                                    "Username"
+                                ],
+                                "properties": {
+                                    "Attributes": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Attributes",
+                                        "type": "array",
+                                        "title": "The Attributes schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": [],
+                                        "examples": [
+                                            [
+                                                {
+                                                    "Name": "sub",
+                                                    "Value": "03cec256-XXXXXX"
+                                                },
+                                                {
+                                                    "Name": "custom:usr_phone_country_cd",
+                                                    "Value": "+267"
+                                                }
+                                            ]
+                                        ],
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Attributes/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Attributes/items/anyOf/0",
+                                                    "type": "object",
+                                                    "title": "The first anyOf schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "Name": "sub",
+                                                            "Value": "03cec256-XXXXXX"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "Name",
+                                                        "Value"
+                                                    ],
+                                                    "properties": {
+                                                        "Name": {
+                                                            "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Attributes/items/anyOf/0/properties/Name",
+                                                            "type": "string",
+                                                            "title": "The Name schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "sub"
+                                                            ]
+                                                        },
+                                                        "Value": {
+                                                            "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Attributes/items/anyOf/0/properties/Value",
+                                                            "type": "string",
+                                                            "title": "The Value schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "03cec256-XXXXXX"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "Enabled": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Enabled",
+                                        "type": "boolean",
+                                        "title": "The Enabled schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": false,
+                                        "examples": [
+                                            true
+                                        ]
+                                    },
+                                    "MFAOptions": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/MFAOptions",
+                                        "type": "null",
+                                        "title": "The MFAOptions schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": null,
+                                        "examples": [
+                                            null
+                                        ]
+                                    },
+                                    "UserCreateDate": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/UserCreateDate",
+                                        "type": "string",
+                                        "title": "The UserCreateDate schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2020-02-17T12:07:52.111Z"
+                                        ]
+                                    },
+                                    "UserLastModifiedDate": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/UserLastModifiedDate",
+                                        "type": "string",
+                                        "title": "The UserLastModifiedDate schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2020-02-17T12:08:51.482Z"
+                                        ]
+                                    },
+                                    "UserStatus": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/UserStatus",
+                                        "type": "string",
+                                        "title": "The UserStatus schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "CONFIRMED"
+                                        ]
+                                    },
+                                    "Username": {
+                                        "$id": "#/properties/message/properties/Users/items/anyOf/0/properties/Username",
+                                        "type": "string",
+                                        "title": "The Username schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "03cec256-XXXXXX"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
