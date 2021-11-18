@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Financial Transaction Shipment Get",
+  "description": "The message retrieves a single financial transaction for a shipment",
+  "default": {},
+  "examples": [
+    {
+      "json-web-token": "eyJraWQiOiJjbmxxxx",
+      "aws-user-name": "d7266c8f-xxxx-xxxx-3ee850338ea7",
+      "role-list": [
+        "ROLE_NAME1",
+        "ROLE_NAME2"
+      ],
+      "organizations-id": 10036,
+      "shipment-fintrans-id": 382,
+      "message-id": "d45sgHkxxx-xxxx-45Yh9s8J8dg"
+    }
+  ],
+  "required": [
+    "json-web-token",
+    "aws-user-name",
+    "role-list",
+    "organizations-id",
+    "shipment-fintrans-id",
+    "message-id"
+  ],
+  "properties": {
+    "json-web-token": {
+      "$id": "#/properties/json-web-token",
+      "type": "string",
+      "title": "The json-web-token schema",
+      "examples": [
+        "eyJraWQiOiJjbmxxxx"
+      ]
+    },
+    "aws-user-name": {
+      "$id": "#/properties/aws-user-name",
+      "type": "string",
+      "title": "The aws-user-name schema",
+      "examples": [
+        "d7266c8f-xxxx-xxxx-3ee850338ea7"
+      ]
+    },
+    "role-list": {
+      "$id": "#/properties/role-list",
+      "type": "array",
+      "title": "The role-list schema",
+      "examples": [
+        [
+          "ROLE_NAME1",
+          "ROLE_NAME2"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/role-list/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/role-list/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "examples": [
+              "ROLE_NAME1",
+              "ROLE_NAME2"
+            ]
+          }
+        ]
+      }
+    },
+    "organizations-id": {
+      "$id": "#/properties/organizations-id",
+      "type": "integer",
+      "title": "The organizations-id schema",
+      "default": 0,
+      "examples": [
+        10036
+      ]
+    },
+    "shipment-fintrans-id": {
+      "$id": "#/properties/shipment-fintrans-id",
+      "type": "integer",
+      "title": "The shipment-fintrans-id schema",
+      "default": 0,
+      "examples": [
+        382
+      ]
+    },
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "examples": [
+        "d45sgHkxxx-xxxx-45Yh9s8J8dg"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
