@@ -1,19 +1,17 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"title": "Financial Transaction Shipment",
+	"title": "Financial Transaction Shipment Add",
 	"description": "The message creates a financial transaction for a shipment",
 	"examples": [
 		{
-			"request-header": {
-				"json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-				"message-id": "1a8eb33e-xxx-0242ac130003",
-				"aws-user-name": "a8eb33e-xxx-0242ac130003",
-				"organizations-id": 10003,
-				"role-list": [
-					"ROLE_NAME1",
-					"ROLE_NAME2"
-				]
-			},
+			"json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
+			"message-id": "1a8eb33e-xxx-0242ac130003",
+			"aws-user-name": "a8eb33e-xxx-0242ac130003",
+			"organizations-id": 10003,
+			"role-list": [
+				"ROLE_NAME1",
+				"ROLE_NAME2"
+			],
 			"client-company-id": 100,
 			"shipments-id": 10002,
 			"amount": 102.90,
@@ -26,7 +24,11 @@
 	],
 	"type": "object",
 	"required": [
-		"request-header",
+		"json-web-token",
+		"message-id",
+		"organizations-id",
+		"role-list",
+		"aws-user-name",
 		"client-company-id",
 		"shipments-id",
 		"amount",
