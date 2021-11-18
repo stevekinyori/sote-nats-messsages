@@ -12,7 +12,8 @@
             "sort-order": {
                 "user-management-id": "ASC",
                 "client-company-id": "DESC"
-            }
+            },
+            "organizations-id": 1
         }
     ],
     "required": [
@@ -79,6 +80,16 @@
                 }
             },
             "additionalProperties": true
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
         }
     },
     "additionalProperties": true

@@ -7,7 +7,8 @@
     "default": {},
     "examples": [
         {
-            "user-management-id": 1
+            "user-management-id": 1,
+            "organizations-id": 1
         }
     ],
     "required": [
@@ -18,6 +19,16 @@
             "$id": "#/properties/user-management-id",
             "type": "integer",
             "title": "The user-management-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [

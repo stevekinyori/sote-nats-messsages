@@ -8,7 +8,9 @@
     "examples": [
         {
             "row-version": 1,
-            "user-management-id": 1
+            "user-management-id": 1,
+            "organizations-id": 1,
+            "aws-user-name": "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
         }
     ],
     "required": [
@@ -34,6 +36,26 @@
             "default": 0,
             "examples": [
                 1
+            ]
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
             ]
         }
     },
