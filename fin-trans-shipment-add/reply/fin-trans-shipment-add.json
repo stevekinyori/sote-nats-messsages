@@ -3,10 +3,10 @@
     "title": "Financial Transaction Shipment Add Result",
     "examples": [
         {
+            "message-id": "40dbd077-4xxxxx-4xxxx-b782-d19f8b1f00f6",
             "message": {
-                "transaction-id": 271
-            },
-            "message-id": "1a8eb33e-xxx-0242ac130003"
+                "shipmentfinancialtransactions_id": 388
+            }
         }
     ],
     "required": [
