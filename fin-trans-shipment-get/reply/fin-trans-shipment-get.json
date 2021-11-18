@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Financial Transaction Shipment Get Response",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test",
+      "message": {
+        "shipmentfinancialtransactions_id": 382,
+        "organizations_id": 10036,
+        "client_company_id": 111,
+        "shipments_id": 10792,
+        "financialtransactions_type": "Customs taxes",
+        "currency_type": "USD",
+        "transactions_amount": 1234,
+        "transactions_timestamp": "2021-11-19T01:12:53.016691+03:00",
+        "created_by_requestor-username": "d7266c8f-xxxx-xxxx-3ee850338ea7",
+        "bill_of_lading": null,
+        "memo": null,
+        "cost_is_unexpected": false
+      }
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "examples": [
+        "test"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "object",
+      "title": "The message schema",
+      "default": {},
+      "examples": [
+        {
+          "shipmentfinancialtransactions_id": 382,
+          "organizations_id": 10036,
+          "client_company_id": 111,
+          "shipments_id": 10792,
+          "financialtransactions_type": "Customs taxes",
+          "currency_type": "USD",
+          "transactions_amount": 1234,
+          "transactions_timestamp": "2021-11-19T01:12:53.016691+03:00",
+          "created_by_requestor-username": "d7266c8f-xxxx-xxxx-3ee850338ea7",
+          "bill_of_lading": null,
+          "memo": null,
+          "cost_is_unexpected": false
+        }
+      ],
+      "required": [
+        "shipmentfinancialtransactions_id",
+        "organizations_id",
+        "client_company_id",
+        "shipments_id",
+        "financialtransactions_type",
+        "currency_type",
+        "transactions_amount",
+        "transactions_timestamp",
+        "created_by_requestor-username",
+        "bill_of_lading",
+        "memo",
+        "cost_is_unexpected"
+      ],
+      "properties": {
+        "shipmentfinancialtransactions_id": {
+          "$id": "#/properties/message/properties/shipmentfinancialtransactions_id",
+          "type": "integer",
+          "title": "The shipmentfinancialtransactions_id schema",
+          "examples": [
+            382
+          ]
+        },
+        "organizations_id": {
+          "$id": "#/properties/message/properties/organizations_id",
+          "type": "integer",
+          "title": "The organizations_id schema",
+          "examples": [
+            10036
+          ]
+        },
+        "client_company_id": {
+          "$id": "#/properties/message/properties/client_company_id",
+          "type": "integer",
+          "title": "The client_company_id schema",
+          "examples": [
+            111
+          ]
+        },
+        "shipments_id": {
+          "$id": "#/properties/message/properties/shipments_id",
+          "type": "integer",
+          "title": "The shipments_id schema",
+          "examples": [
+            10792
+          ]
+        },
+        "financialtransactions_type": {
+          "$id": "#/properties/message/properties/financialtransactions_type",
+          "type": "string",
+          "title": "The financialtransactions_type schema",
+          "examples": [
+            "Customs taxes"
+          ]
+        },
+        "currency_type": {
+          "$id": "#/properties/message/properties/currency_type",
+          "type": "string",
+          "title": "The currency_type schema",
+          "examples": [
+            "USD"
+          ]
+        },
+        "transactions_amount": {
+          "$id": "#/properties/message/properties/transactions_amount",
+          "type": "integer",
+          "title": "The transactions_amount schema",
+          "examples": [
+            1234
+          ]
+        },
+        "transactions_timestamp": {
+          "$id": "#/properties/message/properties/transactions_timestamp",
+          "type": "string",
+          "title": "The transactions_timestamp schema",
+          "examples": [
+            "2021-11-19T01:12:53.016691+03:00"
+          ]
+        },
+        "created_by_requestor-username": {
+          "$id": "#/properties/message/properties/created_by_requestor-username",
+          "type": "string",
+          "title": "The created_by_requestor-username schema",
+          "examples": [
+            "d7266c8f-xxxx-xxxx-3ee850338ea7"
+          ]
+        },
+        "bill_of_lading": {
+          "$id": "#/properties/message/properties/bill_of_lading",
+          "type": "null",
+          "title": "The bill_of_lading schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "memo": {
+          "$id": "#/properties/message/properties/memo",
+          "type": "null",
+          "title": "The memo schema",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "cost_is_unexpected": {
+          "$id": "#/properties/message/properties/cost_is_unexpected",
+          "type": "boolean",
+          "title": "The cost_is_unexpected schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
