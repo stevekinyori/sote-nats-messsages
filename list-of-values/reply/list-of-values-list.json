@@ -11,13 +11,6 @@
             "message": {
                 "ADD TEST": [
                     {
-                        "system_name": "TEST_TWO",
-                        "language_code": "eng",
-                        "language_name": "English",
-                        "created_by_date": "2021-11-24",
-                        "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
-                    },
-                    {
                         "system_name": "TEST_ONE",
                         "display_name": "Test One Edit",
                         "listofvalues_note": "This is a test note edit",
@@ -49,21 +42,39 @@
         },
         "message": {
             "$id": "#/properties/message",
-            "type": "array",
+            "type": "object",
             "title": "The message schema",
             "description": "An explanation about the purpose of this instance.",
-            "default": [],
+            "default": {},
             "examples": [
-                [
-                    {
-                        "ADD TEST": [
-                            {
-                            "system_name": "TEST_TWO",
+                {
+                    "ADD TEST": [
+                        {
+                            "system_name": "TEST_ONE",
+                            "display_name": "Test One Edit",
+                            "listofvalues_note": "This is a test note edit",
                             "language_code": "eng",
                             "language_name": "English",
-                            "created_by_date": "2021-11-24",
-                            "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
-                            },
+                            "created_by_date": "2021-11-25",
+                            "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
+                            "updated_by_date": "2021-11-25",
+                            "updated_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                        }
+                    ]
+                }
+            ],
+            "optional": [
+                "ADD TEST"
+            ],
+            "properties": {
+                "ADD TEST": {
+                    "$id": "#/properties/message/properties/ADD%20TEST",
+                    "type": "array",
+                    "title": "The ADD TEST schema",
+                    "description": "This will depend of the list-of-value type defined in the request. If the list-of-value-type is not defined then all records in the database will be returned",
+                    "default": [],
+                    "examples": [
+                        [
                             {
                                 "system_name": "TEST_ONE",
                                 "display_name": "Test One Edit",
@@ -76,29 +87,18 @@
                                 "updated_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
                             }
                         ]
-                    }
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/message/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/message/items/anyOf/0",
-                        "type": "object",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": {},
-                        "examples": [
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/message/properties/ADD%20TEST/items",
+                        "anyOf": [
                             {
-                                "ADD TEST": [
-                                    {
-                                    "system_name": "TEST_TWO",
-                                    "language_code": "eng",
-                                    "language_name": "English",
-                                    "created_by_date": "2021-11-24",
-                                    "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
-                                    },
+                                "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
                                     {
                                         "system_name": "TEST_ONE",
                                         "display_name": "Test One Edit",
@@ -110,92 +110,119 @@
                                         "updated_by_date": "2021-11-25",
                                         "updated_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
                                     }
-                                ]
+                                ],
+                                "required": [
+                                    "system_name",
+                                    "display_name",
+                                    "listofvalues_note",
+                                    "language_code",
+                                    "language_name",
+                                    "created_by_date",
+                                    "created_by_requestor_username",
+                                ],
+                                "optional": [
+                                    "updated_by_date",
+                                    "updated_by_requestor_username"
+                                ],
+                                "properties": {
+                                    "system_name": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/system_name",
+                                        "type": "string",
+                                        "title": "The system_name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "TEST_ONE"
+                                        ]
+                                    },
+                                    "display_name": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/display_name",
+                                        "type": "string",
+                                        "title": "The display_name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "Test One Edit"
+                                        ]
+                                    },
+                                    "listofvalues_note": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/listofvalues_note",
+                                        "type": "string",
+                                        "title": "The listofvalues_note schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "This is a test note edit"
+                                        ]
+                                    },
+                                    "language_code": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/language_code",
+                                        "type": "string",
+                                        "title": "The language_code schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "eng"
+                                        ]
+                                    },
+                                    "language_name": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/language_name",
+                                        "type": "string",
+                                        "title": "The language_name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "English"
+                                        ]
+                                    },
+                                    "created_by_date": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/created_by_date",
+                                        "type": "string",
+                                        "title": "The created_by_date schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2021-11-25"
+                                        ]
+                                    },
+                                    "created_by_requestor_username": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/created_by_requestor_username",
+                                        "type": "string",
+                                        "title": "The created_by_requestor_username schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                                        ]
+                                    },
+                                    "updated_by_date": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/updated_by_date",
+                                        "type": "string",
+                                        "title": "The updated_by_date schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2021-11-25"
+                                        ]
+                                    },
+                                    "updated_by_requestor_username": {
+                                        "$id": "#/properties/message/properties/ADD%20TEST/items/anyOf/0/properties/updated_by_requestor_username",
+                                        "type": "string",
+                                        "title": "The updated_by_requestor_username schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
                             }
-                        ],
-                        "required": [
-                            "system_name",
-                            "language_code",
-                            "language_name",
-                            "created_by_date",
-                            "created_by_requestor_username"
-                        ],
-                        "properties": {
-                            "system_name": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/system_name",
-                                "type": "string",
-                                "title": "The system_name schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "TEST_ONE"
-                                ]
-                            },
-                            "language_code": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/language_code",
-                                "type": "string",
-                                "title": "The language_code schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "eng"
-                                ]
-                            },
-                            "language_name": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/language_name",
-                                "type": "string",
-                                "title": "The language_name schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": 0,
-                                "examples": [
-                                    "English"
-                                ]
-                            },
-                            "created_by_date": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/created_by_date",
-                                "type": "string",
-                                "title": "The created_by_date schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "2021-11-25"
-                                ]
-                            },
-                            "created_by_requestor_username": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/created_by_requestor_username",
-                                "type": "string",
-                                "title": "The created_by_requestor_username schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
-                                ]
-                            },
-                            "updated_by_date": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/updated_by_date",
-                                "type": "string",
-                                "title": "The updated_by_date schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "2021-11-25"
-                                ]
-                            },
-                            "updated_by_requestor_username": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/updated_by_requestor_username",
-                                "type": "string",
-                                "title": "The updated_by_requestor_username schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": "",
-                                "examples": [
-                                    "8c6e4be7-a889-485b-92ad-8fafa0d7b43f"
-                                ]
-                            }
-                        },
-                        "additionalProperties": true
+                        ]
                     }
-                ]
-            }
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true

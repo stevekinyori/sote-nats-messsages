@@ -9,12 +9,15 @@
         {
             "record-limit-count": 0,
             "record-offset": 0,
-            "list-of-values-type": "ADD TEST"
+            "list-of-values-type": "add test"
         }
     ],
     "required": [
         "record-limit-count",
         "record-offset"
+    ],
+    "optional": [
+        "list-of-values-type"
     ],
     "properties": {
         "record-limit-count": {
@@ -44,7 +47,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "ADD TEST"
+                "add test"
             ]
         }
     },
