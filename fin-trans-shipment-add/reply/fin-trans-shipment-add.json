@@ -1,36 +1,96 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "Financial Transaction Shipment Add Result",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
     "examples": [
         {
-            "message-id": "40dbd077-4xxxxx-4xxxx-b782-d19f8b1f00f6",
+            "message-id": "100023",
             "message": {
-                "shipmentfinancialtransactions_id": 388
+                "shipmentfinancialtransactions_id": 52,
+                "organizations_id": 1000,
+                "client_company_id": 150,
+                "shipments_id": 200
             }
         }
     ],
     "required": [
-        "message",
-        "message-id"
+        "message-id",
+        "message"
     ],
     "properties": {
         "message-id": {
             "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema"
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "100023"
+            ]
         },
         "message": {
             "$id": "#/properties/message",
             "type": "object",
             "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "shipmentfinancialtransactions_id": 52,
+                    "organizations_id": 1000,
+                    "client_company_id": 150,
+                    "shipments_id": 200
+                }
+            ],
             "required": [
-                "transaction-id"
+                "shipmentfinancialtransactions_id",
+                "organizations_id",
+                "client_company_id",
+                "shipments_id"
             ],
             "properties": {
-                "transaction-id": {
-                    "$id": "#/properties/message/properties/transaction-id",
+                "shipmentfinancialtransactions_id": {
+                    "$id": "#/properties/message/properties/shipmentfinancialtransactions_id",
                     "type": "integer",
-                    "title": "The transaction-id schema"
+                    "title": "The shipmentfinancialtransactions_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        52
+                    ]
+                },
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1000
+                    ]
+                },
+                "client_company_id": {
+                    "$id": "#/properties/message/properties/client_company_id",
+                    "type": "integer",
+                    "title": "The client_company_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        150
+                    ]
+                },
+                "shipments_id": {
+                    "$id": "#/properties/message/properties/shipments_id",
+                    "type": "integer",
+                    "title": "The shipments_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        200
+                    ]
                 }
             },
             "additionalProperties": true
