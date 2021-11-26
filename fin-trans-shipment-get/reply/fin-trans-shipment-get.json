@@ -2,23 +2,24 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "http://example.com/example.json",
   "type": "object",
-  "title": "Financial Transaction Shipment Get Response",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
   "default": {},
   "examples": [
     {
       "message-id": "test",
       "message": {
-        "shipmentfinancialtransactions_id": 382,
-        "organizations_id": 10036,
-        "client_company_id": 111,
-        "shipments_id": 10792,
-        "financialtransactions_type": "Customs taxes",
+        "shipmentfinancialtransactions_id": 40,
+        "organizations_id": 1000,
+        "client_company_id": 150,
+        "shipments_id": 200,
+        "financialtransactions_type": "LOAD",
         "currency_type": "USD",
-        "transactions_amount": 1234,
-        "transactions_timestamp": "2021-11-19T01:12:53.016691+03:00",
-        "created_by_requestor-username": "d7266c8f-xxxx-xxxx-3ee850338ea7",
-        "bill_of_lading": null,
-        "memo": null,
+        "transactions_amount": 15000,
+        "transactions_timestamp": "2021-11-26T09:34:59.047115+03:00",
+        "created_by_requestor-username": "sote-test",
+        "bill_of_lading": "BOL",
+        "memo": "Hey this is a new arrival",
         "cost_is_unexpected": false
       }
     }
@@ -32,6 +33,8 @@
       "$id": "#/properties/message-id",
       "type": "string",
       "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
       "examples": [
         "test"
       ]
@@ -40,20 +43,21 @@
       "$id": "#/properties/message",
       "type": "object",
       "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
       "default": {},
       "examples": [
         {
-          "shipmentfinancialtransactions_id": 382,
-          "organizations_id": 10036,
-          "client_company_id": 111,
-          "shipments_id": 10792,
-          "financialtransactions_type": "Customs taxes",
+          "shipmentfinancialtransactions_id": 40,
+          "organizations_id": 1000,
+          "client_company_id": 150,
+          "shipments_id": 200,
+          "financialtransactions_type": "LOAD",
           "currency_type": "USD",
-          "transactions_amount": 1234,
-          "transactions_timestamp": "2021-11-19T01:12:53.016691+03:00",
-          "created_by_requestor-username": "d7266c8f-xxxx-xxxx-3ee850338ea7",
-          "bill_of_lading": null,
-          "memo": null,
+          "transactions_amount": 15000,
+          "transactions_timestamp": "2021-11-26T09:34:59.047115+03:00",
+          "created_by_requestor-username": "sote-test",
+          "bill_of_lading": "BOL",
+          "memo": "Hey this is a new arrival",
           "cost_is_unexpected": false
         }
       ],
@@ -76,46 +80,58 @@
           "$id": "#/properties/message/properties/shipmentfinancialtransactions_id",
           "type": "integer",
           "title": "The shipmentfinancialtransactions_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
           "examples": [
-            382
+            40
           ]
         },
         "organizations_id": {
           "$id": "#/properties/message/properties/organizations_id",
           "type": "integer",
           "title": "The organizations_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
           "examples": [
-            10036
+            1000
           ]
         },
         "client_company_id": {
           "$id": "#/properties/message/properties/client_company_id",
           "type": "integer",
           "title": "The client_company_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
           "examples": [
-            111
+            150
           ]
         },
         "shipments_id": {
           "$id": "#/properties/message/properties/shipments_id",
           "type": "integer",
           "title": "The shipments_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
           "examples": [
-            10792
+            200
           ]
         },
         "financialtransactions_type": {
           "$id": "#/properties/message/properties/financialtransactions_type",
           "type": "string",
           "title": "The financialtransactions_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
-            "Customs taxes"
+            "LOAD"
           ]
         },
         "currency_type": {
           "$id": "#/properties/message/properties/currency_type",
           "type": "string",
           "title": "The currency_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
             "USD"
           ]
@@ -124,48 +140,57 @@
           "$id": "#/properties/message/properties/transactions_amount",
           "type": "integer",
           "title": "The transactions_amount schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
           "examples": [
-            1234
+            15000
           ]
         },
         "transactions_timestamp": {
           "$id": "#/properties/message/properties/transactions_timestamp",
           "type": "string",
           "title": "The transactions_timestamp schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
-            "2021-11-19T01:12:53.016691+03:00"
+            "2021-11-26T09:34:59.047115+03:00"
           ]
         },
         "created_by_requestor-username": {
           "$id": "#/properties/message/properties/created_by_requestor-username",
           "type": "string",
           "title": "The created_by_requestor-username schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
-            "d7266c8f-xxxx-xxxx-3ee850338ea7"
+            "sote-test"
           ]
         },
         "bill_of_lading": {
           "$id": "#/properties/message/properties/bill_of_lading",
-          "type": "null",
+          "type": "string",
           "title": "The bill_of_lading schema",
-          "default": null,
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
-            null
+            "BOL"
           ]
         },
         "memo": {
           "$id": "#/properties/message/properties/memo",
-          "type": "null",
+          "type": "string",
           "title": "The memo schema",
-          "default": null,
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
           "examples": [
-            null
+            "Hey this is a new arrival"
           ]
         },
         "cost_is_unexpected": {
           "$id": "#/properties/message/properties/cost_is_unexpected",
           "type": "boolean",
           "title": "The cost_is_unexpected schema",
+          "description": "An explanation about the purpose of this instance.",
           "default": false,
           "examples": [
             false

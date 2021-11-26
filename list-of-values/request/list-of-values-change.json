@@ -8,18 +8,22 @@
     "examples": [
         {
             "list-of-values-type": "ADD TEST",
-            "system_name": "TEST_ONE",
-            "display_name": "Test One Edit",
-            "listofvalues_note": "This is a test note edit",
-            "language_code": "eng",
-            "language_name": "English"
+            "system-name": "TEST_ONE",
+            "display-name": "Test One",
+            "list-of-values-note": "This is a new test note",
+            "language-code": "eng",
+            "language-name": "English"
         }
     ],
     "required": [
         "list-of-values-type",
-        "system_name",
-        "language_code",
-        "language_name"
+        "system-name",
+        "language-code",
+        "language-name"
+    ],
+    "optional": [
+        "display-name",
+        "list-of-values-note"
     ],
     "properties": {
         "list-of-values-type": {
@@ -32,50 +36,50 @@
                 "ADD TEST"
             ]
         },
-        "system_name": {
-            "$id": "#/properties/list-of-values-type",
+        "system-name": {
+            "$id": "#/properties/system-name",
             "type": "string",
-            "title": "The system_name schema",
+            "title": "The system-name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "TEST_ONE"
             ]
         },
-        "display_name": {
-            "$id": "#/properties/list-of-values-type",
+        "display-name": {
+            "$id": "#/properties/display-name",
             "type": "string",
-            "title": "The display_name schema",
+            "title": "The display-name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "Test One Edit"
+                "Test One"
             ]
         },
-        "listofvalues_note": {
-            "$id": "#/properties/list-of-values-type",
+        "list-of-values-note": {
+            "$id": "#/properties/list-of-values-note",
             "type": "string",
-            "title": "The listofvalues_note schema",
+            "title": "The list-of-values-note schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "This is a test note edit"
+                "This is a new test note"
             ]
         },
-        "language_code": {
-            "$id": "#/properties/list-of-values-type",
+        "language-code": {
+            "$id": "#/properties/language-code",
             "type": "string",
-            "title": "The language_code schema",
+            "title": "The language-code schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "eng"
             ]
         },
-        "language_name": {
-            "$id": "#/properties/list-of-values-type",
+        "language-name": {
+            "$id": "#/properties/language-name",
             "type": "string",
-            "title": "The language_name schema",
+            "title": "The language-name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [

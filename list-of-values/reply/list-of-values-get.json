@@ -57,10 +57,16 @@
       ],
       "required": [
         "system_name",
+        "display_name",
+        "listofvalues_note",
         "language_code",
         "language_name",
         "created_by_date",
         "created_by_requestor_username"
+      ],
+      "optional": [
+        "updated_by_date",
+        "updated_by_requestor_username"
       ],
       "properties": {
         "system_name": {
@@ -71,6 +77,26 @@
           "default": "",
           "examples": [
             "TEST_ONE"
+          ]
+        },
+        "display_name": {
+          "$id": "#/properties/message/properties/display_name",
+          "type": "string",
+          "title": "The display_name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Test One Edit"
+          ]
+        },
+        "listofvalues_note": {
+          "$id": "#/properties/message/properties/listofvalues_note",
+          "type": "string",
+          "title": "The listofvalues_note schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "This is a test note edit"
           ]
         },
         "language_code": {
@@ -88,7 +114,7 @@
           "type": "string",
           "title": "The language_name schema",
           "description": "An explanation about the purpose of this instance.",
-          "default": 0,
+          "default": "",
           "examples": [
             "English"
           ]

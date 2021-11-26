@@ -7,7 +7,7 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message",
+            "message-id": "test-list",
             "message": {
                 "list_of_values_type": "ADD TEST",
                 "system_name": "TEST_ONE"
@@ -26,7 +26,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message"
+                "test-list"
             ]
         },
         "message": {
@@ -36,20 +36,20 @@
             "description": "An explanation about the purpose of this instance.",
             "default": {},
             "examples": [
-                    {
-                        "list_of_values_type": "ADD TEST",
-                        "system_name": "TEST_ONE"
-                    }
+                {
+                    "list_of_values_type": "ADD TEST",
+                    "system_name": "TEST_ONE"
+                }
             ],
             "required": [
                 "list_of_values_type",
                 "system_name"
             ],
             "properties": {
-                "list-of-values-type": {
-                    "$id": "#/properties/message/properties/list-of-values-type",
+                "list_of_values_type": {
+                    "$id": "#/properties/message/properties/list_of_values_type",
                     "type": "string",
-                    "title": "The list-of-values-type schema",
+                    "title": "The list_of_values_type schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [

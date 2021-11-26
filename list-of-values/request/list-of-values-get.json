@@ -8,12 +8,12 @@
   "examples": [
     {
       "list-of-values-type": "ADD TEST",
-      "system_name": "TEST_ONE"
+      "system-name": "TEST_ONE"
     }
   ],
   "required": [
     "list-of-values-type",
-    "system_name"
+    "system-name"
   ],
   "properties": {
     "list-of-values-type": {
@@ -26,10 +26,10 @@
         "ADD TEST"
       ]
     },
-    "system_name": {
-      "$id": "#/properties/list-of-values-type",
+    "system-name": {
+      "$id": "#/properties/system-name",
       "type": "string",
-      "title": "The system_name schema",
+      "title": "The system-name schema",
       "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [

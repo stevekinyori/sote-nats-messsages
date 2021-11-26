@@ -1,60 +1,269 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "title": "Financial Transaction Shipment List",
-    "description": "The message creates a financial transaction for a shipment",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
     "examples": [
         {
-            "request-header": {
-                "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-                "message-id": "1a8eb33e-xxx-0242ac130003",
-                "aws-user-name": "a8eb33e-xxx-0242ac130003",
-                "organizations-id": 10003,
-                "role-list": [
-                    "ROLE_NAME1",
-                    "ROLE_NAME2"
+            "json-web-token": "FAKE TOKEN",
+            "aws-user-name": "sote-test",
+            "role-list": [
+                "CLIENT",
+                "USER"
+            ],
+            "organizations-id": 1000,
+            "message-id": "test",
+            "record-limit-count": 10,
+            "record-offset": 0,
+            "filters": {
+                "and": [
+                    {
+                        "field-name": "client-company-id",
+                        "operator": "=",
+                        "value": 450
+                    },
+                    {
+                        "field-name": "shipments-id",
+                        "operator": ">",
+                        "value": 200
+                    }
                 ]
-            },
-            "filter-header": {
-                "items": [
-                    "shipmentfinancialtransactions_id",
-                    "shipments_id",
-                    "financialtransactions_type",
-                    "currency_type",
-                    "transactions_amount"
-                ],
-                "limit": 3,
-                "offset": 0,
-                "sort_asc": [
-                    "shipmentfinancialtransactions_id"
-                ],
-                "sort_desc": [
-                    "client_company_id"
-                ],
-                "eq": {
-                    "organizations_id": 10036
-                },
-                "gt": {
-                    "client_company_id": 10
-                },
-                "lt": {
-                    "transactions_timestamp": "2020-12-01"
-                }
             }
         }
     ],
-    "type": "object",
     "required": [
-        "request-header"
+        "json-web-token",
+        "aws-user-name",
+        "role-list",
+        "organizations-id",
+        "message-id",
+        "record-limit-count",
+        "record-offset"
     ],
     "optional": [
-        "filter-header"
+        "filters"
     ],
     "properties": {
-        "request-header": {
-            "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+        "json-web-token": {
+            "$id": "#/properties/json-web-token",
+            "type": "string",
+            "title": "The json-web-token schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FAKE TOKEN"
+            ]
         },
-        "filter-header": {
-            "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/filter-header"
+        "aws-user-name": {
+            "$id": "#/properties/aws-user-name",
+            "type": "string",
+            "title": "The aws-user-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "sote-test"
+            ]
+        },
+        "role-list": {
+            "$id": "#/properties/role-list",
+            "type": "array",
+            "title": "The role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "CLIENT",
+                    "USER"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "CLIENT",
+                            "USER"
+                        ]
+                    }
+                ]
+            }
+        },
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1000
+            ]
+        },
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test"
+            ]
+        },
+        "record-limit-count": {
+            "$id": "#/properties/record-limit-count",
+            "type": "integer",
+            "title": "The record-limit-count schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10
+            ]
+        },
+        "record-offset": {
+            "$id": "#/properties/record-offset",
+            "type": "integer",
+            "title": "The record-offset schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "filters": {
+            "$id": "#/properties/filters",
+            "type": "object",
+            "title": "The filters schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "and": [
+                        {
+                            "field-name": "client-company-id",
+                            "operator": "=",
+                            "value": 450
+                        },
+                        {
+                            "field-name": "shipments-id",
+                            "operator": ">",
+                            "value": 200
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "and"
+            ],
+            "properties": {
+                "and": {
+                    "$id": "#/properties/filters/properties/and",
+                    "type": "array",
+                    "title": "The and schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "field-name": "client-company-id",
+                                "operator": "=",
+                                "value": 450
+                            },
+                            {
+                                "field-name": "shipments-id",
+                                "operator": ">",
+                                "value": 200
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/filters/properties/and/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/filters/properties/and/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "field-name": "client-company-id",
+                                        "operator": "=",
+                                        "value": 450
+                                    }
+                                ],
+                                "required": [
+                                    "field-name",
+                                    "operator",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "field-name": {
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/field-name",
+                                        "default": "",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "examples": [
+                                            "client-company-id"
+                                        ],
+                                        "title": "The field-name schema",
+                                        "enum": [
+                                            "client_company_id",
+                                            "shipments_id",
+                                            "financialtransactions_type",
+                                            "currency_type",
+                                            "transactions_amount",
+                                            "transactions_timestamp",
+                                            "created_by_requestor-username",
+                                            "bill_of_lading",
+                                            "memo",
+                                            "cost_is_unexpected"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "operator": {
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/operator",
+                                        "default": "",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "examples": [
+                                            "="
+                                        ],
+                                        "title": "The operator schema",
+                                        "enum": [
+                                            ">",
+                                            "<",
+                                            "=",
+                                            ">=",
+                                            "<=",
+                                            "!=",
+                                            "<>"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value",
+                                        "type": "integer",
+                                        "title": "The value schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            450
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true

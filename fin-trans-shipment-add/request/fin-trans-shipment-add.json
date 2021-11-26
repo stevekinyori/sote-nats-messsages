@@ -1,77 +1,150 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
-	"title": "Financial Transaction Shipment Add",
-	"description": "The message creates a financial transaction for a shipment",
+	"$id": "http://example.com/example.json",
+	"type": "object",
+	"title": "The root schema",
+	"description": "The root schema comprises the entire JSON document.",
+	"default": {},
 	"examples": [
 		{
-			"json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-			"message-id": "1a8eb33e-xxx-0242ac130003",
-			"aws-user-name": "a8eb33e-xxx-0242ac130003",
-			"organizations-id": 10003,
+			"json-web-token": "FAKE TOKEN",
+			"aws-user-name": "sote-test",
 			"role-list": [
-				"ROLE_NAME1",
-				"ROLE_NAME2"
+				"CLIENT",
+				"USER"
 			],
-			"client-company-id": 100,
-			"shipments-id": 10002,
-			"amount": 102.90,
+			"organizations-id": 1000,
+			"shipments-id": 200,
 			"currency": "USD",
-			"fintrans-type": "F147",
-			"cost-is-unexpected": true,
-			"bill-of-lading": "1",
-			"memo": "This is a memo"
+			"amount": 15000,
+			"fintrans-type": "AGENCY_FEES",
+			"client-company-id": 150,
+			"message-id": "100023",
+			"cost-is-unexpected": false,
+			"memo": "Hey this is a new arrival",
+			"bill-of-lading": "BOL"
 		}
 	],
-	"type": "object",
 	"required": [
 		"json-web-token",
-		"message-id",
-		"organizations-id",
-		"role-list",
 		"aws-user-name",
-		"client-company-id",
+		"role-list",
+		"organizations-id",
 		"shipments-id",
-		"amount",
 		"currency",
-		"fintrans-type"
+		"amount",
+		"fintrans-type",
+		"client-company-id",
+		"message-id"
 	],
 	"optional": [
-		"cost-is-unexpected",
-		"bill-of-lading",
-		"memo"
+         "cost-is-unexpected",
+	     "memo",
+	     "bill-of-lading"
 	],
 	"properties": {
-		"request-header": {
-			"$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+		"json-web-token": {
+			"$id": "#/properties/json-web-token",
+			"type": "string",
+			"title": "The json-web-token schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": "",
+			"examples": [
+				"FAKE TOKEN"
+			]
 		},
-		"client-company-id": {
-			"$id": "#/properties/client-company-id",
+		"aws-user-name": {
+			"$id": "#/properties/aws-user-name",
+			"type": "string",
+			"title": "The aws-user-name schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": "",
+			"examples": [
+				"sote-test"
+			]
+		},
+		"role-list": {
+			"$id": "#/properties/role-list",
+			"type": "array",
+			"title": "The role-list schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": [],
+			"examples": [
+				[
+					"CLIENT",
+					"USER"
+				]
+			],
+			"additionalItems": true,
+			"items": {
+				"$id": "#/properties/role-list/items",
+				"anyOf": [
+					{
+						"$id": "#/properties/role-list/items/anyOf/0",
+						"type": "string",
+						"title": "The first anyOf schema",
+						"description": "An explanation about the purpose of this instance.",
+						"default": "",
+						"examples": [
+							"CLIENT",
+							"USER"
+						]
+					}
+				]
+			}
+		},
+		"organizations-id": {
+			"$id": "#/properties/organizations-id",
 			"type": "integer",
-			"title": "The client-company-id schema"
+			"title": "The organizations-id schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": 0,
+			"examples": [
+				1000
+			]
 		},
 		"shipments-id": {
 			"$id": "#/properties/shipments-id",
 			"type": "integer",
-			"title": "The system id assigned to the shipment"
-		},
-		"amount": {
-			"$id": "#/properties/amount",
-			"type": "number",
-			"title": "The value of the transaction"
+			"title": "The shipments-id schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": 0,
+			"examples": [
+				200
+			]
 		},
 		"currency": {
 			"$id": "#/properties/currency",
-			"type": "string",
-			"title": "Monetary system being used for the transaction",
+			"default": "",
+			"description": "An explanation about the purpose of this instance.",
+			"examples": [
+				"USD"
+			],
+			"title": "The currency schema",
 			"enum": [
 				"USD",
 				"KSH"
+			],
+			"type": "string"
+		},
+		"amount": {
+			"$id": "#/properties/amount",
+			"type": "integer",
+			"title": "The amount schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": 0,
+			"examples": [
+				15000
 			]
 		},
 		"fintrans-type": {
 			"$id": "#/properties/fintrans-type",
-			"type": "string",
-			"title": "The type of debit or credit transaction.",
+			"default": "",
+			"description": "An explanation about the purpose of this instance.",
+			"examples": [
+				"AGENCY_FEES"
+			],
+			"title": "The fintrans-type schema",
 			"enum": [
 				"AGENCY_FEES",
 				"CONTAINER_DEPOSIT",
@@ -90,24 +163,58 @@
 				"PORT_CHARGES",
 				"SHIPPING_LINE_CHARGES",
 				"STORAGE_CHARGES"
+			],
+			"type": "string"
+		},
+		"client-company-id": {
+			"$id": "#/properties/client-company-id",
+			"type": "integer",
+			"title": "The client-company-id schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": 0,
+			"examples": [
+				150
+			]
+		},
+		"message-id": {
+			"$id": "#/properties/message-id",
+			"type": "string",
+			"title": "The message-id schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": "",
+			"examples": [
+				"100023"
 			]
 		},
 		"cost-is-unexpected": {
 			"$id": "#/properties/cost-is-unexpected",
 			"type": "boolean",
-			"title": "TRUE or FALSE field to show if the cost was unexpected or not. DEFAULT is FALSE",
-			"default": false
-		},
-		"bill-of-lading": {
-			"$id": "#/properties/bill-of-lading",
-			"type": "string",
-			"title": "The customer supplied key",
-			"default": false
+			"title": "The cost-is-unexpected schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": false,
+			"examples": [
+				false
+			]
 		},
 		"memo": {
 			"$id": "#/properties/memo",
 			"type": "string",
-			"title": "Very short note for the transaction"
+			"title": "The memo schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": "",
+			"examples": [
+				"Hey this is a new arrival"
+			]
+		},
+		"bill-of-lading": {
+			"$id": "#/properties/bill-of-lading",
+			"type": "string",
+			"title": "The bill-of-lading schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": "",
+			"examples": [
+				"BOL"
+			]
 		}
 	},
 	"additionalProperties": true
