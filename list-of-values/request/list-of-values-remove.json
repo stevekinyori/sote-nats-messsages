@@ -7,116 +7,33 @@
     "default": {},
     "examples": [
         {
-            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-            "organizations-id": 1,
-            "aws-user-name": "e51a0be2-5495-48fc-882a-e88f85cf7b4b",
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "role-list": [
-                "ROLE_NAME1",
-                "ROLE_NAME2"
-            ],
-            "table-name": "countrydestinationlov",
-            "system-name": "Kenya"
+            "list-of-values-type": "ADD TEST",
+            "system_name": "TEST_ONE"
         }
     ],
     "required": [
-        "json-web-token",
-        "organizations-id",
-        "aws-user-name",
-        "message-id",
-        "role-list",
-        "table-name",
-        "system-name"
+        "list-of-values-type",
+        "system_name"
     ],
     "properties": {
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
+        "list-of-values-type": {
+            "$id": "#/properties/list-of-values-type",
             "type": "string",
-            "title": "The json-web-token schema",
+            "title": "The list-of-values-type schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "eyJraWQiOvxxxxxxxxxxxxxxxx"
+                "ADD TEST"
             ]
         },
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
+        "system_name": {
+            "$id": "#/properties/list-of-values-type",
             "type": "string",
-            "title": "The aws-user-name schema",
+            "title": "The system_name schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "e51a0be2-5495-48fc-882a-e88f85cf7b4b"
-            ]
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
-            ]
-        },
-        "role-list": {
-            "$id": "#/properties/role-list",
-            "type": "array",
-            "title": "The role-list schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    "ROLE_NAME1",
-                    "ROLE_NAME2"
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/role-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/role-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "ROLE_NAME1",
-                            "ROLE_NAME2"
-                        ]
-                    }
-                ]
-            }
-        },
-        "table-name": {
-            "$id": "#/properties/table-name",
-            "type": "string",
-            "title": "The table-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "countrydestinationlov"
-            ]
-        },
-        "system-name": {
-            "$id": "#/properties/system-name",
-            "type": "string",
-            "title": "The system-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Kenya"
+                "TEST_ONE"
             ]
         }
     },
