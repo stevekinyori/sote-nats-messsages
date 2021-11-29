@@ -113,14 +113,14 @@
                                 ],
                                 "required": [
                                     "system_name",
-                                    "display_name",
-                                    "listofvalues_note",
                                     "language_code",
                                     "language_name",
                                     "created_by_date",
                                     "created_by_requestor_username",
                                 ],
                                 "optional": [
+                                    "display_name",
+                                    "listofvalues_note",
                                     "updated_by_date",
                                     "updated_by_requestor_username"
                                 ],
