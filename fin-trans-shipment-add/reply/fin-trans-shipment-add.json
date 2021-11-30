@@ -7,12 +7,12 @@
     "default": {},
     "examples": [
         {
-            "message-id": "100023",
+            "message-id": "test",
             "message": {
-                "shipmentfinancialtransactions_id": 52,
-                "organizations_id": 1000,
-                "client_company_id": 150,
-                "shipments_id": 200
+                "shipmentfinancialtransactions_id": 1,
+                "organizations_id": 1,
+                "client_company_id": 1,
+                "shipments_id": 1
             }
         }
     ],
@@ -28,7 +28,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "100023"
+                "test"
             ]
         },
         "message": {
@@ -39,10 +39,10 @@
             "default": {},
             "examples": [
                 {
-                    "shipmentfinancialtransactions_id": 52,
-                    "organizations_id": 1000,
-                    "client_company_id": 150,
-                    "shipments_id": 200
+                    "shipmentfinancialtransactions_id": 1,
+                    "organizations_id": 1,
+                    "client_company_id": 1,
+                    "shipments_id": 1
                 }
             ],
             "required": [
@@ -59,7 +59,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        52
+                        1
                     ]
                 },
                 "organizations_id": {
@@ -69,7 +69,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        1000
+                        1
                     ]
                 },
                 "client_company_id": {
@@ -79,7 +79,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        150
+                        1
                     ]
                 },
                 "shipments_id": {
@@ -89,7 +89,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        200
+                        1
                     ]
                 }
             },

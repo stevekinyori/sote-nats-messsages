@@ -11,13 +11,13 @@
             "message": {
                 "items": [
                     {
-                        "shipmentfinancialtransactions_id": 646,
-                        "organizations_id": 1000,
-                        "client_company_id": 450,
-                        "shipments_id": 300,
+                        "shipmentfinancialtransactions_id": 1,
+                        "organizations_id": 1,
+                        "client_company_id": 1,
+                        "shipments_id": 1,
                         "financialtransactions_type": "LOAD",
                         "currency_type": "USD",
-                        "transactions_amount": 15000,
+                        "transactions_amount": 1,
                         "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
                         "created_by_requestor-username": "sote-test",
                         "bill_of_lading": "BOL",
@@ -58,13 +58,13 @@
                 {
                     "items": [
                         {
-                            "shipmentfinancialtransactions_id": 646,
-                            "organizations_id": 1000,
-                            "client_company_id": 450,
-                            "shipments_id": 300,
+                            "shipmentfinancialtransactions_id": 1,
+                            "organizations_id": 1,
+                            "client_company_id": 1,
+                            "shipments_id": 1,
                             "financialtransactions_type": "LOAD",
                             "currency_type": "USD",
-                            "transactions_amount": 15000,
+                            "transactions_amount": 1,
                             "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
                             "created_by_requestor-username": "sote-test",
                             "bill_of_lading": "BOL",
@@ -93,13 +93,13 @@
                     "examples": [
                         [
                             {
-                                "shipmentfinancialtransactions_id": 646,
-                                "organizations_id": 1000,
-                                "client_company_id": 450,
-                                "shipments_id": 300,
+                                "shipmentfinancialtransactions_id": 1,
+                                "organizations_id": 1,
+                                "client_company_id": 1,
+                                "shipments_id": 1,
                                 "financialtransactions_type": "LOAD",
                                 "currency_type": "USD",
-                                "transactions_amount": 15000,
+                                "transactions_amount": 1,
                                 "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
                                 "created_by_requestor-username": "sote-test",
                                 "bill_of_lading": "BOL",
@@ -120,13 +120,13 @@
                                 "default": {},
                                 "examples": [
                                     {
-                                        "shipmentfinancialtransactions_id": 646,
-                                        "organizations_id": 1000,
-                                        "client_company_id": 450,
-                                        "shipments_id": 300,
+                                        "shipmentfinancialtransactions_id": 1,
+                                        "organizations_id": 1,
+                                        "client_company_id": 1,
+                                        "shipments_id": 1,
                                         "financialtransactions_type": "LOAD",
                                         "currency_type": "USD",
-                                        "transactions_amount": 15000,
+                                        "transactions_amount": 1,
                                         "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
                                         "created_by_requestor-username": "sote-test",
                                         "bill_of_lading": "BOL",
@@ -156,7 +156,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            646
+                                            1
                                         ]
                                     },
                                     "organizations_id": {
@@ -166,7 +166,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1000
+                                            1
                                         ]
                                     },
                                     "client_company_id": {
@@ -176,7 +176,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            450
+                                            1
                                         ]
                                     },
                                     "shipments_id": {
@@ -186,7 +186,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            300
+                                            1
                                         ]
                                     },
                                     "financialtransactions_type": {
@@ -216,7 +216,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            15000
+                                            1
                                         ]
                                     },
                                     "transactions_timestamp": {

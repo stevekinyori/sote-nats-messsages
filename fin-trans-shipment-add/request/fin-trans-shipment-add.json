@@ -10,16 +10,16 @@
 			"json-web-token": "FAKE TOKEN",
 			"aws-user-name": "sote-test",
 			"role-list": [
-				"CLIENT",
-				"USER"
+				"ROLE_NAME1",
+				"ROLE_NAME2"
 			],
-			"organizations-id": 1000,
-			"shipments-id": 200,
+			"organizations-id": 1,
+			"shipments-id": 1,
 			"currency": "USD",
-			"amount": 15000,
+			"amount": 1,
 			"fintrans-type": "AGENCY_FEES",
-			"client-company-id": 150,
-			"message-id": "100023",
+			"client-company-id": 1,
+			"message-id": "test",
 			"cost-is-unexpected": false,
 			"memo": "Hey this is a new arrival",
 			"bill-of-lading": "BOL"
@@ -71,8 +71,8 @@
 			"default": [],
 			"examples": [
 				[
-					"CLIENT",
-					"USER"
+					"ROLE_NAME1",
+					"ROLE_NAME2"
 				]
 			],
 			"additionalItems": true,
@@ -86,8 +86,8 @@
 						"description": "An explanation about the purpose of this instance.",
 						"default": "",
 						"examples": [
-							"CLIENT",
-							"USER"
+							"ROLE_NAME1",
+							"ROLE_NAME2"
 						]
 					}
 				]
@@ -100,7 +100,7 @@
 			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
 			"examples": [
-				1000
+				1
 			]
 		},
 		"shipments-id": {
@@ -110,7 +110,7 @@
 			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
 			"examples": [
-				200
+				1
 			]
 		},
 		"currency": {
@@ -134,7 +134,7 @@
 			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
 			"examples": [
-				15000
+				1
 			]
 		},
 		"fintrans-type": {
@@ -173,7 +173,7 @@
 			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
 			"examples": [
-				150
+				1
 			]
 		},
 		"message-id": {
@@ -183,7 +183,7 @@
 			"description": "An explanation about the purpose of this instance.",
 			"default": "",
 			"examples": [
-				"100023"
+				"test"
 			]
 		},
 		"cost-is-unexpected": {

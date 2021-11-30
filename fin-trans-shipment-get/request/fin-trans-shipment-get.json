@@ -10,11 +10,11 @@
       "json-web-token": "FAKE TOKEN",
       "aws-user-name": "sote-test",
       "role-list": [
-        "CLIENT",
-        "USER"
+        "ROLE_NAME1",
+        "ROLE_NAME2"
       ],
-      "organizations-id": 1000,
-      "shipment-fintrans-id": 40,
+      "organizations-id": 1,
+      "shipment-fintrans-id": 1,
       "message-id": "test"
     }
   ],
@@ -55,8 +55,8 @@
       "default": [],
       "examples": [
         [
-          "CLIENT",
-          "USER"
+          "ROLE_NAME1",
+          "ROLE_NAME2"
         ]
       ],
       "additionalItems": true,
@@ -84,7 +84,7 @@
       "description": "An explanation about the purpose of this instance.",
       "default": 0,
       "examples": [
-        1000
+        1
       ]
     },
     "shipment-fintrans-id": {
@@ -94,7 +94,7 @@
       "description": "An explanation about the purpose of this instance.",
       "default": 0,
       "examples": [
-        40
+        1
       ]
     },
     "message-id": {
