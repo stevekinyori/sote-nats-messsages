@@ -1,19 +1,20 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
-    "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "$schema": "http://json-schema.org/draft-07/schema",
     "default": {},
+    "description": "The root schema comprises the entire JSON document.",
     "examples": [
         {
             "json-web-token": "FAKE TOKEN",
             "aws-user-name": "sote-test",
             "role-list": [
-                "CLIENT",
-                "USER"
+                "ROLE_NAME1",
+                "ROLE_NAME2"
             ],
-            "organizations-id": 1000,
+            "organizations-id": 1,
+            "sort-order": {
+                "shipments-id": "ASC"
+            },
             "message-id": "test",
             "record-limit-count": 10,
             "record-offset": 0,
@@ -22,12 +23,12 @@
                     {
                         "field-name": "client-company-id",
                         "operator": "=",
-                        "value": 450
+                        "value": 1
                     },
                     {
                         "field-name": "shipments-id",
                         "operator": ">",
-                        "value": 200
+                        "value": 1
                     }
                 ]
             }
@@ -43,8 +44,11 @@
         "record-offset"
     ],
     "optional": [
+        "sort-order",
         "filters"
     ],
+    "title": "The root schema",
+    "type": "object",
     "properties": {
         "json-web-token": {
             "$id": "#/properties/json-web-token",
@@ -68,16 +72,16 @@
         },
         "role-list": {
             "$id": "#/properties/role-list",
-            "type": "array",
-            "title": "The role-list schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": [],
+            "description": "An explanation about the purpose of this instance.",
             "examples": [
                 [
-                    "CLIENT",
-                    "USER"
+                    "ROLE_NAME1",
+                    "ROLE_NAME2"
                 ]
             ],
+            "title": "The role-list schema",
+            "type": "array",
             "additionalItems": true,
             "items": {
                 "$id": "#/properties/role-list/items",
@@ -89,8 +93,8 @@
                         "description": "An explanation about the purpose of this instance.",
                         "default": "",
                         "examples": [
-                            "CLIENT",
-                            "USER"
+                            "ROLE_NAME1",
+                            "ROLE_NAME2"
                         ]
                     }
                 ]
@@ -103,8 +107,95 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                1000
+                1
             ]
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "default": {},
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                {
+                    "shipments-id": "ASC"
+                }
+            ],
+            "title": "The sort-order schema",
+            "enum": [
+                {
+                    "shipment-fintrans-id": "ASC"
+                },
+                {
+                    "shipment-fintrans-id": "DESC"
+                },
+                {
+                    "organizations-id": "ASC"
+                },
+                {
+                    "organizations-id": "DESC"
+                },
+                {
+                    "client-company-id": "ASC"
+                },
+                {
+                    "client-company-id": "DESC"
+                },
+                {
+                    "shipments-id": "ASC"
+                },
+                {
+                    "shipments-id": "DESC"
+                },
+                {
+                    "fintrans-type": "ASC"
+                },
+                {
+                    "fintrans-type": "DESC"
+                },
+                {
+                    "currency-type": "ASC"
+                },
+                {
+                    "currency-type": "DESC"
+                },
+                {
+                    "transactions-amount": "ASC"
+                },
+                {
+                    "transactions-amount": "DESC"
+                },
+                {
+                    "transactions-timestamp": "ASC"
+                },
+                {
+                    "transactions-timestamp": "DESC"
+                },
+                {
+                    "created-by-requestor-username": "ASC"
+                },
+                {
+                    "created-by-requestor-username": "DESC"
+                },
+                {
+                    "bill-of-lading": "ASC"
+                },
+                {
+                    "bill-of-lading": "DESC"
+                },
+                {
+                    "memo": "ASC"
+                },
+                {
+                    "memo": "DESC"
+                },
+                {
+                    "cost-is-unexpected": "ASC"
+                },
+                {
+                    "cost-is-unexpected": "DESC"
+                }
+            ],
+            "type": "object",
+            "additionalProperties": true
         },
         "message-id": {
             "$id": "#/properties/message-id",
@@ -148,12 +239,12 @@
                         {
                             "field-name": "client-company-id",
                             "operator": "=",
-                            "value": 450
+                            "value": 1
                         },
                         {
                             "field-name": "shipments-id",
                             "operator": ">",
-                            "value": 200
+                            "value": 1
                         }
                     ]
                 }
@@ -173,12 +264,12 @@
                             {
                                 "field-name": "client-company-id",
                                 "operator": "=",
-                                "value": 450
+                                "value": 1
                             },
                             {
                                 "field-name": "shipments-id",
                                 "operator": ">",
-                                "value": 200
+                                "value": 1
                             }
                         ]
                     ],
@@ -196,7 +287,7 @@
                                     {
                                         "field-name": "client-company-id",
                                         "operator": "=",
-                                        "value": 450
+                                        "value": 1
                                     }
                                 ],
                                 "required": [
@@ -214,16 +305,17 @@
                                         ],
                                         "title": "The field-name schema",
                                         "enum": [
-                                            "client_company_id",
-                                            "shipments_id",
-                                            "financialtransactions_type",
-                                            "currency_type",
-                                            "transactions_amount",
-                                            "transactions_timestamp",
-                                            "created_by_requestor-username",
-                                            "bill_of_lading",
+                                            "shipment-fintrans-id",
+                                            "client-company-id",
+                                            "shipments-id",
+                                            "fintrans-type",
+                                            "currency-type",
+                                            "transactions-amount",
+                                            "transactions-timestamp",
+                                            "created-by-requestor-username",
+                                            "bill-of-lading",
                                             "memo",
-                                            "cost_is_unexpected"
+                                            "cost-is-unexpected"
                                         ],
                                         "type": "string"
                                     },
@@ -253,7 +345,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            450
+                                            1
                                         ]
                                     }
                                 },
