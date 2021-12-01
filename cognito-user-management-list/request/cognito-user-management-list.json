@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "record-limit-count": 0,
+      "record-offset": 0,
+      "sort-order": {
+        "user-management-id": "ASC",
+        "client-company-id": "DESC"
+      },
+      "organizations-id": 1
+    }
+  ],
+  "required": [
+    "record-limit-count",
+    "record-offset",
+    "sort-order",
+    "organizations-id"
+  ],
+  "properties": {
+    "record-limit-count": {
+      "$id": "#/properties/record-limit-count",
+      "type": "integer",
+      "title": "The record-limit-count schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "record-offset": {
+      "$id": "#/properties/record-offset",
+      "type": "integer",
+      "title": "The record-offset schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "sort-order": {
+      "$id": "#/properties/sort-order",
+      "type": "object",
+      "title": "The sort-order schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "user-management-id": "ASC",
+          "client-company-id": "DESC"
+        }
+      ],
+      "required": [
+        "user-management-id"
+      ],
+      "properties": {
+        "user-management-id": {
+          "$id": "#/properties/sort-order/properties/user-management-id",
+          "type": "string",
+          "title": "The user-management-id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "ASC"
+          ]
+        },
+        "client-company-id": {
+          "$id": "#/properties/sort-order/properties/client-company-id",
+          "type": "string",
+          "title": "The client-company-id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "DESC"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "organizations-id": {
+      "$id": "#/properties/organizations-id",
+      "type": "integer",
+      "title": "The organizations-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    }
+  },
+  "additionalProperties": true
+}
