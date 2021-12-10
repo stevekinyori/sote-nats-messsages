@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "sal.organization.organization.add",
+  "description": "I want to add organization with domain organization for sal",
+  "examples": [],
+  "default": {},
+  "optional": [],
+  "required": [
+
+  ],
+  "properties": {
+    "request-header": {
+      "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+    }
+  },
+  "additionalProperties": true
+}
