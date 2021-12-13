@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "bsl.usermanagement.containers.active.stamp",
+  "description": "I want to stamp usermanagement with active domain containers, with a given domain id organizations_id, with a given domain id client_company_id for bsl",
+  "examples": [],
+  "default": {},
+  "optional": [],
+  "required": [
+    "organizations_id",
+    "client_company_id"
+  ],
+  "properties": {
+    "organizations_id": {
+      "$id": "#/properties/organizations_id",
+      "type": "integer",
+      "title": "This is the system id assigned to the organizations_id"
+    },
+    "client_company_id": {
+      "$id": "#/properties/client_company_id",
+      "type": "integer",
+      "title": "This is the system id assigned to the client_company_id"
+    },
+    "request-header": {
+      "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+    }
+  },
+  "additionalProperties": true
+}
