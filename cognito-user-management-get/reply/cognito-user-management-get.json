@@ -124,9 +124,12 @@
         "client_company_id",
         "cognito_username",
         "created_by_requestor_username",
+        "custom:usr_roles",
         "delete_date",
         "device_token",
         "email_verified",
+        "family_name",
+        "given_name",
         "informational_user",
         "row_version",
         "updated_by_requestor_username",
@@ -148,25 +151,25 @@
         "user_wage",
         "usermanagement_id"
       ],
-      "optional": [
-        "family_name",
-        "given_name",
-        "custom:usr_roles"
-      ],
       "properties": {
         "ConfirmationStatus": {
           "$id": "#/properties/message/properties/ConfirmationStatus",
-          "type": "string",
-          "title": "The ConfirmationStatus schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
+          "description": "An explanation about the purpose of this instance.",
           "examples": [
             "CONFIRMED"
-          ]
+          ],
+          "title": "The ConfirmationStatus schema",
+          "enum": [
+            "PENDING",
+            "EXPIRED",
+            "CONFIRMED"
+          ],
+          "type": "string"
         },
         "DaysLeftToConfirm": {
           "$id": "#/properties/message/properties/DaysLeftToConfirm",
-          "type": "null",
+          "type": ["null", "integer"],
           "title": "The DaysLeftToConfirm schema",
           "description": "An explanation about the purpose of this instance.",
           "default": null,

@@ -211,18 +211,23 @@
             ],
             "properties": {
               "ConfirmationStatus": {
-                "$id": "#/properties/message/items/anyOf/0/properties/ConfirmationStatus",
-                "type": "string",
-                "title": "The ConfirmationStatus schema",
-                "description": "An explanation about the purpose of this instance.",
+                "$id": "#/properties/message/properties/ConfirmationStatus",
                 "default": "",
+                "description": "An explanation about the purpose of this instance.",
                 "examples": [
                   "CONFIRMED"
-                ]
+                ],
+                "title": "The ConfirmationStatus schema",
+                "enum": [
+                  "PENDING",
+                  "EXPIRED",
+                  "CONFIRMED"
+                ],
+                "type": "string"
               },
               "DaysLeftToConfirm": {
                 "$id": "#/properties/message/items/anyOf/0/properties/DaysLeftToConfirm",
-                "type": "null",
+                "type": ["null", "integer"],
                 "title": "The DaysLeftToConfirm schema",
                 "description": "An explanation about the purpose of this instance.",
                 "default": null,
