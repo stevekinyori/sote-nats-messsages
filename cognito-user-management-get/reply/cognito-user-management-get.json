@@ -124,12 +124,9 @@
         "client_company_id",
         "cognito_username",
         "created_by_requestor_username",
-        "custom:usr_roles",
         "delete_date",
         "device_token",
         "email_verified",
-        "family_name",
-        "given_name",
         "informational_user",
         "row_version",
         "updated_by_requestor_username",
@@ -150,6 +147,11 @@
         "user_phone_number",
         "user_wage",
         "usermanagement_id"
+      ],
+      "optional": [
+        "family_name",
+        "given_name",
+        "custom:usr_roles"
       ],
       "properties": {
         "ConfirmationStatus": {
