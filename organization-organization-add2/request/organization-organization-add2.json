@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "organization.organization.add",
+  "description": "I want to add organization with domain organization, with a given domain id organizations_id",
+  "examples": [],
+  "default": {},
+  "optional": [],
+  "required": [
+    "organizations_id"
+  ],
+  "properties": {
+    "organizations_id": {
+      "$id": "#/properties/organizations_id",
+      "type": "integer",
+      "title": "This is the system id assigned to the organizations_id"
+    },
+    "request-header": {
+      "$ref": "https://gitlab.com/soteapps/messages/-/raw/master/schema-definitions-v1.json#/definitions/request-header"
+    }
+  },
+  "additionalProperties": true
+}
