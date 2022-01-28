@@ -27,7 +27,7 @@
         "email_verified": "true",
         "family_name": "Clearance",
         "given_name": "Test",
-        "informational_user": true,
+        "informational_user": false,
         "row_version": 1,
         "updated_by_requestor_username": "test-user",
         "user_driver_license_expiry_date": "2022-01-01",
@@ -91,7 +91,7 @@
           "email_verified": "true",
           "family_name": "Clearance",
           "given_name": "Test",
-          "informational_user": true,
+          "informational_user": false,
           "row_version": 1,
           "updated_by_requestor_username": "test-user",
           "user_driver_license_expiry_date": "2022-01-01",
@@ -163,6 +163,7 @@
           ],
           "title": "The ConfirmationStatus schema",
           "enum": [
+            "USER NOT FOUND IN COGNITO",
             "PENDING",
             "EXPIRED",
             "CONFIRMED"
@@ -344,7 +345,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": false,
           "examples": [
-            true
+            false
           ]
         },
         "row_version": {
