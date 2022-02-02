@@ -15,6 +15,9 @@
             "sort-order": {
                 "shipments-id": "ASC"
             },
+            "shipments-id": [
+                10064
+            ],
             "message-id": "test",
             "record-limit-count": 10,
             "record-offset": 0,
@@ -45,6 +48,7 @@
     ],
     "optional": [
         "sort-order",
+        "shipments-id",
         "filters"
     ],
     "title": "The root schema",
@@ -196,6 +200,34 @@
             ],
             "type": "object",
             "additionalProperties": true
+        },
+        "shipments-id": {
+            "$id": "#/properties/shipments-id",
+            "type": "array",
+            "title": "The shipments-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    10064
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/shipments-id/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/shipments-id/items/anyOf/0",
+                        "type": "integer",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            10064
+                        ]
+                    }
+                ]
+            }
         },
         "message-id": {
             "$id": "#/properties/message-id",
