@@ -1,0 +1,147 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "client_company_id": 1000,
+            "client_company_name": "SOTE TEST",
+            "cost_is_unexpected": true,
+            "currency_type": "USD",
+            "financialtransactions_type": "TEST_FINTRANS_TYPE",
+            "load_name": "Test Load",
+            "memo": "This is a memo",
+            "organizations_id": 10003,
+            "transactions_amount": 102.9,
+            "tripfinancialtransactions_id": 10000,
+            "trips_id": 10000
+        }
+    ],
+    "required": [
+        "client_company_id",
+        "client_company_name",
+        "cost_is_unexpected",
+        "currency_type",
+        "financialtransactions_type",
+        "organizations_id",
+        "transactions_amount",
+        "tripfinancialtransactions_id",
+        "trips_id"
+    ],
+    "properties": {
+        "client_company_id": {
+            "$id": "#/properties/client_company_id",
+            "type": "integer",
+            "title": "The client_company_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1000
+            ]
+        },
+        "client_company_name": {
+            "$id": "#/properties/client_company_name",
+            "type": "string",
+            "title": "The client_company_name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "SOTE TEST"
+            ]
+        },
+        "cost_is_unexpected": {
+            "$id": "#/properties/cost_is_unexpected",
+            "type": "boolean",
+            "title": "The cost_is_unexpected schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "currency_type": {
+            "$id": "#/properties/currency_type",
+            "type": "string",
+            "title": "The currency_type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "USD"
+            ]
+        },
+        "financialtransactions_type": {
+            "$id": "#/properties/financialtransactions_type",
+            "type": "string",
+            "title": "The financialtransactions_type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "TEST_FINTRANS_TYPE"
+            ]
+        },
+        "load_name": {
+            "$id": "#/properties/load_name",
+            "type": "string",
+            "title": "The load_name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test Load"
+            ]
+        },
+        "memo": {
+            "$id": "#/properties/memo",
+            "type": "string",
+            "title": "The memo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "This is a memo"
+            ]
+        },
+        "organizations_id": {
+            "$id": "#/properties/organizations_id",
+            "type": "integer",
+            "title": "The organizations_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10003
+            ]
+        },
+        "transactions_amount": {
+            "$id": "#/properties/transactions_amount",
+            "type": "number",
+            "title": "The transactions_amount schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                102.9
+            ]
+        },
+        "tripfinancialtransactions_id": {
+            "$id": "#/properties/tripfinancialtransactions_id",
+            "type": "integer",
+            "title": "The tripfinancialtransactions_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10000
+            ]
+        },
+        "trips_id": {
+            "$id": "#/properties/trips_id",
+            "type": "integer",
+            "title": "The trips_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10000
+            ]
+        }
+    },
+    "additionalProperties": true
+}
