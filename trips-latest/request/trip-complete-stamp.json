@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "trips-id": 1,
+      "row-version": 1,
+      "trip-status": "COMPLETE"
+    }
+  ],
+  "required": [
+    "trips-id",
+    "row-version",
+    "trip-status"
+  ],
+  "properties": {
+    "trips-id": {
+      "$id": "#/properties/trips-id",
+      "default": 0,
+      "description": "This is a system generated id to make trips unique.",
+      "examples": [
+        1
+      ],
+      "title": "The trips-id schema",
+      "type": "integer"
+    },
+    "row-version": {
+      "$id": "#/properties/row-version",
+      "default": 0,
+      "description": "This is a system generated number that is used to control updates to the record.",
+      "examples": [
+        1
+      ],
+      "title": "The row-version schema",
+      "type": "integer"
+    },
+    "trip-status": {
+      "$id": "#/properties/trip-status",
+      "default": "",
+      "description": "The state of the trip.",
+      "examples": [
+        "COMPLETE"
+      ],
+      "title": "The trip-status schema",
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
