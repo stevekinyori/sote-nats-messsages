@@ -22,16 +22,16 @@
             "record-limit-count": 10,
             "record-offset": 0,
             "filters": {
-                "and": [
+                "or": [
                     {
-                        "field-name": "client-company-id",
+                        "field-name": "fintrans-type",
                         "operator": "=",
-                        "value": 1
+                        "value": "customs taxes"
                     },
                     {
-                        "field-name": "shipments-id",
-                        "operator": ">",
-                        "value": 1
+                        "field-name": "fintrans-type",
+                        "operator": "=",
+                        "value": "CUSTOMS TAXES"
                     }
                 ]
             }
@@ -267,59 +267,59 @@
             "default": {},
             "examples": [
                 {
-                    "and": [
+                    "or": [
                         {
-                            "field-name": "client-company-id",
+                            "field-name": "fintrans-type",
                             "operator": "=",
-                            "value": 1
+                            "value": "customs taxes"
                         },
                         {
-                            "field-name": "shipments-id",
-                            "operator": ">",
-                            "value": 1
+                            "field-name": "fintrans-type",
+                            "operator": "=",
+                            "value": "CUSTOMS TAXES"
                         }
                     ]
                 }
             ],
             "required": [
-                "and"
+                "or"
             ],
             "properties": {
-                "and": {
-                    "$id": "#/properties/filters/properties/and",
+                "or": {
+                    "$id": "#/properties/filters/properties/or",
                     "type": "array",
-                    "title": "The and schema",
+                    "title": "The or schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": [],
                     "examples": [
                         [
                             {
-                                "field-name": "client-company-id",
+                                "field-name": "fintrans-type",
                                 "operator": "=",
-                                "value": 1
+                                "value": "customs taxes"
                             },
                             {
-                                "field-name": "shipments-id",
-                                "operator": ">",
-                                "value": 1
+                                "field-name": "fintrans-type",
+                                "operator": "=",
+                                "value": "CUSTOMS TAXES"
                             }
                         ]
                     ],
                     "additionalItems": true,
                     "items": {
-                        "$id": "#/properties/filters/properties/and/items",
+                        "$id": "#/properties/filters/properties/or/items",
                         "anyOf": [
                             {
-                                "$id": "#/properties/filters/properties/and/items/anyOf/0",
+                                "$id": "#/properties/filters/properties/or/items/anyOf/0",
                                 "type": "object",
                                 "title": "The first anyOf schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": {},
                                 "examples": [
                                     {
-                                        "field-name": "client-company-id",
+                                        "field-name": "fintrans-type",
                                         "operator": "=",
-                                        "value": 1
+                                        "value": "customs taxes"
                                     }
                                 ],
                                 "required": [
@@ -329,17 +329,16 @@
                                 ],
                                 "properties": {
                                     "field-name": {
-                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/field-name",
+                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/field-name",
                                         "default": "",
                                         "description": "An explanation about the purpose of this instance.",
                                         "examples": [
-                                            "client-company-id"
+                                            "fintrans-type"
                                         ],
                                         "title": "The field-name schema",
                                         "enum": [
                                             "shipment-fintrans-id",
                                             "client-company-id",
-                                            "shipments-id",
                                             "fintrans-type",
                                             "currency-type",
                                             "transactions-amount",
@@ -352,7 +351,7 @@
                                         "type": "string"
                                     },
                                     "operator": {
-                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/operator",
+                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/operator",
                                         "default": "",
                                         "description": "An explanation about the purpose of this instance.",
                                         "examples": [
@@ -371,13 +370,13 @@
                                         "type": "string"
                                     },
                                     "value": {
-                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value",
-                                        "type": "integer",
+                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/value",
+                                        "type": "string",
                                         "title": "The value schema",
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1
+                                            "customs taxes"
                                         ]
                                     }
                                 },
