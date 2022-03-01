@@ -28,7 +28,7 @@
         "user-phone-country-code",
         "user-phone-number",
         "user-email",
-        "user-role-list",
+        "user-role-list"
     ],
     "optional": [
         "user-first-name",
