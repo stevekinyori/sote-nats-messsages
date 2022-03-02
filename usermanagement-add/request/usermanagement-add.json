@@ -15,7 +15,7 @@
             "user-phone-country-code": "+254",
             "user-phone-number": "1234567890",
             "user-email": "test@email.com,",
-            "user-management-name": "test-cognito-name",
+            "cognito-username": "test-cognito-name",
             "client-company-id": 1,
             "user-first-name": "FirstName",
             "user-middle-name": "MiddleName",
@@ -113,10 +113,10 @@
                 "test@email.com,"
             ]
         },
-        "user-management-name": {
-            "$id": "#/properties/user-management-name",
+        "cognito-username": {
+            "$id": "#/properties/cognito-username",
             "type": "string",
-            "title": "The user-management-name schema",
+            "title": "The cognito-username schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
