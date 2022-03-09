@@ -10,7 +10,7 @@
             "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
             "message": {
                 "containers_id": 1,
-                "container_row_version": 2
+                "row_version": 2
             }
         }
     ],
@@ -38,12 +38,12 @@
             "examples": [
                 {
                     "containers_id": 1,
-                    "container_row_version": 2
+                    "row_version": 2
                 }
             ],
             "required": [
                 "containers_id",
-                "container_row_version"
+                "row_version"
             ],
             "properties": {
                 "containers_id": {
@@ -56,10 +56,10 @@
                         1
                     ]
                 },
-                "container_row_version": {
-                    "$id": "#/properties/message/properties/container_row_version",
+                "row_version": {
+                    "$id": "#/properties/message/properties/row_version",
                     "type": "integer",
-                    "title": "The container_row_version schema",
+                    "title": "The row_version schema",
                     "description": "This is a system generated number that is used to control updates to the record.",
                     "default": 0,
                     "examples": [

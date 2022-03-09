@@ -10,7 +10,7 @@
             "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
             "message": {
                 "shipments_id": 1,
-                "ship_row_version": 3,
+                "row_version": 3,
                 "shipment_status": "COMXXXXX"
             }
         }
@@ -39,13 +39,13 @@
             "examples": [
                 {
                     "shipments_id": 1,
-                    "ship_row_version": 3,
+                    "row_version": 3,
                     "shipment_status": "COMXXXXX"
                 }
             ],
             "required": [
                 "shipments_id",
-                "ship_row_version",
+                "row_version",
                 "shipment_status"
             ],
             "properties": {
@@ -59,10 +59,10 @@
                         1
                     ]
                 },
-                "ship_row_version": {
-                    "$id": "#/properties/message/properties/ship_row_version",
+                "row_version": {
+                    "$id": "#/properties/message/properties/row_version",
                     "type": "integer",
-                    "title": "The ship_row_version schema",
+                    "title": "The row_version schema",
                     "description": "This is a system generated number that is used to control updates to the record",
                     "default": 0,
                     "examples": [

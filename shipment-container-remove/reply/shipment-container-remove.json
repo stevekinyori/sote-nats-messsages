@@ -9,8 +9,7 @@
         {
             "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
             "message": {
-                "cargo_id": 1,
-                "row_version": 2
+                "success": true
             }
         }
     ],
@@ -23,7 +22,7 @@
             "$id": "#/properties/message-id",
             "type": "string",
             "title": "The message-id schema",
-            "description": "This is a unique identifier of each message.",
+            "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "51ad84d4-XXXXXXX-6b2ce5e8"
@@ -33,37 +32,25 @@
             "$id": "#/properties/message",
             "type": "object",
             "title": "The message schema",
-            "description": "This identifies that this section contains response message items.",
+            "description": "An explanation about the purpose of this instance.",
             "default": {},
             "examples": [
                 {
-                    "cargo_id": 1,
-                    "row_version": 2
+                    "success": true
                 }
             ],
             "required": [
-                "cargo_id",
-                "row_version"
+                "success"
             ],
             "properties": {
-                "cargo_id": {
-                    "$id": "#/properties/message/properties/cargo_id",
-                    "type": "integer",
-                    "title": "The cargo_id schema",
-                    "description": "This is a system generated id for cargo being shipped.",
-                    "default": 0,
+                "success": {
+                    "$id": "#/properties/message/properties/success",
+                    "type": "boolean",
+                    "title": "The success schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
                     "examples": [
-                        1
-                    ]
-                },
-                "row_version": {
-                    "$id": "#/properties/message/properties/row_version",
-                    "type": "integer",
-                    "title": "The row_version schema",
-                    "description": "This is a system generated number that is used to control updates to the record.",
-                    "default": 0,
-                    "examples": [
-                        2
+                        true
                     ]
                 }
             },
