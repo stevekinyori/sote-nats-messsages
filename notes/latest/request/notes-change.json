@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "notes-id": 98,
+      "notes-note": "Update note test",
+      "syntax-type": "TEXT"
+    }
+  ],
+  "required": [
+    "notes-id",
+    "notes-note",
+    "syntax-type"
+  ],
+  "properties": {
+    "notes-id": {
+      "$id": "#/properties/notes-id",
+      "default": 0,
+      "description": "This is a system generated id that is used to identify the added note.",
+      "examples": [
+        98
+      ],
+      "title": "The notes-id schema",
+      "type": "integer"
+    },
+    "notes-note": {
+      "$id": "#/properties/notes-note",
+      "default": "",
+      "description": "This is the note either TEXT or JSON string.",
+      "examples": [
+        "Update note test"
+      ],
+      "title": "The notes-note schema",
+      "type": "string"
+    },
+    "syntax-type": {
+      "$id": "#/properties/syntax-type",
+      "default": "",
+      "description": "The note format JSON|TEXT. Default is TEXT.",
+      "examples": [
+        "TEXT"
+      ],
+      "title": "The syntax-type schema",
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

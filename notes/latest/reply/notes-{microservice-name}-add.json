@@ -7,9 +7,9 @@
   "default": {},
   "examples": [
     {
-      "message-id": "test",
+      "message-id": "test-add",
       "message": {
-        "notes-id": 197
+        "notes-id": 128
       }
     }
   ],
@@ -20,38 +20,38 @@
   "properties": {
     "message-id": {
       "$id": "#/properties/message-id",
-      "type": "string",
-      "title": "The message-id schema",
-      "description": "This is used to uniquely identify devices.",
       "default": "",
+      "description": "This is used to uniquely identify devices.",
       "examples": [
-        "test"
-      ]
+        "test-add"
+      ],
+      "title": "The message-id schema",
+      "type": "string"
     },
     "message": {
       "$id": "#/properties/message",
-      "type": "object",
-      "title": "The message schema",
-      "description": "This is the actual data.",
       "default": {},
+      "description": "This contains the response.",
       "examples": [
         {
-          "notes-id": 197
+          "notes-id": 128
         }
       ],
       "required": [
         "notes-id"
       ],
+      "title": "The message schema",
+      "type": "object",
       "properties": {
         "notes-id": {
           "$id": "#/properties/message/properties/notes-id",
-          "type": "integer",
-          "title": "The notes-id schema",
-          "description": "This is a system generated id that is used to identify the added note.",
           "default": 0,
+          "description": "This is a system generated id that is used to identify the added note.",
           "examples": [
-            197
-          ]
+            128
+          ],
+          "title": "The notes-id schema",
+          "type": "integer"
         }
       },
       "additionalProperties": true
