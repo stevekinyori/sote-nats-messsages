@@ -9,7 +9,7 @@
     {
       "message-id": "test",
       "message": {
-        "notes-id": 197
+        "notes-id": 98
       }
     }
   ],
@@ -32,11 +32,11 @@
       "$id": "#/properties/message",
       "type": "object",
       "title": "The message schema",
-      "description": "This is the actual data.",
+      "description": "This contains the response.",
       "default": {},
       "examples": [
         {
-          "notes-id": 197
+          "notes-id": 98
         }
       ],
       "required": [
@@ -47,10 +47,10 @@
           "$id": "#/properties/message/properties/notes-id",
           "type": "integer",
           "title": "The notes-id schema",
-          "description": "This is a system generated id that is used to identify the added note.",
+          "description": "This is a system generated id that is used to identify a note.",
           "default": 0,
           "examples": [
-            197
+            98
           ]
         }
       },
