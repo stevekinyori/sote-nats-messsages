@@ -1,0 +1,1327 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "message": {
+                "items": [
+                    {
+                        "containers_id": 1,
+                        "row_version": 1,
+                        "container_tag": "TAG 001",
+                        "container_form_factor": "20",
+                        "trips_id": 1,
+                        "container_cargo_gross_weight": 20178,
+                        "container_cargo_gross_unit_of_measure": "KGS",
+                        "created_by_date": "2020-07-22",
+                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                        "updated_by_date": "2020-11-12",
+                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                        "shipments": {
+                            "shipments_id": 1,
+                            "row_version": 1,
+                            "organizations_id": 1,
+                            "client_company_id": 1,
+                            "client_company_name": "My Enterprises Ltd",
+                            "suppliers_id": 1,
+                            "supplier_name": "My Supplier Name",
+                            "shipment_status": "AT_XXXXX",
+                            "bill_of_lading": "WEXXXXXXXX58",
+                            "port_of_entry": "Mombasa_Kenya",
+                            "port_of_origin": "SOKHNA__EGYPT",
+                            "country_of_destination": "KENYA",
+                            "shipment_poe_eta": "2020-12-26",
+                            "consignment_weight": 17,
+                            "consignment_weight_unit_of_measure": "MT",
+                            "created_by_date": "2020-09-21",
+                            "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                            "updated_by_date": "2020-12-30",
+                            "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                            "through_bill_of_lading": "TBL"
+                        },
+                        "cargo": [
+                            {
+                                "cargo_id": 1,
+                                "row_version": 1,
+                                "cargo_type": "Sand",
+                                "cargo_gross_weight": 10130,
+                                "cargo_gross_unit_of_measure": "KGS",
+                                "cargo_quantity": 400,
+                                "cargo_quantity_unit_of_measure": "bags",
+                                "created_by_date": "2020-07-13",
+                                "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                "updated_by_date": "2020-07-16",
+                                "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                "cargo_parent_type": "CONTAINER"
+                            }
+                        ],
+                        "trips": {
+                            "client_company_id": 1,
+                            "client_company_name": "Customs",
+                            "created_by_date": "2021-09-21",
+                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                            "drop_off_location": "Velvet Veldt",
+                            "estimated_delivery_date": "2019-01-01",
+                            "estimated_delivery_days": 12,
+                            "estimated_pickup_date": "2019-01-01",
+                            "estimated_return_date": null,
+                            "estimated_total_days": 45,
+                            "external_bill_of_lading": "Test Bol",
+                            "first_estimated_delivery_date": "2020-02-02",
+                            "load_name": "HYT45x0917",
+                            "load_unit_of_measure": "METRIC_TONS",
+                            "load_weight": 2,
+                            "pickup_location": "Hiram Saltmarsh",
+                            "return_yard": "Test_Yard",
+                            "returned_timestamp": null,
+                            "row_version": 1,
+                            "shipments_id": 10000,
+                            "trip_is_assigned": false,
+                            "trip_notes": "Handle with care",
+                            "trip_status": "CREATE",
+                            "trip_type": "OUTSOURCED",
+                            "trips_id": 100,
+                            "updated_by_date": null,
+                            "updated_by_requestor_username": null
+                        }
+                    }
+                ],
+                "pagination": {
+                    "limit": 2,
+                    "offset": 0,
+                    "total": 3
+                }
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "items": [
+                        {
+                            "containers_id": 1,
+                            "row_version": 1,
+                            "container_tag": "TAG 001",
+                            "container_form_factor": "20",
+                            "trips_id": 1,
+                            "container_cargo_gross_weight": 20178,
+                            "container_cargo_gross_unit_of_measure": "KGS",
+                            "created_by_date": "2020-07-22",
+                            "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                            "updated_by_date": "2020-11-12",
+                            "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                            "shipments": {
+                                "shipments_id": 1,
+                                "row_version": 1,
+                                "organizations_id": 1,
+                                "client_company_id": 1,
+                                "client_company_name": "My Enterprises Ltd",
+                                "suppliers_id": 1,
+                                "supplier_name": "My Supplier Name",
+                                "shipment_status": "AT_XXXXX",
+                                "bill_of_lading": "WEXXXXXXXX58",
+                                "port_of_entry": "Mombasa_Kenya",
+                                "port_of_origin": "SOKHNA__EGYPT",
+                                "country_of_destination": "KENYA",
+                                "shipment_poe_eta": "2020-12-26",
+                                "consignment_weight": 17,
+                                "consignment_weight_unit_of_measure": "MT",
+                                "created_by_date": "2020-09-21",
+                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                "updated_by_date": "2020-12-30",
+                                "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                                "through_bill_of_lading": "TBL"
+                            },
+                            "cargo": [
+                                {
+                                    "cargo_id": 1,
+                                    "row_version": 1,
+                                    "cargo_type": "Sand",
+                                    "cargo_gross_weight": 10130,
+                                    "cargo_gross_unit_of_measure": "KGS",
+                                    "cargo_quantity": 400,
+                                    "cargo_quantity_unit_of_measure": "bags",
+                                    "created_by_date": "2020-07-13",
+                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "updated_by_date": "2020-07-16",
+                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "cargo_parent_type": "CONTAINER"
+                                }
+                            ],
+                            "trips": {
+                                "client_company_id": 1,
+                                "client_company_name": "Customs",
+                                "created_by_date": "2021-09-21",
+                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                "drop_off_location": "Velvet Veldt",
+                                "estimated_delivery_date": "2019-01-01",
+                                "estimated_delivery_days": 12,
+                                "estimated_pickup_date": "2019-01-01",
+                                "estimated_return_date": null,
+                                "estimated_total_days": 45,
+                                "external_bill_of_lading": "Test Bol",
+                                "first_estimated_delivery_date": "2020-02-02",
+                                "load_name": "HYT45x0917",
+                                "load_unit_of_measure": "METRIC_TONS",
+                                "load_weight": 2,
+                                "pickup_location": "Hiram Saltmarsh",
+                                "return_yard": "Test_Yard",
+                                "returned_timestamp": null,
+                                "row_version": 1,
+                                "shipments_id": 10000,
+                                "trip_is_assigned": false,
+                                "trip_notes": "Handle with care",
+                                "trip_status": "CREATE",
+                                "trip_type": "OUTSOURCED",
+                                "trips_id": 100,
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }
+                        }
+                    ],
+                    "pagination": {
+                        "limit": 2,
+                        "offset": 0,
+                        "total": 3
+                    }
+                }
+            ],
+            "required": [
+                "items",
+                "pagination"
+            ],
+            "properties": {
+                "items": {
+                    "$id": "#/properties/message/properties/items",
+                    "type": "array",
+                    "title": "The items schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "containers_id": 1,
+                                "row_version": 1,
+                                "container_tag": "TAG 001",
+                                "container_form_factor": "20",
+                                "trips_id": 1,
+                                "container_cargo_gross_weight": 20178,
+                                "container_cargo_gross_unit_of_measure": "KGS",
+                                "created_by_date": "2020-07-22",
+                                "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                "updated_by_date": "2020-11-12",
+                                "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                                "shipments": {
+                                    "shipments_id": 1,
+                                    "row_version": 1,
+                                    "organizations_id": 1,
+                                    "client_company_id": 1,
+                                    "client_company_name": "My Enterprises Ltd",
+                                    "suppliers_id": 1,
+                                    "supplier_name": "My Supplier Name",
+                                    "shipment_status": "AT_XXXXX",
+                                    "bill_of_lading": "WEXXXXXXXX58",
+                                    "port_of_entry": "Mombasa_Kenya",
+                                    "port_of_origin": "SOKHNA__EGYPT",
+                                    "country_of_destination": "KENYA",
+                                    "shipment_poe_eta": "2020-12-26",
+                                    "consignment_weight": 17,
+                                    "consignment_weight_unit_of_measure": "MT",
+                                    "created_by_date": "2020-09-21",
+                                    "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                    "updated_by_date": "2020-12-30",
+                                    "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                                    "through_bill_of_lading": "TBL"
+                                },
+                                "cargo": [
+                                    {
+                                        "cargo_id": 1,
+                                        "row_version": 1,
+                                        "cargo_type": "Sand",
+                                        "cargo_gross_weight": 10130,
+                                        "cargo_gross_unit_of_measure": "KGS",
+                                        "cargo_quantity": 400,
+                                        "cargo_quantity_unit_of_measure": "bags",
+                                        "created_by_date": "2020-07-13",
+                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "updated_by_date": "2020-07-16",
+                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "cargo_parent_type": "CONTAINER"
+                                    }
+                                ],
+                                "trips": {
+                                    "client_company_id": 1,
+                                    "client_company_name": "Customs",
+                                    "created_by_date": "2021-09-21",
+                                    "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                    "drop_off_location": "Velvet Veldt",
+                                    "estimated_delivery_date": "2019-01-01",
+                                    "estimated_delivery_days": 12,
+                                    "estimated_pickup_date": "2019-01-01",
+                                    "estimated_return_date": null,
+                                    "estimated_total_days": 45,
+                                    "external_bill_of_lading": "Test Bol",
+                                    "first_estimated_delivery_date": "2020-02-02",
+                                    "load_name": "HYT45x0917",
+                                    "load_unit_of_measure": "METRIC_TONS",
+                                    "load_weight": 2,
+                                    "pickup_location": "Hiram Saltmarsh",
+                                    "return_yard": "Test_Yard",
+                                    "returned_timestamp": null,
+                                    "row_version": 1,
+                                    "shipments_id": 10000,
+                                    "trip_is_assigned": false,
+                                    "trip_notes": "Handle with care",
+                                    "trip_status": "CREATE",
+                                    "trip_type": "OUTSOURCED",
+                                    "trips_id": 100,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
+                                }
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/message/properties/items/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/message/properties/items/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "containers_id": 1,
+                                        "row_version": 1,
+                                        "container_tag": "TAG 001",
+                                        "container_form_factor": "20",
+                                        "trips_id": 1,
+                                        "container_cargo_gross_weight": 20178,
+                                        "container_cargo_gross_unit_of_measure": "KGS",
+                                        "created_by_date": "2020-07-22",
+                                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                        "updated_by_date": "2020-11-12",
+                                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                                        "shipments": {
+                                            "shipments_id": 1,
+                                            "row_version": 1,
+                                            "organizations_id": 1,
+                                            "client_company_id": 1,
+                                            "client_company_name": "My Enterprises Ltd",
+                                            "suppliers_id": 1,
+                                            "supplier_name": "My Supplier Name",
+                                            "shipment_status": "AT_XXXXX",
+                                            "bill_of_lading": "WEXXXXXXXX58",
+                                            "port_of_entry": "Mombasa_Kenya",
+                                            "port_of_origin": "SOKHNA__EGYPT",
+                                            "country_of_destination": "KENYA",
+                                            "shipment_poe_eta": "2020-12-26",
+                                            "consignment_weight": 17,
+                                            "consignment_weight_unit_of_measure": "MT",
+                                            "created_by_date": "2020-09-21",
+                                            "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                            "updated_by_date": "2020-12-30",
+                                            "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                                            "through_bill_of_lading": "TBL"
+                                        },
+                                        "cargo": [
+                                            {
+                                                "cargo_id": 1,
+                                                "row_version": 1,
+                                                "cargo_type": "Sand",
+                                                "cargo_gross_weight": 10130,
+                                                "cargo_gross_unit_of_measure": "KGS",
+                                                "cargo_quantity": 400,
+                                                "cargo_quantity_unit_of_measure": "bags",
+                                                "created_by_date": "2020-07-13",
+                                                "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                "updated_by_date": "2020-07-16",
+                                                "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                "cargo_parent_type": "CONTAINER"
+                                            }
+                                        ],
+                                        "trips": {
+                                            "client_company_id": 1,
+                                            "client_company_name": "Customs",
+                                            "created_by_date": "2021-09-21",
+                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                            "drop_off_location": "Velvet Veldt",
+                                            "estimated_delivery_date": "2019-01-01",
+                                            "estimated_delivery_days": 12,
+                                            "estimated_pickup_date": "2019-01-01",
+                                            "estimated_return_date": null,
+                                            "estimated_total_days": 45,
+                                            "external_bill_of_lading": "Test Bol",
+                                            "first_estimated_delivery_date": "2020-02-02",
+                                            "load_name": "HYT45x0917",
+                                            "load_unit_of_measure": "METRIC_TONS",
+                                            "load_weight": 2,
+                                            "pickup_location": "Hiram Saltmarsh",
+                                            "return_yard": "Test_Yard",
+                                            "returned_timestamp": null,
+                                            "row_version": 1,
+                                            "shipments_id": 10000,
+                                            "trip_is_assigned": false,
+                                            "trip_notes": "Handle with care",
+                                            "trip_status": "CREATE",
+                                            "trip_type": "OUTSOURCED",
+                                            "trips_id": 100,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
+                                        }
+                                    }
+                                ],
+                                "required": [
+                                    "containers_id",
+                                    "row_version",
+                                    "container_tag",
+                                    "created_by_date",
+                                    "created_by_requestor_username"
+                                ],
+                                "properties": {
+                                    "containers_id": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/containers_id",
+                                        "type": "integer",
+                                        "title": "The containers_id schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1
+                                        ]
+                                    },
+                                    "row_version": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/row_version",
+                                        "type": "integer",
+                                        "title": "The row_version schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1
+                                        ]
+                                    },
+                                    "container_tag": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/container_tag",
+                                        "type": "string",
+                                        "title": "The container_tag schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "TAG 001"
+                                        ]
+                                    },
+                                    "container_form_factor": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/container_form_factor",
+                                        "type": "string",
+                                        "title": "The container_form_factor schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "20"
+                                        ]
+                                    },
+                                    "trips_id": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips_id",
+                                        "type": "integer",
+                                        "title": "The trips_id schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            1
+                                        ]
+                                    },
+                                    "container_cargo_gross_weight": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/container_cargo_gross_weight",
+                                        "type": "integer",
+                                        "title": "The container_cargo_gross_weight schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0,
+                                        "examples": [
+                                            20178
+                                        ]
+                                    },
+                                    "container_cargo_gross_unit_of_measure": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/container_cargo_gross_unit_of_measure",
+                                        "type": "string",
+                                        "title": "The container_cargo_gross_unit_of_measure schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "KGS"
+                                        ]
+                                    },
+                                    "created_by_date": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/created_by_date",
+                                        "type": "string",
+                                        "title": "The created_by_date schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2020-07-22"
+                                        ]
+                                    },
+                                    "created_by_requestor_username": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/created_by_requestor_username",
+                                        "type": "string",
+                                        "title": "The created_by_requestor_username schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "d7266c8f-XXXXXXXX-3ee850338ea7"
+                                        ]
+                                    },
+                                    "updated_by_date": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/updated_by_date",
+                                        "type": "string",
+                                        "title": "The updated_by_date schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2020-11-12"
+                                        ]
+                                    },
+                                    "updated_by_requestor_username": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/updated_by_requestor_username",
+                                        "type": "string",
+                                        "title": "The updated_by_requestor_username schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "e2cf79b8-XXXXXXXX-9f34dd5b67f0"
+                                        ]
+                                    },
+                                    "shipments": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments",
+                                        "type": "object",
+                                        "title": "The shipments schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": {},
+                                        "examples": [
+                                            {
+                                                "shipments_id": 1,
+                                                "row_version": 1,
+                                                "organizations_id": 1,
+                                                "client_company_id": 1,
+                                                "client_company_name": "My Enterprises Ltd",
+                                                "suppliers_id": 1,
+                                                "supplier_name": "My Supplier Name",
+                                                "shipment_status": "AT_XXXXX",
+                                                "bill_of_lading": "WEXXXXXXXX58",
+                                                "port_of_entry": "Mombasa_Kenya",
+                                                "port_of_origin": "SOKHNA__EGYPT",
+                                                "country_of_destination": "KENYA",
+                                                "shipment_poe_eta": "2020-12-26",
+                                                "consignment_weight": 17,
+                                                "consignment_weight_unit_of_measure": "MT",
+                                                "created_by_date": "2020-09-21",
+                                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                                "updated_by_date": "2020-12-30",
+                                                "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                                                "through_bill_of_lading": "TBL"
+                                            }
+                                        ],
+                                        "required": [
+                                            "shipments_id",
+                                            "row_version",
+                                            "organizations_id",
+                                            "client_company_id",
+                                            "client_company_name",
+                                            "shipment_status",
+                                            "created_by_date",
+                                            "created_by_requestor_username"
+                                        ],
+                                        "properties": {
+                                            "shipments_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/shipments_id",
+                                                "type": "integer",
+                                                "title": "The shipments_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "row_version": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/row_version",
+                                                "type": "integer",
+                                                "title": "The row_version schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "organizations_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/organizations_id",
+                                                "type": "integer",
+                                                "title": "The organizations_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "client_company_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/client_company_id",
+                                                "type": "integer",
+                                                "title": "The client_company_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "client_company_name": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/client_company_name",
+                                                "type": "string",
+                                                "title": "The client_company_name schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "My Enterprises Ltd"
+                                                ]
+                                            },
+                                            "suppliers_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/suppliers_id",
+                                                "type": "integer",
+                                                "title": "The suppliers_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "supplier_name": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/supplier_name",
+                                                "type": "string",
+                                                "title": "The supplier_name schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "My Supplier Name"
+                                                ]
+                                            },
+                                            "shipment_status": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/shipment_status",
+                                                "type": "string",
+                                                "title": "The shipment_status schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "AT_XXXXX"
+                                                ]
+                                            },
+                                            "bill_of_lading": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/bill_of_lading",
+                                                "type": "string",
+                                                "title": "The bill_of_lading schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "WEXXXXXXXX58"
+                                                ]
+                                            },
+                                            "port_of_entry": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/port_of_entry",
+                                                "type": "string",
+                                                "title": "The port_of_entry schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Mombasa_Kenya"
+                                                ]
+                                            },
+                                            "port_of_origin": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/port_of_origin",
+                                                "type": "string",
+                                                "title": "The port_of_origin schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "SOKHNA__EGYPT"
+                                                ]
+                                            },
+                                            "country_of_destination": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/country_of_destination",
+                                                "type": "string",
+                                                "title": "The country_of_destination schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "KENYA"
+                                                ]
+                                            },
+                                            "shipment_poe_eta": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/shipment_poe_eta",
+                                                "type": "string",
+                                                "title": "The shipment_poe_eta schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2020-12-26"
+                                                ]
+                                            },
+                                            "consignment_weight": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/consignment_weight",
+                                                "type": "integer",
+                                                "title": "The consignment_weight schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    17
+                                                ]
+                                            },
+                                            "consignment_weight_unit_of_measure": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/consignment_weight_unit_of_measure",
+                                                "type": "string",
+                                                "title": "The consignment_weight_unit_of_measure schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "MT"
+                                                ]
+                                            },
+                                            "created_by_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/created_by_date",
+                                                "type": "string",
+                                                "title": "The created_by_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2020-09-21"
+                                                ]
+                                            },
+                                            "created_by_requestor_username": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/created_by_requestor_username",
+                                                "type": "string",
+                                                "title": "The created_by_requestor_username schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "51ad84d4-XXXXXXX-6b2ce5e8"
+                                                ]
+                                            },
+                                            "updated_by_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/updated_by_date",
+                                                "type": "string",
+                                                "title": "The updated_by_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2020-12-30"
+                                                ]
+                                            },
+                                            "updated_by_requestor_username": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/updated_by_requestor_username",
+                                                "type": "string",
+                                                "title": "The updated_by_requestor_username schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
+                                                ]
+                                            },
+                                            "through_bill_of_lading": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/through_bill_of_lading",
+                                                "type": "string",
+                                                "title": "The through_bill_of_lading schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "TBL"
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": true
+                                    },
+                                    "cargo": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo",
+                                        "type": "array",
+                                        "title": "The cargo schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": [],
+                                        "examples": [
+                                            [
+                                                {
+                                                    "cargo_id": 1,
+                                                    "row_version": 1,
+                                                    "cargo_type": "Sand",
+                                                    "cargo_gross_weight": 10130,
+                                                    "cargo_gross_unit_of_measure": "KGS",
+                                                    "cargo_quantity": 400,
+                                                    "cargo_quantity_unit_of_measure": "bags",
+                                                    "created_by_date": "2020-07-13",
+                                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "updated_by_date": "2020-07-16",
+                                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "cargo_parent_type": "CONTAINER"
+                                                }
+                                            ]
+                                        ],
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0",
+                                                    "type": "object",
+                                                    "title": "The first anyOf schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "cargo_id": 1,
+                                                            "row_version": 1,
+                                                            "cargo_type": "Sand",
+                                                            "cargo_gross_weight": 10130,
+                                                            "cargo_gross_unit_of_measure": "KGS",
+                                                            "cargo_quantity": 400,
+                                                            "cargo_quantity_unit_of_measure": "bags",
+                                                            "created_by_date": "2020-07-13",
+                                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                            "updated_by_date": "2020-07-16",
+                                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                            "cargo_parent_type": "CONTAINER"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "cargo_id",
+                                                        "row_version",
+                                                        "cargo_type",
+                                                        "created_by_date",
+                                                        "created_by_requestor_username",
+                                                        "cargo_parent_type"
+                                                    ],
+                                                    "properties": {
+                                                        "cargo_id": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_id",
+                                                            "type": "integer",
+                                                            "title": "The cargo_id schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                1
+                                                            ]
+                                                        },
+                                                        "row_version": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/row_version",
+                                                            "type": "integer",
+                                                            "title": "The row_version schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                1
+                                                            ]
+                                                        },
+                                                        "cargo_type": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_type",
+                                                            "type": "string",
+                                                            "title": "The cargo_type schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "Sand"
+                                                            ]
+                                                        },
+                                                        "cargo_gross_weight": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_gross_weight",
+                                                            "type": "integer",
+                                                            "title": "The cargo_gross_weight schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                10130
+                                                            ]
+                                                        },
+                                                        "cargo_gross_unit_of_measure": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_gross_unit_of_measure",
+                                                            "type": "string",
+                                                            "title": "The cargo_gross_unit_of_measure schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "KGS"
+                                                            ]
+                                                        },
+                                                        "cargo_quantity": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_quantity",
+                                                            "type": "integer",
+                                                            "title": "The cargo_quantity schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                400
+                                                            ]
+                                                        },
+                                                        "cargo_quantity_unit_of_measure": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_quantity_unit_of_measure",
+                                                            "type": "string",
+                                                            "title": "The cargo_quantity_unit_of_measure schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "bags"
+                                                            ]
+                                                        },
+                                                        "created_by_date": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/created_by_date",
+                                                            "type": "string",
+                                                            "title": "The created_by_date schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "2020-07-13"
+                                                            ]
+                                                        },
+                                                        "created_by_requestor_username": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/created_by_requestor_username",
+                                                            "type": "string",
+                                                            "title": "The created_by_requestor_username schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "33d44460-XXXXXXXX-83a09fe4bbcd"
+                                                            ]
+                                                        },
+                                                        "updated_by_date": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/updated_by_date",
+                                                            "type": "string",
+                                                            "title": "The updated_by_date schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "2020-07-16"
+                                                            ]
+                                                        },
+                                                        "updated_by_requestor_username": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/updated_by_requestor_username",
+                                                            "type": "string",
+                                                            "title": "The updated_by_requestor_username schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "33d44460-XXXXXXXX-83a09fe4bbcd"
+                                                            ]
+                                                        },
+                                                        "cargo_parent_type": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cargo/items/anyOf/0/properties/cargo_parent_type",
+                                                            "type": "string",
+                                                            "title": "The cargo_parent_type schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "CONTAINER"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "trips": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips",
+                                        "type": "object",
+                                        "title": "The trips schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": {},
+                                        "examples": [
+                                            {
+                                                "client_company_id": 1,
+                                                "client_company_name": "Customs",
+                                                "created_by_date": "2021-09-21",
+                                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                                "drop_off_location": "Velvet Veldt",
+                                                "estimated_delivery_date": "2019-01-01",
+                                                "estimated_delivery_days": 12,
+                                                "estimated_pickup_date": "2019-01-01",
+                                                "estimated_return_date": null,
+                                                "estimated_total_days": 45,
+                                                "external_bill_of_lading": "Test Bol",
+                                                "first_estimated_delivery_date": "2020-02-02",
+                                                "load_name": "HYT45x0917",
+                                                "load_unit_of_measure": "METRIC_TONS",
+                                                "load_weight": 2,
+                                                "pickup_location": "Hiram Saltmarsh",
+                                                "return_yard": "Test_Yard",
+                                                "returned_timestamp": null,
+                                                "row_version": 1,
+                                                "shipments_id": 10000,
+                                                "trip_is_assigned": false,
+                                                "trip_notes": "Handle with care",
+                                                "trip_status": "CREATE",
+                                                "trip_type": "OUTSOURCED",
+                                                "trips_id": 100,
+                                                "updated_by_date": null,
+                                                "updated_by_requestor_username": null
+                                            }
+                                        ],
+                                        "required": [
+                                            "created_by_date",
+                                            "created_by_requestor_username",
+                                            "trip_is_assigned"
+                                        ],
+                                        "properties": {
+                                            "client_company_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/client_company_id",
+                                                "type": "integer",
+                                                "title": "The client_company_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "client_company_name": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/client_company_name",
+                                                "type": "string",
+                                                "title": "The client_company_name schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Customs"
+                                                ]
+                                            },
+                                            "created_by_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/created_by_date",
+                                                "type": "string",
+                                                "title": "The created_by_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2021-09-21"
+                                                ]
+                                            },
+                                            "created_by_requestor_username": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/created_by_requestor_username",
+                                                "type": "string",
+                                                "title": "The created_by_requestor_username schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "dd896ea6-XXXXXXXX-31027bb8d383"
+                                                ]
+                                            },
+                                            "drop_off_location": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/drop_off_location",
+                                                "type": "string",
+                                                "title": "The drop_off_location schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Velvet Veldt"
+                                                ]
+                                            },
+                                            "estimated_delivery_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/estimated_delivery_date",
+                                                "type": "string",
+                                                "title": "The estimated_delivery_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2019-01-01"
+                                                ]
+                                            },
+                                            "estimated_delivery_days": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/estimated_delivery_days",
+                                                "type": "integer",
+                                                "title": "The estimated_delivery_days schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    12
+                                                ]
+                                            },
+                                            "estimated_pickup_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/estimated_pickup_date",
+                                                "type": "string",
+                                                "title": "The estimated_pickup_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2019-01-01"
+                                                ]
+                                            },
+                                            "estimated_return_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/estimated_return_date",
+                                                "type": "null",
+                                                "title": "The estimated_return_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": null,
+                                                "examples": [
+                                                    null
+                                                ]
+                                            },
+                                            "estimated_total_days": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/estimated_total_days",
+                                                "type": "integer",
+                                                "title": "The estimated_total_days schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    45
+                                                ]
+                                            },
+                                            "external_bill_of_lading": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/external_bill_of_lading",
+                                                "type": "string",
+                                                "title": "The external_bill_of_lading schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Test Bol"
+                                                ]
+                                            },
+                                            "first_estimated_delivery_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/first_estimated_delivery_date",
+                                                "type": "string",
+                                                "title": "The first_estimated_delivery_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "2020-02-02"
+                                                ]
+                                            },
+                                            "load_name": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/load_name",
+                                                "type": "string",
+                                                "title": "The load_name schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "HYT45x0917"
+                                                ]
+                                            },
+                                            "load_unit_of_measure": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/load_unit_of_measure",
+                                                "type": "string",
+                                                "title": "The load_unit_of_measure schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "METRIC_TONS"
+                                                ]
+                                            },
+                                            "load_weight": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/load_weight",
+                                                "type": "integer",
+                                                "title": "The load_weight schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    2
+                                                ]
+                                            },
+                                            "pickup_location": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/pickup_location",
+                                                "type": "string",
+                                                "title": "The pickup_location schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Hiram Saltmarsh"
+                                                ]
+                                            },
+                                            "return_yard": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/return_yard",
+                                                "type": "string",
+                                                "title": "The return_yard schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Test_Yard"
+                                                ]
+                                            },
+                                            "returned_timestamp": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/returned_timestamp",
+                                                "type": "null",
+                                                "title": "The returned_timestamp schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": null,
+                                                "examples": [
+                                                    null
+                                                ]
+                                            },
+                                            "row_version": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/row_version",
+                                                "type": "integer",
+                                                "title": "The row_version schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    1
+                                                ]
+                                            },
+                                            "shipments_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/shipments_id",
+                                                "type": "integer",
+                                                "title": "The shipments_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    10000
+                                                ]
+                                            },
+                                            "trip_is_assigned": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/trip_is_assigned",
+                                                "type": "boolean",
+                                                "title": "The trip_is_assigned schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": false,
+                                                "examples": [
+                                                    false
+                                                ]
+                                            },
+                                            "trip_notes": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/trip_notes",
+                                                "type": "string",
+                                                "title": "The trip_notes schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Handle with care"
+                                                ]
+                                            },
+                                            "trip_status": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/trip_status",
+                                                "type": "string",
+                                                "title": "The trip_status schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "CREATE"
+                                                ]
+                                            },
+                                            "trip_type": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/trip_type",
+                                                "type": "string",
+                                                "title": "The trip_type schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "OUTSOURCED"
+                                                ]
+                                            },
+                                            "trips_id": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/trips_id",
+                                                "type": "integer",
+                                                "title": "The trips_id schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0,
+                                                "examples": [
+                                                    100
+                                                ]
+                                            },
+                                            "updated_by_date": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/updated_by_date",
+                                                "type": "null",
+                                                "title": "The updated_by_date schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": null,
+                                                "examples": [
+                                                    null
+                                                ]
+                                            },
+                                            "updated_by_requestor_username": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/trips/properties/updated_by_requestor_username",
+                                                "type": "null",
+                                                "title": "The updated_by_requestor_username schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": null,
+                                                "examples": [
+                                                    null
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": true
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "pagination": {
+                    "$id": "#/properties/message/properties/pagination",
+                    "type": "object",
+                    "title": "The pagination schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "limit": 2,
+                            "offset": 0,
+                            "total": 3
+                        }
+                    ],
+                    "required": [
+                        "limit",
+                        "offset",
+                        "total"
+                    ],
+                    "properties": {
+                        "limit": {
+                            "$id": "#/properties/message/properties/pagination/properties/limit",
+                            "type": "integer",
+                            "title": "The limit schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0,
+                            "examples": [
+                                2
+                            ]
+                        },
+                        "offset": {
+                            "$id": "#/properties/message/properties/pagination/properties/offset",
+                            "type": "integer",
+                            "title": "The offset schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0,
+                            "examples": [
+                                0
+                            ]
+                        },
+                        "total": {
+                            "$id": "#/properties/message/properties/pagination/properties/total",
+                            "type": "integer",
+                            "title": "The total schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0,
+                            "examples": [
+                                3
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
