@@ -1,244 +1,60 @@
 {
-    "$id": "http://example.com/example.json",
     "$schema": "http://json-schema.org/draft-07/schema",
-    "default": {},
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
+    "default": {},
     "examples": [
         {
-            "json-web-token": "FAKE TOKEN",
-            "aws-user-name": "sote-test",
-            "role-list": [
-                "ROLE_NAME1",
-                "ROLE_NAME2"
-            ],
-            "organizations-id": 1,
+            "record-limit-count": 10,
+            "record-offset": 0,
             "sort-order": {
                 "shipments-id": "ASC"
             },
-            "shipments-id": [
-                10064
-            ],
-            "message-id": "test",
-            "record-limit-count": 10,
-            "record-offset": 0,
             "filters": {
-                "or": [
+                "and": [
                     {
-                        "field-name": "fintrans-type",
-                        "operator": "=",
-                        "value": "customs taxes"
+                        "field-name": "shipment-status",
+                        "operator": "in",
+                        "value": [
+                            "STATUS_NAME1",
+                            "STATUS_NAME2"
+                        ]
                     },
                     {
-                        "field-name": "fintrans-type",
+                        "field-name": "client-company-id",
                         "operator": "=",
-                        "value": "CUSTOMS TAXES"
+                        "value": 1
                     }
                 ]
             }
         }
     ],
     "required": [
-        "json-web-token",
-        "aws-user-name",
-        "role-list",
-        "organizations-id",
-        "message-id",
         "record-limit-count",
         "record-offset"
     ],
-    "optional": [
-        "sort-order",
-        "shipments-id",
-        "filters"
-    ],
-    "title": "The root schema",
-    "type": "object",
+    "conditions": {
+        "enum": {
+            "filters": [
+                "and",
+                "or"
+            ],
+            "operator": [
+                ">",
+                "<",
+                "=",
+                ">=",
+                "<=",
+                "!=",
+                "<>",
+                "IN",
+                "NOT IN"
+            ]
+        }
+    },
     "properties": {
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
-            "type": "string",
-            "title": "The json-web-token schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "FAKE TOKEN"
-            ]
-        },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
-            "type": "string",
-            "title": "The aws-user-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "sote-test"
-            ]
-        },
-        "role-list": {
-            "$id": "#/properties/role-list",
-            "default": [],
-            "description": "An explanation about the purpose of this instance.",
-            "examples": [
-                [
-                    "ROLE_NAME1",
-                    "ROLE_NAME2"
-                ]
-            ],
-            "title": "The role-list schema",
-            "type": "array",
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/role-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/role-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
-                            "ROLE_NAME1",
-                            "ROLE_NAME2"
-                        ]
-                    }
-                ]
-            }
-        },
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "sort-order": {
-            "$id": "#/properties/sort-order",
-            "default": {},
-            "description": "An explanation about the purpose of this instance.",
-            "examples": [
-                {
-                    "shipments-id": "ASC"
-                }
-            ],
-            "title": "The sort-order schema",
-            "enum": [
-                {
-                    "shipment-fintrans-id": "ASC"
-                },
-                {
-                    "shipment-fintrans-id": "DESC"
-                },
-                {
-                    "organizations-id": "ASC"
-                },
-                {
-                    "organizations-id": "DESC"
-                },
-                {
-                    "client-company-id": "ASC"
-                },
-                {
-                    "client-company-id": "DESC"
-                },
-                {
-                    "shipments-id": "ASC"
-                },
-                {
-                    "shipments-id": "DESC"
-                },
-                {
-                    "fintrans-type": "ASC"
-                },
-                {
-                    "fintrans-type": "DESC"
-                },
-                {
-                    "currency-type": "ASC"
-                },
-                {
-                    "currency-type": "DESC"
-                },
-                {
-                    "transactions-amount": "ASC"
-                },
-                {
-                    "transactions-amount": "DESC"
-                },
-                {
-                    "transactions-timestamp": "ASC"
-                },
-                {
-                    "transactions-timestamp": "DESC"
-                },
-                {
-                    "created-by-requestor-username": "ASC"
-                },
-                {
-                    "created-by-requestor-username": "DESC"
-                },
-                {
-                    "bill-of-lading": "ASC"
-                },
-                {
-                    "bill-of-lading": "DESC"
-                },
-                {
-                    "memo": "ASC"
-                },
-                {
-                    "memo": "DESC"
-                },
-                {
-                    "cost-is-unexpected": "ASC"
-                },
-                {
-                    "cost-is-unexpected": "DESC"
-                }
-            ],
-            "type": "object",
-            "additionalProperties": true
-        },
-        "shipments-id": {
-            "$id": "#/properties/shipments-id",
-            "type": "array",
-            "title": "The shipments-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
-                    10064
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/shipments-id/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/shipments-id/items/anyOf/0",
-                        "type": "integer",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": 0,
-                        "examples": [
-                            10064
-                        ]
-                    }
-                ]
-            }
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "test"
-            ]
-        },
         "record-limit-count": {
             "$id": "#/properties/record-limit-count",
             "type": "integer",
@@ -259,6 +75,34 @@
                 0
             ]
         },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "type": "object",
+            "title": "The sort-order schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "shipments-id": "ASC"
+                }
+            ],
+            "required": [
+                "shipments-id"
+            ],
+            "properties": {
+                "shipments-id": {
+                    "$id": "#/properties/sort-order/properties/shipments-id",
+                    "type": "string",
+                    "title": "The shipments-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ASC"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
         "filters": {
             "$id": "#/properties/filters",
             "type": "object",
@@ -267,59 +111,68 @@
             "default": {},
             "examples": [
                 {
-                    "or": [
+                    "and": [
                         {
-                            "field-name": "fintrans-type",
-                            "operator": "=",
-                            "value": "customs taxes"
+                            "field-name": "shipment-status",
+                            "operator": "in",
+                            "value": [
+                                "STATUS_NAME1",
+                                "STATUS_NAME2"
+                            ]
                         },
                         {
-                            "field-name": "fintrans-type",
+                            "field-name": "client-company-id",
                             "operator": "=",
-                            "value": "CUSTOMS TAXES"
+                            "value": 1
                         }
                     ]
                 }
             ],
             "required": [
-                "or"
+                "and"
             ],
             "properties": {
-                "or": {
-                    "$id": "#/properties/filters/properties/or",
+                "and": {
+                    "$id": "#/properties/filters/properties/and",
                     "type": "array",
-                    "title": "The or schema",
+                    "title": "The and schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": [],
                     "examples": [
                         [
                             {
-                                "field-name": "fintrans-type",
-                                "operator": "=",
-                                "value": "customs taxes"
+                                "field-name": "shipment-status",
+                                "operator": "in",
+                                "value": [
+                                    "STATUS_NAME1",
+                                    "STATUS_NAME2"
+                                ]
                             },
                             {
-                                "field-name": "fintrans-type",
+                                "field-name": "client-company-id",
                                 "operator": "=",
-                                "value": "CUSTOMS TAXES"
+                                "value": 1
                             }
                         ]
                     ],
                     "additionalItems": true,
                     "items": {
-                        "$id": "#/properties/filters/properties/or/items",
+                        "$id": "#/properties/filters/properties/and/items",
                         "anyOf": [
                             {
-                                "$id": "#/properties/filters/properties/or/items/anyOf/0",
+                                "$id": "#/properties/filters/properties/and/items/anyOf/0",
                                 "type": "object",
                                 "title": "The first anyOf schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": {},
                                 "examples": [
                                     {
-                                        "field-name": "fintrans-type",
-                                        "operator": "=",
-                                        "value": "customs taxes"
+                                        "field-name": "shipment-status",
+                                        "operator": "in",
+                                        "value": [
+                                            "STATUS_NAME1",
+                                            "STATUS_NAME2"
+                                        ]
                                     }
                                 ],
                                 "required": [
@@ -329,55 +182,54 @@
                                 ],
                                 "properties": {
                                     "field-name": {
-                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/field-name",
-                                        "default": "",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "examples": [
-                                            "fintrans-type"
-                                        ],
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/field-name",
+                                        "type": "string",
                                         "title": "The field-name schema",
-                                        "enum": [
-                                            "shipment-fintrans-id",
-                                            "client-company-id",
-                                            "fintrans-type",
-                                            "currency-type",
-                                            "transactions-amount",
-                                            "transactions-timestamp",
-                                            "created-by-requestor-username",
-                                            "bill-of-lading",
-                                            "memo",
-                                            "cost-is-unexpected"
-                                        ],
-                                        "type": "string"
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "shipment-status"
+                                        ]
                                     },
                                     "operator": {
-                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/operator",
-                                        "default": "",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "examples": [
-                                            "="
-                                        ],
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/operator",
+                                        "type": "string",
                                         "title": "The operator schema",
-                                        "enum": [
-                                            ">",
-                                            "<",
-                                            "=",
-                                            ">=",
-                                            "<=",
-                                            "!=",
-                                            "<>"
-                                        ],
-                                        "type": "string"
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "in"
+                                        ]
                                     },
                                     "value": {
-                                        "$id": "#/properties/filters/properties/or/items/anyOf/0/properties/value",
-                                        "type": "string",
+                                        "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value",
+                                        "type": "array",
                                         "title": "The value schema",
                                         "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
+                                        "default": [],
                                         "examples": [
-                                            "customs taxes"
-                                        ]
+                                            [
+                                                "STATUS_NAME1",
+                                                "STATUS_NAME2"
+                                            ]
+                                        ],
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value/items/anyOf/0",
+                                                    "type": "string",
+                                                    "title": "The first anyOf schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "STATUS_NAME1",
+                                                        "STATUS_NAME2"
+                                                    ]
+                                                }
+                                            ]
+                                        }
                                     }
                                 },
                                 "additionalProperties": true
