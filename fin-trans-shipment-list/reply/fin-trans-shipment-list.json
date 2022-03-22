@@ -7,28 +7,40 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test",
+            "message-id": "test-list",
             "message": {
                 "items": [
                     {
-                        "shipmentfinancialtransactions_id": 1,
-                        "organizations_id": 1,
+                        "shipmentfinancialtransactions_id": 103,
+                        "organizations_id": 10000,
                         "client_company_id": 1,
-                        "client_company_name": "SOTE TEST",
-                        "shipments_id": 1,
-                        "financialtransactions_type": "LOAD",
+                        "client_company_name": "Inizes",
+                        "shipments_id": 10002,
+                        "financialtransactions_type": "SHIPPING_LINE_CHARGES",
                         "currency_type": "USD",
-                        "transactions_amount": 1,
-                        "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
-                        "created_by_requestor-username": "sote-test",
+                        "transactions_amount": 4642,
+                        "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
+                        "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
                         "bill_of_lading": "BOL",
-                        "memo": "Hey this is a new arrival",
-                        "cost_is_unexpected": false
+                        "memo": "",
+                        "cost_is_unexpected": false,
+                        "notes": [
+                            {
+                                "created_by_date": "2020-06-06",
+                                "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                "notes_id": 380,
+                                "notes_note": "{\"comment\":\"Paid directly\"}",
+                                "notes_owner_key": "103",
+                                "notes_owner_micro_service": "FINTRANS",
+                                "notes_type": "FINTRANS_SHIPMENT"
+                            }
+                        ]
                     }
                 ],
                 "pagination": {
-                    "total": 4,
-                    "limit": 10,
+                    "total": 1202,
+                    "limit": 1,
                     "offset": 0
                 }
             }
@@ -46,7 +58,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test"
+                "test-list"
             ]
         },
         "message": {
@@ -59,24 +71,36 @@
                 {
                     "items": [
                         {
-                            "shipmentfinancialtransactions_id": 1,
-                            "organizations_id": 1,
+                            "shipmentfinancialtransactions_id": 103,
+                            "organizations_id": 10000,
                             "client_company_id": 1,
-                            "client_company_name": "SOTE TEST",
-                            "shipments_id": 1,
-                            "financialtransactions_type": "LOAD",
+                            "client_company_name": "Inizes",
+                            "shipments_id": 10002,
+                            "financialtransactions_type": "SHIPPING_LINE_CHARGES",
                             "currency_type": "USD",
-                            "transactions_amount": 1,
-                            "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
-                            "created_by_requestor-username": "sote-test",
+                            "transactions_amount": 4642,
+                            "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
+                            "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
                             "bill_of_lading": "BOL",
-                            "memo": "Hey this is a new arrival",
-                            "cost_is_unexpected": false
+                            "memo": "",
+                            "cost_is_unexpected": false,
+                            "notes": [
+                                {
+                                    "created_by_date": "2020-06-06",
+                                    "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                    "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                    "notes_id": 380,
+                                    "notes_note": "{\"comment\":\"Paid directly\"}",
+                                    "notes_owner_key": "103",
+                                    "notes_owner_micro_service": "FINTRANS",
+                                    "notes_type": "FINTRANS_SHIPMENT"
+                                }
+                            ]
                         }
                     ],
                     "pagination": {
-                        "total": 4,
-                        "limit": 10,
+                        "total": 1202,
+                        "limit": 1,
                         "offset": 0
                     }
                 }
@@ -95,19 +119,31 @@
                     "examples": [
                         [
                             {
-                                "shipmentfinancialtransactions_id": 1,
-                                "organizations_id": 1,
+                                "shipmentfinancialtransactions_id": 103,
+                                "organizations_id": 10000,
                                 "client_company_id": 1,
-                                "client_company_name": "SOTE TEST",
-                                "shipments_id": 1,
-                                "financialtransactions_type": "LOAD",
+                                "client_company_name": "Inizes",
+                                "shipments_id": 10002,
+                                "financialtransactions_type": "SHIPPING_LINE_CHARGES",
                                 "currency_type": "USD",
-                                "transactions_amount": 1,
-                                "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
-                                "created_by_requestor-username": "sote-test",
+                                "transactions_amount": 4642,
+                                "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
+                                "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
                                 "bill_of_lading": "BOL",
-                                "memo": "Hey this is a new arrival",
-                                "cost_is_unexpected": false
+                                "memo": "",
+                                "cost_is_unexpected": false,
+                                "notes": [
+                                    {
+                                        "created_by_date": "2020-06-06",
+                                        "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                        "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                        "notes_id": 380,
+                                        "notes_note": "{\"comment\":\"Paid directly\"}",
+                                        "notes_owner_key": "103",
+                                        "notes_owner_micro_service": "FINTRANS",
+                                        "notes_type": "FINTRANS_SHIPMENT"
+                                    }
+                                ]
                             }
                         ]
                     ],
@@ -123,19 +159,31 @@
                                 "default": {},
                                 "examples": [
                                     {
-                                        "shipmentfinancialtransactions_id": 1,
-                                        "organizations_id": 1,
+                                        "shipmentfinancialtransactions_id": 103,
+                                        "organizations_id": 10000,
                                         "client_company_id": 1,
-                                        "client_company_name": "SOTE TEST",
-                                        "shipments_id": 1,
-                                        "financialtransactions_type": "LOAD",
+                                        "client_company_name": "Inizes",
+                                        "shipments_id": 10002,
+                                        "financialtransactions_type": "SHIPPING_LINE_CHARGES",
                                         "currency_type": "USD",
-                                        "transactions_amount": 1,
-                                        "transactions_timestamp": "2021-11-26T13:05:56.513742+03:00",
-                                        "created_by_requestor-username": "sote-test",
+                                        "transactions_amount": 4642,
+                                        "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
+                                        "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
                                         "bill_of_lading": "BOL",
-                                        "memo": "Hey this is a new arrival",
-                                        "cost_is_unexpected": false
+                                        "memo": "",
+                                        "cost_is_unexpected": false,
+                                        "notes": [
+                                            {
+                                                "created_by_date": "2020-06-06",
+                                                "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                                "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                                "notes_id": 380,
+                                                "notes_note": "{\"comment\":\"Paid directly\"}",
+                                                "notes_owner_key": "103",
+                                                "notes_owner_micro_service": "FINTRANS",
+                                                "notes_type": "FINTRANS_SHIPMENT"
+                                            }
+                                        ]
                                     }
                                 ],
                                 "required": [
@@ -149,7 +197,10 @@
                                     "transactions_amount",
                                     "transactions_timestamp",
                                     "created_by_requestor-username",
-                                    "cost_is_unexpected"
+                                    "bill_of_lading",
+                                    "memo",
+                                    "cost_is_unexpected",
+                                    "notes"
                                 ],
                                 "properties": {
                                     "shipmentfinancialtransactions_id": {
@@ -159,7 +210,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1
+                                            103
                                         ]
                                     },
                                     "organizations_id": {
@@ -169,7 +220,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1
+                                            10000
                                         ]
                                     },
                                     "client_company_id": {
@@ -189,7 +240,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "SOTE TEST"
+                                            "Inizes"
                                         ]
                                     },
                                     "shipments_id": {
@@ -199,7 +250,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1
+                                            10002
                                         ]
                                     },
                                     "financialtransactions_type": {
@@ -209,7 +260,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "LOAD"
+                                            "SHIPPING_LINE_CHARGES"
                                         ]
                                     },
                                     "currency_type": {
@@ -229,7 +280,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
                                         "examples": [
-                                            1
+                                            4642
                                         ]
                                     },
                                     "transactions_timestamp": {
@@ -239,7 +290,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "2021-11-26T13:05:56.513742+03:00"
+                                            "2020-06-06T05:36:10.941431Z"
                                         ]
                                     },
                                     "created_by_requestor-username": {
@@ -249,7 +300,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "sote-test"
+                                            "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0"
                                         ]
                                     },
                                     "bill_of_lading": {
@@ -269,7 +320,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "Hey this is a new arrival"
+                                            ""
                                         ]
                                     },
                                     "cost_is_unexpected": {
@@ -281,6 +332,145 @@
                                         "examples": [
                                             false
                                         ]
+                                    },
+                                    "notes": {
+                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes",
+                                        "type": "array",
+                                        "title": "The notes schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": [],
+                                        "examples": [
+                                            [
+                                                {
+                                                    "created_by_date": "2020-06-06",
+                                                    "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                                    "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                                    "notes_id": 380,
+                                                    "notes_note": "{\"comment\":\"Paid directly\"}",
+                                                    "notes_owner_key": "103",
+                                                    "notes_owner_micro_service": "FINTRANS",
+                                                    "notes_type": "FINTRANS_SHIPMENT"
+                                                }
+                                            ]
+                                        ],
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0",
+                                                    "type": "object",
+                                                    "title": "The first anyOf schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "created_by_date": "2020-06-06",
+                                                            "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
+                                                            "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
+                                                            "notes_id": 380,
+                                                            "notes_note": "{\"comment\":\"Paid directly\"}",
+                                                            "notes_owner_key": "103",
+                                                            "notes_owner_micro_service": "FINTRANS",
+                                                            "notes_type": "FINTRANS_SHIPMENT"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "created_by_date",
+                                                        "created_by_requestor_username",
+                                                        "created_timestamp",
+                                                        "notes_id",
+                                                        "notes_note",
+                                                        "notes_owner_key",
+                                                        "notes_owner_micro_service",
+                                                        "notes_type"
+                                                    ],
+                                                    "properties": {
+                                                        "created_by_date": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_by_date",
+                                                            "type": "string",
+                                                            "title": "The created_by_date schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "2020-06-06"
+                                                            ]
+                                                        },
+                                                        "created_by_requestor_username": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_by_requestor_username",
+                                                            "type": "string",
+                                                            "title": "The created_by_requestor_username schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0"
+                                                            ]
+                                                        },
+                                                        "created_timestamp": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_timestamp",
+                                                            "type": "string",
+                                                            "title": "The created_timestamp schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "2020-06-06T05:36:11.445616+00:00"
+                                                            ]
+                                                        },
+                                                        "notes_id": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_id",
+                                                            "type": "integer",
+                                                            "title": "The notes_id schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0,
+                                                            "examples": [
+                                                                380
+                                                            ]
+                                                        },
+                                                        "notes_note": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_note",
+                                                            "type": "string",
+                                                            "title": "The notes_note schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "{\"comment\":\"Paid directly\"}"
+                                                            ]
+                                                        },
+                                                        "notes_owner_key": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_owner_key",
+                                                            "type": "string",
+                                                            "title": "The notes_owner_key schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "103"
+                                                            ]
+                                                        },
+                                                        "notes_owner_micro_service": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_owner_micro_service",
+                                                            "type": "string",
+                                                            "title": "The notes_owner_micro_service schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "FINTRANS"
+                                                            ]
+                                                        },
+                                                        "notes_type": {
+                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_type",
+                                                            "type": "string",
+                                                            "title": "The notes_type schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "FINTRANS_SHIPMENT"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                }
+                                            ]
+                                        }
                                     }
                                 },
                                 "additionalProperties": true
@@ -296,8 +486,8 @@
                     "default": {},
                     "examples": [
                         {
-                            "total": 4,
-                            "limit": 10,
+                            "total": 1202,
+                            "limit": 1,
                             "offset": 0
                         }
                     ],
@@ -314,7 +504,7 @@
                             "description": "An explanation about the purpose of this instance.",
                             "default": 0,
                             "examples": [
-                                4
+                                1202
                             ]
                         },
                         "limit": {
@@ -324,7 +514,7 @@
                             "description": "An explanation about the purpose of this instance.",
                             "default": 0,
                             "examples": [
-                                10
+                                1
                             ]
                         },
                         "offset": {
