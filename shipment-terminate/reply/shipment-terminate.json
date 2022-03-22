@@ -7,80 +7,46 @@
     "default": {},
     "examples": [
         {
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "message": {
-                "shipments_id": 1,
-                "ship_row_version": 3,
-                "shipment_status": "CANXXX"
-            }
+            "shipments-id": 1,
+            "row-version": 1,
+            "shipment_status": "CANCEL"
         }
     ],
     "required": [
-        "message-id",
-        "message"
+        "shipments-id",
+        "row-version",
+        "shipment_status"
     ],
     "properties": {
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "This is a unique identifier of each message.",
-            "default": "",
+        "shipments-id": {
+            "$id": "#/properties/shipments-id",
+            "type": "integer",
+            "title": "The shipments-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
             "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
+                1
             ]
         },
-        "message": {
-            "$id": "#/properties/message",
-            "type": "object",
-            "title": "The message schema",
-            "description": "This identifies that this section contains response message items.",
-            "default": {},
+        "row-version": {
+            "$id": "#/properties/row-version",
+            "type": "integer",
+            "title": "The row-version schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
             "examples": [
-                {
-                    "shipments_id": 1,
-                    "ship_row_version": 3,
-                    "shipment_status": "CANXXX"
-                }
-            ],
-            "required": [
-                "shipments_id",
-                "ship_row_version",
-                "shipment_status"
-            ],
-            "properties": {
-                "shipments_id": {
-                    "$id": "#/properties/message/properties/shipments_id",
-                    "type": "integer",
-                    "title": "The shipments_id schema",
-                    "description": "This is a system generated id to make shipments unique",
-                    "default": 0,
-                    "examples": [
-                        1
-                    ]
-                },
-                "ship_row_version": {
-                    "$id": "#/properties/message/properties/ship_row_version",
-                    "type": "integer",
-                    "title": "The ship_row_version schema",
-                    "description": "This is a system generated number that is used to control updates to the record",
-                    "default": 0,
-                    "examples": [
-                        3
-                    ]
-                },
-                "shipment_status": {
-                    "$id": "#/properties/message/properties/shipment_status",
-                    "type": "string",
-                    "title": "The shipment_status schema",
-                    "description": "This is the state of the shipment",
-                    "default": "",
-                    "examples": [
-                        "CANXXX"
-                    ]
-                }
-            },
-            "additionalProperties": true
+                1
+            ]
+        },
+        "shipment_status": {
+            "$id": "#/properties/shipment_status",
+            "type": "string",
+            "title": "The shipment_status schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "CANCEL"
+            ]
         }
     },
     "additionalProperties": true

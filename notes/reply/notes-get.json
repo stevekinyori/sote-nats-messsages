@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test-get",
+      "message": {
+        "notes_id": 98,
+        "organizations_id": 10000,
+        "notes_owner_micro_service": "SHIPMENTS",
+        "notes_owner_key": "1",
+        "notes_type": "SHIPMENT_NOTIFICATION",
+        "notes_note": "Update note test",
+        "created_by_date": "2022-03-09T00:00:00Z",
+        "created_by_requestor_username": "DELETE_ME_TEST",
+        "created_timestamp": "2022-03-09T04:03:42.198959+03:00"
+      }
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "test-get"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "object",
+      "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "notes_id": 98,
+          "organizations_id": 10000,
+          "notes_owner_micro_service": "SHIPMENTS",
+          "notes_owner_key": "1",
+          "notes_type": "SHIPMENT_NOTIFICATION",
+          "notes_note": "Update note test",
+          "created_by_date": "2022-03-09T00:00:00Z",
+          "created_by_requestor_username": "DELETE_ME_TEST",
+          "created_timestamp": "2022-03-09T04:03:42.198959+03:00"
+        }
+      ],
+      "required": [
+        "notes_id",
+        "organizations_id",
+        "notes_owner_micro_service",
+        "notes_owner_key",
+        "notes_type",
+        "notes_note",
+        "created_by_date",
+        "created_by_requestor_username",
+        "created_timestamp"
+      ],
+      "properties": {
+        "notes_id": {
+          "$id": "#/properties/message/properties/notes_id",
+          "type": "integer",
+          "title": "The notes_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            98
+          ]
+        },
+        "organizations_id": {
+          "$id": "#/properties/message/properties/organizations_id",
+          "type": "integer",
+          "title": "The organizations_id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            10000
+          ]
+        },
+        "notes_owner_micro_service": {
+          "$id": "#/properties/message/properties/notes_owner_micro_service",
+          "type": "string",
+          "title": "The notes_owner_micro_service schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "SHIPMENTS"
+          ]
+        },
+        "notes_owner_key": {
+          "$id": "#/properties/message/properties/notes_owner_key",
+          "type": "string",
+          "title": "The notes_owner_key schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "1"
+          ]
+        },
+        "notes_type": {
+          "$id": "#/properties/message/properties/notes_type",
+          "type": "string",
+          "title": "The notes_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "SHIPMENT_NOTIFICATION"
+          ]
+        },
+        "notes_note": {
+          "$id": "#/properties/message/properties/notes_note",
+          "type": "string",
+          "title": "The notes_note schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Update note test"
+          ]
+        },
+        "created_by_date": {
+          "$id": "#/properties/message/properties/created_by_date",
+          "type": "string",
+          "title": "The created_by_date schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2022-03-09T00:00:00Z"
+          ]
+        },
+        "created_by_requestor_username": {
+          "$id": "#/properties/message/properties/created_by_requestor_username",
+          "type": "string",
+          "title": "The created_by_requestor_username schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "DELETE_ME_TEST"
+          ]
+        },
+        "created_timestamp": {
+          "$id": "#/properties/message/properties/created_timestamp",
+          "type": "string",
+          "title": "The created_timestamp schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2022-03-09T04:03:42.198959+03:00"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

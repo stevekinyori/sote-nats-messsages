@@ -7,16 +7,8 @@
     "default": {},
     "examples": [
         {
-            "json-web-token": "eyJraWQiOvxxxxxxxxxxxxxxxx",
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "aws-user-name": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-            "role-list": [
-                "ROLE_NAME1",
-                "ROLE_NAME2"
-            ],
-            "organizations-id": 1,
             "containers-id": 1,
-            "container-row-version": 1,
+            "row-version": 1,
             "container-tag": "TAG 001",
             "container-form-factor": "20",
             "shipments-id": 1,
@@ -26,108 +18,25 @@
         }
     ],
     "required": [
-        "json-web-token",
-        "message-id",
-        "aws-user-name",
-        "role-list",
-        "organizations-id",
         "containers-id",
-        "container-row-version"
-    ],
-    "optional": [
-        "container-tag",
-        "container-form-factor",
-        "shipments-id",
-        "trips-id",
-        "cargo-gross-wgt",
-        "cargo-gross-uom"
+        "row-version"
     ],
     "properties": {
-        "json-web-token": {
-            "$id": "#/properties/json-web-token",
-            "type": "string",
-            "title": "The json-web-token schema",
-            "description": "Authentication JWT.",
-            "default": "",
-            "examples": [
-                "eyJraWQiOvxxxxxxxxxxxxxxxx"
-            ]
-        },
-        "message-id": {
-            "$id": "#/properties/message-id",
-            "type": "string",
-            "title": "The message-id schema",
-            "description": "This is a unique identifier of each message.",
-            "default": "",
-            "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
-            ]
-        },
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
-            "type": "string",
-            "title": "The aws-user-name schema",
-            "description": "The Cognito username for the person who is requesting the record change.",
-            "default": "",
-            "examples": [
-                "d8b0e9d9-XXXXXXXX-f59910ef9d2b"
-            ]
-        },
-        "role-list": {
-            "$id": "#/properties/role-list",
-            "type": "array",
-            "title": "The role-list schema",
-            "description": "The roles that the user requesting the record change has been assigned.",
-            "default": [],
-            "examples": [
-                [
-                    "ROLE_NAME1",
-                    "ROLE_NAME2"
-                ]
-            ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/role-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/role-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "Instance of user role list.",
-                        "default": "",
-                        "examples": [
-                            "ROLE_NAME1",
-                            "ROLE_NAME2"
-                        ]
-                    }
-                ]
-            }
-        },
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "This is a system generated id that is used to restrict access to customers data.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
         "containers-id": {
             "$id": "#/properties/containers-id",
             "type": "integer",
             "title": "The containers-id schema",
-            "description": "This is a system generated id for a container assigned to a container.",
+            "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 1
             ]
         },
-        "container-row-version": {
-            "$id": "#/properties/container-row-version",
+        "row-version": {
+            "$id": "#/properties/row-version",
             "type": "integer",
-            "title": "The container-row-version schema",
-            "description": "This is a system generated number that is used to control updates to the record.",
+            "title": "The row-version schema",
+            "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 1
@@ -137,7 +46,7 @@
             "$id": "#/properties/container-tag",
             "type": "string",
             "title": "The container-tag schema",
-            "description": "The external identifier used to identify the container.",
+            "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "TAG 001"
@@ -147,7 +56,7 @@
             "$id": "#/properties/container-form-factor",
             "type": "string",
             "title": "The container-form-factor schema",
-            "description": "The length of the container in feet.",
+            "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "20"
@@ -157,7 +66,7 @@
             "$id": "#/properties/shipments-id",
             "type": "integer",
             "title": "The shipments-id schema",
-            "description": "This is the system generated id for the shipment.",
+            "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 1
@@ -167,7 +76,7 @@
             "$id": "#/properties/trips-id",
             "type": "integer",
             "title": "The trips-id schema",
-            "description": "This is the system generated id for the trip.",
+            "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 1
@@ -177,7 +86,7 @@
             "$id": "#/properties/cargo-gross-wgt",
             "type": "integer",
             "title": "The cargo-gross-wgt schema",
-            "description": "The gross weight per container, NOT including the container weight (tare).",
+            "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 20178
@@ -187,7 +96,7 @@
             "$id": "#/properties/cargo-gross-uom",
             "type": "string",
             "title": "The cargo-gross-uom schema",
-            "description": "What measurement is used for the weight supplied.",
+            "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
                 "KGS"

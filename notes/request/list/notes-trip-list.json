@@ -1,0 +1,216 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "record-limit-count": 10,
+            "record-offset": 0,
+            "trips-id": [
+                "10000",
+                "1"
+            ],
+            "filters": {
+                "AND": [
+                    {
+                        "field-name": "notes-type",
+                        "operator": "=",
+                        "value": "USER_DEFINED_LOV"
+                    }
+                ]
+            },
+            "sort-order": {
+                "notes-id": "ASC"
+            }
+        }
+    ],
+    "required": [
+        "record-limit-count",
+        "record-offset",
+        "trips-id"
+
+    ],
+    "optional":[
+    "filters",
+    "sort-order"
+    ],
+    "properties": {
+        "record-limit-count": {
+            "$id": "#/properties/record-limit-count",
+            "default": 0,
+            "description": "This is the number of records that will be returned.",
+            "examples": [
+                10
+            ],
+            "title": "The record-limit-count schema",
+            "type": "integer"
+        },
+        "record-offset": {
+            "$id": "#/properties/record-offset",
+            "default": 0,
+            "description": "This determines number of rows to skip  before returning records.",
+            "examples": [
+                0
+            ],
+            "title": "The record-offset schema",
+            "type": "integer"
+        },
+        "trips-id": {
+            "$id": "#/properties/trips-id",
+            "default": [],
+            "description": "JSON array of system generated ids to make trips unique .",
+            "examples": [
+                [
+                    "10000",
+                    "1"
+                ]
+            ],
+            "title": "The trips-id schema",
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/trips-id/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/trips-id/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "10000",
+                            "1"
+                        ]
+                    }
+                ]
+            }
+        },
+        "filters": {
+            "$id": "#/properties/filters",
+            "type": "object",
+            "title": "The filters schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "AND": [
+                        {
+                            "field-name": "notes-type",
+                            "operator": "=",
+                            "value": "USER_DEFINED_LOV"
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "AND"
+            ],
+            "properties": {
+                "AND": {
+                    "$id": "#/properties/filters/properties/AND",
+                    "type": "array",
+                    "title": "The AND schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "field-name": "notes-type",
+                                "operator": "=",
+                                "value": "USER_DEFINED_LOV"
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/filters/properties/AND/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/filters/properties/AND/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "field-name": "notes-type",
+                                        "operator": "=",
+                                        "value": "USER_DEFINED_LOV"
+                                    }
+                                ],
+                                "required": [
+                                    "field-name",
+                                    "operator",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "field-name": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/field-name",
+                                        "type": "string",
+                                        "title": "The field-name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "notes-type"
+                                        ]
+                                    },
+                                    "operator": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/operator",
+                                        "type": "string",
+                                        "title": "The operator schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "="
+                                        ]
+                                    },
+                                    "value": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/value",
+                                        "type": "string",
+                                        "title": "The value schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "USER_DEFINED_LOV"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "default": {},
+            "description": "This is the sequence list items will be returned.",
+            "examples": [
+                {
+                    "notes-id": "ASC"
+                }
+            ],
+            "title": "The sort-order schema",
+            "type": "object",
+            "properties": {
+                "notes-id": {
+                    "$id": "#/properties/sort-order/properties/notes-id",
+                    "type": "string",
+                    "title": "The notes-id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ASC"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

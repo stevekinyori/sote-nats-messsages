@@ -1,0 +1,165 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "organizations-id": 10000,
+            "user-login-type": "email",
+            "user-phone-country-code": "+254",
+            "user-phone-number": "712345678",
+            "user-email": "test@test.com",
+            "user-first-name": "Test",
+            "user-middle-name": "User",
+            "user-last-name": "Test",
+            "user-role-list": [
+                "ROLE NAME",
+                "ROLE NAME"
+            ],
+            "client-company-id": 1
+        }
+    ],
+    "required": [
+        "organizations-id",
+        "user-login-type",
+        "user-phone-country-code",
+        "user-phone-number",
+        "user-email",
+        "user-role-list"
+    ],
+    "optional": [
+        "user-first-name",
+        "user-middle-name",
+        "user-last-name",
+        "client-company-id"
+    ],
+    "properties": {
+        "organizations-id": {
+            "$id": "#/properties/organizations-id",
+            "type": "integer",
+            "title": "The organizations-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10000
+            ]
+        },
+        "user-login-type": {
+            "$id": "#/properties/user-login-type",
+            "default": "",
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                "email"
+            ],
+            "title": "The user-login-type schema",
+            "enum": [
+                "email",
+                "phone"
+            ],
+            "type": "string"
+        },
+        "user-phone-country-code": {
+            "$id": "#/properties/user-phone-country-code",
+            "type": "string",
+            "title": "The user-phone-country-code schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "+254"
+            ]
+        },
+        "user-phone-number": {
+            "$id": "#/properties/user-phone-number",
+            "type": "string",
+            "title": "The user-phone-number schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "712345678"
+            ]
+        },
+        "user-email": {
+            "$id": "#/properties/user-email",
+            "type": "string",
+            "title": "The user-email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test@test.com"
+            ]
+        },
+        "user-first-name": {
+            "$id": "#/properties/user-first-name",
+            "type": "string",
+            "title": "The user-first-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test"
+            ]
+        },
+        "user-middle-name": {
+            "$id": "#/properties/user-middle-name",
+            "type": "string",
+            "title": "The user-middle-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "User"
+            ]
+        },
+        "user-last-name": {
+            "$id": "#/properties/user-last-name",
+            "type": "string",
+            "title": "The user-last-name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test"
+            ]
+        },
+        "user-role-list": {
+            "$id": "#/properties/user-role-list",
+            "type": "array",
+            "title": "The user-role-list schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "ROLE NAME",
+                    "ROLE NAME"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/user-role-list/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/user-role-list/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "ROLE NAME"
+                        ]
+                    }
+                ]
+            }
+        },
+        "client-company-id": {
+            "$id": "#/properties/client-company-id",
+            "type": "integer",
+            "title": "The client-company-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        }
+    },
+    "additionalProperties": true
+}

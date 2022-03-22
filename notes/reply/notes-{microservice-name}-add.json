@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test-add",
+      "message": {
+        "notes-id": 128
+      }
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "default": "",
+      "description": "This is used to uniquely identify devices.",
+      "examples": [
+        "test-add"
+      ],
+      "title": "The message-id schema",
+      "type": "string"
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "default": {},
+      "description": "This contains the response.",
+      "examples": [
+        {
+          "notes-id": 128
+        }
+      ],
+      "required": [
+        "notes-id"
+      ],
+      "title": "The message schema",
+      "type": "object",
+      "properties": {
+        "notes-id": {
+          "$id": "#/properties/message/properties/notes-id",
+          "default": 0,
+          "description": "This is a system generated id that is used to identify the added note.",
+          "examples": [
+            128
+          ],
+          "title": "The notes-id schema",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

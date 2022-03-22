@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "jobcards-id": [
+        "1"
+      ],
+      "notes-type": "VEHICLE_ALLOCATION",
+      "notes-note": "Updated add example note 2",
+      "syntax-type": "TEXT"
+    }
+  ],
+  "required": [
+    "jobcards-id",
+    "notes-type",
+    "notes-note",
+    "syntax-type"
+  ],
+  "properties": {
+    "jobcards-id": {
+      "$id": "#/properties/jobcards-id",
+      "default": [],
+      "description": "This is a system generated id(s) that is used to restrict access to jobcards micro-service data. This is the source table primary key field value.",
+      "examples": [
+        [
+          "1"
+        ]
+      ],
+      "title": "The jobcards-id schema",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/jobcards-id/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/jobcards-id/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    "notes-type": {
+      "$id": "#/properties/notes-type",
+      "default": "",
+      "description": "This is the type of note.",
+      "examples": [
+        "VEHICLE_ALLOCATION"
+      ],
+      "title": "The notes-type schema",
+      "type": "string"
+    },
+    "notes-note": {
+      "$id": "#/properties/notes-note",
+      "default": "",
+      "description": "This is the note either TEXT or JSON string.",
+      "examples": [
+        "Updated add example note 2"
+      ],
+      "title": "The notes-note schema",
+      "type": "string"
+    },
+    "syntax-type": {
+      "$id": "#/properties/syntax-type",
+      "default": "",
+      "description": "The note format JSON|TEXT. Default is TEXT.",
+      "examples": [
+        "TEXT"
+      ],
+      "title": "The syntax-type schema",
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
