@@ -41,6 +41,18 @@
                 "and",
                 "or"
             ],
+            "field-name": [
+                "shipments-id",
+                "client-company-id",
+                "fintrans-type",
+                "currency-type",
+                "transactions-amount",
+                "transactions-timestamp",
+                "created-by-requestor-username",
+                "bill-of-lading",
+                "memo",
+                "cost-is-unexpected"
+            ],
             "operator": [
                 ">",
                 "<",
