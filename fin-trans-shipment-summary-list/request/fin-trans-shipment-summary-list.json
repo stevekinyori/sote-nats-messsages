@@ -23,7 +23,7 @@
       }
     }
   ],
-  "required": [
+  "optional": [
     "filters"
   ],
   "properties": {
