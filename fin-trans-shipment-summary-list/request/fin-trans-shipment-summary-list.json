@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "filters": {
+        "and": [
+          {
+            "field-name": "shipments-id",
+            "operator": "=",
+            "value": 10124
+          },
+          {
+            "field-name": "client-company-id",
+            "operator": "=",
+            "value": 100
+          }
+        ]
+      }
+    }
+  ],
+  "required": [
+    "filters"
+  ],
+  "properties": {
+    "filters": {
+      "$id": "#/properties/filters",
+      "type": "object",
+      "title": "The filters schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "and": [
+            {
+              "field-name": "shipments-id",
+              "operator": "=",
+              "value": 10124
+            },
+            {
+              "field-name": "client-company-id",
+              "operator": "=",
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "required": [
+        "and"
+      ],
+      "properties": {
+        "and": {
+          "$id": "#/properties/filters/properties/and",
+          "type": "array",
+          "title": "The and schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              {
+                "field-name": "shipments-id",
+                "operator": "=",
+                "value": 10124
+              },
+              {
+                "field-name": "client-company-id",
+                "operator": "=",
+                "value": 100
+              }
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/filters/properties/and/items",
+            "anyOf": [
+              {
+                "$id": "#/properties/filters/properties/and/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "field-name": "shipments-id",
+                    "operator": "=",
+                    "value": 10124
+                  }
+                ],
+                "required": [
+                  "field-name",
+                  "operator",
+                  "value"
+                ],
+                "properties": {
+                  "field-name": {
+                    "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/field-name",
+                    "type": "string",
+                    "title": "The field-name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "shipments-id"
+                    ]
+                  },
+                  "operator": {
+                    "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/operator",
+                    "type": "string",
+                    "title": "The operator schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "="
+                    ]
+                  },
+                  "value": {
+                    "$id": "#/properties/filters/properties/and/items/anyOf/0/properties/value",
+                    "type": "integer",
+                    "title": "The value schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      10124
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

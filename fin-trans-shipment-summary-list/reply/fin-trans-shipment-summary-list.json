@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test-list",
+      "message": {
+        "totalInvoiceAmountKsh": 1068453421.9031284,
+        "totalInvoiceAmountUsd": 9078964.328887017,
+        "totalExpectedCostKsh": 1066137984.1791284,
+        "totalExpectedCostUsd": 9074156.98888702,
+        "totalUnexpectedCostKsh": 2315437.724,
+        "totalUnexpectedCostUsd": 4807.339999999999
+      }
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "test-list"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "object",
+      "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "totalInvoiceAmountKsh": 1068453421.9031284,
+          "totalInvoiceAmountUsd": 9078964.328887017,
+          "totalExpectedCostKsh": 1066137984.1791284,
+          "totalExpectedCostUsd": 9074156.98888702,
+          "totalUnexpectedCostKsh": 2315437.724,
+          "totalUnexpectedCostUsd": 4807.339999999999
+        }
+      ],
+      "required": [
+        "totalInvoiceAmountKsh",
+        "totalInvoiceAmountUsd",
+        "totalExpectedCostKsh",
+        "totalExpectedCostUsd",
+        "totalUnexpectedCostKsh",
+        "totalUnexpectedCostUsd"
+      ],
+      "properties": {
+        "totalInvoiceAmountKsh": {
+          "$id": "#/properties/message/properties/totalInvoiceAmountKsh",
+          "type": "number",
+          "title": "The totalInvoiceAmountKsh schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            1068453421.9031284
+          ]
+        },
+        "totalInvoiceAmountUsd": {
+          "$id": "#/properties/message/properties/totalInvoiceAmountUsd",
+          "type": "number",
+          "title": "The totalInvoiceAmountUsd schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            9078964.328887017
+          ]
+        },
+        "totalExpectedCostKsh": {
+          "$id": "#/properties/message/properties/totalExpectedCostKsh",
+          "type": "number",
+          "title": "The totalExpectedCostKsh schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            1066137984.1791284
+          ]
+        },
+        "totalExpectedCostUsd": {
+          "$id": "#/properties/message/properties/totalExpectedCostUsd",
+          "type": "number",
+          "title": "The totalExpectedCostUsd schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            9074156.98888702
+          ]
+        },
+        "totalUnexpectedCostKsh": {
+          "$id": "#/properties/message/properties/totalUnexpectedCostKsh",
+          "type": "number",
+          "title": "The totalUnexpectedCostKsh schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            2315437.724
+          ]
+        },
+        "totalUnexpectedCostUsd": {
+          "$id": "#/properties/message/properties/totalUnexpectedCostUsd",
+          "type": "number",
+          "title": "The totalUnexpectedCostUsd schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            4807.339999999999
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
