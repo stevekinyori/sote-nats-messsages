@@ -7,102 +7,27 @@
 	"default": {},
 	"examples": [
 		{
-			"json-web-token": "FAKE TOKEN",
-			"aws-user-name": "sote-test",
-			"role-list": [
-				"ROLE_NAME1",
-				"ROLE_NAME2"
-			],
-			"organizations-id": 1,
 			"shipments-id": 1,
 			"currency": "USD",
 			"amount": 1,
 			"fintrans-type": "AGENCY_FEES",
 			"client-company-id": 1,
-			"message-id": "test",
 			"cost-is-unexpected": false,
 			"memo": "Hey this is a new arrival",
 			"bill-of-lading": "BOL"
 		}
 	],
 	"required": [
-		"json-web-token",
-		"aws-user-name",
-		"role-list",
-		"organizations-id",
 		"shipments-id",
 		"currency",
 		"amount",
 		"fintrans-type",
 		"client-company-id",
-		"message-id"
-	],
-	"optional": [
-         "cost-is-unexpected",
-	     "memo",
-	     "bill-of-lading"
+		"cost-is-unexpected",
+		"memo",
+		"bill-of-lading"
 	],
 	"properties": {
-		"json-web-token": {
-			"$id": "#/properties/json-web-token",
-			"type": "string",
-			"title": "The json-web-token schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": "",
-			"examples": [
-				"FAKE TOKEN"
-			]
-		},
-		"aws-user-name": {
-			"$id": "#/properties/aws-user-name",
-			"type": "string",
-			"title": "The aws-user-name schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": "",
-			"examples": [
-				"sote-test"
-			]
-		},
-		"role-list": {
-			"$id": "#/properties/role-list",
-			"type": "array",
-			"title": "The role-list schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": [],
-			"examples": [
-				[
-					"ROLE_NAME1",
-					"ROLE_NAME2"
-				]
-			],
-			"additionalItems": true,
-			"items": {
-				"$id": "#/properties/role-list/items",
-				"anyOf": [
-					{
-						"$id": "#/properties/role-list/items/anyOf/0",
-						"type": "string",
-						"title": "The first anyOf schema",
-						"description": "An explanation about the purpose of this instance.",
-						"default": "",
-						"examples": [
-							"ROLE_NAME1",
-							"ROLE_NAME2"
-						]
-					}
-				]
-			}
-		},
-		"organizations-id": {
-			"$id": "#/properties/organizations-id",
-			"type": "integer",
-			"title": "The organizations-id schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": 0,
-			"examples": [
-				1
-			]
-		},
 		"shipments-id": {
 			"$id": "#/properties/shipments-id",
 			"type": "integer",
@@ -115,17 +40,13 @@
 		},
 		"currency": {
 			"$id": "#/properties/currency",
-			"default": "",
+			"type": "string",
+			"title": "The currency schema",
 			"description": "An explanation about the purpose of this instance.",
+			"default": "",
 			"examples": [
 				"USD"
-			],
-			"title": "The currency schema",
-			"enum": [
-				"USD",
-				"KSH"
-			],
-			"type": "string"
+			]
 		},
 		"amount": {
 			"$id": "#/properties/amount",
@@ -139,32 +60,13 @@
 		},
 		"fintrans-type": {
 			"$id": "#/properties/fintrans-type",
-			"default": "",
+			"type": "string",
+			"title": "The fintrans-type schema",
 			"description": "An explanation about the purpose of this instance.",
+			"default": "",
 			"examples": [
 				"AGENCY_FEES"
-			],
-			"title": "The fintrans-type schema",
-			"enum": [
-				"AGENCY_FEES",
-				"CONTAINER_DEPOSIT",
-				"CONTAINER_REPAIRS",
-				"CUSTOMS_TAXES",
-				"DEMURRAGE_CHARGES",
-				"DOCUMENT_PROCESSING_FEES",
-				"F147",
-				"FEES_FOR_BOL",
-				"FORWARDERS_CHARGES",
-				"TRANSPORT_CHARGES",
-				"HANDING_OVER_FEES",
-				"IDF_FEES",
-				"OTHER_CHARGES",
-				"PARKING_FEES",
-				"PORT_CHARGES",
-				"SHIPPING_LINE_CHARGES",
-				"STORAGE_CHARGES"
-			],
-			"type": "string"
+			]
 		},
 		"client-company-id": {
 			"$id": "#/properties/client-company-id",
@@ -174,16 +76,6 @@
 			"default": 0,
 			"examples": [
 				1
-			]
-		},
-		"message-id": {
-			"$id": "#/properties/message-id",
-			"type": "string",
-			"title": "The message-id schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": "",
-			"examples": [
-				"test"
 			]
 		},
 		"cost-is-unexpected": {

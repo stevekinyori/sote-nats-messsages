@@ -7,86 +7,13 @@
   "default": {},
   "examples": [
     {
-      "json-web-token": "FAKE TOKEN",
-      "aws-user-name": "sote-test",
-      "role-list": [
-        "ROLE_NAME1",
-        "ROLE_NAME2"
-      ],
-      "organizations-id": 1,
-      "shipment-fintrans-id": 1,
-      "message-id": "test"
+      "shipment-fintrans-id": 11791
     }
   ],
   "required": [
-    "json-web-token",
-    "aws-user-name",
-    "role-list",
-    "organizations-id",
-    "shipment-fintrans-id",
-    "message-id"
+    "shipment-fintrans-id"
   ],
   "properties": {
-    "json-web-token": {
-      "$id": "#/properties/json-web-token",
-      "type": "string",
-      "title": "The json-web-token schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "FAKE TOKEN"
-      ]
-    },
-    "aws-user-name": {
-      "$id": "#/properties/aws-user-name",
-      "type": "string",
-      "title": "The aws-user-name schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "sote-test"
-      ]
-    },
-    "role-list": {
-      "$id": "#/properties/role-list",
-      "type": "array",
-      "title": "The role-list schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": [],
-      "examples": [
-        [
-          "ROLE_NAME1",
-          "ROLE_NAME2"
-        ]
-      ],
-      "additionalItems": true,
-      "items": {
-        "$id": "#/properties/role-list/items",
-        "anyOf": [
-          {
-            "$id": "#/properties/role-list/items/anyOf/0",
-            "type": "string",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "CLIENT",
-              "USER"
-            ]
-          }
-        ]
-      }
-    },
-    "organizations-id": {
-      "$id": "#/properties/organizations-id",
-      "type": "integer",
-      "title": "The organizations-id schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": 0,
-      "examples": [
-        1
-      ]
-    },
     "shipment-fintrans-id": {
       "$id": "#/properties/shipment-fintrans-id",
       "type": "integer",
@@ -94,17 +21,7 @@
       "description": "An explanation about the purpose of this instance.",
       "default": 0,
       "examples": [
-        1
-      ]
-    },
-    "message-id": {
-      "$id": "#/properties/message-id",
-      "type": "string",
-      "title": "The message-id schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "test"
+        11791
       ]
     }
   },
