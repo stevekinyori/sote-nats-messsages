@@ -9,7 +9,18 @@
         {
             "record-limit-count": 0,
             "record-offset": 0,
-            "list-of-values-type": "add test"
+            "filters": {
+                "AND": [
+                    {
+                        "field-name": "list-of-values-type",
+                        "operator": "=",
+                        "value": "add test"
+                    }
+                ]
+            },
+            "sort-order": {
+                "display-name": "ASC"
+            }
         }
     ],
     "required": [
@@ -17,7 +28,8 @@
         "record-offset"
     ],
     "optional": [
-        "list-of-values-type"
+        "filters",
+        "sort-order"
     ],
     "properties": {
         "record-limit-count": {
@@ -40,15 +52,174 @@
                 0
             ]
         },
-        "list-of-values-type": {
-            "$id": "#/properties/list-of-values-type",
-            "type": "string",
-            "title": "The list-of-values-type schema",
+        "filters": {
+            "$id": "#/properties/filters",
+            "default": {},
             "description": "An explanation about the purpose of this instance.",
-            "default": "",
             "examples": [
-                "add test"
-            ]
+                {
+                    "AND": [
+                        {
+                            "field-name": "list-of-values-type",
+                            "operator": "=",
+                            "value": "add test"
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "AND"
+            ],
+            "title": "The filters schema",
+            "enum": [
+                "AND",
+                "OR"
+            ],
+            "type": "object",
+            "properties": {
+                "AND": {
+                    "$id": "#/properties/filters/properties/AND",
+                    "type": "array",
+                    "title": "The AND schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            {
+                                "field-name": "list-of-values-type",
+                                "operator": "=",
+                                "value": "add test"
+                            }
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/filters/properties/AND/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/filters/properties/AND/items/anyOf/0",
+                                "type": "object",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "field-name": "list-of-values-type",
+                                        "operator": "=",
+                                        "value": "add test"
+                                    }
+                                ],
+                                "required": [
+                                    "field-name",
+                                    "operator",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "field-name": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/field-name",
+                                        "default": "",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "examples": [
+                                            "list-of-values-type"
+                                        ],
+                                        "title": "The field-name schema",
+                                        "enum": [
+                                            "list-of-values-type",
+                                            "system-name",
+                                            "display-name",
+                                            "list-of-values-note",
+                                            "language-code",
+                                            "language-name",
+                                            "created-by-date",
+                                            "updated-by-date",
+                                            "created-by-aws-user-name",
+                                            "updated-by-aws-user-name"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "operator": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/operator",
+                                        "default": "",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "examples": [
+                                            "="
+                                        ],
+                                        "title": "The operator schema",
+                                        "enum": [
+                                            ">",
+                                            "<",
+                                            "=",
+                                            ">=",
+                                            "<=",
+                                            "!=",
+                                            "<>",
+                                            "IN",
+                                            "NOT IN"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/value",
+                                        "type": "string",
+                                        "title": "The value schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "add test"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "sort-order": {
+            "$id": "#/properties/sort-order",
+            "default": {},
+            "description": "An explanation about the purpose of this instance.",
+            "examples": [
+                {
+                    "display-name": "ASC"
+                }
+            ],
+            "required": [
+                "display-name"
+            ],
+            "title": "The sort-order schema",
+            "enum": [
+                "list-of-values-type",
+                "system-name",
+                "display-name",
+                "list-of-values-note",
+                "language-code",
+                "language-name",
+                "created-by-date",
+                "updated-by-date",
+                "created-by-aws-user-name",
+                "updated-by-aws-user-name"
+            ],
+            "type": "object",
+            "properties": {
+                "display-name": {
+                    "$id": "#/properties/sort-order/properties/display-name",
+                    "default": "",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                        "ASC"
+                    ],
+                    "title": "The display-name schema",
+                    "enum": [
+                        "ASC",
+                        "DESC"
+                    ],
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true
