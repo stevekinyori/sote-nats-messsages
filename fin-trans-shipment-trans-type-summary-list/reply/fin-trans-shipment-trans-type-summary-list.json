@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "message-id": "test-summary",
+      "message": [
+        {
+          "fintrans_type": "TEST_TYPE",
+          "totalInvoiceAmountKsh": 1000,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 1000,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "SHIPPING_LINE_CHARGES",
+          "totalInvoiceAmountKsh": 1036665.7680664062,
+          "totalInvoiceAmountUsd": 30603.300354003906,
+          "totalExpectedCostKsh": 1036665.7680664062,
+          "totalExpectedCostUsd": 30603.300354003906,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "CONTAINER_DEPOSIT",
+          "totalInvoiceAmountKsh": 81977062,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 80755940,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 1221122,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "PORT_CHARGES",
+          "totalInvoiceAmountKsh": 1915385.1142578125,
+          "totalInvoiceAmountUsd": 9256.890014648438,
+          "totalExpectedCostKsh": 1915385.1142578125,
+          "totalExpectedCostUsd": 9256.890014648438,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "DEMURRAGE_CHARGES",
+          "totalInvoiceAmountKsh": 44,
+          "totalInvoiceAmountUsd": 79169,
+          "totalExpectedCostKsh": 44,
+          "totalExpectedCostUsd": 79169,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "CUSTOMS_TAXES",
+          "totalInvoiceAmountKsh": 41879364,
+          "totalInvoiceAmountUsd": 173523,
+          "totalExpectedCostKsh": 41879364,
+          "totalExpectedCostUsd": 173523,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "AGENCY_FEES",
+          "totalInvoiceAmountKsh": 513460,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 513460,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "TRANSPORT_CHARGES",
+          "totalInvoiceAmountKsh": 1410180,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 1410180,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "FORWARDERS_CHARGES",
+          "totalInvoiceAmountKsh": 6666,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 0,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 6666,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "CONTAINER_REPAIRS",
+          "totalInvoiceAmountKsh": 451103174,
+          "totalInvoiceAmountUsd": 2372.050003051758,
+          "totalExpectedCostKsh": 451103130,
+          "totalExpectedCostUsd": 2372.050003051758,
+          "totalUnexpectedCostKsh": 44,
+          "totalUnexpectedCostUsd": 0
+        },
+        {
+          "fintrans_type": "F147",
+          "totalInvoiceAmountKsh": 579085,
+          "totalInvoiceAmountUsd": 0,
+          "totalExpectedCostKsh": 579085,
+          "totalExpectedCostUsd": 0,
+          "totalUnexpectedCostKsh": 0,
+          "totalUnexpectedCostUsd": 0
+        }
+      ]
+    }
+  ],
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "$id": "#/properties/message-id",
+      "type": "string",
+      "title": "The message-id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "test-summary"
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "array",
+      "title": "The message schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "fintrans_type": "TEST_TYPE",
+            "totalInvoiceAmountKsh": 1000,
+            "totalInvoiceAmountUsd": 0,
+            "totalExpectedCostKsh": 1000,
+            "totalExpectedCostUsd": 0,
+            "totalUnexpectedCostKsh": 0,
+            "totalUnexpectedCostUsd": 0
+          },
+          {
+            "fintrans_type": "SHIPPING_LINE_CHARGES",
+            "totalInvoiceAmountKsh": 1036665.7680664062,
+            "totalInvoiceAmountUsd": 30603.300354003906,
+            "totalExpectedCostKsh": 1036665.7680664062,
+            "totalExpectedCostUsd": 30603.300354003906,
+            "totalUnexpectedCostKsh": 0,
+            "totalUnexpectedCostUsd": 0
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/message/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/message/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "fintrans_type": "TEST_TYPE",
+                "totalInvoiceAmountKsh": 1000,
+                "totalInvoiceAmountUsd": 0,
+                "totalExpectedCostKsh": 1000,
+                "totalExpectedCostUsd": 0,
+                "totalUnexpectedCostKsh": 0,
+                "totalUnexpectedCostUsd": 0
+              }
+            ],
+            "required": [
+              "fintrans_type",
+              "totalInvoiceAmountKsh",
+              "totalInvoiceAmountUsd",
+              "totalExpectedCostKsh",
+              "totalExpectedCostUsd",
+              "totalUnexpectedCostKsh",
+              "totalUnexpectedCostUsd"
+            ],
+            "properties": {
+              "fintrans_type": {
+                "$id": "#/properties/message/items/anyOf/0/properties/fintrans_type",
+                "type": "string",
+                "title": "The fintrans_type schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "TEST_TYPE"
+                ]
+              },
+              "totalInvoiceAmountKsh": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalInvoiceAmountKsh",
+                "type": "integer",
+                "title": "The totalInvoiceAmountKsh schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1000
+                ]
+              },
+              "totalInvoiceAmountUsd": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalInvoiceAmountUsd",
+                "type": "integer",
+                "title": "The totalInvoiceAmountUsd schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "totalExpectedCostKsh": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalExpectedCostKsh",
+                "type": "integer",
+                "title": "The totalExpectedCostKsh schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1000
+                ]
+              },
+              "totalExpectedCostUsd": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalExpectedCostUsd",
+                "type": "integer",
+                "title": "The totalExpectedCostUsd schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "totalUnexpectedCostKsh": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalUnexpectedCostKsh",
+                "type": "integer",
+                "title": "The totalUnexpectedCostKsh schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "totalUnexpectedCostUsd": {
+                "$id": "#/properties/message/items/anyOf/0/properties/totalUnexpectedCostUsd",
+                "type": "integer",
+                "title": "The totalUnexpectedCostUsd schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
