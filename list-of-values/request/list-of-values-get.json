@@ -8,12 +8,22 @@
   "examples": [
     {
       "list-of-values-type": "ADD TEST",
-      "system-name": "TEST_ONE"
+      "system-name": "TEST_ONE",
+      "filters": {
+        "AND": [
+          {
+            "field-name": "display-name",
+            "operator": "=",
+            "value": "Test One Edit"
+          }
+        ]
+      }
     }
   ],
   "required": [
     "list-of-values-type",
-    "system-name"
+    "system-name",
+    "filters"
   ],
   "properties": {
     "list-of-values-type": {
@@ -35,6 +45,131 @@
       "examples": [
         "TEST_ONE"
       ]
+    },
+    "filters": {
+      "$id": "#/properties/filters",
+      "default": {},
+      "description": "An explanation about the purpose of this instance.",
+      "examples": [
+        {
+          "AND": [
+            {
+              "field-name": "display-name",
+              "operator": "=",
+              "value": "Test One Edit"
+            }
+          ]
+        }
+      ],
+      "required": [
+        "AND"
+      ],
+      "title": "The filters schema",
+      "enum": [
+        "AND",
+        "OR"
+      ],
+      "type": "object",
+      "properties": {
+        "AND": {
+          "$id": "#/properties/filters/properties/AND",
+          "type": "array",
+          "title": "The AND schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              {
+                "field-name": "display-name",
+                "operator": "=",
+                "value": "Test One Edit"
+              }
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/filters/properties/AND/items",
+            "anyOf": [
+              {
+                "$id": "#/properties/filters/properties/AND/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "field-name": "display-name",
+                    "operator": "=",
+                    "value": "Test One Edit"
+                  }
+                ],
+                "required": [
+                  "field-name",
+                  "operator",
+                  "value"
+                ],
+                "properties": {
+                  "field-name": {
+                    "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/field-name",
+                    "default": "",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                      "display-name"
+                    ],
+                    "title": "The field-name schema",
+                    "enum": [
+                      "list-of-values-type",
+                      "system-name",
+                      "display-name",
+                      "list-of-values-note",
+                      "language-code",
+                      "language-name",
+                      "created-by-date",
+                      "updated-by-date",
+                      "created-by-aws-user-name",
+                      "updated-by-aws-user-name"
+                    ],
+                    "type": "string"
+                  },
+                  "operator": {
+                    "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/operator",
+                    "default": "",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                      "="
+                    ],
+                    "title": "The operator schema",
+                    "enum": [
+                      ">",
+                      "<",
+                      "=",
+                      ">=",
+                      "<=",
+                      "!=",
+                      "<>",
+                      "IN",
+                      "NOT IN"
+                    ],
+                    "type": "string"
+                  },
+                  "value": {
+                    "$id": "#/properties/filters/properties/AND/items/anyOf/0/properties/value",
+                    "type": "string",
+                    "title": "The value schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "Test One Edit"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": true

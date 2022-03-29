@@ -9,8 +9,14 @@
         {
             "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
             "message": {
-                "STATUS_1": 9,
-                "STATUS_2": 13
+                "shipment_status": {
+                    "STATUS_1": 1,
+                    "STATUS_2": 1
+                },
+                "total_shipments": 2,
+                "total_containers": 3,
+                "container_turnaround_time": 0,
+                "transport_turnaround_time": 0
             }
         }
     ],
@@ -37,33 +43,102 @@
             "default": {},
             "examples": [
                 {
-                    "STATUS_1": 9,
-                    "STATUS_2": 13
+                    "shipment_status": {
+                        "STATUS_1": 1,
+                        "STATUS_2": 1
+                    },
+                    "total_shipments": 2,
+                    "total_containers": 3,
+                    "container_turnaround_time": 0,
+                    "transport_turnaround_time": 0
                 }
             ],
             "required": [
-                "STATUS_1",
-                "STATUS_2"
+                "shipment_status",
+                "total_shipments",
+                "total_containers",
+                "container_turnaround_time",
+                "transport_turnaround_time"
             ],
             "properties": {
-                "STATUS_1": {
-                    "$id": "#/properties/message/properties/STATUS_1",
+                "shipment_status": {
+                    "$id": "#/properties/message/properties/shipment_status",
+                    "type": "object",
+                    "title": "The shipment_status schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "STATUS_1": 1,
+                            "STATUS_2": 1
+                        }
+                    ],
+                    "required": [
+                        "STATUS_1",
+                        "STATUS_2"
+                    ],
+                    "properties": {
+                        "STATUS_1": {
+                            "$id": "#/properties/message/properties/shipment_status/properties/STATUS_1",
+                            "type": "integer",
+                            "title": "The STATUS_1 schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0,
+                            "examples": [
+                                1
+                            ]
+                        },
+                        "STATUS_2": {
+                            "$id": "#/properties/message/properties/shipment_status/properties/STATUS_2",
+                            "type": "integer",
+                            "title": "The STATUS_2 schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": 0,
+                            "examples": [
+                                1
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "total_shipments": {
+                    "$id": "#/properties/message/properties/total_shipments",
                     "type": "integer",
-                    "title": "The STATUS_1 schema",
+                    "title": "The total_shipments schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        9
+                        2
                     ]
                 },
-                "STATUS_2": {
-                    "$id": "#/properties/message/properties/STATUS_2",
+                "total_containers": {
+                    "$id": "#/properties/message/properties/total_containers",
                     "type": "integer",
-                    "title": "The STATUS_2 schema",
+                    "title": "The total_containers schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                        13
+                        3
+                    ]
+                },
+                "container_turnaround_time": {
+                    "$id": "#/properties/message/properties/container_turnaround_time",
+                    "type": "integer",
+                    "title": "The container_turnaround_time schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        0
+                    ]
+                },
+                "transport_turnaround_time": {
+                    "$id": "#/properties/message/properties/transport_turnaround_time",
+                    "type": "integer",
+                    "title": "The transport_turnaround_time schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        0
                     ]
                 }
             },
