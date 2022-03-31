@@ -10,10 +10,10 @@
       "message-id": "test-list",
       "message": {
         "system_name": "TEST_ONE",
-        "display_name": "Test One Edit",
+        "display_name": "TEST ONE EDIT",
         "listofvalues_note": "This is a test note edit",
-        "language_code": "eng",
-        "language_name": "English",
+        "language_code": "ENG",
+        "language_name": "ENGLISH",
         "created_by_date": "2021-11-25",
         "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
         "updated_by_date": "2021-11-25",
@@ -45,10 +45,10 @@
       "examples": [
         {
           "system_name": "TEST_ONE",
-          "display_name": "Test One Edit",
+          "display_name": "TEST ONE EDIT",
           "listofvalues_note": "This is a test note edit",
-          "language_code": "eng",
-          "language_name": "English",
+          "language_code": "ENG",
+          "language_name": "ENGLISH",
           "created_by_date": "2021-11-25",
           "created_by_requestor_username": "8c6e4be7-a889-485b-92ad-8fafa0d7b43f",
           "updated_by_date": "2021-11-25",
@@ -86,7 +86,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
-            "Test One Edit"
+            "TEST ONE EDIT"
           ]
         },
         "listofvalues_note": {
@@ -106,7 +106,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
-            "eng"
+            "ENG"
           ]
         },
         "language_name": {
@@ -116,7 +116,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
-            "English"
+            "ENGLISH"
           ]
         },
         "created_by_date": {

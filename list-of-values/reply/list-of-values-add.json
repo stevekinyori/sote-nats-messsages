@@ -9,7 +9,7 @@
         {
             "message-id": "test-list",
             "message": {
-                "list_of_values_type": "ADD TEST",
+                "list_of_values_type": "ADD_TEST",
                 "system_name": "TEST_ONE"
             }
         }
@@ -37,7 +37,7 @@
             "default": {},
             "examples": [
                 {
-                    "list_of_values_type": "ADD TEST",
+                    "list_of_values_type": "ADD_TEST",
                     "system_name": "TEST_ONE"
                 }
             ],
@@ -53,7 +53,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "ADD TEST"
+                        "ADD_TEST"
                     ]
                 },
                 "system_name": {
