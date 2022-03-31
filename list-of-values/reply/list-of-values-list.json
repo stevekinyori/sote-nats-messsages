@@ -10,11 +10,11 @@
             "message-id": "test-message",
             "message": {
                 "items": {
-                    "ADD TEST": [
+                    "ADD_TEST": [
                         {
                             "system_name": "TEST_ONE",
                             "display_name": "TEST ONE",
-                            "listofvalues_note": "THIS IS A NEW TEST NOTE",
+                            "listofvalues_note": "This is a new test note",
                             "language_code": "ENG",
                             "language_name": "ENGLISH",
                             "created_by_date": "2022-03-30",
@@ -23,7 +23,7 @@
                         {
                             "system_name": "TEST_TWO",
                             "display_name": "TEST ONE EDIT",
-                            "listofvalues_note": "THIS IS A TEST NOTE EDIT",
+                            "listofvalues_note": "This is a test note edit",
                             "language_code": "ENG",
                             "language_name": "ENGLISH",
                             "created_by_date": "2022-03-30",
@@ -65,11 +65,11 @@
             "examples": [
                 {
                     "items": {
-                        "ADD TEST": [
+                        "ADD_TEST": [
                             {
                                 "system_name": "TEST_ONE",
                                 "display_name": "TEST ONE",
-                                "listofvalues_note": "THIS IS A NEW TEST NOTE",
+                                "listofvalues_note": "This is a new test note",
                                 "language_code": "ENG",
                                 "language_name": "ENGLISH",
                                 "created_by_date": "2022-03-30",
@@ -78,7 +78,7 @@
                             {
                                 "system_name": "TEST_TWO",
                                 "display_name": "TEST ONE EDIT",
-                                "listofvalues_note": "THIS IS A TEST NOTE EDIT",
+                                "listofvalues_note": "This is a test note edit",
                                 "language_code": "ENG",
                                 "language_name": "ENGLISH",
                                 "created_by_date": "2022-03-30",
@@ -108,11 +108,11 @@
                     "default": {},
                     "examples": [
                         {
-                            "ADD TEST": [
+                            "ADD_TEST": [
                                 {
                                     "system_name": "TEST_ONE",
                                     "display_name": "TEST ONE",
-                                    "listofvalues_note": "THIS IS A NEW TEST NOTE",
+                                    "listofvalues_note": "This is a new test note",
                                     "language_code": "ENG",
                                     "language_name": "ENGLISH",
                                     "created_by_date": "2022-03-30",
@@ -121,7 +121,7 @@
                                 {
                                     "system_name": "TEST_TWO",
                                     "display_name": "TEST ONE EDIT",
-                                    "listofvalues_note": "THIS IS A TEST NOTE EDIT",
+                                    "listofvalues_note": "This is a test note edit",
                                     "language_code": "ENG",
                                     "language_name": "ENGLISH",
                                     "created_by_date": "2022-03-30",
@@ -133,13 +133,13 @@
                         }
                     ],
                     "optional": [
-                        "ADD TEST"
+                        "ADD_TEST"
                     ],
                     "properties": {
-                        "ADD TEST": {
+                        "ADD_TEST": {
                             "$id": "#/properties/message/properties/items/properties/ADD%20TEST",
                             "type": "array",
-                            "title": "The ADD TEST schema",
+                            "title": "The ADD_TEST schema",
                             "description": "An explanation about the purpose of this instance.",
                             "default": [],
                             "examples": [
@@ -147,7 +147,7 @@
                                     {
                                         "system_name": "TEST_ONE",
                                         "display_name": "TEST ONE",
-                                        "listofvalues_note": "THIS IS A NEW TEST NOTE",
+                                        "listofvalues_note": "This is a new test note",
                                         "language_code": "ENG",
                                         "language_name": "ENGLISH",
                                         "created_by_date": "2022-03-30",
@@ -156,7 +156,7 @@
                                     {
                                         "system_name": "TEST_TWO",
                                         "display_name": "TEST ONE EDIT",
-                                        "listofvalues_note": "THIS IS A TEST NOTE EDIT",
+                                        "listofvalues_note": "This is a test note edit",
                                         "language_code": "ENG",
                                         "language_name": "ENGLISH",
                                         "created_by_date": "2022-03-30",
@@ -180,7 +180,7 @@
                                             {
                                                 "system_name": "TEST_ONE",
                                                 "display_name": "TEST ONE",
-                                                "listofvalues_note": "THIS IS A NEW TEST NOTE",
+                                                "listofvalues_note": "This is a new test note",
                                                 "language_code": "ENG",
                                                 "language_name": "ENGLISH",
                                                 "created_by_date": "2022-03-30",
@@ -224,7 +224,7 @@
                                                 "description": "An explanation about the purpose of this instance.",
                                                 "default": "",
                                                 "examples": [
-                                                    "THIS IS A NEW TEST NOTE"
+                                                    "This is a new test note"
                                                 ]
                                             },
                                             "language_code": {
@@ -280,7 +280,7 @@
                                             {
                                                 "system_name": "TEST_TWO",
                                                 "display_name": "TEST ONE EDIT",
-                                                "listofvalues_note": "THIS IS A TEST NOTE EDIT",
+                                                "listofvalues_note": "This is a test note edit",
                                                 "language_code": "ENG",
                                                 "language_name": "ENGLISH",
                                                 "created_by_date": "2022-03-30",
@@ -330,7 +330,7 @@
                                                 "description": "An explanation about the purpose of this instance.",
                                                 "default": "",
                                                 "examples": [
-                                                    "THIS IS A TEST NOTE EDIT"
+                                                    "This is a test note edit"
                                                 ]
                                             },
                                             "language_code": {

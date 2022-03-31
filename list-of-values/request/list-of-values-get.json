@@ -7,14 +7,14 @@
   "default": {},
   "examples": [
     {
-      "list-of-values-type": "ADD TEST",
+      "list-of-values-type": "ADD_TEST",
       "system-name": "TEST_ONE",
       "filters": {
         "AND": [
           {
             "field-name": "display-name",
             "operator": "=",
-            "value": "Test One Edit"
+            "value": "TEST ONE EDIT"
           }
         ]
       }
@@ -22,7 +22,9 @@
   ],
   "required": [
     "list-of-values-type",
-    "system-name",
+    "system-name"
+  ],
+  "optional": [
     "filters"
   ],
   "properties": {
@@ -33,7 +35,7 @@
       "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
-        "ADD TEST"
+        "ADD_TEST"
       ]
     },
     "system-name": {
@@ -56,7 +58,7 @@
             {
               "field-name": "display-name",
               "operator": "=",
-              "value": "Test One Edit"
+              "value": "TEST ONE EDIT"
             }
           ]
         }
@@ -82,7 +84,7 @@
               {
                 "field-name": "display-name",
                 "operator": "=",
-                "value": "Test One Edit"
+                "value": "TEST ONE EDIT"
               }
             ]
           ],
@@ -100,7 +102,7 @@
                   {
                     "field-name": "display-name",
                     "operator": "=",
-                    "value": "Test One Edit"
+                    "value": "TEST ONE EDIT"
                   }
                 ],
                 "required": [
@@ -159,7 +161,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                      "Test One Edit"
+                      "TEST ONE EDIT"
                     ]
                   }
                 },

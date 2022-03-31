@@ -14,7 +14,7 @@
                     {
                         "field-name": "list-of-values-type",
                         "operator": "=",
-                        "value": "add test"
+                        "value": "ADD_TEST"
                     }
                 ]
             },
@@ -62,7 +62,7 @@
                         {
                             "field-name": "list-of-values-type",
                             "operator": "=",
-                            "value": "add test"
+                            "value": "ADD_TEST"
                         }
                     ]
                 }
@@ -88,7 +88,7 @@
                             {
                                 "field-name": "list-of-values-type",
                                 "operator": "=",
-                                "value": "add test"
+                                "value": "ADD_TEST"
                             }
                         ]
                     ],
@@ -106,7 +106,7 @@
                                     {
                                         "field-name": "list-of-values-type",
                                         "operator": "=",
-                                        "value": "add test"
+                                        "value": "ADD_TEST"
                                     }
                                 ],
                                 "required": [
@@ -165,7 +165,7 @@
                                         "description": "An explanation about the purpose of this instance.",
                                         "default": "",
                                         "examples": [
-                                            "add test"
+                                            "ADD_TEST"
                                         ]
                                     }
                                 },
