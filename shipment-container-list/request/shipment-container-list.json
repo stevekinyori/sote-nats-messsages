@@ -7,6 +7,7 @@
     "default": {},
     "examples": [
         {
+            "client-company-id":1,
             "record-limit-count": 10,
             "record-offset": 0,
             "sort-order": {
@@ -55,6 +56,16 @@
         }
     },
     "properties": {
+        "client-company-id": {
+            "$id": "#/properties/client-company-id",
+            "type": "integer",
+            "title": "The client-company-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
         "record-limit-count": {
             "$id": "#/properties/record-limit-count",
             "type": "integer",
