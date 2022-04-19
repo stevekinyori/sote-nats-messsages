@@ -1,0 +1,182 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "message-id": "test-message",
+            "message": {
+                "Group": {
+                    "CreationDate": "2022-04-19T07:55:00.746Z",
+                    "Description": "Test Organization",
+                    "GroupName": "1",
+                    "LastModifiedDate": "2022-04-19T07:55:00.746Z",
+                    "Precedence": null,
+                    "RoleArn": null,
+                    "UserPoolId": "xxxxxxxxxx"
+                },
+                "ResultMetadata": {}
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "test-message"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "Group": {
+                        "CreationDate": "2022-04-19T07:55:00.746Z",
+                        "Description": "Test Organization",
+                        "GroupName": "1",
+                        "LastModifiedDate": "2022-04-19T07:55:00.746Z",
+                        "Precedence": null,
+                        "RoleArn": null,
+                        "UserPoolId": "xxxxxxxxxx"
+                    },
+                    "ResultMetadata": {}
+                }
+            ],
+            "required": [
+                "Group",
+                "ResultMetadata"
+            ],
+            "properties": {
+                "Group": {
+                    "$id": "#/properties/message/properties/Group",
+                    "type": "object",
+                    "title": "The Group schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "CreationDate": "2022-04-19T07:55:00.746Z",
+                            "Description": "Test Organization",
+                            "GroupName": "1",
+                            "LastModifiedDate": "2022-04-19T07:55:00.746Z",
+                            "Precedence": null,
+                            "RoleArn": null,
+                            "UserPoolId": "xxxxxxxxxx"
+                        }
+                    ],
+                    "required": [
+                        "CreationDate",
+                        "Description",
+                        "GroupName",
+                        "LastModifiedDate",
+                        "Precedence",
+                        "RoleArn",
+                        "UserPoolId"
+                    ],
+                    "properties": {
+                        "CreationDate": {
+                            "$id": "#/properties/message/properties/Group/properties/CreationDate",
+                            "type": "string",
+                            "title": "The CreationDate schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "2022-04-19T07:55:00.746Z"
+                            ]
+                        },
+                        "Description": {
+                            "$id": "#/properties/message/properties/Group/properties/Description",
+                            "type": "string",
+                            "title": "The Description schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "Test Organization"
+                            ]
+                        },
+                        "GroupName": {
+                            "$id": "#/properties/message/properties/Group/properties/GroupName",
+                            "type": "string",
+                            "title": "The GroupName schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "1"
+                            ]
+                        },
+                        "LastModifiedDate": {
+                            "$id": "#/properties/message/properties/Group/properties/LastModifiedDate",
+                            "type": "string",
+                            "title": "The LastModifiedDate schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "2022-04-19T07:55:00.746Z"
+                            ]
+                        },
+                        "Precedence": {
+                            "$id": "#/properties/message/properties/Group/properties/Precedence",
+                            "type": "null",
+                            "title": "The Precedence schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": null,
+                            "examples": [
+                                null
+                            ]
+                        },
+                        "RoleArn": {
+                            "$id": "#/properties/message/properties/Group/properties/RoleArn",
+                            "type": "null",
+                            "title": "The RoleArn schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": null,
+                            "examples": [
+                                null
+                            ]
+                        },
+                        "UserPoolId": {
+                            "$id": "#/properties/message/properties/Group/properties/UserPoolId",
+                            "type": "string",
+                            "title": "The UserPoolId schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "xxxxxxxxxx"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "ResultMetadata": {
+                    "$id": "#/properties/message/properties/ResultMetadata",
+                    "type": "object",
+                    "title": "The ResultMetadata schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {}
+                    ],
+                    "required": [],
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
