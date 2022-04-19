@@ -16,7 +16,7 @@
                     "LastModifiedDate": "2022-04-19T07:55:00.746Z",
                     "Precedence": null,
                     "RoleArn": null,
-                    "UserPoolId": "eu-west-1_QVPwwCg2c"
+                    "UserPoolId": "xxxxxxxxxx"
                 },
                 "ResultMetadata": {}
             }
@@ -52,7 +52,7 @@
                         "LastModifiedDate": "2022-04-19T07:55:00.746Z",
                         "Precedence": null,
                         "RoleArn": null,
-                        "UserPoolId": "eu-west-1_QVPwwCg2c"
+                        "UserPoolId": "xxxxxxxxxx"
                     },
                     "ResultMetadata": {}
                 }
@@ -76,7 +76,7 @@
                             "LastModifiedDate": "2022-04-19T07:55:00.746Z",
                             "Precedence": null,
                             "RoleArn": null,
-                            "UserPoolId": "eu-west-1_QVPwwCg2c"
+                            "UserPoolId": "xxxxxxxxxx"
                         }
                     ],
                     "required": [
@@ -156,7 +156,7 @@
                             "description": "An explanation about the purpose of this instance.",
                             "default": "",
                             "examples": [
-                                "eu-west-1_QVPwwCg2c"
+                                "xxxxxxxxxx"
                             ]
                         }
                     },
