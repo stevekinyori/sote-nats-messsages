@@ -12,6 +12,7 @@
             "sort-order": {
                 "shipments-id": "ASC"
             },
+            "search": "USD",
             "filters": {
                 "and": [
                     {
@@ -34,6 +35,10 @@
     "required": [
         "record-limit-count",
         "record-offset"
+    ],
+    "optional": [
+        "filters",
+        "search"
     ],
     "conditions": {
         "enum": {
