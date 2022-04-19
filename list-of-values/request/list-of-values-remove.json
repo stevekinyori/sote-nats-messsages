@@ -7,7 +7,7 @@
     "default": {},
     "examples": [
         {
-            "list-of-values-type": "ADD TEST",
+            "list-of-values-type": "ADD_TEST",
             "system-name": "TEST_ONE"
         }
     ],
@@ -23,7 +23,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "ADD TEST"
+                "ADD_TEST"
             ]
         },
         "system-name": {

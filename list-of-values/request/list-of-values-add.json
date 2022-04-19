@@ -7,12 +7,12 @@
     "default": {},
     "examples": [
         {
-            "list-of-values-type": "ADD TEST",
+            "list-of-values-type": "ADD_TEST",
             "system-name": "TEST_ONE",
-            "display-name": "Test One",
+            "display-name": "TEST ONE",
             "list-of-values-note": "This is a new test note",
-            "language-code": "eng",
-            "language-name": "English"
+            "language-code": "ENG",
+            "language-name": "ENGLISH"
         }
     ],
     "required": [
@@ -33,7 +33,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "ADD TEST"
+                "ADD_TEST"
             ]
         },
         "system-name": {
@@ -53,7 +53,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "Test One"
+                "TEST ONE"
             ]
         },
         "list-of-values-note": {
@@ -73,7 +73,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "eng"
+                "ENG"
             ]
         },
         "language-name": {
@@ -83,7 +83,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "English"
+                "ENGLISH"
             ]
         }
     },
