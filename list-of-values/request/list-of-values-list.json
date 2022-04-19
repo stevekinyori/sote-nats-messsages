@@ -20,7 +20,8 @@
             },
             "sort-order": {
                 "display-name": "ASC"
-            }
+            },
+            "search": "TEST"
         }
     ],
     "required": [
@@ -29,7 +30,8 @@
     ],
     "optional": [
         "filters",
-        "sort-order"
+        "sort-order",
+        "search"
     ],
     "properties": {
         "record-limit-count": {
@@ -206,20 +208,26 @@
             "properties": {
                 "display-name": {
                     "$id": "#/properties/sort-order/properties/display-name",
-                    "default": "",
+                    "type": "string",
+                    "title": "The display-name schema",
                     "description": "An explanation about the purpose of this instance.",
+                    "default": "",
                     "examples": [
                         "ASC"
-                    ],
-                    "title": "The display-name schema",
-                    "enum": [
-                        "ASC",
-                        "DESC"
-                    ],
-                    "type": "string"
+                    ]
                 }
             },
             "additionalProperties": true
+        },
+        "search": {
+            "$id": "#/properties/search",
+            "type": "string",
+            "title": "The search schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "TEST"
+            ]
         }
     },
     "additionalProperties": true
