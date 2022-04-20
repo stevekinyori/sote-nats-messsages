@@ -42,7 +42,15 @@
                             "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
                             "updated_by_date": "2020-12-30",
                             "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                            "through_bill_of_lading": "TBL"
+                            "through_bill_of_lading": "TBL",
+                            "notes": {
+                                "created_by_date": "2020-06-06",
+                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                "notes_id": 372,
+                                "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                "notes_type": "USER_DEFINED_LOV"
+                            }
                         },
                         "cargo": [
                             {
@@ -155,7 +163,15 @@
                                 "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
                                 "updated_by_date": "2020-12-30",
                                 "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                "through_bill_of_lading": "TBL"
+                                "through_bill_of_lading": "TBL",
+                                "notes": {
+                                    "created_by_date": "2020-06-06",
+                                    "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                    "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                    "notes_id": 372,
+                                    "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                    "notes_type": "USER_DEFINED_LOV"
+                                }
                             },
                             "cargo": [
                                 {
@@ -256,7 +272,15 @@
                                     "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
                                     "updated_by_date": "2020-12-30",
                                     "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                    "through_bill_of_lading": "TBL"
+                                    "through_bill_of_lading": "TBL",
+                                    "notes": {
+                                        "created_by_date": "2020-06-06",
+                                        "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                        "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                        "notes_id": 372,
+                                        "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                        "notes_type": "USER_DEFINED_LOV"
+                                    }
                                 },
                                 "cargo": [
                                     {
@@ -349,7 +373,15 @@
                                             "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
                                             "updated_by_date": "2020-12-30",
                                             "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                            "through_bill_of_lading": "TBL"
+                                            "through_bill_of_lading": "TBL",
+                                            "notes": {
+                                                "created_by_date": "2020-06-06",
+                                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                                "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                                "notes_id": 372,
+                                                "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                                "notes_type": "USER_DEFINED_LOV"
+                                            }
                                         },
                                         "cargo": [
                                             {
@@ -543,7 +575,15 @@
                                                 "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
                                                 "updated_by_date": "2020-12-30",
                                                 "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                                "through_bill_of_lading": "TBL"
+                                                "through_bill_of_lading": "TBL",
+                                                "notes": {
+                                                    "created_by_date": "2020-06-06",
+                                                    "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                                    "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                                    "notes_id": 372,
+                                                    "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                                    "notes_type": "USER_DEFINED_LOV"
+                                                }
                                             }
                                         ],
                                         "required": [
@@ -756,6 +796,94 @@
                                                 "examples": [
                                                     "TBL"
                                                 ]
+                                            },
+                                            "notes": {
+                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes",
+                                                "type": "object",
+                                                "title": "The notes schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "examples": [
+                                                    {
+                                                        "created_by_date": "2020-06-06",
+                                                        "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                                                        "created_timestamp": "2020-06-06T05:18:41.588743+00:00",
+                                                        "notes_id": 372,
+                                                        "notes_note": "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}",
+                                                        "notes_type": "USER_DEFINED_LOV"
+                                                    }
+                                                ],
+                                                "required": [
+                                                    "created_by_date",
+                                                    "created_by_requestor_username",
+                                                    "created_timestamp",
+                                                    "notes_id",
+                                                    "notes_note",
+                                                    "notes_type"
+                                                ],
+                                                "properties": {
+                                                    "created_by_date": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/created_by_date",
+                                                        "type": "string",
+                                                        "title": "The created_by_date schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": "",
+                                                        "examples": [
+                                                            "2020-06-06"
+                                                        ]
+                                                    },
+                                                    "created_by_requestor_username": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/created_by_requestor_username",
+                                                        "type": "string",
+                                                        "title": "The created_by_requestor_username schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": "",
+                                                        "examples": [
+                                                            "51ad84d4-XXXXXXX-6b2ce5e8"
+                                                        ]
+                                                    },
+                                                    "created_timestamp": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/created_timestamp",
+                                                        "type": "string",
+                                                        "title": "The created_timestamp schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": "",
+                                                        "examples": [
+                                                            "2020-06-06T05:18:41.588743+00:00"
+                                                        ]
+                                                    },
+                                                    "notes_id": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/notes_id",
+                                                        "type": "integer",
+                                                        "title": "The notes_id schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": 0,
+                                                        "examples": [
+                                                            372
+                                                        ]
+                                                    },
+                                                    "notes_note": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/notes_note",
+                                                        "type": "string",
+                                                        "title": "The notes_note schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": "",
+                                                        "examples": [
+                                                            "{\"title\":\"Truck Gated Out\",\"comment\":\"Limuru premises on 14/1/2020.\"}"
+                                                        ]
+                                                    },
+                                                    "notes_type": {
+                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments/properties/notes/properties/notes_type",
+                                                        "type": "string",
+                                                        "title": "The notes_type schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": "",
+                                                        "examples": [
+                                                            "USER_DEFINED_LOV"
+                                                        ]
+                                                    }
+                                                },
+                                                "additionalProperties": true
                                             }
                                         },
                                         "additionalProperties": true
