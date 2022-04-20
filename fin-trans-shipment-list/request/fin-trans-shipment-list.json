@@ -37,6 +37,7 @@
         "record-offset"
     ],
     "optional": [
+        "sort-order",
         "filters",
         "search"
     ],
