@@ -12,6 +12,7 @@
             "sort-order": {
                 "trips-id": "ASC"
             },
+            "search": "LOAD",
             "filters": {
                 "and": [
                     {
@@ -27,9 +28,12 @@
     ],
     "required": [
         "record-limit-count",
-        "record-offset",
+        "record-offset"
+    ],
+    "optional": [
         "sort-order",
-        "filters"
+        "filters",
+        "search"
     ],
     "conditions": {
         "enum": {
