@@ -8,14 +8,14 @@
     "examples": [
         {
             "organizations-id": 1,
-            "row-version": 1,
-            "client-company-id": 1
+            "client-company-id": 1,
+            "row-version": 1
         }
     ],
     "required": [
         "organizations-id",
-        "row-version",
-        "client-company-id"
+        "client-company-id",
+        "row-version"
     ],
     "properties": {
         "organizations-id": {
@@ -28,20 +28,20 @@
                 1
             ]
         },
-        "row-version": {
-            "$id": "#/properties/row-version",
+        "client-company-id": {
+            "$id": "#/properties/client-company-id",
             "type": "integer",
-            "title": "The row-version schema",
+            "title": "The client-company-id schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
                 1
             ]
         },
-        "client-company-id": {
-            "$id": "#/properties/client-company-id",
+        "row-version": {
+            "$id": "#/properties/row-version",
             "type": "integer",
-            "title": "The client-company-id schema",
+            "title": "The row-version schema",
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [

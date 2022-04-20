@@ -7,9 +7,8 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message",
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
             "message": {
-                "organizations_id": 1,
                 "success": true
             }
         }
@@ -26,7 +25,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message"
+                "51ad84d4-XXXXXXX-6b2ce5e8"
             ]
         },
         "message": {
@@ -37,25 +36,13 @@
             "default": {},
             "examples": [
                 {
-                    "organizations_id": 1,
                     "success": true
                 }
             ],
             "required": [
-                "organizations_id",
                 "success"
             ],
             "properties": {
-                "organizations_id": {
-                    "$id": "#/properties/message/properties/organizations_id",
-                    "type": "integer",
-                    "title": "The organizations_id schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [
-                        1
-                    ]
-                },
                 "success": {
                     "$id": "#/properties/message/properties/success",
                     "type": "boolean",

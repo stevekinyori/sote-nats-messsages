@@ -10,16 +10,14 @@
             "organizations-id": 1,
             "row-version": 1,
             "client-company-id": 1,
-            "client-company-name": "Client Two",
+            "client-company-name": "Sote Engineering Client 1",
             "client-company-is-active": true
         }
     ],
     "required": [
         "organizations-id",
         "row-version",
-        "client-company-id",
-        "client-company-name",
-        "client-company-is-active"
+        "client-company-id"
     ],
     "properties": {
         "organizations-id": {
@@ -59,7 +57,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "Client Two"
+                "Sote Engineering Client 1"
             ]
         },
         "client-company-is-active": {

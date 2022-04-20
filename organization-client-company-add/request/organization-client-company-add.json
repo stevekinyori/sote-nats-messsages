@@ -8,7 +8,7 @@
     "examples": [
         {
             "organizations-id": 1,
-            "client-company-name": "Client One",
+            "client-company-name": "Sote Engineering Client",
             "client-company-is-active": true
         }
     ],
@@ -35,7 +35,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "Client One"
+                "Sote Engineering Client"
             ]
         },
         "client-company-is-active": {

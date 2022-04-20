@@ -7,13 +7,10 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message-id-add-products",
-            "message": [
-                {
-                    "organizations_id": 1,
-                    "success": true
-                }
-            ]
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "message": {
+                "success": true
+            }
         }
     ],
     "required": [
@@ -28,69 +25,36 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message-id-add-products"
+                "51ad84d4-XXXXXXX-6b2ce5e8"
             ]
         },
         "message": {
             "$id": "#/properties/message",
-            "type": "array",
+            "type": "object",
             "title": "The message schema",
             "description": "An explanation about the purpose of this instance.",
-            "default": [],
+            "default": {},
             "examples": [
-                [
-                    {
-                        "organizations_id": 1,
-                        "success": true
-                    }
-                ]
+                {
+                    "success": true
+                }
             ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/message/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/message/items/anyOf/0",
-                        "type": "object",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": {},
-                        "examples": [
-                            {
-                                "organizations_id": 1,
-                                "success": true
-                            }
-                        ],
-                        "required": [
-                            "organizations_id",
-                            "success"
-                        ],
-                        "properties": {
-                            "organizations_id": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/organizations_id",
-                                "type": "integer",
-                                "title": "The organizations_id schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": 0,
-                                "examples": [
-                                    1
-                                ]
-                            },
-                            "success": {
-                                "$id": "#/properties/message/items/anyOf/0/properties/success",
-                                "type": "boolean",
-                                "title": "The success schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": false,
-                                "examples": [
-                                    true
-                                ]
-                            }
-                        },
-                        "additionalProperties": true
-                    }
-                ]
-            }
+            "required": [
+                "success"
+            ],
+            "properties": {
+                "success": {
+                    "$id": "#/properties/message/properties/success",
+                    "type": "boolean",
+                    "title": "The success schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true

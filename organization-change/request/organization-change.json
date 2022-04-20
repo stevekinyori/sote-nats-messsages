@@ -8,24 +8,22 @@
     "examples": [
         {
             "organizations-id": 1,
-            "row-version": 2,
-            "organization-is-active": true,
-            "organization-name": "SOTE TEST LTD",
-            "initial-contact-date": "1200/12/12",
-            "customer-since-date": "1200-12-12",
-            "contract-start-date": "1208.08.08",
-            "contract-end-date": "1200/12/12",
-            "estimated-users": 102,
-            "estimated-vehicles": 1500,
-            "paid-users": 12,
-            "pay-threshold": 12000
+            "row-version": 1,
+            "organization-name": "Sote Engineering 1",
+            "organization-is-active": false,
+            "initial-contact-date": "2020-01-01",
+            "customer-since-date": "2021-01-01",
+            "contract-start-date": "2021-01-01",
+            "contract-end-date": "2023-01-01",
+            "estimated-users": 200,
+            "estimated-vehicles": 20,
+            "paid-users": 180,
+            "pay-threshold": 500
         }
     ],
     "required": [
         "organizations-id",
-        "row-version",
-        "organization-is-active",
-        "organization-name"
+        "row-version"
     ],
     "properties": {
         "organizations-id": {
@@ -45,17 +43,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                2
-            ]
-        },
-        "organization-is-active": {
-            "$id": "#/properties/organization-is-active",
-            "type": "boolean",
-            "title": "The organization-is-active schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [
-                true
+                1
             ]
         },
         "organization-name": {
@@ -65,7 +53,17 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "SOTE TEST LTD"
+                "Sote Engineering 1"
+            ]
+        },
+        "organization-is-active": {
+            "$id": "#/properties/organization-is-active",
+            "type": "boolean",
+            "title": "The organization-is-active schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
             ]
         },
         "initial-contact-date": {
@@ -75,7 +73,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200/12/12"
+                "2020-01-01"
             ]
         },
         "customer-since-date": {
@@ -85,7 +83,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200-12-12"
+                "2021-01-01"
             ]
         },
         "contract-start-date": {
@@ -95,7 +93,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1208.08.08"
+                "2021-01-01"
             ]
         },
         "contract-end-date": {
@@ -105,7 +103,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200/12/12"
+                "2023-01-01"
             ]
         },
         "estimated-users": {
@@ -115,7 +113,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                102
+                200
             ]
         },
         "estimated-vehicles": {
@@ -125,7 +123,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                1500
+                20
             ]
         },
         "paid-users": {
@@ -135,7 +133,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                12
+                180
             ]
         },
         "pay-threshold": {
@@ -145,7 +143,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                12000
+                500
             ]
         }
     },

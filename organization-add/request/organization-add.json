@@ -7,16 +7,16 @@
     "default": {},
     "examples": [
         {
-            "organization-name": "test organization4",
+            "organization-name": "Sote Engineering 1",
             "organization-is-active": true,
-            "initial-contact-date": "1200/12/12",
-            "customer-since-date": "1200-12-12",
-            "contract-start-date": "1208.08.08",
-            "contract-end-date": "1200/12/12",
-            "estimated-users": 102,
-            "estimated-vehicles": 1500,
-            "paid-users": 12,
-            "pay-threshold": 12000
+            "initial-contact-date": "2020-01-01",
+            "customer-since-date": "2021-01-01",
+            "contract-start-date": "2021-01-01",
+            "contract-end-date": "2023-01-01",
+            "estimated-users": 200,
+            "estimated-vehicles": 20,
+            "paid-users": 180,
+            "pay-threshold": 500
         }
     ],
     "required": [
@@ -30,7 +30,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test organization4"
+                "Sote Engineering 1"
             ]
         },
         "organization-is-active": {
@@ -50,7 +50,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200/12/12"
+                "2020-01-01"
             ]
         },
         "customer-since-date": {
@@ -60,7 +60,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200-12-12"
+                "2021-01-01"
             ]
         },
         "contract-start-date": {
@@ -70,7 +70,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1208.08.08"
+                "2021-01-01"
             ]
         },
         "contract-end-date": {
@@ -80,7 +80,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "1200/12/12"
+                "2023-01-01"
             ]
         },
         "estimated-users": {
@@ -90,7 +90,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                102
+                200
             ]
         },
         "estimated-vehicles": {
@@ -100,7 +100,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                1500
+                20
             ]
         },
         "paid-users": {
@@ -110,7 +110,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                12
+                180
             ]
         },
         "pay-threshold": {
@@ -120,7 +120,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": 0,
             "examples": [
-                12000
+                500
             ]
         }
     },

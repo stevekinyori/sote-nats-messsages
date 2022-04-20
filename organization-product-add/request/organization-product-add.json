@@ -7,57 +7,93 @@
     "default": {},
     "examples": [
         {
-            "organizations-id": 1,
-            "product-name-list": [
-                "PRODUCT1",
-                "PRODUCT2"
-            ]
-        }
-    ],
-    "required": [
-        "organizations-id",
-        "product-name-list"
-    ],
-    "properties": {
-        "organizations-id": {
-            "$id": "#/properties/organizations-id",
-            "type": "integer",
-            "title": "The organizations-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "product-name-list": {
-            "$id": "#/properties/product-name-list",
-            "type": "array",
-            "title": "The product-name-list schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                [
+            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+            "message": {
+                "organizations_id": 1,
+                "product-name-list": [
                     "PRODUCT1",
                     "PRODUCT2"
                 ]
+            }
+        }
+    ],
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "$id": "#/properties/message-id",
+            "type": "string",
+            "title": "The message-id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "object",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "organizations_id": 1,
+                    "product-name-list": [
+                        "PRODUCT1",
+                        "PRODUCT2"
+                    ]
+                }
             ],
-            "additionalItems": true,
-            "items": {
-                "$id": "#/properties/product-name-list/items",
-                "anyOf": [
-                    {
-                        "$id": "#/properties/product-name-list/items/anyOf/0",
-                        "type": "string",
-                        "title": "The first anyOf schema",
-                        "description": "An explanation about the purpose of this instance.",
-                        "default": "",
-                        "examples": [
+            "required": [
+                "organizations_id",
+                "product-name-list"
+            ],
+            "properties": {
+                "organizations_id": {
+                    "$id": "#/properties/message/properties/organizations_id",
+                    "type": "integer",
+                    "title": "The organizations_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "product-name-list": {
+                    "$id": "#/properties/message/properties/product-name-list",
+                    "type": "array",
+                    "title": "The product-name-list schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
                             "PRODUCT1",
                             "PRODUCT2"
                         ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/message/properties/product-name-list/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/message/properties/product-name-list/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "PRODUCT1",
+                                    "PRODUCT2"
+                                ]
+                            }
+                        ]
                     }
-                ]
-            }
+                }
+            },
+            "additionalProperties": true
         }
     },
     "additionalProperties": true
