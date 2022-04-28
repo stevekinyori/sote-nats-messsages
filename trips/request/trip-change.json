@@ -8,48 +8,48 @@
   "examples": [
     {
       "trips-id": 12236,
-      "row_version": 1,
-      "client_company_id": 20,
-      "client_company_name": "Customs",
-      "pickup_location": "HiramSaltmarsh",
-      "drop_off_location": "VelvetVeldt",
-      "load_weight": 10,
-      "load_unit_of_measure": "METRIC_TONS",
-      "load_name": "HYT45x0917 CHANGE TEST",
-      "estimated_pickup_date": "2019-01-01",
-      "estimated_delivery_date": "2019-01-03",
+      "row-version": 1,
+      "client-company-id": 20,
+      "client-company-name": "Customs",
+      "pickup-location": "HiramSaltmarsh",
+      "drop-off-location": "VelvetVeldt",
+      "load-weight": 10,
+      "load-unit-of-measure": "METRIC_TONS",
+      "load-name": "HYT45x0917 CHANGE TEST",
+      "estimated-pickup-date": "2019-01-01",
+      "estimated-delivery-date": "2019-01-03",
       "estimated-delivery-days": 2,
-      "estimated_total_days": 3,
-      "estimated_return_date": "2019-01-05",
-      "first_estimated_delivery_date": "2019-01-04",
-      "external_bill_of_lading": "TestBol 2",
-      "return_yard": "Test-Yard",
-      "trip_notes": "Handlewithcare example 2",
-      "trip_type": "INTERNAL"
+      "estimated-total-days": 3,
+      "estimated-return-date": "2019-01-05",
+      "first-estimated-delivery-date": "2019-01-04",
+      "external-bill-of-lading": "TestBol 2",
+      "return-yard": "Test-Yard",
+      "trip-notes": "Handlewithcare example 2",
+      "trip-type": "INTERNAL"
     }
   ],
   "required": [
     "trips-id",
-    "row_version"
+    "row-version"
   ],
   "optional": [
-    "client_company_id",
-    "client_company_name",
-    "pickup_location",
-    "drop_off_location",
-    "load_weight",
-    "load_unit_of_measure",
-    "load_name",
-    "estimated_pickup_date",
-    "estimated_delivery_date",
+    "client-company-id",
+    "client-company-name",
+    "pickup-location",
+    "drop-off-location",
+    "load-weight",
+    "load-unit-of-measure",
+    "load-name",
+    "estimated-pickup-date",
+    "estimated-delivery-date",
     "estimated-delivery-days",
-    "estimated_total_days",
-    "estimated_return_date",
-    "first_estimated_delivery_date",
-    "external_bill_of_lading",
-    "return_yard",
-    "trip_notes",
-    "trip_type"
+    "estimated-total-days",
+    "estimated-return-date",
+    "first-estimated-delivery-date",
+    "external-bill-of-lading",
+    "return-yard",
+    "trip-notes",
+    "trip-type"
   ],
   "properties": {
     "trips-id": {
@@ -62,104 +62,104 @@
       "title": "The trips-id schema",
       "type": "integer"
     },
-    "row_version": {
-      "$id": "#/properties/row_version",
+    "row-version": {
+      "$id": "#/properties/row-version",
       "default": 0,
       "description": "This is a system generated number that is used to control updates to the record.",
       "examples": [
         1
       ],
-      "title": "The row_version schema",
+      "title": "The row-version schema",
       "type": "integer"
     },
-    "client_company_id": {
-      "$id": "#/properties/client_company_id",
+    "client-company-id": {
+      "$id": "#/properties/client-company-id",
       "default": 0,
       "description": "This is a system generated id that is used identify a customer",
       "examples": [
         20
       ],
-      "title": "The client_company_id schema",
+      "title": "The client_company-id schema",
       "type": "integer"
     },
-    "client_company_name": {
-      "$id": "#/properties/client_company_name",
+    "client-company-name": {
+      "$id": "#/properties/client-company-name",
       "default": "",
       "description": "Who the client is for the trip.",
       "examples": [
         "Customs"
       ],
-      "title": "The client_company_name schema",
+      "title": "The client-company-name schema",
       "type": "string"
     },
-    "pickup_location": {
-      "$id": "#/properties/pickup_location",
+    "pickup-location": {
+      "$id": "#/properties/pickup-location",
       "default": "",
       "description": "Where the trip starts.",
       "examples": [
         "HiramSaltmarsh"
       ],
-      "title": "The pickup_location schema",
+      "title": "The pickup-location schema",
       "type": "string"
     },
-    "drop_off_location": {
-      "$id": "#/properties/drop_off_location",
+    "drop-off-location": {
+      "$id": "#/properties/drop-off-location",
       "default": "",
       "description": "Where the trip ends.",
       "examples": [
         "VelvetVeldt"
       ],
-      "title": "The drop_off_location schema",
+      "title": "The drop-off-location schema",
       "type": "string"
     },
-    "load_weight": {
-      "$id": "#/properties/load_weight",
+    "load-weight": {
+      "$id": "#/properties/load-weight",
       "default": 0,
       "description": "The amount of weight being moved.",
       "examples": [
         10
       ],
-      "title": "The load_weight schema",
+      "title": "The load-weight schema",
       "type": "integer"
     },
-    "load_unit_of_measure": {
-      "$id": "#/properties/load_unit_of_measure",
+    "load-unit-of-measure": {
+      "$id": "#/properties/load-unit-of-measure",
       "default": "",
       "description": "The measuring system being used.",
       "examples": [
         "METRIC_TONS"
       ],
-      "title": "The load_unit_of_measure schema",
+      "title": "The load-unit-of-measure schema",
       "type": "string"
     },
-    "load_name": {
-      "$id": "#/properties/load_name",
+    "load-name": {
+      "$id": "#/properties/load-name",
       "default": "",
       "description": "The customer supplied value to identify the load.",
       "examples": [
         "HYT45x0917 CHANGE TEST"
       ],
-      "title": "The load_name schema",
+      "title": "The load-name schema",
       "type": "string"
     },
-    "estimated_pickup_date": {
-      "$id": "#/properties/estimated_pickup_date",
+    "estimated-pickup-date": {
+      "$id": "#/properties/estimated-pickup-date",
       "default": "",
       "description": "When the vehicle should arrive at the pickup location.",
       "examples": [
         "2019-01-01"
       ],
-      "title": "The estimated_pickup_date schema",
+      "title": "The estimated-pickup-date schema",
       "type": "string"
     },
-    "estimated_delivery_date": {
-      "$id": "#/properties/estimated_delivery_date",
+    "estimated-delivery-date": {
+      "$id": "#/properties/estimated-delivery-date",
       "default": "",
       "description": "When the vehicle should deliver the load.",
       "examples": [
         "2019-01-03"
       ],
-      "title": "The estimated_delivery_date schema",
+      "title": "The estimated-delivery-date schema",
       "type": "string"
     },
     "estimated-delivery-days": {
@@ -172,74 +172,74 @@
       "title": "The estimated-delivery-days schema",
       "type": "integer"
     },
-    "estimated_total_days": {
-      "$id": "#/properties/estimated_total_days",
+    "estimated-total-days": {
+      "$id": "#/properties/estimated-total-days",
       "default": 0,
       "description": "How long in days to complete the trip.",
       "examples": [
         3
       ],
-      "title": "The estimated_total_days schema",
+      "title": "The estimated-total-days schema",
       "type": "integer"
     },
-    "estimated_return_date": {
-      "$id": "#/properties/estimated_return_date",
+    "estimated-return-date": {
+      "$id": "#/properties/estimated-return-date",
       "default": "",
       "description": "Calculated date based on the estimated total days when the vehicle will returne.",
       "examples": [
         "2019-01-05"
       ],
-      "title": "The estimated_return_date schema",
+      "title": "The estimated-return-date schema",
       "type": "string"
     },
-    "first_estimated_delivery_date": {
-      "$id": "#/properties/first_estimated_delivery_date",
+    "first_estimated-delivery-date": {
+      "$id": "#/properties/first_estimated-delivery-date",
       "default": "",
       "description": "The date of the first date the shipment would be completed.",
       "examples": [
         "2019-01-04"
       ],
-      "title": "The first_estimated_delivery_date schema",
+      "title": "The first_estimated-delivery-date schema",
       "type": "string"
     },
-    "external_bill_of_lading": {
-      "$id": "#/properties/external_bill_of_lading",
+    "external-bill-of-lading": {
+      "$id": "#/properties/external-bill-of-lading",
       "default": "",
       "description": "This is an externally provided value for identification of a shipment for a trip.",
       "examples": [
         "TestBol 2"
       ],
-      "title": "The external_bill_of_lading schema",
+      "title": "The external-bill-of-lading schema",
       "type": "string"
     },
-    "return_yard": {
-      "$id": "#/properties/return_yard",
+    "return-yard": {
+      "$id": "#/properties/return-yard",
       "default": "",
       "description": "The name of a return yard.",
       "examples": [
         "Test-Yard"
       ],
-      "title": "The return_yard schema",
+      "title": "The return-yard schema",
       "type": "string"
     },
-    "trip_notes": {
-      "$id": "#/properties/trip_notes",
+    "trip-notes": {
+      "$id": "#/properties/trip-notes",
       "default": "",
       "description": "This hold notes in reverse chronological order.",
       "examples": [
         "Handlewithcare example 2"
       ],
-      "title": "The trip_notes schema",
+      "title": "The trip-notes schema",
       "type": "string"
     },
-    "trip_type": {
-      "$id": "#/properties/trip_type",
+    "trip-type": {
+      "$id": "#/properties/trip-type",
       "default": "",
       "description": "Is the trip INTERNAL or OUTSOURCED.",
       "examples": [
         "INTERNAL"
       ],
-      "title": "The trip_type schema",
+      "title": "The trip-type schema",
       "type": "string"
     }
   },
