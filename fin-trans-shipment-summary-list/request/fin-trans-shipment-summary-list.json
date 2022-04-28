@@ -7,6 +7,7 @@
   "default": {},
   "examples": [
     {
+      "shipment-status": ["COMPLETE"],
       "days": 30,
       "filters": {
         "and": [
@@ -25,7 +26,9 @@
     }
   ],
   "optional": [
-    "filters"
+    "filters",
+    "days",
+    "shipment-status"
   ],
   "properties": {
     "filters": {
