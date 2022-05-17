@@ -7,6 +7,7 @@
     "default": {},
     "examples": [
         {
+            "shipment-type": "Air Import",
             "client-company-id": 1,
             "client-company-name": "My Enterprises Ltd",
             "suppliers-id": 1,
@@ -18,10 +19,12 @@
             "shipment-port-of-entry-eta": "2020-12-26",
             "consignment-wgt": 17,
             "consignment-wgt-uom": "MT",
-            "through-bill-of-lading": "TBL"
+            "through-bill-of-lading": "TBL",
+            "external-shipment-id": "SOTE_TEST_SHIPMENT"
         }
     ],
     "required": [
+        "shipment-type",
         "client-company-id",
         "client-company-name"
     ],
@@ -34,6 +37,16 @@
         ]
     },
     "properties": {
+        "shipment-type": {
+            "$id": "#/properties/shipment-type",
+            "type": "string",
+            "title": "The shipment-type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Air Import"
+            ]
+        },
         "client-company-id": {
             "$id": "#/properties/client-company-id",
             "type": "integer",
@@ -152,6 +165,16 @@
             "default": "",
             "examples": [
                 "TBL"
+            ]
+        },
+        "external-shipment-id": {
+            "$id": "#/properties/external-shipment-id",
+            "type": "string",
+            "title": "The external-shipment-id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "SOTE_TEST_SHIPMENT"
             ]
         }
     },
