@@ -1,58 +1,26 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "http://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "message": {
-                "shipment_status": {
-                    "STATUS_1": 1,
-                    "STATUS_2": 1
-                },
-                "total_shipments": 2,
-                "total_containers": 3,
-                "container_turnaround_time": 0,
-                "transport_turnaround_time": 0
-            }
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "message-id",
         "message"
     ],
     "properties": {
         "message-id": {
-            "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The message-id Schema",
             "examples": [
                 "51ad84d4-XXXXXXX-6b2ce5e8"
             ]
         },
         "message": {
-            "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-                {
-                    "shipment_status": {
-                        "STATUS_1": 1,
-                        "STATUS_2": 1
-                    },
-                    "total_shipments": 2,
-                    "total_containers": 3,
-                    "container_turnaround_time": 0,
-                    "transport_turnaround_time": 0
-                }
-            ],
+            "title": "The message Schema",
             "required": [
                 "shipment_status",
                 "total_shipments",
@@ -62,88 +30,156 @@
             ],
             "properties": {
                 "shipment_status": {
-                    "$id": "#/properties/message/properties/shipment_status",
                     "type": "object",
-                    "title": "The shipment_status schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": {},
-                    "examples": [
-                        {
-                            "STATUS_1": 1,
-                            "STATUS_2": 1
-                        }
-                    ],
+                    "title": "The shipment_status Schema",
                     "required": [
                         "STATUS_1",
                         "STATUS_2"
                     ],
                     "properties": {
                         "STATUS_1": {
-                            "$id": "#/properties/message/properties/shipment_status/properties/STATUS_1",
-                            "type": "integer",
-                            "title": "The STATUS_1 schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": 0,
-                            "examples": [
-                                1
-                            ]
+                            "type": "object",
+                            "default": {},
+                            "title": "The STATUS_1 Schema",
+                            "required": [
+                                "containers",
+                                "shipments"
+                            ],
+                            "properties": {
+                                "containers": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The containers Schema",
+                                    "examples": [
+                                        1
+                                    ]
+                                },
+                                "shipments": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The shipments Schema",
+                                    "examples": [
+                                        1
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "containers": 1,
+                                "shipments": 1
+                            }]
                         },
                         "STATUS_2": {
-                            "$id": "#/properties/message/properties/shipment_status/properties/STATUS_2",
-                            "type": "integer",
-                            "title": "The STATUS_2 schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": 0,
-                            "examples": [
-                                1
-                            ]
+                            "type": "object",
+                            "default": {},
+                            "title": "The STATUS_2 Schema",
+                            "required": [
+                                "containers",
+                                "shipments"
+                            ],
+                            "properties": {
+                                "containers": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The containers Schema",
+                                    "examples": [
+                                        2
+                                    ]
+                                },
+                                "shipments": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The shipments Schema",
+                                    "examples": [
+                                        1
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "containers": 2,
+                                "shipments": 1
+                            }]
                         }
                     },
-                    "additionalProperties": true
+                    "examples": [{
+                        "STATUS_1": {
+                            "containers": 1,
+                            "shipments": 1
+                        },
+                        "STATUS_2": {
+                            "containers": 2,
+                            "shipments": 1
+                        }
+                    }]
                 },
                 "total_shipments": {
-                    "$id": "#/properties/message/properties/total_shipments",
                     "type": "integer",
-                    "title": "The total_shipments schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": 0,
+                    "title": "The total_shipments Schema",
                     "examples": [
                         2
                     ]
                 },
                 "total_containers": {
-                    "$id": "#/properties/message/properties/total_containers",
                     "type": "integer",
-                    "title": "The total_containers schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": 0,
+                    "title": "The total_containers Schema",
                     "examples": [
                         3
                     ]
                 },
                 "container_turnaround_time": {
-                    "$id": "#/properties/message/properties/container_turnaround_time",
                     "type": "integer",
-                    "title": "The container_turnaround_time schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": 0,
+                    "title": "The container_turnaround_time Schema",
                     "examples": [
                         0
                     ]
                 },
                 "transport_turnaround_time": {
-                    "$id": "#/properties/message/properties/transport_turnaround_time",
                     "type": "integer",
-                    "title": "The transport_turnaround_time schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": 0,
+                    "title": "The transport_turnaround_time Schema",
                     "examples": [
                         0
                     ]
                 }
             },
-            "additionalProperties": true
+            "examples": [{
+                "shipment_status": {
+                    "STATUS_1": {
+                        "containers": 1,
+                        "shipments": 1
+                    },
+                    "STATUS_2": {
+                        "containers": 2,
+                        "shipments": 1
+                    }
+                },
+                "total_shipments": 2,
+                "total_containers": 3,
+                "container_turnaround_time": 0,
+                "transport_turnaround_time": 0
+            }]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "shipment_status": {
+                "STATUS_1": {
+                    "containers": 1,
+                    "shipments": 1
+                },
+                "STATUS_2": {
+                    "containers": 2,
+                    "shipments": 1
+                }
+            },
+            "total_shipments": 2,
+            "total_containers": 3,
+            "container_turnaround_time": 0,
+            "transport_turnaround_time": 0
+        }
+    }]
 }
