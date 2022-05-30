@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft/2019-09/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
     "default": {},
@@ -223,6 +223,22 @@
                                     null
                                 ]
                             },
+                            "estimated_berthing_time": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The estimated_berthing_time Schema",
+                                "examples": [
+                                    "2023-06-17 14:51:00+00"
+                                ]
+                            },
+                            "final_release_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The final_release_date Schema",
+                                "examples": [
+                                    "2023-06-17"
+                                ]
+                            },
                             "shipment_history": {
                                 "type": "array",
                                 "default": [],
@@ -407,6 +423,54 @@
                                             "title": "The container_cargo_gross_unit_of_measure Schema",
                                             "examples": [
                                                 "KGS"
+                                            ]
+                                        },
+                                        "container_discharge_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The container_discharge_date Schema",
+                                            "examples": [
+                                                "2022-06-11"
+                                            ]
+                                        },
+                                        "container_transfer_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The container_transfer_date Schema",
+                                            "examples": [
+                                                "2022-07-11"
+                                            ]
+                                        },
+                                        "empty_return_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The empty_return_date Schema",
+                                            "examples": [
+                                                "2022-11-11"
+                                            ]
+                                        },
+                                        "gate_in_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The gate_in_date Schema",
+                                            "examples": [
+                                                "2022-08-11"
+                                            ]
+                                        },
+                                        "last_free_storage_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The last_free_storage_date Schema",
+                                            "examples": [
+                                                "2022-09-11"
+                                            ]
+                                        },
+                                        "offloading_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The offloading_date Schema",
+                                            "examples": [
+                                                "2022-10-11"
                                             ]
                                         },
                                         "created_by_date": {
@@ -860,6 +924,12 @@
                                             "trips_id": 1,
                                             "container_cargo_gross_weight": 20178,
                                             "container_cargo_gross_unit_of_measure": "KGS",
+                                            "container_discharge_date": "2022-06-11",
+                                            "container_transfer_date": "2022-07-11",
+                                            "empty_return_date": "2022-11-11",
+                                            "gate_in_date": "2022-08-11",
+                                            "last_free_storage_date": "2022-09-11",
+                                            "offloading_date": "2022-10-11",
                                             "created_by_date": "2020-07-22",
                                             "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                             "updated_by_date": "2020-11-12",
@@ -922,6 +992,12 @@
                                             "trips_id": 1,
                                             "container_cargo_gross_weight": 20178,
                                             "container_cargo_gross_unit_of_measure": "KGS",
+                                            "container_discharge_date": "2022-06-11",
+                                            "container_transfer_date": "2022-07-11",
+                                            "empty_return_date": "2022-11-11",
+                                            "gate_in_date": "2022-08-11",
+                                            "last_free_storage_date": "2022-09-11",
+                                            "offloading_date": "2022-10-11",
                                             "created_by_date": "2020-07-22",
                                             "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                             "updated_by_date": "2020-11-12",
@@ -1447,6 +1523,8 @@
                                 "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
                                 "through_bill_of_lading": "TBL",
                                 "external_shipment_id": null,
+                                "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                                "final_release_date": "2023-06-17",
                                 "shipment_history": [
                                     {
                                         "shipment_poe_eta": "2020-06-30",
@@ -1470,6 +1548,12 @@
                                         "trips_id": 1,
                                         "container_cargo_gross_weight": 20178,
                                         "container_cargo_gross_unit_of_measure": "KGS",
+                                        "container_discharge_date": "2022-06-11",
+                                        "container_transfer_date": "2022-07-11",
+                                        "empty_return_date": "2022-11-11",
+                                        "gate_in_date": "2022-08-11",
+                                        "last_free_storage_date": "2022-09-11",
+                                        "offloading_date": "2022-10-11",
                                         "created_by_date": "2020-07-22",
                                         "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                         "updated_by_date": "2020-11-12",
@@ -1596,6 +1680,8 @@
                                 "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
                                 "through_bill_of_lading": "TBL",
                                 "external_shipment_id": null,
+                                "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                                "final_release_date": "2023-06-17",
                                 "shipment_history": [
                                     {
                                         "shipment_poe_eta": "2020-06-30",
@@ -1619,6 +1705,12 @@
                                         "trips_id": 1,
                                         "container_cargo_gross_weight": 20178,
                                         "container_cargo_gross_unit_of_measure": "KGS",
+                                        "container_discharge_date": "2022-06-11",
+                                        "container_transfer_date": "2022-07-11",
+                                        "empty_return_date": "2022-11-11",
+                                        "gate_in_date": "2022-08-11",
+                                        "last_free_storage_date": "2022-09-11",
+                                        "offloading_date": "2022-10-11",
                                         "created_by_date": "2020-07-22",
                                         "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                         "updated_by_date": "2020-11-12",
@@ -1791,6 +1883,8 @@
                             "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
                             "through_bill_of_lading": "TBL",
                             "external_shipment_id": null,
+                            "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                            "final_release_date": "2023-06-17",
                             "shipment_history": [
                                 {
                                     "shipment_poe_eta": "2020-06-30",
@@ -1814,6 +1908,12 @@
                                     "trips_id": 1,
                                     "container_cargo_gross_weight": 20178,
                                     "container_cargo_gross_unit_of_measure": "KGS",
+                                    "container_discharge_date": "2022-06-11",
+                                    "container_transfer_date": "2022-07-11",
+                                    "empty_return_date": "2022-11-11",
+                                    "gate_in_date": "2022-08-11",
+                                    "last_free_storage_date": "2022-09-11",
+                                    "offloading_date": "2022-10-11",
                                     "created_by_date": "2020-07-22",
                                     "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                     "updated_by_date": "2020-11-12",
@@ -1951,6 +2051,8 @@
                         "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
                         "through_bill_of_lading": "TBL",
                         "external_shipment_id": null,
+                        "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                        "final_release_date": "2023-06-17",
                         "shipment_history": [
                             {
                                 "shipment_poe_eta": "2020-06-30",
@@ -1974,6 +2076,12 @@
                                 "trips_id": 1,
                                 "container_cargo_gross_weight": 20178,
                                 "container_cargo_gross_unit_of_measure": "KGS",
+                                "container_discharge_date": "2022-06-11",
+                                "container_transfer_date": "2022-07-11",
+                                "empty_return_date": "2022-11-11",
+                                "gate_in_date": "2022-08-11",
+                                "last_free_storage_date": "2022-09-11",
+                                "offloading_date": "2022-10-11",
                                 "created_by_date": "2020-07-22",
                                 "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                 "updated_by_date": "2020-11-12",
