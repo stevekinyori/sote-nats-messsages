@@ -146,6 +146,14 @@
                                     "2022-10-11"
                                 ]
                             },
+                            "demurrage_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The demurrage_date Schema",
+                                "examples": [
+                                    "2022-12-11"
+                                ]
+                            },
                             "created_by_date": {
                                 "type": "string",
                                 "default": "",
@@ -509,8 +517,14 @@
                                         "cargo_id",
                                         "row_version",
                                         "cargo_type",
+                                        "cargo_gross_weight",
+                                        "cargo_gross_unit_of_measure",
+                                        "cargo_quantity",
+                                        "cargo_quantity_unit_of_measure",
                                         "created_by_date",
                                         "created_by_requestor_username",
+                                        "updated_by_date",
+                                        "updated_by_requestor_username",
                                         "cargo_parent_type"
                                     ],
                                     "properties": {
@@ -922,6 +936,7 @@
                                 "gate_in_date": "2022-08-11",
                                 "last_free_storage_date": "2022-09-11",
                                 "offloading_date": "2022-10-11",
+                                "demurrage_date": "2022-12-11",
                                 "created_by_date": "2020-07-22",
                                 "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                 "updated_by_date": "2020-11-12",
@@ -1024,6 +1039,7 @@
                                 "gate_in_date": "2022-08-11",
                                 "last_free_storage_date": "2022-09-11",
                                 "offloading_date": "2022-10-11",
+                                "demurrage_date": "2022-12-11",
                                 "created_by_date": "2020-07-22",
                                 "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                 "updated_by_date": "2020-11-12",
@@ -1172,6 +1188,7 @@
                             "gate_in_date": "2022-08-11",
                             "last_free_storage_date": "2022-09-11",
                             "offloading_date": "2022-10-11",
+                            "demurrage_date": "2022-12-11",
                             "created_by_date": "2020-07-22",
                             "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                             "updated_by_date": "2020-11-12",
@@ -1285,6 +1302,7 @@
                         "gate_in_date": "2022-08-11",
                         "last_free_storage_date": "2022-09-11",
                         "offloading_date": "2022-10-11",
+                        "demurrage_date": "2022-12-11",
                         "created_by_date": "2020-07-22",
                         "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                         "updated_by_date": "2020-11-12",

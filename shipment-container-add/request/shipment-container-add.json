@@ -104,6 +104,14 @@
             "examples": [
                 "2022-11-11"
             ]
+        },
+        "demurrage-date": {
+            "type": "string",
+            "default": "",
+            "title": "The demurrage Schema",
+            "examples": [
+                "2022-12-11"
+            ]
         }
     },
     "examples": [
@@ -119,7 +127,8 @@
             "gate-in-date": "2022-08-11",
             "last-free-storage-date": "2022-09-11",
             "offloading-date": "2022-10-11",
-            "empty-return-date": "2022-11-11"
+            "empty-return-date": "2022-11-11",
+            "demurrage-date": "2022-12-11"
         }
     ]
 }
