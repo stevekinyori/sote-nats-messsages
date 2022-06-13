@@ -7,7 +7,7 @@
     "default": {},
     "examples": [
         {
-            "aws-user-name": "967xxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "cognito-username": "967xxxxxxxxxxxxxxxxxxxxxxxxxx",
             "user-phone-country-code": "+254",
             "user-phone-number": "712345678",
             "user-email": "test@test.com.com",
@@ -22,7 +22,7 @@
         }
     ],
     "required": [
-        "aws-user-name"
+        "cognito-username"
     ],
     "optional": [
     "user-phone-country-code",
@@ -35,10 +35,10 @@
     "client-company-id"
     ],
     "properties": {
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
+        "cognito-username": {
+            "$id": "#/properties/cognito-username",
             "type": "string",
-            "title": "The aws-user-name schema",
+            "title": "The cognito-username schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [

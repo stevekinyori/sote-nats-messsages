@@ -7,7 +7,7 @@
     "default": {},
     "examples": [
         {
-            "message-id": "test-message",
+            "message-id": "test-list",
             "message": {
                 "success": true
             }
@@ -25,7 +25,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-                "test-message"
+                "test-list"
             ]
         },
         "message": {
