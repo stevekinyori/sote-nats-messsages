@@ -7,17 +7,17 @@
     "default": {},
     "examples": [
         {
-            "aws-user-name": "03cec256-xxxx"
+            "cognito-username": "03cec256-xxxx"
         }
     ],
     "required": [
-        "aws-user-name"
+        "cognito-username"
     ],
     "properties": {
-        "aws-user-name": {
-            "$id": "#/properties/aws-user-name",
+        "cognito-username": {
+            "$id": "#/properties/cognito-username",
             "type": "string",
-            "title": "The aws-user-name schema",
+            "title": "The cognito-username schema",
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
