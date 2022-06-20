@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "organizations-id",
+    "aws-user-name",
+    "user-login-type",
+    "user-phone-country-code",
+    "user-phone-number",
+    "user-email",
+    "user-role-list",
+    "informational-user"
+  ],
+  "optional" :[
+    "user-first-name",
+    "user-middle-name",
+    "user-last-name",
+    "client-company-id",
+    "informational-user",
+    "user-is-active",
+    "user-name-prefix",
+    "user-name-suffix",
+    "user-hire-date",
+    "driver-license",
+    "driver-license-expiry",
+    "user-wage",
+    "user-pay-period",
+    "device-token"
+  ],
+  "properties": {
+    "organizations-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The organizations-id Schema",
+      "examples": [
+        10000
+      ]
+    },
+    "aws-user-name": {
+      "type": "string",
+      "default": "",
+      "title": "The aws-user-name Schema",
+      "examples": [
+        "test-user"
+      ]
+    },
+    "user-login-type": {
+      "type": "string",
+      "default": "",
+      "title": "The user-login-type Schema",
+      "examples": [
+        "email"
+      ]
+    },
+    "user-phone-country-code": {
+      "type": "string",
+      "default": "",
+      "title": "The user-phone-country-code Schema",
+      "examples": [
+        "+254"
+      ]
+    },
+    "user-phone-number": {
+      "type": "string",
+      "default": "",
+      "title": "The user-phone-number Schema",
+      "examples": [
+        "722000000"
+      ]
+    },
+    "user-email": {
+      "type": "string",
+      "default": "",
+      "title": "The user-email Schema",
+      "examples": [
+        "test@test.com"
+      ]
+    },
+    "user-first-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-first-name Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "user-middle-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-middle-name Schema",
+      "examples": [
+        "User"
+      ]
+    },
+    "user-last-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-last-name Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "user-role-list": {
+      "type": "array",
+      "default": [],
+      "title": "The user-role-list Schema",
+      "items": {
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "ROLE_NAME_1",
+          "ROLE_NAME_2"
+        ]
+      },
+      "examples": [
+        ["ROLE_NAME_1",
+          "ROLE_NAME_2"
+        ]
+      ]
+    },
+    "client-company-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The client-company-id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "informational-user": {
+      "type": "boolean",
+      "default": false,
+      "title": "The informational-user Schema",
+      "examples": [
+        true
+      ]
+    },
+    "user-is-active": {
+      "type": "boolean",
+      "default": false,
+      "title": "The user-is-active Schema",
+      "examples": [
+        true
+      ]
+    },
+    "user-name-prefix": {
+      "type": "string",
+      "default": "",
+      "title": "The user-name-prefix Schema",
+      "examples": [
+        "Miss"
+      ]
+    },
+    "user-name-suffix": {
+      "type": "string",
+      "default": "",
+      "title": "The user-name-suffix Schema",
+      "examples": [
+        "MD"
+      ]
+    },
+    "user-hire-date": {
+      "type": "string",
+      "default": "",
+      "title": "The user-hire-date Schema",
+      "examples": [
+        "2021-08-26"
+      ]
+    },
+    "driver-license": {
+      "type": "string",
+      "default": "",
+      "title": "The driver-license Schema",
+      "examples": [
+        "DL-123"
+      ]
+    },
+    "driver-license-expiry": {
+      "type": "string",
+      "default": "",
+      "title": "The driver-license-expiry Schema",
+      "examples": [
+        "2022-01-01"
+      ]
+    },
+    "user-wage": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-wage Schema",
+      "examples": [
+        200000
+      ]
+    },
+    "user-pay-period": {
+      "type": "string",
+      "default": "",
+      "title": "The user-pay-period Schema",
+      "examples": [
+        "Monthly"
+      ]
+    },
+    "device-token": {
+      "type": "string",
+      "default": "",
+      "title": "The device-token Schema",
+      "examples": [
+        "test-device-token"
+      ]
+    }
+  },
+  "examples": [{
+    "organizations-id": 10000,
+    "aws-user-name": "test-user",
+    "user-login-type": "email",
+    "user-phone-country-code": "+254",
+    "user-phone-number": "722000000",
+    "user-email": "test@test.com",
+    "user-first-name": "Test",
+    "user-middle-name": "User",
+    "user-last-name": "Test",
+    "user-role-list": [
+      "ROLE_NAME_1",
+      "ROLE_NAME_2"
+    ],
+    "client-company-id": 1,
+    "informational-user": true,
+    "user-is-active": true,
+    "user-name-prefix": "Miss",
+    "user-name-suffix": "MD",
+    "user-hire-date": "2021-08-26",
+    "driver-license": "DL-123",
+    "driver-license-expiry": "2022-01-01",
+    "user-wage": 200000,
+    "user-pay-period": "Monthly",
+    "device-token": "test-device-token"
+  }]
+}
