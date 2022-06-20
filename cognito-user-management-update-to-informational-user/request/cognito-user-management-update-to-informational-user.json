@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "user-management-id",
+    "cognito-username",
+    "row-version",
+    "user-is-active",
+    "informational-user"
+  ],
+  "optional": [
+    "user-first-name",
+    "user-middle-name",
+    "user-last-name",
+    "user-role-list",
+    "client-company-id",
+    "organizations-id",
+    "user-phone-country-code",
+    "user-phone-number",
+    "user-email",
+    "aws-user-name",
+    "user-name-prefix",
+    "user_name_suffix",
+    "user-hire-date",
+    "driver-license",
+    "driver-license-expiry",
+    "user-wage",
+    "user-pay-period",
+    "device-token"
+  ],
+  "properties": {
+    "user-management-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-management-id Schema",
+      "examples": [
+        3
+      ]
+    },
+    "cognito-username": {
+      "type": "string",
+      "default": "",
+      "title": "The cognito-username Schema",
+      "examples": [
+        "INFO"
+      ]
+    },
+    "row-version": {
+      "type": "integer",
+      "default": 0,
+      "title": "The row-version Schema",
+      "examples": [
+        4
+      ]
+    },
+    "user-is-active": {
+      "type": "boolean",
+      "default": false,
+      "title": "The user-is-active Schema",
+      "examples": [
+        true
+      ]
+    },
+    "organizations-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The organizations-id Schema",
+      "examples": [
+        10000
+      ]
+    },
+    "aws-user-name": {
+      "type": "string",
+      "default": "",
+      "title": "The aws-user-name Schema",
+      "examples": [
+        "test-user"
+      ]
+    },
+    "user-phone-country-code": {
+      "type": "string",
+      "default": "",
+      "title": "The user-phone-country-code Schema",
+      "examples": [
+        "+254"
+      ]
+    },
+    "user-phone-number": {
+      "type": "string",
+      "default": "",
+      "title": "The user-phone-number Schema",
+      "examples": [
+        "722000000"
+      ]
+    },
+    "user-email": {
+      "type": "string",
+      "default": "",
+      "title": "The user-email Schema",
+      "examples": [
+        "test@test.com"
+      ]
+    },
+    "user-first-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-first-name Schema",
+      "examples": [
+        "User"
+      ]
+    },
+    "user-middle-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-middle-name Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "user-last-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-last-name Schema",
+      "examples": [
+        "User"
+      ]
+    },
+    "user-role-list": {
+      "type": "array",
+      "default": [],
+      "title": "The user-role-list Schema",
+      "items": {
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "USER",
+          "ADMIN"
+        ]
+      },
+      "examples": [
+        ["USER",
+          "ADMIN"
+        ]
+      ]
+    },
+    "client-company-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The client-company-id Schema",
+      "examples": [
+        10
+      ]
+    },
+    "informational-user": {
+      "type": "boolean",
+      "default": false,
+      "title": "The informational-user Schema",
+      "examples": [
+        false
+      ]
+    },
+    "user-name-prefix": {
+      "type": "string",
+      "default": "",
+      "title": "The user-name-prefix Schema",
+      "examples": [
+        "Mr"
+      ]
+    },
+    "user_name_suffix": {
+      "type": "string",
+      "default": "",
+      "title": "The user_name_suffix Schema",
+      "examples": [
+        "MD"
+      ]
+    },
+    "user-hire-date": {
+      "type": "string",
+      "default": "",
+      "title": "The user-hire-date Schema",
+      "examples": [
+        "2021-08-26"
+      ]
+    },
+    "driver-license": {
+      "type": "string",
+      "default": "",
+      "title": "The driver-license Schema",
+      "examples": [
+        "DL-123"
+      ]
+    },
+    "driver-license-expiry": {
+      "type": "string",
+      "default": "",
+      "title": "The driver-license-expiry Schema",
+      "examples": [
+        "2022-01-01"
+      ]
+    },
+    "user-wage": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-wage Schema",
+      "examples": [
+        200000
+      ]
+    },
+    "user-pay-period": {
+      "type": "string",
+      "default": "",
+      "title": "The user-pay-period Schema",
+      "examples": [
+        "Weekly"
+      ]
+    },
+    "device-token": {
+      "type": "string",
+      "default": "",
+      "title": "The device-token Schema",
+      "examples": [
+        "test-device-token"
+      ]
+    }
+  },
+  "examples": [{
+    "user-management-id": 3,
+    "cognito-username": "INFO",
+    "row-version": 4,
+    "user-is-active": true,
+    "organizations-id": 10000,
+    "aws-user-name": "test-user",
+    "user-phone-country-code": "+254",
+    "user-phone-number": "722000000",
+    "user-email": "test@test.com",
+    "user-first-name": "User",
+    "user-middle-name": "Test",
+    "user-last-name": "User",
+    "user-role-list": [
+      "USER",
+      "ADMIN"
+    ],
+    "client-company-id": 10,
+    "informational-user": false,
+    "user-name-prefix": "Mr",
+    "user_name_suffix": "MD",
+    "user-hire-date": "2021-08-26",
+    "driver-license": "DL-123",
+    "driver-license-expiry": "2022-01-01",
+    "user-wage": 200000,
+    "user-pay-period": "Weekly",
+    "device-token": "test-device-token"
+  }]
+}
