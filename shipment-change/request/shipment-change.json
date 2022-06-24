@@ -1,19 +1,168 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
+    "title": "Root Schema",
+    "required": [
+        "shipments-id",
+        "row-version"
+    ],
+    "properties": {
+        "shipments-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The shipments-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "row-version": {
+            "type": "integer",
+            "default": 0,
+            "title": "The row-version Schema",
+            "examples": [
+                1
+            ]
+        },
+        "shipment-type": {
+            "type": "string",
+            "default": "",
+            "title": "The shipment-type Schema",
+            "examples": [
+                "Air Import"
+            ]
+        },
+        "client-company-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The client-company-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "client-company-name": {
+            "type": "string",
+            "default": "",
+            "title": "The client-company-name Schema",
+            "examples": [
+                "My Enterprises Ltd"
+            ]
+        },
+        "suppliers-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The suppliers-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "supplier-name": {
+            "type": "string",
+            "default": "",
+            "title": "The supplier-name Schema",
+            "examples": [
+                "Supplier Name"
+            ]
+        },
+        "bill-of-lading": {
+            "type": "string",
+            "default": "",
+            "title": "The bill-of-lading Schema",
+            "examples": [
+                "WEXXXXXXXX58"
+            ]
+        },
+        "port-of-entry": {
+            "type": "string",
+            "default": "",
+            "title": "The port-of-entry Schema",
+            "examples": [
+                "Mombasa_Kenya"
+            ]
+        },
+        "port-of-origin": {
+            "type": "string",
+            "default": "",
+            "title": "The port-of-origin Schema",
+            "examples": [
+                "SOKHNA__EGYPT"
+            ]
+        },
+        "country-destination": {
+            "type": "string",
+            "default": "",
+            "title": "The country-destination Schema",
+            "examples": [
+                "KENYA"
+            ]
+        },
+        "shipment-port-of-entry-eta": {
+            "type": "string",
+            "default": "",
+            "title": "The shipment-port-of-entry-eta Schema",
+            "examples": [
+                "2020-12-26"
+            ]
+        },
+        "consignment-wgt": {
+            "type": "integer",
+            "default": 0,
+            "title": "The consignment-wgt Schema",
+            "examples": [
+                17
+            ]
+        },
+        "consignment-wgt-uom": {
+            "type": "string",
+            "default": "",
+            "title": "The consignment-wgt-uom Schema",
+            "examples": [
+                "MT"
+            ]
+        },
+        "through-bill-of-lading": {
+            "type": "string",
+            "default": "",
+            "title": "The through-bill-of-lading Schema",
+            "examples": [
+                "TBL"
+            ]
+        },
+        "external-shipment-id": {
+            "type": "string",
+            "default": "",
+            "title": "The external-shipment-id Schema",
+            "examples": [
+                "SOTE_TEST_SHIPMENT"
+            ]
+        },
+        "estimated-berthing-time": {
+            "type": "string",
+            "default": "",
+            "title": "The estimated-berthing-time Schema",
+            "examples": [
+                "2022-06-17 14:50"
+            ]
+        },
+        "final-release-date": {
+            "type": "string",
+            "default": "",
+            "title": "The final-release-date Schema",
+            "examples": [
+                "2022-06-17"
+            ]
+        }
+    },
     "examples": [
         {
             "shipments-id": 1,
             "row-version": 1,
+            "shipment-type": "Air Import",
             "client-company-id": 1,
             "client-company-name": "My Enterprises Ltd",
             "suppliers-id": 1,
             "supplier-name": "Supplier Name",
-            "shipment-status": "AT_PORT",
             "bill-of-lading": "WEXXXXXXXX58",
             "port-of-entry": "Mombasa_Kenya",
             "port-of-origin": "SOKHNA__EGYPT",
@@ -21,203 +170,10 @@
             "shipment-port-of-entry-eta": "2020-12-26",
             "consignment-wgt": 17,
             "consignment-wgt-uom": "MT",
-            "through-bill-of-lading": "TBL"
+            "through-bill-of-lading": "TBL",
+            "external-shipment-id": "SOTE_TEST_SHIPMENT",
+            "estimated-berthing-time": "2022-06-17 14:50",
+            "final-release-date": "2022-06-17"
         }
-    ],
-    "required": [
-        "shipments-id",
-        "row-version"
-    ],
-    "conditions": {
-        "mutually_inclusive": [
-            [
-                "client-company-id",
-                "client-company-name"
-            ],
-            [
-                "suppliers-id",
-                "client-company-name"
-            ]
-        ],
-        "enum": [
-            {
-                "shipment-status": [
-                    "ON_SHIP",
-                    "AT_PORT",
-                    "WAITING_FOR_PICKUP",
-                    "ON_TRUCK",
-                    "CARGO_DELIVERED",
-                    "CONTAINER_DELIVERED",
-                    "FILING_IDF",
-                    "IDF_SUBMITTED",
-                    "COC_ACQUIRED",
-                    "SEALED_AT_PORT_OF_ORIGIN",
-                    "MANIFEST_PUBLISHED",
-                    "CUSTOMS_ENTRY_SUBMITTED",
-                    "CARGO_DECLARATIONS_FORM_RECEIVED",
-                    "DELIVERY_ORDER_RECEIVED_FROM_SHIPPING_LINE",
-                    "CUSTOMS_RELEASE_ENDORSED",
-                    "SHIPMENT_PICKED_UP_BY_TRANSPORTER",
-                    "INTERCHANGE_FORM_COMPLETE",
-                    "CUSTOMS_ENTRY_TAX_LIABILITIES",
-                    "GUARANTEE_FORM_INVOICE",
-                    "GATE_PASS",
-                    "CONTAINER_RETURN_LATE_FEE"
-                ]
-            }
-        ]
-    },
-    "properties": {
-        "shipments-id": {
-            "$id": "#/properties/shipments-id",
-            "type": "integer",
-            "title": "The shipments-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "row-version": {
-            "$id": "#/properties/row-version",
-            "type": "integer",
-            "title": "The row-version schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "client-company-id": {
-            "$id": "#/properties/client-company-id",
-            "type": "integer",
-            "title": "The client-company-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "client-company-name": {
-            "$id": "#/properties/client-company-name",
-            "type": "string",
-            "title": "The client-company-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "My Enterprises Ltd"
-            ]
-        },
-        "suppliers-id": {
-            "$id": "#/properties/suppliers-id",
-            "type": "integer",
-            "title": "The suppliers-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "supplier-name": {
-            "$id": "#/properties/supplier-name",
-            "type": "string",
-            "title": "The supplier-name schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Supplier Name"
-            ]
-        },
-        "shipment-status": {
-            "$id": "#/properties/shipment-status",
-            "type": "string",
-            "title": "The shipment-status schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "AT_PORT"
-            ]
-        },
-        "bill-of-lading": {
-            "$id": "#/properties/bill-of-lading",
-            "type": "string",
-            "title": "The bill-of-lading schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "WEXXXXXXXX58"
-            ]
-        },
-        "port-of-entry": {
-            "$id": "#/properties/port-of-entry",
-            "type": "string",
-            "title": "The port-of-entry schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Mombasa_Kenya"
-            ]
-        },
-        "port-of-origin": {
-            "$id": "#/properties/port-of-origin",
-            "type": "string",
-            "title": "The port-of-origin schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "SOKHNA__EGYPT"
-            ]
-        },
-        "country-destination": {
-            "$id": "#/properties/country-destination",
-            "type": "string",
-            "title": "The country-destination schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "KENYA"
-            ]
-        },
-        "shipment-port-of-entry-eta": {
-            "$id": "#/properties/shipment-port-of-entry-eta",
-            "type": "string",
-            "title": "The shipment-port-of-entry-eta schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "2020-12-26"
-            ]
-        },
-        "consignment-wgt": {
-            "$id": "#/properties/consignment-wgt",
-            "type": "integer",
-            "title": "The consignment-wgt schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                17
-            ]
-        },
-        "consignment-wgt-uom": {
-            "$id": "#/properties/consignment-wgt-uom",
-            "type": "string",
-            "title": "The consignment-wgt-uom schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "MT"
-            ]
-        },
-        "through-bill-of-lading": {
-            "$id": "#/properties/through-bill-of-lading",
-            "type": "string",
-            "title": "The through-bill-of-lading schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "TBL"
-            ]
-        }
-    },
-    "additionalProperties": true
+    ]
 }

@@ -1,10 +1,135 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
+    "title": "Root Schema",
+    "required": [
+        "containers-id",
+        "row-version"
+    ],
+    "properties": {
+        "containers-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The containers-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "row-version": {
+            "type": "integer",
+            "default": 0,
+            "title": "The row-version Schema",
+            "examples": [
+                1
+            ]
+        },
+        "container-tag": {
+            "type": "string",
+            "default": "",
+            "title": "The container-tag Schema",
+            "examples": [
+                "TAG 001"
+            ]
+        },
+        "container-form-factor": {
+            "type": "string",
+            "default": "",
+            "title": "The container-form-factor Schema",
+            "examples": [
+                "20"
+            ]
+        },
+        "shipments-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The shipments-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "trips-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The trips-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "cargo-gross-wgt": {
+            "type": "integer",
+            "default": 0,
+            "title": "The cargo-gross-wgt Schema",
+            "examples": [
+                20178
+            ]
+        },
+        "cargo-gross-uom": {
+            "type": "string",
+            "default": "",
+            "title": "The cargo-gross-uom Schema",
+            "examples": [
+                "KGS"
+            ]
+        },
+        "container-discharge-date": {
+            "type": "string",
+            "default": "",
+            "title": "The container-discharge-date Schema",
+            "examples": [
+                "2022-06-11"
+            ]
+        },
+        "container-transfer-date": {
+            "type": "string",
+            "default": "",
+            "title": "The container-transfer-date Schema",
+            "examples": [
+                "2022-07-11"
+            ]
+        },
+        "gate-in-date": {
+            "type": "string",
+            "default": "",
+            "title": "The gate-in-date Schema",
+            "examples": [
+                "2022-08-11"
+            ]
+        },
+        "last-free-storage-date": {
+            "type": "string",
+            "default": "",
+            "title": "The last-free-storage-date Schema",
+            "examples": [
+                "2022-09-11"
+            ]
+        },
+        "offloading-date": {
+            "type": "string",
+            "default": "",
+            "title": "The offloading-date Schema",
+            "examples": [
+                "2022-10-11"
+            ]
+        },
+        "empty-return-date": {
+            "type": "string",
+            "default": "",
+            "title": "The empty-return-date Schema",
+            "examples": [
+                "2022-11-11"
+            ]
+        },
+        "demurrage-date": {
+            "type": "string",
+            "default": "",
+            "title": "The demurrage Schema",
+            "examples": [
+                "2022-12-11"
+            ]
+        }
+    },
     "examples": [
         {
             "containers-id": 1,
@@ -14,94 +139,14 @@
             "shipments-id": 1,
             "trips-id": 1,
             "cargo-gross-wgt": 20178,
-            "cargo-gross-uom": "KGS"
+            "cargo-gross-uom": "KGS",
+            "container-discharge-date": "2022-06-11",
+            "container-transfer-date": "2022-07-11",
+            "gate-in-date": "2022-08-11",
+            "last-free-storage-date": "2022-09-11",
+            "offloading-date": "2022-10-11",
+            "empty-return-date": "2022-11-11",
+            "demurrage-date": "2022-12-11"
         }
-    ],
-    "required": [
-        "containers-id",
-        "row-version"
-    ],
-    "properties": {
-        "containers-id": {
-            "$id": "#/properties/containers-id",
-            "type": "integer",
-            "title": "The containers-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "row-version": {
-            "$id": "#/properties/row-version",
-            "type": "integer",
-            "title": "The row-version schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "container-tag": {
-            "$id": "#/properties/container-tag",
-            "type": "string",
-            "title": "The container-tag schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "TAG 001"
-            ]
-        },
-        "container-form-factor": {
-            "$id": "#/properties/container-form-factor",
-            "type": "string",
-            "title": "The container-form-factor schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "20"
-            ]
-        },
-        "shipments-id": {
-            "$id": "#/properties/shipments-id",
-            "type": "integer",
-            "title": "The shipments-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "trips-id": {
-            "$id": "#/properties/trips-id",
-            "type": "integer",
-            "title": "The trips-id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                1
-            ]
-        },
-        "cargo-gross-wgt": {
-            "$id": "#/properties/cargo-gross-wgt",
-            "type": "integer",
-            "title": "The cargo-gross-wgt schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [
-                20178
-            ]
-        },
-        "cargo-gross-uom": {
-            "$id": "#/properties/cargo-gross-uom",
-            "type": "string",
-            "title": "The cargo-gross-uom schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "KGS"
-            ]
-        }
-    },
-    "additionalProperties": true
+    ]
 }
