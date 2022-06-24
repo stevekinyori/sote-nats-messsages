@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "type": "string",
+      "default": "",
+      "title": "The message-id Schema",
+      "examples": [
+        "test-message"
+      ]
+    },
+    "message": {
+      "type": "object",
+      "default": {},
+      "title": "The message Schema",
+      "required": [
+        "enabled",
+        "informational_user",
+        "row_version",
+        "usermanagement_id"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false,
+          "title": "The enabled Schema",
+          "examples": [
+            false
+          ]
+        },
+        "informational_user": {
+          "type": "boolean",
+          "default": false,
+          "title": "The informational_user Schema",
+          "examples": [
+            true
+          ]
+        },
+        "row_version": {
+          "type": "integer",
+          "default": 0,
+          "title": "The row_version Schema",
+          "examples": [
+            2
+          ]
+        },
+        "usermanagement_id": {
+          "type": "integer",
+          "default": 0,
+          "title": "The usermanagement_id Schema",
+          "examples": [
+            3
+          ]
+        }
+      },
+      "examples": [{
+        "enabled": false,
+        "informational_user": true,
+        "row_version": 2,
+        "usermanagement_id": 3
+      }]
+    }
+  },
+  "examples": [{
+    "message-id": "test-message",
+    "message": {
+      "enabled": false,
+      "informational_user": true,
+      "row_version": 2,
+      "usermanagement_id": 3
+    }
+  }]
+}
