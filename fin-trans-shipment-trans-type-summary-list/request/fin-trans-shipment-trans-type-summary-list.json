@@ -8,6 +8,7 @@
   "examples": [
     {
       "shipment-status": ["COMPLETE"],
+      "group-by": "shipments-id|client-company-id|fintrans-type",
       "days": 720,
       "filters": {
         "and": [
@@ -28,6 +29,7 @@
   "optional": [
     "shipment-status",
     "days",
+    "group-by",
     "filters"
   ],
   "properties": {
