@@ -1,91 +1,83 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "list-of-values-type": "ADD_TEST",
-            "system-name": "TEST_ONE",
-            "display-name": "TEST ONE",
-            "list-of-values-note": "This is a new test note",
-            "language-code": "ENG",
-            "language-name": "ENGLISH"
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "list-of-values-type",
         "system-name",
-        "language-code",
-        "language-name"
-    ],
-    "optional": [
         "display-name",
-        "list-of-values-note"
+        "list-of-values-note",
+        "language-code",
+        "language-name",
+        "value-is-active"
     ],
     "properties": {
         "list-of-values-type": {
-            "$id": "#/properties/list-of-values-type",
             "type": "string",
-            "title": "The list-of-values-type schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The list-of-values-type Schema",
             "examples": [
                 "ADD_TEST"
             ]
         },
         "system-name": {
-            "$id": "#/properties/system-name",
             "type": "string",
-            "title": "The system-name schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The system-name Schema",
             "examples": [
                 "TEST_ONE"
             ]
         },
         "display-name": {
-            "$id": "#/properties/display-name",
             "type": "string",
-            "title": "The display-name schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The display-name Schema",
             "examples": [
-                "TEST ONE"
+                "Test One"
             ]
         },
         "list-of-values-note": {
-            "$id": "#/properties/list-of-values-note",
             "type": "string",
-            "title": "The list-of-values-note schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The list-of-values-note Schema",
             "examples": [
                 "This is a new test note"
             ]
         },
         "language-code": {
-            "$id": "#/properties/language-code",
             "type": "string",
-            "title": "The language-code schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The language-code Schema",
             "examples": [
-                "ENG"
+                "eng"
             ]
         },
         "language-name": {
-            "$id": "#/properties/language-name",
             "type": "string",
-            "title": "The language-name schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The language-name Schema",
             "examples": [
-                "ENGLISH"
+                "English"
+            ]
+        },
+        "value-is-active": {
+            "type": "boolean",
+            "default": false,
+            "title": "The value-is-active Schema",
+            "examples": [
+                true
             ]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "list-of-values-type": "ADD_TEST",
+        "system-name": "TEST_ONE",
+        "display-name": "Test One",
+        "list-of-values-note": "This is a new test note",
+        "language-code": "eng",
+        "language-name": "English",
+        "value-is-active": true
+    }]
 }

@@ -1,74 +1,70 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "message-id": "test-list",
-            "message": {
-                "list_of_values_type": "ADD_TEST",
-                "system_name": "TEST_ONE"
-            }
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "message-id",
         "message"
     ],
     "properties": {
         "message-id": {
-            "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The message-id Schema",
             "examples": [
-                "test-list"
+                "test-message"
             ]
         },
         "message": {
-            "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-                {
-                    "list_of_values_type": "ADD_TEST",
-                    "system_name": "TEST_ONE"
-                }
-            ],
+            "title": "The message Schema",
             "required": [
                 "list_of_values_type",
-                "system_name"
+                "system_name",
+                "value_is_active"
             ],
             "properties": {
                 "list_of_values_type": {
-                    "$id": "#/properties/message/properties/list_of_values_type",
                     "type": "string",
-                    "title": "The list_of_values_type schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": "",
+                    "title": "The list_of_values_type Schema",
                     "examples": [
                         "ADD_TEST"
                     ]
                 },
                 "system_name": {
-                    "$id": "#/properties/message/properties/system_name",
                     "type": "string",
-                    "title": "The system_name schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": "",
+                    "title": "The system_name Schema",
                     "examples": [
                         "TEST_ONE"
                     ]
+                },
+                "value_is_active": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The value_is_active Schema",
+                    "examples": [
+                        true
+                    ]
                 }
             },
-            "additionalProperties": true
+            "examples": [{
+                "list_of_values_type": "ADD_TEST",
+                "system_name": "TEST_ONE",
+                "value_is_active": true
+            }]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "message-id": "test-message",
+        "message": {
+            "list_of_values_type": "ADD_TEST",
+            "system_name": "TEST_ONE",
+            "value_is_active": true
+        }
+    }]
 }

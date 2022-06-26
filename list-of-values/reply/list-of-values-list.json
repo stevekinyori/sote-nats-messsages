@@ -1,420 +1,362 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "message-id": "test-message",
-            "message": {
-                "items": {
-                    "ADD_TEST": [
-                        {
-                            "system_name": "TEST_ONE",
-                            "display_name": "TEST ONE",
-                            "listofvalues_note": "This is a new test note",
-                            "language_code": "ENG",
-                            "language_name": "ENGLISH",
-                            "created_by_date": "2022-03-30",
-                            "created_by_requestor_username": "sote-test"
-                        },
-                        {
-                            "system_name": "TEST_TWO",
-                            "display_name": "TEST ONE EDIT",
-                            "listofvalues_note": "This is a test note edit",
-                            "language_code": "ENG",
-                            "language_name": "ENGLISH",
-                            "created_by_date": "2022-03-30",
-                            "created_by_requestor_username": "sote-test",
-                            "updated_by_date": "2022-03-30",
-                            "updated_by_requestor_username": "sote-test"
-                        }
-                    ]
-                },
-                "pagination": {
-                    "total": 2,
-                    "limit": 0,
-                    "offset": 0
-                }
-            }
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "message-id",
         "message"
     ],
     "properties": {
         "message-id": {
-            "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The message-id Schema",
             "examples": [
                 "test-message"
             ]
         },
         "message": {
-            "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-                {
-                    "items": {
-                        "ADD_TEST": [
-                            {
-                                "system_name": "TEST_ONE",
-                                "display_name": "TEST ONE",
-                                "listofvalues_note": "This is a new test note",
-                                "language_code": "ENG",
-                                "language_name": "ENGLISH",
-                                "created_by_date": "2022-03-30",
-                                "created_by_requestor_username": "sote-test"
-                            },
-                            {
-                                "system_name": "TEST_TWO",
-                                "display_name": "TEST ONE EDIT",
-                                "listofvalues_note": "This is a test note edit",
-                                "language_code": "ENG",
-                                "language_name": "ENGLISH",
-                                "created_by_date": "2022-03-30",
-                                "created_by_requestor_username": "sote-test",
-                                "updated_by_date": "2022-03-30",
-                                "updated_by_requestor_username": "sote-test"
-                            }
-                        ]
-                    },
-                    "pagination": {
-                        "total": 2,
-                        "limit": 0,
-                        "offset": 0
-                    }
-                }
-            ],
+            "title": "The message Schema",
             "required": [
                 "items",
                 "pagination"
             ],
             "properties": {
                 "items": {
-                    "$id": "#/properties/message/properties/items",
                     "type": "object",
-                    "title": "The items schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": {},
-                    "examples": [
-                        {
-                            "ADD_TEST": [
-                                {
-                                    "system_name": "TEST_ONE",
-                                    "display_name": "TEST ONE",
-                                    "listofvalues_note": "This is a new test note",
-                                    "language_code": "ENG",
-                                    "language_name": "ENGLISH",
-                                    "created_by_date": "2022-03-30",
-                                    "created_by_requestor_username": "sote-test"
-                                },
-                                {
-                                    "system_name": "TEST_TWO",
-                                    "display_name": "TEST ONE EDIT",
-                                    "listofvalues_note": "This is a test note edit",
-                                    "language_code": "ENG",
-                                    "language_name": "ENGLISH",
-                                    "created_by_date": "2022-03-30",
-                                    "created_by_requestor_username": "sote-test",
-                                    "updated_by_date": "2022-03-30",
-                                    "updated_by_requestor_username": "sote-test"
-                                }
-                            ]
-                        }
-                    ],
-                    "optional": [
-                        "ADD_TEST"
+                    "title": "The items Schema",
+                    "required": [
+                        "ADD_TEST",
+                        "TEST-USER"
                     ],
                     "properties": {
                         "ADD_TEST": {
-                            "$id": "#/properties/message/properties/items/properties/ADD%20TEST",
                             "type": "array",
-                            "title": "The ADD_TEST schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": [],
-                            "examples": [
-                                [
+                            "title": "The ADD_TEST Schema",
+                            "items": {
+                                "type": "object",
+                                "title": "A Schema",
+                                "required": [
+                                    "system_name",
+                                    "display_name",
+                                    "listofvalues_note",
+                                    "language_code",
+                                    "language_name",
+                                    "created_by_date",
+                                    "created_by_requestor_username",
+                                    "value_is_active"
+                                ],
+                                "properties": {
+                                    "system_name": {
+                                        "type": "string",
+                                        "title": "The system_name Schema",
+                                        "examples": [
+                                            "TEST_FOUR",
+                                            "TEST_FIVE",
+                                            "TEST_SIX"
+                                        ]
+                                    },
+                                    "display_name": {
+                                        "type": "string",
+                                        "title": "The display_name Schema",
+                                        "examples": [
+                                            "Test One"
+                                        ]
+                                    },
+                                    "listofvalues_note": {
+                                        "type": "string",
+                                        "title": "The listofvalues_note Schema",
+                                        "examples": [
+                                            "This is a new test note"
+                                        ]
+                                    },
+                                    "language_code": {
+                                        "type": "string",
+                                        "title": "The language_code Schema",
+                                        "examples": [
+                                            "ENG"
+                                        ]
+                                    },
+                                    "language_name": {
+                                        "type": "string",
+                                        "title": "The language_name Schema",
+                                        "examples": [
+                                            "ENGLISH"
+                                        ]
+                                    },
+                                    "created_by_date": {
+                                        "type": "string",
+                                        "title": "The created_by_date Schema",
+                                        "examples": [
+                                            "2022-06-26"
+                                        ]
+                                    },
+                                    "created_by_requestor_username": {
+                                        "type": "string",
+                                        "title": "The created_by_requestor_username Schema",
+                                        "examples": [
+                                            "sote-test"
+                                        ]
+                                    },
+                                    "value_is_active": {
+                                        "type": "boolean",
+                                        "title": "The value_is_active Schema",
+                                        "examples": [
+                                            true,
+                                            false
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "system_name": "TEST_FOUR",
+                                    "display_name": "Test One",
+                                    "listofvalues_note": "This is a new test note",
+                                    "language_code": "ENG",
+                                    "language_name": "ENGLISH",
+                                    "created_by_date": "2022-06-26",
+                                    "created_by_requestor_username": "sote-test",
+                                    "value_is_active": true
+                                },
                                     {
-                                        "system_name": "TEST_ONE",
-                                        "display_name": "TEST ONE",
+                                        "system_name": "TEST_FIVE",
+                                        "display_name": "Test One",
                                         "listofvalues_note": "This is a new test note",
                                         "language_code": "ENG",
                                         "language_name": "ENGLISH",
-                                        "created_by_date": "2022-03-30",
-                                        "created_by_requestor_username": "sote-test"
+                                        "created_by_date": "2022-06-26",
+                                        "created_by_requestor_username": "sote-test",
+                                        "value_is_active": false
                                     },
                                     {
-                                        "system_name": "TEST_TWO",
-                                        "display_name": "TEST ONE EDIT",
-                                        "listofvalues_note": "This is a test note edit",
+                                        "system_name": "TEST_SIX",
+                                        "display_name": "Test One",
+                                        "listofvalues_note": "This is a new test note",
                                         "language_code": "ENG",
                                         "language_name": "ENGLISH",
-                                        "created_by_date": "2022-03-30",
+                                        "created_by_date": "2022-06-26",
                                         "created_by_requestor_username": "sote-test",
-                                        "updated_by_date": "2022-03-30",
-                                        "updated_by_requestor_username": "sote-test"
-                                    }
-                                ]
-                            ],
-                            "additionalItems": true,
-                            "items": {
-                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items",
-                                "anyOf": [
+                                        "value_is_active": true
+                                    }]
+                            },
+                            "examples": [
+                                [{
+                                    "system_name": "TEST_FOUR",
+                                    "display_name": "Test One",
+                                    "listofvalues_note": "This is a new test note",
+                                    "language_code": "ENG",
+                                    "language_name": "ENGLISH",
+                                    "created_by_date": "2022-06-26",
+                                    "created_by_requestor_username": "sote-test",
+                                    "value_is_active": true
+                                },
                                     {
-                                        "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0",
-                                        "type": "object",
-                                        "title": "The first anyOf schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": {},
-                                        "examples": [
-                                            {
-                                                "system_name": "TEST_ONE",
-                                                "display_name": "TEST ONE",
-                                                "listofvalues_note": "This is a new test note",
-                                                "language_code": "ENG",
-                                                "language_name": "ENGLISH",
-                                                "created_by_date": "2022-03-30",
-                                                "created_by_requestor_username": "sote-test"
-                                            }
-                                        ],
-                                        "required": [
-                                            "system_name",
-                                            "display_name",
-                                            "listofvalues_note",
-                                            "language_code",
-                                            "language_name",
-                                            "created_by_date",
-                                            "created_by_requestor_username"
-                                        ],
-                                        "properties": {
-                                            "system_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/system_name",
-                                                "type": "string",
-                                                "title": "The system_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "TEST_ONE"
-                                                ]
-                                            },
-                                            "display_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/display_name",
-                                                "type": "string",
-                                                "title": "The display_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "TEST ONE"
-                                                ]
-                                            },
-                                            "listofvalues_note": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/listofvalues_note",
-                                                "type": "string",
-                                                "title": "The listofvalues_note schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "This is a new test note"
-                                                ]
-                                            },
-                                            "language_code": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/language_code",
-                                                "type": "string",
-                                                "title": "The language_code schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "ENG"
-                                                ]
-                                            },
-                                            "language_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/language_name",
-                                                "type": "string",
-                                                "title": "The language_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "ENGLISH"
-                                                ]
-                                            },
-                                            "created_by_date": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/created_by_date",
-                                                "type": "string",
-                                                "title": "The created_by_date schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "2022-03-30"
-                                                ]
-                                            },
-                                            "created_by_requestor_username": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/0/properties/created_by_requestor_username",
-                                                "type": "string",
-                                                "title": "The created_by_requestor_username schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "sote-test"
-                                                ]
-                                            }
-                                        },
-                                        "additionalProperties": true
+                                        "system_name": "TEST_FIVE",
+                                        "display_name": "Test One",
+                                        "listofvalues_note": "This is a new test note",
+                                        "language_code": "ENG",
+                                        "language_name": "ENGLISH",
+                                        "created_by_date": "2022-06-26",
+                                        "created_by_requestor_username": "sote-test",
+                                        "value_is_active": false
                                     },
                                     {
-                                        "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1",
-                                        "type": "object",
-                                        "title": "The second anyOf schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": {},
+                                        "system_name": "TEST_SIX",
+                                        "display_name": "Test One",
+                                        "listofvalues_note": "This is a new test note",
+                                        "language_code": "ENG",
+                                        "language_name": "ENGLISH",
+                                        "created_by_date": "2022-06-26",
+                                        "created_by_requestor_username": "sote-test",
+                                        "value_is_active": true
+                                    }]
+                            ]
+                        },
+                        "TEST-USER": {
+                            "type": "array",
+                            "default": [],
+                            "title": "The TEST-USER Schema",
+                            "items": {
+                                "type": "object",
+                                "default": {},
+                                "title": "A Schema",
+                                "required": [
+                                    "system_name",
+                                    "display_name",
+                                    "listofvalues_note",
+                                    "language_code",
+                                    "language_name",
+                                    "created_by_date",
+                                    "created_by_requestor_username",
+                                    "updated_by_date",
+                                    "updated_by_requestor_username",
+                                    "value_is_active"
+                                ],
+                                "properties": {
+                                    "system_name": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The system_name Schema",
                                         "examples": [
-                                            {
-                                                "system_name": "TEST_TWO",
-                                                "display_name": "TEST ONE EDIT",
-                                                "listofvalues_note": "This is a test note edit",
-                                                "language_code": "ENG",
-                                                "language_name": "ENGLISH",
-                                                "created_by_date": "2022-03-30",
-                                                "created_by_requestor_username": "sote-test",
-                                                "updated_by_date": "2022-03-30",
-                                                "updated_by_requestor_username": "sote-test"
-                                            }
-                                        ],
-                                        "required": [
-                                            "system_name",
-                                            "language_code",
-                                            "language_name",
-                                            "created_by_date",
-                                            "created_by_requestor_username"
-                                        ],
-                                        "optional": [
-                                            "display_name",
-                                            "listofvalues_note",
-                                            "updated_by_date",
-                                            "updated_by_requestor_username"
-                                        ],
-                                        "properties": {
-                                            "system_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/system_name",
-                                                "type": "string",
-                                                "title": "The system_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "TEST_TWO"
-                                                ]
-                                            },
-                                            "display_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/display_name",
-                                                "type": "string",
-                                                "title": "The display_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "TEST ONE EDIT"
-                                                ]
-                                            },
-                                            "listofvalues_note": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/listofvalues_note",
-                                                "type": "string",
-                                                "title": "The listofvalues_note schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "This is a test note edit"
-                                                ]
-                                            },
-                                            "language_code": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/language_code",
-                                                "type": "string",
-                                                "title": "The language_code schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "ENG"
-                                                ]
-                                            },
-                                            "language_name": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/language_name",
-                                                "type": "string",
-                                                "title": "The language_name schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "ENGLISH"
-                                                ]
-                                            },
-                                            "created_by_date": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/created_by_date",
-                                                "type": "string",
-                                                "title": "The created_by_date schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "2022-03-30"
-                                                ]
-                                            },
-                                            "created_by_requestor_username": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/created_by_requestor_username",
-                                                "type": "string",
-                                                "title": "The created_by_requestor_username schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "sote-test"
-                                                ]
-                                            },
-                                            "updated_by_date": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/updated_by_date",
-                                                "type": "string",
-                                                "title": "The updated_by_date schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "2022-03-30"
-                                                ]
-                                            },
-                                            "updated_by_requestor_username": {
-                                                "$id": "#/properties/message/properties/items/properties/ADD%20TEST/items/anyOf/1/properties/updated_by_requestor_username",
-                                                "type": "string",
-                                                "title": "The updated_by_requestor_username schema",
-                                                "description": "An explanation about the purpose of this instance.",
-                                                "default": "",
-                                                "examples": [
-                                                    "sote-test"
-                                                ]
-                                            }
-                                        },
-                                        "additionalProperties": true
+                                            "TEST-LOV"
+                                        ]
+                                    },
+                                    "display_name": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The display_name Schema",
+                                        "examples": [
+                                            "test one"
+                                        ]
+                                    },
+                                    "listofvalues_note": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The listofvalues_note Schema",
+                                        "examples": [
+                                            "test one note"
+                                        ]
+                                    },
+                                    "language_code": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The language_code Schema",
+                                        "examples": [
+                                            "swa"
+                                        ]
+                                    },
+                                    "language_name": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The language_name Schema",
+                                        "examples": [
+                                            "kiswahili"
+                                        ]
+                                    },
+                                    "created_by_date": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The created_by_date Schema",
+                                        "examples": [
+                                            "2022-06-24"
+                                        ]
+                                    },
+                                    "created_by_requestor_username": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The created_by_requestor_username Schema",
+                                        "examples": [
+                                            "test-user"
+                                        ]
+                                    },
+                                    "updated_by_date": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The updated_by_date Schema",
+                                        "examples": [
+                                            "2022-06-24"
+                                        ]
+                                    },
+                                    "updated_by_requestor_username": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The updated_by_requestor_username Schema",
+                                        "examples": [
+                                            "test-user"
+                                        ]
+                                    },
+                                    "value_is_active": {
+                                        "type": "boolean",
+                                        "default": false,
+                                        "title": "The value_is_active Schema",
+                                        "examples": [
+                                            false
+                                        ]
                                     }
-                                ]
-                            }
+                                },
+                                "examples": [{
+                                    "system_name": "TEST-LOV",
+                                    "display_name": "test one",
+                                    "listofvalues_note": "test one note",
+                                    "language_code": "swa",
+                                    "language_name": "kiswahili",
+                                    "created_by_date": "2022-06-24",
+                                    "created_by_requestor_username": "test-user",
+                                    "updated_by_date": "2022-06-24",
+                                    "updated_by_requestor_username": "test-user",
+                                    "value_is_active": false
+                                }]
+                            },
+                            "examples": [
+                                [{
+                                    "system_name": "TEST-LOV",
+                                    "display_name": "test one",
+                                    "listofvalues_note": "test one note",
+                                    "language_code": "swa",
+                                    "language_name": "kiswahili",
+                                    "created_by_date": "2022-06-24",
+                                    "created_by_requestor_username": "test-user",
+                                    "updated_by_date": "2022-06-24",
+                                    "updated_by_requestor_username": "test-user",
+                                    "value_is_active": false
+                                }]
+                            ]
                         }
                     },
-                    "additionalProperties": true
+                    "examples": [{
+                        "ADD_TEST": [{
+                            "system_name": "TEST_FOUR",
+                            "display_name": "Test One",
+                            "listofvalues_note": "This is a new test note",
+                            "language_code": "ENG",
+                            "language_name": "ENGLISH",
+                            "created_by_date": "2022-06-26",
+                            "created_by_requestor_username": "sote-test",
+                            "value_is_active": true
+                        },
+                            {
+                                "system_name": "TEST_FIVE",
+                                "display_name": "Test One",
+                                "listofvalues_note": "This is a new test note",
+                                "language_code": "ENG",
+                                "language_name": "ENGLISH",
+                                "created_by_date": "2022-06-26",
+                                "created_by_requestor_username": "sote-test",
+                                "value_is_active": false
+                            },
+                            {
+                                "system_name": "TEST_SIX",
+                                "display_name": "Test One",
+                                "listofvalues_note": "This is a new test note",
+                                "language_code": "ENG",
+                                "language_name": "ENGLISH",
+                                "created_by_date": "2022-06-26",
+                                "created_by_requestor_username": "sote-test",
+                                "value_is_active": true
+                            }],
+                        "TEST-USER": [{
+                            "system_name": "TEST-LOV",
+                            "display_name": "test one",
+                            "listofvalues_note": "test one note",
+                            "language_code": "swa",
+                            "language_name": "kiswahili",
+                            "created_by_date": "2022-06-24",
+                            "created_by_requestor_username": "test-user",
+                            "updated_by_date": "2022-06-24",
+                            "updated_by_requestor_username": "test-user",
+                            "value_is_active": false
+                        }]
+                    }]
                 },
                 "pagination": {
-                    "$id": "#/properties/message/properties/pagination",
                     "type": "object",
-                    "title": "The pagination schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": {},
-                    "examples": [
-                        {
-                            "total": 2,
-                            "limit": 0,
-                            "offset": 0
-                        }
-                    ],
+                    "title": "The pagination Schema",
                     "required": [
                         "total",
                         "limit",
@@ -422,41 +364,142 @@
                     ],
                     "properties": {
                         "total": {
-                            "$id": "#/properties/message/properties/pagination/properties/total",
                             "type": "integer",
-                            "title": "The total schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The total Schema",
                             "examples": [
-                                2
+                                4
                             ]
                         },
                         "limit": {
-                            "$id": "#/properties/message/properties/pagination/properties/limit",
                             "type": "integer",
-                            "title": "The limit schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The limit Schema",
                             "examples": [
                                 0
                             ]
                         },
                         "offset": {
-                            "$id": "#/properties/message/properties/pagination/properties/offset",
                             "type": "integer",
-                            "title": "The offset schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The offset Schema",
                             "examples": [
                                 0
                             ]
                         }
                     },
-                    "additionalProperties": true
+                    "examples": [{
+                        "total": 4,
+                        "limit": 0,
+                        "offset": 0
+                    }]
                 }
             },
-            "additionalProperties": true
+            "examples": [{
+                "items": {
+                    "ADD_TEST": [{
+                        "system_name": "TEST_FOUR",
+                        "display_name": "Test One",
+                        "listofvalues_note": "This is a new test note",
+                        "language_code": "ENG",
+                        "language_name": "ENGLISH",
+                        "created_by_date": "2022-06-26",
+                        "created_by_requestor_username": "sote-test",
+                        "value_is_active": true
+                    },
+                        {
+                            "system_name": "TEST_FIVE",
+                            "display_name": "Test One",
+                            "listofvalues_note": "This is a new test note",
+                            "language_code": "ENG",
+                            "language_name": "ENGLISH",
+                            "created_by_date": "2022-06-26",
+                            "created_by_requestor_username": "sote-test",
+                            "value_is_active": false
+                        },
+                        {
+                            "system_name": "TEST_SIX",
+                            "display_name": "Test One",
+                            "listofvalues_note": "This is a new test note",
+                            "language_code": "ENG",
+                            "language_name": "ENGLISH",
+                            "created_by_date": "2022-06-26",
+                            "created_by_requestor_username": "sote-test",
+                            "value_is_active": true
+                        }],
+                    "TEST-USER": [{
+                        "system_name": "TEST-LOV",
+                        "display_name": "test one",
+                        "listofvalues_note": "test one note",
+                        "language_code": "swa",
+                        "language_name": "kiswahili",
+                        "created_by_date": "2022-06-24",
+                        "created_by_requestor_username": "test-user",
+                        "updated_by_date": "2022-06-24",
+                        "updated_by_requestor_username": "test-user",
+                        "value_is_active": false
+                    }]
+                },
+                "pagination": {
+                    "total": 4,
+                    "limit": 0,
+                    "offset": 0
+                }
+            }]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "message-id": "test-message",
+        "message": {
+            "items": {
+                "ADD_TEST": [{
+                    "system_name": "TEST_FOUR",
+                    "display_name": "Test One",
+                    "listofvalues_note": "This is a new test note",
+                    "language_code": "ENG",
+                    "language_name": "ENGLISH",
+                    "created_by_date": "2022-06-26",
+                    "created_by_requestor_username": "sote-test",
+                    "value_is_active": true
+                },
+                    {
+                        "system_name": "TEST_FIVE",
+                        "display_name": "Test One",
+                        "listofvalues_note": "This is a new test note",
+                        "language_code": "ENG",
+                        "language_name": "ENGLISH",
+                        "created_by_date": "2022-06-26",
+                        "created_by_requestor_username": "sote-test",
+                        "value_is_active": false
+                    },
+                    {
+                        "system_name": "TEST_SIX",
+                        "display_name": "Test One",
+                        "listofvalues_note": "This is a new test note",
+                        "language_code": "ENG",
+                        "language_name": "ENGLISH",
+                        "created_by_date": "2022-06-26",
+                        "created_by_requestor_username": "sote-test",
+                        "value_is_active": true
+                    }],
+                "TEST-USER": [{
+                    "system_name": "TEST-LOV",
+                    "display_name": "test one",
+                    "listofvalues_note": "test one note",
+                    "language_code": "swa",
+                    "language_name": "kiswahili",
+                    "created_by_date": "2022-06-24",
+                    "created_by_requestor_username": "test-user",
+                    "updated_by_date": "2022-06-24",
+                    "updated_by_requestor_username": "test-user",
+                    "value_is_active": false
+                }]
+            },
+            "pagination": {
+                "total": 4,
+                "limit": 0,
+                "offset": 0
+            }
+        }
+    }]
 }
