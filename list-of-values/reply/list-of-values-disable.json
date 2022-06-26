@@ -48,14 +48,14 @@
                     "default": false,
                     "title": "The value_is_active Schema",
                     "examples": [
-                        true
+                        false
                     ]
                 }
             },
             "examples": [{
                 "list_of_values_type": "ADD_TEST",
                 "system_name": "TEST_ONE",
-                "value_is_active": true
+                "value_is_active": false
             }]
         }
     },
@@ -64,7 +64,7 @@
         "message": {
             "list_of_values_type": "ADD_TEST",
             "system_name": "TEST_ONE",
-            "value_is_active": true
+            "value_is_active": false
         }
     }]
 }
