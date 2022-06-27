@@ -9,11 +9,11 @@
     {
       "message-id": "test-list",
       "message": {
-        "cognito-username": "b794xxxxxxxxxxxxxxx",
+        "cognito_username": "b794xxxxxxxxxxxxxxx",
         "enabled": true,
         "informational_user": false,
         "row_version": 1,
-        "user-status": "FORCE_CHANGE_PASSWORD",
+        "user_status": "FORCE_CHANGE_PASSWORD",
         "user_is_active": true,
         "usermanagement_id": 3
       }
@@ -42,11 +42,11 @@
       "default": {},
       "examples": [
         {
-          "cognito-username": "b794xxxxxxxxxxxxxxx",
+          "cognito_username": "b794xxxxxxxxxxxxxxx",
           "enabled": true,
           "informational_user": false,
           "row_version": 1,
-          "user-status": "FORCE_CHANGE_PASSWORD",
+          "user_status": "FORCE_CHANGE_PASSWORD",
           "user_is_active": true,
           "usermanagement_id": 3
         }
@@ -58,15 +58,15 @@
         "usermanagement_id"
       ],
       "optional": [
-        "cognito-username",
+        "cognito_username",
         "enabled",
-        "user-status"
+        "user_status"
       ],
       "properties": {
-        "cognito-username": {
-          "$id": "#/properties/message/properties/cognito-username",
+        "cognito_username": {
+          "$id": "#/properties/message/properties/cognito_username",
           "type": "string",
-          "title": "The cognito-username schema",
+          "title": "The cognito_username schema",
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [
@@ -103,10 +103,10 @@
             1
           ]
         },
-        "user-status": {
-          "$id": "#/properties/message/properties/user-status",
+        "user_status": {
+          "$id": "#/properties/message/properties/user_status",
           "type": "string",
-          "title": "The user-status schema",
+          "title": "The user_status schema",
           "description": "An explanation about the purpose of this instance.",
           "default": "",
           "examples": [

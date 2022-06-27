@@ -10,8 +10,8 @@
             "message-id": "test-list",
             "message": {
                 "enabled": true,
-                "user-status": "FORCE_CHANGE_PASSWORD",
-                "cognito-username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
+                "user_status": "FORCE_CHANGE_PASSWORD",
+                "cognito_username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
             }
         }
     ],
@@ -39,14 +39,14 @@
             "examples": [
                 {
                     "enabled": true,
-                    "user-status": "FORCE_CHANGE_PASSWORD",
-                    "cognito-username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
+                    "user_status": "FORCE_CHANGE_PASSWORD",
+                    "cognito_username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
                 }
             ],
             "required": [
                 "enabled",
-                "user-status",
-                "cognito-username"
+                "user_status",
+                "cognito_username"
             ],
             "properties": {
                 "enabled": {
@@ -59,20 +59,20 @@
                         true
                     ]
                 },
-                "user-status": {
-                    "$id": "#/properties/message/properties/user-status",
+                "user_status": {
+                    "$id": "#/properties/message/properties/user_status",
                     "type": "string",
-                    "title": "The user-status schema",
+                    "title": "The user_status schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
                         "FORCE_CHANGE_PASSWORD"
                     ]
                 },
-                "cognito-username": {
-                    "$id": "#/properties/message/properties/cognito-username",
+                "cognito_username": {
+                    "$id": "#/properties/message/properties/cognito_username",
                     "type": "string",
-                    "title": "The cognito-username schema",
+                    "title": "The cognito_username schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
