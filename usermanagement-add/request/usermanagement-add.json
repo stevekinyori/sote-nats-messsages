@@ -30,7 +30,13 @@
             "device-token": "test-device-token"
         }
     ],
-    "required": [
+     "required": [
+        "aws-user-name",
+        "organizations-id",
+        "user-email required if user-phone-number IS NOT provided",
+        "user-phone-number required if user-email  IS NOT provided",
+        "user-phone-country-code required if user-phone-number IS provided startswith +",
+        "cognito-username required if informational-user IS FALSE"
     ],
     "properties": {
         "organizations-id": {
