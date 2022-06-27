@@ -7,14 +7,14 @@
     "default": {},
     "examples": [
         {
-            "cognito-username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
+            "cognito_username": "a46baxxxxxxxxxxxxxxxxxxxxxx"
         }
     ],
     "required": [
         "cognito-username"
     ],
     "properties": {
-        "cognito-username": {
+        "cognito_username": {
             "$id": "#/properties/cognito-username",
             "type": "string",
             "title": "The cognito-username schema",

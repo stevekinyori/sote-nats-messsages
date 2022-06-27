@@ -44,7 +44,7 @@
         "test-cognito-name"
       ]
     },
-    "cognito-username": {
+    "cognito_username": {
       "type": "string",
       "default": "",
       "title": "The cognito-username Schema",
@@ -58,6 +58,6 @@
     "organizations-id": 1,
     "row-version": 7,
     "aws-user-name": "test-cognito-name",
-    "cognito-username": "fbxxxxx"
+    "cognito_username": "fbxxxxx"
   }]
 }

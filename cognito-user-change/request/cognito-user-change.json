@@ -7,7 +7,7 @@
     "default": {},
     "examples": [
         {
-            "cognito-username": "967xxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "cognito_username": "967xxxxxxxxxxxxxxxxxxxxxxxxxx",
             "user-phone-country-code": "+254",
             "user-phone-number": "712345678",
             "user-email": "test@test.com.com",
@@ -35,7 +35,7 @@
     "client-company-id"
     ],
     "properties": {
-        "cognito-username": {
+        "cognito_username": {
             "$id": "#/properties/cognito-username",
             "type": "string",
             "title": "The cognito-username schema",

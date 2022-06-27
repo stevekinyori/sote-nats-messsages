@@ -40,7 +40,7 @@
         3
       ]
     },
-    "cognito-username": {
+    "cognito_username": {
       "type": "string",
       "default": "",
       "title": "The cognito-username Schema",
@@ -229,7 +229,7 @@
   },
   "examples": [{
     "user-management-id": 3,
-    "cognito-username": "INFO",
+    "cognito_username": "INFO",
     "row-version": 4,
     "user-is-active": true,
     "organizations-id": 10000,
