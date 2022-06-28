@@ -1,141 +1,81 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/example.json",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
-  "examples": [
-    {
-      "message-id": "test-list",
-      "message": {
-        "cognito_username": "b794xxxxxxxxxxxxxxx",
-        "enabled": true,
-        "informational_user": false,
-        "row_version": 1,
-        "user_status": "FORCE_CHANGE_PASSWORD",
-        "user_is_active": true,
-        "usermanagement_id": 3
-      }
-    }
-  ],
+  "title": "Root Schema",
   "required": [
     "message-id",
     "message"
   ],
   "properties": {
     "message-id": {
-      "$id": "#/properties/message-id",
       "type": "string",
-      "title": "The message-id schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The message-id Schema",
       "examples": [
-        "test-list"
+        "test-message"
       ]
     },
     "message": {
-      "$id": "#/properties/message",
       "type": "object",
-      "title": "The message schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": {},
-      "examples": [
-        {
-          "cognito_username": "b794xxxxxxxxxxxxxxx",
-          "enabled": true,
-          "informational_user": false,
-          "row_version": 1,
-          "user_status": "FORCE_CHANGE_PASSWORD",
-          "user_is_active": true,
-          "usermanagement_id": 3
-        }
-      ],
+      "title": "The message Schema",
       "required": [
+        "enabled",
         "informational_user",
         "row_version",
-        "user_is_active",
         "usermanagement_id"
       ],
-      "optional": [
-        "cognito_username",
-        "enabled",
-        "user_status"
-      ],
       "properties": {
-        "cognito_username": {
-          "$id": "#/properties/message/properties/cognito_username",
-          "type": "string",
-          "title": "The cognito_username schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": "",
-          "examples": [
-            "b794xxxxxxxxxxxxxxx"
-          ]
-        },
         "enabled": {
-          "$id": "#/properties/message/properties/enabled",
           "type": "boolean",
-          "title": "The enabled schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": false,
+          "title": "The enabled Schema",
           "examples": [
             true
           ]
         },
         "informational_user": {
-          "$id": "#/properties/message/properties/informational_user",
           "type": "boolean",
-          "title": "The informational_user schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": false,
+          "title": "The informational_user Schema",
           "examples": [
             false
           ]
         },
         "row_version": {
-          "$id": "#/properties/message/properties/row_version",
           "type": "integer",
-          "title": "The row_version schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": 0,
+          "title": "The row_version Schema",
           "examples": [
-            1
-          ]
-        },
-        "user_status": {
-          "$id": "#/properties/message/properties/user_status",
-          "type": "string",
-          "title": "The user_status schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": "",
-          "examples": [
-            "FORCE_CHANGE_PASSWORD"
-          ]
-        },
-        "user_is_active": {
-          "$id": "#/properties/message/properties/user_is_active",
-          "type": "boolean",
-          "title": "The user_is_active schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": false,
-          "examples": [
-            true
+            5
           ]
         },
         "usermanagement_id": {
-          "$id": "#/properties/message/properties/usermanagement_id",
           "type": "integer",
-          "title": "The usermanagement_id schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": 0,
+          "title": "The usermanagement_id Schema",
           "examples": [
             3
           ]
         }
       },
-      "additionalProperties": true
+      "examples": [{
+        "enabled": true,
+        "informational_user": false,
+        "row_version": 5,
+        "usermanagement_id": 3
+      }]
     }
   },
-  "additionalProperties": true
+  "examples": [{
+    "message-id": "test-message",
+    "message": {
+      "enabled": true,
+      "informational_user": false,
+      "row_version": 5,
+      "usermanagement_id": 3
+    }
+  }]
 }
