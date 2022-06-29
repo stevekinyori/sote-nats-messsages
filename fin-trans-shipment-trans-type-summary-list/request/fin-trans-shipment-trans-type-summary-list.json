@@ -7,6 +7,9 @@
   "default": {},
   "examples": [
     {
+      "search":"Customs Taxes",
+      "record-limit-count": 10,
+      "record-offset": 0,
       "shipment-status": ["COMPLETE"],
       "group-by": "shipments-id|client-company-id|fintrans-type",
       "days": 720,
@@ -27,6 +30,9 @@
     }
   ],
   "optional": [
+    "search",
+    "record-limit-count",
+    "record-offset",
     "shipment-status",
     "days",
     "group-by",
