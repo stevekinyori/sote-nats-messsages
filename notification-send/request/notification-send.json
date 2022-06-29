@@ -1,0 +1,186 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "send-from",
+        "reply-to",
+        "send-to",
+        "subject"
+    ],
+    "properties": {
+        "send-from": {
+            "type": "string",
+            "default": "",
+            "title": "The send-from Schema",
+            "examples": [
+                "finance@sote.com"
+            ]
+        },
+        "reply-to": {
+            "type": "string",
+            "default": "",
+            "title": "The reply-to Schema",
+            "examples": [
+                "finance@sote.com"
+            ]
+        },
+        "copy-to": {
+            "type": "array",
+            "default": [],
+            "title": "The copy-to Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "red@sote.com"
+                ]
+            },
+            "examples": [
+                [
+                    "red@sote.com"]
+            ]
+        },
+        "broadcast-to": {
+            "type": "array",
+            "default": [],
+            "title": "The broadcast-to Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "red@sote.com"
+                ]
+            },
+            "examples": [
+                [
+                    "red@sote.com"]
+            ]
+        },
+        "send-to": {
+            "type": "array",
+            "default": [],
+            "title": "The send-to Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "red@sote.com"
+                ]
+            },
+            "examples": [
+                [
+                    "red@sote.com"]
+            ]
+        },
+        "subject": {
+            "type": "string",
+            "default": "",
+            "title": "The subject Schema",
+            "examples": [
+                "Test subject"
+            ]
+        },
+        "text-payload": {
+            "type": "string",
+            "default": "",
+            "title": "The text-payload Schema",
+            "examples": [
+                "test message"
+            ]
+        },
+        "attachment-byte": {
+            "type": "array",
+            "default": [],
+            "title": "The attachment-byte Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "file-name",
+                    "file-content"
+                ],
+                "properties": {
+                    "file-name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The file-name Schema",
+                        "examples": [
+                            "test.svg"
+                        ]
+                    },
+                    "file-content": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The file-content Schema",
+                        "items": {
+                            "type": "integer",
+                            "title": "A Schema",
+                            "examples": [
+                                60,
+                                63
+                            ]
+                        },
+                        "examples": [
+                            [60,
+                                63]
+                        ]
+                    }
+                },
+                "examples": [{
+                    "file-name": "test.svg",
+                    "file-content": [
+                        60,
+                        63
+                    ]
+                }]
+            },
+            "examples": [
+                [{
+                    "file-name": "test.svg",
+                    "file-content": [
+                        60,
+                        63
+                    ]
+                }]
+            ]
+        },
+        "html-payload": {
+            "type": "string",
+            "default": "",
+            "title": "The html-payload Schema",
+            "examples": [
+                "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\u003c/head\u003e\u003cbody.html body\u003c/body\u003e\n\u003c/html\u003e\n\n"
+            ]
+        }
+    },
+    "examples": [{
+        "send-from": "finance@sote.com",
+        "reply-to": "finance@sote.com",
+        "copy-to": [
+            "red@sote.com"
+        ],
+        "broadcast-to": [
+            "red@sote.com"
+        ],
+        "send-to": [
+            "red@sote.com"
+        ],
+        "subject": "Test subject",
+        "text-payload": "test message",
+        "attachment-byte": [{
+            "file-name": "test.svg",
+            "file-content": [
+                60,
+                63
+            ]
+        }],
+        "html-payload": "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\u003c/head\u003e\u003cbody.html body\u003c/body\u003e\n\u003c/html\u003e\n\n"
+    }]
+}
