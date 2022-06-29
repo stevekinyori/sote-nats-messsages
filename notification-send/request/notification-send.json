@@ -94,10 +94,10 @@
                 "test message"
             ]
         },
-        "attachment": {
+        "attachment-byte": {
             "type": "array",
             "default": [],
-            "title": "The attachment Schema",
+            "title": "The attachment-byte Schema",
             "items": {
                 "type": "object",
                 "default": {},
@@ -174,7 +174,7 @@
         ],
         "subject": "Test subject",
         "text-payload": "test message",
-        "attachment": [{
+        "attachment-byte": [{
             "file-name": "test.svg",
             "file-content": [
                 60,
