@@ -1,61 +1,74 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/example.json",
+  "title": "Root Schema",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
-  "examples": [
-    {
-      "message-id": "test",
-      "message": {
-        "documents_id": 1
-      }
-    }
-  ],
   "required": [
     "message-id",
     "message"
   ],
   "properties": {
     "message-id": {
-      "$id": "#/properties/message-id",
+      "title": "The message-id Schema",
+      "type": "string",
       "default": "",
-      "description": "This is used to uniquely identify devices.",
       "examples": [
-        "test"
-      ],
-      "title": "The message-id schema",
-      "type": "string"
+        "test-change"
+      ]
     },
     "message": {
-      "$id": "#/properties/message",
+      "title": "The message Schema",
       "type": "object",
-      "title": "The message schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": {},
-      "examples": [
-        {
-          "documents_id": 1
-        }
-      ],
       "required": [
-        "documents_id"
+        "documents-id",
+        "documents-link",
+        "documents-display-name"
       ],
       "properties": {
-        "documents_id": {
-          "$id": "#/properties/message/properties/documents_id",
+        "documents-id": {
+          "title": "The documents-id Schema",
+          "type": "integer",
           "default": 0,
-          "description": "This is a system generated id that is used identify a document.",
           "examples": [
-            1
-          ],
-          "title": "The documents_id schema",
-          "type": "integer"
+            61
+          ]
+        },
+        "documents-link": {
+          "title": "The documents-link Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+          ]
+        },
+        "documents-display-name": {
+          "title": "The documents-display-name Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "UPDATE DISPLAY NAME"
+          ]
         }
       },
-      "additionalProperties": true
+      "examples": [
+        {
+          "documents-id": 61,
+          "documents-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg",
+          "documents-display-name": "UPDATE DISPLAY NAME"
+        }
+      ]
     }
   },
-  "additionalProperties": true
+  "examples": [
+    {
+      "message-id": "test-change",
+      "message": {
+        "documents-id": 61,
+        "documents-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg",
+        "documents-display-name": "UPDATE DISPLAY NAME"
+      }
+    }
+  ]
 }
