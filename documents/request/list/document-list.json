@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": [
+    "organizations-id",
+    "record-limit-count",
+    "record-offset"
+  ],
+  "optional": [
+    "search",
+    "sort-order"
+  ],
+  "properties": {
+    "search": {
+      "title": "The search Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "IDF"
+      ]
+    },
+    "organizations-id": {
+      "title": "The organizations-id Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        1000
+      ]
+    },
+    "record-limit-count": {
+      "title": "The record-limit-count Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        10
+      ]
+    },
+    "record-offset": {
+      "title": "The record-offset Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "sort-order": {
+      "title": "The sort-order Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "documents-id"
+      ],
+      "properties": {
+        "documents-id": {
+          "title": "The documents-id Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "ASC"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "documents-id": "ASC"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "search": "IDF",
+      "organizations-id": 1000,
+      "record-limit-count": 10,
+      "record-offset": 0,
+      "sort-order": {
+        "documents-id": "ASC"
+      }
+    }
+  ]
+}

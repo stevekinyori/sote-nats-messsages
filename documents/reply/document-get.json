@@ -1,251 +1,338 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/example.json",
+  "title": "Root Schema",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
-  "examples": [
-    {
-      "message-id": "test",
-      "message": [
-        {
-          "documents_id": 2,
-          "organizations_id": 1000,
-          "documents_owner_micro_service": "SHIPMENTS",
-          "documents_owner_table": "shipments",
-          "documents_owner_key": "1000",
-          "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/invoice0.pdf",
-          "documents_display_name": "invoice0.pdf",
-          "documents_type": "application/pdf",
-          "document_categories_name": "<nil>",
-          "created_by_date": "2021-08-27T00:00:00Z",
-          "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-          "metadata": null
-        }
-      ]
-    }
-  ],
   "required": [
     "message-id",
     "message"
   ],
   "properties": {
     "message-id": {
-      "$id": "#/properties/message-id",
+      "title": "The message-id Schema",
+      "type": "string",
       "default": "",
-      "description": "This is used to uniquely identify devices.",
       "examples": [
-        "test"
-      ],
-      "title": "The message-id schema",
-      "type": "string"
+        "test-get"
+      ]
     },
     "message": {
-      "$id": "#/properties/message",
-      "type": "array",
-      "title": "The message schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": [],
-      "examples": [
-        [
-          {
-            "documents_id": 2,
-            "organizations_id": 1000,
-            "documents_owner_micro_service": "SHIPMENTS",
-            "documents_owner_table": "shipments",
-            "documents_owner_key": "1000",
-            "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/invoice0.pdf",
-            "documents_display_name": "invoice0.pdf",
-            "documents_type": "application/pdf",
-            "document_categories_name": "<nil>",
-            "created_by_date": "2021-08-27T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "metadata": null
-          },
-          {
-            "documents_id": 1,
-            "organizations_id": 1000,
-            "documents_owner_micro_service": "SHIPMENTS",
-            "documents_owner_table": "shipments",
-            "documents_owner_key": "1000",
-            "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/invoice0.pdf",
-            "documents_display_name": "invoice0.pdf",
-            "documents_type": "application/pdf",
-            "document_categories_name": "<nil>",
-            "created_by_date": "2021-08-27T00:00:00Z",
-            "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-            "metadata": null
-          }
-        ]
+      "title": "The message Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "documents_id",
+        "organizations_id",
+        "documents_owner_micro_service",
+        "documents_owner_table",
+        "documents_owner_key",
+        "documents_link",
+        "documents_display_name",
+        "documents_type",
+        "document_categories_name",
+        "created_by_date",
+        "created_by_requestor_username",
+        "supporting_documents"
       ],
-      "additionalItems": true,
-      "items": {
-        "$id": "#/properties/message/items",
-        "anyOf": [
-          {
-            "$id": "#/properties/message/items/anyOf/0",
+      "properties": {
+        "documents_id": {
+          "title": "The documents_id Schema",
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            61
+          ]
+        },
+        "organizations_id": {
+          "title": "The organizations_id Schema",
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            1000
+          ]
+        },
+        "documents_owner_micro_service": {
+          "title": "The documents_owner_micro_service Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "SHIPMENTS"
+          ]
+        },
+        "documents_owner_table": {
+          "title": "The documents_owner_table Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "shipments"
+          ]
+        },
+        "documents_owner_key": {
+          "title": "The documents_owner_key Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "1"
+          ]
+        },
+        "documents_link": {
+          "title": "The documents_link Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+          ]
+        },
+        "documents_display_name": {
+          "title": "The documents_display_name Schema",
+          "type": "null",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "documents_type": {
+          "title": "The documents_type Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Proforma invoice"
+          ]
+        },
+        "document_categories_name": {
+          "title": "The document_categories_name Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "IDF \u0026 Customs Entry"
+          ]
+        },
+        "created_by_date": {
+          "title": "The created_by_date Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2022-07-05"
+          ]
+        },
+        "created_by_requestor_username": {
+          "title": "The created_by_requestor_username Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "sote-test"
+          ]
+        },
+        "supporting_documents": {
+          "title": "The supporting_documents Schema",
+          "type": "array",
+          "default": [],
+          "items": {
+            "title": "A Schema",
             "type": "object",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-              {
-                "documents_id": 2,
-                "organizations_id": 1000,
-                "documents_owner_micro_service": "SHIPMENTS",
-                "documents_owner_table": "shipments",
-                "documents_owner_key": "1000",
-                "documents_link": "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/invoice0.pdf",
-                "documents_display_name": "invoice0.pdf",
-                "documents_type": "application/pdf",
-                "document_categories_name": "<nil>",
-                "created_by_date": "2021-08-27T00:00:00Z",
-                "created_by_requestor_username": "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00",
-                "metadata": null
-              }
-            ],
             "required": [
-              "documents_id",
-              "organizations_id",
-              "documents_owner_micro_service",
-              "documents_owner_table",
-              "documents_owner_key",
-              "documents_link",
-              "documents_display_name",
-              "documents_type",
-              "document_categories_name",
               "created_by_date",
               "created_by_requestor_username",
-              "metadata"
+              "document_categories_name",
+              "documents_display_name",
+              "documents_id",
+              "documents_link",
+              "documents_owner_key",
+              "documents_owner_micro_service",
+              "documents_owner_table",
+              "documents_type",
+              "organizations_id"
             ],
             "properties": {
-              "documents_id": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_id",
-                "type": "integer",
-                "title": "The documents_id schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": 0,
+              "created_by_date": {
+                "title": "The created_by_date Schema",
+                "type": "string",
+                "default": "",
                 "examples": [
-                  2
+                  "2022-07-05"
                 ]
               },
-              "organizations_id": {
-                "$id": "#/properties/message/items/anyOf/0/properties/organizations_id",
+              "created_by_requestor_username": {
+                "title": "The created_by_requestor_username Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "sote-test"
+                ]
+              },
+              "document_categories_name": {
+                "title": "The document_categories_name Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "IDF \u0026 Customs Entry"
+                ]
+              },
+              "documents_display_name": {
+                "title": "The documents_display_name Schema",
+                "type": "null",
+                "default": null,
+                "examples": [
+                  null
+                ]
+              },
+              "documents_id": {
+                "title": "The documents_id Schema",
                 "type": "integer",
-                "title": "The organizations_id schema",
-                "description": "An explanation about the purpose of this instance.",
                 "default": 0,
                 "examples": [
-                  1000
+                  62
+                ]
+              },
+              "documents_link": {
+                "title": "The documents_link Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                ]
+              },
+              "documents_owner_key": {
+                "title": "The documents_owner_key Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "1"
                 ]
               },
               "documents_owner_micro_service": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_owner_micro_service",
+                "title": "The documents_owner_micro_service Schema",
                 "type": "string",
-                "title": "The documents_owner_micro_service schema",
-                "description": "An explanation about the purpose of this instance.",
                 "default": "",
                 "examples": [
                   "SHIPMENTS"
                 ]
               },
               "documents_owner_table": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_owner_table",
+                "title": "The documents_owner_table Schema",
                 "type": "string",
-                "title": "The documents_owner_table schema",
-                "description": "An explanation about the purpose of this instance.",
                 "default": "",
                 "examples": [
                   "shipments"
                 ]
               },
-              "documents_owner_key": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_owner_key",
-                "type": "string",
-                "title": "The documents_owner_key schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": [
-                  "1000"
-                ]
-              },
-              "documents_link": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_link",
-                "type": "string",
-                "title": "The documents_link schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": [
-                  "https://sote-test-bucket-scott-yacko.s3-eu-west-1.amazonaws.com/processed/invoice0.pdf"
-                ]
-              },
-              "documents_display_name": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_display_name",
-                "type": "string",
-                "title": "The documents_display_name schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": [
-                  "invoice0.pdf"
-                ]
-              },
               "documents_type": {
-                "$id": "#/properties/message/items/anyOf/0/properties/documents_type",
+                "title": "The documents_type Schema",
                 "type": "string",
-                "title": "The documents_type schema",
-                "description": "An explanation about the purpose of this instance.",
                 "default": "",
                 "examples": [
-                  "application/pdf"
+                  "Proforma invoice"
                 ]
               },
-              "document_categories_name": {
-                "$id": "#/properties/message/items/anyOf/0/properties/document_categories_name",
-                "type": "string",
-                "title": "The document_categories_name schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
+              "organizations_id": {
+                "title": "The organizations_id Schema",
+                "type": "integer",
+                "default": 0,
                 "examples": [
-                  "<nil>"
-                ]
-              },
-              "created_by_date": {
-                "$id": "#/properties/message/items/anyOf/0/properties/created_by_date",
-                "type": "string",
-                "title": "The created_by_date schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": [
-                  "2021-08-27T00:00:00Z"
-                ]
-              },
-              "created_by_requestor_username": {
-                "$id": "#/properties/message/items/anyOf/0/properties/created_by_requestor_username",
-                "type": "string",
-                "title": "The created_by_requestor_username schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": [
-                  "508a5cf3-2603-4ed0-bdb4-3ccb5f67ce00"
-                ]
-              },
-              "metadata": {
-                "$id": "#/properties/message/items/anyOf/0/properties/metadata",
-                "type": "null",
-                "title": "The metadata schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": null,
-                "examples": [
-                  null
+                  1000
                 ]
               }
             },
-            "additionalProperties": true
+            "examples": [
+              {
+                "created_by_date": "2022-07-05",
+                "created_by_requestor_username": "sote-test",
+                "document_categories_name": "IDF \u0026 Customs Entry",
+                "documents_display_name": null,
+                "documents_id": 62,
+                "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg",
+                "documents_owner_key": "1",
+                "documents_owner_micro_service": "SHIPMENTS",
+                "documents_owner_table": "shipments",
+                "documents_type": "Proforma invoice",
+                "organizations_id": 1000
+              }
+            ]
+          },
+          "examples": [
+            [
+              {
+                "created_by_date": "2022-07-05",
+                "created_by_requestor_username": "sote-test",
+                "document_categories_name": "IDF \u0026 Customs Entry",
+                "documents_display_name": null,
+                "documents_id": 62,
+                "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg",
+                "documents_owner_key": "1",
+                "documents_owner_micro_service": "SHIPMENTS",
+                "documents_owner_table": "shipments",
+                "documents_type": "Proforma invoice",
+                "organizations_id": 1000
+              }
+            ]
+          ]
+        }
+      },
+      "examples": [
+        {
+          "documents_id": 61,
+          "organizations_id": 1000,
+          "documents_owner_micro_service": "SHIPMENTS",
+          "documents_owner_table": "shipments",
+          "documents_owner_key": "1",
+          "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg",
+          "documents_display_name": null,
+          "documents_type": "Proforma invoice",
+          "document_categories_name": "IDF \u0026 Customs Entry",
+          "created_by_date": "2022-07-05",
+          "created_by_requestor_username": "sote-test",
+          "supporting_documents": [
+            {
+              "created_by_date": "2022-07-05",
+              "created_by_requestor_username": "sote-test",
+              "document_categories_name": "IDF \u0026 Customs Entry",
+              "documents_display_name": null,
+              "documents_id": 62,
+              "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg",
+              "documents_owner_key": "1",
+              "documents_owner_micro_service": "SHIPMENTS",
+              "documents_owner_table": "shipments",
+              "documents_type": "Proforma invoice",
+              "organizations_id": 1000
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "message-id": "test-get",
+      "message": {
+        "documents_id": 61,
+        "organizations_id": 1000,
+        "documents_owner_micro_service": "SHIPMENTS",
+        "documents_owner_table": "shipments",
+        "documents_owner_key": "1",
+        "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg",
+        "documents_display_name": null,
+        "documents_type": "Proforma invoice",
+        "document_categories_name": "IDF \u0026 Customs Entry",
+        "created_by_date": "2022-07-05",
+        "created_by_requestor_username": "sote-test",
+        "supporting_documents": [
+          {
+            "created_by_date": "2022-07-05",
+            "created_by_requestor_username": "sote-test",
+            "document_categories_name": "IDF \u0026 Customs Entry",
+            "documents_display_name": null,
+            "documents_id": 62,
+            "documents_link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg",
+            "documents_owner_key": "1",
+            "documents_owner_micro_service": "SHIPMENTS",
+            "documents_owner_table": "shipments",
+            "documents_type": "Proforma invoice",
+            "organizations_id": 1000
           }
         ]
       }
     }
-  },
-  "additionalProperties": true
+  ]
 }
