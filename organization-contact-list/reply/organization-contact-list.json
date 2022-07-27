@@ -1,0 +1,205 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "default": "",
+            "title": "The message-id Schema",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "type": "object",
+            "default": {},
+            "title": "The message Schema",
+            "required": [
+                "items",
+                "pagination"
+            ],
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The items Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "clientcompanycontacts_id",
+                            "client_company_id",
+                            "name",
+                            "communication_type",
+                            "contact_value",
+                            "created_by_date",
+                            "created_by_requestor_username"
+                        ],
+                        "properties": {
+                            "clientcompanycontacts_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The clientcompanycontacts_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "client_company_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The client_company_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The name Schema",
+                                "examples": [
+                                    "Test One"
+                                ]
+                            },
+                            "communication_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The communication_type Schema",
+                                "examples": [
+                                    "EMAIL"
+                                ]
+                            },
+                            "contact_value": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The contact_value Schema",
+                                "examples": [
+                                    "test1@test.com"
+                                ]
+                            },
+                            "created_by_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_date Schema",
+                                "examples": [
+                                    "2022-07-26"
+                                ]
+                            },
+                            "created_by_requestor_username": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_requestor_username Schema",
+                                "examples": [
+                                    "81gc55x3-XXXXXXX-6b2ce5e8"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "clientcompanycontacts_id": 1,
+                            "client_company_id": 1,
+                            "name": "Test One",
+                            "communication_type": "EMAIL",
+                            "contact_value": "test1@test.com",
+                            "created_by_date": "2022-07-26",
+                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "clientcompanycontacts_id": 1,
+                            "client_company_id": 1,
+                            "name": "Test One",
+                            "communication_type": "EMAIL",
+                            "contact_value": "test1@test.com",
+                            "created_by_date": "2022-07-26",
+                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                        }]
+                    ]
+                },
+                "pagination": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The pagination Schema",
+                    "required": [
+                        "total",
+                        "limit",
+                        "offset"
+                    ],
+                    "properties": {
+                        "total": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total Schema",
+                            "examples": [
+                                2
+                            ]
+                        },
+                        "limit": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The limit Schema",
+                            "examples": [
+                                0
+                            ]
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The offset Schema",
+                            "examples": [
+                                0
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "total": 2,
+                        "limit": 0,
+                        "offset": 0
+                    }]
+                }
+            },
+            "examples": [{
+                "items": [{
+                    "clientcompanycontacts_id": 1,
+                    "client_company_id": 1,
+                    "name": "Test One",
+                    "communication_type": "EMAIL",
+                    "contact_value": "test1@test.com",
+                    "created_by_date": "2022-07-26",
+                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                }],
+                "pagination": {
+                    "total": 2,
+                    "limit": 0,
+                    "offset": 0
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "items": [{
+                "clientcompanycontacts_id": 1,
+                "client_company_id": 1,
+                "name": "Test One",
+                "communication_type": "EMAIL",
+                "contact_value": "test1@test.com",
+                "created_by_date": "2022-07-26",
+                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+            }],
+            "pagination": {
+                "total": 2,
+                "limit": 0,
+                "offset": 0
+            }
+        }
+    }]
+}

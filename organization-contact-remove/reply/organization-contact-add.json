@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "default": "",
+            "title": "The message-id Schema",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "type": "object",
+            "default": {},
+            "title": "The message Schema",
+            "required": [
+                "success"
+            ],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The success Schema",
+                    "examples": [
+                        true
+                    ]
+                }
+            },
+            "examples": [{
+                "success": true
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "success": true
+        }
+    }]
+}

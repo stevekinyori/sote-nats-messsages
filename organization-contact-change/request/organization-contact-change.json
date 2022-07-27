@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "organizations-id",
+        "client-company-id",
+        "client-company-contacts-id"
+    ],
+    "properties": {
+        "organizations-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The organizations-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "client-company-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The client-company-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "client-company-contacts-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The client-company-contacts-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "contact-value": {
+            "type": "string",
+            "default": "",
+            "title": "The contact-value Schema",
+            "examples": [
+                "+123456789"
+            ]
+        },
+        "contact-name": {
+            "type": "string",
+            "default": "",
+            "title": "The contact-name Schema",
+            "examples": [
+                "Test One"
+            ]
+        }
+    },
+    "examples": [{
+        "organizations-id": 1,
+        "client-company-id": 1,
+        "client-company-contacts-id": 1,
+        "contact-value": "+123456789",
+        "contact-name": "Test One"
+    }]
+}

@@ -1,0 +1,187 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "organizations-id",
+        "record-limit-count",
+        "record-offset"
+    ],
+    "properties": {
+        "organizations-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The organizations-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "search": {
+            "type": "string",
+            "default": "",
+            "title": "The search Schema",
+            "examples": [
+                "email"
+            ]
+        },
+        "record-limit-count": {
+            "type": "integer",
+            "default": 0,
+            "title": "The record-limit-count Schema",
+            "examples": [
+                0
+            ]
+        },
+        "record-offset": {
+            "type": "integer",
+            "default": 0,
+            "title": "The record-offset Schema",
+            "examples": [
+                0
+            ]
+        },
+        "sort-order": {
+            "type": "object",
+            "default": {},
+            "title": "The sort-order Schema",
+            "required": [
+                "contact-name"
+            ],
+            "properties": {
+                "contact-name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The contact-name Schema",
+                    "examples": [
+                        "ASC"
+                    ]
+                }
+            },
+            "examples": [{
+                "contact-name": "ASC"
+            }]
+        },
+        "filters": {
+            "type": "object",
+            "default": {},
+            "title": "The filters Schema",
+            "required": [
+                "and"
+            ],
+            "properties": {
+                "and": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The and Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "field-name",
+                            "operator",
+                            "value"
+                        ],
+                        "properties": {
+                            "field-name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The field-name Schema",
+                                "examples": [
+                                    "client-company-id"
+                                ]
+                            },
+                            "operator": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The operator Schema",
+                                "examples": [
+                                    "IN"
+                                ]
+                            },
+                            "value": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The value Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "2",
+                                        "128",
+                                        "10000",
+                                        "10018"
+                                    ]
+                                },
+                                "examples": [
+                                    ["2",
+                                        "128",
+                                        "10000",
+                                        "10018"
+                                    ]
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "field-name": "client-company-id",
+                            "operator": "IN",
+                            "value": [
+                                "2",
+                                "128",
+                                "10000",
+                                "10018"
+                            ]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "field-name": "client-company-id",
+                            "operator": "IN",
+                            "value": [
+                                "2",
+                                "128",
+                                "10000",
+                                "10018"
+                            ]
+                        }]
+                    ]
+                }
+            },
+            "examples": [{
+                "and": [{
+                    "field-name": "client-company-id",
+                    "operator": "IN",
+                    "value": [
+                        "2",
+                        "128",
+                        "10000",
+                        "10018"
+                    ]
+                }]
+            }]
+        }
+    },
+    "examples": [{
+        "organizations-id": 1,
+        "search": "email",
+        "record-limit-count": 0,
+        "record-offset": 0,
+        "sort-order": {
+            "contact-name": "ASC"
+        },
+        "filters": {
+            "and": [{
+                "field-name": "client-company-id",
+                "operator": "IN",
+                "value": [
+                    "2",
+                    "128",
+                    "10000",
+                    "10018"
+                ]
+            }]
+        }
+    }]
+}
