@@ -1,280 +1,240 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/example.json",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
-  "examples": [
-    {
-      "organizations-id": 1,
-      "user-login-type": "email",
-      "user-phone-country-code": "+254",
-      "user-phone-number": "722345678",
-      "user-email": "test@test.com",
-      "user-first-name": "Test",
-      "user-middle-name": "User",
-      "user-last-name": "Test",
-      "user-role-list": [
-        "ROLE_NAME_1",
-        "ROLE_NAME_2"
-      ],
-      "client-company-id": 1,
-      "informational-user": false,
-      "user-is-active": true,
-      "user-name-prefix": "Miss",
-      "user_name_suffix": "MD",
-      "user-hire-date": "2021-08-26",
-      "driver-license": "DL-123",
-      "driver-license-expiry": "2022-01-01",
-      "user-wage": 200000,
-      "user-pay-period": "Monthly",
-      "device-token": "test-device-token"
-    }
-  ],
+  "title": "Root Schema",
   "required": [
     "organizations-id",
+    "aws-user-name",
     "user-login-type",
-    "user-phone-country-code",
-    "user-phone-number",
-    "user-email",
+    "user-phone-country-code required if user-phone-number IS provided startswith +",
+    "user-phone-number required if user-login-type IS EMAIL",
+    "user-email required if user-login-type IS EMAIL",
+    "user-role-list",
+    "informational-user required if informational-user IS FALSE",
+    "user-hire-date",
+    "driver-license",
+    "driver-license-expiry"
+  ],
+  "optional": [
+    "user-is-active",
     "user-first-name",
     "user-middle-name",
     "user-last-name",
-    "user-role-list",
     "client-company-id",
-    "informational-user",
-    "user-is-active",
     "user-name-prefix",
-    "user_name_suffix",
-    "user-hire-date",
-    "driver-license",
-    "driver-license-expiry",
+    "user-name-suffix",
     "user-wage",
     "user-pay-period",
     "device-token"
   ],
   "properties": {
     "organizations-id": {
-      "$id": "#/properties/organizations-id",
       "type": "integer",
-      "title": "The organizations-id schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": 0,
+      "title": "The organizations-id Schema",
       "examples": [
         1
       ]
     },
-    "user-login-type": {
-      "$id": "#/properties/user-login-type",
+    "aws-user-name": {
       "type": "string",
-      "title": "The user-login-type schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The aws-user-name Schema",
+      "examples": [
+        "test-user"
+      ]
+    },
+    "user-login-type": {
+      "enum": [
+        "email",
+        "phone"
+      ],
+      "title": "The user-login-type Schema",
       "examples": [
         "email"
       ]
     },
     "user-phone-country-code": {
-      "$id": "#/properties/user-phone-country-code",
       "type": "string",
-      "title": "The user-phone-country-code schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-phone-country-code Schema",
       "examples": [
         "+254"
       ]
     },
     "user-phone-number": {
-      "$id": "#/properties/user-phone-number",
       "type": "string",
-      "title": "The user-phone-number schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-phone-number Schema",
       "examples": [
-        "722345678"
+        "722000000"
       ]
     },
     "user-email": {
-      "$id": "#/properties/user-email",
       "type": "string",
-      "title": "The user-email schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-email Schema",
       "examples": [
         "test@test.com"
       ]
     },
-    "user-first-name": {
-      "$id": "#/properties/user-first-name",
-      "type": "string",
-      "title": "The user-first-name schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "Test"
-      ]
-    },
-    "user-middle-name": {
-      "$id": "#/properties/user-middle-name",
-      "type": "string",
-      "title": "The user-middle-name schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "User"
-      ]
-    },
-    "user-last-name": {
-      "$id": "#/properties/user-last-name",
-      "type": "string",
-      "title": "The user-last-name schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "Test"
-      ]
-    },
     "user-role-list": {
-      "$id": "#/properties/user-role-list",
       "type": "array",
-      "title": "The user-role-list schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": [],
-      "examples": [
-        [
-          "ROLE_NAME_1",
-          "ROLE_NAME_2"
-        ]
-      ],
-      "additionalItems": true,
+      "title": "The user-role-list Schema",
       "items": {
-        "$id": "#/properties/user-role-list/items",
-        "anyOf": [
-          {
-            "$id": "#/properties/user-role-list/items/anyOf/0",
-            "type": "string",
-            "title": "The first anyOf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-              "ROLE_NAME_1",
-              "ROLE_NAME_2"
-            ]
-          }
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "ROLE1",
+          "ROLE2"
         ]
-      }
-    },
-    "client-company-id": {
-      "$id": "#/properties/client-company-id",
-      "type": "integer",
-      "title": "The client-company-id schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": 0,
+      },
       "examples": [
-        1
+        ["ROLE1",
+          "ROLE2"
+        ]
       ]
     },
     "informational-user": {
-      "$id": "#/properties/informational-user",
       "type": "boolean",
-      "title": "The informational-user schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": false,
+      "title": "The informational-user Schema",
       "examples": [
         false
       ]
     },
     "user-is-active": {
-      "$id": "#/properties/user-is-active",
       "type": "boolean",
-      "title": "The user-is-active schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": false,
+      "title": "The user-is-active Schema",
       "examples": [
         true
       ]
     },
-    "user-name-prefix": {
-      "$id": "#/properties/user-name-prefix",
+    "user-first-name": {
       "type": "string",
-      "title": "The user-name-prefix schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-first-name Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "user-middle-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-middle-name Schema",
+      "examples": [
+        "User"
+      ]
+    },
+    "user-last-name": {
+      "type": "string",
+      "default": "",
+      "title": "The user-last-name Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "client-company-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The client-company-id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "user-name-prefix": {
+      "type": "string",
+      "default": "",
+      "title": "The user-name-prefix Schema",
       "examples": [
         "Miss"
       ]
     },
-    "user_name_suffix": {
-      "$id": "#/properties/user_name_suffix",
+    "user-name-suffix": {
       "type": "string",
-      "title": "The user_name_suffix schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-name-suffix Schema",
       "examples": [
         "MD"
       ]
     },
     "user-hire-date": {
-      "$id": "#/properties/user-hire-date",
       "type": "string",
-      "title": "The user-hire-date schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-hire-date Schema",
       "examples": [
         "2021-08-26"
       ]
     },
     "driver-license": {
-      "$id": "#/properties/driver-license",
       "type": "string",
-      "title": "The driver-license schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The driver-license Schema",
       "examples": [
         "DL-123"
       ]
     },
     "driver-license-expiry": {
-      "$id": "#/properties/driver-license-expiry",
       "type": "string",
-      "title": "The driver-license-expiry schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The driver-license-expiry Schema",
       "examples": [
         "2022-01-01"
       ]
     },
     "user-wage": {
-      "$id": "#/properties/user-wage",
       "type": "integer",
-      "title": "The user-wage schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": 0,
+      "title": "The user-wage Schema",
       "examples": [
         200000
       ]
     },
     "user-pay-period": {
-      "$id": "#/properties/user-pay-period",
       "type": "string",
-      "title": "The user-pay-period schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The user-pay-period Schema",
       "examples": [
         "Monthly"
       ]
     },
     "device-token": {
-      "$id": "#/properties/device-token",
       "type": "string",
-      "title": "The device-token schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": "",
+      "title": "The device-token Schema",
       "examples": [
         "test-device-token"
       ]
     }
   },
-  "additionalProperties": true
+  "examples": [{
+    "organizations-id": 1,
+    "aws-user-name": "test-user",
+    "user-login-type": "email",
+    "user-phone-country-code": "+254",
+    "user-phone-number": "722000000",
+    "user-email": "test@test.com",
+    "user-role-list": [
+      "ROLE1",
+      "ROLE2"
+    ],
+    "informational-user": false,
+    "user-is-active": true,
+    "user-first-name": "Test",
+    "user-middle-name": "User",
+    "user-last-name": "Test",
+    "client-company-id": 1,
+    "user-name-prefix": "Miss",
+    "user-name-suffix": "MD",
+    "user-hire-date": "2021-08-26",
+    "driver-license": "DL-123",
+    "driver-license-expiry": "2022-01-01",
+    "user-wage": 200000,
+    "user-pay-period": "Monthly",
+    "device-token": "test-device-token"
+  }]
 }
