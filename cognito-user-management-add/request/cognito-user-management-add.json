@@ -13,18 +13,18 @@
     "user-email required if user-login-type IS EMAIL",
     "user-role-list",
     "informational-user required if informational-user IS FALSE",
-    "user-hire-date",
-    "driver-license",
-    "driver-license-expiry"
+    "user-is-active"
   ],
   "optional": [
-    "user-is-active",
     "user-first-name",
     "user-middle-name",
     "user-last-name",
     "client-company-id",
     "user-name-prefix",
     "user-name-suffix",
+    "user-hire-date",
+    "driver-license",
+    "driver-license-expiry",
     "user-wage",
     "user-pay-period",
     "device-token"
