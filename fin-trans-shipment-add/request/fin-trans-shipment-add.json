@@ -71,7 +71,7 @@
 			"default": "",
 			"title": "The currency Schema",
 			"examples": [
-				"KES"
+				"KSH"
 			],
 			"enum": [
 				"KSH",
@@ -167,7 +167,7 @@
 		"client-company-id": 1,
 		"shipments-id": 10060,
 		"fintrans-type": "DOCUMENT_PROCESSING_FEES",
-		"currency": "KES",
+		"currency": "KSH",
 		"amount": 15000,
 		"cost-is-unexpected": false,
 		"bill-of-lading": "Test BOL",
