@@ -1,496 +1,1086 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "message-id": "test-list",
-            "message": {
-                "items": [
-                    {
-                        "shipmentfinancialtransactions_id": 103,
-                        "organizations_id": 10000,
-                        "client_company_id": 1,
-                        "client_company_name": "Inizes",
-                        "shipments_id": 10002,
-                        "financialtransactions_type": "SHIPPING_LINE_CHARGES",
-                        "currency_type": "USD",
-                        "transactions_amount": 4642,
-                        "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
-                        "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                        "bill_of_lading": "BOL",
-                        "memo": "",
-                        "cost_is_unexpected": false,
-                        "notes": [
-                            {
-                                "created_by_date": "2020-06-06",
-                                "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                "notes_id": 380,
-                                "notes_note": "{\"comment\":\"Paid directly\"}",
-                                "notes_owner_key": "103",
-                                "notes_owner_micro_service": "FINTRANS",
-                                "notes_type": "FINTRANS_SHIPMENT"
-                            }
-                        ]
-                    }
-                ],
-                "pagination": {
-                    "total": 1202,
-                    "limit": 1,
-                    "offset": 0
-                }
-            }
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "message-id",
         "message"
     ],
     "properties": {
         "message-id": {
-            "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The message-id Schema",
             "examples": [
-                "test-list"
+                "test-message-mary"
             ]
         },
         "message": {
-            "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-                {
-                    "items": [
-                        {
-                            "shipmentfinancialtransactions_id": 103,
-                            "organizations_id": 10000,
-                            "client_company_id": 1,
-                            "client_company_name": "Inizes",
-                            "shipments_id": 10002,
-                            "financialtransactions_type": "SHIPPING_LINE_CHARGES",
-                            "currency_type": "USD",
-                            "transactions_amount": 4642,
-                            "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
-                            "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                            "bill_of_lading": "BOL",
-                            "memo": "",
-                            "cost_is_unexpected": false,
-                            "notes": [
-                                {
-                                    "created_by_date": "2020-06-06",
-                                    "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                    "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                    "notes_id": 380,
-                                    "notes_note": "{\"comment\":\"Paid directly\"}",
-                                    "notes_owner_key": "103",
-                                    "notes_owner_micro_service": "FINTRANS",
-                                    "notes_type": "FINTRANS_SHIPMENT"
-                                }
-                            ]
-                        }
-                    ],
-                    "pagination": {
-                        "total": 1202,
-                        "limit": 1,
-                        "offset": 0
-                    }
-                }
-            ],
+            "title": "The message Schema",
             "required": [
                 "items",
                 "pagination"
             ],
             "properties": {
                 "items": {
-                    "$id": "#/properties/message/properties/items",
                     "type": "array",
-                    "title": "The items schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": [],
-                    "examples": [
-                        [
-                            {
-                                "shipmentfinancialtransactions_id": 103,
-                                "organizations_id": 10000,
-                                "client_company_id": 1,
-                                "client_company_name": "Inizes",
-                                "shipments_id": 10002,
-                                "financialtransactions_type": "SHIPPING_LINE_CHARGES",
-                                "currency_type": "USD",
-                                "transactions_amount": 4642,
-                                "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
-                                "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                "bill_of_lading": "BOL",
-                                "memo": "",
-                                "cost_is_unexpected": false,
-                                "notes": [
-                                    {
-                                        "created_by_date": "2020-06-06",
-                                        "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                        "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                        "notes_id": 380,
-                                        "notes_note": "{\"comment\":\"Paid directly\"}",
-                                        "notes_owner_key": "103",
+                    "title": "The items Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "shipmentfinancialtransactions_id",
+                            "organizations_id",
+                            "client_company_id",
+                            "client_company_name",
+                            "shipments_id",
+                            "financialtransactions_type",
+                            "currency_type",
+                            "transactions_amount",
+                            "transactions_timestamp",
+                            "created_by_requestor-username",
+                            "bill_of_lading",
+                            "memo",
+                            "cost_is_unexpected",
+                            "financialdocuments_id",
+                            "transactions_entry_type",
+                            "tax_rate",
+                            "tax_amount",
+                            "external_system_id",
+                            "notes",
+                            "financial_documents",
+                            "children"
+                        ],
+                        "properties": {
+                            "shipmentfinancialtransactions_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The shipmentfinancialtransactions_id Schema",
+                                "examples": [
+                                    999999999999
+                                ]
+                            },
+                            "organizations_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The organizations_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "client_company_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The client_company_id Schema",
+                                "examples": [
+                                    999999999991
+                                ]
+                            },
+                            "client_company_name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The client_company_name Schema",
+                                "examples": [
+                                    "ACME DELETE ME CONTAINERS LTD"
+                                ]
+                            },
+                            "shipments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The shipments_id Schema",
+                                "examples": [
+                                    999999999991
+                                ]
+                            },
+                            "financialtransactions_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The financialtransactions_type Schema",
+                                "examples": [
+                                    "TEST_FINTRANS_TYPE"
+                                ]
+                            },
+                            "currency_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The currency_type Schema",
+                                "examples": [
+                                    "USD"
+                                ]
+                            },
+                            "transactions_amount": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The transactions_amount Schema",
+                                "examples": [
+                                    500000
+                                ]
+                            },
+                            "transactions_timestamp": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The transactions_timestamp Schema",
+                                "examples": [
+                                    "2022-08-03T08:23:50.846736+03:00"
+                                ]
+                            },
+                            "created_by_requestor-username": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_requestor-username Schema",
+                                "examples": [
+                                    "test-user"
+                                ]
+                            },
+                            "bill_of_lading": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The bill_of_lading Schema",
+                                "examples": [
+                                    "test bol"
+                                ]
+                            },
+                            "memo": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The memo Schema",
+                                "examples": [
+                                    "test memo"
+                                ]
+                            },
+                            "cost_is_unexpected": {
+                                "type": "boolean",
+                                "default": false,
+                                "title": "The cost_is_unexpected Schema",
+                                "examples": [
+                                    false
+                                ]
+                            },
+                            "financialdocuments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The financialdocuments_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "transactions_entry_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The transactions_entry_type Schema",
+                                "examples": [
+                                    "DEBIT"
+                                ]
+                            },
+                            "tax_rate": {
+                                "type": "number",
+                                "default": 0.0,
+                                "title": "The tax_rate Schema",
+                                "examples": [
+                                    0.5
+                                ]
+                            },
+                            "tax_amount": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The tax_amount Schema",
+                                "examples": [
+                                    500
+                                ]
+                            },
+                            "external_system_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The external_system_id Schema",
+                                "examples": [
+                                    "1"
+                                ]
+                            },
+                            "notes": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The notes Schema",
+                                "items": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "A Schema",
+                                    "required": [
+                                        "created_by_date",
+                                        "created_by_requestor_username",
+                                        "created_timestamp",
+                                        "notes_id",
+                                        "notes_note",
+                                        "notes_owner_key",
+                                        "notes_owner_micro_service",
+                                        "notes_type"
+                                    ],
+                                    "properties": {
+                                        "created_by_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_date Schema",
+                                            "examples": [
+                                                "2022-08-03"
+                                            ]
+                                        },
+                                        "created_by_requestor_username": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_requestor_username Schema",
+                                            "examples": [
+                                                "SOTE-USER"
+                                            ]
+                                        },
+                                        "created_timestamp": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_timestamp Schema",
+                                            "examples": [
+                                                "2022-08-03T05:23:50.843147+00:00"
+                                            ]
+                                        },
+                                        "notes_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The notes_id Schema",
+                                            "examples": [
+                                                1
+                                            ]
+                                        },
+                                        "notes_note": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The notes_note Schema",
+                                            "examples": [
+                                                "test note"
+                                            ]
+                                        },
+                                        "notes_owner_key": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The notes_owner_key Schema",
+                                            "examples": [
+                                                "999999999999"
+                                            ]
+                                        },
+                                        "notes_owner_micro_service": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The notes_owner_micro_service Schema",
+                                            "examples": [
+                                                "FINTRANS"
+                                            ]
+                                        },
+                                        "notes_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The notes_type Schema",
+                                            "examples": [
+                                                "FINTRANS_SHIPMENT"
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "created_by_date": "2022-08-03",
+                                        "created_by_requestor_username": "SOTE-USER",
+                                        "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                        "notes_id": 1,
+                                        "notes_note": "test note",
+                                        "notes_owner_key": "999999999999",
                                         "notes_owner_micro_service": "FINTRANS",
                                         "notes_type": "FINTRANS_SHIPMENT"
-                                    }
-                                ]
-                            }
-                        ]
-                    ],
-                    "additionalItems": true,
-                    "items": {
-                        "$id": "#/properties/message/properties/items/items",
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/message/properties/items/items/anyOf/0",
-                                "type": "object",
-                                "title": "The first anyOf schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": {},
+                                    }]
+                                },
                                 "examples": [
-                                    {
-                                        "shipmentfinancialtransactions_id": 103,
-                                        "organizations_id": 10000,
-                                        "client_company_id": 1,
-                                        "client_company_name": "Inizes",
-                                        "shipments_id": 10002,
-                                        "financialtransactions_type": "SHIPPING_LINE_CHARGES",
-                                        "currency_type": "USD",
-                                        "transactions_amount": 4642,
-                                        "transactions_timestamp": "2020-06-06T05:36:10.941431Z",
-                                        "created_by_requestor-username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                        "bill_of_lading": "BOL",
-                                        "memo": "",
-                                        "cost_is_unexpected": false,
-                                        "notes": [
-                                            {
-                                                "created_by_date": "2020-06-06",
-                                                "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                                "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                                "notes_id": 380,
-                                                "notes_note": "{\"comment\":\"Paid directly\"}",
-                                                "notes_owner_key": "103",
-                                                "notes_owner_micro_service": "FINTRANS",
-                                                "notes_type": "FINTRANS_SHIPMENT"
-                                            }
-                                        ]
-                                    }
-                                ],
+                                    [{
+                                        "created_by_date": "2022-08-03",
+                                        "created_by_requestor_username": "SOTE-USER",
+                                        "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                        "notes_id": 1,
+                                        "notes_note": "test note",
+                                        "notes_owner_key": "999999999999",
+                                        "notes_owner_micro_service": "FINTRANS",
+                                        "notes_type": "FINTRANS_SHIPMENT"
+                                    }]
+                                ]
+                            },
+                            "financial_documents": {
+                                "type": "object",
+                                "default": {},
+                                "title": "The financial_documents Schema",
                                 "required": [
-                                    "shipmentfinancialtransactions_id",
-                                    "organizations_id",
-                                    "client_company_id",
-                                    "client_company_name",
-                                    "shipments_id",
-                                    "financialtransactions_type",
-                                    "currency_type",
-                                    "transactions_amount",
-                                    "transactions_timestamp",
-                                    "created_by_requestor-username",
-                                    "bill_of_lading",
-                                    "memo",
-                                    "cost_is_unexpected",
-                                    "notes"
+                                    "created_by_date",
+                                    "created_by_requestor_username",
+                                    "document_reference",
+                                    "documents_id",
+                                    "due_date",
+                                    "external_system_id",
+                                    "financial_document_type",
+                                    "financialdocuments_id",
+                                    "ledger_status",
+                                    "shipments_id"
                                 ],
                                 "properties": {
-                                    "shipmentfinancialtransactions_id": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipmentfinancialtransactions_id",
-                                        "type": "integer",
-                                        "title": "The shipmentfinancialtransactions_id schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
+                                    "created_by_date": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The created_by_date Schema",
                                         "examples": [
-                                            103
+                                            "2022-08-07"
                                         ]
                                     },
-                                    "organizations_id": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/organizations_id",
-                                        "type": "integer",
-                                        "title": "The organizations_id schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
+                                    "created_by_requestor_username": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The created_by_requestor_username Schema",
                                         "examples": [
-                                            10000
+                                            "test-user"
                                         ]
                                     },
-                                    "client_company_id": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_company_id",
+                                    "document_reference": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The document_reference Schema",
+                                        "examples": [
+                                            "test1"
+                                        ]
+                                    },
+                                    "documents_id": {
                                         "type": "integer",
-                                        "title": "The client_company_id schema",
-                                        "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
+                                        "title": "The documents_id Schema",
                                         "examples": [
                                             1
                                         ]
                                     },
-                                    "client_company_name": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_company_name",
+                                    "due_date": {
                                         "type": "string",
-                                        "title": "The client_company_name schema",
-                                        "description": "An explanation about the purpose of this instance.",
                                         "default": "",
+                                        "title": "The due_date Schema",
                                         "examples": [
-                                            "Inizes"
+                                            "2022-08-07"
+                                        ]
+                                    },
+                                    "external_system_id": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The external_system_id Schema",
+                                        "examples": [
+                                            "1"
+                                        ]
+                                    },
+                                    "financial_document_type": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The financial_document_type Schema",
+                                        "examples": [
+                                            "Invoice"
+                                        ]
+                                    },
+                                    "financialdocuments_id": {
+                                        "type": "integer",
+                                        "default": 0,
+                                        "title": "The financialdocuments_id Schema",
+                                        "examples": [
+                                            1
+                                        ]
+                                    },
+                                    "ledger_status": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The ledger_status Schema",
+                                        "examples": [
+                                            "test-status"
                                         ]
                                     },
                                     "shipments_id": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/shipments_id",
                                         "type": "integer",
-                                        "title": "The shipments_id schema",
-                                        "description": "An explanation about the purpose of this instance.",
                                         "default": 0,
+                                        "title": "The shipments_id Schema",
                                         "examples": [
-                                            10002
+                                            999999999991
                                         ]
-                                    },
-                                    "financialtransactions_type": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/financialtransactions_type",
-                                        "type": "string",
-                                        "title": "The financialtransactions_type schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "SHIPPING_LINE_CHARGES"
-                                        ]
-                                    },
-                                    "currency_type": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/currency_type",
-                                        "type": "string",
-                                        "title": "The currency_type schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "USD"
-                                        ]
-                                    },
-                                    "transactions_amount": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/transactions_amount",
-                                        "type": "integer",
-                                        "title": "The transactions_amount schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            4642
-                                        ]
-                                    },
-                                    "transactions_timestamp": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/transactions_timestamp",
-                                        "type": "string",
-                                        "title": "The transactions_timestamp schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2020-06-06T05:36:10.941431Z"
-                                        ]
-                                    },
-                                    "created_by_requestor-username": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/created_by_requestor-username",
-                                        "type": "string",
-                                        "title": "The created_by_requestor-username schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0"
-                                        ]
-                                    },
-                                    "bill_of_lading": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/bill_of_lading",
-                                        "type": "string",
-                                        "title": "The bill_of_lading schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "BOL"
-                                        ]
-                                    },
-                                    "memo": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/memo",
-                                        "type": "string",
-                                        "title": "The memo schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            ""
-                                        ]
-                                    },
-                                    "cost_is_unexpected": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/cost_is_unexpected",
-                                        "type": "boolean",
-                                        "title": "The cost_is_unexpected schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": false,
-                                        "examples": [
-                                            false
-                                        ]
-                                    },
-                                    "notes": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes",
-                                        "type": "array",
-                                        "title": "The notes schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": [],
-                                        "examples": [
-                                            [
-                                                {
-                                                    "created_by_date": "2020-06-06",
-                                                    "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                                    "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                                    "notes_id": 380,
-                                                    "notes_note": "{\"comment\":\"Paid directly\"}",
-                                                    "notes_owner_key": "103",
-                                                    "notes_owner_micro_service": "FINTRANS",
-                                                    "notes_type": "FINTRANS_SHIPMENT"
-                                                }
-                                            ]
-                                        ],
-                                        "additionalItems": true,
-                                        "items": {
-                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items",
-                                            "anyOf": [
-                                                {
-                                                    "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0",
-                                                    "type": "object",
-                                                    "title": "The first anyOf schema",
-                                                    "description": "An explanation about the purpose of this instance.",
-                                                    "default": {},
-                                                    "examples": [
-                                                        {
-                                                            "created_by_date": "2020-06-06",
-                                                            "created_by_requestor_username": "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0",
-                                                            "created_timestamp": "2020-06-06T05:36:11.445616+00:00",
-                                                            "notes_id": 380,
-                                                            "notes_note": "{\"comment\":\"Paid directly\"}",
-                                                            "notes_owner_key": "103",
-                                                            "notes_owner_micro_service": "FINTRANS",
-                                                            "notes_type": "FINTRANS_SHIPMENT"
-                                                        }
-                                                    ],
-                                                    "required": [
-                                                        "created_by_date",
-                                                        "created_by_requestor_username",
-                                                        "created_timestamp",
-                                                        "notes_id",
-                                                        "notes_note",
-                                                        "notes_owner_key",
-                                                        "notes_owner_micro_service",
-                                                        "notes_type"
-                                                    ],
-                                                    "properties": {
-                                                        "created_by_date": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_by_date",
-                                                            "type": "string",
-                                                            "title": "The created_by_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "2020-06-06"
-                                                            ]
-                                                        },
-                                                        "created_by_requestor_username": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_by_requestor_username",
-                                                            "type": "string",
-                                                            "title": "The created_by_requestor_username schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "e2cf79b8-xxxx-xxxx-xxxx-xxxxxx5b67f0"
-                                                            ]
-                                                        },
-                                                        "created_timestamp": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/created_timestamp",
-                                                            "type": "string",
-                                                            "title": "The created_timestamp schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "2020-06-06T05:36:11.445616+00:00"
-                                                            ]
-                                                        },
-                                                        "notes_id": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_id",
-                                                            "type": "integer",
-                                                            "title": "The notes_id schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": 0,
-                                                            "examples": [
-                                                                380
-                                                            ]
-                                                        },
-                                                        "notes_note": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_note",
-                                                            "type": "string",
-                                                            "title": "The notes_note schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "{\"comment\":\"Paid directly\"}"
-                                                            ]
-                                                        },
-                                                        "notes_owner_key": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_owner_key",
-                                                            "type": "string",
-                                                            "title": "The notes_owner_key schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "103"
-                                                            ]
-                                                        },
-                                                        "notes_owner_micro_service": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_owner_micro_service",
-                                                            "type": "string",
-                                                            "title": "The notes_owner_micro_service schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "FINTRANS"
-                                                            ]
-                                                        },
-                                                        "notes_type": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/notes/items/anyOf/0/properties/notes_type",
-                                                            "type": "string",
-                                                            "title": "The notes_type schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "FINTRANS_SHIPMENT"
-                                                            ]
-                                                        }
-                                                    },
-                                                    "additionalProperties": true
-                                                }
-                                            ]
-                                        }
                                     }
                                 },
-                                "additionalProperties": true
+                                "examples": [{
+                                    "created_by_date": "2022-08-07",
+                                    "created_by_requestor_username": "test-user",
+                                    "document_reference": "test1",
+                                    "documents_id": 1,
+                                    "due_date": "2022-08-07",
+                                    "external_system_id": "1",
+                                    "financial_document_type": "Invoice",
+                                    "financialdocuments_id": 1,
+                                    "ledger_status": "test-status",
+                                    "shipments_id": 999999999991
+                                }]
+                            },
+                            "children": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The children Schema",
+                                "items": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "A Schema",
+                                    "required": [
+                                        "bill_of_lading",
+                                        "client_company_id",
+                                        "client_company_name",
+                                        "cost_is_unexpected",
+                                        "created_by_requestor_username",
+                                        "currency_type",
+                                        "external_system_id",
+                                        "financial_documents",
+                                        "financialdocuments_id",
+                                        "financialtransactions_type",
+                                        "memo",
+                                        "notes",
+                                        "organizations_id",
+                                        "shipmentfinancialtransactions_id",
+                                        "shipments_id",
+                                        "tax_amount",
+                                        "tax_rate",
+                                        "transactions_amount",
+                                        "transactions_entry_type",
+                                        "transactions_timestamp"
+                                    ],
+                                    "properties": {
+                                        "bill_of_lading": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The bill_of_lading Schema",
+                                            "examples": [
+                                                "test bol"
+                                            ]
+                                        },
+                                        "client_company_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The client_company_id Schema",
+                                            "examples": [
+                                                999999999991
+                                            ]
+                                        },
+                                        "client_company_name": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The client_company_name Schema",
+                                            "examples": [
+                                                "ACME DELETE ME CONTAINERS LTD"
+                                            ]
+                                        },
+                                        "cost_is_unexpected": {
+                                            "type": "boolean",
+                                            "default": false,
+                                            "title": "The cost_is_unexpected Schema",
+                                            "examples": [
+                                                false
+                                            ]
+                                        },
+                                        "created_by_requestor_username": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_requestor_username Schema",
+                                            "examples": [
+                                                "test-user"
+                                            ]
+                                        },
+                                        "currency_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The currency_type Schema",
+                                            "examples": [
+                                                "USD"
+                                            ]
+                                        },
+                                        "external_system_id": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The external_system_id Schema",
+                                            "examples": [
+                                                "1"
+                                            ]
+                                        },
+                                        "financial_documents": {
+                                            "type": "object",
+                                            "default": {},
+                                            "title": "The financial_documents Schema",
+                                            "required": [
+                                                "created_by_date",
+                                                "created_by_requestor_username",
+                                                "document_reference",
+                                                "documents_id",
+                                                "due_date",
+                                                "external_system_id",
+                                                "financial_document_type",
+                                                "financialdocuments_id",
+                                                "ledger_status",
+                                                "shipments_id"
+                                            ],
+                                            "properties": {
+                                                "created_by_date": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The created_by_date Schema",
+                                                    "examples": [
+                                                        "2022-08-07"
+                                                    ]
+                                                },
+                                                "created_by_requestor_username": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The created_by_requestor_username Schema",
+                                                    "examples": [
+                                                        "test-user"
+                                                    ]
+                                                },
+                                                "document_reference": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The document_reference Schema",
+                                                    "examples": [
+                                                        "test2"
+                                                    ]
+                                                },
+                                                "documents_id": {
+                                                    "type": "integer",
+                                                    "default": 0,
+                                                    "title": "The documents_id Schema",
+                                                    "examples": [
+                                                        1
+                                                    ]
+                                                },
+                                                "due_date": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The due_date Schema",
+                                                    "examples": [
+                                                        "2022-08-07"
+                                                    ]
+                                                },
+                                                "external_system_id": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The external_system_id Schema",
+                                                    "examples": [
+                                                        "2"
+                                                    ]
+                                                },
+                                                "financial_document_type": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The financial_document_type Schema",
+                                                    "examples": [
+                                                        "Invoice"
+                                                    ]
+                                                },
+                                                "financialdocuments_id": {
+                                                    "type": "integer",
+                                                    "default": 0,
+                                                    "title": "The financialdocuments_id Schema",
+                                                    "examples": [
+                                                        2
+                                                    ]
+                                                },
+                                                "ledger_status": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The ledger_status Schema",
+                                                    "examples": [
+                                                        "test-status"
+                                                    ]
+                                                },
+                                                "shipments_id": {
+                                                    "type": "integer",
+                                                    "default": 0,
+                                                    "title": "The shipments_id Schema",
+                                                    "examples": [
+                                                        999999999991
+                                                    ]
+                                                }
+                                            },
+                                            "examples": [{
+                                                "created_by_date": "2022-08-07",
+                                                "created_by_requestor_username": "test-user",
+                                                "document_reference": "test2",
+                                                "documents_id": 1,
+                                                "due_date": "2022-08-07",
+                                                "external_system_id": "2",
+                                                "financial_document_type": "Invoice",
+                                                "financialdocuments_id": 2,
+                                                "ledger_status": "test-status",
+                                                "shipments_id": 999999999991
+                                            }]
+                                        },
+                                        "financialdocuments_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The financialdocuments_id Schema",
+                                            "examples": [
+                                                2
+                                            ]
+                                        },
+                                        "financialtransactions_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The financialtransactions_type Schema",
+                                            "examples": [
+                                                "TEST_FINTRANS_TYPE"
+                                            ]
+                                        },
+                                        "memo": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The memo Schema",
+                                            "examples": [
+                                                "test memo"
+                                            ]
+                                        },
+                                        "notes": {
+                                            "type": "array",
+                                            "default": [],
+                                            "title": "The notes Schema",
+                                            "items": {
+                                                "type": "object",
+                                                "default": {},
+                                                "title": "A Schema",
+                                                "required": [
+                                                    "created_by_date",
+                                                    "created_by_requestor_username",
+                                                    "created_timestamp",
+                                                    "notes_id",
+                                                    "notes_note",
+                                                    "notes_owner_key",
+                                                    "notes_owner_micro_service",
+                                                    "notes_type"
+                                                ],
+                                                "properties": {
+                                                    "created_by_date": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_date Schema",
+                                                        "examples": [
+                                                            "2022-08-03"
+                                                        ]
+                                                    },
+                                                    "created_by_requestor_username": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_requestor_username Schema",
+                                                        "examples": [
+                                                            "SOTE-USER"
+                                                        ]
+                                                    },
+                                                    "created_timestamp": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_timestamp Schema",
+                                                        "examples": [
+                                                            "2022-08-03T05:23:50.843147+00:00"
+                                                        ]
+                                                    },
+                                                    "notes_id": {
+                                                        "type": "integer",
+                                                        "default": 0,
+                                                        "title": "The notes_id Schema",
+                                                        "examples": [
+                                                            3
+                                                        ]
+                                                    },
+                                                    "notes_note": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The notes_note Schema",
+                                                        "examples": [
+                                                            "test note"
+                                                        ]
+                                                    },
+                                                    "notes_owner_key": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The notes_owner_key Schema",
+                                                        "examples": [
+                                                            "1000000000000"
+                                                        ]
+                                                    },
+                                                    "notes_owner_micro_service": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The notes_owner_micro_service Schema",
+                                                        "examples": [
+                                                            "FINTRANS"
+                                                        ]
+                                                    },
+                                                    "notes_type": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The notes_type Schema",
+                                                        "examples": [
+                                                            "FINTRANS_SHIPMENT"
+                                                        ]
+                                                    }
+                                                },
+                                                "examples": [{
+                                                    "created_by_date": "2022-08-03",
+                                                    "created_by_requestor_username": "SOTE-USER",
+                                                    "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                                    "notes_id": 3,
+                                                    "notes_note": "test note",
+                                                    "notes_owner_key": "1000000000000",
+                                                    "notes_owner_micro_service": "FINTRANS",
+                                                    "notes_type": "FINTRANS_SHIPMENT"
+                                                }]
+                                            },
+                                            "examples": [
+                                                [{
+                                                    "created_by_date": "2022-08-03",
+                                                    "created_by_requestor_username": "SOTE-USER",
+                                                    "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                                    "notes_id": 3,
+                                                    "notes_note": "test note",
+                                                    "notes_owner_key": "1000000000000",
+                                                    "notes_owner_micro_service": "FINTRANS",
+                                                    "notes_type": "FINTRANS_SHIPMENT"
+                                                }]
+                                            ]
+                                        },
+                                        "organizations_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The organizations_id Schema",
+                                            "examples": [
+                                                1
+                                            ]
+                                        },
+                                        "shipmentfinancialtransactions_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The shipmentfinancialtransactions_id Schema",
+                                            "examples": [
+                                                1000000000000
+                                            ]
+                                        },
+                                        "shipments_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The shipments_id Schema",
+                                            "examples": [
+                                                999999999991
+                                            ]
+                                        },
+                                        "tax_amount": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The tax_amount Schema",
+                                            "examples": [
+                                                500
+                                            ]
+                                        },
+                                        "tax_rate": {
+                                            "type": "number",
+                                            "default": 0.0,
+                                            "title": "The tax_rate Schema",
+                                            "examples": [
+                                                0.5
+                                            ]
+                                        },
+                                        "transactions_amount": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The transactions_amount Schema",
+                                            "examples": [
+                                                500000
+                                            ]
+                                        },
+                                        "transactions_entry_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The transactions_entry_type Schema",
+                                            "examples": [
+                                                "DEBIT"
+                                            ]
+                                        },
+                                        "transactions_timestamp": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The transactions_timestamp Schema",
+                                            "examples": [
+                                                "2022-08-03T05:23:50.846736+00:00"
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "bill_of_lading": "test bol",
+                                        "client_company_id": 999999999991,
+                                        "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                                        "cost_is_unexpected": false,
+                                        "created_by_requestor_username": "test-user",
+                                        "currency_type": "USD",
+                                        "external_system_id": "1",
+                                        "financial_documents": {
+                                            "created_by_date": "2022-08-07",
+                                            "created_by_requestor_username": "test-user",
+                                            "document_reference": "test2",
+                                            "documents_id": 1,
+                                            "due_date": "2022-08-07",
+                                            "external_system_id": "2",
+                                            "financial_document_type": "Invoice",
+                                            "financialdocuments_id": 2,
+                                            "ledger_status": "test-status",
+                                            "shipments_id": 999999999991
+                                        },
+                                        "financialdocuments_id": 2,
+                                        "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                                        "memo": "test memo",
+                                        "notes": [{
+                                            "created_by_date": "2022-08-03",
+                                            "created_by_requestor_username": "SOTE-USER",
+                                            "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                            "notes_id": 3,
+                                            "notes_note": "test note",
+                                            "notes_owner_key": "1000000000000",
+                                            "notes_owner_micro_service": "FINTRANS",
+                                            "notes_type": "FINTRANS_SHIPMENT"
+                                        }],
+                                        "organizations_id": 1,
+                                        "shipmentfinancialtransactions_id": 1000000000000,
+                                        "shipments_id": 999999999991,
+                                        "tax_amount": 500,
+                                        "tax_rate": 0.5,
+                                        "transactions_amount": 500000,
+                                        "transactions_entry_type": "DEBIT",
+                                        "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                                    }]
+                                },
+                                "examples": [
+                                    [{
+                                        "bill_of_lading": "test bol",
+                                        "client_company_id": 999999999991,
+                                        "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                                        "cost_is_unexpected": false,
+                                        "created_by_requestor_username": "test-user",
+                                        "currency_type": "USD",
+                                        "external_system_id": "1",
+                                        "financial_documents": {
+                                            "created_by_date": "2022-08-07",
+                                            "created_by_requestor_username": "test-user",
+                                            "document_reference": "test2",
+                                            "documents_id": 1,
+                                            "due_date": "2022-08-07",
+                                            "external_system_id": "2",
+                                            "financial_document_type": "Invoice",
+                                            "financialdocuments_id": 2,
+                                            "ledger_status": "test-status",
+                                            "shipments_id": 999999999991
+                                        },
+                                        "financialdocuments_id": 2,
+                                        "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                                        "memo": "test memo",
+                                        "notes": [{
+                                            "created_by_date": "2022-08-03",
+                                            "created_by_requestor_username": "SOTE-USER",
+                                            "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                            "notes_id": 3,
+                                            "notes_note": "test note",
+                                            "notes_owner_key": "1000000000000",
+                                            "notes_owner_micro_service": "FINTRANS",
+                                            "notes_type": "FINTRANS_SHIPMENT"
+                                        }],
+                                        "organizations_id": 1,
+                                        "shipmentfinancialtransactions_id": 1000000000000,
+                                        "shipments_id": 999999999991,
+                                        "tax_amount": 500,
+                                        "tax_rate": 0.5,
+                                        "transactions_amount": 500000,
+                                        "transactions_entry_type": "DEBIT",
+                                        "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                                    }]
+                                ]
                             }
-                        ]
-                    }
+                        },
+                        "examples": [{
+                            "shipmentfinancialtransactions_id": 999999999999,
+                            "organizations_id": 1,
+                            "client_company_id": 999999999991,
+                            "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                            "shipments_id": 999999999991,
+                            "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                            "currency_type": "USD",
+                            "transactions_amount": 500000,
+                            "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
+                            "created_by_requestor-username": "test-user",
+                            "bill_of_lading": "test bol",
+                            "memo": "test memo",
+                            "cost_is_unexpected": false,
+                            "financialdocuments_id": 1,
+                            "transactions_entry_type": "DEBIT",
+                            "tax_rate": 0.5,
+                            "tax_amount": 500,
+                            "external_system_id": "1",
+                            "notes": [{
+                                "created_by_date": "2022-08-03",
+                                "created_by_requestor_username": "SOTE-USER",
+                                "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                "notes_id": 1,
+                                "notes_note": "test note",
+                                "notes_owner_key": "999999999999",
+                                "notes_owner_micro_service": "FINTRANS",
+                                "notes_type": "FINTRANS_SHIPMENT"
+                            }],
+                            "financial_documents": {
+                                "created_by_date": "2022-08-07",
+                                "created_by_requestor_username": "test-user",
+                                "document_reference": "test1",
+                                "documents_id": 1,
+                                "due_date": "2022-08-07",
+                                "external_system_id": "1",
+                                "financial_document_type": "Invoice",
+                                "financialdocuments_id": 1,
+                                "ledger_status": "test-status",
+                                "shipments_id": 999999999991
+                            },
+                            "children": [{
+                                "bill_of_lading": "test bol",
+                                "client_company_id": 999999999991,
+                                "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                                "cost_is_unexpected": false,
+                                "created_by_requestor_username": "test-user",
+                                "currency_type": "USD",
+                                "external_system_id": "1",
+                                "financial_documents": {
+                                    "created_by_date": "2022-08-07",
+                                    "created_by_requestor_username": "test-user",
+                                    "document_reference": "test2",
+                                    "documents_id": 1,
+                                    "due_date": "2022-08-07",
+                                    "external_system_id": "2",
+                                    "financial_document_type": "Invoice",
+                                    "financialdocuments_id": 2,
+                                    "ledger_status": "test-status",
+                                    "shipments_id": 999999999991
+                                },
+                                "financialdocuments_id": 2,
+                                "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                                "memo": "test memo",
+                                "notes": [{
+                                    "created_by_date": "2022-08-03",
+                                    "created_by_requestor_username": "SOTE-USER",
+                                    "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                    "notes_id": 3,
+                                    "notes_note": "test note",
+                                    "notes_owner_key": "1000000000000",
+                                    "notes_owner_micro_service": "FINTRANS",
+                                    "notes_type": "FINTRANS_SHIPMENT"
+                                }],
+                                "organizations_id": 1,
+                                "shipmentfinancialtransactions_id": 1000000000000,
+                                "shipments_id": 999999999991,
+                                "tax_amount": 500,
+                                "tax_rate": 0.5,
+                                "transactions_amount": 500000,
+                                "transactions_entry_type": "DEBIT",
+                                "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                            }]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "shipmentfinancialtransactions_id": 999999999999,
+                            "organizations_id": 1,
+                            "client_company_id": 999999999991,
+                            "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                            "shipments_id": 999999999991,
+                            "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                            "currency_type": "USD",
+                            "transactions_amount": 500000,
+                            "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
+                            "created_by_requestor-username": "test-user",
+                            "bill_of_lading": "test bol",
+                            "memo": "test memo",
+                            "cost_is_unexpected": false,
+                            "financialdocuments_id": 1,
+                            "transactions_entry_type": "DEBIT",
+                            "tax_rate": 0.5,
+                            "tax_amount": 500,
+                            "external_system_id": "1",
+                            "notes": [{
+                                "created_by_date": "2022-08-03",
+                                "created_by_requestor_username": "SOTE-USER",
+                                "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                "notes_id": 1,
+                                "notes_note": "test note",
+                                "notes_owner_key": "999999999999",
+                                "notes_owner_micro_service": "FINTRANS",
+                                "notes_type": "FINTRANS_SHIPMENT"
+                            }],
+                            "financial_documents": {
+                                "created_by_date": "2022-08-07",
+                                "created_by_requestor_username": "test-user",
+                                "document_reference": "test1",
+                                "documents_id": 1,
+                                "due_date": "2022-08-07",
+                                "external_system_id": "1",
+                                "financial_document_type": "Invoice",
+                                "financialdocuments_id": 1,
+                                "ledger_status": "test-status",
+                                "shipments_id": 999999999991
+                            },
+                            "children": [{
+                                "bill_of_lading": "test bol",
+                                "client_company_id": 999999999991,
+                                "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                                "cost_is_unexpected": false,
+                                "created_by_requestor_username": "test-user",
+                                "currency_type": "USD",
+                                "external_system_id": "1",
+                                "financial_documents": {
+                                    "created_by_date": "2022-08-07",
+                                    "created_by_requestor_username": "test-user",
+                                    "document_reference": "test2",
+                                    "documents_id": 1,
+                                    "due_date": "2022-08-07",
+                                    "external_system_id": "2",
+                                    "financial_document_type": "Invoice",
+                                    "financialdocuments_id": 2,
+                                    "ledger_status": "test-status",
+                                    "shipments_id": 999999999991
+                                },
+                                "financialdocuments_id": 2,
+                                "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                                "memo": "test memo",
+                                "notes": [{
+                                    "created_by_date": "2022-08-03",
+                                    "created_by_requestor_username": "SOTE-USER",
+                                    "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                                    "notes_id": 3,
+                                    "notes_note": "test note",
+                                    "notes_owner_key": "1000000000000",
+                                    "notes_owner_micro_service": "FINTRANS",
+                                    "notes_type": "FINTRANS_SHIPMENT"
+                                }],
+                                "organizations_id": 1,
+                                "shipmentfinancialtransactions_id": 1000000000000,
+                                "shipments_id": 999999999991,
+                                "tax_amount": 500,
+                                "tax_rate": 0.5,
+                                "transactions_amount": 500000,
+                                "transactions_entry_type": "DEBIT",
+                                "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                            }]
+                        }]
+                    ]
                 },
                 "pagination": {
-                    "$id": "#/properties/message/properties/pagination",
                     "type": "object",
-                    "title": "The pagination schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": {},
-                    "examples": [
-                        {
-                            "total": 1202,
-                            "limit": 1,
-                            "offset": 0
-                        }
-                    ],
+                    "title": "The pagination Schema",
                     "required": [
                         "total",
                         "limit",
@@ -498,41 +1088,222 @@
                     ],
                     "properties": {
                         "total": {
-                            "$id": "#/properties/message/properties/pagination/properties/total",
                             "type": "integer",
-                            "title": "The total schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The total Schema",
                             "examples": [
-                                1202
+                                1
                             ]
                         },
                         "limit": {
-                            "$id": "#/properties/message/properties/pagination/properties/limit",
                             "type": "integer",
-                            "title": "The limit schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The limit Schema",
                             "examples": [
                                 1
                             ]
                         },
                         "offset": {
-                            "$id": "#/properties/message/properties/pagination/properties/offset",
                             "type": "integer",
-                            "title": "The offset schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The offset Schema",
                             "examples": [
                                 0
                             ]
                         }
                     },
-                    "additionalProperties": true
+                    "examples": [{
+                        "total": 1,
+                        "limit": 1,
+                        "offset": 0
+                    }]
                 }
             },
-            "additionalProperties": true
+            "examples": [{
+                "items": [{
+                    "shipmentfinancialtransactions_id": 999999999999,
+                    "organizations_id": 1,
+                    "client_company_id": 999999999991,
+                    "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                    "shipments_id": 999999999991,
+                    "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                    "currency_type": "USD",
+                    "transactions_amount": 500000,
+                    "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
+                    "created_by_requestor-username": "test-user",
+                    "bill_of_lading": "test bol",
+                    "memo": "test memo",
+                    "cost_is_unexpected": false,
+                    "financialdocuments_id": 1,
+                    "transactions_entry_type": "DEBIT",
+                    "tax_rate": 0.5,
+                    "tax_amount": 500,
+                    "external_system_id": "1",
+                    "notes": [{
+                        "created_by_date": "2022-08-03",
+                        "created_by_requestor_username": "SOTE-USER",
+                        "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                        "notes_id": 1,
+                        "notes_note": "test note",
+                        "notes_owner_key": "999999999999",
+                        "notes_owner_micro_service": "FINTRANS",
+                        "notes_type": "FINTRANS_SHIPMENT"
+                    }],
+                    "financial_documents": {
+                        "created_by_date": "2022-08-07",
+                        "created_by_requestor_username": "test-user",
+                        "document_reference": "test1",
+                        "documents_id": 1,
+                        "due_date": "2022-08-07",
+                        "external_system_id": "1",
+                        "financial_document_type": "Invoice",
+                        "financialdocuments_id": 1,
+                        "ledger_status": "test-status",
+                        "shipments_id": 999999999991
+                    },
+                    "children": [{
+                        "bill_of_lading": "test bol",
+                        "client_company_id": 999999999991,
+                        "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                        "cost_is_unexpected": false,
+                        "created_by_requestor_username": "test-user",
+                        "currency_type": "USD",
+                        "external_system_id": "1",
+                        "financial_documents": {
+                            "created_by_date": "2022-08-07",
+                            "created_by_requestor_username": "test-user",
+                            "document_reference": "test2",
+                            "documents_id": 1,
+                            "due_date": "2022-08-07",
+                            "external_system_id": "2",
+                            "financial_document_type": "Invoice",
+                            "financialdocuments_id": 2,
+                            "ledger_status": "test-status",
+                            "shipments_id": 999999999991
+                        },
+                        "financialdocuments_id": 2,
+                        "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                        "memo": "test memo",
+                        "notes": [{
+                            "created_by_date": "2022-08-03",
+                            "created_by_requestor_username": "SOTE-USER",
+                            "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                            "notes_id": 3,
+                            "notes_note": "test note",
+                            "notes_owner_key": "1000000000000",
+                            "notes_owner_micro_service": "FINTRANS",
+                            "notes_type": "FINTRANS_SHIPMENT"
+                        }],
+                        "organizations_id": 1,
+                        "shipmentfinancialtransactions_id": 1000000000000,
+                        "shipments_id": 999999999991,
+                        "tax_amount": 500,
+                        "tax_rate": 0.5,
+                        "transactions_amount": 500000,
+                        "transactions_entry_type": "DEBIT",
+                        "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                    }]
+                }],
+                "pagination": {
+                    "total": 1,
+                    "limit": 1,
+                    "offset": 0
+                }
+            }]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "message-id": "test-message-mary",
+        "message": {
+            "items": [{
+                "shipmentfinancialtransactions_id": 999999999999,
+                "organizations_id": 1,
+                "client_company_id": 999999999991,
+                "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                "shipments_id": 999999999991,
+                "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                "currency_type": "USD",
+                "transactions_amount": 500000,
+                "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
+                "created_by_requestor-username": "test-user",
+                "bill_of_lading": "test bol",
+                "memo": "test memo",
+                "cost_is_unexpected": false,
+                "financialdocuments_id": 1,
+                "transactions_entry_type": "DEBIT",
+                "tax_rate": 0.5,
+                "tax_amount": 500,
+                "external_system_id": "1",
+                "notes": [{
+                    "created_by_date": "2022-08-03",
+                    "created_by_requestor_username": "SOTE-USER",
+                    "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                    "notes_id": 1,
+                    "notes_note": "test note",
+                    "notes_owner_key": "999999999999",
+                    "notes_owner_micro_service": "FINTRANS",
+                    "notes_type": "FINTRANS_SHIPMENT"
+                }],
+                "financial_documents": {
+                    "created_by_date": "2022-08-07",
+                    "created_by_requestor_username": "test-user",
+                    "document_reference": "test1",
+                    "documents_id": 1,
+                    "due_date": "2022-08-07",
+                    "external_system_id": "1",
+                    "financial_document_type": "Invoice",
+                    "financialdocuments_id": 1,
+                    "ledger_status": "test-status",
+                    "shipments_id": 999999999991
+                },
+                "children": [{
+                    "bill_of_lading": "test bol",
+                    "client_company_id": 999999999991,
+                    "client_company_name": "ACME DELETE ME CONTAINERS LTD",
+                    "cost_is_unexpected": false,
+                    "created_by_requestor_username": "test-user",
+                    "currency_type": "USD",
+                    "external_system_id": "1",
+                    "financial_documents": {
+                        "created_by_date": "2022-08-07",
+                        "created_by_requestor_username": "test-user",
+                        "document_reference": "test2",
+                        "documents_id": 1,
+                        "due_date": "2022-08-07",
+                        "external_system_id": "2",
+                        "financial_document_type": "Invoice",
+                        "financialdocuments_id": 2,
+                        "ledger_status": "test-status",
+                        "shipments_id": 999999999991
+                    },
+                    "financialdocuments_id": 2,
+                    "financialtransactions_type": "TEST_FINTRANS_TYPE",
+                    "memo": "test memo",
+                    "notes": [{
+                        "created_by_date": "2022-08-03",
+                        "created_by_requestor_username": "SOTE-USER",
+                        "created_timestamp": "2022-08-03T05:23:50.843147+00:00",
+                        "notes_id": 3,
+                        "notes_note": "test note",
+                        "notes_owner_key": "1000000000000",
+                        "notes_owner_micro_service": "FINTRANS",
+                        "notes_type": "FINTRANS_SHIPMENT"
+                    }],
+                    "organizations_id": 1,
+                    "shipmentfinancialtransactions_id": 1000000000000,
+                    "shipments_id": 999999999991,
+                    "tax_amount": 500,
+                    "tax_rate": 0.5,
+                    "transactions_amount": 500000,
+                    "transactions_entry_type": "DEBIT",
+                    "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                }]
+            }],
+            "pagination": {
+                "total": 1,
+                "limit": 1,
+                "offset": 0
+            }
+        }
+    }]
 }
