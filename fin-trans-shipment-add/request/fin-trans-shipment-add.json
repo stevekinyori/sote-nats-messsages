@@ -1,113 +1,182 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema",
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"$id": "http://example.com/example.json",
 	"type": "object",
-	"title": "The root schema",
-	"description": "The root schema comprises the entire JSON document.",
 	"default": {},
-	"examples": [
-		{
-			"shipments-id": 1,
-			"currency": "USD",
-			"amount": 1,
-			"fintrans-type": "AGENCY_FEES",
-			"client-company-id": 1,
-			"cost-is-unexpected": false,
-			"memo": "Hey this is a new arrival",
-			"bill-of-lading": "BOL"
-		}
-	],
+	"title": "Root Schema",
 	"required": [
-		"shipments-id",
-		"currency",
-		"amount",
-		"fintrans-type",
 		"client-company-id",
+		"shipments-id",
+		"fintrans-type",
+		"currency",
+		"amount"
+	],
+	"optional": [
 		"cost-is-unexpected",
+		"bill-of-lading",
 		"memo",
-		"bill-of-lading"
+		"financial-documents-id",
+		"transactions-entry-type",
+		"tax-rate",
+		"tax-amount",
+		"external-system-id",
+		"parent-shipment-financial-transactions-id"
 	],
 	"properties": {
-		"shipments-id": {
-			"$id": "#/properties/shipments-id",
+		"client-company-id": {
 			"type": "integer",
-			"title": "The shipments-id schema",
-			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
+			"title": "The client-company-id Schema",
 			"examples": [
 				1
 			]
 		},
-		"currency": {
-			"$id": "#/properties/currency",
-			"type": "string",
-			"title": "The currency schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": "",
+		"shipments-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The shipments-id Schema",
 			"examples": [
+				10060
+			]
+		},
+		"fintrans-type": {
+			"type": "string",
+			"default": "",
+			"title": "The fintrans-type Schema",
+			"examples": [
+				"DOCUMENT_PROCESSING_FEES"
+			],
+			"enum": [
+				"AGENCY_FEES",
+				"CONTAINER_DEPOSIT",
+				"CONTAINER_REPAIRS",
+				"CUSTOMS_TAXES",
+				"DEMURRAGE_CHARGES",
+				"DOCUMENT_PROCESSING_FEES",
+				"F147",
+				"FEES_FOR_BOL",
+				"FORWARDERS_CHARGES",
+				"TRANSPORT_CHARGES",
+				"HANDING_OVER_FEES",
+				"IDF_FEES",
+				"OTHER_CHARGES",
+				"PARKING_FEES",
+				"PORT_CHARGES",
+				"SHIPPING_LINE_CHARGES",
+				"STORAGE_CHARGES"
+			]
+		},
+		"currency": {
+			"type": "string",
+			"default": "",
+			"title": "The currency Schema",
+			"examples": [
+				"KSH"
+			],
+			"enum": [
+				"KSH",
 				"USD"
 			]
 		},
 		"amount": {
-			"$id": "#/properties/amount",
 			"type": "integer",
-			"title": "The amount schema",
-			"description": "An explanation about the purpose of this instance.",
 			"default": 0,
+			"title": "The amount Schema",
 			"examples": [
-				1
-			]
-		},
-		"fintrans-type": {
-			"$id": "#/properties/fintrans-type",
-			"type": "string",
-			"title": "The fintrans-type schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": "",
-			"examples": [
-				"AGENCY_FEES"
-			]
-		},
-		"client-company-id": {
-			"$id": "#/properties/client-company-id",
-			"type": "integer",
-			"title": "The client-company-id schema",
-			"description": "An explanation about the purpose of this instance.",
-			"default": 0,
-			"examples": [
-				1
+				15000
 			]
 		},
 		"cost-is-unexpected": {
-			"$id": "#/properties/cost-is-unexpected",
 			"type": "boolean",
-			"title": "The cost-is-unexpected schema",
-			"description": "An explanation about the purpose of this instance.",
 			"default": false,
+			"title": "The cost-is-unexpected Schema",
 			"examples": [
 				false
 			]
 		},
-		"memo": {
-			"$id": "#/properties/memo",
+		"bill-of-lading": {
 			"type": "string",
-			"title": "The memo schema",
-			"description": "An explanation about the purpose of this instance.",
 			"default": "",
+			"title": "The bill-of-lading Schema",
 			"examples": [
-				"Hey this is a new arrival"
+				"Test BOL"
 			]
 		},
-		"bill-of-lading": {
-			"$id": "#/properties/bill-of-lading",
+		"memo": {
 			"type": "string",
-			"title": "The bill-of-lading schema",
-			"description": "An explanation about the purpose of this instance.",
 			"default": "",
+			"title": "The memo Schema",
 			"examples": [
-				"BOL"
+				"Test Memo"
+			]
+		},
+		"financial-documents-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The financial-documents-id Schema",
+			"examples": [
+				1
+			]
+		},
+		"transactions-entry-type": {
+			"type": "string",
+			"default": "DEBIT",
+			"title": "The transactions-entry-type Schema",
+			"examples": [
+				"DEBIT"
+			],
+			"enum": [
+				"DEBIT",
+				"CREDIT"
+			]
+		},
+		"tax-rate": {
+			"type": "number",
+			"default": 0.0,
+			"title": "The tax-rate Schema",
+			"examples": [
+				0.5
+			]
+		},
+		"tax-amount": {
+			"type": "number",
+			"default": 0.0,
+			"title": "The tax-amount Schema",
+			"examples": [
+				5000.25
+			]
+		},
+		"external-system-id": {
+			"type": "string",
+			"default": "",
+			"title": "The external-system-id Schema",
+			"examples": [
+				"1"
+			]
+		},
+		"parent-shipment-financial-transactions-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The parent-shipment-financial-transactions-id Schema",
+			"examples": [
+				1
 			]
 		}
 	},
-	"additionalProperties": true
+	"examples": [{
+		"client-company-id": 1,
+		"shipments-id": 10060,
+		"fintrans-type": "DOCUMENT_PROCESSING_FEES",
+		"currency": "KSH",
+		"amount": 15000,
+		"cost-is-unexpected": false,
+		"bill-of-lading": "Test BOL",
+		"memo": "Test Memo",
+		"financial-documents-id": 1,
+		"transactions-entry-type": "DEBIT",
+		"tax-rate": 0.5,
+		"tax-amount": 5000.25,
+		"external-system-id": "1",
+		"parent-shipment-financial-transactions-id": 1
+	}]
 }
