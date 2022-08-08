@@ -1,0 +1,240 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "default": "",
+            "title": "The message-id Schema",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "type": "object",
+            "default": {},
+            "title": "The message Schema",
+            "required": [
+                "items",
+                "pagination"
+            ],
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The items Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "financialdocuments_id",
+                            "ledger_status",
+                            "financial_document_type",
+                            "shipments_id",
+                            "created_by_date",
+                            "created_by_requestor_username"
+                        ],
+                        "properties": {
+                            "financialdocuments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The financialdocuments_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "ledger_status": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The ledger_status Schema",
+                                "examples": [
+                                    "LEDGER STATUS 1"
+                                ]
+                            },
+                            "financial_document_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The financial_document_type Schema",
+                                "examples": [
+                                    "TYPE 1"
+                                ]
+                            },
+                            "shipments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The shipments_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "document_reference": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The document_reference Schema",
+                                "examples": [
+                                    "REFERENCE 1"
+                                ]
+                            },
+                            "documents_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The documents_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "due_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The due_date Schema",
+                                "examples": [
+                                    "2021-10-11"
+                                ]
+                            },
+                            "external_system_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The external_system_id Schema",
+                                "examples": [
+                                    "EXTERNAL ID"
+                                ]
+                            },
+                            "created_by_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_date Schema",
+                                "examples": [
+                                    "2022-08-08"
+                                ]
+                            },
+                            "created_by_requestor_username": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_requestor_username Schema",
+                                "examples": [
+                                    "81gc55x3-XXXXXXX-6b2ce5e8"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "financialdocuments_id": 1,
+                            "ledger_status": "LEDGER STATUS 1",
+                            "financial_document_type": "TYPE 1",
+                            "shipments_id": 1,
+                            "document_reference": "REFERENCE 1",
+                            "documents_id": 1,
+                            "due_date": "2021-10-11",
+                            "external_system_id": "EXTERNAL ID",
+                            "created_by_date": "2022-08-08",
+                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "financialdocuments_id": 1,
+                            "ledger_status": "LEDGER STATUS 1",
+                            "financial_document_type": "TYPE 1",
+                            "shipments_id": 1,
+                            "document_reference": "REFERENCE 1",
+                            "documents_id": 1,
+                            "due_date": "2021-10-11",
+                            "external_system_id": "EXTERNAL ID",
+                            "created_by_date": "2022-08-08",
+                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                        }]
+                    ]
+                },
+                "pagination": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The pagination Schema",
+                    "required": [
+                        "total",
+                        "limit",
+                        "offset"
+                    ],
+                    "properties": {
+                        "total": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total Schema",
+                            "examples": [
+                                4
+                            ]
+                        },
+                        "limit": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The limit Schema",
+                            "examples": [
+                                10
+                            ]
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The offset Schema",
+                            "examples": [
+                                0
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "total": 4,
+                        "limit": 10,
+                        "offset": 0
+                    }]
+                }
+            },
+            "examples": [{
+                "items": [{
+                    "financialdocuments_id": 1,
+                    "ledger_status": "LEDGER STATUS 1",
+                    "financial_document_type": "TYPE 1",
+                    "shipments_id": 1,
+                    "document_reference": "REFERENCE 1",
+                    "documents_id": 1,
+                    "due_date": "2021-10-11",
+                    "external_system_id": "EXTERNAL ID",
+                    "created_by_date": "2022-08-08",
+                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+                }],
+                "pagination": {
+                    "total": 4,
+                    "limit": 10,
+                    "offset": 0
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "items": [{
+                "financialdocuments_id": 1,
+                "ledger_status": "LEDGER STATUS 1",
+                "financial_document_type": "TYPE 1",
+                "shipments_id": 1,
+                "document_reference": "REFERENCE 1",
+                "documents_id": 1,
+                "due_date": "2021-10-11",
+                "external_system_id": "EXTERNAL ID",
+                "created_by_date": "2022-08-08",
+                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
+            }],
+            "pagination": {
+                "total": 4,
+                "limit": 10,
+                "offset": 0
+            }
+        }
+    }]
+}

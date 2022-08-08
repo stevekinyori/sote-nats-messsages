@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "fintrans-documents-id"
+    ],
+    "properties": {
+        "fintrans-documents-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The fintrans-documents-id Schema",
+            "examples": [
+                1
+            ]
+        }
+    },
+    "examples": [{
+        "fintrans-documents-id": 1
+    }]
+}

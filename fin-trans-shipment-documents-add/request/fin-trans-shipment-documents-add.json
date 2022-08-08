@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "ledger-status",
+        "fintrans-document-type",
+        "shipments-id"
+    ],
+    "properties": {
+        "ledger-status": {
+            "type": "string",
+            "default": "",
+            "title": "The ledger-status Schema",
+            "examples": [
+                "LEDGER STATUS 3"
+            ]
+        },
+        "fintrans-document-type": {
+            "type": "string",
+            "default": "",
+            "title": "The fintrans-document-type Schema",
+            "examples": [
+                "TYPE 3"
+            ]
+        },
+        "shipments-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The shipments-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "document-reference": {
+            "type": "string",
+            "default": "",
+            "title": "The document-reference Schema",
+            "examples": [
+                "REFERENCE 3"
+            ]
+        },
+        "documents-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The documents-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "due-date": {
+            "type": "string",
+            "default": "",
+            "title": "The due-date Schema",
+            "examples": [
+                "2021-10-13"
+            ]
+        },
+        "external-system-id": {
+            "type": "string",
+            "default": "",
+            "title": "The external-system-id Schema",
+            "examples": [
+                "EXTERNAL ID 3"
+            ]
+        }
+    },
+    "examples": [{
+        "ledger-status": "LEDGER STATUS 3",
+        "fintrans-document-type": "TYPE 3",
+        "shipments-id": 1,
+        "document-reference": "REFERENCE 3",
+        "documents-id": 1,
+        "due-date": "2021-10-13",
+        "external-system-id": "EXTERNAL ID 3"
+    }]
+}
