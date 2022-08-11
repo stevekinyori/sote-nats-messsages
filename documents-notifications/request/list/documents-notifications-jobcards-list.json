@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": [
+    "organizations-id",
+    "record-limit-count",
+    "record-offset",
+    "filters"
+  ],
+  "optional": [
+    "sort-order"
+  ],
+  "properties": {
+    "organizations-id": {
+      "title": "The organizations-id Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        1000
+      ]
+    },
+    "record-limit-count": {
+      "title": "The record-limit-count Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        10
+      ]
+    },
+    "record-offset": {
+      "title": "The record-offset Schema",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "sort-order": {
+      "title": "The sort-order Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "documents-id"
+      ],
+      "properties": {
+        "documents-id": {
+          "title": "The documents-id Schema",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "DESC"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "documents-id": "DESC"
+        }
+      ]
+    },
+    "filters": {
+      "title": "The filters Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "and"
+      ],
+      "properties": {
+        "and": {
+          "title": "The and Schema",
+          "type": "array",
+          "default": [],
+          "items": {
+            "title": "A Schema",
+            "type": "object",
+            "default": {},
+            "required": [
+              "field-name",
+              "operator",
+              "value"
+            ],
+            "properties": {
+              "field-name": {
+                "title": "The field-name Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "jobcards-id"
+                ]
+              },
+              "operator": {
+                "title": "The operator Schema",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "IN"
+                ]
+              },
+              "value": {
+                "title": "The value Schema",
+                "type": "array",
+                "default": [],
+                "items": {
+                  "title": "A Schema",
+                  "type": "string",
+                  "examples": [
+                    "2",
+                    "1",
+                    "1000",
+                    "10772"
+                  ]
+                },
+                "examples": [
+                  [
+                    "2",
+                    "1",
+                    "1000",
+                    "10772"
+                  ]
+                ]
+              }
+            },
+            "examples": [
+              {
+                "field-name": "jobcards-id",
+                "operator": "IN",
+                "value": [
+                  "2",
+                  "1",
+                  "1000",
+                  "10772"
+                ]
+              }
+            ]
+          },
+          "examples": [
+            [
+              {
+                "field-name": "jobcards-id",
+                "operator": "IN",
+                "value": [
+                  "2",
+                  "1",
+                  "1000",
+                  "10772"
+                ]
+              }
+            ]
+          ]
+        }
+      },
+      "examples": [
+        {
+          "and": [
+            {
+              "field-name": "jobcards-id",
+              "operator": "IN",
+              "value": [
+                "2",
+                "1",
+                "1000",
+                "10772"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "organizations-id": 1000,
+      "record-limit-count": 10,
+      "record-offset": 0,
+      "sort-order": {
+        "documents-id": "DESC"
+      },
+      "filters": {
+        "and": [
+          {
+            "field-name": "jobcards-id",
+            "operator": "IN",
+            "value": [
+              "2",
+              "1",
+              "1000",
+              "10772"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

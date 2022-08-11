@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "description": "The root schema is the schema that comprises the entire JSON document.",
+  "type": "object",
+  "default": {},
+  "required": [
+    "organizations-id",
+    "documents-id"
+  ],
+  "properties": {
+    "organizations-id": {
+      "title": "The organizations-id Schema",
+      "description": "This is a system generated id for an organization that owns the document.",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        1000
+      ]
+    },
+    "documents-id": {
+      "title": "The documents-id Schema",
+      "description": "This is a system generated id that is used identify a document.",
+      "type": "integer",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    }
+  },
+  "examples": [{
+    "organizations-id": 1000,
+    "documents-id": 1
+  }]
+}
