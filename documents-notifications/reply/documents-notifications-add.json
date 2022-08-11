@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "title": "The message-id Schema",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "test-add"
+      ]
+    },
+    "message": {
+      "title": "The message Schema",
+      "type": "object",
+      "default": {},
+      "required": [
+        "documents-id",
+        "upload-response"
+      ],
+      "properties": {
+        "documents-id": {
+          "title": "The documents-id Schema",
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            72
+          ]
+        },
+        "upload-response": {
+          "title": "The upload-response Schema",
+          "type": "object",
+          "default": {},
+          "required": [
+            "parent-document",
+            "supporting-documents"
+          ],
+          "properties": {
+            "parent-document": {
+              "title": "The parent-document Schema",
+              "type": "array",
+              "default": [],
+              "items": {
+                "title": "A Schema",
+                "type": "object",
+                "default": {},
+                "required": [
+                  "file-name",
+                  "document-links",
+                  "object-keys",
+                  "processed-document-link"
+                ],
+                "properties": {
+                  "file-name": {
+                    "title": "The file-name Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "delivery-note.jpeg"
+                    ]
+                  },
+                  "document-links": {
+                    "title": "The document-links Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                      "inbound",
+                      "processed"
+                    ],
+                    "properties": {
+                      "inbound": {
+                        "title": "The inbound Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg"
+                        ]
+                      },
+                      "processed": {
+                        "title": "The processed Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                        "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                      }
+                    ]
+                  },
+                  "object-keys": {
+                    "title": "The object-keys Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                      "MountPointInboundObjectKey",
+                      "InboundObjectKey",
+                      "ProcessedObjectKey"
+                    ],
+                    "properties": {
+                      "MountPointInboundObjectKey": {
+                        "title": "The MountPointInboundObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "inbound/staging/1/delivery-note.jpeg"
+                        ]
+                      },
+                      "InboundObjectKey": {
+                        "title": "The InboundObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "documents-management-system/inbound/staging/1/delivery-note.jpeg"
+                        ]
+                      },
+                      "ProcessedObjectKey": {
+                        "title": "The ProcessedObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                        "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                        "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                      }
+                    ]
+                  },
+                  "processed-document-link": {
+                    "title": "The processed-document-link Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                    ]
+                  }
+                },
+                "examples": [
+                  {
+                    "file-name": "delivery-note.jpeg",
+                    "document-links": {
+                      "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                      "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                    },
+                    "object-keys": {
+                      "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                      "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                      "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                    },
+                    "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                  }
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "file-name": "delivery-note.jpeg",
+                    "document-links": {
+                      "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                      "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                    },
+                    "object-keys": {
+                      "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                      "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                      "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                    },
+                    "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                  }
+                ]
+              ]
+            },
+            "supporting-documents": {
+              "title": "The supporting-documents Schema",
+              "type": "array",
+              "default": [],
+              "items": {
+                "title": "A Schema",
+                "type": "object",
+                "default": {},
+                "required": [
+                  "file-name",
+                  "document-links",
+                  "object-keys",
+                  "processed-document-link"
+                ],
+                "properties": {
+                  "file-name": {
+                    "title": "The file-name Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "invoice.jpeg"
+                    ]
+                  },
+                  "document-links": {
+                    "title": "The document-links Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                      "inbound",
+                      "processed"
+                    ],
+                    "properties": {
+                      "inbound": {
+                        "title": "The inbound Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg"
+                        ]
+                      },
+                      "processed": {
+                        "title": "The processed Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                        "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                      }
+                    ]
+                  },
+                  "object-keys": {
+                    "title": "The object-keys Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                      "MountPointInboundObjectKey",
+                      "InboundObjectKey",
+                      "ProcessedObjectKey"
+                    ],
+                    "properties": {
+                      "MountPointInboundObjectKey": {
+                        "title": "The MountPointInboundObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "inbound/staging/1/invoice.jpeg"
+                        ]
+                      },
+                      "InboundObjectKey": {
+                        "title": "The InboundObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "documents-management-system/inbound/staging/1/invoice.jpeg"
+                        ]
+                      },
+                      "ProcessedObjectKey": {
+                        "title": "The ProcessedObjectKey Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                          "documents-management-system/processed/staging/1/invoice.jpeg"
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                        "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                        "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+                      }
+                    ]
+                  },
+                  "processed-document-link": {
+                    "title": "The processed-document-link Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                    ]
+                  }
+                },
+                "examples": [
+                  {
+                    "file-name": "invoice.jpeg",
+                    "document-links": {
+                      "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                      "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                    },
+                    "object-keys": {
+                      "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                      "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                      "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+                    },
+                    "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                  }
+                ]
+              },
+              "examples": [
+                [
+                  {
+                    "file-name": "invoice.jpeg",
+                    "document-links": {
+                      "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                      "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                    },
+                    "object-keys": {
+                      "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                      "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                      "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+                    },
+                    "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                  }
+                ]
+              ]
+            }
+          },
+          "examples": [
+            {
+              "parent-document": [
+                {
+                  "file-name": "delivery-note.jpeg",
+                  "document-links": {
+                    "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                    "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                  },
+                  "object-keys": {
+                    "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                    "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                    "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                  },
+                  "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                }
+              ],
+              "supporting-documents": [
+                {
+                  "file-name": "invoice.jpeg",
+                  "document-links": {
+                    "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                    "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                  },
+                  "object-keys": {
+                    "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                    "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                    "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+                  },
+                  "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "examples": [
+        {
+          "documents-id": 72,
+          "upload-response": {
+            "parent-document": [
+              {
+                "file-name": "delivery-note.jpeg",
+                "document-links": {
+                  "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                  "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+                },
+                "object-keys": {
+                  "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                  "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                  "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+                },
+                "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+              }
+            ],
+            "supporting-documents": [
+              {
+                "file-name": "invoice.jpeg",
+                "document-links": {
+                  "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                  "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+                },
+                "object-keys": {
+                  "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                  "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                  "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+                },
+                "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "message-id": "test-add",
+      "message": {
+        "documents-id": 72,
+        "upload-response": {
+          "parent-document": [
+            {
+              "file-name": "delivery-note.jpeg",
+              "document-links": {
+                "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+              },
+              "object-keys": {
+                "MountPointInboundObjectKey": "inbound/staging/1/delivery-note.jpeg",
+                "InboundObjectKey": "documents-management-system/inbound/staging/1/delivery-note.jpeg",
+                "ProcessedObjectKey": "documents-management-system/processed/staging/1/delivery-note.jpeg"
+              },
+              "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/delivery-note.jpeg"
+            }
+          ],
+          "supporting-documents": [
+            {
+              "file-name": "invoice.jpeg",
+              "document-links": {
+                "inbound": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/inbound/staging/1/invoice.jpeg",
+                "processed": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+              },
+              "object-keys": {
+                "MountPointInboundObjectKey": "inbound/staging/1/invoice.jpeg",
+                "InboundObjectKey": "documents-management-system/inbound/staging/1/invoice.jpeg",
+                "ProcessedObjectKey": "documents-management-system/processed/staging/1/invoice.jpeg"
+              },
+              "processed-document-link": "https://sote-internal-technology-data.s3-eu-west-1.amazonaws.com/documents-management-system/processed/staging/1/invoice.jpeg"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

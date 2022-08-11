@@ -7,7 +7,7 @@
   "default": {},
   "required": [
     "organizations-id",
-    "cargo-id",
+    "shipments-id",
     "client-company-id",
     "client-company-name",
     "company-supplier-name",
@@ -18,7 +18,15 @@
   ],
   "optional": [
     "supporting-documents",
-    "documents-parent-id"
+    "documents-parent-id",
+    "send-from",
+    "reply-to",
+    "copy-to",
+    "broadcast-to",
+    "send-to",
+    "text-payload",
+    "subject",
+    "html-payload"
   ],
   "properties": {
     "organizations-id": {
@@ -30,9 +38,9 @@
         1000
       ]
     },
-    "cargo-id": {
-      "title": "The cargo-id Schema",
-      "description": "This is a system generated id for cargo being shipped.",
+    "shipments-id": {
+      "title": "The shipments-id Schema",
+      "description": "This is a system generated id to make shipments unique.",
       "type": "integer",
       "default": 0,
       "examples": [
@@ -119,12 +127,121 @@
       "examples": [
         1000
       ]
+    },
+    "send-from": {
+      "title": "The send-from Schema",
+      "description": "Sender of a message",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "red@getsote.com"
+      ]
+    },
+    "reply-to": {
+      "title": "The reply-to Schema",
+      "description": "Recipient of replies to sent message.",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "sote@getsote.com"
+      ]
+    },
+    "copy-to": {
+      "title": "The copy-to Schema",
+      "description": "Recipients of a copy of the message.",
+      "type": "array",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "title": "A Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "sote@getsote.com"
+        ]
+      },
+      "examples": [
+        [
+          "sote@getsote.com"
+        ]
+      ]
+    },
+    "broadcast-to": {
+      "title": "The broadcast-to Schema",
+      "description": "Group of recipients of a standard message instantly.",
+      "type": "array",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "title": "A Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "sote@getsote.com"
+        ]
+      },
+      "examples": [
+        [
+          "sote@getsote.com"
+        ]
+      ]
+    },
+    "send-to": {
+      "title": "The send-to Schema",
+      "description": "Recipients of a message.",
+      "type": "array",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "title": "A Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "type": "string",
+        "examples": [
+          "red@getsote.com",
+          "redTwo@getsote.com"
+        ]
+      },
+      "examples": [
+        [
+          "red@getsote.com",
+          "redTwo@getsote.com"
+        ]
+      ]
+    },
+    "text-payload": {
+      "title": "The text-payload Schema",
+      "description": "The plain text message to be sent. Required if html-payload is not provided.",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "hey Test"
+      ]
+    },
+    "subject": {
+      "title": "The subject Schema",
+      "description": "The subject line for the email.",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Test Payload"
+      ]
+    },
+    "html-payload": {
+      "title": "The html-payload Schema",
+      "description": "The HTML message to be sent. Required if text-payload is not provided.",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "\u003c!DOCTYPE html\u003e\u003chtml lang='en'\u003e\u003cbody\u003e\u003c/body\u003e\u003c/html\u003e"
+      ]
     }
   },
   "examples": [
     {
       "organizations-id": 1000,
-      "cargo-id": 1,
+      "shipments-id": 1,
       "client-company-id": 1,
       "client-company-name": "Silafrika Kenya Ltd",
       "company-supplier-name": "ExxonMobil Petroleum \u0026 Chemical BV",
@@ -132,7 +249,22 @@
       "documents-type": "Proforma invoice",
       "parent-document": "invoice.jpeg",
       "supporting-documents": "delivery-note.jpeg",
-      "send-upload-notification": true
+      "send-upload-notification": true,
+      "send-from": "red@getsote.com",
+      "reply-to": "sote@getsote.com",
+      "copy-to": [
+        "sote@getsote.com"
+      ],
+      "broadcast-to": [
+        "sote@getsote.com"
+      ],
+      "send-to": [
+        "red@getsote.com",
+        "redTwo@getsote.com"
+      ],
+      "text-payload": "hey Test",
+      "subject": "Test Payload",
+      "html-payload": "\u003c!DOCTYPE html\u003e\u003chtml lang='en'\u003e\u003cbody\u003e\u003c/body\u003e\u003c/html\u003e"
     }
   ]
 }
