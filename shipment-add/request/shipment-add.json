@@ -137,26 +137,123 @@
             "examples": [
                 "2022-06-17"
             ]
+        },
+        "cif-value": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The cif-value Schema",
+            "examples": [
+                20.4
+            ]
+        },
+        "cif-value-currency-type": {
+            "type": "string",
+            "default": "",
+            "title": "The cif-value-currency-type Schema",
+            "examples": [
+                "kes"
+            ]
+        },
+        "customs-tax": {
+            "type": "integer",
+            "default": 0,
+            "title": "The customs-tax Schema",
+            "examples": [
+                30
+            ]
+        },
+        "customs-tax-currency-type": {
+            "type": "string",
+            "default": "",
+            "title": "The customs-tax-currency-type Schema",
+            "examples": [
+                "usd"
+            ]
+        },
+        "proforma-date": {
+            "type": "string",
+            "default": "",
+            "title": "The proforma-date Schema",
+            "examples": [
+                "2022-10-10"
+            ]
+        },
+        "commercial-invoice-date": {
+            "type": "string",
+            "default": "",
+            "title": "The commercial-invoice-date Schema",
+            "examples": [
+                "2022-11-11"
+            ]
+        },
+        "commercial-invoice-value": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The commercial-invoice-value Schema",
+            "examples": [
+                40.5
+            ]
+        },
+        "commercial-invoice-currency-type": {
+            "type": "string",
+            "default": "",
+            "title": "The commercial-invoice-currency-type Schema",
+            "examples": [
+                "ksh"
+            ]
+        },
+        "country-of-origin": {
+            "type": "string",
+            "default": "",
+            "title": "The country-of-origin Schema",
+            "examples": [
+                "India"
+            ]
+        },
+        "dangerous-cargo": {
+            "type": "boolean",
+            "default": false,
+            "title": "The dangerous-cargo Schema",
+            "examples": [
+                true
+            ]
+        },
+        "restricted-goods": {
+            "type": "boolean",
+            "default": false,
+            "title": "The restricted-goods Schema",
+            "examples": [
+                true
+            ]
         }
     },
-    "examples": [
-        {
-            "shipment-type": "Air Import",
-            "client-company-id": 1,
-            "client-company-name": "My Enterprises Ltd",
-            "suppliers-id": 1,
-            "supplier-name": "Supplier Name",
-            "bill-of-lading": "WEXXXXXXXX58",
-            "port-of-entry": "Mombasa_Kenya",
-            "port-of-origin": "SOKHNA__EGYPT",
-            "country-destination": "KENYA",
-            "shipment-port-of-entry-eta": "2020-12-26",
-            "consignment-wgt": 17,
-            "consignment-wgt-uom": "MT",
-            "through-bill-of-lading": "TBL",
-            "external-shipment-id": "SOTE_TEST_SHIPMENT",
-            "estimated-berthing-time": "2022-06-17 14:50",
-            "final-release-date": "2022-06-17"
-        }
-    ]
+    "examples": [{
+        "shipment-type": "Air Import",
+        "client-company-id": 1,
+        "client-company-name": "My Enterprises Ltd",
+        "suppliers-id": 1,
+        "supplier-name": "Supplier Name",
+        "bill-of-lading": "WEXXXXXXXX58",
+        "port-of-entry": "Mombasa_Kenya",
+        "port-of-origin": "SOKHNA__EGYPT",
+        "country-destination": "KENYA",
+        "shipment-port-of-entry-eta": "2020-12-26",
+        "consignment-wgt": 17,
+        "consignment-wgt-uom": "MT",
+        "through-bill-of-lading": "TBL",
+        "external-shipment-id": "SOTE_TEST_SHIPMENT",
+        "estimated-berthing-time": "2022-06-17 14:50",
+        "final-release-date": "2022-06-17",
+        "cif-value": 20.4,
+        "cif-value-currency-type": "kes",
+        "customs-tax": 30,
+        "customs-tax-currency-type": "usd",
+        "proforma-date": "2022-10-10",
+        "commercial-invoice-date": "2022-11-11",
+        "commercial-invoice-value": 40.5,
+        "commercial-invoice-currency-type": "ksh",
+        "country-of-origin": "India",
+        "dangerous-cargo": true,
+        "restricted-goods": true
+    }]
 }
