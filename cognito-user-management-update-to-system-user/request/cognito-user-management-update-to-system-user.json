@@ -17,7 +17,7 @@
       "default": 0,
       "title": "The user-management-id Schema",
       "examples": [
-        3
+        3000
       ]
     },
     "organizations-id": {
@@ -33,7 +33,7 @@
       "default": 0,
       "title": "The row-version Schema",
       "examples": [
-        7
+        3
       ]
     },
     "aws-user-name": {
@@ -44,20 +44,20 @@
         "test-cognito-name"
       ]
     },
-    "cognito_username": {
+    "cognito-username": {
       "type": "string",
       "default": "",
       "title": "The cognito-username Schema",
       "examples": [
-        "fbxxxxx"
+        "653xxxxxxxxxxxxxxxx"
       ]
     }
   },
   "examples": [{
-    "user-management-id": 3,
+    "user-management-id": 3000,
     "organizations-id": 1,
-    "row-version": 7,
+    "row-version": 3,
     "aws-user-name": "test-cognito-name",
-    "cognito_username": "fbxxxxx"
+    "cognito-username": "653xxxxxxxxxxxxxxxx"
   }]
 }

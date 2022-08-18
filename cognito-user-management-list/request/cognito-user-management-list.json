@@ -19,8 +19,10 @@
   "required": [
     "record-limit-count",
     "record-offset",
-    "sort-order",
     "organizations-id"
+  ],
+  "optional": [
+    "sort-order"
   ],
   "properties": {
     "record-limit-count": {

@@ -4,25 +4,25 @@
   "type": "object",
   "default": {},
   "title": "Root Schema",
+  "description": "This is for updating user details in cognito and usermanagement",
   "required": [
+    "user-management-id",
+    "cognito-username",
+    "row-version",
+    "user-is-active",
     "organizations-id",
     "aws-user-name",
-    "user-login-type",
     "user-phone-country-code",
     "user-phone-number",
     "user-email",
-    "user-role-list",
-    "informational-user"
-  ],
-  "optional" :[
     "user-first-name",
     "user-middle-name",
     "user-last-name",
+    "user-role-list",
     "client-company-id",
     "informational-user",
-    "user-is-active",
     "user-name-prefix",
-    "user-name-suffix",
+    "user_name_suffix",
     "user-hire-date",
     "driver-license",
     "driver-license-expiry",
@@ -31,28 +31,54 @@
     "device-token"
   ],
   "properties": {
+    "user-management-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-management-id Schema",
+      "examples": [
+        3000
+      ]
+    },
+    "cognito-username": {
+      "type": "string",
+      "default": "",
+      "title": "The cognito-username Schema",
+      "description": "This is the cognito-username or the aws-user-name of the user being updated",
+      "examples": [
+        "653xxxxxxxxxxxxxxxx"
+      ]
+    },
+    "row-version": {
+      "type": "integer",
+      "default": 0,
+      "title": "The row-version Schema",
+      "examples": [
+        1
+      ]
+    },
+    "user-is-active": {
+      "type": "boolean",
+      "default": false,
+      "title": "The user-is-active Schema",
+      "examples": [
+        true
+      ]
+    },
     "organizations-id": {
       "type": "integer",
       "default": 0,
       "title": "The organizations-id Schema",
       "examples": [
-        10000
+        1
       ]
     },
     "aws-user-name": {
       "type": "string",
       "default": "",
       "title": "The aws-user-name Schema",
+      "description": "This is aws-user-name or cognito-username of the user making the update request",
       "examples": [
         "test-user"
-      ]
-    },
-    "user-login-type": {
-      "type": "string",
-      "default": "",
-      "title": "The user-login-type Schema",
-      "examples": [
-        "email"
       ]
     },
     "user-phone-country-code": {
@@ -68,7 +94,7 @@
       "default": "",
       "title": "The user-phone-number Schema",
       "examples": [
-        "722000000"
+        "712345612"
       ]
     },
     "user-email": {
@@ -84,7 +110,7 @@
       "default": "",
       "title": "The user-first-name Schema",
       "examples": [
-        "Test"
+        "User"
       ]
     },
     "user-middle-name": {
@@ -92,7 +118,7 @@
       "default": "",
       "title": "The user-middle-name Schema",
       "examples": [
-        "User"
+        "Test"
       ]
     },
     "user-last-name": {
@@ -100,7 +126,7 @@
       "default": "",
       "title": "The user-last-name Schema",
       "examples": [
-        "Test"
+        "User"
       ]
     },
     "user-role-list": {
@@ -111,13 +137,13 @@
         "type": "string",
         "title": "A Schema",
         "examples": [
-          "ROLE_NAME_1",
-          "ROLE_NAME_2"
+          "USER",
+          "ADMIN"
         ]
       },
       "examples": [
-        ["ROLE_NAME_1",
-          "ROLE_NAME_2"
+        ["USER",
+          "ADMIN"
         ]
       ]
     },
@@ -126,7 +152,7 @@
       "default": 0,
       "title": "The client-company-id Schema",
       "examples": [
-        1
+        10
       ]
     },
     "informational-user": {
@@ -134,15 +160,7 @@
       "default": false,
       "title": "The informational-user Schema",
       "examples": [
-        true
-      ]
-    },
-    "user-is-active": {
-      "type": "boolean",
-      "default": false,
-      "title": "The user-is-active Schema",
-      "examples": [
-        true
+        false
       ]
     },
     "user-name-prefix": {
@@ -150,13 +168,13 @@
       "default": "",
       "title": "The user-name-prefix Schema",
       "examples": [
-        "Miss"
+        "Mr"
       ]
     },
-    "user-name-suffix": {
+    "user_name_suffix": {
       "type": "string",
       "default": "",
-      "title": "The user-name-suffix Schema",
+      "title": "The user_name_suffix Schema",
       "examples": [
         "MD"
       ]
@@ -198,7 +216,7 @@
       "default": "",
       "title": "The user-pay-period Schema",
       "examples": [
-        "Monthly"
+        "Weekly"
       ]
     },
     "device-token": {
@@ -211,29 +229,31 @@
     }
   },
   "examples": [{
-    "organizations-id": 10000,
-    "aws-user-name": "test-user",
-    "user-login-type": "email",
-    "user-phone-country-code": "+254",
-    "user-phone-number": "722000000",
-    "user-email": "test@test.com",
-    "user-first-name": "Test",
-    "user-middle-name": "User",
-    "user-last-name": "Test",
-    "user-role-list": [
-      "ROLE_NAME_1",
-      "ROLE_NAME_2"
-    ],
-    "client-company-id": 1,
-    "informational-user": true,
+    "user-management-id": 3000,
+    "cognito-username": "653xxxxxxxxxxxxxxxx",
+    "row-version": 1,
     "user-is-active": true,
-    "user-name-prefix": "Miss",
-    "user-name-suffix": "MD",
+    "organizations-id": 1,
+    "aws-user-name": "test-user",
+    "user-phone-country-code": "+254",
+    "user-phone-number": "712345612",
+    "user-email": "test@test.com",
+    "user-first-name": "User",
+    "user-middle-name": "Test",
+    "user-last-name": "User",
+    "user-role-list": [
+      "USER",
+      "ADMIN"
+    ],
+    "client-company-id": 10,
+    "informational-user": false,
+    "user-name-prefix": "Mr",
+    "user_name_suffix": "MD",
     "user-hire-date": "2021-08-26",
     "driver-license": "DL-123",
     "driver-license-expiry": "2022-01-01",
     "user-wage": 200000,
-    "user-pay-period": "Monthly",
+    "user-pay-period": "Weekly",
     "device-token": "test-device-token"
   }]
 }
