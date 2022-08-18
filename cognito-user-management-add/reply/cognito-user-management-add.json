@@ -43,7 +43,7 @@
           "type": "boolean",
           "default": false,
           "title": "The enabled Schema",
-          "description": "This shows if user is active in cognito",
+          "description": "This shows if user is enabled in cognito",
           "examples": [
             true
           ]
