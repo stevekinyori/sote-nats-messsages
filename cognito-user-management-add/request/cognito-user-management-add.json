@@ -9,11 +9,11 @@
     "aws-user-name",
     "user-login-type",
     "user-phone-country-code required if user-phone-number IS provided startswith +",
-    "user-phone-number required if user-login-type IS EMAIL",
+    "user-phone-number required if user-login-type IS PHONE",
     "user-email required if user-login-type IS EMAIL",
     "user-role-list",
-    "informational-user required if informational-user IS FALSE",
-    "user-is-active"
+    "informational-user required if informational-user IS TRUE",
+    "user-is-active required if user-is-active IS TRUE"
   ],
   "optional": [
     "user-first-name",
@@ -42,16 +42,19 @@
       "type": "string",
       "default": "",
       "title": "The aws-user-name Schema",
+      "description": "The aws username of the user creating the new user",
       "examples": [
         "test-user"
       ]
     },
     "user-login-type": {
-      "enum": [
-        "email",
-        "phone"
-      ],
+      "type": "string",
+      "default": "",
       "title": "The user-login-type Schema",
+      "enum": [
+        "PHONE",
+        "EMAIL"
+      ],
       "examples": [
         "email"
       ]
@@ -80,40 +83,6 @@
         "test@test.com"
       ]
     },
-    "user-role-list": {
-      "type": "array",
-      "default": [],
-      "title": "The user-role-list Schema",
-      "items": {
-        "type": "string",
-        "title": "A Schema",
-        "examples": [
-          "ROLE1",
-          "ROLE2"
-        ]
-      },
-      "examples": [
-        ["ROLE1",
-          "ROLE2"
-        ]
-      ]
-    },
-    "informational-user": {
-      "type": "boolean",
-      "default": false,
-      "title": "The informational-user Schema",
-      "examples": [
-        false
-      ]
-    },
-    "user-is-active": {
-      "type": "boolean",
-      "default": false,
-      "title": "The user-is-active Schema",
-      "examples": [
-        true
-      ]
-    },
     "user-first-name": {
       "type": "string",
       "default": "",
@@ -138,12 +107,46 @@
         "Test"
       ]
     },
+    "user-role-list": {
+      "type": "array",
+      "default": [],
+      "title": "The user-role-list Schema",
+      "items": {
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "CLIENT",
+          "USER"
+        ]
+      },
+      "examples": [
+        ["CLIENT",
+          "USER"
+        ]
+      ]
+    },
     "client-company-id": {
       "type": "integer",
       "default": 0,
       "title": "The client-company-id Schema",
       "examples": [
         1
+      ]
+    },
+    "informational-user": {
+      "type": "boolean",
+      "default": false,
+      "title": "The informational-user Schema",
+      "examples": [
+        false
+      ]
+    },
+    "user-is-active": {
+      "type": "boolean",
+      "default": false,
+      "title": "The user-is-active Schema",
+      "examples": [
+        true
       ]
     },
     "user-name-prefix": {
@@ -218,16 +221,16 @@
     "user-phone-country-code": "+254",
     "user-phone-number": "722000000",
     "user-email": "test@test.com",
-    "user-role-list": [
-      "ROLE1",
-      "ROLE2"
-    ],
-    "informational-user": false,
-    "user-is-active": true,
     "user-first-name": "Test",
     "user-middle-name": "User",
     "user-last-name": "Test",
+    "user-role-list": [
+      "CLIENT",
+      "USER"
+    ],
     "client-company-id": 1,
+    "informational-user": false,
+    "user-is-active": true,
     "user-name-prefix": "Miss",
     "user-name-suffix": "MD",
     "user-hire-date": "2021-08-26",

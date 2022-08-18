@@ -32,6 +32,7 @@
           "type": "boolean",
           "default": false,
           "title": "The enabled Schema",
+          "description": "This shows if the user is enabled in cognito",
           "examples": [
             true
           ]
@@ -49,7 +50,7 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            5
+            4
           ]
         },
         "usermanagement_id": {
@@ -57,15 +58,15 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3
+            3000
           ]
         }
       },
       "examples": [{
         "enabled": true,
         "informational_user": false,
-        "row_version": 5,
-        "usermanagement_id": 3
+        "row_version": 4,
+        "usermanagement_id": 3000
       }]
     }
   },
@@ -74,8 +75,8 @@
     "message": {
       "enabled": true,
       "informational_user": false,
-      "row_version": 5,
-      "usermanagement_id": 3
+      "row_version": 4,
+      "usermanagement_id": 3000
     }
   }]
 }
