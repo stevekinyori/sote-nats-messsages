@@ -7,12 +7,14 @@
   "description": "This is for updating user details in cognito and usermanagement",
   "required": [
     "user-management-id",
-    "cognito-username",
+    "cognito-username required if informational-user IS FALSE and changes need to be made in cognito",
     "row-version",
-    "user-is-active",
     "organizations-id",
     "aws-user-name",
-    "user-phone-country-code",
+    "user-phone-country-code required if user-phone-number IS provided startswith +"
+  ],
+  "optional": [
+    "user-is-active",
     "user-phone-number",
     "user-email",
     "user-first-name",

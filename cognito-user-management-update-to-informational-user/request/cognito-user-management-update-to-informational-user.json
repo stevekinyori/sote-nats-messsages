@@ -40,6 +40,7 @@
       "type": "string",
       "default": "",
       "title": "The aws-user-name Schema",
+      "description": "The aws-user-name or cognito-username of the user making the update",
       "examples": [
         "test-cognito-name"
       ]
@@ -48,6 +49,7 @@
       "type": "string",
       "default": "",
       "title": "The cognito-username Schema",
+      "description": "The cognito-username or aws-user-name of the user being updated",
       "examples": [
         "653xxxxxxxxxxxxxxxx"
       ]
