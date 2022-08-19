@@ -1,0 +1,317 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "default": "",
+            "title": "The message-id Schema",
+            "examples": [
+                "51ad84d4-XXXXXXX-6b2ce5e8"
+            ]
+        },
+        "message": {
+            "type": "object",
+            "default": {},
+            "title": "The message Schema",
+            "required": [
+                "items",
+                "pagination"
+            ],
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The items Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "organizations_id",
+                            "client_company_id",
+                            "shipments_id",
+                            "amounts"
+                        ],
+                        "properties": {
+                            "organizations_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The organizations_id Schema",
+                                "examples": [
+                                    10000
+                                ]
+                            },
+                            "client_company_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The client_company_id Schema",
+                                "examples": [
+                                    17
+                                ]
+                            },
+                            "shipments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The shipments_id Schema",
+                                "examples": [
+                                    10244
+                                ]
+                            },
+                            "amounts": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The amounts Schema",
+                                "items": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "A Schema",
+                                    "required": [
+                                        "currency_type",
+                                        "unexpected_charge_amount",
+                                        "expected_charge_amount",
+                                        "invoiced_amount",
+                                        "credit_note_amount",
+                                        "paid_amount",
+                                        "total_balance",
+                                        "total_overdue_balance",
+                                        "total_open_invoice_balance"
+                                    ],
+                                    "properties": {
+                                        "currency_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The currency_type Schema",
+                                            "examples": [
+                                                "KES"
+                                            ]
+                                        },
+                                        "unexpected_charge_amount": {
+                                            "type": "number",
+                                            "default": 0.0,
+                                            "title": "The unexpected_charge_amount Schema",
+                                            "examples": [
+                                                100.5
+                                            ]
+                                        },
+                                        "expected_charge_amount": {
+                                            "type": "number",
+                                            "default": 0.0,
+                                            "title": "The expected_charge_amount Schema",
+                                            "examples": [
+                                                10000.5
+                                            ]
+                                        },
+                                        "invoiced_amount": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The invoiced_amount Schema",
+                                            "examples": [
+                                                10200
+                                            ]
+                                        },
+                                        "credit_note_amount": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The credit_note_amount Schema",
+                                            "examples": [
+                                                100
+                                            ]
+                                        },
+                                        "paid_amount": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The paid_amount Schema",
+                                            "examples": [
+                                                10000
+                                            ]
+                                        },
+                                        "total_balance": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The total_balance Schema",
+                                            "examples": [
+                                                100
+                                            ]
+                                        },
+                                        "total_overdue_balance": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The total_overdue_balance Schema",
+                                            "examples": [
+                                                50
+                                            ]
+                                        },
+                                        "total_open_invoice_balance": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The total_open_invoice_balance Schema",
+                                            "examples": [
+                                                50
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "currency_type": "KES",
+                                        "unexpected_charge_amount": 100.5,
+                                        "expected_charge_amount": 10000.5,
+                                        "invoiced_amount": 10200,
+                                        "credit_note_amount": 100,
+                                        "paid_amount": 10000,
+                                        "total_balance": 100,
+                                        "total_overdue_balance": 50,
+                                        "total_open_invoice_balance": 50
+                                    }]
+                                },
+                                "examples": [
+                                    [{
+                                        "currency_type": "KES",
+                                        "unexpected_charge_amount": 100.5,
+                                        "expected_charge_amount": 10000.5,
+                                        "invoiced_amount": 10200,
+                                        "credit_note_amount": 100,
+                                        "paid_amount": 10000,
+                                        "total_balance": 100,
+                                        "total_overdue_balance": 50,
+                                        "total_open_invoice_balance": 50
+                                    }]
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "organizations_id": 10000,
+                            "client_company_id": 17,
+                            "shipments_id": 10244,
+                            "amounts": [{
+                                "currency_type": "KES",
+                                "unexpected_charge_amount": 100.5,
+                                "expected_charge_amount": 10000.5,
+                                "invoiced_amount": 10200,
+                                "credit_note_amount": 100,
+                                "paid_amount": 10000,
+                                "total_balance": 100,
+                                "total_overdue_balance": 50,
+                                "total_open_invoice_balance": 50
+                            }]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "organizations_id": 10000,
+                            "client_company_id": 17,
+                            "shipments_id": 10244,
+                            "amounts": [{
+                                "currency_type": "KES",
+                                "unexpected_charge_amount": 100.5,
+                                "expected_charge_amount": 10000.5,
+                                "invoiced_amount": 10200,
+                                "credit_note_amount": 100,
+                                "paid_amount": 10000,
+                                "total_balance": 100,
+                                "total_overdue_balance": 50,
+                                "total_open_invoice_balance": 50
+                            }]
+                        }]
+                    ]
+                },
+                "pagination": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The pagination Schema",
+                    "required": [
+                        "total",
+                        "limit",
+                        "offset"
+                    ],
+                    "properties": {
+                        "total": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total Schema",
+                            "examples": [
+                                100
+                            ]
+                        },
+                        "limit": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The limit Schema",
+                            "examples": [
+                                0
+                            ]
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The offset Schema",
+                            "examples": [
+                                0
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "total": 100,
+                        "limit": 0,
+                        "offset": 0
+                    }]
+                }
+            },
+            "examples": [{
+                "items": [{
+                    "organizations_id": 10000,
+                    "client_company_id": 17,
+                    "shipments_id": 10244,
+                    "amounts": [{
+                        "currency_type": "KES",
+                        "unexpected_charge_amount": 100.5,
+                        "expected_charge_amount": 10000.5,
+                        "invoiced_amount": 10200,
+                        "credit_note_amount": 100,
+                        "paid_amount": 10000,
+                        "total_balance": 100,
+                        "total_overdue_balance": 50,
+                        "total_open_invoice_balance": 50
+                    }]
+                }],
+                "pagination": {
+                    "total": 100,
+                    "limit": 0,
+                    "offset": 0
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "items": [{
+                "organizations_id": 10000,
+                "client_company_id": 17,
+                "shipments_id": 10244,
+                "amounts": [{
+                    "currency_type": "KES",
+                    "unexpected_charge_amount": 100.5,
+                    "expected_charge_amount": 10000.5,
+                    "invoiced_amount": 10200,
+                    "credit_note_amount": 100,
+                    "paid_amount": 10000,
+                    "total_balance": 100,
+                    "total_overdue_balance": 50,
+                    "total_open_invoice_balance": 50
+                }]
+            }],
+            "pagination": {
+                "total": 100,
+                "limit": 0,
+                "offset": 0
+            }
+        }
+    }]
+}
