@@ -8,8 +8,7 @@
     "user-management-id",
     "organizations-id",
     "row-version",
-    "aws-user-name",
-    "cognito-username"
+    "user-role-list"
   ],
   "properties": {
     "user-management-id": {
@@ -17,7 +16,7 @@
       "default": 0,
       "title": "The user-management-id Schema",
       "examples": [
-        3000
+        3
       ]
     },
     "organizations-id": {
@@ -33,33 +32,35 @@
       "default": 0,
       "title": "The row-version Schema",
       "examples": [
-        3
+        4
       ]
     },
-    "aws-user-name": {
-      "type": "string",
-      "default": "",
-      "title": "The aws-user-name Schema",
-      "description": "The aws-user-name or cognito-username of the user making the update",
+    "user-role-list": {
+      "type": "array",
+      "default": [],
+      "title": "The user-role-list Schema",
+      "items": {
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "ROLE1",
+          "ROLE2"
+        ]
+      },
       "examples": [
-        "test-cognito-name"
-      ]
-    },
-    "cognito-username": {
-      "type": "string",
-      "default": "",
-      "title": "The cognito-username Schema",
-      "description": "The cognito-username or aws-user-name of the user being updated",
-      "examples": [
-        "653xxxxxxxxxxxxxxxx"
+        ["ROLE1",
+          "ROLE2"
+        ]
       ]
     }
   },
   "examples": [{
-    "user-management-id": 3000,
+    "user-management-id": 3,
     "organizations-id": 1,
-    "row-version": 3,
-    "aws-user-name": "test-cognito-name",
-    "cognito-username": "653xxxxxxxxxxxxxxxx"
+    "row-version": 4,
+    "user-role-list": [
+      "ROLE1",
+      "ROLE2"
+    ]
   }]
 }
