@@ -6,7 +6,6 @@
   "title": "Root Schema",
   "required": [
     "organizations-id",
-    "aws-user-name",
     "user-login-type",
     "user-phone-country-code required if user-phone-number IS provided startswith +",
     "user-phone-number required if user-login-type IS PHONE",
@@ -36,15 +35,6 @@
       "title": "The organizations-id Schema",
       "examples": [
         1
-      ]
-    },
-    "aws-user-name": {
-      "type": "string",
-      "default": "",
-      "title": "The aws-user-name Schema",
-      "description": "The aws username of the user creating the new user",
-      "examples": [
-        "test-user"
       ]
     },
     "user-login-type": {
@@ -216,7 +206,6 @@
   },
   "examples": [{
     "organizations-id": 1,
-    "aws-user-name": "test-user",
     "user-login-type": "email",
     "user-phone-country-code": "+254",
     "user-phone-number": "722000000",

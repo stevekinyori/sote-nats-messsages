@@ -5,26 +5,27 @@
   "default": {},
   "title": "Root Schema",
   "required": [
-    "user-management-id",
     "organizations-id",
+    "user-management-id",
     "row-version",
-    "cognito-username"
+    "cognito-username required if informational-user IS FALSE",
+    "informational-user"
   ],
   "properties": {
-    "user-management-id": {
-      "type": "integer",
-      "default": 0,
-      "title": "The user-management-id Schema",
-      "examples": [
-        3000
-      ]
-    },
     "organizations-id": {
       "type": "integer",
       "default": 0,
       "title": "The organizations-id Schema",
       "examples": [
         1
+      ]
+    },
+    "user-management-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-management-id Schema",
+      "examples": [
+        3
       ]
     },
     "row-version": {
@@ -39,16 +40,24 @@
       "type": "string",
       "default": "",
       "title": "The cognito-username Schema",
-      "description": "The cognito-username or aws-user-name of the user being updated",
       "examples": [
-        "653xxxxxxxxxxxxxxxx"
+        "f9bxxxxxxxxxxxx"
+      ]
+    },
+    "informational-user": {
+      "type": "boolean",
+      "default": false,
+      "title": "The informational-user Schema",
+      "examples": [
+        false
       ]
     }
   },
   "examples": [{
-    "user-management-id": 3000,
     "organizations-id": 1,
+    "user-management-id": 3,
     "row-version": 2,
-    "cognito-username": "653xxxxxxxxxxxxxxxx"
+    "cognito-username": "f9bxxxxxxxxxxxx",
+    "informational-user": false
   }]
 }

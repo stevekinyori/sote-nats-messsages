@@ -22,21 +22,12 @@
       "default": {},
       "title": "The message Schema",
       "required": [
-        "enabled",
         "informational_user",
         "row_version",
+        "user_is_active",
         "usermanagement_id"
       ],
       "properties": {
-        "enabled": {
-          "type": "boolean",
-          "default": false,
-          "title": "The enabled Schema",
-          "description": "This shows if the user is enabled in cognito",
-          "examples": [
-            false
-          ]
-        },
         "informational_user": {
           "type": "boolean",
           "default": false,
@@ -50,7 +41,15 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            3
+            19
+          ]
+        },
+        "user_is_active": {
+          "type": "boolean",
+          "default": false,
+          "title": "The user_is_active Schema",
+          "examples": [
+            false
           ]
         },
         "usermanagement_id": {
@@ -58,25 +57,25 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3000
+            3
           ]
         }
       },
       "examples": [{
-        "enabled": false,
         "informational_user": true,
-        "row_version": 3,
-        "usermanagement_id": 3000
+        "row_version": 19,
+        "user_is_active": false,
+        "usermanagement_id": 3
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "enabled": false,
       "informational_user": true,
-      "row_version": 3,
-      "usermanagement_id": 3000
+      "row_version": 19,
+      "user_is_active": false,
+      "usermanagement_id": 3
     }
   }]
 }

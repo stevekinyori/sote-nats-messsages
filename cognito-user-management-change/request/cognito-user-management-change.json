@@ -10,7 +10,6 @@
     "cognito-username required if informational-user IS FALSE and changes need to be made in cognito",
     "row-version",
     "organizations-id",
-    "aws-user-name",
     "user-phone-country-code required if user-phone-number IS provided startswith +"
   ],
   "optional": [
@@ -72,15 +71,6 @@
       "title": "The organizations-id Schema",
       "examples": [
         1
-      ]
-    },
-    "aws-user-name": {
-      "type": "string",
-      "default": "",
-      "title": "The aws-user-name Schema",
-      "description": "This is aws-user-name or cognito-username of the user making the update request",
-      "examples": [
-        "test-user"
       ]
     },
     "user-phone-country-code": {
@@ -236,7 +226,6 @@
     "row-version": 1,
     "user-is-active": true,
     "organizations-id": 1,
-    "aws-user-name": "test-user",
     "user-phone-country-code": "+254",
     "user-phone-number": "712345612",
     "user-email": "test@test.com",
