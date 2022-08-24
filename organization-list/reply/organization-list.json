@@ -1,866 +1,1276 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "message": {
-                "items": [
-                    {
-                        "organizations_id": 1,
-                        "row_version": 5,
-                        "organization_is_active": true,
-                        "organization_name": "SOTE ENGINEERING 11",
-                        "initial_contact_date": "2020-01-01",
-                        "customer_since_date": "2021-01-01",
-                        "contract_start_date": "2021-01-01",
-                        "contract_end_date": "2023-01-01",
-                        "estimated_total_users": 200,
-                        "estimated_total_vehicles": 20,
-                        "estimated_paid_seats_month": 180,
-                        "desired_payment_threshold": 500,
-                        "delete_date": null,
-                        "created_by_date": "2022-03-29",
-                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                        "updated_by_date": "2022-04-06",
-                        "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                        "client_companies": [
-                            {
-                                "client_company_id": 1,
-                                "client_company_is_active": true,
-                                "client_company_name": "SOTE ENGINEERING CLIENT",
-                                "company_suppliers": [
-                                    {
-                                        "client_company_id": 1,
-                                        "created_by_date": "2022-04-07",
-                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                        "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                        "suppliers_id": 1,
-                                        "updated_by_date": null,
-                                        "updated_by_requestor_username": null
-                                    }
-                                ],
-                                "created_by_date": "2022-04-06",
-                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                "row_version": 2,
-                                "updated_by_date": "2022-04-06",
-                                "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                            }
-                        ],
-                        "products": [
-                            {
-                                "created_by_date": "2022-04-07",
-                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                "product_name": "SOTE PRODUCT1",
-                                "updated_by_date": null,
-                                "updated_by_requestor_username": null
-                            }
-                        ]
-                    }
-                ],
-                "pagination": {
-                    "total": 1,
-                    "limit": 10,
-                    "offset": 0
-                }
-            }
-        }
-    ],
+    "title": "Root Schema",
     "required": [
         "message-id",
         "message"
     ],
     "properties": {
         "message-id": {
-            "$id": "#/properties/message-id",
             "type": "string",
-            "title": "The message-id schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": "",
+            "title": "The message-id Schema",
             "examples": [
-                "51ad84d4-XXXXXXX-6b2ce5e8"
+                "test-message"
             ]
         },
         "message": {
-            "$id": "#/properties/message",
             "type": "object",
-            "title": "The message schema",
-            "description": "An explanation about the purpose of this instance.",
             "default": {},
-            "examples": [
-                {
-                    "items": [
-                        {
-                            "organizations_id": 1,
-                            "row_version": 5,
-                            "organization_is_active": true,
-                            "organization_name": "SOTE ENGINEERING 11",
-                            "initial_contact_date": "2020-01-01",
-                            "customer_since_date": "2021-01-01",
-                            "contract_start_date": "2021-01-01",
-                            "contract_end_date": "2023-01-01",
-                            "estimated_total_users": 200,
-                            "estimated_total_vehicles": 20,
-                            "estimated_paid_seats_month": 180,
-                            "desired_payment_threshold": 500,
-                            "delete_date": null,
-                            "created_by_date": "2022-03-29",
-                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                            "updated_by_date": "2022-04-06",
-                            "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                            "client_companies": [
-                                {
-                                    "client_company_id": 1,
-                                    "client_company_is_active": true,
-                                    "client_company_name": "SOTE ENGINEERING CLIENT",
-                                    "company_suppliers": [
-                                        {
-                                            "client_company_id": 1,
-                                            "created_by_date": "2022-04-07",
-                                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                            "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                            "suppliers_id": 1,
-                                            "updated_by_date": null,
-                                            "updated_by_requestor_username": null
-                                        }
-                                    ],
-                                    "created_by_date": "2022-04-06",
-                                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                    "row_version": 2,
-                                    "updated_by_date": "2022-04-06",
-                                    "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                                }
-                            ],
-                            "products": [
-                                {
-                                    "created_by_date": "2022-04-07",
-                                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                    "product_name": "SOTE PRODUCT1",
-                                    "updated_by_date": null,
-                                    "updated_by_requestor_username": null
-                                }
-                            ]
-                        }
-                    ],
-                    "pagination": {
-                        "total": 1,
-                        "limit": 10,
-                        "offset": 0
-                    }
-                }
-            ],
+            "title": "The message Schema",
             "required": [
                 "items",
                 "pagination"
             ],
             "properties": {
                 "items": {
-                    "$id": "#/properties/message/properties/items",
                     "type": "array",
-                    "title": "The items schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": [],
-                    "examples": [
-                        [
-                            {
-                                "organizations_id": 1,
-                                "row_version": 5,
-                                "organization_is_active": true,
-                                "organization_name": "SOTE ENGINEERING 11",
-                                "initial_contact_date": "2020-01-01",
-                                "customer_since_date": "2021-01-01",
-                                "contract_start_date": "2021-01-01",
-                                "contract_end_date": "2023-01-01",
-                                "estimated_total_users": 200,
-                                "estimated_total_vehicles": 20,
-                                "estimated_paid_seats_month": 180,
-                                "desired_payment_threshold": 500,
-                                "delete_date": null,
-                                "created_by_date": "2022-03-29",
-                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                "updated_by_date": "2022-04-06",
-                                "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                "client_companies": [
-                                    {
-                                        "client_company_id": 1,
-                                        "client_company_is_active": true,
-                                        "client_company_name": "SOTE ENGINEERING CLIENT",
-                                        "company_suppliers": [
-                                            {
-                                                "client_company_id": 1,
-                                                "created_by_date": "2022-04-07",
-                                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                "suppliers_id": 1,
+                    "title": "The items Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "organizations_id",
+                            "row_version",
+                            "organization_is_active",
+                            "organization_name",
+                            "initial_contact_date",
+                            "customer_since_date",
+                            "contract_start_date",
+                            "contract_end_date",
+                            "estimated_total_users",
+                            "estimated_total_vehicles",
+                            "estimated_paid_seats_month",
+                            "desired_payment_threshold",
+                            "delete_date",
+                            "created_by_date",
+                            "created_by_requestor_username",
+                            "updated_by_date",
+                            "updated_by_requestor_username",
+                            "client_companies",
+                            "products"
+                        ],
+                        "properties": {
+                            "organizations_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The organizations_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "row_version": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The row_version Schema",
+                                "examples": [
+                                    3
+                                ]
+                            },
+                            "organization_is_active": {
+                                "type": "boolean",
+                                "default": false,
+                                "title": "The organization_is_active Schema",
+                                "examples": [
+                                    true
+                                ]
+                            },
+                            "organization_name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The organization_name Schema",
+                                "examples": [
+                                    "SOTE ENGINEERING"
+                                ]
+                            },
+                            "initial_contact_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The initial_contact_date Schema",
+                                "examples": [
+                                    "2019-12-04"
+                                ]
+                            },
+                            "customer_since_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The customer_since_date Schema",
+                                "examples": [
+                                    "2019-12-04"
+                                ]
+                            },
+                            "contract_start_date": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The contract_start_date Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "contract_end_date": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The contract_end_date Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "estimated_total_users": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The estimated_total_users Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "estimated_total_vehicles": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The estimated_total_vehicles Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "estimated_paid_seats_month": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The estimated_paid_seats_month Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "desired_payment_threshold": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The desired_payment_threshold Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "delete_date": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The delete_date Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "created_by_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_date Schema",
+                                "examples": [
+                                    "2019-12-04"
+                                ]
+                            },
+                            "created_by_requestor_username": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The created_by_requestor_username Schema",
+                                "examples": [
+                                    "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240"
+                                ]
+                            },
+                            "updated_by_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The updated_by_date Schema",
+                                "examples": [
+                                    "2022-07-20"
+                                ]
+                            },
+                            "updated_by_requestor_username": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The updated_by_requestor_username Schema",
+                                "examples": [
+                                    "2f3684d7-56c5-468f-94ac-9d805d523422"
+                                ]
+                            },
+                            "client_companies": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The client_companies Schema",
+                                "items": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "A Schema",
+                                    "required": [
+                                        "children",
+                                        "client_company_id",
+                                        "client_company_is_active",
+                                        "client_company_name",
+                                        "company_contacts",
+                                        "company_suppliers",
+                                        "created_by_date",
+                                        "created_by_requestor_username",
+                                        "row_version",
+                                        "updated_by_date",
+                                        "updated_by_requestor_username"
+                                    ],
+                                    "properties": {
+                                        "children": {
+                                            "type": "array",
+                                            "default": [],
+                                            "title": "The children Schema",
+                                            "items": {
+                                                "type": "object",
+                                                "title": "A Schema",
+                                                "required": [
+                                                    "client_company_id",
+                                                    "client_company_is_active",
+                                                    "client_company_name",
+                                                    "company_contacts",
+                                                    "company_suppliers",
+                                                    "created_by_date",
+                                                    "created_by_requestor_username",
+                                                    "organizations_id",
+                                                    "row_version",
+                                                    "updated_by_date",
+                                                    "updated_by_requestor_username"
+                                                ],
+                                                "properties": {
+                                                    "client_company_id": {
+                                                        "type": "integer",
+                                                        "title": "The client_company_id Schema",
+                                                        "examples": [
+                                                            155,
+                                                            156
+                                                        ]
+                                                    },
+                                                    "client_company_is_active": {
+                                                        "type": "boolean",
+                                                        "title": "The client_company_is_active Schema",
+                                                        "examples": [
+                                                            true
+                                                        ]
+                                                    },
+                                                    "client_company_name": {
+                                                        "type": "string",
+                                                        "title": "The client_company_name Schema",
+                                                        "examples": [
+                                                            "SOTE ENGINEERING CLIENT CHILD",
+                                                            "SOTE ENGINEERING CLIENT CHILD2"
+                                                        ]
+                                                    },
+                                                    "company_contacts": {
+                                                        "type": "array",
+                                                        "title": "The company_contacts Schema",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "default": {},
+                                                            "title": "A Schema",
+                                                            "required": [
+                                                                "client_company_id",
+                                                                "clientcompanycontacts_id",
+                                                                "communication_type",
+                                                                "contact_value",
+                                                                "created_by_date",
+                                                                "created_by_requestor_username",
+                                                                "name"
+                                                            ],
+                                                            "properties": {
+                                                                "client_company_id": {
+                                                                    "type": "integer",
+                                                                    "default": 0,
+                                                                    "title": "The client_company_id Schema",
+                                                                    "examples": [
+                                                                        155
+                                                                    ]
+                                                                },
+                                                                "clientcompanycontacts_id": {
+                                                                    "type": "integer",
+                                                                    "default": 0,
+                                                                    "title": "The clientcompanycontacts_id Schema",
+                                                                    "examples": [
+                                                                        109
+                                                                    ]
+                                                                },
+                                                                "communication_type": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The communication_type Schema",
+                                                                    "examples": [
+                                                                        "PHONE"
+                                                                    ]
+                                                                },
+                                                                "contact_value": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The contact_value Schema",
+                                                                    "examples": [
+                                                                        "testing@test2.com"
+                                                                    ]
+                                                                },
+                                                                "created_by_date": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The created_by_date Schema",
+                                                                    "examples": [
+                                                                        "2022-08-24"
+                                                                    ]
+                                                                },
+                                                                "created_by_requestor_username": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The created_by_requestor_username Schema",
+                                                                    "examples": [
+                                                                        "sote-test"
+                                                                    ]
+                                                                },
+                                                                "name": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The name Schema",
+                                                                    "examples": [
+                                                                        "Test One"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "examples": [{
+                                                                "client_company_id": 155,
+                                                                "clientcompanycontacts_id": 109,
+                                                                "communication_type": "PHONE",
+                                                                "contact_value": "testing@test2.com",
+                                                                "created_by_date": "2022-08-24",
+                                                                "created_by_requestor_username": "sote-test",
+                                                                "name": "Test One"
+                                                            }]
+                                                        },
+                                                        "examples": [
+                                                            [{
+                                                                "client_company_id": 155,
+                                                                "clientcompanycontacts_id": 109,
+                                                                "communication_type": "PHONE",
+                                                                "contact_value": "testing@test2.com",
+                                                                "created_by_date": "2022-08-24",
+                                                                "created_by_requestor_username": "sote-test",
+                                                                "name": "Test One"
+                                                            }],
+                                                            []
+                                                        ]
+                                                    },
+                                                    "company_suppliers": {
+                                                        "type": "array",
+                                                        "title": "The company_suppliers Schema",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "default": {},
+                                                            "title": "A Schema",
+                                                            "required": [
+                                                                "client_company_id",
+                                                                "created_by_date",
+                                                                "created_by_requestor_username",
+                                                                "supplier_name",
+                                                                "suppliers_id",
+                                                                "updated_by_date",
+                                                                "updated_by_requestor_username"
+                                                            ],
+                                                            "properties": {
+                                                                "client_company_id": {
+                                                                    "type": "integer",
+                                                                    "default": 0,
+                                                                    "title": "The client_company_id Schema",
+                                                                    "examples": [
+                                                                        155
+                                                                    ]
+                                                                },
+                                                                "created_by_date": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The created_by_date Schema",
+                                                                    "examples": [
+                                                                        "2022-08-24"
+                                                                    ]
+                                                                },
+                                                                "created_by_requestor_username": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The created_by_requestor_username Schema",
+                                                                    "examples": [
+                                                                        "sote-test"
+                                                                    ]
+                                                                },
+                                                                "supplier_name": {
+                                                                    "type": "string",
+                                                                    "default": "",
+                                                                    "title": "The supplier_name Schema",
+                                                                    "examples": [
+                                                                        "SOTE ENGINEERING CLIENT2 SUPPLIER"
+                                                                    ]
+                                                                },
+                                                                "suppliers_id": {
+                                                                    "type": "integer",
+                                                                    "default": 0,
+                                                                    "title": "The suppliers_id Schema",
+                                                                    "examples": [
+                                                                        1210
+                                                                    ]
+                                                                },
+                                                                "updated_by_date": {
+                                                                    "type": "null",
+                                                                    "default": null,
+                                                                    "title": "The updated_by_date Schema",
+                                                                    "examples": [
+                                                                        null
+                                                                    ]
+                                                                },
+                                                                "updated_by_requestor_username": {
+                                                                    "type": "null",
+                                                                    "default": null,
+                                                                    "title": "The updated_by_requestor_username Schema",
+                                                                    "examples": [
+                                                                        null
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "examples": [{
+                                                                "client_company_id": 155,
+                                                                "created_by_date": "2022-08-24",
+                                                                "created_by_requestor_username": "sote-test",
+                                                                "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                                "suppliers_id": 1210,
+                                                                "updated_by_date": null,
+                                                                "updated_by_requestor_username": null
+                                                            }]
+                                                        },
+                                                        "examples": [
+                                                            [{
+                                                                "client_company_id": 155,
+                                                                "created_by_date": "2022-08-24",
+                                                                "created_by_requestor_username": "sote-test",
+                                                                "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                                "suppliers_id": 1210,
+                                                                "updated_by_date": null,
+                                                                "updated_by_requestor_username": null
+                                                            }],
+                                                            []
+                                                        ]
+                                                    },
+                                                    "created_by_date": {
+                                                        "type": "string",
+                                                        "title": "The created_by_date Schema",
+                                                        "examples": [
+                                                            "2022-08-24"
+                                                        ]
+                                                    },
+                                                    "created_by_requestor_username": {
+                                                        "type": "string",
+                                                        "title": "The created_by_requestor_username Schema",
+                                                        "examples": [
+                                                            "sote-test"
+                                                        ]
+                                                    },
+                                                    "organizations_id": {
+                                                        "type": "integer",
+                                                        "title": "The organizations_id Schema",
+                                                        "examples": [
+                                                            1
+                                                        ]
+                                                    },
+                                                    "row_version": {
+                                                        "type": "integer",
+                                                        "title": "The row_version Schema",
+                                                        "examples": [
+                                                            1,
+                                                            2
+                                                        ]
+                                                    },
+                                                    "updated_by_date": {
+                                                        "type": [
+                                                            "null",
+                                                            "string"
+                                                        ],
+                                                        "title": "The updated_by_date Schema",
+                                                        "examples": [
+                                                            null,
+                                                            "2022-08-24"
+                                                        ]
+                                                    },
+                                                    "updated_by_requestor_username": {
+                                                        "type": [
+                                                            "null",
+                                                            "string"
+                                                        ],
+                                                        "title": "The updated_by_requestor_username Schema",
+                                                        "examples": [
+                                                            null,
+                                                            "sote-test"
+                                                        ]
+                                                    }
+                                                },
+                                                "examples": [{
+                                                    "client_company_id": 155,
+                                                    "client_company_is_active": true,
+                                                    "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                                    "company_contacts": [{
+                                                        "client_company_id": 155,
+                                                        "clientcompanycontacts_id": 109,
+                                                        "communication_type": "PHONE",
+                                                        "contact_value": "testing@test2.com",
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "name": "Test One"
+                                                    }],
+                                                    "company_suppliers": [{
+                                                        "client_company_id": 155,
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                        "suppliers_id": 1210,
+                                                        "updated_by_date": null,
+                                                        "updated_by_requestor_username": null
+                                                    }],
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "organizations_id": 1,
+                                                    "row_version": 1,
+                                                    "updated_by_date": null,
+                                                    "updated_by_requestor_username": null
+                                                },
+                                                    {
+                                                        "client_company_id": 156,
+                                                        "client_company_is_active": true,
+                                                        "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                                        "company_contacts": [],
+                                                        "company_suppliers": [],
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "organizations_id": 1,
+                                                        "row_version": 2,
+                                                        "updated_by_date": "2022-08-24",
+                                                        "updated_by_requestor_username": "sote-test"
+                                                    }]
+                                            },
+                                            "examples": [
+                                                [{
+                                                    "client_company_id": 155,
+                                                    "client_company_is_active": true,
+                                                    "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                                    "company_contacts": [{
+                                                        "client_company_id": 155,
+                                                        "clientcompanycontacts_id": 109,
+                                                        "communication_type": "PHONE",
+                                                        "contact_value": "testing@test2.com",
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "name": "Test One"
+                                                    }],
+                                                    "company_suppliers": [{
+                                                        "client_company_id": 155,
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                        "suppliers_id": 1210,
+                                                        "updated_by_date": null,
+                                                        "updated_by_requestor_username": null
+                                                    }],
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "organizations_id": 1,
+                                                    "row_version": 1,
+                                                    "updated_by_date": null,
+                                                    "updated_by_requestor_username": null
+                                                },
+                                                    {
+                                                        "client_company_id": 156,
+                                                        "client_company_is_active": true,
+                                                        "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                                        "company_contacts": [],
+                                                        "company_suppliers": [],
+                                                        "created_by_date": "2022-08-24",
+                                                        "created_by_requestor_username": "sote-test",
+                                                        "organizations_id": 1,
+                                                        "row_version": 2,
+                                                        "updated_by_date": "2022-08-24",
+                                                        "updated_by_requestor_username": "sote-test"
+                                                    }]
+                                            ]
+                                        },
+                                        "client_company_id": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The client_company_id Schema",
+                                            "examples": [
+                                                153
+                                            ]
+                                        },
+                                        "client_company_is_active": {
+                                            "type": "boolean",
+                                            "default": false,
+                                            "title": "The client_company_is_active Schema",
+                                            "examples": [
+                                                true
+                                            ]
+                                        },
+                                        "client_company_name": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The client_company_name Schema",
+                                            "examples": [
+                                                "SOTE ENGINEERING CLIENT"
+                                            ]
+                                        },
+                                        "company_contacts": {
+                                            "type": "array",
+                                            "default": [],
+                                            "title": "The company_contacts Schema",
+                                            "items": {
+                                                "type": "object",
+                                                "default": {},
+                                                "title": "A Schema",
+                                                "required": [
+                                                    "client_company_id",
+                                                    "clientcompanycontacts_id",
+                                                    "communication_type",
+                                                    "contact_value",
+                                                    "created_by_date",
+                                                    "created_by_requestor_username",
+                                                    "name"
+                                                ],
+                                                "properties": {
+                                                    "client_company_id": {
+                                                        "type": "integer",
+                                                        "default": 0,
+                                                        "title": "The client_company_id Schema",
+                                                        "examples": [
+                                                            153
+                                                        ]
+                                                    },
+                                                    "clientcompanycontacts_id": {
+                                                        "type": "integer",
+                                                        "default": 0,
+                                                        "title": "The clientcompanycontacts_id Schema",
+                                                        "examples": [
+                                                            108
+                                                        ]
+                                                    },
+                                                    "communication_type": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The communication_type Schema",
+                                                        "examples": [
+                                                            "PHONE"
+                                                        ]
+                                                    },
+                                                    "contact_value": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The contact_value Schema",
+                                                        "examples": [
+                                                            "testing@test.com"
+                                                        ]
+                                                    },
+                                                    "created_by_date": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_date Schema",
+                                                        "examples": [
+                                                            "2022-08-24"
+                                                        ]
+                                                    },
+                                                    "created_by_requestor_username": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_requestor_username Schema",
+                                                        "examples": [
+                                                            "sote-test"
+                                                        ]
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The name Schema",
+                                                        "examples": [
+                                                            "Test One"
+                                                        ]
+                                                    }
+                                                },
+                                                "examples": [{
+                                                    "client_company_id": 153,
+                                                    "clientcompanycontacts_id": 108,
+                                                    "communication_type": "PHONE",
+                                                    "contact_value": "testing@test.com",
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "name": "Test One"
+                                                }]
+                                            },
+                                            "examples": [
+                                                [{
+                                                    "client_company_id": 153,
+                                                    "clientcompanycontacts_id": 108,
+                                                    "communication_type": "PHONE",
+                                                    "contact_value": "testing@test.com",
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "name": "Test One"
+                                                }]
+                                            ]
+                                        },
+                                        "company_suppliers": {
+                                            "type": "array",
+                                            "default": [],
+                                            "title": "The company_suppliers Schema",
+                                            "items": {
+                                                "type": "object",
+                                                "default": {},
+                                                "title": "A Schema",
+                                                "required": [
+                                                    "client_company_id",
+                                                    "created_by_date",
+                                                    "created_by_requestor_username",
+                                                    "supplier_name",
+                                                    "suppliers_id",
+                                                    "updated_by_date",
+                                                    "updated_by_requestor_username"
+                                                ],
+                                                "properties": {
+                                                    "client_company_id": {
+                                                        "type": "integer",
+                                                        "default": 0,
+                                                        "title": "The client_company_id Schema",
+                                                        "examples": [
+                                                            153
+                                                        ]
+                                                    },
+                                                    "created_by_date": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_date Schema",
+                                                        "examples": [
+                                                            "2022-08-24"
+                                                        ]
+                                                    },
+                                                    "created_by_requestor_username": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The created_by_requestor_username Schema",
+                                                        "examples": [
+                                                            "sote-test"
+                                                        ]
+                                                    },
+                                                    "supplier_name": {
+                                                        "type": "string",
+                                                        "default": "",
+                                                        "title": "The supplier_name Schema",
+                                                        "examples": [
+                                                            "SOTE ENGINEERING CLIENT SUPPLIER"
+                                                        ]
+                                                    },
+                                                    "suppliers_id": {
+                                                        "type": "integer",
+                                                        "default": 0,
+                                                        "title": "The suppliers_id Schema",
+                                                        "examples": [
+                                                            1204
+                                                        ]
+                                                    },
+                                                    "updated_by_date": {
+                                                        "type": "null",
+                                                        "default": null,
+                                                        "title": "The updated_by_date Schema",
+                                                        "examples": [
+                                                            null
+                                                        ]
+                                                    },
+                                                    "updated_by_requestor_username": {
+                                                        "type": "null",
+                                                        "default": null,
+                                                        "title": "The updated_by_requestor_username Schema",
+                                                        "examples": [
+                                                            null
+                                                        ]
+                                                    }
+                                                },
+                                                "examples": [{
+                                                    "client_company_id": 153,
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                                    "suppliers_id": 1204,
+                                                    "updated_by_date": null,
+                                                    "updated_by_requestor_username": null
+                                                }]
+                                            },
+                                            "examples": [
+                                                [{
+                                                    "client_company_id": 153,
+                                                    "created_by_date": "2022-08-24",
+                                                    "created_by_requestor_username": "sote-test",
+                                                    "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                                    "suppliers_id": 1204,
+                                                    "updated_by_date": null,
+                                                    "updated_by_requestor_username": null
+                                                }]
+                                            ]
+                                        },
+                                        "created_by_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_date Schema",
+                                            "examples": [
+                                                "2022-08-24"
+                                            ]
+                                        },
+                                        "created_by_requestor_username": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_requestor_username Schema",
+                                            "examples": [
+                                                "sote-test"
+                                            ]
+                                        },
+                                        "row_version": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The row_version Schema",
+                                            "examples": [
+                                                1
+                                            ]
+                                        },
+                                        "updated_by_date": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The updated_by_date Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        },
+                                        "updated_by_requestor_username": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The updated_by_requestor_username Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "children": [{
+                                            "client_company_id": 155,
+                                            "client_company_is_active": true,
+                                            "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                            "company_contacts": [{
+                                                "client_company_id": 155,
+                                                "clientcompanycontacts_id": 109,
+                                                "communication_type": "PHONE",
+                                                "contact_value": "testing@test2.com",
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "name": "Test One"
+                                            }],
+                                            "company_suppliers": [{
+                                                "client_company_id": 155,
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                "suppliers_id": 1210,
                                                 "updated_by_date": null,
                                                 "updated_by_requestor_username": null
-                                            }
-                                        ],
-                                        "created_by_date": "2022-04-06",
-                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                        "row_version": 2,
-                                        "updated_by_date": "2022-04-06",
-                                        "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                                    }
-                                ],
-                                "products": [
-                                    {
-                                        "created_by_date": "2022-04-07",
-                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
+                                            }],
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "organizations_id": 1,
+                                            "row_version": 1,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
+                                        },
+                                            {
+                                                "client_company_id": 156,
+                                                "client_company_is_active": true,
+                                                "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                                "company_contacts": [],
+                                                "company_suppliers": [],
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "organizations_id": 1,
+                                                "row_version": 2,
+                                                "updated_by_date": "2022-08-24",
+                                                "updated_by_requestor_username": "sote-test"
+                                            }],
+                                        "client_company_id": 153,
+                                        "client_company_is_active": true,
+                                        "client_company_name": "SOTE ENGINEERING CLIENT",
+                                        "company_contacts": [{
+                                            "client_company_id": 153,
+                                            "clientcompanycontacts_id": 108,
+                                            "communication_type": "PHONE",
+                                            "contact_value": "testing@test.com",
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "name": "Test One"
+                                        }],
+                                        "company_suppliers": [{
+                                            "client_company_id": 153,
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                            "suppliers_id": 1204,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
+                                        }],
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "row_version": 1,
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }]
+                                },
+                                "examples": [
+                                    [{
+                                        "children": [{
+                                            "client_company_id": 155,
+                                            "client_company_is_active": true,
+                                            "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                            "company_contacts": [{
+                                                "client_company_id": 155,
+                                                "clientcompanycontacts_id": 109,
+                                                "communication_type": "PHONE",
+                                                "contact_value": "testing@test2.com",
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "name": "Test One"
+                                            }],
+                                            "company_suppliers": [{
+                                                "client_company_id": 155,
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                                "suppliers_id": 1210,
+                                                "updated_by_date": null,
+                                                "updated_by_requestor_username": null
+                                            }],
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "organizations_id": 1,
+                                            "row_version": 1,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
+                                        },
+                                            {
+                                                "client_company_id": 156,
+                                                "client_company_is_active": true,
+                                                "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                                "company_contacts": [],
+                                                "company_suppliers": [],
+                                                "created_by_date": "2022-08-24",
+                                                "created_by_requestor_username": "sote-test",
+                                                "organizations_id": 1,
+                                                "row_version": 2,
+                                                "updated_by_date": "2022-08-24",
+                                                "updated_by_requestor_username": "sote-test"
+                                            }],
+                                        "client_company_id": 153,
+                                        "client_company_is_active": true,
+                                        "client_company_name": "SOTE ENGINEERING CLIENT",
+                                        "company_contacts": [{
+                                            "client_company_id": 153,
+                                            "clientcompanycontacts_id": 108,
+                                            "communication_type": "PHONE",
+                                            "contact_value": "testing@test.com",
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "name": "Test One"
+                                        }],
+                                        "company_suppliers": [{
+                                            "client_company_id": 153,
+                                            "created_by_date": "2022-08-24",
+                                            "created_by_requestor_username": "sote-test",
+                                            "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                            "suppliers_id": 1204,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
+                                        }],
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "row_version": 1,
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }]
+                                ]
+                            },
+                            "products": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The products Schema",
+                                "items": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "A Schema",
+                                    "required": [
+                                        "created_by_date",
+                                        "created_by_requestor_username",
+                                        "product_name",
+                                        "updated_by_date",
+                                        "updated_by_requestor_username"
+                                    ],
+                                    "properties": {
+                                        "created_by_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_date Schema",
+                                            "examples": [
+                                                "2022-08-24"
+                                            ]
+                                        },
+                                        "created_by_requestor_username": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The created_by_requestor_username Schema",
+                                            "examples": [
+                                                "sote-test"
+                                            ]
+                                        },
+                                        "product_name": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The product_name Schema",
+                                            "examples": [
+                                                "SOTE PRODUCT1"
+                                            ]
+                                        },
+                                        "updated_by_date": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The updated_by_date Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        },
+                                        "updated_by_requestor_username": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The updated_by_requestor_username Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
                                         "product_name": "SOTE PRODUCT1",
                                         "updated_by_date": null,
                                         "updated_by_requestor_username": null
-                                    }
+                                    }]
+                                },
+                                "examples": [
+                                    [{
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "product_name": "SOTE PRODUCT1",
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }]
                                 ]
                             }
-                        ]
-                    ],
-                    "additionalItems": true,
-                    "items": {
-                        "$id": "#/properties/message/properties/items/items",
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/message/properties/items/items/anyOf/0",
-                                "type": "object",
-                                "title": "The first anyOf schema",
-                                "description": "An explanation about the purpose of this instance.",
-                                "default": {},
-                                "examples": [
-                                    {
-                                        "organizations_id": 1,
-                                        "row_version": 5,
-                                        "organization_is_active": true,
-                                        "organization_name": "SOTE ENGINEERING 11",
-                                        "initial_contact_date": "2020-01-01",
-                                        "customer_since_date": "2021-01-01",
-                                        "contract_start_date": "2021-01-01",
-                                        "contract_end_date": "2023-01-01",
-                                        "estimated_total_users": 200,
-                                        "estimated_total_vehicles": 20,
-                                        "estimated_paid_seats_month": 180,
-                                        "desired_payment_threshold": 500,
-                                        "delete_date": null,
-                                        "created_by_date": "2022-03-29",
-                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                        "updated_by_date": "2022-04-06",
-                                        "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                        "client_companies": [
-                                            {
-                                                "client_company_id": 1,
-                                                "client_company_is_active": true,
-                                                "client_company_name": "SOTE ENGINEERING CLIENT",
-                                                "company_suppliers": [
-                                                    {
-                                                        "client_company_id": 1,
-                                                        "created_by_date": "2022-04-07",
-                                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                        "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                        "suppliers_id": 1,
-                                                        "updated_by_date": null,
-                                                        "updated_by_requestor_username": null
-                                                    }
-                                                ],
-                                                "created_by_date": "2022-04-06",
-                                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                "row_version": 2,
-                                                "updated_by_date": "2022-04-06",
-                                                "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                                            }
-                                        ],
-                                        "products": [
-                                            {
-                                                "created_by_date": "2022-04-07",
-                                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                "product_name": "SOTE PRODUCT1",
-                                                "updated_by_date": null,
-                                                "updated_by_requestor_username": null
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "required": [
-                                    "organizations_id",
-                                    "row_version",
-                                    "organization_is_active",
-                                    "organization_name",
-                                    "created_by_date",
-                                    "created_by_requestor_username"
-                                ],
-                                "properties": {
-                                    "organizations_id": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/organizations_id",
-                                        "type": "integer",
-                                        "title": "The organizations_id schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            1
-                                        ]
-                                    },
-                                    "row_version": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/row_version",
-                                        "type": "integer",
-                                        "title": "The row_version schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            5
-                                        ]
-                                    },
-                                    "organization_is_active": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/organization_is_active",
-                                        "type": "boolean",
-                                        "title": "The organization_is_active schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": false,
-                                        "examples": [
-                                            true
-                                        ]
-                                    },
-                                    "organization_name": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/organization_name",
-                                        "type": "string",
-                                        "title": "The organization_name schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "SOTE ENGINEERING 11"
-                                        ]
-                                    },
-                                    "initial_contact_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/initial_contact_date",
-                                        "type": "string",
-                                        "title": "The initial_contact_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2020-01-01"
-                                        ]
-                                    },
-                                    "customer_since_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/customer_since_date",
-                                        "type": "string",
-                                        "title": "The customer_since_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2021-01-01"
-                                        ]
-                                    },
-                                    "contract_start_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/contract_start_date",
-                                        "type": "string",
-                                        "title": "The contract_start_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2021-01-01"
-                                        ]
-                                    },
-                                    "contract_end_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/contract_end_date",
-                                        "type": "string",
-                                        "title": "The contract_end_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2023-01-01"
-                                        ]
-                                    },
-                                    "estimated_total_users": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/estimated_total_users",
-                                        "type": "integer",
-                                        "title": "The estimated_total_users schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            200
-                                        ]
-                                    },
-                                    "estimated_total_vehicles": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/estimated_total_vehicles",
-                                        "type": "integer",
-                                        "title": "The estimated_total_vehicles schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            20
-                                        ]
-                                    },
-                                    "estimated_paid_seats_month": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/estimated_paid_seats_month",
-                                        "type": "integer",
-                                        "title": "The estimated_paid_seats_month schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            180
-                                        ]
-                                    },
-                                    "desired_payment_threshold": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/desired_payment_threshold",
-                                        "type": "integer",
-                                        "title": "The desired_payment_threshold schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": 0,
-                                        "examples": [
-                                            500
-                                        ]
-                                    },
-                                    "delete_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/delete_date",
-                                        "type": "null",
-                                        "title": "The delete_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": null,
-                                        "examples": [
-                                            null
-                                        ]
-                                    },
-                                    "created_by_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/created_by_date",
-                                        "type": "string",
-                                        "title": "The created_by_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2022-03-29"
-                                        ]
-                                    },
-                                    "created_by_requestor_username": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/created_by_requestor_username",
-                                        "type": "string",
-                                        "title": "The created_by_requestor_username schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "81gc55x3-XXXXXXX-6b2ce5e8"
-                                        ]
-                                    },
-                                    "updated_by_date": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/updated_by_date",
-                                        "type": "string",
-                                        "title": "The updated_by_date schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "2022-04-06"
-                                        ]
-                                    },
-                                    "updated_by_requestor_username": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/updated_by_requestor_username",
-                                        "type": "string",
-                                        "title": "The updated_by_requestor_username schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": "",
-                                        "examples": [
-                                            "81gc55x3-XXXXXXX-6b2ce5e8"
-                                        ]
-                                    },
-                                    "client_companies": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies",
-                                        "type": "array",
-                                        "title": "The client_companies schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": [],
-                                        "examples": [
-                                            [
-                                                {
-                                                    "client_company_id": 1,
-                                                    "client_company_is_active": true,
-                                                    "client_company_name": "SOTE ENGINEERING CLIENT",
-                                                    "company_suppliers": [
-                                                        {
-                                                            "client_company_id": 1,
-                                                            "created_by_date": "2022-04-07",
-                                                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                            "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                            "suppliers_id": 1,
-                                                            "updated_by_date": null,
-                                                            "updated_by_requestor_username": null
-                                                        }
-                                                    ],
-                                                    "created_by_date": "2022-04-06",
-                                                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                    "row_version": 2,
-                                                    "updated_by_date": "2022-04-06",
-                                                    "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                }
-                                            ]
-                                        ],
-                                        "additionalItems": true,
-                                        "items": {
-                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items",
-                                            "anyOf": [
-                                                {
-                                                    "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0",
-                                                    "type": "object",
-                                                    "title": "The first anyOf schema",
-                                                    "description": "An explanation about the purpose of this instance.",
-                                                    "default": {},
-                                                    "examples": [
-                                                        {
-                                                            "client_company_id": 1,
-                                                            "client_company_is_active": true,
-                                                            "client_company_name": "SOTE ENGINEERING CLIENT",
-                                                            "company_suppliers": [
-                                                                {
-                                                                    "client_company_id": 1,
-                                                                    "created_by_date": "2022-04-07",
-                                                                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                                    "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                                    "suppliers_id": 1,
-                                                                    "updated_by_date": null,
-                                                                    "updated_by_requestor_username": null
-                                                                }
-                                                            ],
-                                                            "created_by_date": "2022-04-06",
-                                                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                            "row_version": 2,
-                                                            "updated_by_date": "2022-04-06",
-                                                            "updated_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                        }
-                                                    ],
-                                                    "required": [
-                                                        "client_company_id",
-                                                        "row_version",
-                                                        "client_company_is_active",
-                                                        "client_company_name",
-                                                        "created_by_date",
-                                                        "created_by_requestor_username"
-                                                    ],
-                                                    "properties": {
-                                                        "client_company_id": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/client_company_id",
-                                                            "type": "integer",
-                                                            "title": "The client_company_id schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": 0,
-                                                            "examples": [
-                                                                1
-                                                            ]
-                                                        },
-                                                        "client_company_is_active": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/client_company_is_active",
-                                                            "type": "boolean",
-                                                            "title": "The client_company_is_active schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": false,
-                                                            "examples": [
-                                                                true
-                                                            ]
-                                                        },
-                                                        "client_company_name": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/client_company_name",
-                                                            "type": "string",
-                                                            "title": "The client_company_name schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "SOTE ENGINEERING CLIENT"
-                                                            ]
-                                                        },
-                                                        "company_suppliers": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers",
-                                                            "type": "array",
-                                                            "title": "The company_suppliers schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": [],
-                                                            "examples": [
-                                                                [
-                                                                    {
-                                                                        "client_company_id": 1,
-                                                                        "created_by_date": "2022-04-07",
-                                                                        "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                                        "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                                        "suppliers_id": 1,
-                                                                        "updated_by_date": null,
-                                                                        "updated_by_requestor_username": null
-                                                                    }
-                                                                ]
-                                                            ],
-                                                            "additionalItems": true,
-                                                            "items": {
-                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items",
-                                                                "anyOf": [
-                                                                    {
-                                                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0",
-                                                                        "type": "object",
-                                                                        "title": "The first anyOf schema",
-                                                                        "description": "An explanation about the purpose of this instance.",
-                                                                        "default": {},
-                                                                        "examples": [
-                                                                            {
-                                                                                "client_company_id": 1,
-                                                                                "created_by_date": "2022-04-07",
-                                                                                "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                                                "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
-                                                                                "suppliers_id": 1,
-                                                                                "updated_by_date": null,
-                                                                                "updated_by_requestor_username": null
-                                                                            }
-                                                                        ],
-                                                                        "required": [
-                                                                            "client_company_id",
-                                                                            "created_by_date",
-                                                                            "created_by_requestor_username",
-                                                                            "supplier_name",
-                                                                            "suppliers_id"
-                                                                        ],
-                                                                        "properties": {
-                                                                            "client_company_id": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/client_company_id",
-                                                                                "type": "integer",
-                                                                                "title": "The client_company_id schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0,
-                                                                                "examples": [
-                                                                                    1
-                                                                                ]
-                                                                            },
-                                                                            "created_by_date": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/created_by_date",
-                                                                                "type": "string",
-                                                                                "title": "The created_by_date schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": "",
-                                                                                "examples": [
-                                                                                    "2022-04-07"
-                                                                                ]
-                                                                            },
-                                                                            "created_by_requestor_username": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/created_by_requestor_username",
-                                                                                "type": "string",
-                                                                                "title": "The created_by_requestor_username schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": "",
-                                                                                "examples": [
-                                                                                    "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                                                ]
-                                                                            },
-                                                                            "supplier_name": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/supplier_name",
-                                                                                "type": "string",
-                                                                                "title": "The supplier_name schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": "",
-                                                                                "examples": [
-                                                                                    "SOTE ENGINEERING CLIENT SUPPLIER"
-                                                                                ]
-                                                                            },
-                                                                            "suppliers_id": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/suppliers_id",
-                                                                                "type": "integer",
-                                                                                "title": "The suppliers_id schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": 0,
-                                                                                "examples": [
-                                                                                    1
-                                                                                ]
-                                                                            },
-                                                                            "updated_by_date": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/updated_by_date",
-                                                                                "type": "null",
-                                                                                "title": "The updated_by_date schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": null,
-                                                                                "examples": [
-                                                                                    null
-                                                                                ]
-                                                                            },
-                                                                            "updated_by_requestor_username": {
-                                                                                "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/company_suppliers/items/anyOf/0/properties/updated_by_requestor_username",
-                                                                                "type": "null",
-                                                                                "title": "The updated_by_requestor_username schema",
-                                                                                "description": "An explanation about the purpose of this instance.",
-                                                                                "default": null,
-                                                                                "examples": [
-                                                                                    null
-                                                                                ]
-                                                                            }
-                                                                        },
-                                                                        "additionalProperties": true
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                        "created_by_date": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/created_by_date",
-                                                            "type": "string",
-                                                            "title": "The created_by_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "2022-04-06"
-                                                            ]
-                                                        },
-                                                        "created_by_requestor_username": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/created_by_requestor_username",
-                                                            "type": "string",
-                                                            "title": "The created_by_requestor_username schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                            ]
-                                                        },
-                                                        "row_version": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/row_version",
-                                                            "type": "integer",
-                                                            "title": "The row_version schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": 0,
-                                                            "examples": [
-                                                                2
-                                                            ]
-                                                        },
-                                                        "updated_by_date": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/updated_by_date",
-                                                            "type": "string",
-                                                            "title": "The updated_by_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "2022-04-06"
-                                                            ]
-                                                        },
-                                                        "updated_by_requestor_username": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/client_companies/items/anyOf/0/properties/updated_by_requestor_username",
-                                                            "type": "string",
-                                                            "title": "The updated_by_requestor_username schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                            ]
-                                                        }
-                                                    },
-                                                    "additionalProperties": true
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "products": {
-                                        "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products",
-                                        "type": "array",
-                                        "title": "The products schema",
-                                        "description": "An explanation about the purpose of this instance.",
-                                        "default": [],
-                                        "examples": [
-                                            [
-                                                {
-                                                    "created_by_date": "2022-04-07",
-                                                    "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                    "product_name": "SOTE PRODUCT1",
-                                                    "updated_by_date": null,
-                                                    "updated_by_requestor_username": null
-                                                }
-                                            ]
-                                        ],
-                                        "additionalItems": true,
-                                        "items": {
-                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items",
-                                            "anyOf": [
-                                                {
-                                                    "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0",
-                                                    "type": "object",
-                                                    "title": "The first anyOf schema",
-                                                    "description": "An explanation about the purpose of this instance.",
-                                                    "default": {},
-                                                    "examples": [
-                                                        {
-                                                            "created_by_date": "2022-04-07",
-                                                            "created_by_requestor_username": "81gc55x3-XXXXXXX-6b2ce5e8",
-                                                            "product_name": "SOTE PRODUCT1",
-                                                            "updated_by_date": null,
-                                                            "updated_by_requestor_username": null
-                                                        }
-                                                    ],
-                                                    "required": [
-                                                        "created_by_date",
-                                                        "created_by_requestor_username",
-                                                        "product_name"
-                                                    ],
-                                                    "properties": {
-                                                        "created_by_date": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0/properties/created_by_date",
-                                                            "type": "string",
-                                                            "title": "The created_by_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "2022-04-07"
-                                                            ]
-                                                        },
-                                                        "created_by_requestor_username": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0/properties/created_by_requestor_username",
-                                                            "type": "string",
-                                                            "title": "The created_by_requestor_username schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "81gc55x3-XXXXXXX-6b2ce5e8"
-                                                            ]
-                                                        },
-                                                        "product_name": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0/properties/product_name",
-                                                            "type": "string",
-                                                            "title": "The product_name schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": "",
-                                                            "examples": [
-                                                                "SOTE PRODUCT1"
-                                                            ]
-                                                        },
-                                                        "updated_by_date": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0/properties/updated_by_date",
-                                                            "type": "null",
-                                                            "title": "The updated_by_date schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        },
-                                                        "updated_by_requestor_username": {
-                                                            "$id": "#/properties/message/properties/items/items/anyOf/0/properties/products/items/anyOf/0/properties/updated_by_requestor_username",
-                                                            "type": "null",
-                                                            "title": "The updated_by_requestor_username schema",
-                                                            "description": "An explanation about the purpose of this instance.",
-                                                            "default": null,
-                                                            "examples": [
-                                                                null
-                                                            ]
-                                                        }
-                                                    },
-                                                    "additionalProperties": true
-                                                }
-                                            ]
-                                        }
-                                    }
+                        },
+                        "examples": [{
+                            "organizations_id": 1,
+                            "row_version": 3,
+                            "organization_is_active": true,
+                            "organization_name": "SOTE ENGINEERING",
+                            "initial_contact_date": "2019-12-04",
+                            "customer_since_date": "2019-12-04",
+                            "contract_start_date": null,
+                            "contract_end_date": null,
+                            "estimated_total_users": null,
+                            "estimated_total_vehicles": null,
+                            "estimated_paid_seats_month": null,
+                            "desired_payment_threshold": null,
+                            "delete_date": null,
+                            "created_by_date": "2019-12-04",
+                            "created_by_requestor_username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                            "updated_by_date": "2022-07-20",
+                            "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+                            "client_companies": [{
+                                "children": [{
+                                    "client_company_id": 155,
+                                    "client_company_is_active": true,
+                                    "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                    "company_contacts": [{
+                                        "client_company_id": 155,
+                                        "clientcompanycontacts_id": 109,
+                                        "communication_type": "PHONE",
+                                        "contact_value": "testing@test2.com",
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "name": "Test One"
+                                    }],
+                                    "company_suppliers": [{
+                                        "client_company_id": 155,
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                        "suppliers_id": 1210,
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }],
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "organizations_id": 1,
+                                    "row_version": 1,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
                                 },
-                                "additionalProperties": true
-                            }
-                        ]
-                    }
+                                    {
+                                        "client_company_id": 156,
+                                        "client_company_is_active": true,
+                                        "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                        "company_contacts": [],
+                                        "company_suppliers": [],
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "organizations_id": 1,
+                                        "row_version": 2,
+                                        "updated_by_date": "2022-08-24",
+                                        "updated_by_requestor_username": "sote-test"
+                                    }],
+                                "client_company_id": 153,
+                                "client_company_is_active": true,
+                                "client_company_name": "SOTE ENGINEERING CLIENT",
+                                "company_contacts": [{
+                                    "client_company_id": 153,
+                                    "clientcompanycontacts_id": 108,
+                                    "communication_type": "PHONE",
+                                    "contact_value": "testing@test.com",
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "name": "Test One"
+                                }],
+                                "company_suppliers": [{
+                                    "client_company_id": 153,
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                    "suppliers_id": 1204,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
+                                }],
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "row_version": 1,
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }],
+                            "products": [{
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "product_name": "SOTE PRODUCT1",
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "organizations_id": 1,
+                            "row_version": 3,
+                            "organization_is_active": true,
+                            "organization_name": "SOTE ENGINEERING",
+                            "initial_contact_date": "2019-12-04",
+                            "customer_since_date": "2019-12-04",
+                            "contract_start_date": null,
+                            "contract_end_date": null,
+                            "estimated_total_users": null,
+                            "estimated_total_vehicles": null,
+                            "estimated_paid_seats_month": null,
+                            "desired_payment_threshold": null,
+                            "delete_date": null,
+                            "created_by_date": "2019-12-04",
+                            "created_by_requestor_username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                            "updated_by_date": "2022-07-20",
+                            "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+                            "client_companies": [{
+                                "children": [{
+                                    "client_company_id": 155,
+                                    "client_company_is_active": true,
+                                    "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                                    "company_contacts": [{
+                                        "client_company_id": 155,
+                                        "clientcompanycontacts_id": 109,
+                                        "communication_type": "PHONE",
+                                        "contact_value": "testing@test2.com",
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "name": "Test One"
+                                    }],
+                                    "company_suppliers": [{
+                                        "client_company_id": 155,
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                        "suppliers_id": 1210,
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }],
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "organizations_id": 1,
+                                    "row_version": 1,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
+                                },
+                                    {
+                                        "client_company_id": 156,
+                                        "client_company_is_active": true,
+                                        "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                        "company_contacts": [],
+                                        "company_suppliers": [],
+                                        "created_by_date": "2022-08-24",
+                                        "created_by_requestor_username": "sote-test",
+                                        "organizations_id": 1,
+                                        "row_version": 2,
+                                        "updated_by_date": "2022-08-24",
+                                        "updated_by_requestor_username": "sote-test"
+                                    }],
+                                "client_company_id": 153,
+                                "client_company_is_active": true,
+                                "client_company_name": "SOTE ENGINEERING CLIENT",
+                                "company_contacts": [{
+                                    "client_company_id": 153,
+                                    "clientcompanycontacts_id": 108,
+                                    "communication_type": "PHONE",
+                                    "contact_value": "testing@test.com",
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "name": "Test One"
+                                }],
+                                "company_suppliers": [{
+                                    "client_company_id": 153,
+                                    "created_by_date": "2022-08-24",
+                                    "created_by_requestor_username": "sote-test",
+                                    "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                                    "suppliers_id": 1204,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
+                                }],
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "row_version": 1,
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }],
+                            "products": [{
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "product_name": "SOTE PRODUCT1",
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }]
+                        }]
+                    ]
                 },
                 "pagination": {
-                    "$id": "#/properties/message/properties/pagination",
                     "type": "object",
-                    "title": "The pagination schema",
-                    "description": "An explanation about the purpose of this instance.",
                     "default": {},
-                    "examples": [
-                        {
-                            "total": 1,
-                            "limit": 10,
-                            "offset": 0
-                        }
-                    ],
+                    "title": "The pagination Schema",
                     "required": [
                         "total",
                         "limit",
@@ -868,41 +1278,246 @@
                     ],
                     "properties": {
                         "total": {
-                            "$id": "#/properties/message/properties/pagination/properties/total",
                             "type": "integer",
-                            "title": "The total schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The total Schema",
                             "examples": [
                                 1
                             ]
                         },
                         "limit": {
-                            "$id": "#/properties/message/properties/pagination/properties/limit",
                             "type": "integer",
-                            "title": "The limit schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The limit Schema",
                             "examples": [
                                 10
                             ]
                         },
                         "offset": {
-                            "$id": "#/properties/message/properties/pagination/properties/offset",
                             "type": "integer",
-                            "title": "The offset schema",
-                            "description": "An explanation about the purpose of this instance.",
                             "default": 0,
+                            "title": "The offset Schema",
                             "examples": [
                                 0
                             ]
                         }
                     },
-                    "additionalProperties": true
+                    "examples": [{
+                        "total": 1,
+                        "limit": 10,
+                        "offset": 0
+                    }]
                 }
             },
-            "additionalProperties": true
+            "examples": [{
+                "items": [{
+                    "organizations_id": 1,
+                    "row_version": 3,
+                    "organization_is_active": true,
+                    "organization_name": "SOTE ENGINEERING",
+                    "initial_contact_date": "2019-12-04",
+                    "customer_since_date": "2019-12-04",
+                    "contract_start_date": null,
+                    "contract_end_date": null,
+                    "estimated_total_users": null,
+                    "estimated_total_vehicles": null,
+                    "estimated_paid_seats_month": null,
+                    "desired_payment_threshold": null,
+                    "delete_date": null,
+                    "created_by_date": "2019-12-04",
+                    "created_by_requestor_username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                    "updated_by_date": "2022-07-20",
+                    "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+                    "client_companies": [{
+                        "children": [{
+                            "client_company_id": 155,
+                            "client_company_is_active": true,
+                            "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                            "company_contacts": [{
+                                "client_company_id": 155,
+                                "clientcompanycontacts_id": 109,
+                                "communication_type": "PHONE",
+                                "contact_value": "testing@test2.com",
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "name": "Test One"
+                            }],
+                            "company_suppliers": [{
+                                "client_company_id": 155,
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                                "suppliers_id": 1210,
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }],
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "organizations_id": 1,
+                            "row_version": 1,
+                            "updated_by_date": null,
+                            "updated_by_requestor_username": null
+                        },
+                            {
+                                "client_company_id": 156,
+                                "client_company_is_active": true,
+                                "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                                "company_contacts": [],
+                                "company_suppliers": [],
+                                "created_by_date": "2022-08-24",
+                                "created_by_requestor_username": "sote-test",
+                                "organizations_id": 1,
+                                "row_version": 2,
+                                "updated_by_date": "2022-08-24",
+                                "updated_by_requestor_username": "sote-test"
+                            }],
+                        "client_company_id": 153,
+                        "client_company_is_active": true,
+                        "client_company_name": "SOTE ENGINEERING CLIENT",
+                        "company_contacts": [{
+                            "client_company_id": 153,
+                            "clientcompanycontacts_id": 108,
+                            "communication_type": "PHONE",
+                            "contact_value": "testing@test.com",
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "name": "Test One"
+                        }],
+                        "company_suppliers": [{
+                            "client_company_id": 153,
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                            "suppliers_id": 1204,
+                            "updated_by_date": null,
+                            "updated_by_requestor_username": null
+                        }],
+                        "created_by_date": "2022-08-24",
+                        "created_by_requestor_username": "sote-test",
+                        "row_version": 1,
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    }],
+                    "products": [{
+                        "created_by_date": "2022-08-24",
+                        "created_by_requestor_username": "sote-test",
+                        "product_name": "SOTE PRODUCT1",
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    }]
+                }],
+                "pagination": {
+                    "total": 1,
+                    "limit": 10,
+                    "offset": 0
+                }
+            }]
         }
     },
-    "additionalProperties": true
+    "examples": [{
+        "message-id": "test-message",
+        "message": {
+            "items": [{
+                "organizations_id": 1,
+                "row_version": 3,
+                "organization_is_active": true,
+                "organization_name": "SOTE ENGINEERING",
+                "initial_contact_date": "2019-12-04",
+                "customer_since_date": "2019-12-04",
+                "contract_start_date": null,
+                "contract_end_date": null,
+                "estimated_total_users": null,
+                "estimated_total_vehicles": null,
+                "estimated_paid_seats_month": null,
+                "desired_payment_threshold": null,
+                "delete_date": null,
+                "created_by_date": "2019-12-04",
+                "created_by_requestor_username": "7f3ac6f7-a8d1-41b8-99b1-0e56e1f99240",
+                "updated_by_date": "2022-07-20",
+                "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+                "client_companies": [{
+                    "children": [{
+                        "client_company_id": 155,
+                        "client_company_is_active": true,
+                        "client_company_name": "SOTE ENGINEERING CLIENT CHILD",
+                        "company_contacts": [{
+                            "client_company_id": 155,
+                            "clientcompanycontacts_id": 109,
+                            "communication_type": "PHONE",
+                            "contact_value": "testing@test2.com",
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "name": "Test One"
+                        }],
+                        "company_suppliers": [{
+                            "client_company_id": 155,
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "supplier_name": "SOTE ENGINEERING CLIENT2 SUPPLIER",
+                            "suppliers_id": 1210,
+                            "updated_by_date": null,
+                            "updated_by_requestor_username": null
+                        }],
+                        "created_by_date": "2022-08-24",
+                        "created_by_requestor_username": "sote-test",
+                        "organizations_id": 1,
+                        "row_version": 1,
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    },
+                        {
+                            "client_company_id": 156,
+                            "client_company_is_active": true,
+                            "client_company_name": "SOTE ENGINEERING CLIENT CHILD2",
+                            "company_contacts": [],
+                            "company_suppliers": [],
+                            "created_by_date": "2022-08-24",
+                            "created_by_requestor_username": "sote-test",
+                            "organizations_id": 1,
+                            "row_version": 2,
+                            "updated_by_date": "2022-08-24",
+                            "updated_by_requestor_username": "sote-test"
+                        }],
+                    "client_company_id": 153,
+                    "client_company_is_active": true,
+                    "client_company_name": "SOTE ENGINEERING CLIENT",
+                    "company_contacts": [{
+                        "client_company_id": 153,
+                        "clientcompanycontacts_id": 108,
+                        "communication_type": "PHONE",
+                        "contact_value": "testing@test.com",
+                        "created_by_date": "2022-08-24",
+                        "created_by_requestor_username": "sote-test",
+                        "name": "Test One"
+                    }],
+                    "company_suppliers": [{
+                        "client_company_id": 153,
+                        "created_by_date": "2022-08-24",
+                        "created_by_requestor_username": "sote-test",
+                        "supplier_name": "SOTE ENGINEERING CLIENT SUPPLIER",
+                        "suppliers_id": 1204,
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    }],
+                    "created_by_date": "2022-08-24",
+                    "created_by_requestor_username": "sote-test",
+                    "row_version": 1,
+                    "updated_by_date": null,
+                    "updated_by_requestor_username": null
+                }],
+                "products": [{
+                    "created_by_date": "2022-08-24",
+                    "created_by_requestor_username": "sote-test",
+                    "product_name": "SOTE PRODUCT1",
+                    "updated_by_date": null,
+                    "updated_by_requestor_username": null
+                }]
+            }],
+            "pagination": {
+                "total": 1,
+                "limit": 10,
+                "offset": 0
+            }
+        }
+    }]
 }
