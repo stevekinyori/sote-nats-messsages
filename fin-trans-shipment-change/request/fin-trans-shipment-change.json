@@ -1,0 +1,55 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"$id": "http://example.com/example.json",
+	"type": "object",
+	"default": {},
+	"title": "Root Schema",
+	"required": [
+		"shipment-fintrans-id",
+		"shipments-id"
+	],
+	"optional": [
+		"external-system-id",
+		"fintrans-documents-id"
+	],
+	"properties": {
+		"shipment-fintrans-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The shipment-fintrans-id Schema",
+			"examples": [
+				1
+			]
+		},
+		"shipments-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The shipments-id Schema",
+			"examples": [
+				2
+			]
+		},
+		"external-system-id": {
+			"type": "string",
+			"default": "",
+			"title": "The external-system-id Schema",
+			"examples": [
+				"3"
+			]
+		},
+		"fintrans-documents-id": {
+			"type": "integer",
+			"default": 0,
+			"title": "The fintrans-documents-id Schema",
+			"examples": [
+				4
+			]
+		}
+	},
+	"examples": [{
+		"shipment-fintrans-id": 1,
+		"shipments-id": 2,
+		"external-system-id": "3",
+		"fintrans-documents-id": 4
+	}]
+}
