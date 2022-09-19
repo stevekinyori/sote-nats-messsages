@@ -9,7 +9,8 @@
 		"shipments-id",
 		"fintrans-type",
 		"currency",
-		"amount"
+		"amount",
+		"transaction-date"
 	],
 	"optional": [
 		"cost-is-unexpected",
@@ -84,6 +85,14 @@
 			"title": "The amount Schema",
 			"examples": [
 				15000
+			]
+		},
+		"transaction-date": {
+			"type": "string",
+			"default": "",
+			"title": "The transaction-date Schema",
+			"examples": [
+				"2022-09-19"
 			]
 		},
 		"cost-is-unexpected": {
@@ -169,6 +178,7 @@
 		"fintrans-type": "DOCUMENT_PROCESSING_FEES",
 		"currency": "KSH",
 		"amount": 15000,
+		"transaction-date": "2022-09-19",
 		"cost-is-unexpected": false,
 		"bill-of-lading": "Test BOL",
 		"memo": "Test Memo",

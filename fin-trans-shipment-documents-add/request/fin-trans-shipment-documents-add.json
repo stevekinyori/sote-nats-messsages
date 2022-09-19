@@ -7,7 +7,8 @@
     "required": [
         "ledger-status",
         "fintrans-document-type",
-        "shipments-id"
+        "shipments-id",
+        "transaction-date"
     ],
     "properties": {
         "ledger-status": {
@@ -65,6 +66,14 @@
             "examples": [
                 "EXTERNAL ID 3"
             ]
+        },
+        "transaction-date": {
+            "type": "string",
+            "default": "",
+            "title": "The transaction-date Schema",
+            "examples": [
+                "2022-10-10"
+            ]
         }
     },
     "examples": [{
@@ -74,6 +83,7 @@
         "document-reference": "REFERENCE 3",
         "documents-id": 1,
         "due-date": "2021-10-13",
-        "external-system-id": "EXTERNAL ID 3"
+        "external-system-id": "EXTERNAL ID 3",
+        "transaction-date": "2021-10-10"
     }]
 }

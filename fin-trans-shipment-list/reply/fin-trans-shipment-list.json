@@ -14,7 +14,7 @@
             "default": "",
             "title": "The message-id Schema",
             "examples": [
-                "test-message-mary"
+                "test-message"
             ]
         },
         "message": {
@@ -43,6 +43,7 @@
                             "financialtransactions_type",
                             "currency_type",
                             "transactions_amount",
+                            "transaction_date",
                             "transactions_timestamp",
                             "created_by_requestor-username",
                             "bill_of_lading",
@@ -120,6 +121,14 @@
                                 "title": "The transactions_amount Schema",
                                 "examples": [
                                     500000
+                                ]
+                            },
+                            "transaction_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The transaction_date Schema",
+                                "examples": [
+                                    "2022-08-03"
                                 ]
                             },
                             "transactions_timestamp": {
@@ -324,7 +333,8 @@
                                     "financial_document_type",
                                     "financialdocuments_id",
                                     "ledger_status",
-                                    "shipments_id"
+                                    "shipments_id",
+                                    "transaction_date"
                                 ],
                                 "properties": {
                                     "created_by_date": {
@@ -406,6 +416,14 @@
                                         "examples": [
                                             999999999991
                                         ]
+                                    },
+                                    "transaction_date": {
+                                        "type": "string",
+                                        "default": "",
+                                        "title": "The transaction_date Schema",
+                                        "examples": [
+                                            "2022-08-07"
+                                        ]
                                     }
                                 },
                                 "examples": [{
@@ -418,7 +436,8 @@
                                     "financial_document_type": "Invoice",
                                     "financialdocuments_id": 1,
                                     "ledger_status": "test-status",
-                                    "shipments_id": 999999999991
+                                    "shipments_id": 999999999991,
+                                    "transaction_date": "2022-08-07"
                                 }]
                             },
                             "children": {
@@ -448,6 +467,7 @@
                                         "tax_amount",
                                         "tax_rate",
                                         "transactions_amount",
+                                        "transaction_date",
                                         "transactions_entry_type",
                                         "transactions_timestamp"
                                     ],
@@ -522,7 +542,8 @@
                                                 "financial_document_type",
                                                 "financialdocuments_id",
                                                 "ledger_status",
-                                                "shipments_id"
+                                                "shipments_id",
+                                                "transaction_date"
                                             ],
                                             "properties": {
                                                 "created_by_date": {
@@ -604,6 +625,14 @@
                                                     "examples": [
                                                         999999999991
                                                     ]
+                                                },
+                                                "transaction_date": {
+                                                    "type": "string",
+                                                    "default": "",
+                                                    "title": "The transaction_date Schema",
+                                                    "examples": [
+                                                        "2022-08-07"
+                                                    ]
                                                 }
                                             },
                                             "examples": [{
@@ -616,7 +645,8 @@
                                                 "financial_document_type": "Invoice",
                                                 "financialdocuments_id": 2,
                                                 "ledger_status": "test-status",
-                                                "shipments_id": 999999999991
+                                                "shipments_id": 999999999991,
+                                                "transaction_date": "2022-08-07"
                                             }]
                                         },
                                         "financialdocuments_id": {
@@ -799,6 +829,14 @@
                                                 500000
                                             ]
                                         },
+                                        "transaction_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The transaction_date Schema",
+                                            "examples": [
+                                                "2022-08-07"
+                                            ]
+                                        },
                                         "transactions_entry_type": {
                                             "type": "string",
                                             "default": "",
@@ -834,7 +872,8 @@
                                             "financial_document_type": "Invoice",
                                             "financialdocuments_id": 2,
                                             "ledger_status": "test-status",
-                                            "shipments_id": 999999999991
+                                            "shipments_id": 999999999991,
+                                            "transaction_date": "2022-08-07"
                                         },
                                         "financialdocuments_id": 2,
                                         "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -855,6 +894,7 @@
                                         "tax_amount": 500,
                                         "tax_rate": 0.5,
                                         "transactions_amount": 500000,
+                                        "transaction_date": "2022-08-07",
                                         "transactions_entry_type": "DEBIT",
                                         "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                                     }]
@@ -878,7 +918,8 @@
                                             "financial_document_type": "Invoice",
                                             "financialdocuments_id": 2,
                                             "ledger_status": "test-status",
-                                            "shipments_id": 999999999991
+                                            "shipments_id": 999999999991,
+                                            "transaction_date": "2022-08-07"
                                         },
                                         "financialdocuments_id": 2,
                                         "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -899,6 +940,7 @@
                                         "tax_amount": 500,
                                         "tax_rate": 0.5,
                                         "transactions_amount": 500000,
+                                        "transaction_date": "2022-08-07",
                                         "transactions_entry_type": "DEBIT",
                                         "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                                     }]
@@ -914,6 +956,7 @@
                             "financialtransactions_type": "TEST_FINTRANS_TYPE",
                             "currency_type": "USD",
                             "transactions_amount": 500000,
+                            "transaction_date": "2022-08-03",
                             "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                             "created_by_requestor-username": "test-user",
                             "bill_of_lading": "test bol",
@@ -944,7 +987,8 @@
                                 "financial_document_type": "Invoice",
                                 "financialdocuments_id": 1,
                                 "ledger_status": "test-status",
-                                "shipments_id": 999999999991
+                                "shipments_id": 999999999991,
+                                "transaction_date": "2022-08-07"
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
@@ -964,7 +1008,8 @@
                                     "financial_document_type": "Invoice",
                                     "financialdocuments_id": 2,
                                     "ledger_status": "test-status",
-                                    "shipments_id": 999999999991
+                                    "shipments_id": 999999999991,
+                                    "transaction_date": "2022-08-07"
                                 },
                                 "financialdocuments_id": 2,
                                 "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -985,6 +1030,7 @@
                                 "tax_amount": 500,
                                 "tax_rate": 0.5,
                                 "transactions_amount": 500000,
+                                "transaction_date": "2022-08-07",
                                 "transactions_entry_type": "DEBIT",
                                 "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                             }]
@@ -1000,6 +1046,7 @@
                             "financialtransactions_type": "TEST_FINTRANS_TYPE",
                             "currency_type": "USD",
                             "transactions_amount": 500000,
+                            "transaction_date": "2022-08-03",
                             "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                             "created_by_requestor-username": "test-user",
                             "bill_of_lading": "test bol",
@@ -1030,7 +1077,8 @@
                                 "financial_document_type": "Invoice",
                                 "financialdocuments_id": 1,
                                 "ledger_status": "test-status",
-                                "shipments_id": 999999999991
+                                "shipments_id": 999999999991,
+                                "transaction_date": "2022-08-07"
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
@@ -1050,7 +1098,8 @@
                                     "financial_document_type": "Invoice",
                                     "financialdocuments_id": 2,
                                     "ledger_status": "test-status",
-                                    "shipments_id": 999999999991
+                                    "shipments_id": 999999999991,
+                                    "transaction_date": "2022-08-07"
                                 },
                                 "financialdocuments_id": 2,
                                 "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1071,6 +1120,7 @@
                                 "tax_amount": 500,
                                 "tax_rate": 0.5,
                                 "transactions_amount": 500000,
+                                "transaction_date": "2022-08-07",
                                 "transactions_entry_type": "DEBIT",
                                 "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                             }]
@@ -1129,6 +1179,7 @@
                     "financialtransactions_type": "TEST_FINTRANS_TYPE",
                     "currency_type": "USD",
                     "transactions_amount": 500000,
+                    "transaction_date": "2022-08-03",
                     "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                     "created_by_requestor-username": "test-user",
                     "bill_of_lading": "test bol",
@@ -1159,7 +1210,8 @@
                         "financial_document_type": "Invoice",
                         "financialdocuments_id": 1,
                         "ledger_status": "test-status",
-                        "shipments_id": 999999999991
+                        "shipments_id": 999999999991,
+                        "transaction_date": "2022-08-07"
                     },
                     "children": [{
                         "bill_of_lading": "test bol",
@@ -1179,7 +1231,8 @@
                             "financial_document_type": "Invoice",
                             "financialdocuments_id": 2,
                             "ledger_status": "test-status",
-                            "shipments_id": 999999999991
+                            "shipments_id": 999999999991,
+                            "transaction_date": "2022-08-07"
                         },
                         "financialdocuments_id": 2,
                         "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1200,6 +1253,7 @@
                         "tax_amount": 500,
                         "tax_rate": 0.5,
                         "transactions_amount": 500000,
+                        "transaction_date": "2022-08-07",
                         "transactions_entry_type": "DEBIT",
                         "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                     }]
@@ -1213,7 +1267,7 @@
         }
     },
     "examples": [{
-        "message-id": "test-message-mary",
+        "message-id": "test-message",
         "message": {
             "items": [{
                 "shipmentfinancialtransactions_id": 999999999999,
@@ -1224,6 +1278,7 @@
                 "financialtransactions_type": "TEST_FINTRANS_TYPE",
                 "currency_type": "USD",
                 "transactions_amount": 500000,
+                "transaction_date": "2022-08-03",
                 "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                 "created_by_requestor-username": "test-user",
                 "bill_of_lading": "test bol",
@@ -1254,7 +1309,8 @@
                     "financial_document_type": "Invoice",
                     "financialdocuments_id": 1,
                     "ledger_status": "test-status",
-                    "shipments_id": 999999999991
+                    "shipments_id": 999999999991,
+                    "transaction_date": "2022-08-07"
                 },
                 "children": [{
                     "bill_of_lading": "test bol",
@@ -1274,7 +1330,8 @@
                         "financial_document_type": "Invoice",
                         "financialdocuments_id": 2,
                         "ledger_status": "test-status",
-                        "shipments_id": 999999999991
+                        "shipments_id": 999999999991,
+                        "transaction_date": "2022-08-07"
                     },
                     "financialdocuments_id": 2,
                     "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1295,6 +1352,7 @@
                     "tax_amount": 500,
                     "tax_rate": 0.5,
                     "transactions_amount": 500000,
+                    "transaction_date": "2022-08-07",
                     "transactions_entry_type": "DEBIT",
                     "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                 }]
