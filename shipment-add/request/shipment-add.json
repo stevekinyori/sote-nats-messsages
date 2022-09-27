@@ -225,6 +225,126 @@
             "examples": [
                 true
             ]
+        },
+        "idf-date": {
+            "type": "string",
+            "default": "",
+            "title": "The idf-date Schema",
+            "examples": [
+                "2022-11-10"
+            ]
+        },
+        "original-documents-received-date": {
+            "type": "string",
+            "default": "",
+            "title": "The original-documents-received-date Schema",
+            "examples": [
+                "2022-11-11"
+            ]
+        },
+        "shipping-line": {
+            "type": "string",
+            "default": "",
+            "title": "The shipping-line Schema",
+            "examples": [
+                "Test Shipping Line"
+            ]
+        },
+        "entry-registration-date": {
+            "type": "string",
+            "default": "",
+            "title": "The entry-registration-date Schema",
+            "examples": [
+                "2022-11-12"
+            ]
+        },
+        "taxes-paid-date": {
+            "type": "string",
+            "default": "",
+            "title": "The taxes-paid-date Schema",
+            "examples": [
+                "2022-11-13"
+            ]
+        },
+        "entry-pass-date": {
+            "type": "string",
+            "default": "",
+            "title": "The entry-pass-date Schema",
+            "examples": [
+                "2022-11-14"
+            ]
+        },
+        "shipping-charges-paid-date": {
+            "type": "string",
+            "default": "",
+            "title": "The shipping-charges-paid-date Schema",
+            "examples": [
+                "2022-11-15"
+            ]
+        },
+        "freight-vessel": {
+            "type": "string",
+            "default": "",
+            "title": "The freight-vessel Schema",
+            "examples": [
+                "ship"
+            ]
+        },
+        "idf-number": {
+            "type": "string",
+            "default": "",
+            "title": "The idf-number Schema",
+            "examples": [
+                "IDF 1234"
+            ]
+        },
+        "last-sling-date": {
+            "type": "string",
+            "default": "",
+            "title": "The last-sling-date Schema",
+            "examples": [
+                "2022-11-16"
+            ]
+        },
+        "booking-date": {
+            "type": "string",
+            "default": "",
+            "title": "The booking-date Schema",
+            "examples": [
+                "2022-11-17"
+            ]
+        },
+        "proforma-invoice-number": {
+            "type": "string",
+            "default": "",
+            "title": "The proforma-invoice-number Schema",
+            "examples": [
+                "Proforma INV 1234"
+            ]
+        },
+        "customs-entry-number": {
+            "type": "string",
+            "default": "",
+            "title": "The customs-entry-number Schema",
+            "examples": [
+                "Customs 123"
+            ]
+        },
+        "customs-entry-type": {
+            "type": "string",
+            "default": "",
+            "title": "The customs-entry-type Schema",
+            "examples": [
+                "New Type"
+            ]
+        },
+        "entry-shared-date": {
+            "type": "string",
+            "default": "",
+            "title": "The entry-shared-date Schema",
+            "examples": [
+                "2022-11-18"
+            ]
         }
     },
     "examples": [{
@@ -254,6 +374,21 @@
         "commercial-invoice-currency-type": "ksh",
         "country-of-origin": "India",
         "dangerous-cargo": true,
-        "restricted-goods": true
+        "restricted-goods": true,
+        "idf-date": "2022-11-10",
+        "original-documents-received-date": "2022-11-11",
+        "shipping-line": "Test Shipping Line",
+        "entry-registration-date": "2022-11-12",
+        "taxes-paid-date": "2022-11-13",
+        "entry-pass-date": "2022-11-14",
+        "shipping-charges-paid-date": "2022-11-15",
+        "freight-vessel": "ship",
+        "idf-number": "IDF 1234",
+        "last-sling-date": "2022-11-16",
+        "booking-date": "2022-11-17",
+        "proforma-invoice-number": "Proforma INV 1234",
+        "customs-entry-number": "Customs 123",
+        "customs-entry-type": "New Type",
+        "entry-shared-date": "2022-11-18"
     }]
 }
