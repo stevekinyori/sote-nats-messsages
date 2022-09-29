@@ -35,9 +35,7 @@
                 "external_system_id",
                 "transaction_date",
                 "created_by_date",
-                "created_by_requestor_username",
-                "line_items",
-                "children"
+                "created_by_requestor_username"
             ],
             "properties": {
                 "financialdocuments_id": {
@@ -136,6 +134,38 @@
                         "2022-12-12"
                     ]
                 },
+                "currency_type": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The currency_type Schema",
+                    "examples": [
+                        "KES"
+                    ]
+                },
+                "total_amount": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The total_amount Schema",
+                    "examples": [
+                        1000
+                    ]
+                },
+                "paid_amount": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The paid_amount Schema",
+                    "examples": [
+                        900
+                    ]
+                },
+                "total_balance": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The total_balance Schema",
+                    "examples": [
+                        100
+                    ]
+                },
                 "created_by_date": {
                     "type": "string",
                     "default": "",
@@ -209,253 +239,6 @@
                             "transactions_entry_type": "DEBIT"
                         }
                     }]
-                },
-                "children": {
-                    "type": "array",
-                    "default": [],
-                    "title": "The children Schema",
-                    "items": {
-                        "type": "object",
-                        "default": {},
-                        "title": "A Schema",
-                        "required": [
-                            "bill_of_lading",
-                            "client_company_id",
-                            "created_by_date",
-                            "created_by_requestor_username",
-                            "document_reference",
-                            "documents_id",
-                            "due_date",
-                            "external_system_id",
-                            "financial_document_type",
-                            "financialdocuments_id",
-                            "ledger_status",
-                            "line_items",
-                            "organizations_id",
-                            "shipments_id",
-                            "transaction_date"
-                        ],
-                        "properties": {
-                            "bill_of_lading": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The bill_of_lading Schema",
-                                "examples": [
-                                    "TEST BOL 1"
-                                ]
-                            },
-                            "client_company_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The client_company_id Schema",
-                                "examples": [
-                                    999999999991
-                                ]
-                            },
-                            "created_by_date": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The created_by_date Schema",
-                                "examples": [
-                                    "2022-09-19"
-                                ]
-                            },
-                            "created_by_requestor_username": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The created_by_requestor_username Schema",
-                                "examples": [
-                                    "SOTE-USER"
-                                ]
-                            },
-                            "document_reference": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The document_reference Schema",
-                                "examples": [
-                                    "TEST REF"
-                                ]
-                            },
-                            "documents_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The documents_id Schema",
-                                "examples": [
-                                    1
-                                ]
-                            },
-                            "due_date": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The due_date Schema",
-                                "examples": [
-                                    "2022-12-12"
-                                ]
-                            },
-                            "external_system_id": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The external_system_id Schema",
-                                "examples": [
-                                    "TEST SYSTEM ID"
-                                ]
-                            },
-                            "financial_document_type": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The financial_document_type Schema",
-                                "examples": [
-                                    "TEST TYPE"
-                                ]
-                            },
-                            "financialdocuments_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The financialdocuments_id Schema",
-                                "examples": [
-                                    2
-                                ]
-                            },
-                            "ledger_status": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The ledger_status Schema",
-                                "examples": [
-                                    "TEST LEDGER STATUS"
-                                ]
-                            },
-                            "line_items": {
-                                "type": "object",
-                                "default": {},
-                                "title": "The line_items Schema",
-                                "required": [
-                                    "1"
-                                ],
-                                "properties": {
-                                    "1": {
-                                        "type": "object",
-                                        "default": {},
-                                        "title": "The 1 Schema",
-                                        "required": [
-                                            "external_system_id",
-                                            "shipmentfinancialtransactions_id",
-                                            "transactions_entry_type"
-                                        ],
-                                        "properties": {
-                                            "external_system_id": {
-                                                "type": "string",
-                                                "default": "",
-                                                "title": "The external_system_id Schema",
-                                                "examples": [
-                                                    "1"
-                                                ]
-                                            },
-                                            "shipmentfinancialtransactions_id": {
-                                                "type": "integer",
-                                                "default": 0,
-                                                "title": "The shipmentfinancialtransactions_id Schema",
-                                                "examples": [
-                                                    1000000000000
-                                                ]
-                                            },
-                                            "transactions_entry_type": {
-                                                "type": "string",
-                                                "default": "",
-                                                "title": "The transactions_entry_type Schema",
-                                                "examples": [
-                                                    "DEBIT"
-                                                ]
-                                            }
-                                        },
-                                        "examples": [{
-                                            "external_system_id": "1",
-                                            "shipmentfinancialtransactions_id": 1000000000000,
-                                            "transactions_entry_type": "DEBIT"
-                                        }]
-                                    }
-                                },
-                                "examples": [{
-                                    "1": {
-                                        "external_system_id": "1",
-                                        "shipmentfinancialtransactions_id": 1000000000000,
-                                        "transactions_entry_type": "DEBIT"
-                                    }
-                                }]
-                            },
-                            "organizations_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The organizations_id Schema",
-                                "examples": [
-                                    1
-                                ]
-                            },
-                            "shipments_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The shipments_id Schema",
-                                "examples": [
-                                    999999999994
-                                ]
-                            },
-                            "transaction_date": {
-                                "type": "string",
-                                "default": "",
-                                "title": "The transaction_date Schema",
-                                "examples": [
-                                    "2022-12-12"
-                                ]
-                            }
-                        },
-                        "examples": [{
-                            "bill_of_lading": "TEST BOL 1",
-                            "client_company_id": 999999999991,
-                            "created_by_date": "2022-09-19",
-                            "created_by_requestor_username": "SOTE-USER",
-                            "document_reference": "TEST REF",
-                            "documents_id": 1,
-                            "due_date": "2022-12-12",
-                            "external_system_id": "TEST SYSTEM ID",
-                            "financial_document_type": "TEST TYPE",
-                            "financialdocuments_id": 2,
-                            "ledger_status": "TEST LEDGER STATUS",
-                            "line_items": {
-                                "1": {
-                                    "external_system_id": "1",
-                                    "shipmentfinancialtransactions_id": 1000000000000,
-                                    "transactions_entry_type": "DEBIT"
-                                }
-                            },
-                            "organizations_id": 1,
-                            "shipments_id": 999999999994,
-                            "transaction_date": "2022-12-12"
-                        }]
-                    },
-                    "examples": [
-                        [{
-                            "bill_of_lading": "TEST BOL 1",
-                            "client_company_id": 999999999991,
-                            "created_by_date": "2022-09-19",
-                            "created_by_requestor_username": "SOTE-USER",
-                            "document_reference": "TEST REF",
-                            "documents_id": 1,
-                            "due_date": "2022-12-12",
-                            "external_system_id": "TEST SYSTEM ID",
-                            "financial_document_type": "TEST TYPE",
-                            "financialdocuments_id": 2,
-                            "ledger_status": "TEST LEDGER STATUS",
-                            "line_items": {
-                                "1": {
-                                    "external_system_id": "1",
-                                    "shipmentfinancialtransactions_id": 1000000000000,
-                                    "transactions_entry_type": "DEBIT"
-                                }
-                            },
-                            "organizations_id": 1,
-                            "shipments_id": 999999999994,
-                            "transaction_date": "2022-12-12"
-                        }]
-                    ]
                 }
             },
             "examples": [{
@@ -471,6 +254,10 @@
                 "due_date": "2022-12-12",
                 "external_system_id": "TEST REF",
                 "transaction_date": "2022-12-12",
+                "currency_type": "KES",
+                "total_amount": 1000,
+                "paid_amount": 900,
+                "total_balance": 100,
                 "created_by_date": "2022-09-19",
                 "created_by_requestor_username": "SOTE-USER",
                 "line_items": {
@@ -479,30 +266,7 @@
                         "shipmentfinancialtransactions_id": 999999999999,
                         "transactions_entry_type": "DEBIT"
                     }
-                },
-                "children": [{
-                    "bill_of_lading": "TEST BOL 1",
-                    "client_company_id": 999999999991,
-                    "created_by_date": "2022-09-19",
-                    "created_by_requestor_username": "SOTE-USER",
-                    "document_reference": "TEST REF",
-                    "documents_id": 1,
-                    "due_date": "2022-12-12",
-                    "external_system_id": "TEST SYSTEM ID",
-                    "financial_document_type": "TEST TYPE",
-                    "financialdocuments_id": 2,
-                    "ledger_status": "TEST LEDGER STATUS",
-                    "line_items": {
-                        "1": {
-                            "external_system_id": "1",
-                            "shipmentfinancialtransactions_id": 1000000000000,
-                            "transactions_entry_type": "DEBIT"
-                        }
-                    },
-                    "organizations_id": 1,
-                    "shipments_id": 999999999994,
-                    "transaction_date": "2022-12-12"
-                }]
+                }
             }]
         }
     },
@@ -521,6 +285,10 @@
             "due_date": "2022-12-12",
             "external_system_id": "TEST REF",
             "transaction_date": "2022-12-12",
+            "currency_type": "KES",
+            "total_amount": 1000,
+            "paid_amount": 900,
+            "total_balance": 100,
             "created_by_date": "2022-09-19",
             "created_by_requestor_username": "SOTE-USER",
             "line_items": {
@@ -529,30 +297,7 @@
                     "shipmentfinancialtransactions_id": 999999999999,
                     "transactions_entry_type": "DEBIT"
                 }
-            },
-            "children": [{
-                "bill_of_lading": "TEST BOL 1",
-                "client_company_id": 999999999991,
-                "created_by_date": "2022-09-19",
-                "created_by_requestor_username": "SOTE-USER",
-                "document_reference": "TEST REF",
-                "documents_id": 1,
-                "due_date": "2022-12-12",
-                "external_system_id": "TEST SYSTEM ID",
-                "financial_document_type": "TEST TYPE",
-                "financialdocuments_id": 2,
-                "ledger_status": "TEST LEDGER STATUS",
-                "line_items": {
-                    "1": {
-                        "external_system_id": "1",
-                        "shipmentfinancialtransactions_id": 1000000000000,
-                        "transactions_entry_type": "DEBIT"
-                    }
-                },
-                "organizations_id": 1,
-                "shipments_id": 999999999994,
-                "transaction_date": "2022-12-12"
-            }]
+            }
         }
     }]
 }
