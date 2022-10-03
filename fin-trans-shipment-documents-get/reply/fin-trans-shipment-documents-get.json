@@ -27,6 +27,7 @@
                 "financial_document_type",
                 "organizations_id",
                 "client_company_id",
+                "client_company_name",
                 "shipments_id",
                 "bill_of_lading",
                 "document_reference",
@@ -76,6 +77,14 @@
                     "title": "The client_company_id Schema",
                     "examples": [
                         999999999991
+                    ]
+                },
+                "client_company_name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The client_company_name Schema",
+                    "examples": [
+                        "ACME CONTAINERS LTD THREE"
                     ]
                 },
                 "shipments_id": {
@@ -247,6 +256,7 @@
                 "financial_document_type": "TEST TYPE",
                 "organizations_id": 1,
                 "client_company_id": 999999999991,
+                "client_company_name": "ACME CONTAINERS LTD THREE",
                 "shipments_id": 999999999991,
                 "bill_of_lading": "TEST BOL 1",
                 "document_reference": "TEST REF",
