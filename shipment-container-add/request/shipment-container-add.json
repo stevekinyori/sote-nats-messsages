@@ -108,27 +108,61 @@
         "demurrage-date": {
             "type": "string",
             "default": "",
-            "title": "The demurrage Schema",
+            "title": "The demurrage-date Schema",
             "examples": [
                 "2022-12-11"
             ]
+        },
+        "cfs-gate-in": {
+            "type": "string",
+            "default": "",
+            "title": "The cfs-gate-in Schema",
+            "examples": [
+                "2023-01-11"
+            ]
+        },
+        "cfs-last-free-day": {
+            "type": "string",
+            "default": "",
+            "title": "The cfs-last-free-day Schema",
+            "examples": [
+                "2023-02-11"
+            ]
+        },
+        "loading-date": {
+            "type": "string",
+            "default": "",
+            "title": "The loading-date Schema",
+            "examples": [
+                "2023-03-11"
+            ]
+        },
+        "interchange-type": {
+            "type": "string",
+            "default": "",
+            "title": "The interchange-type Schema",
+            "examples": [
+                "Clean Interchange"
+            ]
         }
     },
-    "examples": [
-        {
-            "container-tag": "TAG 001",
-            "container-form-factor": "20",
-            "shipments-id": 1,
-            "trips-id": 1,
-            "cargo-gross-wgt": 20178,
-            "cargo-gross-uom": "KGS",
-            "container-discharge-date": "2022-06-11",
-            "container-transfer-date": "2022-07-11",
-            "gate-in-date": "2022-08-11",
-            "last-free-storage-date": "2022-09-11",
-            "offloading-date": "2022-10-11",
-            "empty-return-date": "2022-11-11",
-            "demurrage-date": "2022-12-11"
-        }
-    ]
+    "examples": [{
+        "container-tag": "TAG 001",
+        "container-form-factor": "20",
+        "shipments-id": 1,
+        "trips-id": 1,
+        "cargo-gross-wgt": 20178,
+        "cargo-gross-uom": "KGS",
+        "container-discharge-date": "2022-06-11",
+        "container-transfer-date": "2022-07-11",
+        "gate-in-date": "2022-08-11",
+        "last-free-storage-date": "2022-09-11",
+        "offloading-date": "2022-10-11",
+        "empty-return-date": "2022-11-11",
+        "demurrage-date": "2022-12-11",
+        "cfs-gate-in": "2023-01-11",
+        "cfs-last-free-day": "2023-02-11",
+        "loading-date": "2023-03-11",
+        "interchange-type": "Clean Interchange"
+    }]
 }

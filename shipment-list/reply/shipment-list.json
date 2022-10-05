@@ -42,10 +42,10 @@
                             "client_company_id",
                             "client_company_name",
                             "shipment_status",
-                            "dangerous_cargo",
-                            "restricted_goods",
                             "created_by_date",
                             "created_by_requestor_username",
+                            "dangerous_cargo",
+                            "restricted_goods",
                             "shipment_statuses_history"
                         ],
                         "properties": {
@@ -479,20 +479,16 @@
                                             ]
                                         }
                                     },
-                                    "examples": [
-                                        {
-                                            "shipment_poe_eta": "2020-06-30",
-                                            "created_by_date": "2020-05-06"
-                                        }
-                                    ]
+                                    "examples": [{
+                                        "shipment_poe_eta": "2020-06-30",
+                                        "created_by_date": "2020-05-06"
+                                    }]
                                 },
                                 "examples": [
-                                    [
-                                        {
-                                            "shipment_poe_eta": "2020-06-30",
-                                            "created_by_date": "2020-05-06"
-                                        }
-                                    ]
+                                    [{
+                                        "shipment_poe_eta": "2020-06-30",
+                                        "created_by_date": "2020-05-06"
+                                    }]
                                 ]
                             },
                             "shipment_statuses_history": {
@@ -543,24 +539,20 @@
                                             ]
                                         }
                                     },
-                                    "examples": [
-                                        {
-                                            "shipmentstatushistory_id": 1,
-                                            "historic_status": "AT_XXXX",
-                                            "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                            "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                                        }
-                                    ]
+                                    "examples": [{
+                                        "shipmentstatushistory_id": 1,
+                                        "historic_status": "AT_XXXX",
+                                        "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                        "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
+                                    }]
                                 },
                                 "examples": [
-                                    [
-                                        {
-                                            "shipmentstatushistory_id": 1,
-                                            "historic_status": "AT_XXXX",
-                                            "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                            "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                                        }
-                                    ]
+                                    [{
+                                        "shipmentstatushistory_id": 1,
+                                        "historic_status": "AT_XXXX",
+                                        "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                        "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
+                                    }]
                                 ]
                             },
                             "containers": {
@@ -689,6 +681,38 @@
                                             "title": "The demurrage_date Schema",
                                             "examples": [
                                                 "2022-12-11"
+                                            ]
+                                        },
+                                        "cfs_gate_in": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The cfs_gate_in Schema",
+                                            "examples": [
+                                                "2024-01-11"
+                                            ]
+                                        },
+                                        "cfs_last_free_day": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The cfs_last_free_day Schema",
+                                            "examples": [
+                                                "2023-02-11"
+                                            ]
+                                        },
+                                        "loading_date": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The loading_date Schema",
+                                            "examples": [
+                                                "2023-03-11"
+                                            ]
+                                        },
+                                        "interchange_type": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The interchange_type Schema",
+                                            "examples": [
+                                                "Irregular Interchange"
                                             ]
                                         },
                                         "created_by_date": {
@@ -837,40 +861,36 @@
                                                         ]
                                                     }
                                                 },
-                                                "examples": [
-                                                    {
-                                                        "cargo_id": 1,
-                                                        "row_version": 1,
-                                                        "cargo_type": "Sand",
-                                                        "cargo_gross_weight": 10130,
-                                                        "cargo_gross_unit_of_measure": "KGS",
-                                                        "cargo_quantity": 400,
-                                                        "cargo_quantity_unit_of_measure": "bags",
-                                                        "created_by_date": "2020-07-13",
-                                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                        "updated_by_date": "2020-07-16",
-                                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                        "cargo_parent_type": "CONTAINER"
-                                                    }
-                                                ]
+                                                "examples": [{
+                                                    "cargo_id": 1,
+                                                    "row_version": 1,
+                                                    "cargo_type": "Sand",
+                                                    "cargo_gross_weight": 10130,
+                                                    "cargo_gross_unit_of_measure": "KGS",
+                                                    "cargo_quantity": 400,
+                                                    "cargo_quantity_unit_of_measure": "bags",
+                                                    "created_by_date": "2020-07-13",
+                                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "updated_by_date": "2020-07-16",
+                                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "cargo_parent_type": "CONTAINER"
+                                                }]
                                             },
                                             "examples": [
-                                                [
-                                                    {
-                                                        "cargo_id": 1,
-                                                        "row_version": 1,
-                                                        "cargo_type": "Sand",
-                                                        "cargo_gross_weight": 10130,
-                                                        "cargo_gross_unit_of_measure": "KGS",
-                                                        "cargo_quantity": 400,
-                                                        "cargo_quantity_unit_of_measure": "bags",
-                                                        "created_by_date": "2020-07-13",
-                                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                        "updated_by_date": "2020-07-16",
-                                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                        "cargo_parent_type": "CONTAINER"
-                                                    }
-                                                ]
+                                                [{
+                                                    "cargo_id": 1,
+                                                    "row_version": 1,
+                                                    "cargo_type": "Sand",
+                                                    "cargo_gross_weight": 10130,
+                                                    "cargo_gross_unit_of_measure": "KGS",
+                                                    "cargo_quantity": 400,
+                                                    "cargo_quantity_unit_of_measure": "bags",
+                                                    "created_by_date": "2020-07-13",
+                                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "updated_by_date": "2020-07-16",
+                                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                                    "cargo_parent_type": "CONTAINER"
+                                                }]
                                             ]
                                         },
                                         "trips": {
@@ -1100,175 +1120,173 @@
                                                     ]
                                                 }
                                             },
-                                            "examples": [
-                                                {
-                                                    "client_company_id": 1,
-                                                    "client_company_name": "Customs",
-                                                    "created_by_date": "2021-09-21",
-                                                    "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                                    "drop_off_location": "Velvet Veldt",
-                                                    "estimated_delivery_date": "2019-01-01",
-                                                    "estimated_delivery_days": 12,
-                                                    "estimated_pickup_date": "2019-01-01",
-                                                    "estimated_return_date": null,
-                                                    "estimated_total_days": 45,
-                                                    "external_bill_of_lading": "Test Bol",
-                                                    "first_estimated_delivery_date": "2020-02-02",
-                                                    "load_name": "HYT45x0917",
-                                                    "load_unit_of_measure": "METRIC_TONS",
-                                                    "load_weight": 2,
-                                                    "pickup_location": "Hiram Saltmarsh",
-                                                    "return_yard": "Test_Yard",
-                                                    "returned_timestamp": null,
-                                                    "row_version": 1,
-                                                    "shipments_id": 10000,
-                                                    "trip_is_assigned": false,
-                                                    "trip_notes": "Handle with care",
-                                                    "trip_status": "CREATE",
-                                                    "trip_type": "OUTSOURCED",
-                                                    "trips_id": 100,
-                                                    "updated_by_date": null,
-                                                    "updated_by_requestor_username": null
-                                                }
-                                            ]
+                                            "examples": [{
+                                                "client_company_id": 1,
+                                                "client_company_name": "Customs",
+                                                "created_by_date": "2021-09-21",
+                                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                                "drop_off_location": "Velvet Veldt",
+                                                "estimated_delivery_date": "2019-01-01",
+                                                "estimated_delivery_days": 12,
+                                                "estimated_pickup_date": "2019-01-01",
+                                                "estimated_return_date": null,
+                                                "estimated_total_days": 45,
+                                                "external_bill_of_lading": "Test Bol",
+                                                "first_estimated_delivery_date": "2020-02-02",
+                                                "load_name": "HYT45x0917",
+                                                "load_unit_of_measure": "METRIC_TONS",
+                                                "load_weight": 2,
+                                                "pickup_location": "Hiram Saltmarsh",
+                                                "return_yard": "Test_Yard",
+                                                "returned_timestamp": null,
+                                                "row_version": 1,
+                                                "shipments_id": 10000,
+                                                "trip_is_assigned": false,
+                                                "trip_notes": "Handle with care",
+                                                "trip_status": "CREATE",
+                                                "trip_type": "OUTSOURCED",
+                                                "trips_id": 100,
+                                                "updated_by_date": null,
+                                                "updated_by_requestor_username": null
+                                            }]
                                         }
                                     },
-                                    "examples": [
-                                        {
-                                            "containers_id": 1,
+                                    "examples": [{
+                                        "containers_id": 1,
+                                        "row_version": 1,
+                                        "container_tag": "TAG 001",
+                                        "container_form_factor": "20",
+                                        "trips_id": 1,
+                                        "container_cargo_gross_weight": 20178,
+                                        "container_cargo_gross_unit_of_measure": "KGS",
+                                        "container_discharge_date": "2022-06-11",
+                                        "container_transfer_date": "2022-07-11",
+                                        "empty_return_date": "2022-11-11",
+                                        "gate_in_date": "2022-08-11",
+                                        "last_free_storage_date": "2022-09-11",
+                                        "offloading_date": "2022-10-11",
+                                        "demurrage_date": "2022-12-11",
+                                        "cfs_gate_in": "2024-01-11",
+                                        "cfs_last_free_day": "2023-02-11",
+                                        "loading_date": "2023-03-11",
+                                        "interchange_type": "Irregular Interchange",
+                                        "created_by_date": "2020-07-22",
+                                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                        "updated_by_date": "2020-11-12",
+                                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                                        "cargo": [{
+                                            "cargo_id": 1,
                                             "row_version": 1,
-                                            "container_tag": "TAG 001",
-                                            "container_form_factor": "20",
-                                            "trips_id": 1,
-                                            "container_cargo_gross_weight": 20178,
-                                            "container_cargo_gross_unit_of_measure": "KGS",
-                                            "container_discharge_date": "2022-06-11",
-                                            "container_transfer_date": "2022-07-11",
-                                            "empty_return_date": "2022-11-11",
-                                            "gate_in_date": "2022-08-11",
-                                            "last_free_storage_date": "2022-09-11",
-                                            "offloading_date": "2022-10-11",
-                                            "demurrage_date": "2022-12-11",
-                                            "created_by_date": "2020-07-22",
-                                            "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                            "updated_by_date": "2020-11-12",
-                                            "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                            "cargo": [
-                                                {
-                                                    "cargo_id": 1,
-                                                    "row_version": 1,
-                                                    "cargo_type": "Sand",
-                                                    "cargo_gross_weight": 10130,
-                                                    "cargo_gross_unit_of_measure": "KGS",
-                                                    "cargo_quantity": 400,
-                                                    "cargo_quantity_unit_of_measure": "bags",
-                                                    "created_by_date": "2020-07-13",
-                                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                    "updated_by_date": "2020-07-16",
-                                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                    "cargo_parent_type": "CONTAINER"
-                                                }
-                                            ],
-                                            "trips": {
-                                                "client_company_id": 1,
-                                                "client_company_name": "Customs",
-                                                "created_by_date": "2021-09-21",
-                                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                                "drop_off_location": "Velvet Veldt",
-                                                "estimated_delivery_date": "2019-01-01",
-                                                "estimated_delivery_days": 12,
-                                                "estimated_pickup_date": "2019-01-01",
-                                                "estimated_return_date": null,
-                                                "estimated_total_days": 45,
-                                                "external_bill_of_lading": "Test Bol",
-                                                "first_estimated_delivery_date": "2020-02-02",
-                                                "load_name": "HYT45x0917",
-                                                "load_unit_of_measure": "METRIC_TONS",
-                                                "load_weight": 2,
-                                                "pickup_location": "Hiram Saltmarsh",
-                                                "return_yard": "Test_Yard",
-                                                "returned_timestamp": null,
-                                                "row_version": 1,
-                                                "shipments_id": 10000,
-                                                "trip_is_assigned": false,
-                                                "trip_notes": "Handle with care",
-                                                "trip_status": "CREATE",
-                                                "trip_type": "OUTSOURCED",
-                                                "trips_id": 100,
-                                                "updated_by_date": null,
-                                                "updated_by_requestor_username": null
-                                            }
+                                            "cargo_type": "Sand",
+                                            "cargo_gross_weight": 10130,
+                                            "cargo_gross_unit_of_measure": "KGS",
+                                            "cargo_quantity": 400,
+                                            "cargo_quantity_unit_of_measure": "bags",
+                                            "created_by_date": "2020-07-13",
+                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                            "updated_by_date": "2020-07-16",
+                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                            "cargo_parent_type": "CONTAINER"
+                                        }],
+                                        "trips": {
+                                            "client_company_id": 1,
+                                            "client_company_name": "Customs",
+                                            "created_by_date": "2021-09-21",
+                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                            "drop_off_location": "Velvet Veldt",
+                                            "estimated_delivery_date": "2019-01-01",
+                                            "estimated_delivery_days": 12,
+                                            "estimated_pickup_date": "2019-01-01",
+                                            "estimated_return_date": null,
+                                            "estimated_total_days": 45,
+                                            "external_bill_of_lading": "Test Bol",
+                                            "first_estimated_delivery_date": "2020-02-02",
+                                            "load_name": "HYT45x0917",
+                                            "load_unit_of_measure": "METRIC_TONS",
+                                            "load_weight": 2,
+                                            "pickup_location": "Hiram Saltmarsh",
+                                            "return_yard": "Test_Yard",
+                                            "returned_timestamp": null,
+                                            "row_version": 1,
+                                            "shipments_id": 10000,
+                                            "trip_is_assigned": false,
+                                            "trip_notes": "Handle with care",
+                                            "trip_status": "CREATE",
+                                            "trip_type": "OUTSOURCED",
+                                            "trips_id": 100,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
                                         }
-                                    ]
+                                    }]
                                 },
                                 "examples": [
-                                    [
-                                        {
-                                            "containers_id": 1,
+                                    [{
+                                        "containers_id": 1,
+                                        "row_version": 1,
+                                        "container_tag": "TAG 001",
+                                        "container_form_factor": "20",
+                                        "trips_id": 1,
+                                        "container_cargo_gross_weight": 20178,
+                                        "container_cargo_gross_unit_of_measure": "KGS",
+                                        "container_discharge_date": "2022-06-11",
+                                        "container_transfer_date": "2022-07-11",
+                                        "empty_return_date": "2022-11-11",
+                                        "gate_in_date": "2022-08-11",
+                                        "last_free_storage_date": "2022-09-11",
+                                        "offloading_date": "2022-10-11",
+                                        "demurrage_date": "2022-12-11",
+                                        "cfs_gate_in": "2024-01-11",
+                                        "cfs_last_free_day": "2023-02-11",
+                                        "loading_date": "2023-03-11",
+                                        "interchange_type": "Irregular Interchange",
+                                        "created_by_date": "2020-07-22",
+                                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                        "updated_by_date": "2020-11-12",
+                                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                                        "cargo": [{
+                                            "cargo_id": 1,
                                             "row_version": 1,
-                                            "container_tag": "TAG 001",
-                                            "container_form_factor": "20",
-                                            "trips_id": 1,
-                                            "container_cargo_gross_weight": 20178,
-                                            "container_cargo_gross_unit_of_measure": "KGS",
-                                            "container_discharge_date": "2022-06-11",
-                                            "container_transfer_date": "2022-07-11",
-                                            "empty_return_date": "2022-11-11",
-                                            "gate_in_date": "2022-08-11",
-                                            "last_free_storage_date": "2022-09-11",
-                                            "offloading_date": "2022-10-11",
-                                            "demurrage_date": "2022-12-11",
-                                            "created_by_date": "2020-07-22",
-                                            "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                            "updated_by_date": "2020-11-12",
-                                            "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                            "cargo": [
-                                                {
-                                                    "cargo_id": 1,
-                                                    "row_version": 1,
-                                                    "cargo_type": "Sand",
-                                                    "cargo_gross_weight": 10130,
-                                                    "cargo_gross_unit_of_measure": "KGS",
-                                                    "cargo_quantity": 400,
-                                                    "cargo_quantity_unit_of_measure": "bags",
-                                                    "created_by_date": "2020-07-13",
-                                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                    "updated_by_date": "2020-07-16",
-                                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                    "cargo_parent_type": "CONTAINER"
-                                                }
-                                            ],
-                                            "trips": {
-                                                "client_company_id": 1,
-                                                "client_company_name": "Customs",
-                                                "created_by_date": "2021-09-21",
-                                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                                "drop_off_location": "Velvet Veldt",
-                                                "estimated_delivery_date": "2019-01-01",
-                                                "estimated_delivery_days": 12,
-                                                "estimated_pickup_date": "2019-01-01",
-                                                "estimated_return_date": null,
-                                                "estimated_total_days": 45,
-                                                "external_bill_of_lading": "Test Bol",
-                                                "first_estimated_delivery_date": "2020-02-02",
-                                                "load_name": "HYT45x0917",
-                                                "load_unit_of_measure": "METRIC_TONS",
-                                                "load_weight": 2,
-                                                "pickup_location": "Hiram Saltmarsh",
-                                                "return_yard": "Test_Yard",
-                                                "returned_timestamp": null,
-                                                "row_version": 1,
-                                                "shipments_id": 10000,
-                                                "trip_is_assigned": false,
-                                                "trip_notes": "Handle with care",
-                                                "trip_status": "CREATE",
-                                                "trip_type": "OUTSOURCED",
-                                                "trips_id": 100,
-                                                "updated_by_date": null,
-                                                "updated_by_requestor_username": null
-                                            }
+                                            "cargo_type": "Sand",
+                                            "cargo_gross_weight": 10130,
+                                            "cargo_gross_unit_of_measure": "KGS",
+                                            "cargo_quantity": 400,
+                                            "cargo_quantity_unit_of_measure": "bags",
+                                            "created_by_date": "2020-07-13",
+                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                            "updated_by_date": "2020-07-16",
+                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                            "cargo_parent_type": "CONTAINER"
+                                        }],
+                                        "trips": {
+                                            "client_company_id": 1,
+                                            "client_company_name": "Customs",
+                                            "created_by_date": "2021-09-21",
+                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                            "drop_off_location": "Velvet Veldt",
+                                            "estimated_delivery_date": "2019-01-01",
+                                            "estimated_delivery_days": 12,
+                                            "estimated_pickup_date": "2019-01-01",
+                                            "estimated_return_date": null,
+                                            "estimated_total_days": 45,
+                                            "external_bill_of_lading": "Test Bol",
+                                            "first_estimated_delivery_date": "2020-02-02",
+                                            "load_name": "HYT45x0917",
+                                            "load_unit_of_measure": "METRIC_TONS",
+                                            "load_weight": 2,
+                                            "pickup_location": "Hiram Saltmarsh",
+                                            "return_yard": "Test_Yard",
+                                            "returned_timestamp": null,
+                                            "row_version": 1,
+                                            "shipments_id": 10000,
+                                            "trip_is_assigned": false,
+                                            "trip_notes": "Handle with care",
+                                            "trip_status": "CREATE",
+                                            "trip_type": "OUTSOURCED",
+                                            "trips_id": 100,
+                                            "updated_by_date": null,
+                                            "updated_by_requestor_username": null
                                         }
-                                    ]
+                                    }]
                                 ]
                             },
                             "cargo": {
@@ -1393,42 +1411,38 @@
                                             ]
                                         }
                                     },
-                                    "examples": [
-                                        {
-                                            "cargo_id": 1,
-                                            "row_version": 1,
-                                            "cargo_type": "Sand",
-                                            "containers_id": 1,
-                                            "cargo_gross_weight": 10130,
-                                            "cargo_gross_unit_of_measure": "KGS",
-                                            "cargo_quantity": 400,
-                                            "cargo_quantity_unit_of_measure": "bags",
-                                            "created_by_date": "2020-07-13",
-                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "updated_by_date": "2020-07-16",
-                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "cargo_parent_type": "CONTAINER"
-                                        }
-                                    ]
+                                    "examples": [{
+                                        "cargo_id": 1,
+                                        "row_version": 1,
+                                        "cargo_type": "Sand",
+                                        "containers_id": 1,
+                                        "cargo_gross_weight": 10130,
+                                        "cargo_gross_unit_of_measure": "KGS",
+                                        "cargo_quantity": 400,
+                                        "cargo_quantity_unit_of_measure": "bags",
+                                        "created_by_date": "2020-07-13",
+                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "updated_by_date": "2020-07-16",
+                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "cargo_parent_type": "CONTAINER"
+                                    }]
                                 },
                                 "examples": [
-                                    [
-                                        {
-                                            "cargo_id": 1,
-                                            "row_version": 1,
-                                            "cargo_type": "Sand",
-                                            "containers_id": 1,
-                                            "cargo_gross_weight": 10130,
-                                            "cargo_gross_unit_of_measure": "KGS",
-                                            "cargo_quantity": 400,
-                                            "cargo_quantity_unit_of_measure": "bags",
-                                            "created_by_date": "2020-07-13",
-                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "updated_by_date": "2020-07-16",
-                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "cargo_parent_type": "CONTAINER"
-                                        }
-                                    ]
+                                    [{
+                                        "cargo_id": 1,
+                                        "row_version": 1,
+                                        "cargo_type": "Sand",
+                                        "containers_id": 1,
+                                        "cargo_gross_weight": 10130,
+                                        "cargo_gross_unit_of_measure": "KGS",
+                                        "cargo_quantity": 400,
+                                        "cargo_quantity_unit_of_measure": "bags",
+                                        "created_by_date": "2020-07-13",
+                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "updated_by_date": "2020-07-16",
+                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                        "cargo_parent_type": "CONTAINER"
+                                    }]
                                 ]
                             },
                             "trips": {
@@ -1654,223 +1668,37 @@
                                             ]
                                         }
                                     },
-                                    "examples": [
-                                        {
-                                            "client_company_id": 1,
-                                            "client_company_name": "Customs",
-                                            "created_by_date": "2021-09-21",
-                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                            "drop_off_location": "Velvet Veldt",
-                                            "estimated_delivery_date": "2019-01-01",
-                                            "estimated_delivery_days": 12,
-                                            "estimated_pickup_date": "2019-01-01",
-                                            "estimated_return_date": null,
-                                            "estimated_total_days": 45,
-                                            "external_bill_of_lading": "Test Bol",
-                                            "first_estimated_delivery_date": "2020-02-02",
-                                            "load_name": "HYT45x0917",
-                                            "load_unit_of_measure": "METRIC_TONS",
-                                            "load_weight": 2,
-                                            "pickup_location": "Hiram Saltmarsh",
-                                            "return_yard": "Test_Yard",
-                                            "returned_timestamp": null,
-                                            "row_version": 1,
-                                            "trip_is_assigned": false,
-                                            "trip_notes": "Handle with care",
-                                            "trip_status": "CREATE",
-                                            "trip_type": "OUTSOURCED",
-                                            "trips_id": 1,
-                                            "updated_by_date": null,
-                                            "updated_by_requestor_username": null
-                                        }
-                                    ]
+                                    "examples": [{
+                                        "client_company_id": 1,
+                                        "client_company_name": "Customs",
+                                        "created_by_date": "2021-09-21",
+                                        "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                        "drop_off_location": "Velvet Veldt",
+                                        "estimated_delivery_date": "2019-01-01",
+                                        "estimated_delivery_days": 12,
+                                        "estimated_pickup_date": "2019-01-01",
+                                        "estimated_return_date": null,
+                                        "estimated_total_days": 45,
+                                        "external_bill_of_lading": "Test Bol",
+                                        "first_estimated_delivery_date": "2020-02-02",
+                                        "load_name": "HYT45x0917",
+                                        "load_unit_of_measure": "METRIC_TONS",
+                                        "load_weight": 2,
+                                        "pickup_location": "Hiram Saltmarsh",
+                                        "return_yard": "Test_Yard",
+                                        "returned_timestamp": null,
+                                        "row_version": 1,
+                                        "trip_is_assigned": false,
+                                        "trip_notes": "Handle with care",
+                                        "trip_status": "CREATE",
+                                        "trip_type": "OUTSOURCED",
+                                        "trips_id": 1,
+                                        "updated_by_date": null,
+                                        "updated_by_requestor_username": null
+                                    }]
                                 },
                                 "examples": [
-                                    [
-                                        {
-                                            "client_company_id": 1,
-                                            "client_company_name": "Customs",
-                                            "created_by_date": "2021-09-21",
-                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                            "drop_off_location": "Velvet Veldt",
-                                            "estimated_delivery_date": "2019-01-01",
-                                            "estimated_delivery_days": 12,
-                                            "estimated_pickup_date": "2019-01-01",
-                                            "estimated_return_date": null,
-                                            "estimated_total_days": 45,
-                                            "external_bill_of_lading": "Test Bol",
-                                            "first_estimated_delivery_date": "2020-02-02",
-                                            "load_name": "HYT45x0917",
-                                            "load_unit_of_measure": "METRIC_TONS",
-                                            "load_weight": 2,
-                                            "pickup_location": "Hiram Saltmarsh",
-                                            "return_yard": "Test_Yard",
-                                            "returned_timestamp": null,
-                                            "row_version": 1,
-                                            "trip_is_assigned": false,
-                                            "trip_notes": "Handle with care",
-                                            "trip_status": "CREATE",
-                                            "trip_type": "OUTSOURCED",
-                                            "trips_id": 1,
-                                            "updated_by_date": null,
-                                            "updated_by_requestor_username": null
-                                        }
-                                    ]
-                                ]
-                            }
-                        },
-                        "examples": [
-                            {
-                                "shipments_id": 1,
-                                "row_version": 1,
-                                "organizations_id": 1,
-                                "shipment_type": "Air Import",
-                                "client_company_id": 1,
-                                "client_company_name": "My Enterprises Ltd",
-                                "suppliers_id": 1,
-                                "supplier_name": "My Supplier Name",
-                                "shipment_status": "AT_XXXXX",
-                                "bill_of_lading": "WEXXXXXXXX58",
-                                "port_of_entry": "Mombasa_Kenya",
-                                "port_of_origin": "SOKHNA__EGYPT",
-                                "country_of_destination": "KENYA",
-                                "shipment_poe_eta": "2020-12-26",
-                                "consignment_weight": 17,
-                                "consignment_weight_unit_of_measure": "MT",
-                                "created_by_date": "2020-09-21",
-                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
-                                "updated_by_date": "2020-12-30",
-                                "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                "through_bill_of_lading": "TBL",
-                                "external_shipment_id": null,
-                                "estimated_berthing_time": "2023-06-17 14:51:00+00",
-                                "final_release_date": "2023-06-17",
-                                "cif_value": 20.50,
-                                "cif_value_currency_type": "KES",
-                                "customs_tax": 30,
-                                "customs_tax_currency_type": "USD",
-                                "dangerous_cargo": true,
-                                "restricted_goods": true,
-                                "proforma_date": "2022-10-10",
-                                "commercial_invoice_date": "2022-11-11",
-                                "commercial_invoice_value": 40.5,
-                                "commercial_invoice_currency_type": "KSH",
-                                "country_of_origin": "India",
-                                "idf_date": "2022-11-10",
-                                "original_documents_received_date": "2022-11-11",
-                                "shipping_line": "Test Shipping Line",
-                                "entry_registration_date": "2022-11-12",
-                                "taxes_paid_date": "2022-11-13",
-                                "entry_pass_date": "2022-11-14",
-                                "shipping_charges_paid_date": "2022-11-15",
-                                "freight_vessel": "ship",
-                                "idf_number": "IDF 1234",
-                                "last_sling_date": "2022-11-16",
-                                "booking_date": "2022-11-17",
-                                "proforma_invoice_number": "Proforma INV 1234",
-                                "customs_entry_number": "Customs 123",
-                                "customs_entry_type": "New Type",
-                                "entry_shared_date": "2022-11-18",
-                                "shipment_history": [
-                                    {
-                                        "shipment_poe_eta": "2020-06-30",
-                                        "created_by_date": "2020-05-06"
-                                    }
-                                ],
-                                "shipment_statuses_history": [
-                                    {
-                                        "shipmentstatushistory_id": 1,
-                                        "historic_status": "AT_XXXX",
-                                        "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                        "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                                    }
-                                ],
-                                "containers": [
-                                    {
-                                        "containers_id": 1,
-                                        "row_version": 1,
-                                        "container_tag": "TAG 001",
-                                        "container_form_factor": "20",
-                                        "trips_id": 1,
-                                        "container_cargo_gross_weight": 20178,
-                                        "container_cargo_gross_unit_of_measure": "KGS",
-                                        "container_discharge_date": "2022-06-11",
-                                        "container_transfer_date": "2022-07-11",
-                                        "empty_return_date": "2022-11-11",
-                                        "gate_in_date": "2022-08-11",
-                                        "last_free_storage_date": "2022-09-11",
-                                        "offloading_date": "2022-10-11",
-                                        "demurrage_date": "2022-12-11",
-                                        "created_by_date": "2020-07-22",
-                                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                        "updated_by_date": "2020-11-12",
-                                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                        "cargo": [
-                                            {
-                                                "cargo_id": 1,
-                                                "row_version": 1,
-                                                "cargo_type": "Sand",
-                                                "cargo_gross_weight": 10130,
-                                                "cargo_gross_unit_of_measure": "KGS",
-                                                "cargo_quantity": 400,
-                                                "cargo_quantity_unit_of_measure": "bags",
-                                                "created_by_date": "2020-07-13",
-                                                "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                "updated_by_date": "2020-07-16",
-                                                "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                "cargo_parent_type": "CONTAINER"
-                                            }
-                                        ],
-                                        "trips": {
-                                            "client_company_id": 1,
-                                            "client_company_name": "Customs",
-                                            "created_by_date": "2021-09-21",
-                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                            "drop_off_location": "Velvet Veldt",
-                                            "estimated_delivery_date": "2019-01-01",
-                                            "estimated_delivery_days": 12,
-                                            "estimated_pickup_date": "2019-01-01",
-                                            "estimated_return_date": null,
-                                            "estimated_total_days": 45,
-                                            "external_bill_of_lading": "Test Bol",
-                                            "first_estimated_delivery_date": "2020-02-02",
-                                            "load_name": "HYT45x0917",
-                                            "load_unit_of_measure": "METRIC_TONS",
-                                            "load_weight": 2,
-                                            "pickup_location": "Hiram Saltmarsh",
-                                            "return_yard": "Test_Yard",
-                                            "returned_timestamp": null,
-                                            "row_version": 1,
-                                            "shipments_id": 10000,
-                                            "trip_is_assigned": false,
-                                            "trip_notes": "Handle with care",
-                                            "trip_status": "CREATE",
-                                            "trip_type": "OUTSOURCED",
-                                            "trips_id": 100,
-                                            "updated_by_date": null,
-                                            "updated_by_requestor_username": null
-                                        }
-                                    }
-                                ],
-                                "cargo": [
-                                    {
-                                        "cargo_id": 1,
-                                        "row_version": 1,
-                                        "cargo_type": "Sand",
-                                        "containers_id": 1,
-                                        "cargo_gross_weight": 10130,
-                                        "cargo_gross_unit_of_measure": "KGS",
-                                        "cargo_quantity": 400,
-                                        "cargo_quantity_unit_of_measure": "bags",
-                                        "created_by_date": "2020-07-13",
-                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "updated_by_date": "2020-07-16",
-                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "cargo_parent_type": "CONTAINER"
-                                    }
-                                ],
-                                "trips": [
-                                    {
+                                    [{
                                         "client_company_id": 1,
                                         "client_company_name": "Customs",
                                         "created_by_date": "2021-09-21",
@@ -1897,244 +1725,11 @@
                                         "trips_id": 1,
                                         "updated_by_date": null,
                                         "updated_by_requestor_username": null
-                                    }
+                                    }]
                                 ]
                             }
-                        ]
-                    },
-                    "examples": [
-                        [
-                            {
-                                "shipments_id": 1,
-                                "row_version": 1,
-                                "organizations_id": 1,
-                                "shipment_type": "Air Import",
-                                "client_company_id": 1,
-                                "client_company_name": "My Enterprises Ltd",
-                                "suppliers_id": 1,
-                                "supplier_name": "My Supplier Name",
-                                "shipment_status": "AT_XXXXX",
-                                "bill_of_lading": "WEXXXXXXXX58",
-                                "port_of_entry": "Mombasa_Kenya",
-                                "port_of_origin": "SOKHNA__EGYPT",
-                                "country_of_destination": "KENYA",
-                                "shipment_poe_eta": "2020-12-26",
-                                "consignment_weight": 17,
-                                "consignment_weight_unit_of_measure": "MT",
-                                "created_by_date": "2020-09-21",
-                                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
-                                "updated_by_date": "2020-12-30",
-                                "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                                "through_bill_of_lading": "TBL",
-                                "external_shipment_id": null,
-                                "estimated_berthing_time": "2023-06-17 14:51:00+00",
-                                "final_release_date": "2023-06-17",
-                                "cif_value": 20.50,
-                                "cif_value_currency_type": "KES",
-                                "customs_tax": 30,
-                                "customs_tax_currency_type": "USD",
-                                "dangerous_cargo": true,
-                                "restricted_goods": true,
-                                "proforma_date": "2022-10-10",
-                                "commercial_invoice_date": "2022-11-11",
-                                "commercial_invoice_value": 40.5,
-                                "commercial_invoice_currency_type": "KSH",
-                                "country_of_origin": "India",
-                                "idf_date": "2022-11-10",
-                                "original_documents_received_date": "2022-11-11",
-                                "shipping_line": "Test Shipping Line",
-                                "entry_registration_date": "2022-11-12",
-                                "taxes_paid_date": "2022-11-13",
-                                "entry_pass_date": "2022-11-14",
-                                "shipping_charges_paid_date": "2022-11-15",
-                                "freight_vessel": "ship",
-                                "idf_number": "IDF 1234",
-                                "last_sling_date": "2022-11-16",
-                                "booking_date": "2022-11-17",
-                                "proforma_invoice_number": "Proforma INV 1234",
-                                "customs_entry_number": "Customs 123",
-                                "customs_entry_type": "New Type",
-                                "entry_shared_date": "2022-11-18",
-                                "shipment_history": [
-                                    {
-                                        "shipment_poe_eta": "2020-06-30",
-                                        "created_by_date": "2020-05-06"
-                                    }
-                                ],
-                                "shipment_statuses_history": [
-                                    {
-                                        "shipmentstatushistory_id": 1,
-                                        "historic_status": "AT_XXXX",
-                                        "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                        "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                                    }
-                                ],
-                                "containers": [
-                                    {
-                                        "containers_id": 1,
-                                        "row_version": 1,
-                                        "container_tag": "TAG 001",
-                                        "container_form_factor": "20",
-                                        "trips_id": 1,
-                                        "container_cargo_gross_weight": 20178,
-                                        "container_cargo_gross_unit_of_measure": "KGS",
-                                        "container_discharge_date": "2022-06-11",
-                                        "container_transfer_date": "2022-07-11",
-                                        "empty_return_date": "2022-11-11",
-                                        "gate_in_date": "2022-08-11",
-                                        "last_free_storage_date": "2022-09-11",
-                                        "offloading_date": "2022-10-11",
-                                        "demurrage_date": "2022-12-11",
-                                        "created_by_date": "2020-07-22",
-                                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                        "updated_by_date": "2020-11-12",
-                                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                        "cargo": [
-                                            {
-                                                "cargo_id": 1,
-                                                "row_version": 1,
-                                                "cargo_type": "Sand",
-                                                "cargo_gross_weight": 10130,
-                                                "cargo_gross_unit_of_measure": "KGS",
-                                                "cargo_quantity": 400,
-                                                "cargo_quantity_unit_of_measure": "bags",
-                                                "created_by_date": "2020-07-13",
-                                                "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                "updated_by_date": "2020-07-16",
-                                                "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                                "cargo_parent_type": "CONTAINER"
-                                            }
-                                        ],
-                                        "trips": {
-                                            "client_company_id": 1,
-                                            "client_company_name": "Customs",
-                                            "created_by_date": "2021-09-21",
-                                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                            "drop_off_location": "Velvet Veldt",
-                                            "estimated_delivery_date": "2019-01-01",
-                                            "estimated_delivery_days": 12,
-                                            "estimated_pickup_date": "2019-01-01",
-                                            "estimated_return_date": null,
-                                            "estimated_total_days": 45,
-                                            "external_bill_of_lading": "Test Bol",
-                                            "first_estimated_delivery_date": "2020-02-02",
-                                            "load_name": "HYT45x0917",
-                                            "load_unit_of_measure": "METRIC_TONS",
-                                            "load_weight": 2,
-                                            "pickup_location": "Hiram Saltmarsh",
-                                            "return_yard": "Test_Yard",
-                                            "returned_timestamp": null,
-                                            "row_version": 1,
-                                            "shipments_id": 10000,
-                                            "trip_is_assigned": false,
-                                            "trip_notes": "Handle with care",
-                                            "trip_status": "CREATE",
-                                            "trip_type": "OUTSOURCED",
-                                            "trips_id": 100,
-                                            "updated_by_date": null,
-                                            "updated_by_requestor_username": null
-                                        }
-                                    }
-                                ],
-                                "cargo": [
-                                    {
-                                        "cargo_id": 1,
-                                        "row_version": 1,
-                                        "cargo_type": "Sand",
-                                        "containers_id": 1,
-                                        "cargo_gross_weight": 10130,
-                                        "cargo_gross_unit_of_measure": "KGS",
-                                        "cargo_quantity": 400,
-                                        "cargo_quantity_unit_of_measure": "bags",
-                                        "created_by_date": "2020-07-13",
-                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "updated_by_date": "2020-07-16",
-                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "cargo_parent_type": "CONTAINER"
-                                    }
-                                ],
-                                "trips": [
-                                    {
-                                        "client_company_id": 1,
-                                        "client_company_name": "Customs",
-                                        "created_by_date": "2021-09-21",
-                                        "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                        "drop_off_location": "Velvet Veldt",
-                                        "estimated_delivery_date": "2019-01-01",
-                                        "estimated_delivery_days": 12,
-                                        "estimated_pickup_date": "2019-01-01",
-                                        "estimated_return_date": null,
-                                        "estimated_total_days": 45,
-                                        "external_bill_of_lading": "Test Bol",
-                                        "first_estimated_delivery_date": "2020-02-02",
-                                        "load_name": "HYT45x0917",
-                                        "load_unit_of_measure": "METRIC_TONS",
-                                        "load_weight": 2,
-                                        "pickup_location": "Hiram Saltmarsh",
-                                        "return_yard": "Test_Yard",
-                                        "returned_timestamp": null,
-                                        "row_version": 1,
-                                        "trip_is_assigned": false,
-                                        "trip_notes": "Handle with care",
-                                        "trip_status": "CREATE",
-                                        "trip_type": "OUTSOURCED",
-                                        "trips_id": 1,
-                                        "updated_by_date": null,
-                                        "updated_by_requestor_username": null
-                                    }
-                                ]
-                            }
-                        ]
-                    ]
-                },
-                "pagination": {
-                    "type": "object",
-                    "default": {},
-                    "title": "The pagination Schema",
-                    "required": [
-                        "limit",
-                        "offset",
-                        "total"
-                    ],
-                    "properties": {
-                        "limit": {
-                            "type": "integer",
-                            "default": 0,
-                            "title": "The limit Schema",
-                            "examples": [
-                                2
-                            ]
                         },
-                        "offset": {
-                            "type": "integer",
-                            "default": 0,
-                            "title": "The offset Schema",
-                            "examples": [
-                                0
-                            ]
-                        },
-                        "total": {
-                            "type": "integer",
-                            "default": 0,
-                            "title": "The total Schema",
-                            "examples": [
-                                3
-                            ]
-                        }
-                    },
-                    "examples": [
-                        {
-                            "limit": 2,
-                            "offset": 0,
-                            "total": 3
-                        }
-                    ]
-                }
-            },
-            "examples": [
-                {
-                    "items": [
-                        {
+                        "examples": [{
                             "shipments_id": 1,
                             "row_version": 1,
                             "organizations_id": 1,
@@ -2185,217 +1780,17 @@
                             "customs_entry_number": "Customs 123",
                             "customs_entry_type": "New Type",
                             "entry_shared_date": "2022-11-18",
-                            "shipment_history": [
-                                {
-                                    "shipment_poe_eta": "2020-06-30",
-                                    "created_by_date": "2020-05-06"
-                                }
-                            ],
-                            "shipment_statuses_history": [
-                                {
-                                    "shipmentstatushistory_id": 1,
-                                    "historic_status": "AT_XXXX",
-                                    "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                    "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                                }
-                            ],
-                            "containers": [
-                                {
-                                    "containers_id": 1,
-                                    "row_version": 1,
-                                    "container_tag": "TAG 001",
-                                    "container_form_factor": "20",
-                                    "trips_id": 1,
-                                    "container_cargo_gross_weight": 20178,
-                                    "container_cargo_gross_unit_of_measure": "KGS",
-                                    "container_discharge_date": "2022-06-11",
-                                    "container_transfer_date": "2022-07-11",
-                                    "empty_return_date": "2022-11-11",
-                                    "gate_in_date": "2022-08-11",
-                                    "last_free_storage_date": "2022-09-11",
-                                    "offloading_date": "2022-10-11",
-                                    "demurrage_date": "2022-12-11",
-                                    "created_by_date": "2020-07-22",
-                                    "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
-                                    "updated_by_date": "2020-11-12",
-                                    "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                    "cargo": [
-                                        {
-                                            "cargo_id": 1,
-                                            "row_version": 1,
-                                            "cargo_type": "Sand",
-                                            "cargo_gross_weight": 10130,
-                                            "cargo_gross_unit_of_measure": "KGS",
-                                            "cargo_quantity": 400,
-                                            "cargo_quantity_unit_of_measure": "bags",
-                                            "created_by_date": "2020-07-13",
-                                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "updated_by_date": "2020-07-16",
-                                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                            "cargo_parent_type": "CONTAINER"
-                                        }
-                                    ],
-                                    "trips": {
-                                        "client_company_id": 1,
-                                        "client_company_name": "Customs",
-                                        "created_by_date": "2021-09-21",
-                                        "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                        "drop_off_location": "Velvet Veldt",
-                                        "estimated_delivery_date": "2019-01-01",
-                                        "estimated_delivery_days": 12,
-                                        "estimated_pickup_date": "2019-01-01",
-                                        "estimated_return_date": null,
-                                        "estimated_total_days": 45,
-                                        "external_bill_of_lading": "Test Bol",
-                                        "first_estimated_delivery_date": "2020-02-02",
-                                        "load_name": "HYT45x0917",
-                                        "load_unit_of_measure": "METRIC_TONS",
-                                        "load_weight": 2,
-                                        "pickup_location": "Hiram Saltmarsh",
-                                        "return_yard": "Test_Yard",
-                                        "returned_timestamp": null,
-                                        "row_version": 1,
-                                        "shipments_id": 10000,
-                                        "trip_is_assigned": false,
-                                        "trip_notes": "Handle with care",
-                                        "trip_status": "CREATE",
-                                        "trip_type": "OUTSOURCED",
-                                        "trips_id": 100,
-                                        "updated_by_date": null,
-                                        "updated_by_requestor_username": null
-                                    }
-                                }
-                            ],
-                            "cargo": [
-                                {
-                                    "cargo_id": 1,
-                                    "row_version": 1,
-                                    "cargo_type": "Sand",
-                                    "containers_id": 1,
-                                    "cargo_gross_weight": 10130,
-                                    "cargo_gross_unit_of_measure": "KGS",
-                                    "cargo_quantity": 400,
-                                    "cargo_quantity_unit_of_measure": "bags",
-                                    "created_by_date": "2020-07-13",
-                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                    "updated_by_date": "2020-07-16",
-                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                    "cargo_parent_type": "CONTAINER"
-                                }
-                            ],
-                            "trips": [
-                                {
-                                    "client_company_id": 1,
-                                    "client_company_name": "Customs",
-                                    "created_by_date": "2021-09-21",
-                                    "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
-                                    "drop_off_location": "Velvet Veldt",
-                                    "estimated_delivery_date": "2019-01-01",
-                                    "estimated_delivery_days": 12,
-                                    "estimated_pickup_date": "2019-01-01",
-                                    "estimated_return_date": null,
-                                    "estimated_total_days": 45,
-                                    "external_bill_of_lading": "Test Bol",
-                                    "first_estimated_delivery_date": "2020-02-02",
-                                    "load_name": "HYT45x0917",
-                                    "load_unit_of_measure": "METRIC_TONS",
-                                    "load_weight": 2,
-                                    "pickup_location": "Hiram Saltmarsh",
-                                    "return_yard": "Test_Yard",
-                                    "returned_timestamp": null,
-                                    "row_version": 1,
-                                    "trip_is_assigned": false,
-                                    "trip_notes": "Handle with care",
-                                    "trip_status": "CREATE",
-                                    "trip_type": "OUTSOURCED",
-                                    "trips_id": 1,
-                                    "updated_by_date": null,
-                                    "updated_by_requestor_username": null
-                                }
-                            ]
-                        }
-                    ],
-                    "pagination": {
-                        "limit": 2,
-                        "offset": 0,
-                        "total": 3
-                    }
-                }
-            ]
-        }
-    },
-    "examples": [
-        {
-            "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
-            "message": {
-                "items": [
-                    {
-                        "shipments_id": 1,
-                        "row_version": 1,
-                        "organizations_id": 1,
-                        "shipment_type": "Air Import",
-                        "client_company_id": 1,
-                        "client_company_name": "My Enterprises Ltd",
-                        "suppliers_id": 1,
-                        "supplier_name": "My Supplier Name",
-                        "shipment_status": "AT_XXXXX",
-                        "bill_of_lading": "WEXXXXXXXX58",
-                        "port_of_entry": "Mombasa_Kenya",
-                        "port_of_origin": "SOKHNA__EGYPT",
-                        "country_of_destination": "KENYA",
-                        "shipment_poe_eta": "2020-12-26",
-                        "consignment_weight": 17,
-                        "consignment_weight_unit_of_measure": "MT",
-                        "created_by_date": "2020-09-21",
-                        "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
-                        "updated_by_date": "2020-12-30",
-                        "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
-                        "through_bill_of_lading": "TBL",
-                        "external_shipment_id": null,
-                        "estimated_berthing_time": "2023-06-17 14:51:00+00",
-                        "final_release_date": "2023-06-17",
-                        "cif_value": 20.50,
-                        "cif_value_currency_type": "KES",
-                        "customs_tax": 30,
-                        "customs_tax_currency_type": "USD",
-                        "dangerous_cargo": true,
-                        "restricted_goods": true,
-                        "proforma_date": "2022-10-10",
-                        "commercial_invoice_date": "2022-11-11",
-                        "commercial_invoice_value": 40.5,
-                        "commercial_invoice_currency_type": "KSH",
-                        "country_of_origin": "India",
-                        "idf_date": "2022-11-10",
-                        "original_documents_received_date": "2022-11-11",
-                        "shipping_line": "Test Shipping Line",
-                        "entry_registration_date": "2022-11-12",
-                        "taxes_paid_date": "2022-11-13",
-                        "entry_pass_date": "2022-11-14",
-                        "shipping_charges_paid_date": "2022-11-15",
-                        "freight_vessel": "ship",
-                        "idf_number": "IDF 1234",
-                        "last_sling_date": "2022-11-16",
-                        "booking_date": "2022-11-17",
-                        "proforma_invoice_number": "Proforma INV 1234",
-                        "customs_entry_number": "Customs 123",
-                        "customs_entry_type": "New Type",
-                        "entry_shared_date": "2022-11-18",
-                        "shipment_history": [
-                            {
+                            "shipment_history": [{
                                 "shipment_poe_eta": "2020-06-30",
                                 "created_by_date": "2020-05-06"
-                            }
-                        ],
-                        "shipment_statuses_history": [
-                            {
+                            }],
+                            "shipment_statuses_history": [{
                                 "shipmentstatushistory_id": 1,
                                 "historic_status": "AT_XXXX",
                                 "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                 "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
-                            }
-                        ],
-                        "containers": [
-                            {
+                            }],
+                            "containers": [{
                                 "containers_id": 1,
                                 "row_version": 1,
                                 "container_tag": "TAG 001",
@@ -2410,26 +1805,28 @@
                                 "last_free_storage_date": "2022-09-11",
                                 "offloading_date": "2022-10-11",
                                 "demurrage_date": "2022-12-11",
+                                "cfs_gate_in": "2024-01-11",
+                                "cfs_last_free_day": "2023-02-11",
+                                "loading_date": "2023-03-11",
+                                "interchange_type": "Irregular Interchange",
                                 "created_by_date": "2020-07-22",
                                 "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                                 "updated_by_date": "2020-11-12",
                                 "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
-                                "cargo": [
-                                    {
-                                        "cargo_id": 1,
-                                        "row_version": 1,
-                                        "cargo_type": "Sand",
-                                        "cargo_gross_weight": 10130,
-                                        "cargo_gross_unit_of_measure": "KGS",
-                                        "cargo_quantity": 400,
-                                        "cargo_quantity_unit_of_measure": "bags",
-                                        "created_by_date": "2020-07-13",
-                                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "updated_by_date": "2020-07-16",
-                                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
-                                        "cargo_parent_type": "CONTAINER"
-                                    }
-                                ],
+                                "cargo": [{
+                                    "cargo_id": 1,
+                                    "row_version": 1,
+                                    "cargo_type": "Sand",
+                                    "cargo_gross_weight": 10130,
+                                    "cargo_gross_unit_of_measure": "KGS",
+                                    "cargo_quantity": 400,
+                                    "cargo_quantity_unit_of_measure": "bags",
+                                    "created_by_date": "2020-07-13",
+                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "updated_by_date": "2020-07-16",
+                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "cargo_parent_type": "CONTAINER"
+                                }],
                                 "trips": {
                                     "client_company_id": 1,
                                     "client_company_name": "Customs",
@@ -2459,10 +1856,8 @@
                                     "updated_by_date": null,
                                     "updated_by_requestor_username": null
                                 }
-                            }
-                        ],
-                        "cargo": [
-                            {
+                            }],
+                            "cargo": [{
                                 "cargo_id": 1,
                                 "row_version": 1,
                                 "cargo_type": "Sand",
@@ -2476,10 +1871,8 @@
                                 "updated_by_date": "2020-07-16",
                                 "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
                                 "cargo_parent_type": "CONTAINER"
-                            }
-                        ],
-                        "trips": [
-                            {
+                            }],
+                            "trips": [{
                                 "client_company_id": 1,
                                 "client_company_name": "Customs",
                                 "created_by_date": "2021-09-21",
@@ -2506,16 +1899,587 @@
                                 "trips_id": 1,
                                 "updated_by_date": null,
                                 "updated_by_requestor_username": null
-                            }
-                        ]
-                    }
-                ],
+                            }]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "shipments_id": 1,
+                            "row_version": 1,
+                            "organizations_id": 1,
+                            "shipment_type": "Air Import",
+                            "client_company_id": 1,
+                            "client_company_name": "My Enterprises Ltd",
+                            "suppliers_id": 1,
+                            "supplier_name": "My Supplier Name",
+                            "shipment_status": "AT_XXXXX",
+                            "bill_of_lading": "WEXXXXXXXX58",
+                            "port_of_entry": "Mombasa_Kenya",
+                            "port_of_origin": "SOKHNA__EGYPT",
+                            "country_of_destination": "KENYA",
+                            "shipment_poe_eta": "2020-12-26",
+                            "consignment_weight": 17,
+                            "consignment_weight_unit_of_measure": "MT",
+                            "created_by_date": "2020-09-21",
+                            "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                            "updated_by_date": "2020-12-30",
+                            "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                            "through_bill_of_lading": "TBL",
+                            "external_shipment_id": null,
+                            "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                            "final_release_date": "2023-06-17",
+                            "cif_value": 20.50,
+                            "cif_value_currency_type": "KES",
+                            "customs_tax": 30,
+                            "customs_tax_currency_type": "USD",
+                            "dangerous_cargo": true,
+                            "restricted_goods": true,
+                            "proforma_date": "2022-10-10",
+                            "commercial_invoice_date": "2022-11-11",
+                            "commercial_invoice_value": 40.5,
+                            "commercial_invoice_currency_type": "KSH",
+                            "country_of_origin": "India",
+                            "idf_date": "2022-11-10",
+                            "original_documents_received_date": "2022-11-11",
+                            "shipping_line": "Test Shipping Line",
+                            "entry_registration_date": "2022-11-12",
+                            "taxes_paid_date": "2022-11-13",
+                            "entry_pass_date": "2022-11-14",
+                            "shipping_charges_paid_date": "2022-11-15",
+                            "freight_vessel": "ship",
+                            "idf_number": "IDF 1234",
+                            "last_sling_date": "2022-11-16",
+                            "booking_date": "2022-11-17",
+                            "proforma_invoice_number": "Proforma INV 1234",
+                            "customs_entry_number": "Customs 123",
+                            "customs_entry_type": "New Type",
+                            "entry_shared_date": "2022-11-18",
+                            "shipment_history": [{
+                                "shipment_poe_eta": "2020-06-30",
+                                "created_by_date": "2020-05-06"
+                            }],
+                            "shipment_statuses_history": [{
+                                "shipmentstatushistory_id": 1,
+                                "historic_status": "AT_XXXX",
+                                "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
+                            }],
+                            "containers": [{
+                                "containers_id": 1,
+                                "row_version": 1,
+                                "container_tag": "TAG 001",
+                                "container_form_factor": "20",
+                                "trips_id": 1,
+                                "container_cargo_gross_weight": 20178,
+                                "container_cargo_gross_unit_of_measure": "KGS",
+                                "container_discharge_date": "2022-06-11",
+                                "container_transfer_date": "2022-07-11",
+                                "empty_return_date": "2022-11-11",
+                                "gate_in_date": "2022-08-11",
+                                "last_free_storage_date": "2022-09-11",
+                                "offloading_date": "2022-10-11",
+                                "demurrage_date": "2022-12-11",
+                                "cfs_gate_in": "2024-01-11",
+                                "cfs_last_free_day": "2023-02-11",
+                                "loading_date": "2023-03-11",
+                                "interchange_type": "Irregular Interchange",
+                                "created_by_date": "2020-07-22",
+                                "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                                "updated_by_date": "2020-11-12",
+                                "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                                "cargo": [{
+                                    "cargo_id": 1,
+                                    "row_version": 1,
+                                    "cargo_type": "Sand",
+                                    "cargo_gross_weight": 10130,
+                                    "cargo_gross_unit_of_measure": "KGS",
+                                    "cargo_quantity": 400,
+                                    "cargo_quantity_unit_of_measure": "bags",
+                                    "created_by_date": "2020-07-13",
+                                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "updated_by_date": "2020-07-16",
+                                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                    "cargo_parent_type": "CONTAINER"
+                                }],
+                                "trips": {
+                                    "client_company_id": 1,
+                                    "client_company_name": "Customs",
+                                    "created_by_date": "2021-09-21",
+                                    "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                    "drop_off_location": "Velvet Veldt",
+                                    "estimated_delivery_date": "2019-01-01",
+                                    "estimated_delivery_days": 12,
+                                    "estimated_pickup_date": "2019-01-01",
+                                    "estimated_return_date": null,
+                                    "estimated_total_days": 45,
+                                    "external_bill_of_lading": "Test Bol",
+                                    "first_estimated_delivery_date": "2020-02-02",
+                                    "load_name": "HYT45x0917",
+                                    "load_unit_of_measure": "METRIC_TONS",
+                                    "load_weight": 2,
+                                    "pickup_location": "Hiram Saltmarsh",
+                                    "return_yard": "Test_Yard",
+                                    "returned_timestamp": null,
+                                    "row_version": 1,
+                                    "shipments_id": 10000,
+                                    "trip_is_assigned": false,
+                                    "trip_notes": "Handle with care",
+                                    "trip_status": "CREATE",
+                                    "trip_type": "OUTSOURCED",
+                                    "trips_id": 100,
+                                    "updated_by_date": null,
+                                    "updated_by_requestor_username": null
+                                }
+                            }],
+                            "cargo": [{
+                                "cargo_id": 1,
+                                "row_version": 1,
+                                "cargo_type": "Sand",
+                                "containers_id": 1,
+                                "cargo_gross_weight": 10130,
+                                "cargo_gross_unit_of_measure": "KGS",
+                                "cargo_quantity": 400,
+                                "cargo_quantity_unit_of_measure": "bags",
+                                "created_by_date": "2020-07-13",
+                                "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                "updated_by_date": "2020-07-16",
+                                "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                                "cargo_parent_type": "CONTAINER"
+                            }],
+                            "trips": [{
+                                "client_company_id": 1,
+                                "client_company_name": "Customs",
+                                "created_by_date": "2021-09-21",
+                                "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                                "drop_off_location": "Velvet Veldt",
+                                "estimated_delivery_date": "2019-01-01",
+                                "estimated_delivery_days": 12,
+                                "estimated_pickup_date": "2019-01-01",
+                                "estimated_return_date": null,
+                                "estimated_total_days": 45,
+                                "external_bill_of_lading": "Test Bol",
+                                "first_estimated_delivery_date": "2020-02-02",
+                                "load_name": "HYT45x0917",
+                                "load_unit_of_measure": "METRIC_TONS",
+                                "load_weight": 2,
+                                "pickup_location": "Hiram Saltmarsh",
+                                "return_yard": "Test_Yard",
+                                "returned_timestamp": null,
+                                "row_version": 1,
+                                "trip_is_assigned": false,
+                                "trip_notes": "Handle with care",
+                                "trip_status": "CREATE",
+                                "trip_type": "OUTSOURCED",
+                                "trips_id": 1,
+                                "updated_by_date": null,
+                                "updated_by_requestor_username": null
+                            }]
+                        }]
+                    ]
+                },
+                "pagination": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The pagination Schema",
+                    "required": [
+                        "limit",
+                        "offset",
+                        "total"
+                    ],
+                    "properties": {
+                        "limit": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The limit Schema",
+                            "examples": [
+                                2
+                            ]
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The offset Schema",
+                            "examples": [
+                                0
+                            ]
+                        },
+                        "total": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total Schema",
+                            "examples": [
+                                3
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "limit": 2,
+                        "offset": 0,
+                        "total": 3
+                    }]
+                }
+            },
+            "examples": [{
+                "items": [{
+                    "shipments_id": 1,
+                    "row_version": 1,
+                    "organizations_id": 1,
+                    "shipment_type": "Air Import",
+                    "client_company_id": 1,
+                    "client_company_name": "My Enterprises Ltd",
+                    "suppliers_id": 1,
+                    "supplier_name": "My Supplier Name",
+                    "shipment_status": "AT_XXXXX",
+                    "bill_of_lading": "WEXXXXXXXX58",
+                    "port_of_entry": "Mombasa_Kenya",
+                    "port_of_origin": "SOKHNA__EGYPT",
+                    "country_of_destination": "KENYA",
+                    "shipment_poe_eta": "2020-12-26",
+                    "consignment_weight": 17,
+                    "consignment_weight_unit_of_measure": "MT",
+                    "created_by_date": "2020-09-21",
+                    "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                    "updated_by_date": "2020-12-30",
+                    "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                    "through_bill_of_lading": "TBL",
+                    "external_shipment_id": null,
+                    "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                    "final_release_date": "2023-06-17",
+                    "cif_value": 20.50,
+                    "cif_value_currency_type": "KES",
+                    "customs_tax": 30,
+                    "customs_tax_currency_type": "USD",
+                    "dangerous_cargo": true,
+                    "restricted_goods": true,
+                    "proforma_date": "2022-10-10",
+                    "commercial_invoice_date": "2022-11-11",
+                    "commercial_invoice_value": 40.5,
+                    "commercial_invoice_currency_type": "KSH",
+                    "country_of_origin": "India",
+                    "idf_date": "2022-11-10",
+                    "original_documents_received_date": "2022-11-11",
+                    "shipping_line": "Test Shipping Line",
+                    "entry_registration_date": "2022-11-12",
+                    "taxes_paid_date": "2022-11-13",
+                    "entry_pass_date": "2022-11-14",
+                    "shipping_charges_paid_date": "2022-11-15",
+                    "freight_vessel": "ship",
+                    "idf_number": "IDF 1234",
+                    "last_sling_date": "2022-11-16",
+                    "booking_date": "2022-11-17",
+                    "proforma_invoice_number": "Proforma INV 1234",
+                    "customs_entry_number": "Customs 123",
+                    "customs_entry_type": "New Type",
+                    "entry_shared_date": "2022-11-18",
+                    "shipment_history": [{
+                        "shipment_poe_eta": "2020-06-30",
+                        "created_by_date": "2020-05-06"
+                    }],
+                    "shipment_statuses_history": [{
+                        "shipmentstatushistory_id": 1,
+                        "historic_status": "AT_XXXX",
+                        "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                        "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
+                    }],
+                    "containers": [{
+                        "containers_id": 1,
+                        "row_version": 1,
+                        "container_tag": "TAG 001",
+                        "container_form_factor": "20",
+                        "trips_id": 1,
+                        "container_cargo_gross_weight": 20178,
+                        "container_cargo_gross_unit_of_measure": "KGS",
+                        "container_discharge_date": "2022-06-11",
+                        "container_transfer_date": "2022-07-11",
+                        "empty_return_date": "2022-11-11",
+                        "gate_in_date": "2022-08-11",
+                        "last_free_storage_date": "2022-09-11",
+                        "offloading_date": "2022-10-11",
+                        "demurrage_date": "2022-12-11",
+                        "cfs_gate_in": "2024-01-11",
+                        "cfs_last_free_day": "2023-02-11",
+                        "loading_date": "2023-03-11",
+                        "interchange_type": "Irregular Interchange",
+                        "created_by_date": "2020-07-22",
+                        "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                        "updated_by_date": "2020-11-12",
+                        "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                        "cargo": [{
+                            "cargo_id": 1,
+                            "row_version": 1,
+                            "cargo_type": "Sand",
+                            "cargo_gross_weight": 10130,
+                            "cargo_gross_unit_of_measure": "KGS",
+                            "cargo_quantity": 400,
+                            "cargo_quantity_unit_of_measure": "bags",
+                            "created_by_date": "2020-07-13",
+                            "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                            "updated_by_date": "2020-07-16",
+                            "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                            "cargo_parent_type": "CONTAINER"
+                        }],
+                        "trips": {
+                            "client_company_id": 1,
+                            "client_company_name": "Customs",
+                            "created_by_date": "2021-09-21",
+                            "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                            "drop_off_location": "Velvet Veldt",
+                            "estimated_delivery_date": "2019-01-01",
+                            "estimated_delivery_days": 12,
+                            "estimated_pickup_date": "2019-01-01",
+                            "estimated_return_date": null,
+                            "estimated_total_days": 45,
+                            "external_bill_of_lading": "Test Bol",
+                            "first_estimated_delivery_date": "2020-02-02",
+                            "load_name": "HYT45x0917",
+                            "load_unit_of_measure": "METRIC_TONS",
+                            "load_weight": 2,
+                            "pickup_location": "Hiram Saltmarsh",
+                            "return_yard": "Test_Yard",
+                            "returned_timestamp": null,
+                            "row_version": 1,
+                            "shipments_id": 10000,
+                            "trip_is_assigned": false,
+                            "trip_notes": "Handle with care",
+                            "trip_status": "CREATE",
+                            "trip_type": "OUTSOURCED",
+                            "trips_id": 100,
+                            "updated_by_date": null,
+                            "updated_by_requestor_username": null
+                        }
+                    }],
+                    "cargo": [{
+                        "cargo_id": 1,
+                        "row_version": 1,
+                        "cargo_type": "Sand",
+                        "containers_id": 1,
+                        "cargo_gross_weight": 10130,
+                        "cargo_gross_unit_of_measure": "KGS",
+                        "cargo_quantity": 400,
+                        "cargo_quantity_unit_of_measure": "bags",
+                        "created_by_date": "2020-07-13",
+                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                        "updated_by_date": "2020-07-16",
+                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                        "cargo_parent_type": "CONTAINER"
+                    }],
+                    "trips": [{
+                        "client_company_id": 1,
+                        "client_company_name": "Customs",
+                        "created_by_date": "2021-09-21",
+                        "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                        "drop_off_location": "Velvet Veldt",
+                        "estimated_delivery_date": "2019-01-01",
+                        "estimated_delivery_days": 12,
+                        "estimated_pickup_date": "2019-01-01",
+                        "estimated_return_date": null,
+                        "estimated_total_days": 45,
+                        "external_bill_of_lading": "Test Bol",
+                        "first_estimated_delivery_date": "2020-02-02",
+                        "load_name": "HYT45x0917",
+                        "load_unit_of_measure": "METRIC_TONS",
+                        "load_weight": 2,
+                        "pickup_location": "Hiram Saltmarsh",
+                        "return_yard": "Test_Yard",
+                        "returned_timestamp": null,
+                        "row_version": 1,
+                        "trip_is_assigned": false,
+                        "trip_notes": "Handle with care",
+                        "trip_status": "CREATE",
+                        "trip_type": "OUTSOURCED",
+                        "trips_id": 1,
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    }]
+                }],
                 "pagination": {
                     "limit": 2,
                     "offset": 0,
                     "total": 3
                 }
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "51ad84d4-XXXXXXX-6b2ce5e8",
+        "message": {
+            "items": [{
+                "shipments_id": 1,
+                "row_version": 1,
+                "organizations_id": 1,
+                "shipment_type": "Air Import",
+                "client_company_id": 1,
+                "client_company_name": "My Enterprises Ltd",
+                "suppliers_id": 1,
+                "supplier_name": "My Supplier Name",
+                "shipment_status": "AT_XXXXX",
+                "bill_of_lading": "WEXXXXXXXX58",
+                "port_of_entry": "Mombasa_Kenya",
+                "port_of_origin": "SOKHNA__EGYPT",
+                "country_of_destination": "KENYA",
+                "shipment_poe_eta": "2020-12-26",
+                "consignment_weight": 17,
+                "consignment_weight_unit_of_measure": "MT",
+                "created_by_date": "2020-09-21",
+                "created_by_requestor_username": "51ad84d4-XXXXXXX-6b2ce5e8",
+                "updated_by_date": "2020-12-30",
+                "updated_by_requestor_username": "d8b0e9d9-XXXXXXXX-f59910ef9d2b",
+                "through_bill_of_lading": "TBL",
+                "external_shipment_id": null,
+                "estimated_berthing_time": "2023-06-17 14:51:00+00",
+                "final_release_date": "2023-06-17",
+                "cif_value": 20.50,
+                "cif_value_currency_type": "KES",
+                "customs_tax": 30,
+                "customs_tax_currency_type": "USD",
+                "dangerous_cargo": true,
+                "restricted_goods": true,
+                "proforma_date": "2022-10-10",
+                "commercial_invoice_date": "2022-11-11",
+                "commercial_invoice_value": 40.5,
+                "commercial_invoice_currency_type": "KSH",
+                "country_of_origin": "India",
+                "idf_date": "2022-11-10",
+                "original_documents_received_date": "2022-11-11",
+                "shipping_line": "Test Shipping Line",
+                "entry_registration_date": "2022-11-12",
+                "taxes_paid_date": "2022-11-13",
+                "entry_pass_date": "2022-11-14",
+                "shipping_charges_paid_date": "2022-11-15",
+                "freight_vessel": "ship",
+                "idf_number": "IDF 1234",
+                "last_sling_date": "2022-11-16",
+                "booking_date": "2022-11-17",
+                "proforma_invoice_number": "Proforma INV 1234",
+                "customs_entry_number": "Customs 123",
+                "customs_entry_type": "New Type",
+                "entry_shared_date": "2022-11-18",
+                "shipment_history": [{
+                    "shipment_poe_eta": "2020-06-30",
+                    "created_by_date": "2020-05-06"
+                }],
+                "shipment_statuses_history": [{
+                    "shipmentstatushistory_id": 1,
+                    "historic_status": "AT_XXXX",
+                    "cognito_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                    "status_set_timestamp": "2020-05-06 01:33:36.987313+00"
+                }],
+                "containers": [{
+                    "containers_id": 1,
+                    "row_version": 1,
+                    "container_tag": "TAG 001",
+                    "container_form_factor": "20",
+                    "trips_id": 1,
+                    "container_cargo_gross_weight": 20178,
+                    "container_cargo_gross_unit_of_measure": "KGS",
+                    "container_discharge_date": "2022-06-11",
+                    "container_transfer_date": "2022-07-11",
+                    "empty_return_date": "2022-11-11",
+                    "gate_in_date": "2022-08-11",
+                    "last_free_storage_date": "2022-09-11",
+                    "offloading_date": "2022-10-11",
+                    "demurrage_date": "2022-12-11",
+                    "cfs_gate_in": "2024-01-11",
+                    "cfs_last_free_day": "2023-02-11",
+                    "loading_date": "2023-03-11",
+                    "interchange_type": "Irregular Interchange",
+                    "created_by_date": "2020-07-22",
+                    "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
+                    "updated_by_date": "2020-11-12",
+                    "updated_by_requestor_username": "e2cf79b8-XXXXXXXX-9f34dd5b67f0",
+                    "cargo": [{
+                        "cargo_id": 1,
+                        "row_version": 1,
+                        "cargo_type": "Sand",
+                        "cargo_gross_weight": 10130,
+                        "cargo_gross_unit_of_measure": "KGS",
+                        "cargo_quantity": 400,
+                        "cargo_quantity_unit_of_measure": "bags",
+                        "created_by_date": "2020-07-13",
+                        "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                        "updated_by_date": "2020-07-16",
+                        "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                        "cargo_parent_type": "CONTAINER"
+                    }],
+                    "trips": {
+                        "client_company_id": 1,
+                        "client_company_name": "Customs",
+                        "created_by_date": "2021-09-21",
+                        "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                        "drop_off_location": "Velvet Veldt",
+                        "estimated_delivery_date": "2019-01-01",
+                        "estimated_delivery_days": 12,
+                        "estimated_pickup_date": "2019-01-01",
+                        "estimated_return_date": null,
+                        "estimated_total_days": 45,
+                        "external_bill_of_lading": "Test Bol",
+                        "first_estimated_delivery_date": "2020-02-02",
+                        "load_name": "HYT45x0917",
+                        "load_unit_of_measure": "METRIC_TONS",
+                        "load_weight": 2,
+                        "pickup_location": "Hiram Saltmarsh",
+                        "return_yard": "Test_Yard",
+                        "returned_timestamp": null,
+                        "row_version": 1,
+                        "shipments_id": 10000,
+                        "trip_is_assigned": false,
+                        "trip_notes": "Handle with care",
+                        "trip_status": "CREATE",
+                        "trip_type": "OUTSOURCED",
+                        "trips_id": 100,
+                        "updated_by_date": null,
+                        "updated_by_requestor_username": null
+                    }
+                }],
+                "cargo": [{
+                    "cargo_id": 1,
+                    "row_version": 1,
+                    "cargo_type": "Sand",
+                    "containers_id": 1,
+                    "cargo_gross_weight": 10130,
+                    "cargo_gross_unit_of_measure": "KGS",
+                    "cargo_quantity": 400,
+                    "cargo_quantity_unit_of_measure": "bags",
+                    "created_by_date": "2020-07-13",
+                    "created_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                    "updated_by_date": "2020-07-16",
+                    "updated_by_requestor_username": "33d44460-XXXXXXXX-83a09fe4bbcd",
+                    "cargo_parent_type": "CONTAINER"
+                }],
+                "trips": [{
+                    "client_company_id": 1,
+                    "client_company_name": "Customs",
+                    "created_by_date": "2021-09-21",
+                    "created_by_requestor_username": "dd896ea6-XXXXXXXX-31027bb8d383",
+                    "drop_off_location": "Velvet Veldt",
+                    "estimated_delivery_date": "2019-01-01",
+                    "estimated_delivery_days": 12,
+                    "estimated_pickup_date": "2019-01-01",
+                    "estimated_return_date": null,
+                    "estimated_total_days": 45,
+                    "external_bill_of_lading": "Test Bol",
+                    "first_estimated_delivery_date": "2020-02-02",
+                    "load_name": "HYT45x0917",
+                    "load_unit_of_measure": "METRIC_TONS",
+                    "load_weight": 2,
+                    "pickup_location": "Hiram Saltmarsh",
+                    "return_yard": "Test_Yard",
+                    "returned_timestamp": null,
+                    "row_version": 1,
+                    "trip_is_assigned": false,
+                    "trip_notes": "Handle with care",
+                    "trip_status": "CREATE",
+                    "trip_type": "OUTSOURCED",
+                    "trips_id": 1,
+                    "updated_by_date": null,
+                    "updated_by_requestor_username": null
+                }]
+            }],
+            "pagination": {
+                "limit": 2,
+                "offset": 0,
+                "total": 3
             }
         }
-    ]
+    }]
 }

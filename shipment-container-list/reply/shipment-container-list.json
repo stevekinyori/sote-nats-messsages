@@ -154,6 +154,38 @@
                                     "2022-12-11"
                                 ]
                             },
+                            "cfs_gate_in": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The cfs_gate_in Schema",
+                                "examples": [
+                                    "2024-01-11"
+                                ]
+                            },
+                            "cfs_last_free_day": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The cfs_last_free_day Schema",
+                                "examples": [
+                                    "2023-02-11"
+                                ]
+                            },
+                            "loading_date": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The loading_date Schema",
+                                "examples": [
+                                    "2023-03-11"
+                                ]
+                            },
+                            "interchange_type": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The interchange_type Schema",
+                                "examples": [
+                                    "Irregular Interchange"
+                                ]
+                            },
                             "created_by_date": {
                                 "type": "string",
                                 "default": "",
@@ -198,10 +230,10 @@
                                     "client_company_id",
                                     "client_company_name",
                                     "shipment_status",
-                                    "dangerous_cargo",
-                                    "restricted_goods",
                                     "created_by_date",
-                                    "created_by_requestor_username"
+                                    "created_by_requestor_username",
+                                    "dangerous_cargo",
+                                    "restricted_goods"
                                 ],
                                 "properties": {
                                     "shipments_id": {
@@ -1027,6 +1059,10 @@
                             "last_free_storage_date": "2022-09-11",
                             "offloading_date": "2022-10-11",
                             "demurrage_date": "2022-12-11",
+                            "cfs_gate_in": "2024-01-11",
+                            "cfs_last_free_day": "2023-02-11",
+                            "loading_date": "2023-03-11",
+                            "interchange_type": "Irregular Interchange",
                             "created_by_date": "2020-07-22",
                             "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                             "updated_by_date": "2020-11-12",
@@ -1137,6 +1173,10 @@
                             "last_free_storage_date": "2022-09-11",
                             "offloading_date": "2022-10-11",
                             "demurrage_date": "2022-12-11",
+                            "cfs_gate_in": "2024-01-11",
+                            "cfs_last_free_day": "2023-02-11",
+                            "loading_date": "2023-03-11",
+                            "interchange_type": "Irregular Interchange",
                             "created_by_date": "2020-07-22",
                             "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                             "updated_by_date": "2020-11-12",
@@ -1290,6 +1330,10 @@
                     "last_free_storage_date": "2022-09-11",
                     "offloading_date": "2022-10-11",
                     "demurrage_date": "2022-12-11",
+                    "cfs_gate_in": "2024-01-11",
+                    "cfs_last_free_day": "2023-02-11",
+                    "loading_date": "2023-03-11",
+                    "interchange_type": "Irregular Interchange",
                     "created_by_date": "2020-07-22",
                     "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                     "updated_by_date": "2020-11-12",
@@ -1409,6 +1453,10 @@
                 "last_free_storage_date": "2022-09-11",
                 "offloading_date": "2022-10-11",
                 "demurrage_date": "2022-12-11",
+                "cfs_gate_in": "2024-01-11",
+                "cfs_last_free_day": "2023-02-11",
+                "loading_date": "2023-03-11",
+                "interchange_type": "Irregular Interchange",
                 "created_by_date": "2020-07-22",
                 "created_by_requestor_username": "d7266c8f-XXXXXXXX-3ee850338ea7",
                 "updated_by_date": "2020-11-12",
