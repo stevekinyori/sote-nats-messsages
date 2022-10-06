@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "client-company-id"
+  ],
+  "optional": [
+  "include-company-contacts",
+  "additional-emails"
+  ],
+  "properties": {
+    "client-company-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The client-company-id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "include-company-contacts": {
+      "type": "boolean",
+      "default": false,
+      "title": "The include-company-contacts Schema",
+      "examples": [
+        false
+      ]
+    },
+    "additional-emails": {
+      "type": "array",
+      "default": [],
+      "title": "The additional-emails Schema",
+      "items": {
+        "type": "string",
+        "title": "A Schema",
+        "examples": [
+          "test@test.com",
+          "test@user.com"
+        ]
+      },
+      "examples": [
+        ["test@test.com",
+          "test@user.com"
+        ]
+      ]
+    }
+  },
+  "examples": [{
+    "client-company-id": 1,
+    "include-company-contacts": false,
+    "additional-emails": [
+      "test@test.com",
+      "test@user.com"
+    ]
+  }]
+}
