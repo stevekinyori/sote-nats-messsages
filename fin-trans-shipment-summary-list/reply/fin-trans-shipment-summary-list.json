@@ -37,7 +37,6 @@
                         "required": [
                             "organizations_id",
                             "client_company_id",
-                            "shipments_id",
                             "amounts"
                         ],
                         "properties": {
@@ -55,14 +54,6 @@
                                 "title": "The client_company_id Schema",
                                 "examples": [
                                     17
-                                ]
-                            },
-                            "shipments_id": {
-                                "type": "integer",
-                                "default": 0,
-                                "title": "The shipments_id Schema",
-                                "examples": [
-                                    10244
                                 ]
                             },
                             "amounts": {
@@ -188,7 +179,6 @@
                         "examples": [{
                             "organizations_id": 10000,
                             "client_company_id": 17,
-                            "shipments_id": 10244,
                             "amounts": [{
                                 "currency_type": "KES",
                                 "unexpected_charge_amount": 100.5,
@@ -206,7 +196,6 @@
                         [{
                             "organizations_id": 10000,
                             "client_company_id": 17,
-                            "shipments_id": 10244,
                             "amounts": [{
                                 "currency_type": "KES",
                                 "unexpected_charge_amount": 100.5,
@@ -236,7 +225,7 @@
                             "default": 0,
                             "title": "The total Schema",
                             "examples": [
-                                100
+                                1
                             ]
                         },
                         "limit": {
@@ -257,7 +246,7 @@
                         }
                     },
                     "examples": [{
-                        "total": 100,
+                        "total": 1,
                         "limit": 0,
                         "offset": 0
                     }]
@@ -267,7 +256,6 @@
                 "items": [{
                     "organizations_id": 10000,
                     "client_company_id": 17,
-                    "shipments_id": 10244,
                     "amounts": [{
                         "currency_type": "KES",
                         "unexpected_charge_amount": 100.5,
@@ -281,7 +269,7 @@
                     }]
                 }],
                 "pagination": {
-                    "total": 100,
+                    "total": 1,
                     "limit": 0,
                     "offset": 0
                 }
@@ -294,7 +282,6 @@
             "items": [{
                 "organizations_id": 10000,
                 "client_company_id": 17,
-                "shipments_id": 10244,
                 "amounts": [{
                     "currency_type": "KES",
                     "unexpected_charge_amount": 100.5,
@@ -308,7 +295,7 @@
                 }]
             }],
             "pagination": {
-                "total": 100,
+                "total": 1,
                 "limit": 0,
                 "offset": 0
             }
