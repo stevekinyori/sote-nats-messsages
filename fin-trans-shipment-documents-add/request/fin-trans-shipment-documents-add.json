@@ -72,7 +72,55 @@
             "default": "",
             "title": "The transaction-date Schema",
             "examples": [
-                "2022-10-10"
+                "2021-10-10"
+            ]
+        },
+        "parent-fintrans-documents-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The parent-fintrans-documents-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "currency_type": {
+            "type": "string",
+            "default": "",
+            "title": "The currency_type Schema",
+            "examples": [
+                "USD"
+            ]
+        },
+        "total-amount": {
+            "type": "integer",
+            "default": 0,
+            "title": "The total-amount Schema",
+            "examples": [
+                1000
+            ]
+        },
+        "total-balance": {
+            "type": "integer",
+            "default": 0,
+            "title": "The total-balance Schema",
+            "examples": [
+                100
+            ]
+        },
+        "transaction-memo": {
+            "type": "string",
+            "default": "",
+            "title": "The transaction-memo Schema",
+            "examples": [
+                "Memo 123"
+            ]
+        },
+        "transaction-note": {
+            "type": "string",
+            "default": "",
+            "title": "The transaction-note Schema",
+            "examples": [
+                "T Note"
             ]
         }
     },
@@ -84,6 +132,12 @@
         "documents-id": 1,
         "due-date": "2021-10-13",
         "external-system-id": "EXTERNAL ID 3",
-        "transaction-date": "2021-10-10"
+        "transaction-date": "2021-10-10",
+        "parent-fintrans-documents-id": 1,
+        "currency_type": "USD",
+        "total-amount": 1000,
+        "total-balance": 100,
+        "transaction-memo": "Memo 123",
+        "transaction-note": "T Note"
     }]
 }

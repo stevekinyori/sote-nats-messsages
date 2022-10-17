@@ -188,6 +188,22 @@
                                     100
                                 ]
                             },
+                            "transaction_memo": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The transaction_memo Schema",
+                                "examples": [
+                                    "Memo 123"
+                                ]
+                            },
+                            "transaction_note": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The transaction_note Schema",
+                                "examples": [
+                                    "T Note"
+                                ]
+                            },
                             "created_by_date": {
                                 "type": "string",
                                 "default": "",
@@ -281,6 +297,8 @@
                             "total_amount": 1000,
                             "paid_amount": 900,
                             "total_balance": 100,
+                            "transaction_memo": "Memo 123",
+                            "transaction_note": "T Note",
                             "created_by_date": "2022-09-19",
                             "created_by_requestor_username": "SOTE-USER",
                             "line_items": {
@@ -311,6 +329,8 @@
                             "total_amount": 1000,
                             "paid_amount": 900,
                             "total_balance": 100,
+                            "transaction_memo": "Memo 123",
+                            "transaction_note": "T Note",
                             "created_by_date": "2022-09-19",
                             "created_by_requestor_username": "SOTE-USER",
                             "line_items": {
@@ -384,6 +404,8 @@
                     "total_amount": 1000,
                     "paid_amount": 900,
                     "total_balance": 100,
+                    "transaction_memo": "Memo 123",
+                    "transaction_note": "T Note",
                     "created_by_date": "2022-09-19",
                     "created_by_requestor_username": "SOTE-USER",
                     "line_items": {
@@ -423,6 +445,8 @@
                 "total_amount": 1000,
                 "paid_amount": 900,
                 "total_balance": 100,
+                "transaction_memo": "Memo 123",
+                "transaction_note": "T Note",
                 "created_by_date": "2022-09-19",
                 "created_by_requestor_username": "SOTE-USER",
                 "line_items": {
