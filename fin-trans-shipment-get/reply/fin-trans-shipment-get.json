@@ -41,6 +41,8 @@
                 "tax_rate",
                 "tax_amount",
                 "external_system_id",
+                "payment_method",
+                "payment_ref_no",
                 "notes",
                 "financial_documents",
                 "children"
@@ -198,6 +200,28 @@
                         "1"
                     ]
                 },
+                "payment_method": {
+                    "type": [
+                        "null",
+                        "string"
+                    ],
+                    "title": "The payment_method Schema",
+                    "examples": [
+                        null,
+                        "Cash"
+                    ]
+                },
+                "payment_ref_no": {
+                    "type": [
+                        "null",
+                        "string"
+                    ],
+                    "title": "The payment_ref_no Schema",
+                    "examples": [
+                        null,
+                        "TP1234"
+                    ]
+                },
                 "notes": {
                     "type": "array",
                     "default": [],
@@ -313,6 +337,7 @@
                     "required": [
                         "created_by_date",
                         "created_by_requestor_username",
+                        "currency_type",
                         "document_reference",
                         "documents_id",
                         "due_date",
@@ -320,8 +345,13 @@
                         "financial_document_type",
                         "financialdocuments_id",
                         "ledger_status",
+                        "paid_amount",
                         "shipments_id",
-                        "transaction_date"
+                        "total_amount",
+                        "total_balance",
+                        "transaction_date",
+                        "transaction_memo",
+                        "transaction_note"
                     ],
                     "properties": {
                         "created_by_date": {
@@ -337,7 +367,15 @@
                             "default": "",
                             "title": "The created_by_requestor_username Schema",
                             "examples": [
-                                "test-user"
+                                "SOTE-USER"
+                            ]
+                        },
+                        "currency_type": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The currency_type Schema",
+                            "examples": [
+                                "KES"
                             ]
                         },
                         "document_reference": {
@@ -345,7 +383,7 @@
                             "default": "",
                             "title": "The document_reference Schema",
                             "examples": [
-                                "test1"
+                                "TEST REF"
                             ]
                         },
                         "documents_id": {
@@ -361,7 +399,7 @@
                             "default": "",
                             "title": "The due_date Schema",
                             "examples": [
-                                "2022-08-07"
+                                "2022-12-12"
                             ]
                         },
                         "external_system_id": {
@@ -369,7 +407,7 @@
                             "default": "",
                             "title": "The external_system_id Schema",
                             "examples": [
-                                "1"
+                                "TEST REF"
                             ]
                         },
                         "financial_document_type": {
@@ -377,7 +415,7 @@
                             "default": "",
                             "title": "The financial_document_type Schema",
                             "examples": [
-                                "Invoice"
+                                "INVOICE"
                             ]
                         },
                         "financialdocuments_id": {
@@ -393,7 +431,15 @@
                             "default": "",
                             "title": "The ledger_status Schema",
                             "examples": [
-                                "test-status"
+                                "TEST LEDGER STATUS"
+                            ]
+                        },
+                        "paid_amount": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The paid_amount Schema",
+                            "examples": [
+                                90000
                             ]
                         },
                         "shipments_id": {
@@ -404,6 +450,22 @@
                                 999999999991
                             ]
                         },
+                        "total_amount": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total_amount Schema",
+                            "examples": [
+                                100000
+                            ]
+                        },
+                        "total_balance": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total_balance Schema",
+                            "examples": [
+                                10000
+                            ]
+                        },
                         "transaction_date": {
                             "type": "string",
                             "default": "",
@@ -411,20 +473,42 @@
                             "examples": [
                                 "2022-08-07"
                             ]
+                        },
+                        "transaction_memo": {
+                            "type": "null",
+                            "default": null,
+                            "title": "The transaction_memo Schema",
+                            "examples": [
+                                null
+                            ]
+                        },
+                        "transaction_note": {
+                            "type": "null",
+                            "default": null,
+                            "title": "The transaction_note Schema",
+                            "examples": [
+                                null
+                            ]
                         }
                     },
                     "examples": [{
                         "created_by_date": "2022-08-07",
-                        "created_by_requestor_username": "test-user",
-                        "document_reference": "test1",
+                        "created_by_requestor_username": "SOTE-USER",
+                        "currency_type": "KES",
+                        "document_reference": "TEST REF",
                         "documents_id": 1,
-                        "due_date": "2022-08-07",
-                        "external_system_id": "1",
-                        "financial_document_type": "Invoice",
+                        "due_date": "2022-12-12",
+                        "external_system_id": "TEST REF",
+                        "financial_document_type": "INVOICE",
                         "financialdocuments_id": 1,
-                        "ledger_status": "test-status",
+                        "ledger_status": "TEST LEDGER STATUS",
+                        "paid_amount": 90000,
                         "shipments_id": 999999999991,
-                        "transaction_date": "2022-08-07"
+                        "total_amount": 100000,
+                        "total_balance": 10000,
+                        "transaction_date": "2022-08-07",
+                        "transaction_memo": null,
+                        "transaction_note": null
                     }]
                 },
                 "children": {
@@ -443,6 +527,8 @@
                             "created_by_requestor_username",
                             "currency_type",
                             "external_system_id",
+                            "payment_method",
+                            "payment_ref_no",
                             "financial_documents",
                             "financialdocuments_id",
                             "financialtransactions_type",
@@ -515,6 +601,22 @@
                                     "1"
                                 ]
                             },
+                            "payment_method": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The payment_method Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "payment_ref_no": {
+                                "type": "null",
+                                "default": null,
+                                "title": "The payment_ref_no Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
                             "financial_documents": {
                                 "type": "object",
                                 "default": {},
@@ -522,6 +624,7 @@
                                 "required": [
                                     "created_by_date",
                                     "created_by_requestor_username",
+                                    "currency_type",
                                     "document_reference",
                                     "documents_id",
                                     "due_date",
@@ -529,8 +632,13 @@
                                     "financial_document_type",
                                     "financialdocuments_id",
                                     "ledger_status",
+                                    "paid_amount",
                                     "shipments_id",
-                                    "transaction_date"
+                                    "total_amount",
+                                    "total_balance",
+                                    "transaction_date",
+                                    "transaction_memo",
+                                    "transaction_note"
                                 ],
                                 "properties": {
                                     "created_by_date": {
@@ -903,6 +1011,8 @@
                             "created_by_requestor_username": "test-user",
                             "currency_type": "USD",
                             "external_system_id": "1",
+                            "payment_method": null,
+                            "payment_ref_no": null,
                             "financial_documents": {
                                 "created_by_date": "2022-10-17",
                                 "created_by_requestor_username": "SOTE-USER",
@@ -955,6 +1065,8 @@
                             "created_by_requestor_username": "test-user",
                             "currency_type": "USD",
                             "external_system_id": "1",
+                            "payment_method": null,
+                            "payment_ref_no": null,
                             "financial_documents": {
                                 "created_by_date": "2022-10-17",
                                 "created_by_requestor_username": "SOTE-USER",
@@ -1020,6 +1132,8 @@
                 "tax_rate": 0.5,
                 "tax_amount": 500,
                 "external_system_id": "1",
+                "payment_method": null,
+                "payment_ref_no": null,
                 "notes": [{
                     "created_by_date": "2022-08-03",
                     "created_by_requestor_username": "SOTE-USER",
@@ -1032,16 +1146,22 @@
                 }],
                 "financial_documents": {
                     "created_by_date": "2022-08-07",
-                    "created_by_requestor_username": "test-user",
-                    "document_reference": "test1",
+                    "created_by_requestor_username": "SOTE-USER",
+                    "currency_type": "KES",
+                    "document_reference": "TEST REF",
                     "documents_id": 1,
-                    "due_date": "2022-08-07",
-                    "external_system_id": "1",
-                    "financial_document_type": "Invoice",
+                    "due_date": "2022-12-12",
+                    "external_system_id": "TEST REF",
+                    "financial_document_type": "INVOICE",
                     "financialdocuments_id": 1,
-                    "ledger_status": "test-status",
+                    "ledger_status": "TEST LEDGER STATUS",
+                    "paid_amount": 90000,
                     "shipments_id": 999999999991,
-                    "transaction_date": "2022-08-07"
+                    "total_amount": 100000,
+                    "total_balance": 10000,
+                    "transaction_date": "2022-08-07",
+                    "transaction_memo": null,
+                    "transaction_note": null
                 },
                 "children": [{
                     "bill_of_lading": "test bol",
@@ -1051,6 +1171,8 @@
                     "created_by_requestor_username": "test-user",
                     "currency_type": "USD",
                     "external_system_id": "1",
+                    "payment_method": null,
+                    "payment_ref_no": null,
                     "financial_documents": {
                         "created_by_date": "2022-10-17",
                         "created_by_requestor_username": "SOTE-USER",
@@ -1118,6 +1240,8 @@
             "tax_rate": 0.5,
             "tax_amount": 500,
             "external_system_id": "1",
+            "payment_method": null,
+            "payment_ref_no": null,
             "notes": [{
                 "created_by_date": "2022-08-03",
                 "created_by_requestor_username": "SOTE-USER",
@@ -1130,16 +1254,22 @@
             }],
             "financial_documents": {
                 "created_by_date": "2022-08-07",
-                "created_by_requestor_username": "test-user",
-                "document_reference": "test1",
+                "created_by_requestor_username": "SOTE-USER",
+                "currency_type": "KES",
+                "document_reference": "TEST REF",
                 "documents_id": 1,
-                "due_date": "2022-08-07",
-                "external_system_id": "1",
-                "financial_document_type": "Invoice",
+                "due_date": "2022-12-12",
+                "external_system_id": "TEST REF",
+                "financial_document_type": "INVOICE",
                 "financialdocuments_id": 1,
-                "ledger_status": "test-status",
+                "ledger_status": "TEST LEDGER STATUS",
+                "paid_amount": 90000,
                 "shipments_id": 999999999991,
-                "transaction_date": "2022-08-07"
+                "total_amount": 100000,
+                "total_balance": 10000,
+                "transaction_date": "2022-08-07",
+                "transaction_memo": null,
+                "transaction_note": null
             },
             "children": [{
                 "bill_of_lading": "test bol",
@@ -1149,6 +1279,8 @@
                 "created_by_requestor_username": "test-user",
                 "currency_type": "USD",
                 "external_system_id": "1",
+                "payment_method": null,
+                "payment_ref_no": null,
                 "financial_documents": {
                     "created_by_date": "2022-10-17",
                     "created_by_requestor_username": "SOTE-USER",
