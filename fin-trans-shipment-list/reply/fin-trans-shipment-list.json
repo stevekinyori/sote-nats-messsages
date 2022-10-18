@@ -32,7 +32,6 @@
                     "title": "The items Schema",
                     "items": {
                         "type": "object",
-                        "default": {},
                         "title": "A Schema",
                         "required": [
                             "shipmentfinancialtransactions_id",
@@ -54,6 +53,8 @@
                             "tax_rate",
                             "tax_amount",
                             "external_system_id",
+                            "payment_method",
+                            "payment_ref_no",
                             "notes",
                             "financial_documents",
                             "children"
@@ -61,15 +62,14 @@
                         "properties": {
                             "shipmentfinancialtransactions_id": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The shipmentfinancialtransactions_id Schema",
                                 "examples": [
-                                    999999999999
+                                    999999999999,
+                                    337
                                 ]
                             },
                             "organizations_id": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The organizations_id Schema",
                                 "examples": [
                                     1
@@ -77,39 +77,38 @@
                             },
                             "client_company_id": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The client_company_id Schema",
                                 "examples": [
-                                    999999999991
+                                    999999999991,
+                                    1
                                 ]
                             },
                             "client_company_name": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The client_company_name Schema",
                                 "examples": [
-                                    "ACME DELETE ME CONTAINERS LTD"
+                                    "ACME DELETE ME CONTAINERS LTD",
+                                    "TEST CLIENT"
                                 ]
                             },
                             "shipments_id": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The shipments_id Schema",
                                 "examples": [
-                                    999999999991
+                                    999999999991,
+                                    10000
                                 ]
                             },
                             "financialtransactions_type": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The financialtransactions_type Schema",
                                 "examples": [
-                                    "TEST_FINTRANS_TYPE"
+                                    "TEST_FINTRANS_TYPE",
+                                    "INVOICE_PAYMENT"
                                 ]
                             },
                             "currency_type": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The currency_type Schema",
                                 "examples": [
                                     "USD"
@@ -117,55 +116,54 @@
                             },
                             "transactions_amount": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The transactions_amount Schema",
                                 "examples": [
-                                    500000
+                                    500000,
+                                    30
                                 ]
                             },
                             "transaction_date": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The transaction_date Schema",
                                 "examples": [
-                                    "2022-08-03"
+                                    "2022-08-03",
+                                    "2022-10-18"
                                 ]
                             },
                             "transactions_timestamp": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The transactions_timestamp Schema",
                                 "examples": [
-                                    "2022-08-03T08:23:50.846736+03:00"
+                                    "2022-08-03T08:23:50.846736+03:00",
+                                    "2022-10-18T08:12:18.807424+03:00"
                                 ]
                             },
                             "created_by_requestor-username": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The created_by_requestor-username Schema",
                                 "examples": [
-                                    "test-user"
+                                    "test-user",
+                                    "quickbooks-webhook"
                                 ]
                             },
                             "bill_of_lading": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The bill_of_lading Schema",
                                 "examples": [
-                                    "test bol"
+                                    "test bol",
+                                    "TEST BOL"
                                 ]
                             },
                             "memo": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The memo Schema",
                                 "examples": [
-                                    "test memo"
+                                    "test memo",
+                                    "Test payment"
                                 ]
                             },
                             "cost_is_unexpected": {
                                 "type": "boolean",
-                                "default": false,
                                 "title": "The cost_is_unexpected Schema",
                                 "examples": [
                                     false
@@ -173,47 +171,74 @@
                             },
                             "financialdocuments_id": {
                                 "type": "integer",
-                                "default": 0,
                                 "title": "The financialdocuments_id Schema",
                                 "examples": [
-                                    1
+                                    1,
+                                    10073
                                 ]
                             },
                             "transactions_entry_type": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The transactions_entry_type Schema",
                                 "examples": [
-                                    "DEBIT"
+                                    "DEBIT",
+                                    "CREDIT"
                                 ]
                             },
                             "tax_rate": {
-                                "type": "number",
-                                "default": 0.0,
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
                                 "title": "The tax_rate Schema",
                                 "examples": [
-                                    0.5
+                                    0.5,
+                                    null
                                 ]
                             },
                             "tax_amount": {
-                                "type": "integer",
-                                "default": 0,
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
                                 "title": "The tax_amount Schema",
                                 "examples": [
-                                    500
+                                    500,
+                                    null
                                 ]
                             },
                             "external_system_id": {
                                 "type": "string",
-                                "default": "",
                                 "title": "The external_system_id Schema",
                                 "examples": [
-                                    "1"
+                                    "1",
+                                    "330"
+                                ]
+                            },
+                            "payment_method": {
+                                "type": [
+                                    "null",
+                                    "string"
+                                ],
+                                "title": "The payment_method Schema",
+                                "examples": [
+                                    null,
+                                    "Cash"
+                                ]
+                            },
+                            "payment_ref_no": {
+                                "type": [
+                                    "null",
+                                    "string"
+                                ],
+                                "title": "The payment_ref_no Schema",
+                                "examples": [
+                                    null,
+                                    "TP1234"
                                 ]
                             },
                             "notes": {
                                 "type": "array",
-                                "default": [],
                                 "title": "The notes Schema",
                                 "items": {
                                     "type": "object",
@@ -316,16 +341,17 @@
                                         "notes_owner_key": "999999999999",
                                         "notes_owner_micro_service": "FINTRANS",
                                         "notes_type": "FINTRANS_SHIPMENT"
-                                    }]
+                                    }],
+                                    []
                                 ]
                             },
                             "financial_documents": {
                                 "type": "object",
-                                "default": {},
                                 "title": "The financial_documents Schema",
                                 "required": [
                                     "created_by_date",
                                     "created_by_requestor_username",
+                                    "currency_type",
                                     "document_reference",
                                     "documents_id",
                                     "due_date",
@@ -333,102 +359,165 @@
                                     "financial_document_type",
                                     "financialdocuments_id",
                                     "ledger_status",
+                                    "paid_amount",
                                     "shipments_id",
-                                    "transaction_date"
+                                    "total_amount",
+                                    "total_balance",
+                                    "transaction_date",
+                                    "transaction_memo",
+                                    "transaction_note"
                                 ],
                                 "properties": {
                                     "created_by_date": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The created_by_date Schema",
                                         "examples": [
-                                            "2022-08-07"
+                                            "2022-08-07",
+                                            "2022-10-18"
                                         ]
                                     },
                                     "created_by_requestor_username": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The created_by_requestor_username Schema",
                                         "examples": [
-                                            "test-user"
+                                            "test-user",
+                                            "quickbooks-webhook"
+                                        ]
+                                    },
+                                    "currency_type": {
+                                        "type": "string",
+                                        "title": "The currency_type Schema",
+                                        "examples": [
+                                            "KES",
+                                            "USD"
                                         ]
                                     },
                                     "document_reference": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The document_reference Schema",
                                         "examples": [
-                                            "test1"
+                                            "test1",
+                                            "1135"
                                         ]
                                     },
                                     "documents_id": {
-                                        "type": "integer",
-                                        "default": 0,
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
                                         "title": "The documents_id Schema",
                                         "examples": [
-                                            1
+                                            1,
+                                            null
                                         ]
                                     },
                                     "due_date": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The due_date Schema",
                                         "examples": [
-                                            "2022-08-07"
+                                            "2022-08-07",
+                                            "2022-11-17"
                                         ]
                                     },
                                     "external_system_id": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The external_system_id Schema",
                                         "examples": [
-                                            "1"
+                                            "1",
+                                            "322"
                                         ]
                                     },
                                     "financial_document_type": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The financial_document_type Schema",
                                         "examples": [
-                                            "Invoice"
+                                            "Invoice",
+                                            "INVOICE"
                                         ]
                                     },
                                     "financialdocuments_id": {
                                         "type": "integer",
-                                        "default": 0,
                                         "title": "The financialdocuments_id Schema",
                                         "examples": [
-                                            1
+                                            1,
+                                            10073
                                         ]
                                     },
                                     "ledger_status": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The ledger_status Schema",
                                         "examples": [
-                                            "test-status"
+                                            "test-status",
+                                            "OPEN"
+                                        ]
+                                    },
+                                    "paid_amount": {
+                                        "type": "integer",
+                                        "title": "The paid_amount Schema",
+                                        "examples": [
+                                            90000,
+                                            30
                                         ]
                                     },
                                     "shipments_id": {
                                         "type": "integer",
-                                        "default": 0,
                                         "title": "The shipments_id Schema",
                                         "examples": [
-                                            999999999991
+                                            999999999991,
+                                            10000
+                                        ]
+                                    },
+                                    "total_amount": {
+                                        "type": "integer",
+                                        "title": "The total_amount Schema",
+                                        "examples": [
+                                            100000,
+                                            54
+                                        ]
+                                    },
+                                    "total_balance": {
+                                        "type": "integer",
+                                        "title": "The total_balance Schema",
+                                        "examples": [
+                                            10000,
+                                            24
                                         ]
                                     },
                                     "transaction_date": {
                                         "type": "string",
-                                        "default": "",
                                         "title": "The transaction_date Schema",
                                         "examples": [
-                                            "2022-08-07"
+                                            "2022-12-12",
+                                            "2022-10-18"
+                                        ]
+                                    },
+                                    "transaction_memo": {
+                                        "type": [
+                                            "null",
+                                            "string"
+                                        ],
+                                        "title": "The transaction_memo Schema",
+                                        "examples": [
+                                            null,
+                                            "Thank you for your business and have a great day!"
+                                        ]
+                                    },
+                                    "transaction_note": {
+                                        "type": [
+                                            "null",
+                                            "string"
+                                        ],
+                                        "title": "The transaction_note Schema",
+                                        "examples": [
+                                            null,
+                                            "Test invoice"
                                         ]
                                     }
                                 },
                                 "examples": [{
                                     "created_by_date": "2022-08-07",
                                     "created_by_requestor_username": "test-user",
+                                    "currency_type": "KES",
                                     "document_reference": "test1",
                                     "documents_id": 1,
                                     "due_date": "2022-08-07",
@@ -436,13 +525,36 @@
                                     "financial_document_type": "Invoice",
                                     "financialdocuments_id": 1,
                                     "ledger_status": "test-status",
+                                    "paid_amount": 90000,
                                     "shipments_id": 999999999991,
-                                    "transaction_date": "2022-08-07"
-                                }]
+                                    "total_amount": 100000,
+                                    "total_balance": 10000,
+                                    "transaction_date": "2022-12-12",
+                                    "transaction_memo": null,
+                                    "transaction_note": null
+                                },
+                                    {
+                                        "created_by_date": "2022-10-18",
+                                        "created_by_requestor_username": "quickbooks-webhook",
+                                        "currency_type": "USD",
+                                        "document_reference": "1135",
+                                        "documents_id": null,
+                                        "due_date": "2022-11-17",
+                                        "external_system_id": "322",
+                                        "financial_document_type": "INVOICE",
+                                        "financialdocuments_id": 10073,
+                                        "ledger_status": "OPEN",
+                                        "paid_amount": 30,
+                                        "shipments_id": 10000,
+                                        "total_amount": 54,
+                                        "total_balance": 24,
+                                        "transaction_date": "2022-10-18",
+                                        "transaction_memo": "Thank you for your business and have a great day!",
+                                        "transaction_note": "Test invoice"
+                                    }]
                             },
                             "children": {
                                 "type": "array",
-                                "default": [],
                                 "title": "The children Schema",
                                 "items": {
                                     "type": "object",
@@ -456,6 +568,8 @@
                                         "created_by_requestor_username",
                                         "currency_type",
                                         "external_system_id",
+                                        "payment_method",
+                                        "payment_ref_no",
                                         "financial_documents",
                                         "financialdocuments_id",
                                         "financialtransactions_type",
@@ -528,6 +642,22 @@
                                                 "1"
                                             ]
                                         },
+                                        "payment_method": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The payment_method Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        },
+                                        "payment_ref_no": {
+                                            "type": "null",
+                                            "default": null,
+                                            "title": "The payment_ref_no Schema",
+                                            "examples": [
+                                                null
+                                            ]
+                                        },
                                         "financial_documents": {
                                             "type": "object",
                                             "default": {},
@@ -535,6 +665,7 @@
                                             "required": [
                                                 "created_by_date",
                                                 "created_by_requestor_username",
+                                                "currency_type",
                                                 "document_reference",
                                                 "documents_id",
                                                 "due_date",
@@ -542,8 +673,13 @@
                                                 "financial_document_type",
                                                 "financialdocuments_id",
                                                 "ledger_status",
+                                                "paid_amount",
                                                 "shipments_id",
-                                                "transaction_date"
+                                                "total_amount",
+                                                "total_balance",
+                                                "transaction_date",
+                                                "transaction_memo",
+                                                "transaction_note"
                                             ],
                                             "properties": {
                                                 "created_by_date": {
@@ -916,6 +1052,8 @@
                                         "created_by_requestor_username": "test-user",
                                         "currency_type": "USD",
                                         "external_system_id": "1",
+                                        "payment_method": null,
+                                        "payment_ref_no": null,
                                         "financial_documents": {
                                             "created_by_date": "2022-10-17",
                                             "created_by_requestor_username": "SOTE-USER",
@@ -968,6 +1106,8 @@
                                         "created_by_requestor_username": "test-user",
                                         "currency_type": "USD",
                                         "external_system_id": "1",
+                                        "payment_method": null,
+                                        "payment_ref_no": null,
                                         "financial_documents": {
                                             "created_by_date": "2022-10-17",
                                             "created_by_requestor_username": "SOTE-USER",
@@ -1009,7 +1149,8 @@
                                         "transaction_date": "2022-08-07",
                                         "transactions_entry_type": "DEBIT",
                                         "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
-                                    }]
+                                    }],
+                                    []
                                 ]
                             }
                         },
@@ -1033,6 +1174,8 @@
                             "tax_rate": 0.5,
                             "tax_amount": 500,
                             "external_system_id": "1",
+                            "payment_method": null,
+                            "payment_ref_no": null,
                             "notes": [{
                                 "created_by_date": "2022-08-03",
                                 "created_by_requestor_username": "SOTE-USER",
@@ -1046,6 +1189,7 @@
                             "financial_documents": {
                                 "created_by_date": "2022-08-07",
                                 "created_by_requestor_username": "test-user",
+                                "currency_type": "KES",
                                 "document_reference": "test1",
                                 "documents_id": 1,
                                 "due_date": "2022-08-07",
@@ -1053,8 +1197,13 @@
                                 "financial_document_type": "Invoice",
                                 "financialdocuments_id": 1,
                                 "ledger_status": "test-status",
+                                "paid_amount": 90000,
                                 "shipments_id": 999999999991,
-                                "transaction_date": "2022-08-07"
+                                "total_amount": 100000,
+                                "total_balance": 10000,
+                                "transaction_date": "2022-12-12",
+                                "transaction_memo": null,
+                                "transaction_note": null
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
@@ -1064,6 +1213,8 @@
                                 "created_by_requestor_username": "test-user",
                                 "currency_type": "USD",
                                 "external_system_id": "1",
+                                "payment_method": null,
+                                "payment_ref_no": null,
                                 "financial_documents": {
                                     "created_by_date": "2022-10-17",
                                     "created_by_requestor_username": "SOTE-USER",
@@ -1106,7 +1257,51 @@
                                 "transactions_entry_type": "DEBIT",
                                 "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                             }]
-                        }]
+                        },
+                            {
+                                "shipmentfinancialtransactions_id": 337,
+                                "organizations_id": 1,
+                                "client_company_id": 1,
+                                "client_company_name": "TEST CLIENT",
+                                "shipments_id": 10000,
+                                "financialtransactions_type": "INVOICE_PAYMENT",
+                                "currency_type": "USD",
+                                "transactions_amount": 30,
+                                "transaction_date": "2022-10-18",
+                                "transactions_timestamp": "2022-10-18T08:12:18.807424+03:00",
+                                "created_by_requestor-username": "quickbooks-webhook",
+                                "bill_of_lading": "TEST BOL",
+                                "memo": "Test payment",
+                                "cost_is_unexpected": false,
+                                "financialdocuments_id": 10073,
+                                "transactions_entry_type": "CREDIT",
+                                "tax_rate": null,
+                                "tax_amount": null,
+                                "external_system_id": "330",
+                                "payment_method": "Cash",
+                                "payment_ref_no": "TP1234",
+                                "notes": [],
+                                "financial_documents": {
+                                    "created_by_date": "2022-10-18",
+                                    "created_by_requestor_username": "quickbooks-webhook",
+                                    "currency_type": "USD",
+                                    "document_reference": "1135",
+                                    "documents_id": null,
+                                    "due_date": "2022-11-17",
+                                    "external_system_id": "322",
+                                    "financial_document_type": "INVOICE",
+                                    "financialdocuments_id": 10073,
+                                    "ledger_status": "OPEN",
+                                    "paid_amount": 30,
+                                    "shipments_id": 10000,
+                                    "total_amount": 54,
+                                    "total_balance": 24,
+                                    "transaction_date": "2022-10-18",
+                                    "transaction_memo": "Thank you for your business and have a great day!",
+                                    "transaction_note": "Test invoice"
+                                },
+                                "children": []
+                            }]
                     },
                     "examples": [
                         [{
@@ -1129,6 +1324,8 @@
                             "tax_rate": 0.5,
                             "tax_amount": 500,
                             "external_system_id": "1",
+                            "payment_method": null,
+                            "payment_ref_no": null,
                             "notes": [{
                                 "created_by_date": "2022-08-03",
                                 "created_by_requestor_username": "SOTE-USER",
@@ -1142,6 +1339,7 @@
                             "financial_documents": {
                                 "created_by_date": "2022-08-07",
                                 "created_by_requestor_username": "test-user",
+                                "currency_type": "KES",
                                 "document_reference": "test1",
                                 "documents_id": 1,
                                 "due_date": "2022-08-07",
@@ -1149,8 +1347,13 @@
                                 "financial_document_type": "Invoice",
                                 "financialdocuments_id": 1,
                                 "ledger_status": "test-status",
+                                "paid_amount": 90000,
                                 "shipments_id": 999999999991,
-                                "transaction_date": "2022-08-07"
+                                "total_amount": 100000,
+                                "total_balance": 10000,
+                                "transaction_date": "2022-12-12",
+                                "transaction_memo": null,
+                                "transaction_note": null
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
@@ -1160,6 +1363,8 @@
                                 "created_by_requestor_username": "test-user",
                                 "currency_type": "USD",
                                 "external_system_id": "1",
+                                "payment_method": null,
+                                "payment_ref_no": null,
                                 "financial_documents": {
                                     "created_by_date": "2022-10-17",
                                     "created_by_requestor_username": "SOTE-USER",
@@ -1202,7 +1407,51 @@
                                 "transactions_entry_type": "DEBIT",
                                 "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                             }]
-                        }]
+                        },
+                            {
+                                "shipmentfinancialtransactions_id": 337,
+                                "organizations_id": 1,
+                                "client_company_id": 1,
+                                "client_company_name": "TEST CLIENT",
+                                "shipments_id": 10000,
+                                "financialtransactions_type": "INVOICE_PAYMENT",
+                                "currency_type": "USD",
+                                "transactions_amount": 30,
+                                "transaction_date": "2022-10-18",
+                                "transactions_timestamp": "2022-10-18T08:12:18.807424+03:00",
+                                "created_by_requestor-username": "quickbooks-webhook",
+                                "bill_of_lading": "TEST BOL",
+                                "memo": "Test payment",
+                                "cost_is_unexpected": false,
+                                "financialdocuments_id": 10073,
+                                "transactions_entry_type": "CREDIT",
+                                "tax_rate": null,
+                                "tax_amount": null,
+                                "external_system_id": "330",
+                                "payment_method": "Cash",
+                                "payment_ref_no": "TP1234",
+                                "notes": [],
+                                "financial_documents": {
+                                    "created_by_date": "2022-10-18",
+                                    "created_by_requestor_username": "quickbooks-webhook",
+                                    "currency_type": "USD",
+                                    "document_reference": "1135",
+                                    "documents_id": null,
+                                    "due_date": "2022-11-17",
+                                    "external_system_id": "322",
+                                    "financial_document_type": "INVOICE",
+                                    "financialdocuments_id": 10073,
+                                    "ledger_status": "OPEN",
+                                    "paid_amount": 30,
+                                    "shipments_id": 10000,
+                                    "total_amount": 54,
+                                    "total_balance": 24,
+                                    "transaction_date": "2022-10-18",
+                                    "transaction_memo": "Thank you for your business and have a great day!",
+                                    "transaction_note": "Test invoice"
+                                },
+                                "children": []
+                            }]
                     ]
                 },
                 "pagination": {
@@ -1220,7 +1469,7 @@
                             "default": 0,
                             "title": "The total Schema",
                             "examples": [
-                                1
+                                2
                             ]
                         },
                         "limit": {
@@ -1228,7 +1477,7 @@
                             "default": 0,
                             "title": "The limit Schema",
                             "examples": [
-                                1
+                                0
                             ]
                         },
                         "offset": {
@@ -1241,8 +1490,8 @@
                         }
                     },
                     "examples": [{
-                        "total": 1,
-                        "limit": 1,
+                        "total": 2,
+                        "limit": 0,
                         "offset": 0
                     }]
                 }
@@ -1268,6 +1517,8 @@
                     "tax_rate": 0.5,
                     "tax_amount": 500,
                     "external_system_id": "1",
+                    "payment_method": null,
+                    "payment_ref_no": null,
                     "notes": [{
                         "created_by_date": "2022-08-03",
                         "created_by_requestor_username": "SOTE-USER",
@@ -1281,6 +1532,7 @@
                     "financial_documents": {
                         "created_by_date": "2022-08-07",
                         "created_by_requestor_username": "test-user",
+                        "currency_type": "KES",
                         "document_reference": "test1",
                         "documents_id": 1,
                         "due_date": "2022-08-07",
@@ -1288,8 +1540,13 @@
                         "financial_document_type": "Invoice",
                         "financialdocuments_id": 1,
                         "ledger_status": "test-status",
+                        "paid_amount": 90000,
                         "shipments_id": 999999999991,
-                        "transaction_date": "2022-08-07"
+                        "total_amount": 100000,
+                        "total_balance": 10000,
+                        "transaction_date": "2022-12-12",
+                        "transaction_memo": null,
+                        "transaction_note": null
                     },
                     "children": [{
                         "bill_of_lading": "test bol",
@@ -1299,6 +1556,8 @@
                         "created_by_requestor_username": "test-user",
                         "currency_type": "USD",
                         "external_system_id": "1",
+                        "payment_method": null,
+                        "payment_ref_no": null,
                         "financial_documents": {
                             "created_by_date": "2022-10-17",
                             "created_by_requestor_username": "SOTE-USER",
@@ -1341,10 +1600,54 @@
                         "transactions_entry_type": "DEBIT",
                         "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                     }]
-                }],
+                },
+                    {
+                        "shipmentfinancialtransactions_id": 337,
+                        "organizations_id": 1,
+                        "client_company_id": 1,
+                        "client_company_name": "TEST CLIENT",
+                        "shipments_id": 10000,
+                        "financialtransactions_type": "INVOICE_PAYMENT",
+                        "currency_type": "USD",
+                        "transactions_amount": 30,
+                        "transaction_date": "2022-10-18",
+                        "transactions_timestamp": "2022-10-18T08:12:18.807424+03:00",
+                        "created_by_requestor-username": "quickbooks-webhook",
+                        "bill_of_lading": "TEST BOL",
+                        "memo": "Test payment",
+                        "cost_is_unexpected": false,
+                        "financialdocuments_id": 10073,
+                        "transactions_entry_type": "CREDIT",
+                        "tax_rate": null,
+                        "tax_amount": null,
+                        "external_system_id": "330",
+                        "payment_method": "Cash",
+                        "payment_ref_no": "TP1234",
+                        "notes": [],
+                        "financial_documents": {
+                            "created_by_date": "2022-10-18",
+                            "created_by_requestor_username": "quickbooks-webhook",
+                            "currency_type": "USD",
+                            "document_reference": "1135",
+                            "documents_id": null,
+                            "due_date": "2022-11-17",
+                            "external_system_id": "322",
+                            "financial_document_type": "INVOICE",
+                            "financialdocuments_id": 10073,
+                            "ledger_status": "OPEN",
+                            "paid_amount": 30,
+                            "shipments_id": 10000,
+                            "total_amount": 54,
+                            "total_balance": 24,
+                            "transaction_date": "2022-10-18",
+                            "transaction_memo": "Thank you for your business and have a great day!",
+                            "transaction_note": "Test invoice"
+                        },
+                        "children": []
+                    }],
                 "pagination": {
-                    "total": 1,
-                    "limit": 1,
+                    "total": 2,
+                    "limit": 0,
                     "offset": 0
                 }
             }]
@@ -1373,6 +1676,8 @@
                 "tax_rate": 0.5,
                 "tax_amount": 500,
                 "external_system_id": "1",
+                "payment_method": null,
+                "payment_ref_no": null,
                 "notes": [{
                     "created_by_date": "2022-08-03",
                     "created_by_requestor_username": "SOTE-USER",
@@ -1386,6 +1691,7 @@
                 "financial_documents": {
                     "created_by_date": "2022-08-07",
                     "created_by_requestor_username": "test-user",
+                    "currency_type": "KES",
                     "document_reference": "test1",
                     "documents_id": 1,
                     "due_date": "2022-08-07",
@@ -1393,8 +1699,13 @@
                     "financial_document_type": "Invoice",
                     "financialdocuments_id": 1,
                     "ledger_status": "test-status",
+                    "paid_amount": 90000,
                     "shipments_id": 999999999991,
-                    "transaction_date": "2022-08-07"
+                    "total_amount": 100000,
+                    "total_balance": 10000,
+                    "transaction_date": "2022-12-12",
+                    "transaction_memo": null,
+                    "transaction_note": null
                 },
                 "children": [{
                     "bill_of_lading": "test bol",
@@ -1404,6 +1715,8 @@
                     "created_by_requestor_username": "test-user",
                     "currency_type": "USD",
                     "external_system_id": "1",
+                    "payment_method": null,
+                    "payment_ref_no": null,
                     "financial_documents": {
                         "created_by_date": "2022-10-17",
                         "created_by_requestor_username": "SOTE-USER",
@@ -1446,10 +1759,54 @@
                     "transactions_entry_type": "DEBIT",
                     "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
                 }]
-            }],
+            },
+                {
+                    "shipmentfinancialtransactions_id": 337,
+                    "organizations_id": 1,
+                    "client_company_id": 1,
+                    "client_company_name": "TEST CLIENT",
+                    "shipments_id": 10000,
+                    "financialtransactions_type": "INVOICE_PAYMENT",
+                    "currency_type": "USD",
+                    "transactions_amount": 30,
+                    "transaction_date": "2022-10-18",
+                    "transactions_timestamp": "2022-10-18T08:12:18.807424+03:00",
+                    "created_by_requestor-username": "quickbooks-webhook",
+                    "bill_of_lading": "TEST BOL",
+                    "memo": "Test payment",
+                    "cost_is_unexpected": false,
+                    "financialdocuments_id": 10073,
+                    "transactions_entry_type": "CREDIT",
+                    "tax_rate": null,
+                    "tax_amount": null,
+                    "external_system_id": "330",
+                    "payment_method": "Cash",
+                    "payment_ref_no": "TP1234",
+                    "notes": [],
+                    "financial_documents": {
+                        "created_by_date": "2022-10-18",
+                        "created_by_requestor_username": "quickbooks-webhook",
+                        "currency_type": "USD",
+                        "document_reference": "1135",
+                        "documents_id": null,
+                        "due_date": "2022-11-17",
+                        "external_system_id": "322",
+                        "financial_document_type": "INVOICE",
+                        "financialdocuments_id": 10073,
+                        "ledger_status": "OPEN",
+                        "paid_amount": 30,
+                        "shipments_id": 10000,
+                        "total_amount": 54,
+                        "total_balance": 24,
+                        "transaction_date": "2022-10-18",
+                        "transaction_memo": "Thank you for your business and have a great day!",
+                        "transaction_note": "Test invoice"
+                    },
+                    "children": []
+                }],
             "pagination": {
-                "total": 1,
-                "limit": 1,
+                "total": 2,
+                "limit": 0,
                 "offset": 0
             }
         }

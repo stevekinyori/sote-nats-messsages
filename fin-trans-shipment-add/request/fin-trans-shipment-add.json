@@ -21,7 +21,9 @@
 		"tax-rate",
 		"tax-amount",
 		"external-system-id",
-		"parent-shipment-financial-transactions-id"
+		"parent-shipment-financial-transactions-id",
+		"payment-method",
+		"payment-ref-no"
 	],
 	"properties": {
 		"client-company-id": {
@@ -170,6 +172,22 @@
 			"examples": [
 				1
 			]
+		},
+		"payment-method": {
+			"type": "string",
+			"default": "",
+			"title": "The payment-method Schema",
+			"examples": [
+				"Cash"
+			]
+		},
+		"payment-ref-no": {
+			"type": "string",
+			"default": "",
+			"title": "The payment-ref-no Schema",
+			"examples": [
+				"TP101"
+			]
 		}
 	},
 	"examples": [{
@@ -187,6 +205,8 @@
 		"tax-rate": 0.5,
 		"tax-amount": 5000.25,
 		"external-system-id": "1",
-		"parent-shipment-financial-transactions-id": 1
+		"parent-shipment-financial-transactions-id": 1,
+		"payment-method": "Cash",
+		"payment-ref-no": "TP101"
 	}]
 }
