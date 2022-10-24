@@ -449,6 +449,26 @@
                                     "2022-11-18"
                                 ]
                             },
+                            "clearance_point": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The clearance_point Schema",
+                                "examples": [
+                                    "Test Point"
+                                ]
+                            },
+                            "clearance_point_value": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The clearance_point_value Schema",
+                                "examples": [
+                                    "NON_CFS"
+                                ],
+                                "enum": [
+                                    "CFS",
+                                    "NON_CFS"
+                                ]
+                            },
                             "shipment_history": {
                                 "type": "array",
                                 "default": [],
@@ -1780,6 +1800,8 @@
                             "customs_entry_number": "Customs 123",
                             "customs_entry_type": "New Type",
                             "entry_shared_date": "2022-11-18",
+                            "clearance_point": "Test Point",
+                            "clearance_point_value": "NON_CFS",
                             "shipment_history": [{
                                 "shipment_poe_eta": "2020-06-30",
                                 "created_by_date": "2020-05-06"
@@ -1954,6 +1976,8 @@
                             "customs_entry_number": "Customs 123",
                             "customs_entry_type": "New Type",
                             "entry_shared_date": "2022-11-18",
+                            "clearance_point": "Test Point",
+                            "clearance_point_value": "NON_CFS",
                             "shipment_history": [{
                                 "shipment_poe_eta": "2020-06-30",
                                 "created_by_date": "2020-05-06"
@@ -2171,6 +2195,8 @@
                     "customs_entry_number": "Customs 123",
                     "customs_entry_type": "New Type",
                     "entry_shared_date": "2022-11-18",
+                    "clearance_point": "Test Point",
+                    "clearance_point_value": "NON_CFS",
                     "shipment_history": [{
                         "shipment_poe_eta": "2020-06-30",
                         "created_by_date": "2020-05-06"
@@ -2354,6 +2380,8 @@
                 "customs_entry_number": "Customs 123",
                 "customs_entry_type": "New Type",
                 "entry_shared_date": "2022-11-18",
+                "clearance_point": "Test Point",
+                "clearance_point_value": "NON_CFS",
                 "shipment_history": [{
                     "shipment_poe_eta": "2020-06-30",
                     "created_by_date": "2020-05-06"
