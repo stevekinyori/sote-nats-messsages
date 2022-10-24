@@ -57,7 +57,7 @@
                                 "default": 0,
                                 "title": "The financialdocuments_id Schema",
                                 "examples": [
-                                    1
+                                    2
                                 ]
                             },
                             "ledger_status": {
@@ -220,6 +220,22 @@
                                     "SOTE-USER"
                                 ]
                             },
+                            "parent_financialdocuments_id": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The parent_financialdocuments_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "parent_document_reference": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The parent_document_reference Schema",
+                                "examples": [
+                                    "INV 123"
+                                ]
+                            },
                             "line_items": {
                                 "type": "object",
                                 "default": {},
@@ -235,6 +251,7 @@
                                         "required": [
                                             "external_system_id",
                                             "shipmentfinancialtransactions_id",
+                                            "transactions_amount",
                                             "transactions_entry_type"
                                         ],
                                         "properties": {
@@ -254,6 +271,14 @@
                                                     999999999999
                                                 ]
                                             },
+                                            "transactions_amount": {
+                                                "type": "integer",
+                                                "default": 0,
+                                                "title": "The transactions_amount Schema",
+                                                "examples": [
+                                                    80
+                                                ]
+                                            },
                                             "transactions_entry_type": {
                                                 "type": "string",
                                                 "default": "",
@@ -266,6 +291,7 @@
                                         "examples": [{
                                             "external_system_id": "1",
                                             "shipmentfinancialtransactions_id": 999999999999,
+                                            "transactions_amount": 80,
                                             "transactions_entry_type": "DEBIT"
                                         }]
                                     }
@@ -274,13 +300,14 @@
                                     "1": {
                                         "external_system_id": "1",
                                         "shipmentfinancialtransactions_id": 999999999999,
+                                        "transactions_amount": 80,
                                         "transactions_entry_type": "DEBIT"
                                     }
                                 }]
                             }
                         },
                         "examples": [{
-                            "financialdocuments_id": 1,
+                            "financialdocuments_id": 2,
                             "ledger_status": "TEST LEDGER STATUS",
                             "financial_document_type": "TEST TYPE",
                             "organizations_id": 1,
@@ -301,10 +328,13 @@
                             "transaction_note": "T Note",
                             "created_by_date": "2022-09-19",
                             "created_by_requestor_username": "SOTE-USER",
+                            "parent_financialdocuments_id": 1,
+                            "parent_document_reference": "INV 123",
                             "line_items": {
                                 "1": {
                                     "external_system_id": "1",
                                     "shipmentfinancialtransactions_id": 999999999999,
+                                    "transactions_amount": 80,
                                     "transactions_entry_type": "DEBIT"
                                 }
                             }
@@ -312,7 +342,7 @@
                     },
                     "examples": [
                         [{
-                            "financialdocuments_id": 1,
+                            "financialdocuments_id": 2,
                             "ledger_status": "TEST LEDGER STATUS",
                             "financial_document_type": "TEST TYPE",
                             "organizations_id": 1,
@@ -333,10 +363,13 @@
                             "transaction_note": "T Note",
                             "created_by_date": "2022-09-19",
                             "created_by_requestor_username": "SOTE-USER",
+                            "parent_financialdocuments_id": 1,
+                            "parent_document_reference": "INV 123",
                             "line_items": {
                                 "1": {
                                     "external_system_id": "1",
                                     "shipmentfinancialtransactions_id": 999999999999,
+                                    "transactions_amount": 80,
                                     "transactions_entry_type": "DEBIT"
                                 }
                             }
@@ -387,7 +420,7 @@
             },
             "examples": [{
                 "items": [{
-                    "financialdocuments_id": 1,
+                    "financialdocuments_id": 2,
                     "ledger_status": "TEST LEDGER STATUS",
                     "financial_document_type": "TEST TYPE",
                     "organizations_id": 1,
@@ -408,10 +441,13 @@
                     "transaction_note": "T Note",
                     "created_by_date": "2022-09-19",
                     "created_by_requestor_username": "SOTE-USER",
+                    "parent_financialdocuments_id": 1,
+                    "parent_document_reference": "INV 123",
                     "line_items": {
                         "1": {
                             "external_system_id": "1",
                             "shipmentfinancialtransactions_id": 999999999999,
+                            "transactions_amount": 80,
                             "transactions_entry_type": "DEBIT"
                         }
                     }
@@ -428,7 +464,7 @@
         "message-id": "test-message",
         "message": {
             "items": [{
-                "financialdocuments_id": 1,
+                "financialdocuments_id": 2,
                 "ledger_status": "TEST LEDGER STATUS",
                 "financial_document_type": "TEST TYPE",
                 "organizations_id": 1,
@@ -449,10 +485,13 @@
                 "transaction_note": "T Note",
                 "created_by_date": "2022-09-19",
                 "created_by_requestor_username": "SOTE-USER",
+                "parent_financialdocuments_id": 1,
+                "parent_document_reference": "INV 123",
                 "line_items": {
                     "1": {
                         "external_system_id": "1",
                         "shipmentfinancialtransactions_id": 999999999999,
+                        "transactions_amount": 80,
                         "transactions_entry_type": "DEBIT"
                     }
                 }
