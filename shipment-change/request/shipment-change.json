@@ -360,6 +360,26 @@
             "examples": [
                 "2022-11-18"
             ]
+        },
+        "clearance-point": {
+            "type": "string",
+            "default": "",
+            "title": "The clearance-point Schema",
+            "examples": [
+                "Test Point"
+            ]
+        },
+        "clearance-point-value": {
+            "type": "string",
+            "default": "",
+            "title": "The clearance-point-value Schema",
+            "examples": [
+                "CFS"
+            ],
+            "enum": [
+                "CFS",
+                "NON_CFS"
+            ]
         }
     },
     "examples": [{
@@ -406,6 +426,8 @@
         "proforma-invoice-number": "Proforma INV 1234",
         "customs-entry-number": "Customs 123",
         "customs-entry-type": "New Type",
-        "entry-shared-date": "2022-11-18"
+        "entry-shared-date": "2022-11-18",
+        "clearance-point": "Test Point",
+        "clearance-point-value": "CFS"
     }]
 }
