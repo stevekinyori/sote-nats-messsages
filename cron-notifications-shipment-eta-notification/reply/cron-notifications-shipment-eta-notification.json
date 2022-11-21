@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "message-id",
+    "message"
+  ],
+  "properties": {
+    "message-id": {
+      "type": "string",
+      "default": "",
+      "title": "The message-id Schema",
+      "examples": [
+        "test-message"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "default": "",
+      "title": "The message Schema",
+      "examples": [
+        "Successfully notified ETA update for shipment: 1"
+      ]
+    }
+  },
+  "examples": [{
+    "message-id": "test-message",
+    "message": "Successfully notified ETA update for shipment: 1"
+  }]
+}
