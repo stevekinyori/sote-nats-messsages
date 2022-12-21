@@ -157,6 +157,11 @@
             "type": "string",
             "default": "",
             "title": "The interchange-type Schema",
+            "enum": [
+                "Irregular Interchange",
+                "Clean Interchange",
+                "Pending Interchange"
+            ],
             "examples": [
                 "Irregular Interchange"
             ]
