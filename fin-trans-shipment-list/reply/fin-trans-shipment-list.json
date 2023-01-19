@@ -154,6 +154,14 @@
                                     "TEST BOL"
                                 ]
                             },
+                            "external_shipment_id": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The external_shipment_id Schema",
+                                "examples": [
+                                    "my shipment"
+                                ]
+                            },
                             "memo": {
                                 "type": "string",
                                 "title": "The memo Schema",
@@ -592,6 +600,14 @@
                                             "title": "The bill_of_lading Schema",
                                             "examples": [
                                                 "test bol"
+                                            ]
+                                        },
+                                        "external_shipment_id": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The external_shipment_id Schema",
+                                            "examples": [
+                                                "my shipment"
                                             ]
                                         },
                                         "client_company_id": {
@@ -1046,6 +1062,7 @@
                                     },
                                     "examples": [{
                                         "bill_of_lading": "test bol",
+                                        "external_shipment_id": "my shipment",
                                         "client_company_id": 999999999991,
                                         "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                                         "cost_is_unexpected": false,
@@ -1100,6 +1117,7 @@
                                 "examples": [
                                     [{
                                         "bill_of_lading": "test bol",
+                                        "external_shipment_id": "my shipment",
                                         "client_company_id": 999999999991,
                                         "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                                         "cost_is_unexpected": false,
@@ -1167,6 +1185,7 @@
                             "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                             "created_by_requestor-username": "test-user",
                             "bill_of_lading": "test bol",
+                            "external_shipment_id": "my shipment",
                             "memo": "test memo",
                             "cost_is_unexpected": false,
                             "financialdocuments_id": 1,
@@ -1207,6 +1226,7 @@
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
+                                "external_shipment_id": "my shipment",
                                 "client_company_id": 999999999991,
                                 "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                                 "cost_is_unexpected": false,
@@ -1317,6 +1337,7 @@
                             "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                             "created_by_requestor-username": "test-user",
                             "bill_of_lading": "test bol",
+                            "external_shipment_id": "my shipment",
                             "memo": "test memo",
                             "cost_is_unexpected": false,
                             "financialdocuments_id": 1,
@@ -1357,6 +1378,7 @@
                             },
                             "children": [{
                                 "bill_of_lading": "test bol",
+                                "external_shipment_id": "my shipment",
                                 "client_company_id": 999999999991,
                                 "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                                 "cost_is_unexpected": false,
@@ -1510,6 +1532,7 @@
                     "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                     "created_by_requestor-username": "test-user",
                     "bill_of_lading": "test bol",
+                    "external_shipment_id": "my shipment",
                     "memo": "test memo",
                     "cost_is_unexpected": false,
                     "financialdocuments_id": 1,
@@ -1550,6 +1573,7 @@
                     },
                     "children": [{
                         "bill_of_lading": "test bol",
+                        "external_shipment_id": "my shipment",
                         "client_company_id": 999999999991,
                         "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                         "cost_is_unexpected": false,
@@ -1669,6 +1693,7 @@
                 "transactions_timestamp": "2022-08-03T08:23:50.846736+03:00",
                 "created_by_requestor-username": "test-user",
                 "bill_of_lading": "test bol",
+                "external_shipment_id": "my shipment",
                 "memo": "test memo",
                 "cost_is_unexpected": false,
                 "financialdocuments_id": 1,
@@ -1709,6 +1734,7 @@
                 },
                 "children": [{
                     "bill_of_lading": "test bol",
+                    "external_shipment_id": "my shipment",
                     "client_company_id": 999999999991,
                     "client_company_name": "ACME DELETE ME CONTAINERS LTD",
                     "cost_is_unexpected": false,

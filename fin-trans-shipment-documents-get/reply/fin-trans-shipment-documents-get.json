@@ -103,6 +103,14 @@
                         "TEST BOL 1"
                     ]
                 },
+                "external_shipment_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The external_shipment_id Schema",
+                    "examples": [
+                        "my shipment"
+                    ]
+                },
                 "document_reference": {
                     "type": "string",
                     "default": "",
@@ -302,6 +310,7 @@
                 "client_company_name": "ACME CONTAINERS LTD THREE",
                 "shipments_id": 999999999991,
                 "bill_of_lading": "TEST BOL 1",
+                "external_shipment_id": "my shipment",
                 "document_reference": "TEST REF",
                 "documents_id": 1,
                 "due_date": "2022-12-12",
@@ -339,6 +348,7 @@
             "client_company_name": "ACME CONTAINERS LTD THREE",
             "shipments_id": 999999999991,
             "bill_of_lading": "TEST BOL 1",
+            "external_shipment_id": "my shipment",
             "document_reference": "TEST REF",
             "documents_id": 1,
             "due_date": "2022-12-12",

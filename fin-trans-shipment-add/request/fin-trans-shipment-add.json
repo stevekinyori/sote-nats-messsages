@@ -10,13 +10,13 @@
 		"fintrans-type",
 		"currency",
 		"amount",
-		"transaction-date"
+		"transaction-date",
+		"financial-documents-id"
 	],
 	"optional": [
 		"cost-is-unexpected",
 		"bill-of-lading",
 		"memo",
-		"financial-documents-id",
 		"transactions-entry-type",
 		"tax-rate",
 		"tax-amount",
