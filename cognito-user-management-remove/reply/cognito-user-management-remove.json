@@ -22,18 +22,54 @@
       "default": {},
       "title": "The message Schema",
       "required": [
+        "cognito_username",
+        "enabled",
+        "informational_user",
         "row_version",
+        "user_status",
         "user_is_active",
         "usermanagement_id",
         "delete_date"
       ],
       "properties": {
+        "cognito_username": {
+          "type": "null",
+          "default": null,
+          "title": "The cognito_username Schema",
+          "examples": [
+            null
+          ]
+        },
+        "enabled": {
+          "type": "null",
+          "default": null,
+          "title": "The enabled Schema",
+          "examples": [
+            null
+          ]
+        },
+        "informational_user": {
+          "type": "null",
+          "default": null,
+          "title": "The informational_user Schema",
+          "examples": [
+            null
+          ]
+        },
         "row_version": {
           "type": "integer",
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            14
+            7
+          ]
+        },
+        "user_status": {
+          "type": "null",
+          "default": null,
+          "title": "The user_status Schema",
+          "examples": [
+            null
           ]
         },
         "user_is_active": {
@@ -49,7 +85,7 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3
+            21
           ]
         },
         "delete_date": {
@@ -57,25 +93,33 @@
           "default": "",
           "title": "The delete_date Schema",
           "examples": [
-            "2022-08-22"
+            "2023-02-16"
           ]
         }
       },
       "examples": [{
-        "row_version": 14,
+        "cognito_username": null,
+        "enabled": null,
+        "informational_user": null,
+        "row_version": 7,
+        "user_status": null,
         "user_is_active": false,
-        "usermanagement_id": 3,
-        "delete_date": "2022-08-22"
+        "usermanagement_id": 21,
+        "delete_date": "2023-02-16"
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "row_version": 14,
+      "cognito_username": null,
+      "enabled": null,
+      "informational_user": null,
+      "row_version": 7,
+      "user_status": null,
       "user_is_active": false,
-      "usermanagement_id": 3,
-      "delete_date": "2022-08-22"
+      "usermanagement_id": 21,
+      "delete_date": "2023-02-16"
     }
   }]
 }

@@ -22,12 +22,32 @@
       "default": {},
       "title": "The message Schema",
       "required": [
+        "cognito_username",
+        "enabled",
         "informational_user",
         "row_version",
+        "user_status",
         "user_is_active",
-        "usermanagement_id"
+        "usermanagement_id",
+        "delete_date"
       ],
       "properties": {
+        "cognito_username": {
+          "type": "null",
+          "default": null,
+          "title": "The cognito_username Schema",
+          "examples": [
+            null
+          ]
+        },
+        "enabled": {
+          "type": "null",
+          "default": null,
+          "title": "The enabled Schema",
+          "examples": [
+            null
+          ]
+        },
         "informational_user": {
           "type": "boolean",
           "default": false,
@@ -41,7 +61,15 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            19
+            4
+          ]
+        },
+        "user_status": {
+          "type": "null",
+          "default": null,
+          "title": "The user_status Schema",
+          "examples": [
+            null
           ]
         },
         "user_is_active": {
@@ -49,7 +77,7 @@
           "default": false,
           "title": "The user_is_active Schema",
           "examples": [
-            false
+            true
           ]
         },
         "usermanagement_id": {
@@ -57,25 +85,41 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3
+            21
+          ]
+        },
+        "delete_date": {
+          "type": "null",
+          "default": null,
+          "title": "The delete_date Schema",
+          "examples": [
+            null
           ]
         }
       },
       "examples": [{
+        "cognito_username": null,
+        "enabled": null,
         "informational_user": true,
-        "row_version": 19,
-        "user_is_active": false,
-        "usermanagement_id": 3
+        "row_version": 4,
+        "user_status": null,
+        "user_is_active": true,
+        "usermanagement_id": 21,
+        "delete_date": null
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
+      "cognito_username": null,
+      "enabled": null,
       "informational_user": true,
-      "row_version": 19,
-      "user_is_active": false,
-      "usermanagement_id": 3
+      "row_version": 4,
+      "user_status": null,
+      "user_is_active": true,
+      "usermanagement_id": 21,
+      "delete_date": null
     }
   }]
 }

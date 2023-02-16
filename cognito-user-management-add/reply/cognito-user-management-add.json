@@ -28,7 +28,8 @@
         "row_version",
         "user_status",
         "user_is_active",
-        "usermanagement_id"
+        "usermanagement_id",
+        "delete_date"
       ],
       "properties": {
         "cognito_username": {
@@ -36,14 +37,13 @@
           "default": "",
           "title": "The cognito_username Schema",
           "examples": [
-            "653xxxxxxxxxxxxxxxx"
+            "test-cognito-username"
           ]
         },
         "enabled": {
           "type": "boolean",
           "default": false,
           "title": "The enabled Schema",
-          "description": "This shows if user is enabled in cognito",
           "examples": [
             true
           ]
@@ -61,14 +61,13 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            1
+            8
           ]
         },
         "user_status": {
           "type": "string",
           "default": "",
           "title": "The user_status Schema",
-          "description": "The status of a newly created user",
           "examples": [
             "FORCE_CHANGE_PASSWORD"
           ]
@@ -77,7 +76,6 @@
           "type": "boolean",
           "default": false,
           "title": "The user_is_active Schema",
-          "description": "This shows if user is active in user-management database",
           "examples": [
             true
           ]
@@ -87,31 +85,41 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3000
+            21
+          ]
+        },
+        "delete_date": {
+          "type": "null",
+          "default": null,
+          "title": "The delete_date Schema",
+          "examples": [
+            null
           ]
         }
       },
       "examples": [{
-        "cognito_username": "653xxxxxxxxxxxxxxxx",
+        "cognito_username": "test-cognito-username",
         "enabled": true,
         "informational_user": false,
-        "row_version": 1,
+        "row_version": 8,
         "user_status": "FORCE_CHANGE_PASSWORD",
         "user_is_active": true,
-        "usermanagement_id": 3000
+        "usermanagement_id": 21,
+        "delete_date": null
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "cognito_username": "653xxxxxxxxxxxxxxxx",
+      "cognito_username": "test-cognito-username",
       "enabled": true,
       "informational_user": false,
-      "row_version": 1,
+      "row_version": 8,
       "user_status": "FORCE_CHANGE_PASSWORD",
       "user_is_active": true,
-      "usermanagement_id": 3000
+      "usermanagement_id": 21,
+      "delete_date": null
     }
   }]
 }
