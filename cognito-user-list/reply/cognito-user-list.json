@@ -1,0 +1,238 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message-id",
+        "message"
+    ],
+    "properties": {
+        "message-id": {
+            "type": "string",
+            "default": "",
+            "title": "The message-id Schema",
+            "examples": [
+                "test-list"
+            ]
+        },
+        "message": {
+            "type": "object",
+            "default": {},
+            "title": "The message Schema",
+            "required": [
+                "pagination_token",
+                "users"
+            ],
+            "properties": {
+                "pagination_token": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The pagination_token Schema",
+                    "examples": [
+                        "Next Token"
+                    ]
+                },
+                "users": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The users Schema",
+                    "required": [
+                        "test-cognito-username"
+                    ],
+                    "properties": {
+                        "test-cognito-username": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The test-cognito-username Schema",
+                            "required": [
+                                "user_create_date",
+                                "user_roles",
+                                "confirmed",
+                                "cognito_username",
+                                "enabled",
+                                "user_email",
+                                "full_name",
+                                "email_verified",
+                                "phone_number_verified",
+                                "confirmation_status",
+                                "days_left_to_confirm",
+                                "user_status"
+                            ],
+                            "properties": {
+                                "user_create_date": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The user_create_date Schema",
+                                    "examples": [
+                                        "2022-10-28T08:57:53.228Z"
+                                    ]
+                                },
+                                "user_roles": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The user_roles Schema",
+                                    "examples": [
+                                        "[\"ROLE1\"]"
+                                    ]
+                                },
+                                "confirmed": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "title": "The confirmed Schema",
+                                    "examples": [
+                                        false
+                                    ]
+                                },
+                                "cognito_username": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The cognito_username Schema",
+                                    "examples": [
+                                        "test-cognito-username"
+                                    ]
+                                },
+                                "enabled": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "title": "The enabled Schema",
+                                    "examples": [
+                                        true
+                                    ]
+                                },
+                                "user_email": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The user_email Schema",
+                                    "examples": [
+                                        "test@user.com"
+                                    ]
+                                },
+                                "full_name": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The full_name Schema",
+                                    "examples": [
+                                        "Test User"
+                                    ]
+                                },
+                                "email_verified": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "title": "The email_verified Schema",
+                                    "examples": [
+                                        true
+                                    ]
+                                },
+                                "phone_number_verified": {
+                                    "type": "boolean",
+                                    "default": false,
+                                    "title": "The phone_number_verified Schema",
+                                    "examples": [
+                                        false
+                                    ]
+                                },
+                                "confirmation_status": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The confirmation_status Schema",
+                                    "examples": [
+                                        "EXPIRED"
+                                    ]
+                                },
+                                "days_left_to_confirm": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The days_left_to_confirm Schema",
+                                    "examples": [
+                                        0
+                                    ]
+                                },
+                                "user_status": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The user_status Schema",
+                                    "examples": [
+                                        "FORCE_CHANGE_PASSWORD"
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "user_create_date": "2022-10-28T08:57:53.228Z",
+                                "user_roles": "[\"ROLE1\"]",
+                                "confirmed": false,
+                                "cognito_username": "test-cognito-username",
+                                "enabled": true,
+                                "user_email": "test@user.com",
+                                "full_name": "Test User",
+                                "email_verified": true,
+                                "phone_number_verified": false,
+                                "confirmation_status": "EXPIRED",
+                                "days_left_to_confirm": 0,
+                                "user_status": "FORCE_CHANGE_PASSWORD"
+                            }]
+                        }
+                    },
+                    "examples": [{
+                        "test-cognito-username": {
+                            "user_create_date": "2022-10-28T08:57:53.228Z",
+                            "user_roles": "[\"ROLE1\"]",
+                            "confirmed": false,
+                            "cognito_username": "test-cognito-username",
+                            "enabled": true,
+                            "user_email": "test@user.com",
+                            "full_name": "Test User",
+                            "email_verified": true,
+                            "phone_number_verified": false,
+                            "confirmation_status": "EXPIRED",
+                            "days_left_to_confirm": 0,
+                            "user_status": "FORCE_CHANGE_PASSWORD"
+                        }
+                    }]
+                }
+            },
+            "examples": [{
+                "pagination_token": "Next Token",
+                "users": {
+                    "test-cognito-username": {
+                        "user_create_date": "2022-10-28T08:57:53.228Z",
+                        "user_roles": "[\"ROLE1\"]",
+                        "confirmed": false,
+                        "cognito_username": "test-cognito-username",
+                        "enabled": true,
+                        "user_email": "test@user.com",
+                        "full_name": "Test User",
+                        "email_verified": true,
+                        "phone_number_verified": false,
+                        "confirmation_status": "EXPIRED",
+                        "days_left_to_confirm": 0,
+                        "user_status": "FORCE_CHANGE_PASSWORD"
+                    }
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "message-id": "test-list",
+        "message": {
+            "pagination_token": "Next Token",
+            "users": {
+                "test-cognito-username": {
+                    "user_create_date": "2022-10-28T08:57:53.228Z",
+                    "user_roles": "[\"ROLE1\"]",
+                    "confirmed": false,
+                    "cognito_username": "test-cognito-username",
+                    "enabled": true,
+                    "user_email": "test@user.com",
+                    "full_name": "Test User",
+                    "email_verified": true,
+                    "phone_number_verified": false,
+                    "confirmation_status": "EXPIRED",
+                    "days_left_to_confirm": 0,
+                    "user_status": "FORCE_CHANGE_PASSWORD"
+                }
+            }
+        }
+    }]
+}

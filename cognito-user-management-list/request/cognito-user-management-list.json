@@ -1,99 +1,158 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "http://example.com/example.json",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
-  "examples": [
-    {
-      "record-limit-count": 0,
-      "record-offset": 0,
-      "sort-order": {
-        "user-management-id": "ASC",
-        "client-company-id": "DESC"
-      },
-      "organizations-id": 1
-    }
-  ],
+  "title": "Root Schema",
   "required": [
+    "organizations-id",
     "record-limit-count",
-    "record-offset",
-    "organizations-id"
+    "record-offset"
   ],
   "optional": [
-    "sort-order"
+    "sort-order",
+    "search",
+    "filters"
   ],
   "properties": {
-    "record-limit-count": {
-      "$id": "#/properties/record-limit-count",
+    "organizations-id": {
       "type": "integer",
-      "title": "The record-limit-count schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": 0,
+      "title": "The organizations-id Schema",
       "examples": [
-        0
+        1
+      ]
+    },
+    "record-limit-count": {
+      "type": "integer",
+      "default": 0,
+      "title": "The record-limit-count Schema",
+      "examples": [
+        10
       ]
     },
     "record-offset": {
-      "$id": "#/properties/record-offset",
       "type": "integer",
-      "title": "The record-offset schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": 0,
+      "title": "The record-offset Schema",
       "examples": [
         0
       ]
     },
     "sort-order": {
-      "$id": "#/properties/sort-order",
       "type": "object",
-      "title": "The sort-order schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": {},
-      "examples": [
-        {
-          "user-management-id": "ASC",
-          "client-company-id": "DESC"
-        }
-      ],
+      "title": "The sort-order Schema",
       "required": [
         "user-management-id"
       ],
       "properties": {
         "user-management-id": {
-          "$id": "#/properties/sort-order/properties/user-management-id",
           "type": "string",
-          "title": "The user-management-id schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
+          "title": "The user-management-id Schema",
           "examples": [
             "ASC"
           ]
-        },
-        "client-company-id": {
-          "$id": "#/properties/sort-order/properties/client-company-id",
-          "type": "string",
-          "title": "The client-company-id schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": "",
+        }
+      },
+      "examples": [{
+        "user-management-id": "ASC"
+      }]
+    },
+    "search": {
+      "type": "string",
+      "default": "",
+      "title": "The search Schema",
+      "examples": [
+        "Test"
+      ]
+    },
+    "filters": {
+      "type": "object",
+      "default": {},
+      "title": "The filters Schema",
+      "required": [
+        "and"
+      ],
+      "properties": {
+        "and": {
+          "type": "array",
+          "default": [],
+          "title": "The and Schema",
+          "items": {
+            "type": "object",
+            "default": {},
+            "title": "A Schema",
+            "required": [
+              "field-name",
+              "operator",
+              "value"
+            ],
+            "properties": {
+              "field-name": {
+                "type": "string",
+                "default": "",
+                "title": "The field-name Schema",
+                "examples": [
+                  "client-company-id"
+                ]
+              },
+              "operator": {
+                "type": "string",
+                "default": "",
+                "title": "The operator Schema",
+                "examples": [
+                  "="
+                ]
+              },
+              "value": {
+                "type": "integer",
+                "default": 0,
+                "title": "The value Schema",
+                "examples": [
+                  1
+                ]
+              }
+            },
+            "examples": [{
+              "field-name": "client-company-id",
+              "operator": "=",
+              "value": 1
+            }]
+          },
           "examples": [
-            "DESC"
+            [{
+              "field-name": "client-company-id",
+              "operator": "=",
+              "value": 1
+            }]
           ]
         }
       },
-      "additionalProperties": true
-    },
-    "organizations-id": {
-      "$id": "#/properties/organizations-id",
-      "type": "integer",
-      "title": "The organizations-id schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": 0,
-      "examples": [
-        1
-      ]
+      "examples": [{
+        "and": [{
+          "field-name": "client-company-id",
+          "operator": "=",
+          "value": 1
+        }]
+      }]
     }
   },
-  "additionalProperties": true
+  "examples": [{
+    "organizations-id": 1,
+    "record-limit-count": 10,
+    "record-offset": 0,
+    "sort-order": {
+      "user-management-id": "ASC"
+    },
+    "search": "Test",
+    "filters": {
+      "and": [{
+        "field-name": "client-company-id",
+        "operator": "=",
+        "value": 1
+      }]
+    }
+  }]
 }

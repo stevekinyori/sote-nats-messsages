@@ -37,7 +37,7 @@
           "default": "",
           "title": "The cognito_username Schema",
           "examples": [
-            "7ccf579e-0acf-4a24-97da-749d43a0f617"
+            "test-user-name"
           ]
         },
         "enabled": {
@@ -49,11 +49,11 @@
           ]
         },
         "informational_user": {
-          "type": "boolean",
-          "default": false,
+          "type": "null",
+          "default": null,
           "title": "The informational_user Schema",
           "examples": [
-            false
+            null
           ]
         },
         "row_version": {
@@ -61,7 +61,7 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            6
+            9
           ]
         },
         "user_status": {
@@ -98,10 +98,10 @@
         }
       },
       "examples": [{
-        "cognito_username": "test-cognito-username",
+        "cognito_username": "test-user-name",
         "enabled": true,
-        "informational_user": false,
-        "row_version": 6,
+        "informational_user": null,
+        "row_version": 9,
         "user_status": null,
         "user_is_active": true,
         "usermanagement_id": 21,
@@ -112,10 +112,10 @@
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "cognito_username": "test-cognito-username",
+      "cognito_username": "test-user-name",
       "enabled": true,
-      "informational_user": false,
-      "row_version": 6,
+      "informational_user": null,
+      "row_version": 9,
       "user_status": null,
       "user_is_active": true,
       "usermanagement_id": 21,

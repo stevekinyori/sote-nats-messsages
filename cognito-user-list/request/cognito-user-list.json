@@ -1,0 +1,75 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "record-limit-count",
+        "pagination-token",
+        "filter"
+    ],
+    "properties": {
+        "record-limit-count": {
+            "type": "integer",
+            "default": 0,
+            "title": "The record-limit-count Schema",
+            "examples": [
+                30
+            ]
+        },
+        "pagination-token": {
+            "type": "string",
+            "default": "",
+            "title": "The pagination-token Schema",
+            "examples": [
+                "test-token"
+            ]
+        },
+        "filter": {
+            "type": "object",
+            "default": {},
+            "title": "The filter Schema",
+            "optional": [
+                "cognito:user_status",
+                "username",
+                "email",
+                "phone_number",
+                "name",
+                "given_name",
+                "family_name",
+                "preferred_username",
+                "status"
+            ],
+            "properties": {
+                "cognito:user_status": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The cognito:user_status Schema",
+                    "examples": [
+                        "FORCE_CHANGE_PASSWORD"
+                    ],
+                    "enum": [
+                        "UNCONFIRMED",
+                        "CONFIRMED",
+                        "EXTERNAL_PROVIDER",
+                        "ARCHIVED",
+                        "UNKNOWN",
+                        "RESET_REQUIRED",
+                        "FORCE_CHANGE_PASSWORD"
+                    ]
+                }
+            },
+            "examples": [{
+                "cognito:user_status": "FORCE_CHANGE_PASSWORD"
+            }]
+        }
+    },
+    "examples": [{
+        "record-limit-count": 30,
+        "pagination-token": "test-token",
+        "filter": {
+            "cognito:user_status": "FORCE_CHANGE_PASSWORD"
+        }
+    }]
+}

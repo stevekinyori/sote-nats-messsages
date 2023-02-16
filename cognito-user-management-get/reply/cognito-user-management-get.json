@@ -56,7 +56,8 @@
         "email_verified",
         "phone_number_verified",
         "user_organization_name",
-        "client_company_name"
+        "client_company_name",
+        "user_status"
       ],
       "properties": {
         "usermanagement_id": {
@@ -64,7 +65,7 @@
           "default": 0,
           "title": "The usermanagement_id Schema",
           "examples": [
-            3
+            21
           ]
         },
         "row_version": {
@@ -72,7 +73,7 @@
           "default": 0,
           "title": "The row_version Schema",
           "examples": [
-            3
+            8
           ]
         },
         "user_organizations_id": {
@@ -80,7 +81,7 @@
           "default": 0,
           "title": "The user_organizations_id Schema",
           "examples": [
-            1
+            5000
           ]
         },
         "informational_user": {
@@ -112,7 +113,7 @@
           "default": "",
           "title": "The cognito_username Schema",
           "examples": [
-            "0b61Xxxxxxxxxxxxxxxx"
+            "test-cognito-username"
           ]
         },
         "created_by_date": {
@@ -120,7 +121,7 @@
           "default": "",
           "title": "The created_by_date Schema",
           "examples": [
-            "2022-08-18"
+            "2023-02-16"
           ]
         },
         "created_by_requestor_username": {
@@ -152,7 +153,7 @@
           "default": "",
           "title": "The user_phone_number Schema",
           "examples": [
-            "712345612"
+            "722500000"
           ]
         },
         "user_email": {
@@ -168,7 +169,7 @@
           "default": "",
           "title": "The user_last_name Schema",
           "examples": [
-            "User"
+            "Test"
           ]
         },
         "user_first_name": {
@@ -176,7 +177,7 @@
           "default": "",
           "title": "The user_first_name Schema",
           "examples": [
-            "User"
+            "Test"
           ]
         },
         "user_middle_name": {
@@ -184,7 +185,7 @@
           "default": "",
           "title": "The user_middle_name Schema",
           "examples": [
-            "Test"
+            "User"
           ]
         },
         "user_name_prefix": {
@@ -192,7 +193,7 @@
           "default": "",
           "title": "The user_name_prefix Schema",
           "examples": [
-            "Mr"
+            "Miss"
           ]
         },
         "user_name_suffix": {
@@ -240,7 +241,7 @@
           "default": "",
           "title": "The user_pay_period Schema",
           "examples": [
-            "Weekly"
+            "Monthly"
           ]
         },
         "device_token": {
@@ -264,7 +265,7 @@
           "default": "",
           "title": "The updated_by_date Schema",
           "examples": [
-            "2022-08-22"
+            "2023-02-16"
           ]
         },
         "updated_by_requestor_username": {
@@ -281,12 +282,6 @@
           "title": "The confirmation_status Schema",
           "examples": [
             "PENDING"
-          ],
-          "enum": [
-            "CONFIRMED",
-            "PENDING",
-            "EXPIRED",
-            "USER NOT FOUND IN COGNITO"
           ]
         },
         "days_left_to_confirm": {
@@ -310,7 +305,7 @@
           "default": "",
           "title": "The user_roles Schema",
           "examples": [
-            "[\"ROLE1\",\"ROLE2\"]"
+            "[\"ROLE 1\",\"ROLE 2\"]\n"
           ]
         },
         "email_verified": {
@@ -334,7 +329,7 @@
           "default": "",
           "title": "The user_organization_name Schema",
           "examples": [
-            "TEST ORGANIZATION"
+            "Test Organization"
           ]
         },
         "client_company_name": {
@@ -342,87 +337,97 @@
           "default": "",
           "title": "The client_company_name Schema",
           "examples": [
-            "TEST CLIENT"
+            "Test Client"
+          ]
+        },
+        "user_status": {
+          "type": "string",
+          "default": "",
+          "title": "The user_status Schema",
+          "examples": [
+            "FORCE_CHANGE_PASSWORD"
           ]
         }
       },
       "examples": [{
-        "usermanagement_id": 3,
-        "row_version": 3,
-        "user_organizations_id": 1,
+        "usermanagement_id": 21,
+        "row_version": 8,
+        "user_organizations_id": 5000,
         "informational_user": false,
         "user_is_active": true,
         "user_is_assigned": false,
-        "cognito_username": "0b61Xxxxxxxxxxxxxxxx",
-        "created_by_date": "2022-08-18",
+        "cognito_username": "test-cognito-username",
+        "created_by_date": "2023-02-16",
         "created_by_requestor_username": "test-user",
         "client_company_id": 1,
         "user_phone_country_code": "+254",
-        "user_phone_number": "712345612",
+        "user_phone_number": "722500000",
         "user_email": "test@test.com",
-        "user_last_name": "User",
-        "user_first_name": "User",
-        "user_middle_name": "Test",
-        "user_name_prefix": "Mr",
+        "user_last_name": "Test",
+        "user_first_name": "Test",
+        "user_middle_name": "User",
+        "user_name_prefix": "Miss",
         "user_name_suffix": "MD",
         "user_hire_date": "2021-08-26",
         "user_driver_license_id": "DL-123",
         "user_driver_license_expiry_date": "2022-01-01",
         "user_wage": 200000,
-        "user_pay_period": "Weekly",
+        "user_pay_period": "Monthly",
         "device_token": "test-device-token",
         "delete_date": null,
-        "updated_by_date": "2022-08-22",
+        "updated_by_date": "2023-02-16",
         "updated_by_requestor_username": "test-user",
         "confirmation_status": "PENDING",
         "days_left_to_confirm": 14,
         "enabled": true,
-        "user_roles": "[\"ROLE1\",\"ROLE2\"]",
+        "user_roles": "[\"ROLE 1\",\"ROLE 2\"]\n",
         "email_verified": true,
         "phone_number_verified": true,
-        "user_organization_name": "TEST ORGANIZATION",
-        "client_company_name": "TEST CLIENT"
+        "user_organization_name": "Test Organization",
+        "client_company_name": "Test Client",
+        "user_status": "FORCE_CHANGE_PASSWORD"
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "usermanagement_id": 3,
-      "row_version": 3,
-      "user_organizations_id": 1,
+      "usermanagement_id": 21,
+      "row_version": 8,
+      "user_organizations_id": 5000,
       "informational_user": false,
       "user_is_active": true,
       "user_is_assigned": false,
-      "cognito_username": "0b61Xxxxxxxxxxxxxxxx",
-      "created_by_date": "2022-08-18",
+      "cognito_username": "test-cognito-username",
+      "created_by_date": "2023-02-16",
       "created_by_requestor_username": "test-user",
       "client_company_id": 1,
       "user_phone_country_code": "+254",
-      "user_phone_number": "712345612",
+      "user_phone_number": "722500000",
       "user_email": "test@test.com",
-      "user_last_name": "User",
-      "user_first_name": "User",
-      "user_middle_name": "Test",
-      "user_name_prefix": "Mr",
+      "user_last_name": "Test",
+      "user_first_name": "Test",
+      "user_middle_name": "User",
+      "user_name_prefix": "Miss",
       "user_name_suffix": "MD",
       "user_hire_date": "2021-08-26",
       "user_driver_license_id": "DL-123",
       "user_driver_license_expiry_date": "2022-01-01",
       "user_wage": 200000,
-      "user_pay_period": "Weekly",
+      "user_pay_period": "Monthly",
       "device_token": "test-device-token",
       "delete_date": null,
-      "updated_by_date": "2022-08-22",
+      "updated_by_date": "2023-02-16",
       "updated_by_requestor_username": "test-user",
       "confirmation_status": "PENDING",
       "days_left_to_confirm": 14,
       "enabled": true,
-      "user_roles": "[\"ROLE1\",\"ROLE2\"]",
+      "user_roles": "[\"ROLE 1\",\"ROLE 2\"]\n",
       "email_verified": true,
       "phone_number_verified": true,
-      "user_organization_name": "TEST ORGANIZATION",
-      "client_company_name": "TEST CLIENT"
+      "user_organization_name": "Test Organization",
+      "client_company_name": "Test Client",
+      "user_status": "FORCE_CHANGE_PASSWORD"
     }
   }]
 }

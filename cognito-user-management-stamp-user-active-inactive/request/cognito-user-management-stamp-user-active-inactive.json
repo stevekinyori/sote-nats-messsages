@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "user-management-id",
+    "organizations-id",
+    "row-version",
+    "cognito-username"
+  ],
+  "properties": {
+    "user-management-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The user-management-id Schema",
+      "examples": [
+        21
+      ]
+    },
+    "organizations-id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The organizations-id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "row-version": {
+      "type": "integer",
+      "default": 0,
+      "title": "The row-version Schema",
+      "examples": [
+        8
+      ]
+    },
+    "cognito-username": {
+      "type": "string",
+      "default": "",
+      "title": "The cognito-username Schema",
+      "examples": [
+        "test-user-name"
+      ]
+    }
+  },
+  "examples": [{
+    "user-management-id": 21,
+    "organizations-id": 1,
+    "row-version": 8,
+    "cognito-username": "test-user-name"
+  }]
+}
