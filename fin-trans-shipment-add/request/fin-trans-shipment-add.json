@@ -1,212 +1,183 @@
 {
-	"$schema": "https://json-schema.org/draft/2019-09/schema",
-	"$id": "http://example.com/example.json",
-	"type": "object",
-	"default": {},
-	"title": "Root Schema",
-	"required": [
-		"client-company-id",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "client-company-id",
 		"shipments-id",
 		"fintrans-type",
 		"currency",
 		"amount",
 		"transaction-date",
-		"financial-documents-id"
-	],
-	"optional": [
-		"cost-is-unexpected",
-		"bill-of-lading",
-		"memo",
-		"transactions-entry-type",
-		"tax-rate",
-		"tax-amount",
-		"external-system-id",
-		"parent-shipment-financial-transactions-id",
-		"payment-method",
-		"payment-ref-no"
-	],
-	"properties": {
-		"client-company-id": {
-			"type": "integer",
-			"default": 0,
-			"title": "The client-company-id Schema",
-			"examples": [
-				1
-			]
-		},
-		"shipments-id": {
-			"type": "integer",
-			"default": 0,
-			"title": "The shipments-id Schema",
-			"examples": [
-				10060
-			]
-		},
-		"fintrans-type": {
-			"type": "string",
-			"default": "",
-			"title": "The fintrans-type Schema",
-			"examples": [
-				"DOCUMENT_PROCESSING_FEES"
-			],
-			"enum": [
-				"AGENCY_FEES",
-				"CONTAINER_DEPOSIT",
-				"CONTAINER_REPAIRS",
-				"CUSTOMS_TAXES",
-				"DEMURRAGE_CHARGES",
-				"DOCUMENT_PROCESSING_FEES",
-				"F147",
-				"FEES_FOR_BOL",
-				"FORWARDERS_CHARGES",
-				"TRANSPORT_CHARGES",
-				"HANDING_OVER_FEES",
-				"IDF_FEES",
-				"OTHER_CHARGES",
-				"PARKING_FEES",
-				"PORT_CHARGES",
-				"SHIPPING_LINE_CHARGES",
-				"STORAGE_CHARGES"
-			]
-		},
-		"currency": {
-			"type": "string",
-			"default": "",
-			"title": "The currency Schema",
-			"examples": [
-				"KSH"
-			],
-			"enum": [
-				"KSH",
-				"USD"
-			]
-		},
-		"amount": {
-			"type": "integer",
-			"default": 0,
-			"title": "The amount Schema",
-			"examples": [
-				15000
-			]
-		},
-		"transaction-date": {
-			"type": "string",
-			"default": "",
-			"title": "The transaction-date Schema",
-			"examples": [
-				"2022-09-19"
-			]
-		},
-		"cost-is-unexpected": {
-			"type": "boolean",
-			"default": false,
-			"title": "The cost-is-unexpected Schema",
-			"examples": [
-				false
-			]
-		},
-		"bill-of-lading": {
-			"type": "string",
-			"default": "",
-			"title": "The bill-of-lading Schema",
-			"examples": [
-				"Test BOL"
-			]
-		},
-		"memo": {
-			"type": "string",
-			"default": "",
-			"title": "The memo Schema",
-			"examples": [
-				"Test Memo"
-			]
-		},
-		"financial-documents-id": {
-			"type": "integer",
-			"default": 0,
-			"title": "The financial-documents-id Schema",
-			"examples": [
-				1
-			]
-		},
-		"transactions-entry-type": {
-			"type": "string",
-			"default": "DEBIT",
-			"title": "The transactions-entry-type Schema",
-			"examples": [
-				"DEBIT"
-			],
-			"enum": [
-				"DEBIT",
-				"CREDIT"
-			]
-		},
-		"tax-rate": {
-			"type": "number",
-			"default": 0.0,
-			"title": "The tax-rate Schema",
-			"examples": [
-				0.5
-			]
-		},
-		"tax-amount": {
-			"type": "number",
-			"default": 0.0,
-			"title": "The tax-amount Schema",
-			"examples": [
-				5000.25
-			]
-		},
-		"external-system-id": {
-			"type": "string",
-			"default": "",
-			"title": "The external-system-id Schema",
-			"examples": [
-				"1"
-			]
-		},
-		"parent-shipment-financial-transactions-id": {
-			"type": "integer",
-			"default": 0,
-			"title": "The parent-shipment-financial-transactions-id Schema",
-			"examples": [
-				1
-			]
-		},
-		"payment-method": {
-			"type": "string",
-			"default": "",
-			"title": "The payment-method Schema",
-			"examples": [
-				"Cash"
-			]
-		},
-		"payment-ref-no": {
-			"type": "string",
-			"default": "",
-			"title": "The payment-ref-no Schema",
-			"examples": [
-				"TP101"
-			]
-		}
-	},
-	"examples": [{
-		"client-company-id": 1,
-		"shipments-id": 10060,
-		"fintrans-type": "DOCUMENT_PROCESSING_FEES",
-		"currency": "KSH",
-		"amount": 15000,
-		"transaction-date": "2022-09-19",
-		"cost-is-unexpected": false,
-		"bill-of-lading": "Test BOL",
-		"memo": "Test Memo",
-		"financial-documents-id": 1,
-		"transactions-entry-type": "DEBIT",
-		"tax-rate": 0.5,
-		"tax-amount": 5000.25,
-		"external-system-id": "1",
-		"parent-shipment-financial-transactions-id": 1,
-		"payment-method": "Cash",
-		"payment-ref-no": "TP101"
-	}]
+		"financial-documents-id",
+        "exchange-rate"
+    ],
+    "properties": {
+        "client-company-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The client-company-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "shipments-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The shipments-id Schema",
+            "examples": [
+                10060
+            ]
+        },
+        "fintrans-type": {
+            "type": "string",
+            "default": "",
+            "title": "The fintrans-type Schema",
+            "examples": [
+                "DOCUMENT_PROCESSING_FEES"
+            ]
+        },
+        "currency": {
+            "type": "string",
+            "default": "",
+            "title": "The currency Schema",
+            "examples": [
+                "KES"
+            ]
+        },
+        "amount": {
+            "type": "integer",
+            "default": 0,
+            "title": "The amount Schema",
+            "examples": [
+                15000
+            ]
+        },
+        "transaction-date": {
+            "type": "string",
+            "default": "",
+            "title": "The transaction-date Schema",
+            "examples": [
+                "2022-09-19"
+            ]
+        },
+        "cost-is-unexpected": {
+            "type": "boolean",
+            "default": false,
+            "title": "The cost-is-unexpected Schema",
+            "examples": [
+                false
+            ]
+        },
+        "bill-of-lading": {
+            "type": "string",
+            "default": "",
+            "title": "The bill-of-lading Schema",
+            "examples": [
+                "Test BOL"
+            ]
+        },
+        "memo": {
+            "type": "string",
+            "default": "",
+            "title": "The memo Schema",
+            "examples": [
+                "Test Memo"
+            ]
+        },
+        "financial-documents-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The financial-documents-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "transactions-entry-type": {
+            "type": "string",
+            "default": "",
+            "title": "The transactions-entry-type Schema",
+            "examples": [
+                "DEBIT"
+            ]
+        },
+        "tax-rate": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The tax-rate Schema",
+            "examples": [
+                0.5
+            ]
+        },
+        "tax-amount": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The tax-amount Schema",
+            "examples": [
+                5000.25
+            ]
+        },
+        "external-system-id": {
+            "type": "string",
+            "default": "",
+            "title": "The external-system-id Schema",
+            "examples": [
+                "1"
+            ]
+        },
+        "parent-shipment-financial-transactions-id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The parent-shipment-financial-transactions-id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "payment-method": {
+            "type": "string",
+            "default": "",
+            "title": "The payment-method Schema",
+            "examples": [
+                "Cash"
+            ]
+        },
+        "payment-ref-no": {
+            "type": "string",
+            "default": "",
+            "title": "The payment-ref-no Schema",
+            "examples": [
+                "TP101"
+            ]
+        },
+        "exchange-rate": {
+            "type": "integer",
+            "default": 0,
+            "title": "The exchange-rate Schema",
+            "examples": [
+                1
+            ]
+        }
+    },
+    "examples": [{
+        "client-company-id": 1,
+        "shipments-id": 10060,
+        "fintrans-type": "DOCUMENT_PROCESSING_FEES",
+        "currency": "KES",
+        "amount": 15000,
+        "transaction-date": "2022-09-19",
+        "cost-is-unexpected": false,
+        "bill-of-lading": "Test BOL",
+        "memo": "Test Memo",
+        "financial-documents-id": 1,
+        "transactions-entry-type": "DEBIT",
+        "tax-rate": 0.5,
+        "tax-amount": 5000.25,
+        "external-system-id": "1",
+        "parent-shipment-financial-transactions-id": 1,
+        "payment-method": "Cash",
+        "payment-ref-no": "TP101",
+        "exchange-rate": 1
+    }]
 }

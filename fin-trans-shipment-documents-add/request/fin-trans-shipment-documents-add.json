@@ -8,7 +8,8 @@
         "ledger-status",
         "fintrans-document-type",
         "shipments-id",
-        "transaction-date"
+        "transaction-date",
+        "exchange-rate"
     ],
     "properties": {
         "ledger-status": {
@@ -122,6 +123,14 @@
             "examples": [
                 "T Note"
             ]
+        },
+        "exchange-rate": {
+            "type": "integer",
+            "default": 0,
+            "title": "The exchange-rate Schema",
+            "examples": [
+                103
+            ]
         }
     },
     "examples": [{
@@ -138,6 +147,7 @@
         "total-amount": 1000,
         "total-balance": 100,
         "transaction-memo": "Memo 123",
-        "transaction-note": "T Note"
+        "transaction-note": "T Note",
+        "exchange-rate": 103
     }]
 }

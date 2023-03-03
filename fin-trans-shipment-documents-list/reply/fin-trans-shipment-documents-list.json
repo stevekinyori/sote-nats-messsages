@@ -43,6 +43,7 @@
                             "client_company_name",
                             "shipments_id",
                             "bill_of_lading",
+                            "external_shipment_id",
                             "document_reference",
                             "documents_id",
                             "due_date",
@@ -244,6 +245,14 @@
                                     "INV 123"
                                 ]
                             },
+                            "exchange_rate": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The exchange_rate Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
                             "line_items": {
                                 "type": "object",
                                 "default": {},
@@ -339,6 +348,7 @@
                             "created_by_requestor_username": "SOTE-USER",
                             "parent_financialdocuments_id": 1,
                             "parent_document_reference": "INV 123",
+                            "exchange_rate": 1,
                             "line_items": {
                                 "1": {
                                     "external_system_id": "1",
@@ -375,6 +385,7 @@
                             "created_by_requestor_username": "SOTE-USER",
                             "parent_financialdocuments_id": 1,
                             "parent_document_reference": "INV 123",
+                            "exchange_rate": 1,
                             "line_items": {
                                 "1": {
                                     "external_system_id": "1",
@@ -454,6 +465,7 @@
                     "created_by_requestor_username": "SOTE-USER",
                     "parent_financialdocuments_id": 1,
                     "parent_document_reference": "INV 123",
+                    "exchange_rate": 1,
                     "line_items": {
                         "1": {
                             "external_system_id": "1",
@@ -499,6 +511,7 @@
                 "created_by_requestor_username": "SOTE-USER",
                 "parent_financialdocuments_id": 1,
                 "parent_document_reference": "INV 123",
+                "exchange_rate": 1,
                 "line_items": {
                     "1": {
                         "external_system_id": "1",

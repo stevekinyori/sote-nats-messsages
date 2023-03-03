@@ -34,6 +34,7 @@
                 "transactions_timestamp",
                 "created_by_requestor-username",
                 "bill_of_lading",
+                "external_shipment_id",
                 "memo",
                 "cost_is_unexpected",
                 "financialdocuments_id",
@@ -43,6 +44,7 @@
                 "external_system_id",
                 "payment_method",
                 "payment_ref_no",
+                "exchange_rate",
                 "notes",
                 "financial_documents",
                 "children"
@@ -209,25 +211,27 @@
                     ]
                 },
                 "payment_method": {
-                    "type": [
-                        "null",
-                        "string"
-                    ],
+                    "type": "string",
+                    "default": "",
                     "title": "The payment_method Schema",
                     "examples": [
-                        null,
                         "Cash"
                     ]
                 },
                 "payment_ref_no": {
-                    "type": [
-                        "null",
-                        "string"
-                    ],
+                    "type": "null",
+                    "default": null,
                     "title": "The payment_ref_no Schema",
                     "examples": [
-                        null,
-                        "TP1234"
+                        null
+                    ]
+                },
+                "exchange_rate": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The exchange_rate Schema",
+                    "examples": [
+                        103
                     ]
                 },
                 "notes": {
@@ -359,7 +363,8 @@
                         "total_balance",
                         "transaction_date",
                         "transaction_memo",
-                        "transaction_note"
+                        "transaction_note",
+                        "exchange_rate"
                     ],
                     "properties": {
                         "created_by_date": {
@@ -497,6 +502,14 @@
                             "examples": [
                                 null
                             ]
+                        },
+                        "exchange_rate": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The exchange_rate Schema",
+                            "examples": [
+                                103
+                            ]
                         }
                     },
                     "examples": [{
@@ -516,7 +529,8 @@
                         "total_balance": 10000,
                         "transaction_date": "2022-08-07",
                         "transaction_memo": null,
-                        "transaction_note": null
+                        "transaction_note": null,
+                        "exchange_rate": 103
                     }]
                 },
                 "children": {
@@ -550,7 +564,8 @@
                             "transactions_amount",
                             "transaction_date",
                             "transactions_entry_type",
-                            "transactions_timestamp"
+                            "transactions_timestamp",
+                            "exchange_rate"
                         ],
                         "properties": {
                             "bill_of_lading": {
@@ -654,7 +669,8 @@
                                     "total_balance",
                                     "transaction_date",
                                     "transaction_memo",
-                                    "transaction_note"
+                                    "transaction_note",
+                                    "exchange_rate"
                                 ],
                                 "properties": {
                                     "created_by_date": {
@@ -792,6 +808,14 @@
                                         "examples": [
                                             null
                                         ]
+                                    },
+                                    "exchange_rate": {
+                                        "type": "integer",
+                                        "default": 0,
+                                        "title": "The exchange_rate Schema",
+                                        "examples": [
+                                            1
+                                        ]
                                     }
                                 },
                                 "examples": [{
@@ -811,7 +835,8 @@
                                     "total_balance": 10000,
                                     "transaction_date": "2022-12-12",
                                     "transaction_memo": null,
-                                    "transaction_note": null
+                                    "transaction_note": null,
+                                    "exchange_rate": 1
                                 }]
                             },
                             "financialdocuments_id": {
@@ -1017,6 +1042,14 @@
                                 "examples": [
                                     "2022-08-03T05:23:50.846736+00:00"
                                 ]
+                            },
+                            "exchange_rate": {
+                                "type": "integer",
+                                "default": 0,
+                                "title": "The exchange_rate Schema",
+                                "examples": [
+                                    103
+                                ]
                             }
                         },
                         "examples": [{
@@ -1047,7 +1080,8 @@
                                 "total_balance": 10000,
                                 "transaction_date": "2022-12-12",
                                 "transaction_memo": null,
-                                "transaction_note": null
+                                "transaction_note": null,
+                                "exchange_rate": 1
                             },
                             "financialdocuments_id": 2,
                             "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1070,7 +1104,8 @@
                             "transactions_amount": 500000,
                             "transaction_date": "2022-08-07",
                             "transactions_entry_type": "DEBIT",
-                            "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                            "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00",
+                            "exchange_rate": 103
                         }]
                     },
                     "examples": [
@@ -1102,7 +1137,8 @@
                                 "total_balance": 10000,
                                 "transaction_date": "2022-12-12",
                                 "transaction_memo": null,
-                                "transaction_note": null
+                                "transaction_note": null,
+                                "exchange_rate": 1
                             },
                             "financialdocuments_id": 2,
                             "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1125,7 +1161,8 @@
                             "transactions_amount": 500000,
                             "transaction_date": "2022-08-07",
                             "transactions_entry_type": "DEBIT",
-                            "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                            "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00",
+                            "exchange_rate": 103
                         }]
                     ]
                 }
@@ -1151,8 +1188,9 @@
                 "tax_rate": 0.5,
                 "tax_amount": 500,
                 "external_system_id": "1",
-                "payment_method": null,
+                "payment_method": "Cash",
                 "payment_ref_no": null,
+                "exchange_rate": 103,
                 "notes": [{
                     "created_by_date": "2022-08-03",
                     "created_by_requestor_username": "SOTE-USER",
@@ -1180,7 +1218,8 @@
                     "total_balance": 10000,
                     "transaction_date": "2022-08-07",
                     "transaction_memo": null,
-                    "transaction_note": null
+                    "transaction_note": null,
+                    "exchange_rate": 103
                 },
                 "children": [{
                     "bill_of_lading": "test bol",
@@ -1210,7 +1249,8 @@
                         "total_balance": 10000,
                         "transaction_date": "2022-12-12",
                         "transaction_memo": null,
-                        "transaction_note": null
+                        "transaction_note": null,
+                        "exchange_rate": 1
                     },
                     "financialdocuments_id": 2,
                     "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1233,7 +1273,8 @@
                     "transactions_amount": 500000,
                     "transaction_date": "2022-08-07",
                     "transactions_entry_type": "DEBIT",
-                    "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                    "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00",
+                    "exchange_rate": 103
                 }]
             }]
         }
@@ -1261,8 +1302,9 @@
             "tax_rate": 0.5,
             "tax_amount": 500,
             "external_system_id": "1",
-            "payment_method": null,
+            "payment_method": "Cash",
             "payment_ref_no": null,
+            "exchange_rate": 103,
             "notes": [{
                 "created_by_date": "2022-08-03",
                 "created_by_requestor_username": "SOTE-USER",
@@ -1290,7 +1332,8 @@
                 "total_balance": 10000,
                 "transaction_date": "2022-08-07",
                 "transaction_memo": null,
-                "transaction_note": null
+                "transaction_note": null,
+                "exchange_rate": 103
             },
             "children": [{
                 "bill_of_lading": "test bol",
@@ -1320,7 +1363,8 @@
                     "total_balance": 10000,
                     "transaction_date": "2022-12-12",
                     "transaction_memo": null,
-                    "transaction_note": null
+                    "transaction_note": null,
+                    "exchange_rate": 1
                 },
                 "financialdocuments_id": 2,
                 "financialtransactions_type": "TEST_FINTRANS_TYPE",
@@ -1343,7 +1387,8 @@
                 "transactions_amount": 500000,
                 "transaction_date": "2022-08-07",
                 "transactions_entry_type": "DEBIT",
-                "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00"
+                "transactions_timestamp": "2022-08-03T05:23:50.846736+00:00",
+                "exchange_rate": 103
             }]
         }
     }]
