@@ -22,6 +22,7 @@
       "default": {},
       "title": "The message Schema",
       "required": [
+        "listofvalues_type",
         "system_name",
         "display_name",
         "listofvalues_note",
@@ -31,15 +32,25 @@
         "created_by_requestor_username",
         "updated_by_date",
         "updated_by_requestor_username",
-        "value_is_active"
+        "value_is_active",
+        "notification_flag",
+        "children"
       ],
       "properties": {
+        "listofvalues_type": {
+          "type": "string",
+          "default": "",
+          "title": "The listofvalues_type Schema",
+          "examples": [
+            "DOCUMENT_CATEGORY"
+          ]
+        },
         "system_name": {
           "type": "string",
           "default": "",
           "title": "The system_name Schema",
           "examples": [
-            "TEST_ONE"
+            "CUSTOMER_DOCUMENTS"
           ]
         },
         "display_name": {
@@ -47,15 +58,15 @@
           "default": "",
           "title": "The display_name Schema",
           "examples": [
-            "Test One Edit"
+            "Customer Documents"
           ]
         },
         "listofvalues_note": {
-          "type": "string",
-          "default": "",
+          "type": "null",
+          "default": null,
           "title": "The listofvalues_note Schema",
           "examples": [
-            "This is a test note edit"
+            null
           ]
         },
         "language_code": {
@@ -79,7 +90,7 @@
           "default": "",
           "title": "The created_by_date Schema",
           "examples": [
-            "2022-06-26"
+            "2022-07-19"
           ]
         },
         "created_by_requestor_username": {
@@ -87,7 +98,7 @@
           "default": "",
           "title": "The created_by_requestor_username Schema",
           "examples": [
-            "sote-test"
+            "seed"
           ]
         },
         "updated_by_date": {
@@ -95,7 +106,7 @@
           "default": "",
           "title": "The updated_by_date Schema",
           "examples": [
-            "2022-06-26"
+            ""
           ]
         },
         "updated_by_requestor_username": {
@@ -103,7 +114,7 @@
           "default": "",
           "title": "The updated_by_requestor_username Schema",
           "examples": [
-            "sote-test"
+            ""
           ]
         },
         "value_is_active": {
@@ -113,35 +124,227 @@
           "examples": [
             true
           ]
+        },
+        "notification_flag": {
+          "type": "boolean",
+          "default": false,
+          "title": "The notification_flag Schema",
+          "examples": [
+            false
+          ]
+        },
+        "children": {
+          "type": "array",
+          "default": [],
+          "title": "The children Schema",
+          "items": {
+            "type": "object",
+            "default": {},
+            "title": "A Schema",
+            "required": [
+              "created_by_date",
+              "created_by_requestor_username",
+              "display_name",
+              "language_code",
+              "language_name",
+              "listofvalues_note",
+              "listofvalues_type",
+              "notification_flag",
+              "system_name",
+              "updated_by_date",
+              "updated_by_requestor_username",
+              "value_is_active"
+            ],
+            "properties": {
+              "created_by_date": {
+                "type": "string",
+                "default": "",
+                "title": "The created_by_date Schema",
+                "examples": [
+                  "2022-07-26"
+                ]
+              },
+              "created_by_requestor_username": {
+                "type": "string",
+                "default": "",
+                "title": "The created_by_requestor_username Schema",
+                "examples": [
+                  "seed"
+                ]
+              },
+              "display_name": {
+                "type": "string",
+                "default": "",
+                "title": "The display_name Schema",
+                "examples": [
+                  "Authority Letters"
+                ]
+              },
+              "language_code": {
+                "type": "string",
+                "default": "",
+                "title": "The language_code Schema",
+                "examples": [
+                  "ENG"
+                ]
+              },
+              "language_name": {
+                "type": "string",
+                "default": "",
+                "title": "The language_name Schema",
+                "examples": [
+                  "ENGLISH"
+                ]
+              },
+              "listofvalues_note": {
+                "type": "null",
+                "default": null,
+                "title": "The listofvalues_note Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "listofvalues_type": {
+                "type": "string",
+                "default": "",
+                "title": "The listofvalues_type Schema",
+                "examples": [
+                  "CUSTOMER_DOCUMENTS_CATEGORY"
+                ]
+              },
+              "notification_flag": {
+                "type": "boolean",
+                "default": false,
+                "title": "The notification_flag Schema",
+                "examples": [
+                  false
+                ]
+              },
+              "system_name": {
+                "type": "string",
+                "default": "",
+                "title": "The system_name Schema",
+                "examples": [
+                  "AUTHORITY_LETTERS"
+                ]
+              },
+              "updated_by_date": {
+                "type": "null",
+                "default": null,
+                "title": "The updated_by_date Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "updated_by_requestor_username": {
+                "type": "null",
+                "default": null,
+                "title": "The updated_by_requestor_username Schema",
+                "examples": [
+                  null
+                ]
+              },
+              "value_is_active": {
+                "type": "boolean",
+                "default": false,
+                "title": "The value_is_active Schema",
+                "examples": [
+                  true
+                ]
+              }
+            },
+            "examples": [{
+              "created_by_date": "2022-07-26",
+              "created_by_requestor_username": "seed",
+              "display_name": "Authority Letters",
+              "language_code": "ENG",
+              "language_name": "ENGLISH",
+              "listofvalues_note": null,
+              "listofvalues_type": "CUSTOMER_DOCUMENTS_CATEGORY",
+              "notification_flag": false,
+              "system_name": "AUTHORITY_LETTERS",
+              "updated_by_date": null,
+              "updated_by_requestor_username": null,
+              "value_is_active": true
+            }]
+          },
+          "examples": [
+            [{
+              "created_by_date": "2022-07-26",
+              "created_by_requestor_username": "seed",
+              "display_name": "Authority Letters",
+              "language_code": "ENG",
+              "language_name": "ENGLISH",
+              "listofvalues_note": null,
+              "listofvalues_type": "CUSTOMER_DOCUMENTS_CATEGORY",
+              "notification_flag": false,
+              "system_name": "AUTHORITY_LETTERS",
+              "updated_by_date": null,
+              "updated_by_requestor_username": null,
+              "value_is_active": true
+            }]
+          ]
         }
       },
       "examples": [{
-        "system_name": "TEST_ONE",
-        "display_name": "Test One Edit",
-        "listofvalues_note": "This is a test note edit",
+        "listofvalues_type": "DOCUMENT_CATEGORY",
+        "system_name": "CUSTOMER_DOCUMENTS",
+        "display_name": "Customer Documents",
+        "listofvalues_note": null,
         "language_code": "ENG",
         "language_name": "ENGLISH",
-        "created_by_date": "2022-06-26",
-        "created_by_requestor_username": "sote-test",
-        "updated_by_date": "2022-06-26",
-        "updated_by_requestor_username": "sote-test",
-        "value_is_active": true
+        "created_by_date": "2022-07-19",
+        "created_by_requestor_username": "seed",
+        "updated_by_date": "",
+        "updated_by_requestor_username": "",
+        "value_is_active": true,
+        "notification_flag": false,
+        "children": [{
+          "created_by_date": "2022-07-26",
+          "created_by_requestor_username": "seed",
+          "display_name": "Authority Letters",
+          "language_code": "ENG",
+          "language_name": "ENGLISH",
+          "listofvalues_note": null,
+          "listofvalues_type": "CUSTOMER_DOCUMENTS_CATEGORY",
+          "notification_flag": false,
+          "system_name": "AUTHORITY_LETTERS",
+          "updated_by_date": null,
+          "updated_by_requestor_username": null,
+          "value_is_active": true
+        }]
       }]
     }
   },
   "examples": [{
     "message-id": "test-message",
     "message": {
-      "system_name": "TEST_ONE",
-      "display_name": "Test One Edit",
-      "listofvalues_note": "This is a test note edit",
+      "listofvalues_type": "DOCUMENT_CATEGORY",
+      "system_name": "CUSTOMER_DOCUMENTS",
+      "display_name": "Customer Documents",
+      "listofvalues_note": null,
       "language_code": "ENG",
       "language_name": "ENGLISH",
-      "created_by_date": "2022-06-26",
-      "created_by_requestor_username": "sote-test",
-      "updated_by_date": "2022-06-26",
-      "updated_by_requestor_username": "sote-test",
-      "value_is_active": true
+      "created_by_date": "2022-07-19",
+      "created_by_requestor_username": "seed",
+      "updated_by_date": "",
+      "updated_by_requestor_username": "",
+      "value_is_active": true,
+      "notification_flag": false,
+      "children": [{
+        "created_by_date": "2022-07-26",
+        "created_by_requestor_username": "seed",
+        "display_name": "Authority Letters",
+        "language_code": "ENG",
+        "language_name": "ENGLISH",
+        "listofvalues_note": null,
+        "listofvalues_type": "CUSTOMER_DOCUMENTS_CATEGORY",
+        "notification_flag": false,
+        "system_name": "AUTHORITY_LETTERS",
+        "updated_by_date": null,
+        "updated_by_requestor_username": null,
+        "value_is_active": true
+      }]
     }
   }]
 }
