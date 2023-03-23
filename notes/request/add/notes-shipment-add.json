@@ -12,7 +12,8 @@
       ],
       "notes-type": "SHIPMENT_NOTIFICATION",
       "notes-note": "Updated add example note 2",
-      "syntax-type": "TEXT"
+      "syntax-type": "TEXT",
+      "send-notification": true
     }
   ],
   "required": [
@@ -20,6 +21,9 @@
     "notes-type",
     "notes-note",
     "syntax-type"
+  ],
+  "optional": [
+    "send-notification"
   ],
   "properties": {
     "shipments-id": {
@@ -79,6 +83,14 @@
       ],
       "title": "The syntax-type schema",
       "type": "string"
+    },
+    "send-notification": {
+      "type": "boolean",
+      "default": false,
+      "title": "The send-notification Schema",
+      "examples": [
+        true
+      ]
     }
   },
   "additionalProperties": true
