@@ -7,11 +7,14 @@
     "required": [
         "list-of-values-type",
         "system-name",
-        "display-name",
-        "list-of-values-note",
         "language-code",
         "language-name",
-        "value-is-active"
+    ],
+    "optional": [
+        "display-name",
+        "list-of-values-note",
+        "value-is-active",
+        "notification-flag"
     ],
     "properties": {
         "list-of-values-type": {
@@ -69,6 +72,14 @@
             "examples": [
                 true
             ]
+        },
+        "notification-flag": {
+            "type": "boolean",
+            "default": false,
+            "title": "The notification-flag Schema",
+            "examples": [
+                true
+            ]
         }
     },
     "examples": [{
@@ -78,6 +89,7 @@
         "list-of-values-note": "This is a new test note",
         "language-code": "eng",
         "language-name": "English",
-        "value-is-active": true
+        "value-is-active": true,
+        "notification-flag": true
     }]
 }

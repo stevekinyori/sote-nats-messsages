@@ -24,7 +24,8 @@
             "required": [
                 "list_of_values_type",
                 "system_name",
-                "value_is_active"
+                "value_is_active",
+                "notification_flag"
             ],
             "properties": {
                 "list_of_values_type": {
@@ -50,12 +51,21 @@
                     "examples": [
                         true
                     ]
+                },
+                "notification_flag": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The notification_flag Schema",
+                    "examples": [
+                        true
+                    ]
                 }
             },
             "examples": [{
                 "list_of_values_type": "ADD_TEST",
                 "system_name": "TEST_ONE",
-                "value_is_active": true
+                "value_is_active": true,
+                "notification_flag": true
             }]
         }
     },
@@ -64,7 +74,8 @@
         "message": {
             "list_of_values_type": "ADD_TEST",
             "system_name": "TEST_ONE",
-            "value_is_active": true
+            "value_is_active": true,
+            "notification_flag": true
         }
     }]
 }
