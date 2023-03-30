@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "message-id",
+      "message"
+  ],
+  "properties": {
+      "message-id": {
+          "type": "string",
+          "default": "",
+          "title": "The message-id Schema",
+          "examples": [
+              "test-message"
+          ]
+      },
+      "message": {
+          "type": "object",
+          "default": {},
+          "title": "The message Schema",
+          "required": [
+              "0-30",
+              "31-60",
+              "61-90",
+              "91+",
+              "totalBalanceUsd",
+              "totalBalanceKes"
+          ],
+          "properties": {
+              "0-30": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The 0-30 Schema",
+                  "required": [
+                      "balanceUsd",
+                      "balanceKes"
+                  ],
+                  "properties": {
+                      "balanceUsd": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceUsd Schema",
+                          "examples": [
+                              100
+                          ]
+                      },
+                      "balanceKes": {
+                          "type": "number",
+                          "default": 0.0,
+                          "title": "The balanceKes Schema",
+                          "examples": [
+                              123456.34
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "balanceUsd": 100,
+                      "balanceKes": 123456.34
+                  }]
+              },
+              "31-60": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The 31-60 Schema",
+                  "required": [
+                      "balanceUsd",
+                      "balanceKes"
+                  ],
+                  "properties": {
+                      "balanceUsd": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceUsd Schema",
+                          "examples": [
+                              0
+                          ]
+                      },
+                      "balanceKes": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceKes Schema",
+                          "examples": [
+                              4678
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "balanceUsd": 0,
+                      "balanceKes": 4678
+                  }]
+              },
+              "61-90": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The 61-90 Schema",
+                  "required": [
+                      "balanceUsd",
+                      "balanceKes"
+                  ],
+                  "properties": {
+                      "balanceUsd": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceUsd Schema",
+                          "examples": [
+                              124
+                          ]
+                      },
+                      "balanceKes": {
+                          "type": "number",
+                          "default": 0.0,
+                          "title": "The balanceKes Schema",
+                          "examples": [
+                              10000.69
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "balanceUsd": 124,
+                      "balanceKes": 10000.69
+                  }]
+              },
+              "91+": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The 91+ Schema",
+                  "required": [
+                      "balanceUsd",
+                      "balanceKes"
+                  ],
+                  "properties": {
+                      "balanceUsd": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceUsd Schema",
+                          "examples": [
+                              90
+                          ]
+                      },
+                      "balanceKes": {
+                          "type": "integer",
+                          "default": 0,
+                          "title": "The balanceKes Schema",
+                          "examples": [
+                              0
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "balanceUsd": 90,
+                      "balanceKes": 0
+                  }]
+              },
+              "totalBalanceUsd": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The totalBalanceUsd Schema",
+                  "examples": [
+                      314
+                  ]
+              },
+              "totalBalanceKes": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The totalBalanceKes Schema",
+                  "examples": [
+                      138135.03
+                  ]
+              }
+          },
+          "examples": [{
+              "0-30": {
+                  "balanceUsd": 100,
+                  "balanceKes": 123456.34
+              },
+              "31-60": {
+                  "balanceUsd": 0,
+                  "balanceKes": 4678
+              },
+              "61-90": {
+                  "balanceUsd": 124,
+                  "balanceKes": 10000.69
+              },
+              "91+": {
+                  "balanceUsd": 90,
+                  "balanceKes": 0
+              },
+              "totalBalanceUsd": 314,
+              "totalBalanceKes": 138135.03
+          }]
+      }
+  },
+  "examples": [{
+      "message-id": "test-message",
+      "message": {
+          "0-30": {
+              "balanceUsd": 100,
+              "balanceKes": 123456.34
+          },
+          "31-60": {
+              "balanceUsd": 0,
+              "balanceKes": 4678
+          },
+          "61-90": {
+              "balanceUsd": 124,
+              "balanceKes": 10000.69
+          },
+          "91+": {
+              "balanceUsd": 90,
+              "balanceKes": 0
+          },
+          "totalBalanceUsd": 314,
+          "totalBalanceKes": 138135.03
+      }
+  }]
+}
