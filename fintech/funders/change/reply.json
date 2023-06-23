@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "message_id",
+    "status",
+    "data"
+  ],
+  "properties": {
+    "message_id": {
+      "type": "string",
+      "default": "",
+      "title": "The message_id Schema",
+      "examples": [
+        "test-message"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "default": "",
+      "title": "The status Schema",
+      "examples": [
+        "OK"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "default": {},
+      "title": "The data Schema",
+      "required": [
+        "funders_id",
+        "funder_name",
+        "funder_short_name",
+        "funder_logo",
+        "funder_is_active",
+        "created_by_date",
+        "updated_by_date",
+        "created_by_requestor_username",
+        "updated_by_requestor_username",
+        "deleted_by_date"
+      ],
+      "properties": {
+        "funders_id": {
+          "type": "integer",
+          "default": 0,
+          "title": "The funders_id Schema",
+          "examples": [
+            2
+          ]
+        },
+        "funder_name": {
+          "type": "string",
+          "default": "",
+          "title": "The funder_name Schema",
+          "examples": [
+            "Steel Company Limited"
+          ]
+        },
+        "funder_short_name": {
+          "type": "string",
+          "default": "",
+          "title": "The funder_short_name Schema",
+          "examples": [
+            "SCL"
+          ]
+        },
+        "funder_logo": {
+          "type": "string",
+          "default": "",
+          "title": "The funder_logo Schema",
+          "examples": [
+            "https://fintech-media.s3.eu-west-1.amazonaws.com/staging/logos/Steel Company Limited/test-logo.png"
+          ]
+        },
+        "funder_is_active": {
+          "type": "boolean",
+          "default": false,
+          "title": "The funder_is_active Schema",
+          "examples": [
+            true
+          ]
+        },
+        "created_by_date": {
+          "type": "string",
+          "default": "",
+          "title": "The created_by_date Schema",
+          "examples": [
+            "2023-03-15T00:00:00.000Z"
+          ]
+        },
+        "updated_by_date": {
+          "type": "string",
+          "default": "",
+          "title": "The updated_by_date Schema",
+          "examples": [
+            "2023-06-23T00:00:00.000Z"
+          ]
+        },
+        "created_by_requestor_username": {
+          "type": "string",
+          "default": "",
+          "title": "The created_by_requestor_username Schema",
+          "examples": [
+            "5d5147e2-57fc-48a6-b493-1783931ae9c0"
+          ]
+        },
+        "updated_by_requestor_username": {
+          "type": "string",
+          "default": "",
+          "title": "The updated_by_requestor_username Schema",
+          "examples": [
+            "2f3684d7-56c5-468f-94ac-9d805d523422"
+          ]
+        },
+        "deleted_by_date": {
+          "type": "null",
+          "default": null,
+          "title": "The deleted_by_date Schema",
+          "examples": [
+            null
+          ]
+        }
+      },
+      "examples": [
+        {
+          "funders_id": 2,
+          "funder_name": "Steel Company Limited",
+          "funder_short_name": "SCL",
+          "funder_logo": "https://fintech-media.s3.eu-west-1.amazonaws.com/staging/logos/Steel Company Limited/test-logo.png",
+          "funder_is_active": true,
+          "created_by_date": "2023-03-15T00:00:00.000Z",
+          "updated_by_date": "2023-06-23T00:00:00.000Z",
+          "created_by_requestor_username": "5d5147e2-57fc-48a6-b493-1783931ae9c0",
+          "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+          "deleted_by_date": null
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "message_id": "test-message",
+      "status": "OK",
+      "data": {
+        "funders_id": 2,
+        "funder_name": "Steel Company Limited",
+        "funder_short_name": "SCL",
+        "funder_logo": "https://fintech-media.s3.eu-west-1.amazonaws.com/staging/logos/Steel Company Limited/test-logo.png",
+        "funder_is_active": true,
+        "created_by_date": "2023-03-15T00:00:00.000Z",
+        "updated_by_date": "2023-06-23T00:00:00.000Z",
+        "created_by_requestor_username": "5d5147e2-57fc-48a6-b493-1783931ae9c0",
+        "updated_by_requestor_username": "2f3684d7-56c5-468f-94ac-9d805d523422",
+        "deleted_by_date": null
+      }
+    }
+  ]
+}

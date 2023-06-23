@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "funders_id"
+  ],
+  "properties": {
+    "funders_id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The funders_id Schema",
+      "examples": [
+        1
+      ]
+    }
+  },
+  "examples": [
+    {
+      "funders_id": 1
+    }
+  ]
+}

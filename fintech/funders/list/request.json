@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "limit",
+    "offset"
+  ],
+  "optional": [
+    "sort-order",
+    "search",
+    "filters"
+  ],
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "default": 0,
+      "title": "The limit Schema",
+      "examples": [
+        2
+      ]
+    },
+    "offset": {
+      "type": "integer",
+      "default": 0,
+      "title": "The offset Schema",
+      "examples": [
+        0
+      ]
+    },
+    "sort-order": {
+      "type": "object",
+      "default": {},
+      "title": "The sort-order Schema",
+      "required": [
+        "funders_id"
+      ],
+      "properties": {
+        "funders_id": {
+          "type": "string",
+          "default": "",
+          "title": "The funders_id Schema",
+          "examples": [
+            "ASC"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "funders_id": "ASC"
+        }
+      ]
+    },
+    "search": {
+      "type": "string",
+      "default": "",
+      "title": "The search Schema",
+      "examples": [
+        "N"
+      ]
+    },
+    "filters": {
+      "type": "object",
+      "default": {},
+      "title": "The filters Schema",
+      "required": [
+        "and"
+      ],
+      "properties": {
+        "and": {
+          "type": "array",
+          "default": [],
+          "title": "The and Schema",
+          "items": {
+            "type": "object",
+            "default": {},
+            "title": "A Schema",
+            "required": [
+              "field_name",
+              "operator",
+              "value"
+            ],
+            "properties": {
+              "field_name": {
+                "type": "string",
+                "anyOf": [
+                  {
+                    "funders_id": "integer"
+                  },
+                  {
+                    "funder_is_active": "boolean"
+                  },
+                  {
+                    "funder_logo": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  {
+                    "funder_name": "string"
+                  },
+                  {
+                    "funder_short_name": "string"
+                  },
+                  {
+                    "created_by_date": "string"
+                  },
+                  {
+                    "created_by_requestor_username": "string"
+                  },
+                  {
+                    "updated_by_date": "string"
+                  },
+                  {
+                    "updated_by_requestor_username": "string"
+                  },
+                  {
+                    "deleted_by_date": "string"
+                  }
+                ],
+                "default": "",
+                "title": "The field_name Schema",
+                "examples": [
+                  "funder_short_name"
+                ]
+              },
+              "operator": {
+                "type": "string",
+                "default": "",
+                "title": "The operator Schema",
+                "examples": [
+                  "!="
+                ]
+              },
+              "value": {
+                "type": "string",
+                "default": "",
+                "title": "The value Schema",
+                "examples": [
+                  "NCBA"
+                ]
+              }
+            },
+            "examples": [
+              {
+                "field_name": "funder_short_name",
+                "operator": "!=",
+                "value": "NCBA"
+              }
+            ]
+          },
+          "examples": [
+            [
+              {
+                "field_name": "funder_short_name",
+                "operator": "!=",
+                "value": "NCBA"
+              }
+            ]
+          ]
+        }
+      },
+      "examples": [
+        {
+          "and": [
+            {
+              "field_name": "funder_short_name",
+              "operator": "!=",
+              "value": "NCBA"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "limit": 2,
+      "offset": 0,
+      "sort-order": {
+        "funders_id": "ASC"
+      },
+      "search": "N",
+      "filters": {
+        "and": [
+          {
+            "field_name": "funder_short_name",
+            "operator": "!=",
+            "value": "NCBA"
+          }
+        ]
+      }
+    }
+  ]
+}
