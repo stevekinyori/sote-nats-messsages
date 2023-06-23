@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "funder_name",
+    "funder_short_name",
+    "funder_is_active"
+  ],
+  "optional": [
+    "funder_logo"
+  ],
+  "properties": {
+    "funder_name": {
+      "type": "string",
+      "default": "",
+      "title": "The funder_name Schema",
+      "examples": [
+        "National Commercial Bank Africa"
+      ]
+    },
+    "funder_short_name": {
+      "type": "string",
+      "default": "",
+      "title": "The funder_short_name Schema",
+      "examples": [
+        "NCBA"
+      ]
+    },
+    "funder_is_active": {
+      "type": "string",
+      "default": "",
+      "title": "The funder_is_active Schema",
+      "examples": [
+        "true"
+      ]
+    },
+    "funder_logo": {
+      "anyOf": [
+        {
+          "null": null
+        },
+        {
+          "file": "file"
+        }
+      ],
+      "default": null,
+      "title": "The funder_logo Schema",
+      "examples": [
+        null
+      ]
+    }
+  },
+  "examples": [
+    {
+      "funder_name": "National Commercial Bank Africa",
+      "funder_short_name": "NCBA",
+      "funder_is_active": "true",
+      "funder_logo": null
+    }
+  ]
+}

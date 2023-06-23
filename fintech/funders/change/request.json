@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "funders_id"
+  ],
+  "optional": [
+    "funder_name",
+    "funder_short_name",
+    "funder_logo",
+    "funder_is_active"
+  ],
+  "properties": {
+    "funders_id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The funders_id Schema",
+      "examples": [
+        1
+      ]
+    },
+    "funder_name": {
+      "type": "string",
+      "default": "",
+      "title": "The funder_name Schema",
+      "examples": [
+        "Steel Company Limited"
+      ]
+    },
+    "funder_short_name": {
+      "type": "string",
+      "default": "",
+      "title": "The funder_short_name Schema",
+      "examples": [
+        "SCL"
+      ]
+    },
+    "funder_logo": {
+      "type": "null",
+      "default": null,
+      "title": "The funder_logo Schema",
+      "examples": [
+        null
+      ]
+    },
+    "funder_is_active": {
+      "type": "boolean",
+      "default": false,
+      "title": "The funder_is_active Schema",
+      "examples": [
+        true
+      ]
+    }
+  },
+  "examples": [
+    {
+      "funders_id": 1,
+      "funder_name": "Steel Company Limited",
+      "funder_short_name": "SCL",
+      "funder_logo": null,
+      "funder_is_active": true
+    }
+  ]
+}
