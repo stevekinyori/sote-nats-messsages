@@ -1,0 +1,280 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message_id",
+        "status",
+        "data"
+    ],
+    "properties": {
+        "message_id": {
+            "type": "string",
+            "default": "",
+            "title": "The message_id Schema",
+            "examples": [
+                "test-shipments-notes-list"
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "OK"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "records",
+                "pagination"
+            ],
+            "properties": {
+                "records": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The records Schema",
+                    "items": {
+                        "type": "object",
+                        "title": "A Schema",
+                        "required": [
+                            "notes_id",
+                            "organizations_id",
+                            "notes_owner_micro_service",
+                            "notes_owner_key",
+                            "notes_type",
+                            "notes_note",
+                            "created_by_date",
+                            "created_by_requestor_username",
+                            "created_timestamp"
+                        ],
+                        "properties": {
+                            "notes_id": {
+                                "type": "integer",
+                                "title": "The notes_id Schema",
+                                "examples": [
+                                    1,
+                                    2
+                                ]
+                            },
+                            "organizations_id": {
+                                "type": "integer",
+                                "title": "The organizations_id Schema",
+                                "examples": [
+                                    1
+                                ]
+                            },
+                            "notes_owner_micro_service": {
+                                "type": "string",
+                                "title": "The notes_owner_micro_service Schema",
+                                "examples": [
+                                    "SHIPMENTS"
+                                ]
+                            },
+                            "notes_owner_key": {
+                                "type": "string",
+                                "title": "The notes_owner_key Schema",
+                                "examples": [
+                                    "2",
+                                    "1"
+                                ]
+                            },
+                            "notes_type": {
+                                "type": "string",
+                                "title": "The notes_type Schema",
+                                "examples": [
+                                    "USER_DEFINED_LOV"
+                                ]
+                            },
+                            "notes_note": {
+                                "type": "string",
+                                "title": "The notes_note Schema",
+                                "examples": [
+                                    "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                                    "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}"
+                                ]
+                            },
+                            "created_by_date": {
+                                "type": "string",
+                                "title": "The created_by_date Schema",
+                                "examples": [
+                                    "2023-04-25T00:00:00.000Z",
+                                    "2023-04-24T00:00:00.000Z"
+                                ]
+                            },
+                            "created_by_requestor_username": {
+                                "type": "string",
+                                "title": "The created_by_requestor_username Schema",
+                                "examples": [
+                                    "sote-test"
+                                ]
+                            },
+                            "created_timestamp": {
+                                "type": "string",
+                                "title": "The created_timestamp Schema",
+                                "examples": [
+                                    "2023-04-25T05:25:23.859Z",
+                                    "2023-04-24T05:58:48.884Z"
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "notes_id": 1,
+                            "organizations_id": 1,
+                            "notes_owner_micro_service": "SHIPMENTS",
+                            "notes_owner_key": "2",
+                            "notes_type": "USER_DEFINED_LOV",
+                            "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                            "created_by_date": "2023-04-25T00:00:00.000Z",
+                            "created_by_requestor_username": "sote-test",
+                            "created_timestamp": "2023-04-25T05:25:23.859Z"
+                        },
+                        {
+                            "notes_id": 2,
+                            "organizations_id": 1,
+                            "notes_owner_micro_service": "SHIPMENTS",
+                            "notes_owner_key": "1",
+                            "notes_type": "USER_DEFINED_LOV",
+                            "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}",
+                            "created_by_date": "2023-04-24T00:00:00.000Z",
+                            "created_by_requestor_username": "sote-test",
+                            "created_timestamp": "2023-04-24T05:58:48.884Z"
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "notes_id": 1,
+                            "organizations_id": 1,
+                            "notes_owner_micro_service": "SHIPMENTS",
+                            "notes_owner_key": "2",
+                            "notes_type": "USER_DEFINED_LOV",
+                            "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                            "created_by_date": "2023-04-25T00:00:00.000Z",
+                            "created_by_requestor_username": "sote-test",
+                            "created_timestamp": "2023-04-25T05:25:23.859Z"
+                        },
+                        {
+                            "notes_id": 2,
+                            "organizations_id": 1,
+                            "notes_owner_micro_service": "SHIPMENTS",
+                            "notes_owner_key": "1",
+                            "notes_type": "USER_DEFINED_LOV",
+                            "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}",
+                            "created_by_date": "2023-04-24T00:00:00.000Z",
+                            "created_by_requestor_username": "sote-test",
+                            "created_timestamp": "2023-04-24T05:58:48.884Z"
+                        }]
+                    ]
+                },
+                "pagination": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The pagination Schema",
+                    "required": [
+                        "total",
+                        "limit",
+                        "offset"
+                    ],
+                    "properties": {
+                        "total": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The total Schema",
+                            "examples": [
+                                2
+                            ]
+                        },
+                        "limit": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The limit Schema",
+                            "examples": [
+                                10
+                            ]
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The offset Schema",
+                            "examples": [
+                                0
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "total": 2,
+                        "limit": 10,
+                        "offset": 0
+                    }]
+                }
+            },
+            "examples": [{
+                "records": [{
+                    "notes_id": 1,
+                    "organizations_id": 1,
+                    "notes_owner_micro_service": "SHIPMENTS",
+                    "notes_owner_key": "2",
+                    "notes_type": "USER_DEFINED_LOV",
+                    "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                    "created_by_date": "2023-04-25T00:00:00.000Z",
+                    "created_by_requestor_username": "sote-test",
+                    "created_timestamp": "2023-04-25T05:25:23.859Z"
+                },
+                {
+                    "notes_id": 2,
+                    "organizations_id": 1,
+                    "notes_owner_micro_service": "SHIPMENTS",
+                    "notes_owner_key": "1",
+                    "notes_type": "USER_DEFINED_LOV",
+                    "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}",
+                    "created_by_date": "2023-04-24T00:00:00.000Z",
+                    "created_by_requestor_username": "sote-test",
+                    "created_timestamp": "2023-04-24T05:58:48.884Z"
+                }],
+                "pagination": {
+                    "total": 2,
+                    "limit": 10,
+                    "offset": 0
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "message_id": "test-shipments-notes-list",
+        "status": "OK",
+        "data": {
+            "records": [{
+                "notes_id": 1,
+                "organizations_id": 1,
+                "notes_owner_micro_service": "SHIPMENTS",
+                "notes_owner_key": "2",
+                "notes_type": "USER_DEFINED_LOV",
+                "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                "created_by_date": "2023-04-25T00:00:00.000Z",
+                "created_by_requestor_username": "sote-test",
+                "created_timestamp": "2023-04-25T05:25:23.859Z"
+            },
+            {
+                "notes_id": 2,
+                "organizations_id": 1,
+                "notes_owner_micro_service": "SHIPMENTS",
+                "notes_owner_key": "1",
+                "notes_type": "USER_DEFINED_LOV",
+                "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}",
+                "created_by_date": "2023-04-24T00:00:00.000Z",
+                "created_by_requestor_username": "sote-test",
+                "created_timestamp": "2023-04-24T05:58:48.884Z"
+            }],
+            "pagination": {
+                "total": 2,
+                "limit": 10,
+                "offset": 0
+            }
+        }
+    }]
+}

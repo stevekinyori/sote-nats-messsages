@@ -1,0 +1,146 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message_id",
+        "status",
+        "data"
+    ],
+    "properties": {
+        "message_id": {
+            "type": "string",
+            "default": "",
+            "title": "The message_id Schema",
+            "examples": [
+                "test-notes-get"
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "OK"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "notes_id",
+                "organizations_id",
+                "notes_owner_micro_service",
+                "notes_owner_key",
+                "notes_type",
+                "notes_note",
+                "created_by_date",
+                "created_by_requestor_username",
+                "created_timestamp"
+            ],
+            "properties": {
+                "notes_id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The notes_id Schema",
+                    "examples": [
+                        2
+                    ]
+                },
+                "organizations_id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The organizations_id Schema",
+                    "examples": [
+                        1
+                    ]
+                },
+                "notes_owner_micro_service": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes_owner_micro_service Schema",
+                    "examples": [
+                        "SHIPMENTS"
+                    ]
+                },
+                "notes_owner_key": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes_owner_key Schema",
+                    "examples": [
+                        "1"
+                    ]
+                },
+                "notes_type": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes_type Schema",
+                    "examples": [
+                        "USER_DEFINED_LOV"
+                    ]
+                },
+                "notes_note": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes_note Schema",
+                    "examples": [
+                        "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}"
+                    ]
+                },
+                "created_by_date": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_by_date Schema",
+                    "examples": [
+                        "2023-04-25T00:00:00.000Z"
+                    ]
+                },
+                "created_by_requestor_username": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_by_requestor_username Schema",
+                    "examples": [
+                        "sote-test"
+                    ]
+                },
+                "created_timestamp": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The created_timestamp Schema",
+                    "examples": [
+                        "2023-04-25T05:25:23.859Z"
+                    ]
+                }
+            },
+            "examples": [{
+                "notes_id": 2,
+                "organizations_id": 1,
+                "notes_owner_micro_service": "SHIPMENTS",
+                "notes_owner_key": "1",
+                "notes_type": "USER_DEFINED_LOV",
+                "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+                "created_by_date": "2023-04-25T00:00:00.000Z",
+                "created_by_requestor_username": "sote-test",
+                "created_timestamp": "2023-04-25T05:25:23.859Z"
+            }]
+        }
+    },
+    "examples": [{
+        "message_id": "test-notes-get",
+        "status": "OK",
+        "data": {
+            "notes_id": 2,
+            "organizations_id": 1,
+            "notes_owner_micro_service": "SHIPMENTS",
+            "notes_owner_key": "1",
+            "notes_type": "USER_DEFINED_LOV",
+            "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"Create notes test\"}",
+            "created_by_date": "2023-04-25T00:00:00.000Z",
+            "created_by_requestor_username": "sote-test",
+            "created_timestamp": "2023-04-25T05:25:23.859Z"
+        }
+    }]
+}

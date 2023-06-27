@@ -1,0 +1,188 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "shipment_fintrans_id",
+        "limit",
+        "offset"
+    ],
+    "optional": [
+        "search",
+        "filters",
+        "sort_order"
+    ],
+    "properties": {
+        "search": {
+            "type": "string",
+            "default": "",
+            "title": "The search Schema",
+            "examples": [
+                "cargo"
+            ]
+        },
+        "shipment_fintrans_id": {
+            "type": "array",
+            "default": [],
+            "title": "The shipment_fintrans_id Schema",
+            "items": {
+                "type": "string",
+                "title": "A Schema",
+                "examples": [
+                    "2",
+                    "1"
+                ]
+            },
+            "examples": [
+                ["2",
+                    "1"
+                ]
+            ]
+        },
+        "filters": {
+            "type": "object",
+            "default": {},
+            "title": "The filters Schema",
+            "required": [
+                "and"
+            ],
+            "properties": {
+                "and": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The and Schema",
+                    "items": {
+                        "type": "object",
+                        "default": {},
+                        "title": "A Schema",
+                        "required": [
+                            "field_name",
+                            "operator",
+                            "value"
+                        ],
+                        "properties": {
+                            "field_name": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The field_name Schema",
+                                "examples": [
+                                    "notes_type"
+                                ]
+                            },
+                            "operator": {
+                                "type": "string",
+                                "default": "",
+                                "title": "The operator Schema",
+                                "examples": [
+                                    "IN"
+                                ]
+                            },
+                            "value": {
+                                "type": "array",
+                                "default": [],
+                                "title": "The value Schema",
+                                "items": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "USER_DEFINED_LOV"
+                                    ]
+                                },
+                                "examples": [
+                                    [
+                                        "USER_DEFINED_LOV"]
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "field_name": "notes_type",
+                            "operator": "IN",
+                            "value": [
+                                "USER_DEFINED_LOV"
+                            ]
+                        }]
+                    },
+                    "examples": [
+                        [{
+                            "field_name": "notes_type",
+                            "operator": "IN",
+                            "value": [
+                                "USER_DEFINED_LOV"
+                            ]
+                        }]
+                    ]
+                }
+            },
+            "examples": [{
+                "and": [{
+                    "field_name": "notes_type",
+                    "operator": "IN",
+                    "value": [
+                        "USER_DEFINED_LOV"
+                    ]
+                }]
+            }]
+        },
+        "limit": {
+            "type": "integer",
+            "default": 0,
+            "title": "The limit Schema",
+            "examples": [
+                10
+            ]
+        },
+        "offset": {
+            "type": "integer",
+            "default": 0,
+            "title": "The offset Schema",
+            "examples": [
+                0
+            ]
+        },
+        "sort_order": {
+            "type": "object",
+            "default": {},
+            "title": "The sort_order Schema",
+            "required": [
+                "notes_id"
+            ],
+            "properties": {
+                "notes_id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The notes_id Schema",
+                    "examples": [
+                        "DESC"
+                    ]
+                }
+            },
+            "examples": [{
+                "notes_id": "DESC"
+            }]
+        }
+    },
+    "examples": [{
+        "search": "cargo",
+        "shipment_fintrans_id": [
+            "2",
+            "1"
+        ],
+        "filters": {
+            "and": [{
+                "field_name": "notes_type",
+                "operator": "IN",
+                "value": [
+                    "USER_DEFINED_LOV"
+                ]
+            }]
+        },
+        "limit": 10,
+        "offset": 0,
+        "sort_order": {
+            "notes_id": "DESC"
+        }
+    }]
+}

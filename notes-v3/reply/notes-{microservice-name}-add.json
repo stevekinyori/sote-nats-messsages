@@ -1,0 +1,58 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "message_id",
+        "status",
+        "data"
+    ],
+    "properties": {
+        "message_id": {
+            "type": "string",
+            "default": "",
+            "title": "The message_id Schema",
+            "examples": [
+                "test-shipment-fintrans-add"
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "OK"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "default": {},
+            "title": "The data Schema",
+            "required": [
+                "notes_id"
+            ],
+            "properties": {
+                "notes_id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The notes_id Schema",
+                    "examples": [
+                        2
+                    ]
+                }
+            },
+            "examples": [{
+                "notes_id": 2
+            }]
+        }
+    },
+    "examples": [{
+        "message_id": "test-shipment-fintrans-add",
+        "status": "OK",
+        "data": {
+            "notes_id": 2
+        }
+    }]
+}

@@ -1,0 +1,68 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "trips_id",
+        "notes_type",
+        "notes_note",
+        "syntax_type"
+    ],
+    "properties": {
+        "trips_id": {
+            "type": "array",
+            "default": [],
+            "title": "The trips_id Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "1"
+                ]
+            },
+            "examples": [
+                [
+                    "1"]
+            ]
+        },
+        "notes_type": {
+            "type": "string",
+            "default": "",
+            "title": "The notes_type Schema",
+            "examples": [
+                "USER_DEFINED_LOV"
+            ]
+        },
+        "notes_note": {
+            "type": "string",
+            "default": "",
+            "title": "The notes_note Schema",
+            "examples": [
+                "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}"
+            ]
+        },
+        "syntax_type": {
+            "type": "string",
+            "default": "",
+            "title": "The syntax_type Schema",
+            "examples": [
+                "JSON"
+            ],
+            "enum": [
+                "TYPE",
+                "JSON"
+            ]
+        }
+    },
+    "examples": [{
+        "trips_id": [
+            "1"
+        ],
+        "notes_type": "USER_DEFINED_LOV",
+        "notes_note": "{\"title\":\"CARGO_DELIVERED\",\"comment\":\"comments\"}",
+        "syntax_type": "JSON"
+    }]
+}
